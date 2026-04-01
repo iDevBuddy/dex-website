@@ -36,7 +36,7 @@ export default function VoiceChatbot() {
             await navigator.mediaDevices.getUserMedia({ audio: true })
             const conv = await Conversation.startSession({
                 agentId: AGENT_ID,
-                authorization: undefined,
+                connectionType: 'webrtc',
                 overrides: {
                     agent: {
                         firstMessage: "Hi! I'm DEX, how can I help you today?",
@@ -47,11 +47,13 @@ export default function VoiceChatbot() {
                     setStatus('connected')
                     connectTimeRef.current = Date.now()
                 },
-                onDisconnect: () => {
+                onDisconnect: (details) => {
                     const duration = connectTimeRef.current ? Date.now() - connectTimeRef.current : 0
+                    const reason = details?.message || details?.closeReason || ''
                     if (duration > 0 && duration < 10000) {
-                        showError('Call dropped. Tap to try again.')
+                        showError(reason ? `Call dropped: ${reason}` : 'Call dropped. Tap to try again.')
                     }
+                    console.warn('ElevenLabs disconnect:', details)
                     connectTimeRef.current = null
                     setStatus('idle')
                     setMode('listening')
@@ -67,12 +69,18 @@ export default function VoiceChatbot() {
                     }
                 },
                 onModeChange: ({ mode: m }) => setMode(m),
-                onError: (err) => {
-                    console.error('ElevenLabs error:', err)
-                    if (err?.message?.includes('fatal') || err?.message?.includes('closed')) {
-                        showError('Connection lost. Tap to reconnect.')
-                        setStatus('idle')
-                        conversationRef.current = null
+                onError: (message, context) => {
+                    const errorType = context?.errorType || ''
+                    const messageText = typeof message === 'string' ? message : message?.message || ''
+                    console.error('ElevenLabs error:', message, context)
+                    showError(`Error: ${errorType || messageText || 'Connection failed'}`)
+                    setStatus('idle')
+                    setMode('listening')
+                    conversationRef.current = null
+                },
+                onDebug: (event) => {
+                    if (event && typeof event === 'object' && (event.type === 'error' || event.type === 'close')) {
+                        console.warn('ElevenLabs debug:', event)
                     }
                 },
             })
