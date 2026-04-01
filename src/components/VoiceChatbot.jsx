@@ -36,6 +36,13 @@ export default function VoiceChatbot() {
             await navigator.mediaDevices.getUserMedia({ audio: true })
             const conv = await Conversation.startSession({
                 agentId: AGENT_ID,
+                authorization: undefined,
+                overrides: {
+                    agent: {
+                        firstMessage: "Hi! I'm DEX, how can I help you today?",
+                        language: "en"
+                    }
+                },
                 onConnect: () => {
                     setStatus('connected')
                     connectTimeRef.current = Date.now()
@@ -62,26 +69,13 @@ export default function VoiceChatbot() {
                 onModeChange: ({ mode: m }) => setMode(m),
                 onError: (err) => {
                     console.error('ElevenLabs error:', err)
-                    showError(`Error: ${err?.message || JSON.stringify(err) || 'Connection failed'}`)
-                    setStatus('idle')
-                    conversationRef.current = null
+                    if (err?.message?.includes('fatal') || err?.message?.includes('closed')) {
+                        showError('Connection lost. Tap to reconnect.')
+                        setStatus('idle')
+                        conversationRef.current = null
+                    }
                 },
             })
-            // Patch: SDK crashes when server sends event without error_event.
-            // Must patch the INSTANCE's prototype chain, not Conversation.prototype,
-            // because startSession() returns a different internal class.
-            let proto = Object.getPrototypeOf(conv)
-            while (proto && proto !== Object.prototype) {
-                if (Object.prototype.hasOwnProperty.call(proto, 'handleErrorEvent')) {
-                    const orig = proto.handleErrorEvent
-                    proto.handleErrorEvent = function (event) {
-                        if (!event || !event.error_event) return
-                        return orig.call(this, event)
-                    }
-                    break
-                }
-                proto = Object.getPrototypeOf(proto)
-            }
 
             conversationRef.current = conv
         } catch (err) {
