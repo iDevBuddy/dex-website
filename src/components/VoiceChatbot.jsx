@@ -10,18 +10,22 @@ export default function VoiceChatbot() {
     const [mode, setMode] = useState('listening') // speaking | listening
     const [showEmailInput, setShowEmailInput] = useState(false)
     const [submitted, setSubmitted] = useState(false)
+    const [nameValue, setNameValue] = useState('')
     const [emailValue, setEmailValue] = useState('')
+    const [phoneValue, setPhoneValue] = useState('')
+    const [nameError, setNameError] = useState('')
     const [emailError, setEmailError] = useState('')
     const [error, setError] = useState('')
 
     const conversationRef = useRef(null)
     const messagesRef = useRef([])
     const errorTimerRef = useRef(null)
+    const connectTimeRef = useRef(null)
 
     const showError = useCallback((msg) => {
         setError(msg)
         clearTimeout(errorTimerRef.current)
-        errorTimerRef.current = setTimeout(() => setError(''), 4000)
+        errorTimerRef.current = setTimeout(() => setError(''), 5000)
     }, [])
 
     const startCall = useCallback(async () => {
@@ -31,8 +35,16 @@ export default function VoiceChatbot() {
             await navigator.mediaDevices.getUserMedia({ audio: true })
             const conv = await Conversation.startSession({
                 agentId: AGENT_ID,
-                onConnect: () => setStatus('connected'),
+                onConnect: () => {
+                    setStatus('connected')
+                    connectTimeRef.current = Date.now()
+                },
                 onDisconnect: () => {
+                    const duration = connectTimeRef.current ? Date.now() - connectTimeRef.current : 0
+                    if (duration > 0 && duration < 10000) {
+                        showError('Call dropped. Tap to try again.')
+                    }
+                    connectTimeRef.current = null
                     setStatus('idle')
                     setMode('listening')
                     conversationRef.current = null
@@ -68,9 +80,13 @@ export default function VoiceChatbot() {
         setStatus('disconnecting')
         setShowEmailInput(false)
         setSubmitted(false)
+        setNameValue('')
         setEmailValue('')
+        setPhoneValue('')
+        setNameError('')
         setEmailError('')
         messagesRef.current = []
+        connectTimeRef.current = null
         const conv = conversationRef.current
         conversationRef.current = null
         if (conv) {
@@ -85,20 +101,44 @@ export default function VoiceChatbot() {
         else if (status === 'connecting' || status === 'connected') endCall()
     }
 
-    const handleEmailSubmit = async () => {
+    const closePopup = () => {
+        setShowEmailInput(false)
+        setNameValue('')
+        setEmailValue('')
+        setPhoneValue('')
+        setNameError('')
+        setEmailError('')
+    }
+
+    const handleSubmit = async () => {
+        let hasError = false
+        if (!nameValue.trim()) {
+            setNameError('Please enter your name.')
+            hasError = true
+        }
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
             setEmailError('Please enter a valid email address.')
-            return
+            hasError = true
         }
+        if (hasError) return
+
+        setNameError('')
         setEmailError('')
+
         const summary = messagesRef.current
             .map((m) => `${m.role === 'user' ? 'Visitor' : 'DEX'}: ${m.content}`)
             .join('\n')
+
         try {
             const res = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ clientEmail: emailValue, conversationSummary: summary }),
+                body: JSON.stringify({
+                    clientName: nameValue.trim(),
+                    clientEmail: emailValue.trim(),
+                    clientPhone: phoneValue.trim(),
+                    conversationSummary: summary,
+                }),
             })
             if (!res.ok) {
                 const data = await res.json().catch(() => ({}))
@@ -109,12 +149,15 @@ export default function VoiceChatbot() {
             setEmailError('Network error. Please try again.')
             return
         }
+
         setSubmitted(true)
         setTimeout(() => {
             setShowEmailInput(false)
             setSubmitted(false)
+            setNameValue('')
             setEmailValue('')
-        }, 2000)
+            setPhoneValue('')
+        }, 2500)
     }
 
     useEffect(() => {
@@ -131,14 +174,13 @@ export default function VoiceChatbot() {
         status === 'disconnecting' ? 'Ending...' :
         status === 'connected' && mode === 'speaking' ? 'Speaking...' :
         status === 'connected'     ? 'Listening...' :
-        null // idle → two-line label
+        null
 
     const waveState =
         status === 'connected' && mode === 'speaking' ? 'speaking' :
         status === 'connected' ? 'listening' :
         'idle'
 
-    // Box-shadow driven by framer-motion animate
     const boxShadowValue =
         status === 'connected'
             ? '0 0 0 5px rgba(224,81,50,0.14), 0 0 30px rgba(224,81,50,0.2), 0 8px 32px rgba(0,0,0,0.5)'
@@ -157,7 +199,7 @@ export default function VoiceChatbot() {
 
     return (
         <>
-            {/* Centered email popup */}
+            {/* Centered contact popup */}
             <AnimatePresence>
                 {showEmailInput && (
                     <motion.div
@@ -171,7 +213,7 @@ export default function VoiceChatbot() {
                         <div
                             className="absolute inset-0 bg-black/60"
                             style={{ backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)' }}
-                            onClick={() => { if (!submitted) { setShowEmailInput(false); setEmailValue(''); setEmailError('') } }}
+                            onClick={() => { if (!submitted) closePopup() }}
                         />
 
                         {/* Card */}
@@ -190,7 +232,7 @@ export default function VoiceChatbot() {
                             {/* X close */}
                             {!submitted && (
                                 <button
-                                    onClick={() => { setShowEmailInput(false); setEmailValue(''); setEmailError('') }}
+                                    onClick={closePopup}
                                     className="absolute top-4 right-4 w-7 h-7 flex items-center justify-center rounded-full text-gray-500 hover:text-white transition-colors"
                                     style={{ background: 'rgba(255,255,255,0.06)' }}
                                     aria-label="Close"
@@ -225,16 +267,35 @@ export default function VoiceChatbot() {
                                     <motion.div key="form" initial={{ opacity: 1 }} exit={{ opacity: 0 }}>
                                         <p className="font-mono text-[0.65rem] uppercase tracking-widest mb-2" style={{ color: '#e05132' }}>DEX AI Solutions</p>
                                         <h3 className="text-white font-semibold text-lg mb-1">Stay in touch</h3>
-                                        <p className="text-gray-400 text-sm mb-5">Drop your email and we'll reach out shortly.</p>
+                                        <p className="text-gray-400 text-sm mb-5">Drop your details and we'll reach out shortly.</p>
 
+                                        {/* Name */}
+                                        <input
+                                            type="text"
+                                            value={nameValue}
+                                            onChange={(e) => { setNameValue(e.target.value); setNameError('') }}
+                                            onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
+                                            placeholder="Your name"
+                                            autoFocus
+                                            className="w-full text-white text-sm px-4 py-3 rounded-xl outline-none placeholder-gray-600 transition-all mb-1"
+                                            style={{
+                                                background: '#111',
+                                                border: nameError ? '1px solid rgba(239,68,68,0.5)' : '1px solid rgba(255,255,255,0.08)',
+                                            }}
+                                            onFocus={e => { e.target.style.border = '1px solid rgba(224,81,50,0.5)'; e.target.style.boxShadow = '0 0 0 3px rgba(224,81,50,0.1)' }}
+                                            onBlur={e => { e.target.style.border = nameError ? '1px solid rgba(239,68,68,0.5)' : '1px solid rgba(255,255,255,0.08)'; e.target.style.boxShadow = 'none' }}
+                                        />
+                                        {nameError && <p className="text-red-400 text-xs mb-2 pl-1">{nameError}</p>}
+                                        {!nameError && <div className="mb-3" />}
+
+                                        {/* Email */}
                                         <input
                                             type="email"
                                             value={emailValue}
                                             onChange={(e) => { setEmailValue(e.target.value); setEmailError('') }}
-                                            onKeyDown={(e) => e.key === 'Enter' && handleEmailSubmit()}
-                                            placeholder="Enter your email address"
-                                            autoFocus
-                                            className="w-full text-white text-sm px-4 py-3 rounded-xl outline-none placeholder-gray-600 mb-1 transition-all"
+                                            onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
+                                            placeholder="Email address"
+                                            className="w-full text-white text-sm px-4 py-3 rounded-xl outline-none placeholder-gray-600 transition-all mb-1"
                                             style={{
                                                 background: '#111',
                                                 border: emailError ? '1px solid rgba(239,68,68,0.5)' : '1px solid rgba(255,255,255,0.08)',
@@ -242,11 +303,27 @@ export default function VoiceChatbot() {
                                             onFocus={e => { e.target.style.border = '1px solid rgba(224,81,50,0.5)'; e.target.style.boxShadow = '0 0 0 3px rgba(224,81,50,0.1)' }}
                                             onBlur={e => { e.target.style.border = emailError ? '1px solid rgba(239,68,68,0.5)' : '1px solid rgba(255,255,255,0.08)'; e.target.style.boxShadow = 'none' }}
                                         />
-                                        {emailError && <p className="text-red-400 text-xs mb-3 pl-1">{emailError}</p>}
+                                        {emailError && <p className="text-red-400 text-xs mb-2 pl-1">{emailError}</p>}
                                         {!emailError && <div className="mb-3" />}
 
+                                        {/* Phone */}
+                                        <input
+                                            type="tel"
+                                            value={phoneValue}
+                                            onChange={(e) => setPhoneValue(e.target.value)}
+                                            onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
+                                            placeholder="WhatsApp number (optional)"
+                                            className="w-full text-white text-sm px-4 py-3 rounded-xl outline-none placeholder-gray-600 transition-all mb-4"
+                                            style={{
+                                                background: '#111',
+                                                border: '1px solid rgba(255,255,255,0.08)',
+                                            }}
+                                            onFocus={e => { e.target.style.border = '1px solid rgba(224,81,50,0.5)'; e.target.style.boxShadow = '0 0 0 3px rgba(224,81,50,0.1)' }}
+                                            onBlur={e => { e.target.style.border = '1px solid rgba(255,255,255,0.08)'; e.target.style.boxShadow = 'none' }}
+                                        />
+
                                         <button
-                                            onClick={handleEmailSubmit}
+                                            onClick={handleSubmit}
                                             className="w-full py-3 rounded-xl text-white text-sm font-semibold tracking-wide transition-opacity hover:opacity-90 active:opacity-75"
                                             style={{ background: '#e05132' }}
                                         >
