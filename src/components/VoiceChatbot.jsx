@@ -3,12 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Conversation } from '@elevenlabs/client'
 
 const AGENT_ID = 'agent_4501kn3whsk4eq6a22eyqpxf43nc'
-const EMAIL_TRIGGER = 'type your email'
+const EMAIL_KEYWORDS = ['email', 'email address', 'send you', 'reach you']
 
 export default function VoiceChatbot() {
     const [status, setStatus] = useState('idle') // idle | connecting | connected | disconnecting
     const [mode, setMode] = useState('listening') // speaking | listening
     const [showEmailInput, setShowEmailInput] = useState(false)
+    const [submitted, setSubmitted] = useState(false)
     const [emailValue, setEmailValue] = useState('')
     const [emailError, setEmailError] = useState('')
     const [error, setError] = useState('')
@@ -41,7 +42,7 @@ export default function VoiceChatbot() {
                         role: source === 'ai' ? 'assistant' : 'user',
                         content: message,
                     })
-                    if (source === 'ai' && message.toLowerCase().includes(EMAIL_TRIGGER)) {
+                    if (source === 'ai' && EMAIL_KEYWORDS.some(k => message.toLowerCase().includes(k))) {
                         setShowEmailInput(true)
                     }
                 },
@@ -66,7 +67,9 @@ export default function VoiceChatbot() {
     const endCall = useCallback(async () => {
         setStatus('disconnecting')
         setShowEmailInput(false)
+        setSubmitted(false)
         setEmailValue('')
+        setEmailError('')
         messagesRef.current = []
         const conv = conversationRef.current
         conversationRef.current = null
@@ -98,8 +101,12 @@ export default function VoiceChatbot() {
                 body: JSON.stringify({ clientEmail: emailValue, conversationSummary: summary }),
             })
         } catch { /* silent */ }
-        setShowEmailInput(false)
-        setEmailValue('')
+        setSubmitted(true)
+        setTimeout(() => {
+            setShowEmailInput(false)
+            setSubmitted(false)
+            setEmailValue('')
+        }, 2000)
     }
 
     useEffect(() => {
@@ -142,53 +149,107 @@ export default function VoiceChatbot() {
 
     return (
         <>
-            {/* Email input — floats above button */}
+            {/* Centered email popup */}
             <AnimatePresence>
                 {showEmailInput && (
                     <motion.div
-                        initial={{ opacity: 0, y: 12 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 12 }}
-                        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        className="fixed bottom-[96px] right-6 z-[9999] w-[300px]"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="fixed inset-0 z-[10000] flex items-center justify-center px-4"
                     >
+                        {/* Backdrop */}
                         <div
-                            className="rounded-2xl p-4 shadow-2xl"
-                            style={{ background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.08)' }}
+                            className="absolute inset-0 bg-black/60"
+                            style={{ backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)' }}
+                            onClick={() => { if (!submitted) { setShowEmailInput(false); setEmailValue(''); setEmailError('') } }}
+                        />
+
+                        {/* Card */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.94, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.94, y: 20 }}
+                            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                            className="relative z-10 w-full max-w-sm rounded-2xl p-6"
+                            style={{
+                                background: 'rgba(13, 13, 22, 0.92)',
+                                backdropFilter: 'blur(24px)',
+                                WebkitBackdropFilter: 'blur(24px)',
+                                border: '1px solid rgba(139, 92, 246, 0.22)',
+                                boxShadow: '0 30px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(139,92,246,0.08)',
+                            }}
                         >
-                            <p className="text-gray-500 text-[0.68rem] uppercase tracking-widest mb-3 font-mono">
-                                Enter your email
-                            </p>
-                            <div className="flex gap-2">
-                                <input
-                                    type="email"
-                                    value={emailValue}
-                                    onChange={(e) => { setEmailValue(e.target.value); setEmailError('') }}
-                                    onKeyDown={(e) => e.key === 'Enter' && handleEmailSubmit()}
-                                    placeholder="you@example.com"
-                                    autoFocus
-                                    className="flex-1 text-white text-sm px-4 py-2.5 rounded-xl outline-none placeholder-gray-700"
-                                    style={{
-                                        background: '#111',
-                                        border: emailError
-                                            ? '1px solid rgba(239,68,68,0.5)'
-                                            : '1px solid rgba(255,255,255,0.1)',
-                                    }}
-                                />
+                            {/* X close */}
+                            {!submitted && (
                                 <button
-                                    onClick={handleEmailSubmit}
-                                    className="w-10 h-10 shrink-0 rounded-xl flex items-center justify-center"
-                                    style={{ background: '#e05132' }}
-                                    aria-label="Submit email"
+                                    onClick={() => { setShowEmailInput(false); setEmailValue(''); setEmailError('') }}
+                                    className="absolute top-4 right-4 w-7 h-7 flex items-center justify-center rounded-full text-gray-500 hover:text-white transition-colors"
+                                    style={{ background: 'rgba(255,255,255,0.06)' }}
+                                    aria-label="Close"
                                 >
-                                    <svg width="13" height="13" fill="none" stroke="white" strokeWidth="2.5" viewBox="0 0 24 24">
-                                        <path d="M22 2L11 13" />
-                                        <path d="M22 2L15 22l-4-9-9-4 20-7z" />
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                                        <path d="M1 1l8 8M9 1L1 9" />
                                     </svg>
                                 </button>
-                            </div>
-                            {emailError && <p className="text-red-400 text-xs mt-2 pl-1">{emailError}</p>}
-                        </div>
+                            )}
+
+                            <AnimatePresence mode="wait">
+                                {submitted ? (
+                                    <motion.div
+                                        key="success"
+                                        initial={{ opacity: 0, y: 8 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.25 }}
+                                        className="text-center py-4"
+                                    >
+                                        <div
+                                            className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
+                                            style={{ background: 'rgba(139,92,246,0.18)' }}
+                                        >
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                                <polyline points="20 6 9 17 4 12" />
+                                            </svg>
+                                        </div>
+                                        <p className="text-white font-semibold text-base">Perfect!</p>
+                                        <p className="text-gray-400 text-sm mt-1">You will hear back shortly.</p>
+                                    </motion.div>
+                                ) : (
+                                    <motion.div key="form" initial={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                                        <p className="text-gray-500 text-[0.65rem] uppercase tracking-widest font-mono mb-2">DEX AI Solutions</p>
+                                        <h3 className="text-white font-semibold text-lg mb-1">Stay in touch</h3>
+                                        <p className="text-gray-400 text-sm mb-5">Drop your email and we'll reach out shortly.</p>
+
+                                        <input
+                                            type="email"
+                                            value={emailValue}
+                                            onChange={(e) => { setEmailValue(e.target.value); setEmailError('') }}
+                                            onKeyDown={(e) => e.key === 'Enter' && handleEmailSubmit()}
+                                            placeholder="Enter your email address"
+                                            autoFocus
+                                            className="w-full text-white text-sm px-4 py-3 rounded-xl outline-none placeholder-gray-600 mb-1 transition-all"
+                                            style={{
+                                                background: 'rgba(255,255,255,0.05)',
+                                                border: emailError ? '1px solid rgba(239,68,68,0.5)' : '1px solid rgba(255,255,255,0.08)',
+                                            }}
+                                            onFocus={e => { e.target.style.border = '1px solid rgba(139,92,246,0.5)'; e.target.style.boxShadow = '0 0 0 3px rgba(139,92,246,0.15)' }}
+                                            onBlur={e => { e.target.style.border = emailError ? '1px solid rgba(239,68,68,0.5)' : '1px solid rgba(255,255,255,0.08)'; e.target.style.boxShadow = 'none' }}
+                                        />
+                                        {emailError && <p className="text-red-400 text-xs mb-3 pl-1">{emailError}</p>}
+                                        {!emailError && <div className="mb-3" />}
+
+                                        <button
+                                            onClick={handleEmailSubmit}
+                                            className="w-full py-3 rounded-xl text-white text-sm font-semibold tracking-wide transition-opacity hover:opacity-90 active:opacity-75"
+                                            style={{ background: 'linear-gradient(135deg, #7c3aed 0%, #2563eb 100%)' }}
+                                        >
+                                            Send
+                                        </button>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>
