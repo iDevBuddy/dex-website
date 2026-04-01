@@ -95,12 +95,20 @@ export default function VoiceChatbot() {
             .map((m) => `${m.role === 'user' ? 'Visitor' : 'DEX'}: ${m.content}`)
             .join('\n')
         try {
-            await fetch('/api/send-email', {
+            const res = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ clientEmail: emailValue, conversationSummary: summary }),
             })
-        } catch { /* silent */ }
+            if (!res.ok) {
+                const data = await res.json().catch(() => ({}))
+                setEmailError(data.error || 'Failed to send. Please try again.')
+                return
+            }
+        } catch {
+            setEmailError('Network error. Please try again.')
+            return
+        }
         setSubmitted(true)
         setTimeout(() => {
             setShowEmailInput(false)
@@ -174,11 +182,9 @@ export default function VoiceChatbot() {
                             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                             className="relative z-10 w-full max-w-sm rounded-2xl p-6"
                             style={{
-                                background: 'rgba(13, 13, 22, 0.92)',
-                                backdropFilter: 'blur(24px)',
-                                WebkitBackdropFilter: 'blur(24px)',
-                                border: '1px solid rgba(139, 92, 246, 0.22)',
-                                boxShadow: '0 30px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(139,92,246,0.08)',
+                                background: '#1a1a1a',
+                                border: '1px solid rgba(224,81,50,0.18)',
+                                boxShadow: '0 30px 60px rgba(0,0,0,0.7), 0 0 40px rgba(224,81,50,0.06)',
                             }}
                         >
                             {/* X close */}
@@ -206,9 +212,9 @@ export default function VoiceChatbot() {
                                     >
                                         <div
                                             className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
-                                            style={{ background: 'rgba(139,92,246,0.18)' }}
+                                            style={{ background: 'rgba(224,81,50,0.15)' }}
                                         >
-                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e05132" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                                 <polyline points="20 6 9 17 4 12" />
                                             </svg>
                                         </div>
@@ -217,7 +223,7 @@ export default function VoiceChatbot() {
                                     </motion.div>
                                 ) : (
                                     <motion.div key="form" initial={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                                        <p className="text-gray-500 text-[0.65rem] uppercase tracking-widest font-mono mb-2">DEX AI Solutions</p>
+                                        <p className="font-mono text-[0.65rem] uppercase tracking-widest mb-2" style={{ color: '#e05132' }}>DEX AI Solutions</p>
                                         <h3 className="text-white font-semibold text-lg mb-1">Stay in touch</h3>
                                         <p className="text-gray-400 text-sm mb-5">Drop your email and we'll reach out shortly.</p>
 
@@ -230,10 +236,10 @@ export default function VoiceChatbot() {
                                             autoFocus
                                             className="w-full text-white text-sm px-4 py-3 rounded-xl outline-none placeholder-gray-600 mb-1 transition-all"
                                             style={{
-                                                background: 'rgba(255,255,255,0.05)',
+                                                background: '#111',
                                                 border: emailError ? '1px solid rgba(239,68,68,0.5)' : '1px solid rgba(255,255,255,0.08)',
                                             }}
-                                            onFocus={e => { e.target.style.border = '1px solid rgba(139,92,246,0.5)'; e.target.style.boxShadow = '0 0 0 3px rgba(139,92,246,0.15)' }}
+                                            onFocus={e => { e.target.style.border = '1px solid rgba(224,81,50,0.5)'; e.target.style.boxShadow = '0 0 0 3px rgba(224,81,50,0.1)' }}
                                             onBlur={e => { e.target.style.border = emailError ? '1px solid rgba(239,68,68,0.5)' : '1px solid rgba(255,255,255,0.08)'; e.target.style.boxShadow = 'none' }}
                                         />
                                         {emailError && <p className="text-red-400 text-xs mb-3 pl-1">{emailError}</p>}
@@ -242,7 +248,7 @@ export default function VoiceChatbot() {
                                         <button
                                             onClick={handleEmailSubmit}
                                             className="w-full py-3 rounded-xl text-white text-sm font-semibold tracking-wide transition-opacity hover:opacity-90 active:opacity-75"
-                                            style={{ background: 'linear-gradient(135deg, #7c3aed 0%, #2563eb 100%)' }}
+                                            style={{ background: '#e05132' }}
                                         >
                                             Send
                                         </button>
