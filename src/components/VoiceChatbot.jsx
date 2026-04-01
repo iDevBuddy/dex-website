@@ -266,7 +266,7 @@ export default function VoiceChatbot() {
                                     exit={{ opacity: 0 }}
                                     transition={{ duration: 0.15 }}
                                 >
-                                    <p className="text-white font-semibold text-[0.9rem] leading-tight tracking-tight">Talk with Our</p>
+                                    <p className="text-white font-semibold text-[0.9rem] leading-tight tracking-tight">Talk with DEX</p>
                                     <p className="text-white font-semibold text-[0.9rem] leading-tight tracking-tight">Consultant</p>
                                 </motion.div>
                             )}
@@ -283,19 +283,29 @@ export default function VoiceChatbot() {
 
 function WaveBars({ state }) {
     const animClass =
-        state === 'speaking'  ? 'wave-bar-speaking' :
-        state === 'listening' ? 'wave-bar-listening' :
-        'wave-bar-idle'
+        state === 'speaking'  ? 'wave-anim-speaking' :
+        state === 'listening' ? 'wave-anim-listening' :
+        'wave-anim-idle'
 
     return (
-        <div className="flex items-end gap-[3px]" style={{ height: '26px' }}>
-            {[0, 1, 2, 3, 4].map((i) => (
-                <span
-                    key={i}
-                    className={`w-[3px] rounded-full ${animClass}`}
-                    style={{ backgroundColor: '#e05132', animationDelay: `${i * 0.13}s` }}
-                />
-            ))}
+        <div style={{ width: 32, height: 26, overflow: 'hidden' }} aria-hidden="true">
+            <div className={animClass} style={{ width: 64, height: 26 }}>
+                <svg width="64" height="26" viewBox="0 0 64 26" fill="none">
+                    <path
+                        d="M0,13 C5,3 11,3 16,13 C21,23 27,23 32,13 C37,3 43,3 48,13 C53,23 59,23 64,13"
+                        stroke="#e05132"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                    />
+                    <path
+                        d="M0,13 C5,23 11,23 16,13 C21,3 27,3 32,13 C37,23 43,23 48,13 C53,3 59,3 64,13"
+                        stroke="#e05132"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        opacity="0.3"
+                    />
+                </svg>
+            </div>
         </div>
     )
 }
