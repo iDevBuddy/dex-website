@@ -5,6 +5,56 @@ import { Conversation } from '@elevenlabs/client'
 
 const AGENT_ID = 'agent_4501kn3whsk4eq6a22eyqpxf43nc'
 const EMAIL_KEYWORDS = ['email', 'email address', 'send you', 'reach you']
+const VOICE_SESSION_ENDPOINT = '/api/voice-session'
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+
+async function createVoiceSession() {
+    const participantName = `visitor-${Date.now()}`
+    const response = await fetch(VOICE_SESSION_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ agentId: AGENT_ID, participantName }),
+    })
+
+    const payload = await response.json().catch(() => ({}))
+    if (!response.ok) {
+        throw new Error(payload?.error || 'Failed to initialize voice session.')
+    }
+
+    if (payload?.conversationToken) {
+        return {
+            conversationToken: payload.conversationToken,
+            connectionType: 'webrtc',
+        }
+    }
+
+    if (payload?.signedUrl) {
+        return {
+            signedUrl: payload.signedUrl,
+            connectionType: 'websocket',
+        }
+    }
+
+    throw new Error('Voice session credentials are missing.')
+}
+
+async function createVoiceSessionWithRetry(maxAttempts = 2) {
+    let lastError = null
+
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        try {
+            return await createVoiceSession()
+        } catch (error) {
+            lastError = error
+            if (attempt < maxAttempts) {
+                await delay(300 * attempt)
+            }
+        }
+    }
+
+    throw lastError || new Error('Unable to create voice session.')
+}
 
 export default function VoiceChatbot() {
     const [status, setStatus] = useState('idle') // idle | connecting | connected | disconnecting
@@ -34,9 +84,9 @@ export default function VoiceChatbot() {
         setStatus('connecting')
         try {
             await navigator.mediaDevices.getUserMedia({ audio: true })
+            const sessionCredentials = await createVoiceSessionWithRetry(2)
             const conv = await Conversation.startSession({
-                agentId: AGENT_ID,
-                connectionType: 'webrtc',
+                ...sessionCredentials,
                 overrides: {
                     agent: {
                         firstMessage: "Hi! I'm DEX, how can I help you today?",
