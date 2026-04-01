@@ -24,44 +24,27 @@
     }
 }
 
-@keyframes listening-ring-anim {
-    0% { transform: scale(1); opacity: 0.6; }
-    100% { transform: scale(2.2); opacity: 0; }
+/* ── VoiceChatbot wave bar animations ── */
+
+@keyframes wave-idle {
+    0%, 100% { height: 4px; }
+    50%       { height: 14px; }
 }
-@keyframes bounce-dot-anim {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+@keyframes wave-listening {
+    0%, 100% { height: 5px; }
+    50%       { height: 24px; }
 }
-@keyframes equalizer-anim {
-    0%, 100% { height: 8px; }
-    50% { height: 32px; }
-}
-@keyframes email-slide-up-anim {
-    from { transform: translateY(12px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+@keyframes wave-speaking {
+    0%, 100% { height: 5px; }
+    50%       { height: 20px; }
 }
 
-.listening-ring {
-    position: absolute;
-    inset: 0;
-    border-radius: 9999px;
-    border: 2px solid #e05132;
-    animation: listening-ring-anim 1.5s ease-out infinite;
+.wave-bar-idle {
+    animation: wave-idle 1.8s ease-in-out infinite;
 }
-.bounce-dot {
-    animation: bounce-dot-anim 0.8s ease-in-out infinite;
+.wave-bar-listening {
+    animation: wave-listening 0.4s ease-in-out infinite;
 }
-.equalizer-bar {
-    animation: equalizer-anim 0.8s ease-in-out infinite;
-}
-.email-slide-up {
-    animation: email-slide-up-anim 0.25s ease-out forwards;
-}
-
-@keyframes trigger-wave-anim {
-    0%, 100% { height: 3px; }
-    50% { height: 9px; }
-}
-.trigger-wave-bar {
-    animation: trigger-wave-anim 0.7s ease-in-out infinite;
+.wave-bar-speaking {
+    animation: wave-speaking 0.75s ease-in-out infinite;
 }
