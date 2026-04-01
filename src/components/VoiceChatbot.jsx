@@ -2,22 +2,6 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Conversation } from '@elevenlabs/client'
 
-// Patch: ElevenLabs SDK crashes when server sends a message without error_event.
-// Walk up the prototype chain and add a null-guard to handleErrorEvent.
-;(function patchElevenLabs() {
-    let proto = Conversation.prototype
-    while (proto && proto !== Object.prototype) {
-        if (Object.prototype.hasOwnProperty.call(proto, 'handleErrorEvent')) {
-            const orig = proto.handleErrorEvent
-            proto.handleErrorEvent = function (event) {
-                if (!event || !event.error_event) return
-                return orig.call(this, event)
-            }
-            break
-        }
-        proto = Object.getPrototypeOf(proto)
-    }
-})()
 
 const AGENT_ID = 'agent_4501kn3whsk4eq6a22eyqpxf43nc'
 const EMAIL_KEYWORDS = ['email', 'email address', 'send you', 'reach you']
@@ -83,6 +67,22 @@ export default function VoiceChatbot() {
                     conversationRef.current = null
                 },
             })
+            // Patch: SDK crashes when server sends event without error_event.
+            // Must patch the INSTANCE's prototype chain, not Conversation.prototype,
+            // because startSession() returns a different internal class.
+            let proto = Object.getPrototypeOf(conv)
+            while (proto && proto !== Object.prototype) {
+                if (Object.prototype.hasOwnProperty.call(proto, 'handleErrorEvent')) {
+                    const orig = proto.handleErrorEvent
+                    proto.handleErrorEvent = function (event) {
+                        if (!event || !event.error_event) return
+                        return orig.call(this, event)
+                    }
+                    break
+                }
+                proto = Object.getPrototypeOf(proto)
+            }
+
             conversationRef.current = conv
         } catch (err) {
             showError(
