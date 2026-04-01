@@ -59,8 +59,9 @@ export default function VoiceChatbot() {
                     }
                 },
                 onModeChange: ({ mode: m }) => setMode(m),
-                onError: () => {
-                    showError('Connection error. Please try again.')
+                onError: (err) => {
+                    console.error('ElevenLabs error:', err)
+                    showError(`Error: ${err?.message || JSON.stringify(err) || 'Connection failed'}`)
                     setStatus('idle')
                     conversationRef.current = null
                 },
