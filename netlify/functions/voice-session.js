@@ -61,7 +61,7 @@ async function getConversationToken({ apiKey, agentId, participantName, branchId
 
 async function getSignedUrl({ apiKey, agentId, participantName, branchId }) {
     const query = getQuery(agentId, participantName, branchId)
-    const response = await fetch(`${ELEVENLABS_API_BASE}/v1/convai/conversation/get_signed_url?${query}`, {
+    const response = await fetch(`${ELEVENLABS_API_BASE}/v1/convai/conversation/get-signed-url?${query}`, {
         method: 'GET',
         headers: {
             'xi-api-key': apiKey,
