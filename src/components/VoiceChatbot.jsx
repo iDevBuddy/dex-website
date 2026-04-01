@@ -137,10 +137,11 @@ export default function VoiceChatbot() {
 
             conversationRef.current = conv
         } catch (err) {
+            const messageText = typeof err?.message === 'string' ? err.message.trim() : ''
             showError(
                 err.name === 'NotAllowedError'
                     ? 'Microphone access denied.'
-                    : 'Failed to connect. Please try again.'
+                    : messageText || 'Failed to connect. Please try again.'
             )
             setStatus('idle')
         }

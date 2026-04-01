@@ -61,24 +61,35 @@ async function getConversationToken({ apiKey, agentId, participantName, branchId
 
 async function getSignedUrl({ apiKey, agentId, participantName, branchId }) {
     const query = getQuery(agentId, participantName, branchId)
-    const response = await fetch(`${ELEVENLABS_API_BASE}/v1/convai/conversation/get-signed-url?${query}`, {
-        method: 'GET',
-        headers: {
-            'xi-api-key': apiKey,
-            Accept: 'application/json',
-        },
-    })
+    const endpoints = [
+        `${ELEVENLABS_API_BASE}/v1/convai/conversation/get-signed-url?${query}`,
+        `${ELEVENLABS_API_BASE}/v1/convai/conversation/get_signed_url?${query}`,
+    ]
 
-    if (!response.ok) {
-        throw new Error(`Signed URL request failed: ${await parseErrorResponse(response)}`)
+    let lastError = null
+    for (const url of endpoints) {
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'xi-api-key': apiKey,
+                Accept: 'application/json',
+            },
+        })
+
+        if (!response.ok) {
+            lastError = `Signed URL request failed (${url}): ${await parseErrorResponse(response)}`
+            continue
+        }
+
+        const data = await response.json()
+        if (data?.signed_url) {
+            return data.signed_url
+        }
+
+        lastError = `Signed URL response missing signed_url (${url}).`
     }
 
-    const data = await response.json()
-    if (!data?.signed_url) {
-        throw new Error('Signed URL response missing signed_url.')
-    }
-
-    return data.signed_url
+    throw new Error(lastError || 'Signed URL request failed.')
 }
 
 export const handler = async (event) => {
@@ -122,7 +133,13 @@ export const handler = async (event) => {
             })
         } catch (signedUrlError) {
             console.error('Voice signed URL error:', signedUrlError)
-            return json(502, { error: 'Unable to create voice session.' })
+            return json(502, {
+                error: 'Unable to create voice session.',
+                details: {
+                    tokenError: tokenError?.message || 'token request failed',
+                    signedUrlError: signedUrlError?.message || 'signed URL request failed',
+                },
+            })
         }
     }
 }
