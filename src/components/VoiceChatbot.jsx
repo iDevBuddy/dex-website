@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Conversation } from '@elevenlabs/client'
+import { Conversation } from '@11labs/client'
 
 const AGENT_ID = 'agent_4501kn3whsk4eq6a22eyqpxf43nc'
 const EMAIL_KEYWORDS = ['email', 'email address', 'send you', 'reach you']
