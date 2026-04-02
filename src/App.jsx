@@ -8,7 +8,6 @@ import Demo from './components/Demo'
 import Process from './components/Process'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
-import VoiceChatbot from './components/VoiceChatbot'
 
 export default function App() {
     return (
@@ -23,7 +22,7 @@ export default function App() {
             <Process />
             <CTA />
             <Footer />
-            <VoiceChatbot />
+
         </div>
     )
 }
