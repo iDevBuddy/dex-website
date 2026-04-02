@@ -19,7 +19,11 @@ async function createVoiceSession() {
 
     const payload = await response.json().catch(() => ({}))
     if (!response.ok) {
-        throw new Error(payload?.error || 'Failed to initialize voice session.')
+        const detailMessage =
+            payload?.details?.tokenError ||
+            payload?.details?.signedUrlError ||
+            payload?.error
+        throw new Error(detailMessage || 'Failed to initialize voice session.')
     }
 
     if (payload?.conversationToken) {
