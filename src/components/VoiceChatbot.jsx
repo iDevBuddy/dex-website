@@ -5,60 +5,6 @@ import { Conversation } from '@elevenlabs/client'
 
 const AGENT_ID = 'agent_4501kn3whsk4eq6a22eyqpxf43nc'
 const EMAIL_KEYWORDS = ['email', 'email address', 'send you', 'reach you']
-const VOICE_SESSION_ENDPOINT = '/api/voice-session'
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
-
-async function createVoiceSession() {
-    const participantName = `visitor-${Date.now()}`
-    const response = await fetch(VOICE_SESSION_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ agentId: AGENT_ID, participantName }),
-    })
-
-    const payload = await response.json().catch(() => ({}))
-    if (!response.ok) {
-        const detailMessage =
-            payload?.details?.tokenError ||
-            payload?.details?.signedUrlError ||
-            payload?.error
-        throw new Error(detailMessage || 'Failed to initialize voice session.')
-    }
-
-    if (payload?.conversationToken) {
-        return {
-            conversationToken: payload.conversationToken,
-            connectionType: 'webrtc',
-        }
-    }
-
-    if (payload?.signedUrl) {
-        return {
-            signedUrl: payload.signedUrl,
-            connectionType: 'websocket',
-        }
-    }
-
-    throw new Error('Voice session credentials are missing.')
-}
-
-async function createVoiceSessionWithRetry(maxAttempts = 2) {
-    let lastError = null
-
-    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-        try {
-            return await createVoiceSession()
-        } catch (error) {
-            lastError = error
-            if (attempt < maxAttempts) {
-                await delay(300 * attempt)
-            }
-        }
-    }
-
-    throw lastError || new Error('Unable to create voice session.')
-}
 
 export default function VoiceChatbot() {
     const [status, setStatus] = useState('idle') // idle | connecting | connected | disconnecting
@@ -88,26 +34,18 @@ export default function VoiceChatbot() {
         setStatus('connecting')
         try {
             await navigator.mediaDevices.getUserMedia({ audio: true })
-            const sessionCredentials = await createVoiceSessionWithRetry(2)
             const conv = await Conversation.startSession({
-                ...sessionCredentials,
-                overrides: {
-                    agent: {
-                        firstMessage: "Hi! I'm DEX, how can I help you today?",
-                        language: "en"
-                    }
-                },
+                agentId: AGENT_ID,
                 onConnect: () => {
                     setStatus('connected')
                     connectTimeRef.current = Date.now()
                 },
-                onDisconnect: (details) => {
-                    const duration = connectTimeRef.current ? Date.now() - connectTimeRef.current : 0
-                    const reason = details?.message || details?.closeReason || ''
+                onDisconnect: () => {
+                    const duration = connectTimeRef.current
+                        ? Date.now() - connectTimeRef.current : 0
                     if (duration > 0 && duration < 10000) {
-                        showError(reason ? `Call dropped: ${reason}` : 'Call dropped. Tap to try again.')
+                        showError('Call dropped. Tap to try again.')
                     }
-                    console.warn('ElevenLabs disconnect:', details)
                     connectTimeRef.current = null
                     setStatus('idle')
                     setMode('listening')
@@ -118,34 +56,29 @@ export default function VoiceChatbot() {
                         role: source === 'ai' ? 'assistant' : 'user',
                         content: message,
                     })
-                    if (source === 'ai' && EMAIL_KEYWORDS.some(k => message.toLowerCase().includes(k))) {
+                    if (
+                        source === 'ai' &&
+                        EMAIL_KEYWORDS.some(k =>
+                            message.toLowerCase().includes(k)
+                        )
+                    ) {
                         setShowEmailInput(true)
                     }
                 },
                 onModeChange: ({ mode: m }) => setMode(m),
-                onError: (message, context) => {
-                    const errorType = context?.errorType || ''
-                    const messageText = typeof message === 'string' ? message : message?.message || ''
-                    console.error('ElevenLabs error:', message, context)
-                    showError(`Error: ${errorType || messageText || 'Connection failed'}`)
+                onError: (err) => {
+                    console.error('ElevenLabs error:', err)
+                    showError('Connection failed. Please try again.')
                     setStatus('idle')
-                    setMode('listening')
                     conversationRef.current = null
                 },
-                onDebug: (event) => {
-                    if (event && typeof event === 'object' && (event.type === 'error' || event.type === 'close')) {
-                        console.warn('ElevenLabs debug:', event)
-                    }
-                },
             })
-
             conversationRef.current = conv
         } catch (err) {
-            const messageText = typeof err?.message === 'string' ? err.message.trim() : ''
             showError(
                 err.name === 'NotAllowedError'
                     ? 'Microphone access denied.'
-                    : messageText || 'Failed to connect. Please try again.'
+                    : 'Failed to connect. Please try again.'
             )
             setStatus('idle')
         }

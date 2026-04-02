@@ -9,7 +9,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@elevenlabs/client": "0.15.0",
+        "@elevenlabs/client": "^1.1.0",
         "framer-motion": "^11.0.0",
         "nodemailer": "^8.0.4",
         "openai": "^6.33.0",
