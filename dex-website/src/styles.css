@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        color-scheme: dark;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-dark text-gray-300;
+    }
+}
+
+@layer components {
+    .dex-panel {
+        background: rgba(17, 17, 17, 0.92);
+        border: 1px solid rgba(224, 81, 50, 0.18);
+        box-shadow:
+            0 32px 80px rgba(0, 0, 0, 0.58),
+            0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+            0 12px 40px rgba(224, 81, 50, 0.08);
+        backdrop-filter: blur(18px);
+    }
+
+    .dex-field {
+        @apply w-full rounded-2xl px-4 py-3 text-sm text-white outline-none transition;
+        background: rgba(10, 10, 10, 0.88);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .dex-field:focus {
+        border-color: rgba(224, 81, 50, 0.55);
+        box-shadow: 0 0 0 4px rgba(224, 81, 50, 0.12);
+    }
+
+    .dex-field-error {
+        border-color: rgba(248, 113, 113, 0.58);
+    }
+
+    .dex-widget-button {
+        background:
+            radial-gradient(circle at top left, rgba(224, 81, 50, 0.26), transparent 44%),
+            linear-gradient(135deg, rgba(26, 26, 26, 0.96), rgba(10, 10, 10, 0.98));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow:
+            0 16px 48px rgba(0, 0, 0, 0.42),
+            0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+    }
+}
+
+button[aria-label="Start voice consultation"],
+button[aria-label="End call"] {
+    display: none !important;
+}
