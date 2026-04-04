@@ -9,7 +9,12 @@
     }
 
     html {
+        color-scheme: dark;
         scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-dark text-gray-300;
     }
 
     ::selection {
@@ -22,32 +27,44 @@
     .section-padding {
         @apply py-20 lg:py-28;
     }
+
+    .dex-panel {
+        background: rgba(17, 17, 17, 0.92);
+        border: 1px solid rgba(224, 81, 50, 0.18);
+        box-shadow:
+            0 32px 80px rgba(0, 0, 0, 0.58),
+            0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+            0 12px 40px rgba(224, 81, 50, 0.08);
+        backdrop-filter: blur(18px);
+    }
+
+    .dex-field {
+        @apply w-full rounded-2xl px-4 py-3 text-sm text-white outline-none transition;
+        background: rgba(10, 10, 10, 0.88);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .dex-field:focus {
+        border-color: rgba(224, 81, 50, 0.55);
+        box-shadow: 0 0 0 4px rgba(224, 81, 50, 0.12);
+    }
+
+    .dex-field-error {
+        border-color: rgba(248, 113, 113, 0.58);
+    }
+
+    .dex-widget-button {
+        background:
+            radial-gradient(circle at top left, rgba(224, 81, 50, 0.26), transparent 44%),
+            linear-gradient(135deg, rgba(26, 26, 26, 0.96), rgba(10, 10, 10, 0.98));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow:
+            0 16px 48px rgba(0, 0, 0, 0.42),
+            0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+    }
 }
 
-/* ── VoiceChatbot sine wave animations ── */
-
-@keyframes wave-idle {
-    from { transform: translateX(0) scaleY(0.3); }
-    to   { transform: translateX(-32px) scaleY(0.3); }
-}
-@keyframes wave-listening {
-    from { transform: translateX(0) scaleY(0.7); }
-    to   { transform: translateX(-32px) scaleY(0.7); }
-}
-@keyframes wave-speaking {
-    from { transform: translateX(0) scaleY(1); }
-    to   { transform: translateX(-32px) scaleY(1); }
-}
-
-.wave-anim-idle {
-    transform-origin: 16px 13px;
-    animation: wave-idle 2.8s linear infinite;
-}
-.wave-anim-listening {
-    transform-origin: 16px 13px;
-    animation: wave-listening 1s linear infinite;
-}
-.wave-anim-speaking {
-    transform-origin: 16px 13px;
-    animation: wave-speaking 0.55s linear infinite;
+button[aria-label="Start voice consultation"],
+button[aria-label="End call"] {
+    display: none !important;
 }
