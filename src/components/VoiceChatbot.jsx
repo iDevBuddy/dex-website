@@ -225,7 +225,6 @@ export default function VoiceChatbot() {
             await connect({
                 auth: { type: 'accessToken', value: payload.accessToken },
                 configId: payload.configId,
-                sessionSettings: payload.sessionSettings,
             })
         } catch (requestError) {
             sessionRef.current = null

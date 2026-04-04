@@ -24,16 +24,10 @@ export async function handler(event) {
             }),
         ])
 
-        // Only pass fields the Hume SDK accepts in connect() sessionSettings
-        const cleanSessionSettings = {
-            systemPrompt: sessionSettings.systemPrompt,
-        }
-
         return json(200, {
             accessToken,
             configId,
             sessionId: sessionSettings.customSessionId,
-            sessionSettings: cleanSessionSettings,
         })
     } catch (error) {
         return json(500, {
