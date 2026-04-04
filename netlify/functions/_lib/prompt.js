@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
+import path from 'node:path'
 
-const KNOWLEDGE_FILE = new URL('../../../agent knowladge.txt', import.meta.url)
+const KNOWLEDGE_FILE = path.join(process.cwd(), 'agent knowladge.txt')
 
 async function readKnowledgeBase() {
     try {
