@@ -79,6 +79,11 @@ export default function VoiceChatbot() {
     const [fieldErrors, setFieldErrors] = useState({ fullName: '', email: '' })
     const [uiError, setUiError] = useState('')
     const [banner, setBanner] = useState(null)
+    const [showEmailPanel, setShowEmailPanel] = useState(false)
+    const [inCallEmail, setInCallEmail] = useState('')
+    const [inCallEmailError, setInCallEmailError] = useState('')
+    const [inCallSending, setInCallSending] = useState(false)
+    const [inCallEmailSent, setInCallEmailSent] = useState(false)
 
     const phaseRef = useRef(phase)
     const chatMetadataRef = useRef(chatMetadata)
@@ -100,6 +105,8 @@ export default function VoiceChatbot() {
         return () => window.clearTimeout(id)
     }, [banner])
 
+    const EMAIL_TRIGGER_WORDS = /\b(email|send|confirmation|follow.?up|reach out|contact|summary)\b/i
+
     const transcriptPreview = useMemo(() => buildTranscript(messages).slice(-2), [messages])
 
     const resetContactState = useCallback(() => {
@@ -109,6 +116,10 @@ export default function VoiceChatbot() {
         setUiError('')
         transcriptRef.current = []
         summaryStateRef.current = { previewed: false, inFlight: false, sent: false }
+        setShowEmailPanel(false)
+        setInCallEmail('')
+        setInCallEmailError('')
+        setInCallEmailSent(false)
     }, [])
 
     const releaseSession = useCallback(() => {
@@ -199,6 +210,27 @@ export default function VoiceChatbot() {
         }
     }, [error?.message, previewSummary, status.value])
 
+    useEffect(() => {
+        if (phase !== 'active' || inCallEmailSent) return
+        const transcript = buildTranscript(messages)
+        if (!transcript.length) return
+
+        const last = transcript[transcript.length - 1]
+
+        // Trigger panel when agent mentions email/send/confirmation
+        if (last.role === 'assistant' && EMAIL_TRIGGER_WORDS.test(last.content)) {
+            setShowEmailPanel(true)
+        }
+
+        // Auto-fill if customer spoke their email
+        const combined = transcript.map(e => e.content).join(' ')
+        const emailMatch = combined.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i)
+        if (emailMatch && !inCallEmail) {
+            setInCallEmail(emailMatch[0])
+            setShowEmailPanel(true)
+        }
+    }, [messages, phase, inCallEmailSent, inCallEmail])
+
     const startConversation = useCallback(async () => {
         resetContactState()
         setBanner(null)
@@ -244,6 +276,41 @@ export default function VoiceChatbot() {
             setPhase('error')
         }
     }, [disconnect])
+
+    const sendEmailDuringCall = useCallback(async () => {
+        if (!EMAIL_PATTERN.test(inCallEmail.trim())) {
+            setInCallEmailError('Please enter a valid email address.')
+            return
+        }
+        setInCallSending(true)
+        setInCallEmailError('')
+        const transcript = buildTranscript(messages)
+        try {
+            const res = await fetch('/api/consultation-summary', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    mode: 'send',
+                    lead: { fullName: '', email: inCallEmail.trim() },
+                    sessionId: sessionRef.current?.sessionId || '',
+                    hume: {
+                        chatId: chatMetadataRef.current?.chatId ?? null,
+                        chatGroupId: chatMetadataRef.current?.chatGroupId ?? null,
+                        requestId: chatMetadataRef.current?.requestId ?? null,
+                    },
+                    transcript,
+                }),
+            })
+            if (!res.ok) throw new Error('Failed to send emails.')
+            setInCallEmailSent(true)
+            setShowEmailPanel(false)
+            setBanner({ tone: 'success', text: 'Confirmation sent! Check your inbox.' })
+        } catch {
+            setInCallEmailError('Failed to send. Please try again.')
+        } finally {
+            setInCallSending(false)
+        }
+    }, [inCallEmail, messages])
 
     const closeModal = useCallback(() => {
         if (summaryStateRef.current.inFlight) return
@@ -521,6 +588,56 @@ export default function VoiceChatbot() {
                     </div>
                 </motion.button>
             </motion.div>
+
+            {/* Smart in-call email panel */}
+            <AnimatePresence>
+                {showEmailPanel && phase === 'active' ? (
+                    <motion.div
+                        initial={{ opacity: 0, y: 16, scale: 0.97 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.97 }}
+                        transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                        className="fixed bottom-24 right-6 z-[9999] w-[290px] rounded-2xl border border-white/10 bg-[#111] p-4 shadow-2xl"
+                    >
+                        <button
+                            onClick={() => setShowEmailPanel(false)}
+                            className="absolute right-3 top-3 text-gray-600 hover:text-gray-400"
+                            type="button"
+                            aria-label="Close"
+                        >
+                            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        <p className="mb-1 pr-6 text-xs font-semibold text-white">Send consultation summary</p>
+                        <p className="mb-3 text-[11px] text-gray-500">
+                            You'll get a copy and our expert team will follow up shortly.
+                        </p>
+                        <div className="flex gap-2">
+                            <input
+                                autoFocus
+                                type="email"
+                                value={inCallEmail}
+                                onChange={(e) => { setInCallEmail(e.target.value); setInCallEmailError('') }}
+                                onKeyDown={(e) => { if (e.key === 'Enter') void sendEmailDuringCall() }}
+                                placeholder="your@email.com"
+                                className={`flex-1 rounded-xl border bg-white/5 px-3 py-2 text-xs text-white placeholder-gray-600 outline-none focus:ring-1 focus:ring-accent/50 ${inCallEmailError ? 'border-red-500/50' : 'border-white/10'}`}
+                            />
+                            <button
+                                onClick={() => void sendEmailDuringCall()}
+                                disabled={inCallSending}
+                                type="button"
+                                className="rounded-xl bg-accent px-3 py-2 text-xs font-semibold text-white transition hover:opacity-90 disabled:opacity-60"
+                            >
+                                {inCallSending ? '...' : 'Send'}
+                            </button>
+                        </div>
+                        {inCallEmailError ? (
+                            <p className="mt-1.5 text-[11px] text-red-400">{inCallEmailError}</p>
+                        ) : null}
+                    </motion.div>
+                ) : null}
+            </AnimatePresence>
 
             <div
                 aria-hidden="true"
