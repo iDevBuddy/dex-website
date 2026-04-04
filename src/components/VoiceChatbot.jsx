@@ -105,7 +105,7 @@ export default function VoiceChatbot() {
         return () => window.clearTimeout(id)
     }, [banner])
 
-    const EMAIL_TRIGGER_WORDS = /\b(email|send|confirmation|follow.?up|reach out|contact|summary)\b/i
+    const EMAIL_TRIGGER_WORDS = /\b(email address|your email|send.*email|email.*you|confirmation email|follow.?up email|get your email|drop.*email|shoot.*email)\b/i
 
     const transcriptPreview = useMemo(() => buildTranscript(messages).slice(-2), [messages])
 
