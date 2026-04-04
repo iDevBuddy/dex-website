@@ -84,6 +84,7 @@ export default function VoiceChatbot() {
     const [inCallEmailError, setInCallEmailError] = useState('')
     const [inCallSending, setInCallSending] = useState(false)
     const [inCallEmailSent, setInCallEmailSent] = useState(false)
+    const [countdown, setCountdown] = useState(15)
 
     const phaseRef = useRef(phase)
     const chatMetadataRef = useRef(chatMetadata)
@@ -104,6 +105,18 @@ export default function VoiceChatbot() {
         const id = window.setTimeout(() => setBanner(null), 6000)
         return () => window.clearTimeout(id)
     }, [banner])
+
+    useEffect(() => {
+        if (phase !== 'connecting') { setCountdown(15); return }
+        setCountdown(15)
+        const interval = setInterval(() => {
+            setCountdown(prev => {
+                if (prev <= 1) { clearInterval(interval); return 0 }
+                return prev - 1
+            })
+        }, 1000)
+        return () => clearInterval(interval)
+    }, [phase])
 
     const transcriptPreview = useMemo(() => buildTranscript(messages).slice(-2), [messages])
 
@@ -574,51 +587,90 @@ export default function VoiceChatbot() {
                 ) : null}
             </AnimatePresence>
 
+            {/* Floating UI */}
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                className="fixed bottom-6 right-6 z-[9999]"
+                className="fixed bottom-6 right-6 z-[9999] flex items-center gap-3"
             >
-                <motion.button
-                    aria-label={phase === 'active' ? 'End Hume voice consultation' : 'Start Hume voice consultation'}
-                    className="dex-widget-button flex min-w-[240px] items-center gap-4 rounded-[26px] px-4 py-3 text-left"
-                    onClick={handleButtonClick}
-                    whileHover={{ scale: 1.015 }}
-                    whileTap={{ scale: 0.985 }}
-                >
-                    <PulseIcon active={phase === 'active' || phase === 'connecting'} />
+                {/* End call button — only when active */}
+                <AnimatePresence>
+                    {phase === 'active' ? (
+                        <motion.button
+                            initial={{ opacity: 0, scale: 0.8, x: 10 }}
+                            animate={{ opacity: 1, scale: 1, x: 0 }}
+                            exit={{ opacity: 0, scale: 0.8, x: 10 }}
+                            transition={{ duration: 0.2 }}
+                            onClick={endConversation}
+                            type="button"
+                            aria-label="End call"
+                            className="flex h-12 w-12 items-center justify-center rounded-full bg-red-500/20 border border-red-500/30 text-red-400 hover:bg-red-500/30 transition"
+                        >
+                            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                            </svg>
+                        </motion.button>
+                    ) : null}
+                </AnimatePresence>
 
-                    <div className="min-w-0 flex-1">
-                        <div className="flex items-center justify-between gap-3">
-                            <p className="truncate text-sm font-semibold text-white">{primaryLabel}</p>
-                            <StatusChip phase={phase} isPlaying={isPlaying} />
-                        </div>
-                        <p className="mt-1 truncate text-xs text-gray-400">{secondaryLabel}</p>
-                        {phase === 'active' && !inCallEmailSent ? (
-                            <button
-                                onClick={(e) => { e.stopPropagation(); setShowEmailPanel(p => !p) }}
-                                type="button"
-                                className="mt-2 text-[11px] text-accent/70 hover:text-accent underline underline-offset-2"
-                            >
-                                Send me a summary
-                            </button>
+                {/* Main button */}
+                <motion.button
+                    onClick={handleButtonClick}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.97 }}
+                    className="flex items-center gap-3 rounded-[22px] border border-white/[0.07] bg-[#1a1a1a] pl-4 pr-3 py-3 shadow-xl shadow-black/40 backdrop-blur-xl"
+                    style={{ minWidth: '210px' }}
+                >
+                    {/* Text */}
+                    <div className="flex-1 text-left select-none">
+                        {phase === 'idle' || phase === 'error' ? (
+                            <>
+                                <p className="text-white font-semibold text-[0.9rem] leading-tight tracking-tight">Talk with Sarah</p>
+                                <p className="text-white/50 font-medium text-[0.75rem] leading-tight mt-0.5">AI Consultant</p>
+                            </>
+                        ) : phase === 'connecting' ? (
+                            <>
+                                <p className="text-white font-semibold text-[0.9rem] leading-tight tracking-tight">Connecting...</p>
+                                <p className="text-white/50 font-medium text-[0.75rem] leading-tight mt-0.5">
+                                    Connect in {countdown}s
+                                </p>
+                            </>
+                        ) : phase === 'active' ? (
+                            <>
+                                <p className="text-white font-semibold text-[0.9rem] leading-tight tracking-tight">
+                                    {isPlaying ? 'Speaking' : 'Listening'}
+                                </p>
+                                <p className="text-white/50 font-medium text-[0.75rem] leading-tight mt-0.5">Sarah · AI Consultant</p>
+                            </>
+                        ) : phase === 'ending' ? (
+                            <p className="text-white font-semibold text-[0.9rem] leading-tight">Ending call...</p>
                         ) : null}
-                        {inCallEmailSent ? (
-                            <p className="mt-2 text-[11px] text-emerald-400">Summary sent ✓</p>
-                        ) : null}
-                        {transcriptPreview.length > 0 && phase === 'active' ? (
-                            <div className="mt-2 space-y-1">
-                                {transcriptPreview.map((entry) => (
-                                    <p key={`${entry.role}-${entry.content}`} className="truncate text-[11px] text-gray-500">
-                                        <span className="text-gray-400">
-                                            {entry.role === 'assistant' ? 'DEX' : 'Visitor'}:
-                                        </span>{' '}
-                                        {entry.content}
-                                    </p>
-                                ))}
-                            </div>
-                        ) : null}
+                    </div>
+
+                    {/* Wave bars */}
+                    <div className="flex items-center gap-[3px] h-[22px]">
+                        {[0, 1, 2, 3].map((i) => (
+                            <motion.div
+                                key={i}
+                                className="w-[3px] rounded-full bg-[#e05132]"
+                                animate={
+                                    phase === 'active'
+                                        ? { height: isPlaying
+                                            ? ['6px', '18px', '10px', '16px', '6px']
+                                            : ['4px', '12px', '6px', '10px', '4px'] }
+                                        : phase === 'connecting'
+                                        ? { height: ['4px', '10px', '4px'] }
+                                        : { height: '4px' }
+                                }
+                                transition={{
+                                    duration: phase === 'active' ? 0.6 : 1.2,
+                                    repeat: Infinity,
+                                    delay: i * 0.12,
+                                    ease: 'easeInOut',
+                                }}
+                            />
+                        ))}
                     </div>
                 </motion.button>
             </motion.div>
