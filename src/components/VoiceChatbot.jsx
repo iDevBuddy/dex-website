@@ -105,8 +105,6 @@ export default function VoiceChatbot() {
         return () => window.clearTimeout(id)
     }, [banner])
 
-    const EMAIL_TRIGGER_WORDS = /\b(email address|your email|send.*email|email.*you|confirmation email|follow.?up email|get your email|drop.*email|shoot.*email)\b/i
-
     const transcriptPreview = useMemo(() => buildTranscript(messages).slice(-2), [messages])
 
     const resetContactState = useCallback(() => {
@@ -210,26 +208,6 @@ export default function VoiceChatbot() {
         }
     }, [error?.message, previewSummary, status.value])
 
-    useEffect(() => {
-        if (phase !== 'active' || inCallEmailSent) return
-        const transcript = buildTranscript(messages)
-        if (!transcript.length) return
-
-        const last = transcript[transcript.length - 1]
-
-        // Trigger panel when agent mentions email/send/confirmation
-        if (last.role === 'assistant' && EMAIL_TRIGGER_WORDS.test(last.content)) {
-            setShowEmailPanel(true)
-        }
-
-        // Auto-fill if customer spoke their email
-        const combined = transcript.map(e => e.content).join(' ')
-        const emailMatch = combined.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i)
-        if (emailMatch && !inCallEmail) {
-            setInCallEmail(emailMatch[0])
-            setShowEmailPanel(true)
-        }
-    }, [messages, phase, inCallEmailSent, inCallEmail])
 
     const startConversation = useCallback(async () => {
         resetContactState()
@@ -552,6 +530,40 @@ export default function VoiceChatbot() {
                 ) : null}
             </AnimatePresence>
 
+            {/* Manual email panel - shows only when customer clicks "Get Summary" */}
+            <AnimatePresence>
+                {showEmailPanel && phase === 'active' ? (
+                    <motion.div
+                        initial={{ opacity: 0, y: 12, scale: 0.97 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                        transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                        className="fixed bottom-24 right-6 z-[9999] w-[280px] rounded-2xl border border-white/10 bg-[#111] p-4 shadow-2xl"
+                    >
+                        <button onClick={() => setShowEmailPanel(false)} className="absolute right-3 top-3 text-gray-600 hover:text-gray-400" type="button" aria-label="Close">
+                            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p className="mb-1 pr-5 text-xs font-semibold text-white">Send consultation summary</p>
+                        <p className="mb-3 text-[11px] text-gray-500">You'll get a copy and our team will follow up shortly.</p>
+                        <div className="flex gap-2">
+                            <input
+                                autoFocus
+                                type="email"
+                                value={inCallEmail}
+                                onChange={(e) => { setInCallEmail(e.target.value); setInCallEmailError('') }}
+                                onKeyDown={(e) => { if (e.key === 'Enter') void sendEmailDuringCall() }}
+                                placeholder="your@email.com"
+                                className={`flex-1 rounded-xl border bg-white/5 px-3 py-2 text-xs text-white placeholder-gray-600 outline-none focus:ring-1 focus:ring-accent/50 ${inCallEmailError ? 'border-red-500/50' : 'border-white/10'}`}
+                            />
+                            <button onClick={() => void sendEmailDuringCall()} disabled={inCallSending} type="button" className="rounded-xl bg-accent px-3 py-2 text-xs font-semibold text-white hover:opacity-90 disabled:opacity-60">
+                                {inCallSending ? '...' : 'Send'}
+                            </button>
+                        </div>
+                        {inCallEmailError ? <p className="mt-1.5 text-[11px] text-red-400">{inCallEmailError}</p> : null}
+                    </motion.div>
+                ) : null}
+            </AnimatePresence>
+
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -573,6 +585,18 @@ export default function VoiceChatbot() {
                             <StatusChip phase={phase} isPlaying={isPlaying} />
                         </div>
                         <p className="mt-1 truncate text-xs text-gray-400">{secondaryLabel}</p>
+                        {phase === 'active' && !inCallEmailSent ? (
+                            <button
+                                onClick={(e) => { e.stopPropagation(); setShowEmailPanel(p => !p) }}
+                                type="button"
+                                className="mt-2 text-[11px] text-accent/70 hover:text-accent underline underline-offset-2"
+                            >
+                                Send me a summary
+                            </button>
+                        ) : null}
+                        {inCallEmailSent ? (
+                            <p className="mt-2 text-[11px] text-emerald-400">Summary sent ✓</p>
+                        ) : null}
                         {transcriptPreview.length > 0 && phase === 'active' ? (
                             <div className="mt-2 space-y-1">
                                 {transcriptPreview.map((entry) => (
