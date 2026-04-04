@@ -627,7 +627,7 @@ export default function VoiceChatbot() {
                         {phase === 'idle' || phase === 'error' ? (
                             <>
                                 <p className="text-white font-semibold text-[0.9rem] leading-tight tracking-tight">Talk with Sarah</p>
-                                <p className="text-white/50 font-medium text-[0.75rem] leading-tight mt-0.5">AI Consultant</p>
+                                <p className="text-white/50 font-medium text-[0.75rem] leading-tight mt-0.5">DEX AI Consultant</p>
                             </>
                         ) : phase === 'connecting' ? (
                             <>
@@ -641,7 +641,7 @@ export default function VoiceChatbot() {
                                 <p className="text-white font-semibold text-[0.9rem] leading-tight tracking-tight">
                                     {isPlaying ? 'Speaking' : 'Listening'}
                                 </p>
-                                <p className="text-white/50 font-medium text-[0.75rem] leading-tight mt-0.5">Sarah · AI Consultant</p>
+                                <p className="text-white/50 font-medium text-[0.75rem] leading-tight mt-0.5">Sarah · DEX AI Consultant</p>
                             </>
                         ) : phase === 'ending' ? (
                             <p className="text-white font-semibold text-[0.9rem] leading-tight">Ending call...</p>
