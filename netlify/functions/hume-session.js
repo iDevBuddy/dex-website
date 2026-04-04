@@ -28,7 +28,6 @@ export async function handler(event) {
         const cleanSessionSettings = {
             systemPrompt: sessionSettings.systemPrompt,
             ...(sessionSettings.context ? { context: sessionSettings.context } : {}),
-            ...(sessionSettings.variables ? { variables: sessionSettings.variables } : {}),
         }
 
         return json(200, {
