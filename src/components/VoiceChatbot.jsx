@@ -107,6 +107,16 @@ export default function VoiceChatbot() {
 
     const transcriptPreview = useMemo(() => buildTranscript(messages).slice(-2), [messages])
 
+    useEffect(() => {
+        if (phase !== 'active' || inCallEmailSent || showEmailPanel) return
+        const transcript = buildTranscript(messages)
+        if (transcript.length < 2) return
+        const last = transcript[transcript.length - 1]
+        if (last.role === 'assistant' && /\bemail\b/i.test(last.content)) {
+            setShowEmailPanel(true)
+        }
+    }, [messages, phase, inCallEmailSent, showEmailPanel])
+
     const resetContactState = useCallback(() => {
         setLead({ fullName: '', email: '' })
         setSummaryDraft(null)
