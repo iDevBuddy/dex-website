@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { FadeIn } from './Animations'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Plus, Minus } from 'lucide-react'
 
 const services = [
     {
@@ -44,18 +45,20 @@ export default function Services() {
                         <FadeIn key={i} delay={i * 0.06}>
                             <div
                                 onClick={() => setActive(active === i ? -1 : i)}
-                                className={`p-6 rounded-lg border cursor-pointer transition-all duration-300 ${active === i
-                                        ? 'border-accent bg-dark-card'
+                                className={`p-6 rounded-xl border cursor-pointer transition-all duration-300 ${active === i
+                                        ? 'border-accent/50 bg-dark-card'
                                         : 'border-border bg-dark-card hover:border-border-hover'
                                     }`}
+                                role="button"
+                                aria-expanded={active === i}
                             >
-                                <div className="flex items-center justify-between">
+                                <div className="flex items-center justify-between gap-4">
                                     <h3 className="text-white font-semibold text-[1.05rem]">{s.title}</h3>
-                                    <span className={`font-mono w-7 h-7 flex items-center justify-center rounded text-sm transition-all border ${active === i
+                                    <span className={`w-7 h-7 flex-shrink-0 flex items-center justify-center rounded-md transition-all duration-200 border ${active === i
                                             ? 'bg-accent text-white border-accent'
-                                            : 'text-gray-600 border-border'
+                                            : 'text-gray-500 border-border'
                                         }`}>
-                                        {active === i ? '−' : '+'}
+                                        {active === i ? <Minus size={14} /> : <Plus size={14} />}
                                     </span>
                                 </div>
                                 <AnimatePresence>

@@ -13,7 +13,9 @@ import VoiceChatbot from './components/VoiceChatbot'
 export default function App() {
     return (
         <div className="min-h-screen bg-dark font-sans">
+            <a href="#main-content" className="skip-link">Skip to main content</a>
             <Navbar />
+            <main id="main-content">
             <Hero />
             <Stats />
             <AgentTypes />
@@ -22,6 +24,7 @@ export default function App() {
             <Demo />
             <Process />
             <CTA />
+            </main>
             <Footer />
             <VoiceChatbot />
 

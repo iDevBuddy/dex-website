@@ -615,12 +615,24 @@ export default function VoiceChatbot() {
                 </AnimatePresence>
 
                 {/* Main button */}
+                <div className="relative" style={{ minWidth: '210px' }}>
+                    {/* Glow layer */}
+                    <motion.div
+                        className="absolute inset-0 rounded-[22px] pointer-events-none"
+                        animate={{
+                            boxShadow: [
+                                '0 0 12px 2px rgba(224,81,50,0.25), 0 0 0px 0px rgba(224,81,50,0)',
+                                '0 0 28px 8px rgba(224,81,50,0.50), 0 0 48px 16px rgba(224,81,50,0.18)',
+                                '0 0 12px 2px rgba(224,81,50,0.25), 0 0 0px 0px rgba(224,81,50,0)',
+                            ],
+                        }}
+                        transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
+                    />
                 <motion.button
                     onClick={handleButtonClick}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.97 }}
-                    className="flex items-center gap-3 rounded-[22px] border border-white/[0.07] bg-[#1a1a1a] pl-4 pr-3 py-3 shadow-xl shadow-black/40 backdrop-blur-xl"
-                    style={{ minWidth: '210px' }}
+                    className="relative flex items-center gap-3 rounded-[22px] border border-white/[0.07] bg-[#1a1a1a] pl-4 pr-3 py-3 shadow-xl shadow-black/40 backdrop-blur-xl w-full"
                 >
                     {/* Text */}
                     <div className="flex-1 text-left select-none">
@@ -673,6 +685,7 @@ export default function VoiceChatbot() {
                         ))}
                     </div>
                 </motion.button>
+            </div>
             </motion.div>
 
             {/* Smart in-call email panel */}

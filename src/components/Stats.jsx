@@ -46,14 +46,16 @@ export default function Stats() {
                 <div className="grid md:grid-cols-3 gap-6">
                     {stats.map((stat, i) => (
                         <FadeIn key={i} delay={i * 0.1}>
-                            <div className="group text-center p-10 rounded-lg border border-border bg-dark-card hover:border-border-hover hover:-translate-y-1 transition-all duration-300">
+                            <div className="group relative text-center p-10 rounded-xl border border-border bg-dark-card hover:border-accent/30 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                                {/* Subtle top accent line */}
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-accent/40 rounded-full" />
                                 <div className="font-mono text-5xl font-bold text-accent mb-3">
                                     <Counter target={stat.number} suffix={stat.suffix} />
                                 </div>
                                 <p className="text-[0.92rem] text-gray-400 leading-relaxed">{stat.text}</p>
-                                <p className="font-mono text-[0.72rem] text-gray-600 mt-3">
-                                    <a href={stat.url} target="_blank" rel="noopener" className="border-b border-border hover:text-accent transition-colors">
-                                        {stat.source}
+                                <p className="font-mono text-[0.72rem] text-gray-500 mt-3">
+                                    <a href={stat.url} target="_blank" rel="noopener noreferrer" className="border-b border-border hover:text-accent hover:border-accent/40 transition-colors">
+                                        Source: {stat.source}
                                     </a>
                                 </p>
                             </div>

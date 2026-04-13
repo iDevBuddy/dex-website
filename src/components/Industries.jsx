@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { FadeIn } from './Animations'
 import { motion } from 'framer-motion'
+import { ChevronRight } from 'lucide-react'
 
 const industries = [
     {
@@ -103,9 +104,9 @@ export default function Industries() {
                             <button
                                 key={ind.id}
                                 onClick={() => setActive(i)}
-                                className={`font-mono text-[0.78rem] font-medium px-5 py-2.5 rounded-md border transition-all ${active === i
+                                className={`font-mono text-[0.78rem] font-medium px-5 py-2.5 rounded-md border transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent/40 ${active === i
                                         ? 'bg-accent border-accent text-white'
-                                        : 'border-border text-gray-500 hover:border-border-hover hover:text-gray-300'
+                                        : 'border-border text-gray-400 hover:border-border-hover hover:text-gray-200 hover:bg-white/[0.02]'
                                     }`}
                             >
                                 {ind.label}
@@ -121,14 +122,14 @@ export default function Industries() {
                     transition={{ duration: 0.3 }}
                     className="max-w-3xl mx-auto"
                 >
-                    <div className="p-8 sm:p-10 rounded-lg bg-dark-card border border-border">
+                    <div className="p-8 sm:p-10 rounded-xl bg-dark-card border border-border">
                         <h3 className="text-xl font-bold text-white mb-3">{industries[active].title}</h3>
-                        <p className="text-gray-400 mb-5 text-[0.95rem]">{industries[active].desc}</p>
-                        <ul className="flex flex-col gap-2.5">
+                        <p className="text-gray-400 mb-6 text-[0.95rem] leading-relaxed">{industries[active].desc}</p>
+                        <ul className="flex flex-col gap-3">
                             {industries[active].items.map((item, i) => (
-                                <li key={i} className="text-gray-400 text-[0.88rem] pl-5 relative">
-                                    <span className="absolute left-0 text-accent font-mono font-bold">&gt;</span>
-                                    {item}
+                                <li key={i} className="text-gray-400 text-[0.88rem] flex items-start gap-2.5">
+                                    <ChevronRight size={15} className="text-accent flex-shrink-0 mt-0.5" />
+                                    <span>{item}</span>
                                 </li>
                             ))}
                         </ul>
