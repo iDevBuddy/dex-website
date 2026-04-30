@@ -1,6 +1,7 @@
 import { slugify } from './lib/content.mjs'
 import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log } from './lib/logger.mjs'
+import { createReviewLlmProvider } from './lib/llm-providers.mjs'
 
 export function seoOptimizeArticle(article) {
     const frontmatter = { ...article.frontmatter }
@@ -24,7 +25,19 @@ export function seoOptimizeArticle(article) {
 export async function seoOptimize(articleArg, options = getPipelineOptions()) {
     const article = articleArg || await readPipelineJson('draft-article.json', null, options)
     if (!article) throw new Error('No draft article found.')
-    const optimized = seoOptimizeArticle(article)
+    let optimized = seoOptimizeArticle(article)
+    if (!options.dryRun) {
+        try {
+            const provider = createReviewLlmProvider()
+            const health = await provider.healthCheck()
+            if (health.configured) {
+                const suggestions = await provider.generateJson(`Return JSON with improved metaTitle, metaDescription, directAnswer for this article. No extra text.\n${JSON.stringify(optimized.frontmatter)}`)
+                optimized = { ...optimized, frontmatter: { ...optimized.frontmatter, ...suggestions } }
+            }
+        } catch (error) {
+            log('seo_model_fallback', { message: error.message })
+        }
+    }
     await writePipelineJson('draft-article.json', optimized, options)
     log('seo_optimized', { slug: optimized.frontmatter.slug, ...modeDetails(options) })
     return optimized

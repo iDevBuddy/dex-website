@@ -125,24 +125,12 @@ export async function routeSlackCommand(payload) {
     }
 
     if (text === 'report') {
-        const notion = await createPerformanceReport({
-            summary: `Report requested by ${userName} from Slack.`,
-            recommendedActions: 'Run the blog-performance workflow or npm run blog:performance.',
-        })
-        const dispatch = await dispatchBlogWorkflow({
-            eventType: 'blog_report',
-            inputs: { command: 'report', requested_by: userName },
-        })
         return {
             response_type: 'ephemeral',
-            text: 'Performance report request routed.',
+            text: 'Performance intelligence is not fully enabled yet. Phase 4 is pending.',
             blocks: slackBlocks({
-                title: 'Report Requested',
-                message: 'I routed the performance report request. Notion receives the dashboard record when configured.',
-                fields: [
-                    { label: 'Notion', value: notion.skipped ? notion.reason : 'Queued/created' },
-                    { label: 'GitHub', value: dispatch.ok ? dispatch.type : dispatch.reason || 'Not dispatched' },
-                ],
+                title: 'Performance Report',
+                message: 'Performance intelligence is not fully enabled yet. Phase 4 is pending.',
             }),
         }
     }

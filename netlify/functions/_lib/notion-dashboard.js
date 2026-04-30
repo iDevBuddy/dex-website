@@ -25,7 +25,7 @@ export function select(name) {
 }
 
 export function status(name) {
-    return { status: { name: String(name || 'Not Started').slice(0, 100) } }
+    return select(name || 'Not Started')
 }
 
 export function date(value = new Date()) {
@@ -73,15 +73,17 @@ export async function updateNotionRecord(pageId, properties) {
 export function blogIdeaProperties(input = {}) {
     return {
         Topic: title(input.topic),
-        Source: richText(input.source || 'Slack'),
+        Source: select(input.source || 'Slack'),
         Keyword: richText(input.keyword || input.topic || ''),
+        'Search Intent': select(input.searchIntent || 'Informational'),
         'Trend Score': number(input.trendScore),
         'SEO Score': number(input.seoScore),
-        'Business Value': number(input.businessValue),
+        'Business Value': select(input.businessValueLabel || input.businessValue || 'Medium'),
         Priority: select(input.priority || 'Medium'),
         Status: status(input.status || 'New'),
         'Created Date': date(input.createdDate || new Date()),
-        'Slack Thread': richText(input.slackThread || input.responseUrl || ''),
+        'Slack Thread': url(input.slackThread || input.responseUrl || ''),
+        Notes: richText(input.notes || ''),
     }
 }
 
@@ -90,16 +92,20 @@ export function blogDraftProperties(input = {}) {
         Title: title(input.title || input.topic),
         Slug: richText(input.slug || ''),
         Topic: richText(input.topic || input.title || ''),
-        'Draft Status': status(input.draftStatus || 'Requested'),
+        'Target Keyword': richText(input.targetKeyword || ''),
+        'Draft Status': status(input.draftStatus || 'Needs Review'),
         'SEO Score': number(input.seoScore),
         'Quality Score': number(input.qualityScore),
-        'Image Status': status(input.imageStatus || 'Pending'),
+        'Image Status': status(input.imageStatus || 'Not Started'),
         'Audio Status': status(input.audioStatus || 'Browser Fallback'),
-        'Approval Status': status(input.approvalStatus || 'Needs Approval'),
+        'Approval Status': status(input.approvalStatus || 'Waiting'),
         'Preview URL': url(input.previewUrl),
         'Published URL': url(input.publishedUrl),
-        'Notion Notes': richText(input.notes || ''),
-        'Slack Thread': richText(input.slackThread || input.responseUrl || ''),
+        'Slack Thread': url(input.slackThread || input.responseUrl || ''),
+        'Research Notes': richText(input.notes || input.researchNotes || ''),
+        'Internal Links': richText(input.internalLinks || ''),
+        'Created Date': date(input.createdDate || new Date()),
+        'Last Updated': date(input.lastUpdated || new Date()),
     }
 }
 
@@ -110,6 +116,7 @@ export function publishedPostProperties(input = {}) {
         Slug: richText(input.slug || ''),
         'Target Keyword': richText(input.targetKeyword || ''),
         Category: select(input.category || 'AI Automation'),
+        Tone: select(input.tone || 'Business Owner'),
         'Date Published': date(input.datePublished || new Date()),
         'Last Updated': date(input.lastUpdated || input.datePublished || new Date()),
         Clicks: number(input.clicks),
@@ -118,6 +125,7 @@ export function publishedPostProperties(input = {}) {
         'Average Position': number(input.averagePosition),
         'Performance Score': number(input.performanceScore),
         'Recommended Action': richText(input.recommendedAction || 'Collect data'),
+        Status: select(input.status || 'Live'),
     }
 }
 
@@ -127,19 +135,27 @@ export function refreshQueueProperties(input = {}) {
         Problem: richText(input.problem || ''),
         'Recommended Fix': richText(input.recommendedFix || input.fix || ''),
         Priority: select(input.priority || 'Medium'),
-        Status: status(input.status || 'Needs Review'),
+        Status: status(input.status || 'Open'),
         'Before Score': number(input.beforeScore),
         'After Score': number(input.afterScore),
+        'Created Date': date(input.createdDate || new Date()),
+        'Completed Date': input.completedDate ? date(input.completedDate) : { date: null },
+        'Slack Thread': url(input.slackThread || ''),
     }
 }
 
 export function performanceReportProperties(input = {}) {
     return {
-        Date: title(input.date || new Date().toISOString().slice(0, 10)),
+        'Report Name': title(input.name || `Performance Report ${new Date().toISOString().slice(0, 10)}`),
+        Date: date(input.date || new Date()),
         'Top Blog': richText(input.topBlog || ''),
         'Worst Blog': richText(input.worstBlog || ''),
         'Best Topic': richText(input.bestTopic || ''),
         'Best Tone': richText(input.bestTone || ''),
+        'Total Clicks': number(input.totalClicks),
+        'Total Impressions': number(input.totalImpressions),
+        'Average CTR': number(input.averageCtr),
+        'Average Position': number(input.averagePosition),
         'Recommended Actions': richText(input.recommendedActions || ''),
         Summary: richText(input.summary || ''),
     }

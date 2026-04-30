@@ -1,5 +1,6 @@
 import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log } from './lib/logger.mjs'
+import { createReviewLlmProvider } from './lib/llm-providers.mjs'
 
 export function createResearchBrief(topic) {
     return {
@@ -39,7 +40,19 @@ export async function researchTopic(topicArg, options = getPipelineOptions()) {
     const topics = await readPipelineJson('topics.json', [], options)
     const topic = topicArg || topics.find((item) => item.slug === options.slug || item.topic === options.topic) || topics.find((item) => item.status === 'scored_ready') || topics[0]
     if (!topic) throw new Error('No topic found. Run discover-topics first.')
-    const brief = createResearchBrief(topic)
+    let brief = createResearchBrief(topic)
+    if (!options.dryRun) {
+        try {
+            const provider = createReviewLlmProvider()
+            const health = await provider.healthCheck()
+            if (health.configured) {
+                const refined = await provider.generateJson(`Improve this research brief as JSON only. Keep the same keys and add practical examples.\n${JSON.stringify(brief)}`)
+                brief = { ...brief, ...refined }
+            }
+        } catch (error) {
+            log('research_model_fallback', { message: error.message })
+        }
+    }
     await writePipelineJson('research-brief.json', brief, options)
     log('research_brief_created', { topic: topic.topic, slug: topic.slug, ...modeDetails(options) })
     return brief

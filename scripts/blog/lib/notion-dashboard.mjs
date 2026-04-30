@@ -1,25 +1,35 @@
-import { createNotionPage, numberProperty, richTextProperty, titleProperty } from './notion.mjs'
+import {
+    createNotionPage,
+    dateProperty,
+    numberProperty,
+    richTextProperty,
+    selectProperty,
+    titleProperty,
+    urlProperty,
+} from './notion.mjs'
 
 function statusText(value) {
-    return richTextProperty(value)
+    return selectProperty(value)
 }
 
 function urlText(value) {
-    return richTextProperty(value || '')
+    return urlProperty(value || '')
 }
 
 export async function syncBlogIdea(topic) {
     return createNotionPage(process.env.NOTION_BLOG_IDEAS_DB_ID, {
         Topic: titleProperty(topic.topic),
-        Source: richTextProperty(topic.source || 'Pipeline'),
+        Source: selectProperty(topic.source || 'Manual'),
         Keyword: richTextProperty(topic.keyword || topic.topic || ''),
+        'Search Intent': selectProperty(topic.searchIntent || 'Informational'),
         'Trend Score': numberProperty(topic.trendScore),
         'SEO Score': numberProperty(topic.seoScore),
-        'Business Value': numberProperty(topic.businessValue),
-        Priority: richTextProperty(topic.priority || 'Medium'),
-        Status: statusText(topic.status || 'Discovered'),
-        'Created Date': richTextProperty(topic.createdAt || new Date().toISOString()),
-        'Slack Thread': richTextProperty(topic.slackThread || ''),
+        'Business Value': selectProperty(topic.businessValueLabel || topic.businessValue || 'Medium'),
+        Priority: selectProperty(topic.priority || 'Medium'),
+        Status: statusText(topic.status || 'New'),
+        'Created Date': dateProperty(topic.createdAt || new Date()),
+        'Slack Thread': urlText(topic.slackThread || ''),
+        Notes: richTextProperty(topic.notes || ''),
     })
 }
 
@@ -29,16 +39,20 @@ export async function syncBlogDraft(article, overrides = {}) {
         Title: titleProperty(frontmatter.title || overrides.title || 'Untitled draft'),
         Slug: richTextProperty(frontmatter.slug || ''),
         Topic: richTextProperty(frontmatter.targetKeyword || overrides.topic || ''),
-        'Draft Status': statusText(overrides.draftStatus || 'Draft Created'),
+        'Target Keyword': richTextProperty(frontmatter.targetKeyword || ''),
+        'Draft Status': statusText(overrides.draftStatus || 'Needs Review'),
         'SEO Score': numberProperty(overrides.seoScore),
         'Quality Score': numberProperty(overrides.qualityScore),
-        'Image Status': statusText(overrides.imageStatus || 'Pending'),
+        'Image Status': statusText(overrides.imageStatus || 'Not Started'),
         'Audio Status': statusText(overrides.audioStatus || 'Browser Fallback'),
-        'Approval Status': statusText(overrides.approvalStatus || 'Needs Approval'),
+        'Approval Status': statusText(overrides.approvalStatus || 'Waiting'),
         'Preview URL': urlText(overrides.previewUrl || ''),
         'Published URL': urlText(overrides.publishedUrl || ''),
-        'Notion Notes': richTextProperty(overrides.notes || ''),
-        'Slack Thread': richTextProperty(overrides.slackThread || ''),
+        'Slack Thread': urlText(overrides.slackThread || ''),
+        'Research Notes': richTextProperty(overrides.notes || ''),
+        'Internal Links': richTextProperty(overrides.internalLinks || ''),
+        'Created Date': dateProperty(overrides.createdDate || new Date()),
+        'Last Updated': dateProperty(overrides.lastUpdated || new Date()),
     })
 }
 
@@ -47,18 +61,20 @@ export async function syncPublishedPost(article, quality = {}) {
     const url = `${process.env.SITE_URL || 'https://dexbyakif.com'}/blog/${frontmatter.slug}`
     return createNotionPage(process.env.NOTION_PUBLISHED_POSTS_DB_ID, {
         Title: titleProperty(frontmatter.title),
-        URL: richTextProperty(url),
+        URL: urlProperty(url),
         Slug: richTextProperty(frontmatter.slug),
         'Target Keyword': richTextProperty(frontmatter.targetKeyword || ''),
-        Category: richTextProperty(frontmatter.category || 'AI Automation'),
-        'Date Published': richTextProperty(frontmatter.publishedAt || new Date().toISOString().slice(0, 10)),
-        'Last Updated': richTextProperty(frontmatter.updatedAt || frontmatter.publishedAt || new Date().toISOString().slice(0, 10)),
+        Category: selectProperty(frontmatter.category || 'AI Automation'),
+        Tone: selectProperty(frontmatter.tone || 'Business Owner'),
+        'Date Published': dateProperty(frontmatter.publishedAt || new Date()),
+        'Last Updated': dateProperty(frontmatter.updatedAt || frontmatter.publishedAt || new Date()),
         Clicks: numberProperty(0),
         Impressions: numberProperty(0),
         CTR: numberProperty(0),
         'Average Position': numberProperty(0),
         'Performance Score': numberProperty(quality.score || 0),
         'Recommended Action': richTextProperty('Collect performance data'),
+        Status: selectProperty('Live'),
     })
 }
 
@@ -67,20 +83,28 @@ export async function syncRefreshTask(item = {}) {
         'Blog URL': titleProperty(item.blogUrl || item.url || ''),
         Problem: richTextProperty(item.problem || ''),
         'Recommended Fix': richTextProperty(item.recommendedFix || item.fix || ''),
-        Priority: richTextProperty(item.priority || 'Medium'),
-        Status: statusText(item.status || 'Needs Review'),
+        Priority: selectProperty(item.priority || 'Medium'),
+        Status: statusText(item.status || 'Open'),
         'Before Score': numberProperty(item.beforeScore),
         'After Score': numberProperty(item.afterScore),
+        'Created Date': dateProperty(item.createdDate || new Date()),
+        'Completed Date': item.completedDate ? dateProperty(item.completedDate) : { date: null },
+        'Slack Thread': urlProperty(item.slackThread || ''),
     })
 }
 
 export async function syncPerformanceReport(report = {}) {
     return createNotionPage(process.env.NOTION_PERFORMANCE_REPORTS_DB_ID, {
-        Date: titleProperty(report.date || new Date().toISOString().slice(0, 10)),
+        'Report Name': titleProperty(report.name || `Performance Report ${new Date().toISOString().slice(0, 10)}`),
+        Date: dateProperty(report.date || new Date()),
         'Top Blog': richTextProperty(report.topBlog || ''),
         'Worst Blog': richTextProperty(report.worstBlog || ''),
         'Best Topic': richTextProperty(report.bestTopic || ''),
         'Best Tone': richTextProperty(report.bestTone || ''),
+        'Total Clicks': numberProperty(report.totalClicks),
+        'Total Impressions': numberProperty(report.totalImpressions),
+        'Average CTR': numberProperty(report.averageCtr),
+        'Average Position': numberProperty(report.averagePosition),
         'Recommended Actions': richTextProperty(report.recommendedActions || ''),
         Summary: richTextProperty(report.summary || ''),
     })

@@ -1,28 +1,11 @@
 import { config } from './config.mjs'
+import { createMainLlmProvider } from './llm-providers.mjs'
 
 export async function generateWithModel(messages, { temperature = 0.4 } = {}) {
-    const endpoint = config.localLlmUrl
-    const body = {
-        model: config.localLlmModel,
-        messages,
-        temperature,
-    }
-
-    const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            ...(process.env.OPENAI_API_KEY ? { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` } : {}),
-        },
-        body: JSON.stringify(body),
-    })
-
-    if (!response.ok) {
-        throw new Error(`AI provider failed: ${response.status} ${await response.text()}`)
-    }
-
-    const json = await response.json()
-    return json.choices?.[0]?.message?.content || json.output_text || ''
+    const provider = createMainLlmProvider()
+    const system = messages.find((message) => message.role === 'system')?.content
+    const prompt = messages.filter((message) => message.role !== 'system').map((message) => message.content).join('\n\n')
+    return provider.generateText(prompt, { temperature, system })
 }
 
 export function buildFallbackArticle(topic, brief) {

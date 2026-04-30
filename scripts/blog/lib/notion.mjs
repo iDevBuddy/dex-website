@@ -40,3 +40,16 @@ export function richTextProperty(text) {
 export function numberProperty(value) {
     return { number: Number(value) || 0 }
 }
+
+export function selectProperty(value, fallback = 'Unknown') {
+    return { select: { name: String(value || fallback).slice(0, 100) } }
+}
+
+export function dateProperty(value = new Date()) {
+    const date = new Date(value)
+    return { date: { start: Number.isNaN(date.getTime()) ? new Date().toISOString() : date.toISOString() } }
+}
+
+export function urlProperty(value) {
+    return value ? { url: String(value).slice(0, 2000) } : { url: null }
+}

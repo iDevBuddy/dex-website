@@ -130,12 +130,18 @@ Live status endpoint:
 
 ## Notion setup
 
-Create these databases manually and store their IDs in Netlify/GitHub secrets:
+Create a Notion integration, share one parent page with it, then run:
+
+```bash
+npm run notion:setup
+```
+
+The setup script creates or reuses these databases under the parent page:
 
 - Blog Ideas
 - Blog Drafts
 - Published Posts
-- Content Refresh Queue
+- Refresh Queue
 - Performance Reports
 
 Required environment variables:
@@ -143,6 +149,7 @@ Required environment variables:
 ```bash
 USE_NOTION=true
 NOTION_API_KEY=
+NOTION_PARENT_PAGE_URL=
 NOTION_WEBHOOK_SECRET=
 NOTION_BLOG_IDEAS_DB_ID=
 NOTION_BLOG_DRAFTS_DB_ID=
@@ -151,7 +158,9 @@ NOTION_REFRESH_QUEUE_DB_ID=
 NOTION_PERFORMANCE_REPORTS_DB_ID=
 ```
 
-The scripts sync topic ideas, scoring, published posts, performance reports, and refresh recommendations when credentials are present. If Notion fails, the pipeline logs the error and continues.
+The script writes generated IDs to `.env.notion.generated`. Copy those database IDs into Netlify environment variables.
+
+The scripts sync topic ideas, drafts, published posts, performance report placeholders, and refresh recommendations when credentials are present. If Notion fails, the pipeline logs the error and continues.
 
 Optional webhook endpoint:
 
@@ -164,15 +173,18 @@ Use this from an external Notion automation service when a draft or refresh task
 
 ## AI provider setup
 
-The article generator supports OpenAI-compatible local endpoints.
+The article generator supports GPT-OSS, Gemma, and any OpenAI-compatible local endpoint. Research, SEO optimization, and quality review can use a separate review model.
 
 ```bash
-LOCAL_LLM_URL=http://localhost:11434/v1/chat/completions
-LOCAL_LLM_MODEL=gpt-oss
+LOCAL_LLM_URL=
+LOCAL_LLM_MODEL=
+REVIEW_LLM_URL=
+REVIEW_LLM_MODEL=
 OPENAI_API_KEY=
+OPENAI_MODEL=
 ```
 
-If the endpoint is unavailable, the MVP uses a safe structured fallback draft so the pipeline can still be tested.
+If the endpoint is unavailable, the MVP uses safe structured fallbacks so the site can still build and the pipeline can still be tested.
 
 ## Image model setup
 
@@ -181,7 +193,8 @@ Primary image generation is provider-based:
 ```bash
 USE_IMAGE_MODEL=true
 IMAGE_PROVIDER=local_comfyui
-COMFYUI_URL=http://localhost:8188
+COMFYUI_URL=
+COMFYUI_WORKFLOW_PATH=
 USE_GPT_IMAGE=false
 OPENAI_API_KEY=
 ```
@@ -196,11 +209,15 @@ Every article includes a “Listen to this article” player. If an MP3 is avail
 USE_LOCAL_TTS=true
 TTS_PROVIDER=browser_fallback
 TTS_API_URL=
+TTS_VOICE=
+TTS_SPEED=
 ```
 
 ## Performance intelligence
 
-Run:
+Phase 4 is not fully implemented yet. `/blog report` returns a clear Phase 4 pending message until Search Console and GA4 intelligence are added.
+
+Existing placeholder commands:
 
 ```bash
 npm run blog:performance
@@ -210,7 +227,17 @@ npm run blog:links
 npm run blog:clusters
 ```
 
-Search Console and GA4 credentials are scaffolded through environment variables. Without credentials, reports are generated with `missing_credentials` status so the workflow remains visible.
+Search Console and GA4 environment variables are scaffolded, but the full performance engine is intentionally pending until the Phase 4 prompt.
+
+## Detailed setup docs
+
+- `docs/setup-netlify-env.md`
+- `docs/setup-slack.md`
+- `docs/setup-notion.md`
+- `docs/ai-providers.md`
+- `docs/image-generation.md`
+- `docs/tts-audio.md`
+- `docs/notebooklm-research-workflow.md`
 
 ## Deployment
 
