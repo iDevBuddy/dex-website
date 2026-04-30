@@ -1,6 +1,5 @@
-import path from 'node:path'
 import { config } from './lib/config.mjs'
-import { dataDir, readJson, writeJson } from './lib/content.mjs'
+import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log } from './lib/logger.mjs'
 import { createNotionPage, numberProperty, richTextProperty, titleProperty } from './lib/notion.mjs'
 
@@ -28,12 +27,22 @@ export function scoreTopic(topic) {
     }
 }
 
-export async function scoreTopics() {
-    const file = path.join(dataDir, 'topics.json')
-    const topics = await readJson(file, [])
-    const scored = topics.map(scoreTopic).sort((a, b) => b.score - a.score)
-    await writeJson(file, scored)
-    log('topic_scored', { count: scored.length, ready: scored.filter((topic) => topic.status === 'scored_ready').length })
+export async function scoreTopics(topicsArg, options = getPipelineOptions()) {
+    const topics = topicsArg || await readPipelineJson('topics.json', [], options)
+    const scored = topics.map((topic) => {
+        const result = scoreTopic(topic)
+        return {
+            ...result,
+            status: result.score >= options.minTopicScore ? 'scored_ready' : 'scored_hold',
+        }
+    }).sort((a, b) => b.score - a.score)
+    await writePipelineJson('topics.json', scored, options)
+    log('topic_scored', { count: scored.length, ready: scored.filter((topic) => topic.status === 'scored_ready').length, ...modeDetails(options) })
+
+    if (options.dryRun) {
+        log('dry_run_write', { file: 'data/blog/dry-run/topics.json' })
+        return scored
+    }
 
     for (const topic of scored.filter((item) => item.status === 'scored_ready').slice(0, 5)) {
         await createNotionPage(process.env.NOTION_BLOG_IDEAS_DB_ID, {
@@ -52,7 +61,7 @@ export async function scoreTopics() {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-    scoreTopics().catch((error) => {
+    scoreTopics(undefined, getPipelineOptions()).catch((error) => {
         console.error(error)
         process.exit(1)
     })

@@ -7,31 +7,30 @@ import { generateImage } from './generate-image.mjs'
 import { generateAudio } from './generate-audio.mjs'
 import { qualityCheck } from './quality-check.mjs'
 import { publishPost } from './publish-post.mjs'
+import { getPipelineOptions, modeDetails } from './lib/cli.mjs'
 import { log } from './lib/logger.mjs'
 
-export async function runPipeline() {
-    const dryRun = process.argv.includes('--dry-run')
-    const force = process.argv.includes('--force')
-    log('pipeline_start', { dryRun, force })
-    await discoverTopics()
-    const scored = await scoreTopics()
+export async function runPipeline(options = getPipelineOptions()) {
+    log('pipeline_start', modeDetails(options))
+    const topics = await discoverTopics(options)
+    const scored = await scoreTopics(topics, options)
     const topic = scored.find((item) => item.status === 'scored_ready') || scored[0]
-    const brief = await researchTopic(topic)
-    await generateArticle(topic, brief)
-    const article = await seoOptimize()
-    await generateImage(article)
-    await generateAudio(article)
-    const report = await qualityCheck(article)
-    if (!report.passed && !force) {
+    const brief = await researchTopic(topic, options)
+    const draft = await generateArticle(topic, brief, options)
+    const article = await seoOptimize(draft, options)
+    await generateImage(article, options)
+    await generateAudio(article, options)
+    const report = await qualityCheck(article, options)
+    if (!report.passed && !options.force) {
         log('publish_failed', { reason: 'quality_check_failed', score: report.score })
         process.exitCode = 2
         return report
     }
-    return publishPost({ dryRun, force })
+    return publishPost({ ...options, article, quality: report })
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-    runPipeline().catch((error) => {
+    runPipeline(getPipelineOptions()).catch((error) => {
         console.error(error)
         process.exit(1)
     })

@@ -1,6 +1,5 @@
-import path from 'node:path'
 import { config } from './lib/config.mjs'
-import { dataDir, readJson, writeJson } from './lib/content.mjs'
+import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log } from './lib/logger.mjs'
 import { notifySlack } from './lib/slack.mjs'
 
@@ -37,20 +36,20 @@ export function qualityScore(article) {
     }
 }
 
-export async function qualityCheck(articleArg) {
-    const article = articleArg || await readJson(path.join(dataDir, 'draft-article.json'), null)
+export async function qualityCheck(articleArg, options = getPipelineOptions()) {
+    const article = articleArg || await readPipelineJson('draft-article.json', null, options)
     if (!article) throw new Error('No draft article found.')
     const report = qualityScore(article)
-    await writeJson(path.join(dataDir, 'quality-report.json'), report)
-    log('quality_score', report)
-    if (!report.passed) {
+    await writePipelineJson('quality-report.json', report, options)
+    log('quality_score', { ...report, ...modeDetails(options) })
+    if (!report.passed && !options.dryRun) {
         await notifySlack(`Blog quality check failed: ${article.frontmatter.title} scored ${report.score}/${report.minQualityScore}.`)
     }
     return report
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-    qualityCheck().then((report) => {
+    qualityCheck(undefined, getPipelineOptions()).then((report) => {
         if (!report.passed) process.exit(2)
     }).catch((error) => {
         console.error(error)

@@ -1,5 +1,5 @@
-import path from 'node:path'
-import { dataDir, readJson, slugify, writeJson } from './lib/content.mjs'
+import { slugify } from './lib/content.mjs'
+import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log } from './lib/logger.mjs'
 
 export function seoOptimizeArticle(article) {
@@ -21,18 +21,17 @@ export function seoOptimizeArticle(article) {
     return { ...article, frontmatter }
 }
 
-export async function seoOptimize() {
-    const file = path.join(dataDir, 'draft-article.json')
-    const article = await readJson(file, null)
+export async function seoOptimize(articleArg, options = getPipelineOptions()) {
+    const article = articleArg || await readPipelineJson('draft-article.json', null, options)
     if (!article) throw new Error('No draft article found.')
     const optimized = seoOptimizeArticle(article)
-    await writeJson(file, optimized)
-    log('seo_optimized', { slug: optimized.frontmatter.slug })
+    await writePipelineJson('draft-article.json', optimized, options)
+    log('seo_optimized', { slug: optimized.frontmatter.slug, ...modeDetails(options) })
     return optimized
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-    seoOptimize().catch((error) => {
+    seoOptimize(undefined, getPipelineOptions()).catch((error) => {
         console.error(error)
         process.exit(1)
     })

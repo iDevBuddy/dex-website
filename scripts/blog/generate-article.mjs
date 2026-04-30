@@ -1,6 +1,7 @@
 import path from 'node:path'
 import { buildFallbackArticle, generateWithModel } from './lib/ai.mjs'
-import { dataDir, readJson, writeJson } from './lib/content.mjs'
+import { dataDir, readJson } from './lib/content.mjs'
+import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log, warn } from './lib/logger.mjs'
 
 function parseJsonBlock(text) {
@@ -9,10 +10,10 @@ function parseJsonBlock(text) {
     return JSON.parse(match[0])
 }
 
-export async function generateArticle(topicArg, briefArg) {
-    const topics = await readJson(path.join(dataDir, 'topics.json'), [])
-    const topic = topicArg || topics.find((item) => item.status === 'scored_ready') || topics[0]
-    const brief = briefArg || await readJson(path.join(dataDir, 'research-brief.json'), null)
+export async function generateArticle(topicArg, briefArg, options = getPipelineOptions()) {
+    const topics = await readPipelineJson('topics.json', [], options)
+    const topic = topicArg || topics.find((item) => item.slug === options.slug || item.topic === options.topic) || topics.find((item) => item.status === 'scored_ready') || topics[0]
+    const brief = briefArg || await readPipelineJson('research-brief.json', null, options)
     if (!topic) throw new Error('No topic available.')
 
     const prompt = `Create one SEO-ready article as JSON only. Include keys: frontmatter, body, imagePrompt, audioScript.
@@ -32,13 +33,13 @@ Research brief: ${JSON.stringify(brief)}`
         article = buildFallbackArticle(topic, brief)
     }
 
-    await writeJson(path.join(dataDir, 'draft-article.json'), article)
-    log('draft_generated', { slug: article.frontmatter?.slug, title: article.frontmatter?.title })
+    await writePipelineJson('draft-article.json', article, options)
+    log('draft_generated', { slug: article.frontmatter?.slug, title: article.frontmatter?.title, ...modeDetails(options) })
     return article
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-    generateArticle().catch((error) => {
+    generateArticle(undefined, undefined, getPipelineOptions()).catch((error) => {
         console.error(error)
         process.exit(1)
     })

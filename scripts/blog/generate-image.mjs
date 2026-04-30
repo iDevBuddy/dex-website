@@ -1,7 +1,9 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import zlib from 'node:zlib'
-import { dataDir, ensureBlogDirs, imageDir, readJson } from './lib/content.mjs'
+import { ensureBlogDirs, imageDir } from './lib/content.mjs'
+import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
+import { generateWithImageProvider } from './lib/image-providers.mjs'
 import { log, warn } from './lib/logger.mjs'
 
 function crc32(buffer) {
@@ -49,36 +51,54 @@ function makePng(width = 1280, height = 720) {
     ])
 }
 
-async function tryComfyUi(article) {
-    if (process.env.IMAGE_PROVIDER !== 'local_comfyui' || !process.env.COMFYUI_URL) return null
-    warn('comfyui_not_configured_for_direct_workflow', { prompt: article.imagePrompt })
-    return null
-}
-
-export async function generateImage(articleArg) {
+export async function generateImage(articleArg, options = getPipelineOptions()) {
     await ensureBlogDirs()
-    const article = articleArg || await readJson(path.join(dataDir, 'draft-article.json'), null)
+    const article = articleArg || await readPipelineJson('draft-article.json', null, options)
     if (!article) throw new Error('No draft article found.')
     const slug = article.frontmatter.slug
     const output = path.join(imageDir, `${slug}.png`)
+    const result = {
+        slug,
+        output,
+        url: `/blog/images/${slug}.png`,
+        alt: article.frontmatter.imageAlt || `AI automation workflow visual for ${article.frontmatter.title}`,
+        provider: process.env.IMAGE_PROVIDER || 'local_comfyui',
+        prompt: article.imagePrompt,
+        ...modeDetails(options),
+    }
+
+    if (options.dryRun) {
+        await writePipelineJson('image-result.json', { ...result, skippedWrite: true }, options)
+        log('image_dry_run', result)
+        return { ...result, skippedWrite: true }
+    }
 
     try {
-        const providerOutput = await tryComfyUi(article)
-        if (providerOutput) return providerOutput
+        const providerOutput = await generateWithImageProvider({ article, output })
+        if (providerOutput?.path || providerOutput?.queued) {
+            const providerResult = { ...result, ...providerOutput }
+            await writePipelineJson('image-result.json', providerResult, options)
+            log('image_generated', providerResult)
+            return providerResult
+        }
         const fallback = makePng()
         await fs.writeFile(output, fallback)
         article.frontmatter.image = `/blog/images/${slug}.png`
         article.frontmatter.imageAlt ||= `AI automation workflow visual for ${article.frontmatter.title}`
-        log('image_generated', { provider: 'fallback_png', path: output })
-        return { path: output, url: article.frontmatter.image, alt: article.frontmatter.imageAlt }
+        const fallbackResult = { ...result, provider: 'fallback_png', path: output }
+        await writePipelineJson('image-result.json', fallbackResult, options)
+        log('image_generated', fallbackResult)
+        return fallbackResult
     } catch (error) {
         warn('image_generation_failed', { message: error.message })
-        return { failed: true, error: error.message }
+        const failed = { ...result, failed: true, error: error.message }
+        await writePipelineJson('image-result.json', failed, options)
+        return failed
     }
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-    generateImage().catch((error) => {
+    generateImage(undefined, getPipelineOptions()).catch((error) => {
         console.error(error)
         process.exit(1)
     })

@@ -1,5 +1,4 @@
-import path from 'node:path'
-import { dataDir, readJson, writeJson } from './lib/content.mjs'
+import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log } from './lib/logger.mjs'
 
 export function createResearchBrief(topic) {
@@ -36,18 +35,18 @@ export function createResearchBrief(topic) {
     }
 }
 
-export async function researchTopic(topicArg) {
-    const topics = await readJson(path.join(dataDir, 'topics.json'), [])
-    const topic = topicArg || topics.find((item) => item.status === 'scored_ready') || topics[0]
+export async function researchTopic(topicArg, options = getPipelineOptions()) {
+    const topics = await readPipelineJson('topics.json', [], options)
+    const topic = topicArg || topics.find((item) => item.slug === options.slug || item.topic === options.topic) || topics.find((item) => item.status === 'scored_ready') || topics[0]
     if (!topic) throw new Error('No topic found. Run discover-topics first.')
     const brief = createResearchBrief(topic)
-    await writeJson(path.join(dataDir, 'research-brief.json'), brief)
-    log('research_brief_created', { topic: topic.topic, slug: topic.slug })
+    await writePipelineJson('research-brief.json', brief, options)
+    log('research_brief_created', { topic: topic.topic, slug: topic.slug, ...modeDetails(options) })
     return brief
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-    researchTopic().catch((error) => {
+    researchTopic(undefined, getPipelineOptions()).catch((error) => {
         console.error(error)
         process.exit(1)
     })
