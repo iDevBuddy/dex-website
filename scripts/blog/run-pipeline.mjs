@@ -14,7 +14,7 @@ export async function runPipeline(options = getPipelineOptions()) {
     log('pipeline_start', modeDetails(options))
     const topics = await discoverTopics(options)
     const scored = await scoreTopics(topics, options)
-    const topic = scored.find((item) => item.status === 'scored_ready') || scored[0]
+    const topic = scored.find((item) => item.topic === options.topic || item.slug === options.slug) || scored.find((item) => item.status === 'scored_ready') || scored[0]
     const brief = await researchTopic(topic, options)
     const draft = await generateArticle(topic, brief, options)
     const article = await seoOptimize(draft, options)

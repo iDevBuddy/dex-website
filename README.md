@@ -85,6 +85,9 @@ USE_SLACK=true
 SLACK_SIGNING_SECRET=
 SLACK_WEBHOOK_URL=
 SLACK_BLOG_CHANNEL_ID=
+GITHUB_TOKEN=
+GITHUB_REPOSITORY=iDevBuddy/dex-website
+BLOG_PIPELINE_WORKFLOW=blog-pipeline.yml
 ```
 
 Supported command intents include:
@@ -101,6 +104,17 @@ Supported command intents include:
 - `/blog help`
 
 Slack signature verification is enforced for Slack endpoints.
+Interactive draft messages support:
+
+- Approve Publish
+- Request Rewrite
+- Improve SEO
+- Change Tone
+- Regenerate Image
+- Generate Audio
+- Reject
+
+The Slack command center can dispatch GitHub workflows when `GITHUB_TOKEN` has the required repository/workflow permissions. Final content still publishes as Markdown in GitHub, never as Notion-hosted content.
 
 ## Notion setup
 
@@ -117,6 +131,7 @@ Required environment variables:
 ```bash
 USE_NOTION=true
 NOTION_API_KEY=
+NOTION_WEBHOOK_SECRET=
 NOTION_BLOG_IDEAS_DB_ID=
 NOTION_BLOG_DRAFTS_DB_ID=
 NOTION_PUBLISHED_POSTS_DB_ID=
@@ -125,6 +140,15 @@ NOTION_PERFORMANCE_REPORTS_DB_ID=
 ```
 
 The scripts sync topic ideas, scoring, published posts, performance reports, and refresh recommendations when credentials are present. If Notion fails, the pipeline logs the error and continues.
+
+Optional webhook endpoint:
+
+```text
+POST https://YOUR_NETLIFY_DOMAIN/api/notion/webhook
+Header: X-Blog-Webhook-Secret: NOTION_WEBHOOK_SECRET
+```
+
+Use this from an external Notion automation service when a draft or refresh task changes to `Approved`. The webhook routes publishing work back to GitHub.
 
 ## AI provider setup
 

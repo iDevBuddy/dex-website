@@ -7,7 +7,7 @@ const highValueTerms = ['agent', 'automation', 'crm', 'slack', 'workflow', 'lead
 
 export function scoreTopic(topic) {
     const text = `${topic.topic} ${topic.keyword}`.toLowerCase()
-    const manualBoost = topic.source === 'Manual seed' ? 18 : 0
+    const manualBoost = topic.source === 'Manual seed' || topic.source === 'Manual command' ? 24 : 0
     const businessValue = highValueTerms.reduce((sum, term) => sum + (text.includes(term) ? 8 : 0), 30)
     const trendPotential = topic.source?.includes('RSS') ? 18 : 10
     const intentClarity = /\bhow|guide|examples|tools|automation|agent|workflow\b/i.test(text) ? 15 : 8

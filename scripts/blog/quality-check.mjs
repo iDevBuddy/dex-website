@@ -1,7 +1,8 @@
 import { config } from './lib/config.mjs'
 import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log } from './lib/logger.mjs'
-import { notifySlack } from './lib/slack.mjs'
+import { draftApprovalBlocks, notifySlack } from './lib/slack.mjs'
+import { syncBlogDraft } from './lib/notion-dashboard.mjs'
 
 const checks = [
     ['minimumWordCount', (article) => article.body.split(/\s+/).length >= 500, 12],
@@ -42,8 +43,18 @@ export async function qualityCheck(articleArg, options = getPipelineOptions()) {
     const report = qualityScore(article)
     await writePipelineJson('quality-report.json', report, options)
     log('quality_score', { ...report, ...modeDetails(options) })
+    if (!options.dryRun) {
+        await syncBlogDraft(article, {
+            qualityScore: report.score,
+            draftStatus: report.passed ? 'Quality Passed' : 'Quality Failed',
+            approvalStatus: report.passed ? 'Needs Approval' : 'Blocked',
+        })
+    }
     if (!report.passed && !options.dryRun) {
         await notifySlack(`Blog quality check failed: ${article.frontmatter.title} scored ${report.score}/${report.minQualityScore}.`)
+    }
+    if (report.passed && !options.dryRun) {
+        await notifySlack(`Blog draft ready for approval: ${article.frontmatter.title}`, draftApprovalBlocks(article, report))
     }
     return report
 }

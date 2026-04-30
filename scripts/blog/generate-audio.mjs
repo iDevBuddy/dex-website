@@ -1,6 +1,7 @@
 import { audioDir, ensureBlogDirs } from './lib/content.mjs'
 import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log, warn } from './lib/logger.mjs'
+import { syncBlogDraft } from './lib/notion-dashboard.mjs'
 
 export async function generateAudio(articleArg, options = getPipelineOptions()) {
     await ensureBlogDirs()
@@ -30,6 +31,7 @@ export async function generateAudio(articleArg, options = getPipelineOptions()) 
         }
         await writePipelineJson('audio-result.json', result, options)
         log('audio_generated', result)
+        await syncBlogDraft(article, { audioStatus: 'Browser Fallback' })
         return result
     }
 
@@ -46,11 +48,13 @@ export async function generateAudio(articleArg, options = getPipelineOptions()) 
         const result = { ...baseResult, fallback: true, note: 'TTS API responded, but provider-specific MP3 adapter is not configured yet.' }
         await writePipelineJson('audio-result.json', result, options)
         warn('tts_api_configured_but_no_adapter', { message: result.note })
+        await syncBlogDraft(article, { audioStatus: 'TTS API Needs Adapter' })
         return result
     } catch (error) {
         warn('audio_generation_failed', { message: error.message })
         const result = { ...baseResult, fallback: true, error: error.message }
         await writePipelineJson('audio-result.json', result, options)
+        await syncBlogDraft(article, { audioStatus: 'Failed - Browser Fallback' })
         return result
     }
 }

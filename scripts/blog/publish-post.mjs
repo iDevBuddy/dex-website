@@ -5,7 +5,7 @@ import { contentDir, ensureBlogDirs, stringifyFrontmatter } from './lib/content.
 import { getPipelineOptions, modeDetails, readPipelineJson, shouldRequireApproval, writePipelineJson } from './lib/cli.mjs'
 import { log } from './lib/logger.mjs'
 import { notifySlack } from './lib/slack.mjs'
-import { createNotionPage, numberProperty, richTextProperty, titleProperty } from './lib/notion.mjs'
+import { syncPublishedPost } from './lib/notion-dashboard.mjs'
 
 export async function publishPost(options = getPipelineOptions()) {
     await ensureBlogDirs()
@@ -33,14 +33,7 @@ export async function publishPost(options = getPipelineOptions()) {
     }
 
     await fs.writeFile(output, stringifyFrontmatter(article.frontmatter, article.body))
-    await createNotionPage(process.env.NOTION_PUBLISHED_POSTS_DB_ID, {
-        Title: titleProperty(article.frontmatter.title),
-        URL: richTextProperty(`${config.siteUrl}/blog/${article.frontmatter.slug}`),
-        Slug: richTextProperty(article.frontmatter.slug),
-        'Target Keyword': richTextProperty(article.frontmatter.targetKeyword || ''),
-        Category: richTextProperty(article.frontmatter.category || config.defaultCategory),
-        'Quality Score': numberProperty(quality.score),
-    })
+    await syncPublishedPost(article, quality)
     await notifySlack(`Blog published: ${article.frontmatter.title}\n${config.siteUrl}/blog/${article.frontmatter.slug}`)
     log('publish_success', { slug: article.frontmatter.slug, output })
     return { published: true, output }

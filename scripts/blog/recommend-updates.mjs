@@ -1,7 +1,7 @@
 import path from 'node:path'
 import { dataDir, readJson, writeJson } from './lib/content.mjs'
 import { log } from './lib/logger.mjs'
-import { createNotionPage, richTextProperty, titleProperty } from './lib/notion.mjs'
+import { syncRefreshTask } from './lib/notion-dashboard.mjs'
 
 export async function recommendUpdates() {
     const report = await readJson(path.join(dataDir, 'performance-report.json'), { posts: [] })
@@ -22,12 +22,12 @@ export async function recommendUpdates() {
     })
     await writeJson(path.join(dataDir, 'refresh-recommendations.json'), recommendations)
     for (const item of recommendations.filter((rec) => rec.priority === 'High')) {
-        await createNotionPage(process.env.NOTION_REFRESH_QUEUE_DB_ID, {
-            'Blog URL': titleProperty(item.url),
-            Problem: richTextProperty(item.problem),
-            'Recommended Fix': richTextProperty(item.recommendedFix),
-            Priority: richTextProperty(item.priority),
-            Status: richTextProperty('Needs Review'),
+        await syncRefreshTask({
+            blogUrl: item.url,
+            problem: item.problem,
+            recommendedFix: item.recommendedFix,
+            priority: item.priority,
+            status: 'Needs Review',
         })
     }
     log('refresh_recommendations_created', { count: recommendations.length })

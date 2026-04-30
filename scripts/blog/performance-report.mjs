@@ -1,7 +1,7 @@
 import path from 'node:path'
 import { dataDir, readPosts, writeJson } from './lib/content.mjs'
 import { log } from './lib/logger.mjs'
-import { createNotionPage, numberProperty, richTextProperty, titleProperty } from './lib/notion.mjs'
+import { syncPerformanceReport } from './lib/notion-dashboard.mjs'
 
 export async function performanceReport() {
     const posts = await readPosts()
@@ -27,12 +27,12 @@ export async function performanceReport() {
         })),
     }
     await writeJson(path.join(dataDir, 'performance-report.json'), report)
-    await createNotionPage(process.env.NOTION_PERFORMANCE_REPORTS_DB_ID, {
-        Date: titleProperty(report.date.slice(0, 10)),
-        Summary: richTextProperty('Performance connector scaffold created. Add Google credentials to collect live GSC and GA4 metrics.'),
-        'Recommended Actions': richTextProperty('Connect Search Console and GA4 credentials, then run npm run blog:performance.'),
-        'Top Blog': richTextProperty(report.posts[0]?.title || 'No posts'),
-        'Worst Blog': richTextProperty('Not enough data'),
+    await syncPerformanceReport({
+        date: report.date.slice(0, 10),
+        summary: 'Performance connector scaffold created. Add Google credentials to collect live GSC and GA4 metrics.',
+        recommendedActions: 'Connect Search Console and GA4 credentials, then run npm run blog:performance.',
+        topBlog: report.posts[0]?.title || 'No posts',
+        worstBlog: 'Not enough data',
     })
     log('performance_report_created', { posts: report.posts.length })
     return report

@@ -63,7 +63,7 @@ export async function discoverTopics(options = getPipelineOptions()) {
             createdAt: new Date().toISOString(),
         }))
         .filter((item) => item.topic.length > 8 && !seen.has(item.slug))
-        .filter((item) => !/\btop\s+\d+|companies driving|vocal\.media|sponsored\b/i.test(item.topic))
+        .filter((item) => !/\btop\s+\d+|companies driving|earnings|ceo says|barron|vocal\.media|sponsored\b/i.test(item.topic))
 
     const merged = [...existing, ...topics]
     await writePipelineJson('topics.json', merged, options)

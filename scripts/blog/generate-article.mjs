@@ -3,6 +3,7 @@ import { buildFallbackArticle, generateWithModel } from './lib/ai.mjs'
 import { dataDir, readJson } from './lib/content.mjs'
 import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log, warn } from './lib/logger.mjs'
+import { syncBlogDraft } from './lib/notion-dashboard.mjs'
 
 function parseJsonBlock(text) {
     const match = text.match(/\{[\s\S]*\}/)
@@ -35,6 +36,9 @@ Research brief: ${JSON.stringify(brief)}`
 
     await writePipelineJson('draft-article.json', article, options)
     log('draft_generated', { slug: article.frontmatter?.slug, title: article.frontmatter?.title, ...modeDetails(options) })
+    if (!options.dryRun) {
+        await syncBlogDraft(article, { draftStatus: 'Draft Created', approvalStatus: 'Needs Approval' })
+    }
     return article
 }
 

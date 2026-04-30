@@ -5,6 +5,7 @@ import { ensureBlogDirs, imageDir } from './lib/content.mjs'
 import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { generateWithImageProvider } from './lib/image-providers.mjs'
 import { log, warn } from './lib/logger.mjs'
+import { syncBlogDraft } from './lib/notion-dashboard.mjs'
 
 function crc32(buffer) {
     let crc = -1
@@ -79,6 +80,7 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
             const providerResult = { ...result, ...providerOutput }
             await writePipelineJson('image-result.json', providerResult, options)
             log('image_generated', providerResult)
+            await syncBlogDraft(article, { imageStatus: providerOutput.queued ? 'Queued' : 'Generated' })
             return providerResult
         }
         const fallback = makePng()
@@ -88,6 +90,7 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
         const fallbackResult = { ...result, provider: 'fallback_png', path: output }
         await writePipelineJson('image-result.json', fallbackResult, options)
         log('image_generated', fallbackResult)
+        await syncBlogDraft(article, { imageStatus: 'Fallback Generated' })
         return fallbackResult
     } catch (error) {
         warn('image_generation_failed', { message: error.message })

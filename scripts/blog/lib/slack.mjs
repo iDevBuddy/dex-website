@@ -26,3 +26,31 @@ export async function notifySlack(text, blocks) {
         return { ok: false, error: error.message }
     }
 }
+
+export function draftApprovalBlocks(article, quality) {
+    const frontmatter = article.frontmatter || article
+    const value = JSON.stringify({ slug: frontmatter.slug, topic: frontmatter.targetKeyword || frontmatter.title }).slice(0, 1900)
+    return [
+        {
+            type: 'header',
+            text: { type: 'plain_text', text: 'Blog Draft Ready for Approval' },
+        },
+        {
+            type: 'section',
+            text: {
+                type: 'mrkdwn',
+                text: `*${frontmatter.title}*\nQuality score: *${quality.score}/${quality.minQualityScore}*\nFinal publishing source: GitHub Markdown/MDX.`,
+            },
+        },
+        {
+            type: 'actions',
+            elements: [
+                { type: 'button', text: { type: 'plain_text', text: 'Approve Publish' }, style: 'primary', action_id: 'blog_approve_publish', value },
+                { type: 'button', text: { type: 'plain_text', text: 'Request Rewrite' }, action_id: 'blog_request_rewrite', value },
+                { type: 'button', text: { type: 'plain_text', text: 'Improve SEO' }, action_id: 'blog_improve_seo', value },
+                { type: 'button', text: { type: 'plain_text', text: 'Regenerate Image' }, action_id: 'blog_regenerate_image', value },
+                { type: 'button', text: { type: 'plain_text', text: 'Reject' }, style: 'danger', action_id: 'blog_reject', value },
+            ],
+        },
+    ]
+}
