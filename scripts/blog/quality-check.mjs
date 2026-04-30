@@ -59,8 +59,8 @@ export async function qualityCheck(articleArg, options = getPipelineOptions()) {
     if (!options.dryRun) {
         await syncBlogDraft(article, {
             qualityScore: report.score,
-            draftStatus: report.passed ? 'Quality Passed' : 'Quality Failed',
-            approvalStatus: report.passed ? 'Needs Approval' : 'Blocked',
+            draftStatus: report.passed ? 'Needs Review' : 'Rewrite Needed',
+            approvalStatus: report.passed ? 'Waiting' : 'Rewrite Needed',
         })
     }
     if (!report.passed && !options.dryRun) {

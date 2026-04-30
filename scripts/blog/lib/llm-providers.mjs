@@ -52,19 +52,20 @@ class OpenAiCompatibleRuntimeProvider {
 }
 
 export function createMainLlmProvider(env = process.env) {
-    if (env.USE_GPT_OSS === 'true') {
+    const hasLocal = configured(env.LOCAL_LLM_URL) && configured(env.LOCAL_LLM_MODEL)
+    if (env.USE_GPT_OSS === 'true' && hasLocal) {
         return new OpenAiCompatibleRuntimeProvider({
             name: 'gpt-oss',
             url: env.LOCAL_LLM_URL || config.localLlmUrl,
-            model: env.LOCAL_LLM_MODEL || config.localLlmModel || 'gpt-oss',
+            model: env.LOCAL_LLM_MODEL || config.localLlmModel,
             apiKey: env.OPENAI_API_KEY,
         })
     }
-    if (env.USE_GEMMA === 'true') {
+    if (env.USE_GEMMA === 'true' && hasLocal) {
         return new OpenAiCompatibleRuntimeProvider({
             name: 'gemma',
             url: env.LOCAL_LLM_URL || config.localLlmUrl,
-            model: env.LOCAL_LLM_MODEL || 'gemma',
+            model: env.LOCAL_LLM_MODEL || config.localLlmModel,
             apiKey: env.OPENAI_API_KEY,
         })
     }

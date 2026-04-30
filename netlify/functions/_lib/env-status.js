@@ -6,6 +6,21 @@ function allConfigured(env, names) {
     return names.every((name) => configured(env, name))
 }
 
+function nextScheduledRun(env) {
+    const days = (env.BLOG_GENERATION_DAYS || 'MON,TUE,THU,SAT').split(',').map((day) => day.trim().toUpperCase())
+    const time = env.BLOG_GENERATION_TIME_UTC || '05:00'
+    const [hour, minute] = time.split(':').map((value) => Number(value))
+    const dayMap = { SUN: 0, MON: 1, TUE: 2, WED: 3, THU: 4, FRI: 5, SAT: 6 }
+    const targetDays = days.map((day) => dayMap[day]).filter((day) => day !== undefined)
+    if (!targetDays.length || Number.isNaN(hour) || Number.isNaN(minute)) return null
+    const now = new Date()
+    for (let offset = 0; offset <= 8; offset += 1) {
+        const candidate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + offset, hour, minute, 0))
+        if (targetDays.includes(candidate.getUTCDay()) && candidate > now) return candidate.toISOString()
+    }
+    return null
+}
+
 export function getBlogStatus(env = process.env) {
     const missingRequired = [
         'SITE_URL',
@@ -43,6 +58,8 @@ export function getBlogStatus(env = process.env) {
 
     const mainLlmConfigured = configured(env, 'LOCAL_LLM_URL') && configured(env, 'LOCAL_LLM_MODEL')
     const reviewLlmConfigured = configured(env, 'REVIEW_LLM_URL') && configured(env, 'REVIEW_LLM_MODEL')
+    const openAiFallbackConfigured = configured(env, 'OPENAI_API_KEY')
+    const llmConfigured = mainLlmConfigured || openAiFallbackConfigured
     const imageProvider = env.IMAGE_PROVIDER || 'local_comfyui'
     const imageConfigured = imageProvider === 'local_comfyui'
         ? configured(env, 'COMFYUI_URL') && configured(env, 'COMFYUI_WORKFLOW_PATH')
@@ -56,7 +73,7 @@ export function getBlogStatus(env = process.env) {
     if (!allConfigured(env, ['NOTION_BLOG_IDEAS_DB_ID', 'NOTION_BLOG_DRAFTS_DB_ID', 'NOTION_PUBLISHED_POSTS_DB_ID', 'NOTION_REFRESH_QUEUE_DB_ID', 'NOTION_PERFORMANCE_REPORTS_DB_ID'])) nextSteps.push('Copy generated Notion database IDs into Netlify environment variables.')
     if (!configured(env, 'SLACK_SIGNING_SECRET')) nextSteps.push('Add SLACK_SIGNING_SECRET for verified Slack commands.')
     if (!configured(env, 'GITHUB_TOKEN')) nextSteps.push('Add GITHUB_TOKEN with repo and workflow permissions to enable Slack/Notion dispatch.')
-    if (!mainLlmConfigured) nextSteps.push('Add LOCAL_LLM_URL and LOCAL_LLM_MODEL to enable AI article generation.')
+    if (!llmConfigured) nextSteps.push('Add LOCAL_LLM_URL and LOCAL_LLM_MODEL, or OPENAI_API_KEY, to enable AI article generation.')
     if (!imageConfigured) nextSteps.push('Configure COMFYUI_URL and COMFYUI_WORKFLOW_PATH or enable GPT image.')
 
     return {
@@ -83,9 +100,22 @@ export function getBlogStatus(env = process.env) {
                 configured: configured(env, 'GITHUB_TOKEN') || configured(env, 'BLOG_GITHUB_TOKEN'),
             },
             llm: {
-                mainConfigured: mainLlmConfigured || configured(env, 'OPENAI_API_KEY'),
-                reviewConfigured: reviewLlmConfigured || mainLlmConfigured || configured(env, 'OPENAI_API_KEY'),
-                openAiFallbackConfigured: configured(env, 'OPENAI_API_KEY'),
+                configured: llmConfigured,
+                mainConfigured: llmConfigured,
+                reviewConfigured: reviewLlmConfigured || llmConfigured,
+                openAiFallbackConfigured,
+            },
+            topicDiscovery: {
+                enabled: true,
+                minTopicScore: Number(env.MIN_TOPIC_SCORE || 75),
+            },
+            scheduledAutomation: {
+                enabled: true,
+                blogsPerWeek: Number(env.BLOGS_PER_WEEK || 4),
+                days: env.BLOG_GENERATION_DAYS || 'MON,TUE,THU,SAT',
+                timeUtc: env.BLOG_GENERATION_TIME_UTC || '05:00',
+                timezone: env.BLOG_TIMEZONE || 'Asia/Karachi',
+                nextRunUtc: nextScheduledRun(env),
             },
             image: {
                 provider: imageProvider,

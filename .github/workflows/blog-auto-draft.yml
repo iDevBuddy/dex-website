@@ -1,0 +1,164 @@
+name: Blog Auto Draft
+
+on:
+  schedule:
+    - cron: '0 5 * * 1,2,4,6'
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Optional topic to draft'
+        required: false
+        type: string
+      forceDraft:
+        description: 'Allow drafting even if topic score is below threshold'
+        required: false
+        default: false
+        type: boolean
+      dryRun:
+        description: 'Run without writing publishable artifacts'
+        required: false
+        default: false
+        type: boolean
+      command:
+        description: 'Internal Slack command route'
+        required: false
+        type: string
+      requested_by:
+        description: 'Requester'
+        required: false
+        type: string
+      slug:
+        description: 'Draft slug for approval actions'
+        required: false
+        type: string
+      url:
+        description: 'Article URL for image/audio/refresh actions'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  create-draft:
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: ${{ vars.SITE_URL }}
+      BRAND_NAME: ${{ vars.BRAND_NAME }}
+      AUTHOR_NAME: ${{ vars.AUTHOR_NAME }}
+      USE_SLACK: ${{ vars.USE_SLACK }}
+      SLACK_WEBHOOK_URL: ${{ vars.SLACK_WEBHOOK_URL }}
+      USE_NOTION: ${{ vars.USE_NOTION }}
+      NOTION_API_KEY: ${{ vars.NOTION_API_KEY }}
+      NOTION_BLOG_IDEAS_DB_ID: ${{ vars.NOTION_BLOG_IDEAS_DB_ID }}
+      NOTION_BLOG_DRAFTS_DB_ID: ${{ vars.NOTION_BLOG_DRAFTS_DB_ID }}
+      NOTION_PUBLISHED_POSTS_DB_ID: ${{ vars.NOTION_PUBLISHED_POSTS_DB_ID }}
+      NOTION_REFRESH_QUEUE_DB_ID: ${{ vars.NOTION_REFRESH_QUEUE_DB_ID }}
+      NOTION_PERFORMANCE_REPORTS_DB_ID: ${{ vars.NOTION_PERFORMANCE_REPORTS_DB_ID }}
+      LOCAL_LLM_URL: ${{ vars.LOCAL_LLM_URL }}
+      LOCAL_LLM_MODEL: ${{ vars.LOCAL_LLM_MODEL }}
+      REVIEW_LLM_URL: ${{ vars.REVIEW_LLM_URL }}
+      REVIEW_LLM_MODEL: ${{ vars.REVIEW_LLM_MODEL }}
+      USE_GPT_OSS: ${{ vars.USE_GPT_OSS }}
+      USE_GEMMA: ${{ vars.USE_GEMMA }}
+      OPENAI_API_KEY: ${{ vars.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+      USE_IMAGE_MODEL: ${{ vars.USE_IMAGE_MODEL }}
+      IMAGE_PROVIDER: ${{ vars.IMAGE_PROVIDER }}
+      COMFYUI_URL: ${{ vars.COMFYUI_URL }}
+      COMFYUI_WORKFLOW_PATH: ${{ vars.COMFYUI_WORKFLOW_PATH }}
+      USE_GPT_IMAGE: ${{ vars.USE_GPT_IMAGE }}
+      USE_LOCAL_TTS: ${{ vars.USE_LOCAL_TTS }}
+      TTS_PROVIDER: ${{ vars.TTS_PROVIDER }}
+      TTS_API_URL: ${{ vars.TTS_API_URL }}
+      MANUAL_APPROVAL: ${{ vars.MANUAL_APPROVAL }}
+      USE_AUTO_PUBLISH: ${{ vars.USE_AUTO_PUBLISH }}
+      MIN_QUALITY_SCORE: ${{ vars.MIN_QUALITY_SCORE }}
+      MIN_TOPIC_SCORE: ${{ vars.MIN_TOPIC_SCORE }}
+      BLOGS_PER_WEEK: ${{ vars.BLOGS_PER_WEEK }}
+      BLOG_GENERATION_DAYS: ${{ vars.BLOG_GENERATION_DAYS }}
+      BLOG_GENERATION_TIME_UTC: ${{ vars.BLOG_GENERATION_TIME_UTC }}
+      BLOG_TIMEZONE: ${{ vars.BLOG_TIMEZONE }}
+      DEFAULT_BLOG_TONE: ${{ vars.DEFAULT_BLOG_TONE }}
+      DEFAULT_BLOG_STYLE: ${{ vars.DEFAULT_BLOG_STYLE }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate schedule
+        run: npm run blog:schedule:test
+
+      - name: Run blog automation command
+        id: automation
+        run: |
+          COMMAND="${{ github.event.inputs.command }}"
+          if [ -z "$COMMAND" ]; then COMMAND="draft"; fi
+          echo "command=$COMMAND" >> "$GITHUB_OUTPUT"
+          ARGS="--manual-approval"
+          if [ "${{ github.event.inputs.dryRun }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ "${{ github.event.inputs.forceDraft }}" = "true" ]; then ARGS="$ARGS --force-draft"; fi
+          if [ -n "${{ github.event.inputs.topic }}" ]; then ARGS="$ARGS --topic \"${{ github.event.inputs.topic }}\""; fi
+          if [ "$COMMAND" = "ideas" ]; then
+            npm run blog:discover
+            npm run blog:score
+          elif [ "$COMMAND" = "approve_publish" ]; then
+            npm run blog:publish -- --force --auto-publish
+          elif [ "$COMMAND" = "generate_image" ] || [ "$COMMAND" = "regenerate_image" ]; then
+            npm run blog:image
+          elif [ "$COMMAND" = "generate_audio" ]; then
+            npm run blog:audio
+          else
+            echo "Running npm run blog:pipeline -- $ARGS"
+            eval "npm run blog:pipeline -- $ARGS"
+          fi
+
+      - name: Build check
+        run: npm run build
+
+      - name: Commit draft packet for manual approval
+        if: env.USE_AUTO_PUBLISH != 'true' && steps.automation.outputs.command != 'approve_publish' && github.event.inputs.dryRun != 'true'
+        run: |
+          git config user.name "AI Blog Engine"
+          git config user.email "actions@github.com"
+          git add data/blog public/blog
+          if git diff --cached --quiet; then
+            echo "No draft artifacts to commit."
+          else
+            git commit -m "chore: create AI blog draft for approval"
+            git push
+          fi
+
+      - name: Commit approved published post
+        if: env.USE_AUTO_PUBLISH == 'true'
+        run: |
+          git config user.name "AI Blog Engine"
+          git config user.email "actions@github.com"
+          git add content/blog public/blog data/blog
+          if git diff --cached --quiet; then
+            echo "No publishable changes to commit."
+          else
+            git commit -m "chore: publish approved AI blog draft"
+            git push
+          fi
+
+      - name: Commit latest approved publish request
+        if: steps.automation.outputs.command == 'approve_publish'
+        run: |
+          git config user.name "AI Blog Engine"
+          git config user.email "actions@github.com"
+          git add content/blog public/blog data/blog
+          if git diff --cached --quiet; then
+            echo "No approved publish changes to commit."
+          else
+            git commit -m "chore: publish latest approved AI blog"
+            git push
+          fi

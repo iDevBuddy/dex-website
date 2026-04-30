@@ -34,6 +34,13 @@ BLOG_PIPELINE_WORKFLOW=blog-pipeline.yml
 USE_AUTO_PUBLISH=false
 MANUAL_APPROVAL=true
 MIN_QUALITY_SCORE=85
+MIN_TOPIC_SCORE=75
+BLOGS_PER_WEEK=4
+BLOG_GENERATION_DAYS=MON,TUE,THU,SAT
+BLOG_GENERATION_TIME_UTC=05:00
+BLOG_TIMEZONE=Asia/Karachi
+DEFAULT_BLOG_TONE=Business Owner
+DEFAULT_BLOG_STYLE=Practical Guide
 ```
 
 `GITHUB_TOKEN` should be a GitHub personal access token with repo access and workflow dispatch permission. Without it, Slack and Notion can record requests but cannot safely trigger publishing workflows.

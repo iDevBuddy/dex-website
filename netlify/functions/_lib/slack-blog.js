@@ -36,9 +36,11 @@ export function helpText() {
         '*DEX Blog commands*',
         '`/blog report` - latest performance scaffold',
         '`/blog ideas` - topic discovery status',
+        '`/blog generate` - discover topics and create one approval-only draft',
         '`/blog new topic: [topic]` - add idea',
         '`/blog draft: [topic]` - request a draft',
-        '`/blog publish latest` - publish latest approved draft',
+        '`/blog approve latest` - publish latest approved draft',
+        '`/blog schedule` - show the 4-per-week drafting schedule',
         '`/blog improve [url]` - queue refresh',
         '`/blog generate image [url]` - regenerate image',
         '`/blog generate audio [url]` - generate/listen support',
@@ -117,6 +119,9 @@ export async function routeSlackCommand(payload) {
                 message: 'Command center is reachable. Publishing still writes Markdown/MDX into GitHub, not Notion.',
                 fields: [
                     { label: 'Manual approval', value: process.env.MANUAL_APPROVAL === 'false' ? 'Off' : 'On' },
+                    { label: 'Auto publish', value: process.env.USE_AUTO_PUBLISH === 'true' ? 'On' : 'Off' },
+                    { label: 'LLM', value: process.env.LOCAL_LLM_URL || process.env.OPENAI_API_KEY ? 'Configured' : 'Missing model config' },
+                    { label: 'Schedule', value: 'Mon, Tue, Thu, Sat at 10:00 AM Pakistan time' },
                     { label: 'Notion sync', value: process.env.NOTION_API_KEY ? 'Configured' : 'Missing token' },
                     { label: 'GitHub dispatch', value: process.env.GITHUB_TOKEN || process.env.BLOG_GITHUB_TOKEN ? 'Configured' : 'Missing token' },
                 ],
@@ -138,7 +143,7 @@ export async function routeSlackCommand(payload) {
     if (text === 'ideas') {
         const dispatch = await dispatchBlogWorkflow({
             eventType: 'blog_ideas',
-            inputs: { command: 'ideas', dry_run: 'true', requested_by: userName },
+            inputs: { command: 'ideas', dryRun: 'true', requested_by: userName },
         })
         return {
             response_type: 'ephemeral',
@@ -147,6 +152,40 @@ export async function routeSlackCommand(payload) {
                 title: 'Topic Discovery',
                 message: 'Topic discovery is routed to the pipeline. Ideas will sync to Notion when credentials are configured.',
                 fields: [{ label: 'GitHub', value: dispatch.ok ? dispatch.type : dispatch.reason || 'Not dispatched' }],
+            }),
+        }
+    }
+
+    if (text === 'generate') {
+        const dispatch = await dispatchBlogWorkflow({
+            eventType: 'blog_generate',
+            workflow: process.env.BLOG_PIPELINE_WORKFLOW || 'blog-auto-draft.yml',
+            inputs: { topic: '', dryRun: 'false', forceDraft: 'false', requested_by: userName },
+        })
+        return {
+            response_type: 'ephemeral',
+            text: 'Automatic draft generation routed.',
+            blocks: slackBlocks({
+                title: 'Draft Generation Started',
+                message: 'I routed topic discovery, scoring, drafting, SEO review, quality check, image/audio fallback, and approval notification. Manual approval remains on.',
+                fields: [{ label: 'GitHub', value: dispatch.ok ? dispatch.type : dispatch.reason || 'Not dispatched' }],
+            }),
+        }
+    }
+
+    if (text === 'schedule') {
+        return {
+            response_type: 'ephemeral',
+            text: 'Blog auto-draft schedule: Monday, Tuesday, Thursday, Saturday at 10:00 AM Pakistan time.',
+            blocks: slackBlocks({
+                title: 'Blog Schedule',
+                message: 'Auto-drafts run 4 times per week. Cron: `0 5 * * 1,2,4,6` which equals 10:00 AM Pakistan time.',
+                fields: [
+                    { label: 'Manual approval', value: process.env.MANUAL_APPROVAL === 'false' ? 'Off' : 'On' },
+                    { label: 'Auto publish', value: process.env.USE_AUTO_PUBLISH === 'true' ? 'On' : 'Off' },
+                    { label: 'Minimum topic score', value: process.env.MIN_TOPIC_SCORE || '75' },
+                    { label: 'Minimum quality score', value: process.env.MIN_QUALITY_SCORE || '85' },
+                ],
             }),
         }
     }
@@ -178,14 +217,15 @@ export async function routeSlackCommand(payload) {
         const notion = await createBlogDraft({
             title: topic,
             topic,
-            draftStatus: 'Requested',
-            approvalStatus: 'Needs Approval',
+            draftStatus: 'Drafting',
+            approvalStatus: 'Waiting',
             slackThread,
             responseUrl,
         })
         const dispatch = await dispatchBlogWorkflow({
             eventType: 'blog_draft',
-            inputs: { command: 'draft', topic, dry_run: 'true', manual_approval: 'true', requested_by: userName },
+            workflow: process.env.BLOG_PIPELINE_WORKFLOW || 'blog-auto-draft.yml',
+            inputs: { topic, dryRun: 'false', forceDraft: 'true', requested_by: userName },
         })
         return {
             response_type: 'ephemeral',
@@ -202,10 +242,10 @@ export async function routeSlackCommand(payload) {
         }
     }
 
-    if (text === 'publish latest') {
+    if (text === 'publish latest' || text === 'approve latest') {
         const dispatch = await dispatchBlogWorkflow({
             eventType: 'blog_publish_latest',
-            inputs: { command: 'publish_latest', force_publish: 'true', requested_by: userName },
+            inputs: { command: 'approve_publish', force_publish: 'true', requested_by: userName },
         })
         return {
             response_type: 'ephemeral',
@@ -225,7 +265,7 @@ export async function routeSlackCommand(payload) {
             problem: 'Manual Slack improvement request',
             recommendedFix: 'Review Search Console/GA4 data, improve title/meta/internal links/content gaps.',
             priority: 'High',
-            status: 'Needs Review',
+            status: 'Open',
         })
         return {
             response_type: 'ephemeral',
@@ -245,7 +285,7 @@ export async function routeSlackCommand(payload) {
             problem: 'Title rewrite requested from Slack',
             recommendedFix: 'Rewrite title for stronger CTR while preserving search intent.',
             priority: 'High',
-            status: 'Needs Review',
+            status: 'Open',
         })
         return { response_type: 'ephemeral', text: `Title rewrite queued for ${targetUrl}` }
     }
@@ -259,7 +299,7 @@ export async function routeSlackCommand(payload) {
             problem: `Tone change requested: ${tone}`,
             recommendedFix: `Revise article tone to ${tone || 'requested tone'}.`,
             priority: 'Medium',
-            status: 'Needs Review',
+            status: 'Open',
         })
         return { response_type: 'ephemeral', text: `Tone change queued for ${targetUrl}: ${tone}` }
     }

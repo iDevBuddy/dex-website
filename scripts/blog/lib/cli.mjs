@@ -13,11 +13,12 @@ export function getPipelineOptions(argv = process.argv) {
     return {
         dryRun: argv.includes('--dry-run'),
         force: argv.includes('--force'),
+        forceDraft: argv.includes('--force-draft') || argv.includes('--forceDraft'),
         manualApproval: argv.includes('--manual-approval') || (!argv.includes('--auto-publish') && config.manualApproval),
         autoPublish: argv.includes('--auto-publish') || config.autoPublish,
         topic: getValue('--topic'),
         slug: getValue('--slug'),
-        minTopicScore: Number(getValue('--min-topic-score') || process.env.MIN_TOPIC_SCORE || 70),
+        minTopicScore: Number(getValue('--min-topic-score') || process.env.MIN_TOPIC_SCORE || config.minTopicScore || 75),
         sourceLimit: Number(getValue('--source-limit') || process.env.TOPIC_SOURCE_LIMIT || 12),
     }
 }

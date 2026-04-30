@@ -8,6 +8,17 @@ import {
     urlProperty,
 } from './notion.mjs'
 
+const sourceMap = {
+    'Google News RSS': 'Google News',
+    'Hacker News RSS': 'Hacker News',
+    'Reddit r/automation RSS': 'Reddit',
+    'Reddit r/artificial RSS': 'Reddit',
+    'Manual seed': 'Manual',
+    'Manual command': 'Slack',
+    'Slack command': 'Slack',
+    Pipeline: 'Manual',
+}
+
 function statusText(value) {
     return selectProperty(value)
 }
@@ -19,12 +30,12 @@ function urlText(value) {
 export async function syncBlogIdea(topic) {
     return createNotionPage(process.env.NOTION_BLOG_IDEAS_DB_ID, {
         Topic: titleProperty(topic.topic),
-        Source: selectProperty(topic.source || 'Manual'),
+        Source: selectProperty(sourceMap[topic.source] || topic.source || 'Manual'),
         Keyword: richTextProperty(topic.keyword || topic.topic || ''),
         'Search Intent': selectProperty(topic.searchIntent || 'Informational'),
         'Trend Score': numberProperty(topic.trendScore),
         'SEO Score': numberProperty(topic.seoScore),
-        'Business Value': selectProperty(topic.businessValueLabel || topic.businessValue || 'Medium'),
+        'Business Value': selectProperty(topic.businessValueLabel || (typeof topic.businessValue === 'number' ? (topic.businessValue >= 70 ? 'High' : topic.businessValue >= 45 ? 'Medium' : 'Low') : topic.businessValue) || 'Medium'),
         Priority: selectProperty(topic.priority || 'Medium'),
         Status: statusText(topic.status || 'New'),
         'Created Date': dateProperty(topic.createdAt || new Date()),

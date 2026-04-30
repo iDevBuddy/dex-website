@@ -6,6 +6,7 @@ import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } 
 import { generateWithImageProvider } from './lib/image-providers.mjs'
 import { log, warn } from './lib/logger.mjs'
 import { syncBlogDraft } from './lib/notion-dashboard.mjs'
+import { notifySlack } from './lib/slack.mjs'
 
 function crc32(buffer) {
     let crc = -1
@@ -80,7 +81,7 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
             const providerResult = { ...result, ...providerOutput }
             await writePipelineJson('image-result.json', providerResult, options)
             log('image_generated', providerResult)
-            await syncBlogDraft(article, { imageStatus: providerOutput.queued ? 'Queued' : 'Generated' })
+            await syncBlogDraft(article, { imageStatus: providerOutput.queued ? 'Generating' : 'Generated' })
             return providerResult
         }
         const fallback = makePng()
@@ -90,12 +91,14 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
         const fallbackResult = { ...result, provider: 'fallback_png', path: output }
         await writePipelineJson('image-result.json', fallbackResult, options)
         log('image_generated', fallbackResult)
-        await syncBlogDraft(article, { imageStatus: 'Fallback Generated' })
+        await syncBlogDraft(article, { imageStatus: 'Generated' })
         return fallbackResult
     } catch (error) {
         warn('image_generation_failed', { message: error.message })
         const failed = { ...result, failed: true, error: error.message }
         await writePipelineJson('image-result.json', failed, options)
+        await syncBlogDraft(article, { imageStatus: 'Failed', notes: `Image generation failed: ${error.message}` })
+        await notifySlack(`Image generation failed for ${article.frontmatter.title}: ${error.message}`)
         return failed
     }
 }

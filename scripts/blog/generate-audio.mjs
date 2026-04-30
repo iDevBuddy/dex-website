@@ -48,13 +48,13 @@ export async function generateAudio(articleArg, options = getPipelineOptions()) 
         const result = { ...baseResult, fallback: true, note: 'TTS API responded, but provider-specific MP3 adapter is not configured yet.' }
         await writePipelineJson('audio-result.json', result, options)
         warn('tts_api_configured_but_no_adapter', { message: result.note })
-        await syncBlogDraft(article, { audioStatus: 'TTS API Needs Adapter' })
+        await syncBlogDraft(article, { audioStatus: 'Browser Fallback' })
         return result
     } catch (error) {
         warn('audio_generation_failed', { message: error.message })
         const result = { ...baseResult, fallback: true, error: error.message }
         await writePipelineJson('audio-result.json', result, options)
-        await syncBlogDraft(article, { audioStatus: 'Failed - Browser Fallback' })
+        await syncBlogDraft(article, { audioStatus: 'Failed' })
         return result
     }
 }

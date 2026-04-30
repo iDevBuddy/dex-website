@@ -55,11 +55,13 @@ npm run blog:discover
 npm run blog:score
 npm run blog:research
 npm run blog:generate
+npm run blog:draft -- --topic "AI automation for small businesses"
 npm run blog:seo
 npm run blog:image
 npm run blog:audio
 npm run blog:quality
 npm run blog:publish
+npm run blog:schedule:test
 ```
 
 ## Create the first manual blog post
@@ -94,9 +96,11 @@ Supported command intents include:
 
 - `/blog report`
 - `/blog ideas`
+- `/blog generate`
 - `/blog new topic: [topic]`
 - `/blog draft: [topic]`
-- `/blog publish latest`
+- `/blog approve latest`
+- `/blog schedule`
 - `/blog improve [url]`
 - `/blog generate image [url]`
 - `/blog generate audio [url]`
@@ -115,6 +119,8 @@ Interactive draft messages support:
 - Reject
 
 The Slack command center can dispatch GitHub workflows when `GITHUB_TOKEN` has the required repository/workflow permissions. Final content still publishes as Markdown in GitHub, never as Notion-hosted content.
+
+Automatic draft generation is scheduled in `.github/workflows/blog-auto-draft.yml` for Monday, Tuesday, Thursday, and Saturday at 10:00 AM Pakistan time. The cron is `0 5 * * 1,2,4,6` because Pakistan time is UTC+5. Manual approval remains on by default, so scheduled drafts go to Slack/Notion for review instead of publishing directly.
 
 Check Phase 3 readiness:
 
@@ -184,7 +190,7 @@ OPENAI_API_KEY=
 OPENAI_MODEL=
 ```
 
-If the endpoint is unavailable, the MVP uses safe structured fallbacks so the site can still build and the pipeline can still be tested.
+If no LLM is configured, draft generation fails safely and sends a clear Slack/Notion message instead of creating weak AI content.
 
 ## Image model setup
 
