@@ -139,6 +139,38 @@ BLOG_GITHUB_REF=main
 BLOG_PIPELINE_WORKFLOW=blog-pipeline.yml
 ```
 
+## Readiness check
+
+Run this locally or in CI:
+
+```bash
+npm run phase3:check
+```
+
+On the live site, check:
+
+```text
+GET /api/blog/status
+```
+
+The status endpoint reports whether Slack, Notion, GitHub dispatch, and database IDs are configured. It does not expose secret values.
+
+## GitHub workflow activation
+
+The workflow templates are stored in:
+
+```text
+docs/github-actions/
+```
+
+To activate GitHub Actions dispatch from Slack/Notion, move them to:
+
+```text
+.github/workflows/
+```
+
+This requires a GitHub token with `workflow` scope. Without that scope GitHub rejects pushes that create or update workflow files.
+
 ## Notion approval webhook
 
 If you use an external Notion automation tool, send approved draft/refresh events here:

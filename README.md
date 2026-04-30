@@ -116,6 +116,18 @@ Interactive draft messages support:
 
 The Slack command center can dispatch GitHub workflows when `GITHUB_TOKEN` has the required repository/workflow permissions. Final content still publishes as Markdown in GitHub, never as Notion-hosted content.
 
+Check Phase 3 readiness:
+
+```bash
+npm run phase3:check
+```
+
+Live status endpoint:
+
+```text
+/api/blog/status
+```
+
 ## Notion setup
 
 Create these databases manually and store their IDs in Netlify/GitHub secrets:

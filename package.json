@@ -23,7 +23,8 @@
         "blog:refresh": "node -e \"import('./scripts/blog/refresh-post.mjs').then(m=>m.refreshPost(process.argv.at(-1)))\" --",
         "blog:links": "node -e \"import('./scripts/blog/internal-linker.mjs').then(m=>m.internalLinker())\"",
         "blog:clusters": "node -e \"import('./scripts/blog/cluster-manager.mjs').then(m=>m.clusterManager())\"",
-        "blog:tone": "node -e \"import('./scripts/blog/tone-performance.mjs').then(m=>m.tonePerformance())\""
+        "blog:tone": "node -e \"import('./scripts/blog/tone-performance.mjs').then(m=>m.tonePerformance())\"",
+        "phase3:check": "node scripts/blog/phase3-check.mjs"
     },
     "dependencies": {
         "@humeai/voice-react": "^0.2.14",
