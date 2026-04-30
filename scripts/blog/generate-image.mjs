@@ -84,6 +84,12 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
             await syncBlogDraft(article, { imageStatus: providerOutput.queued ? 'Generating' : 'Generated' })
             return providerResult
         }
+        if (process.env.REQUIRE_REAL_IMAGE_MODEL === 'true' && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true') {
+            const message = 'Real image model is required, but COMFYUI_URL/COMFYUI_WORKFLOW_PATH or GPT Image is not configured.'
+            await syncBlogDraft(article, { imageStatus: 'Failed', notes: message })
+            await notifySlack(`Image generation paused for ${article.frontmatter.title}: ${message}`)
+            throw new Error(message)
+        }
         const fallback = makePng()
         await fs.writeFile(output, fallback)
         article.frontmatter.image = `/blog/images/${slug}.png`

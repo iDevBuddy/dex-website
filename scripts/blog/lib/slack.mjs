@@ -30,6 +30,10 @@ export async function notifySlack(text, blocks) {
 export function draftApprovalBlocks(article, quality) {
     const frontmatter = article.frontmatter || article
     const value = JSON.stringify({ slug: frontmatter.slug, topic: frontmatter.targetKeyword || frontmatter.title }).slice(0, 1900)
+    const assets = Object.entries(frontmatter.mediaRecommendations || {})
+        .filter(([, enabled]) => enabled)
+        .map(([name]) => name.replace(/([A-Z])/g, ' $1').replace(/^./, (char) => char.toUpperCase()))
+        .slice(0, 6)
     return [
         {
             type: 'header',
@@ -39,7 +43,7 @@ export function draftApprovalBlocks(article, quality) {
             type: 'section',
             text: {
                 type: 'mrkdwn',
-                text: `*${frontmatter.title}*\nQuality score: *${quality.score}/${quality.minQualityScore}*\nFinal publishing source: GitHub Markdown/MDX.`,
+                text: `*${frontmatter.title}*\nQuality score: *${quality.score}/${quality.minQualityScore}*\nSEO/topic review complete. Final publishing source: GitHub Markdown/MDX.\n*Recommended assets:* ${assets.length ? assets.join(', ') : 'Featured Image'}`,
             },
         },
         {

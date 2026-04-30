@@ -1,8 +1,36 @@
 import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log } from './lib/logger.mjs'
 import { createReviewLlmProvider } from './lib/llm-providers.mjs'
+import { enrichTopicPersona } from './lib/persona.mjs'
+
+async function fetchResearchNotes(topic) {
+    if (!process.env.NOTION_API_KEY || !process.env.NOTION_BLOG_DRAFTS_DB_ID) return ''
+    try {
+        const response = await fetch(`https://api.notion.com/v1/databases/${process.env.NOTION_BLOG_DRAFTS_DB_ID}/query`, {
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${process.env.NOTION_API_KEY}`,
+                'Content-Type': 'application/json',
+                'Notion-Version': '2022-06-28',
+            },
+            body: JSON.stringify({
+                page_size: 5,
+                filter: { property: 'Topic', rich_text: { contains: topic.topic.slice(0, 40) } },
+            }),
+        })
+        if (!response.ok) return ''
+        const data = await response.json()
+        return (data.results || [])
+            .map((page) => page.properties?.['Research Notes']?.rich_text?.map((item) => item.plain_text).join('') || '')
+            .filter(Boolean)
+            .join('\n\n')
+    } catch {
+        return ''
+    }
+}
 
 export function createResearchBrief(topic) {
+    topic = enrichTopicPersona(topic)
     return {
         topic: topic.topic,
         slug: topic.slug,
@@ -31,6 +59,9 @@ export function createResearchBrief(topic) {
         suggestedInternalLinks: ['/blog/ai-authority-blog-engine', '/#services', '/#contact'],
         suggestedCTA: 'Book an automation consult',
         contentFormat: 'expert guide',
+        contentPersona: topic.contentPersona,
+        businessFunction: topic.businessFunction,
+        authorityAngle: topic.authorityAngle,
         title: `How to Use ${topic.topic} in a Practical Business Automation Workflow`,
         description: `A practical guide to applying ${topic.topic} with approval steps, quality checks, and measurable business outcomes.`,
     }
@@ -41,6 +72,8 @@ export async function researchTopic(topicArg, options = getPipelineOptions()) {
     const topic = topicArg || topics.find((item) => item.slug === options.slug || item.topic === options.topic) || topics.find((item) => item.status === 'scored_ready') || topics[0]
     if (!topic) throw new Error('No topic found. Run discover-topics first.')
     let brief = createResearchBrief(topic)
+    const researchNotes = await fetchResearchNotes(topic)
+    if (researchNotes) brief.notebookLmResearchNotes = researchNotes
     if (!options.dryRun) {
         try {
             const provider = createReviewLlmProvider()

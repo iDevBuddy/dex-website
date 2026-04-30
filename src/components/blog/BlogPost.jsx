@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { CalendarDays, Clock, RefreshCcw } from 'lucide-react'
+import { CalendarDays, Clock, Download, FileText, Presentation, RefreshCcw } from 'lucide-react'
 import { buildBlogPostingSchema, buildFaqSchema, formatDate, getPostBySlug, getRelatedPosts } from '../../lib/blog'
 import { setSeo } from '../../lib/seo'
 import ArticleAudioPlayer from './ArticleAudioPlayer'
@@ -53,6 +53,7 @@ export default function BlogPost({ slug }) {
                     <p className="text-xl text-gray-400 leading-8 mb-7">{post.subtitle || post.description}</p>
                     <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-7">
                         <span>{post.author}</span>
+                        <span>{post.contentPersona}</span>
                         <span className="inline-flex items-center gap-1.5"><CalendarDays size={15} /> {formatDate(post.publishedAt)}</span>
                         <span className="inline-flex items-center gap-1.5"><RefreshCcw size={15} /> Updated {formatDate(post.updatedAt || post.publishedAt)}</span>
                         <span className="inline-flex items-center gap-1.5"><Clock size={15} /> {post.readingTime}</span>
@@ -97,7 +98,34 @@ export default function BlogPost({ slug }) {
                             </section>
                         )}
 
+                        {post.keyTakeaways.length > 0 && (
+                            <section className="mb-10 rounded-lg border border-border bg-dark-card p-6">
+                                <h2 className="text-lg font-bold text-white mb-4">Key Takeaways</h2>
+                                <ul className="space-y-3 text-gray-300">
+                                    {post.keyTakeaways.map((item) => <li key={item} className="leading-7">- {item}</li>)}
+                                </ul>
+                            </section>
+                        )}
+
+                        {post.expertInsight && (
+                            <section className="mb-10 rounded-lg border border-accent/30 bg-dark-deeper p-6">
+                                <h2 className="text-lg font-bold text-white mb-2">Expert Insight</h2>
+                                <p className="text-gray-200 leading-7">{post.expertInsight}</p>
+                            </section>
+                        )}
+
                         <MarkdownRenderer body={post.body} />
+
+                        {(post.assetLinks?.infographic || post.assetLinks?.slides || post.assetLinks?.downloadablePdf) && (
+                            <section className="mt-14 border-t border-border pt-10">
+                                <h2 className="text-3xl font-black text-white mb-6">Visual Resources</h2>
+                                <div className="grid sm:grid-cols-3 gap-4">
+                                    {post.assetLinks.infographic && <a href={post.assetLinks.infographic} className="rounded-lg border border-border p-5 text-white hover:border-accent"><FileText className="mb-3" /> Infographic</a>}
+                                    {post.assetLinks.slides && <a href={post.assetLinks.slides} className="rounded-lg border border-border p-5 text-white hover:border-accent"><Presentation className="mb-3" /> Slides</a>}
+                                    {post.assetLinks.downloadablePdf && <a href={post.assetLinks.downloadablePdf} className="rounded-lg border border-border p-5 text-white hover:border-accent"><Download className="mb-3" /> PDF</a>}
+                                </div>
+                            </section>
+                        )}
 
                         {post.faqs.length > 0 && (
                             <section className="mt-14 border-t border-border pt-10">
@@ -133,7 +161,7 @@ export default function BlogPost({ slug }) {
                             <div>
                                 <h2 className="text-xl font-bold text-white mb-2">{post.author}</h2>
                                 <p className="text-gray-400 leading-7">
-                                    AI automation engineer building practical agents, workflow systems, and business automation infrastructure for service companies.
+                                    AI automation engineer building practical agents, workflow systems, and business automation infrastructure for service companies. Editorial persona for this article: {post.contentPersona}; business function: {post.businessFunction}.
                                 </p>
                             </div>
                         </section>

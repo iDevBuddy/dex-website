@@ -62,6 +62,11 @@ export async function syncBlogDraft(article, overrides = {}) {
         'Slack Thread': urlText(overrides.slackThread || ''),
         'Research Notes': richTextProperty(overrides.notes || ''),
         'Internal Links': richTextProperty(overrides.internalLinks || ''),
+        'Slides Status': selectProperty(overrides.slidesStatus || 'Not Started'),
+        'Infographic Status': selectProperty(overrides.infographicStatus || 'Not Started'),
+        'Asset Brief': richTextProperty(overrides.assetBrief || ''),
+        'Asset URLs': richTextProperty(overrides.assetUrls || ''),
+        'Media Recommendations': richTextProperty(overrides.mediaRecommendations ? JSON.stringify(overrides.mediaRecommendations) : JSON.stringify(frontmatter.mediaRecommendations || {})),
         'Created Date': dateProperty(overrides.createdDate || new Date()),
         'Last Updated': dateProperty(overrides.lastUpdated || new Date()),
     })

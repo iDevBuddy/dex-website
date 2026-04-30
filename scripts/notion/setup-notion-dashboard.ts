@@ -111,6 +111,11 @@ const databases: DatabaseSpec[] = [
             'Slack Thread': url(),
             'Research Notes': richText(),
             'Internal Links': richText(),
+            'Slides Status': select(['Not Started', 'Task Created', 'Generating', 'Generated', 'Failed']),
+            'Infographic Status': select(['Not Started', 'Task Created', 'Ready for Image Provider', 'Generating', 'Generated', 'Failed']),
+            'Asset Brief': richText(),
+            'Asset URLs': richText(),
+            'Media Recommendations': richText(),
             'Created Date': date(),
             'Last Updated': date(),
         },
@@ -199,6 +204,18 @@ async function createDatabase(parentPageId: string, spec: DatabaseSpec) {
     })
 }
 
+async function ensureDatabaseProperties(databaseId: string, spec: DatabaseSpec) {
+    const database = await notion(`databases/${databaseId}`)
+    const existing = Object.keys(database.properties || {})
+    const missing = Object.fromEntries(Object.entries(spec.properties).filter(([name]) => !existing.includes(name)))
+    if (!Object.keys(missing).length) return
+    log('Adding missing database properties', { name: spec.name, properties: Object.keys(missing) })
+    await notion(`databases/${databaseId}`, {
+        method: 'PATCH',
+        body: JSON.stringify({ properties: missing }),
+    })
+}
+
 async function ensureDashboardHeading(parentPageId: string) {
     const children = await notion(`blocks/${parentPageId}/children`)
     const hasHeading = (children.results || []).some((block: any) => {
@@ -257,6 +274,7 @@ export async function setupNotionDashboard() {
         if (found) {
             log('Existing database found', { name: spec.name, id: found.id })
             ids[spec.envName] = found.id
+            await ensureDatabaseProperties(found.id, spec)
         } else {
             log('Creating database', { name: spec.name })
             const created = await createDatabase(parentPageId, spec)

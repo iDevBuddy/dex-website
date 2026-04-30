@@ -2,12 +2,15 @@ import { config } from './lib/config.mjs'
 import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log } from './lib/logger.mjs'
 import { syncBlogIdea } from './lib/notion-dashboard.mjs'
+import { enrichTopicPersona } from './lib/persona.mjs'
 
 const highValueTerms = ['agent', 'automation', 'crm', 'slack', 'workflow', 'lead', 'business', 'ecommerce', 'support', 'appointment']
 
 export function scoreTopic(topic) {
+    topic = enrichTopicPersona(topic)
     const text = `${topic.topic} ${topic.keyword}`.toLowerCase()
     const manualBoost = topic.source === 'Manual seed' || topic.source === 'Manual command' ? 24 : 0
+    const authorityBucketBoost = /\btrick|tool|github|kaggle|agent|security|finance|sales|support|operations|awareness|solution\b/i.test(text) ? 12 : 0
     const businessValue = highValueTerms.reduce((sum, term) => sum + (text.includes(term) ? 8 : 0), 30)
     const trendPotential = topic.source?.includes('RSS') ? 18 : 10
     const intentClarity = /\bhow|guide|examples|tools|automation|agent|workflow\b/i.test(text) ? 15 : 8
@@ -17,7 +20,7 @@ export function scoreTopic(topic) {
     const monetization = /\bbusiness|crm|lead|ecommerce|support|sales|clinic|law\b/i.test(text) ? 12 : 7
     const aiAnswerPotential = /\bwhat|how|guide|examples|checklist|workflow|tools\b/i.test(text) ? 8 : 4
     const internalLinking = /\bagent|automation|workflow|crm|slack\b/i.test(text) ? 10 : 5
-    const score = Math.min(100, businessValue + trendPotential + intentClarity + seoOpportunity + lowCompetitionAngle + topicalAuthority + monetization + aiAnswerPotential + internalLinking + manualBoost)
+    const score = Math.min(100, businessValue + trendPotential + intentClarity + seoOpportunity + lowCompetitionAngle + topicalAuthority + monetization + aiAnswerPotential + internalLinking + manualBoost + authorityBucketBoost)
     return {
         ...topic,
         score,

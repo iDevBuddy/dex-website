@@ -4,6 +4,8 @@ import { log, warn } from './lib/logger.mjs'
 import { syncBlogDraft } from './lib/notion-dashboard.mjs'
 import { notifySlack } from './lib/slack.mjs'
 import { createMainLlmProvider } from './lib/llm-providers.mjs'
+import { enrichTopicPersona } from './lib/persona.mjs'
+import { recommendMediaForArticle } from './lib/media-intelligence.mjs'
 
 function parseJsonBlock(text) {
     const match = text.match(/\{[\s\S]*\}/)
@@ -12,9 +14,10 @@ function parseJsonBlock(text) {
 }
 
 function normalizeArticle(article, topic, brief) {
+    topic = enrichTopicPersona(topic)
     const slug = article.frontmatter?.slug || topic.slug
     const today = new Date().toISOString().slice(0, 10)
-    return {
+    const normalized = {
         ...article,
         frontmatter: {
             title: article.frontmatter?.title || article.title || brief?.title,
@@ -28,6 +31,10 @@ function normalizeArticle(article, topic, brief) {
             targetKeyword: article.frontmatter?.targetKeyword || topic.keyword || topic.topic.toLowerCase(),
             tone: article.frontmatter?.tone || process.env.DEFAULT_BLOG_TONE || 'Business Owner',
             style: article.frontmatter?.style || process.env.DEFAULT_BLOG_STYLE || 'Practical Guide',
+            contentPersona: article.frontmatter?.contentPersona || brief?.contentPersona || topic.contentPersona,
+            businessFunction: article.frontmatter?.businessFunction || brief?.businessFunction || topic.businessFunction,
+            authorityAngle: article.frontmatter?.authorityAngle || brief?.authorityAngle || topic.authorityAngle,
+            contentType: article.frontmatter?.contentType || brief?.contentFormat || 'How-To Guide',
             image: article.frontmatter?.image || `/blog/images/${slug}.png`,
             imageAlt: article.frontmatter?.imageAlt || `AI automation workflow visual for ${topic.topic}`,
             audioPath: article.frontmatter?.audioPath || '',
@@ -40,12 +47,17 @@ function normalizeArticle(article, topic, brief) {
             sources: article.frontmatter?.sources || article.sources || brief?.sourcesToCite?.map((url) => ({ title: url, url })) || [],
             related: article.frontmatter?.related || article.related || ['/blog/ai-authority-blog-engine'],
             internalLinks: article.frontmatter?.internalLinks || article.internalLinkSuggestions || brief?.suggestedInternalLinks || [],
+            keyTakeaways: article.frontmatter?.keyTakeaways || article.keyTakeaways || [],
+            expertInsight: article.frontmatter?.expertInsight || article.expertInsight || '',
+            assetLinks: article.frontmatter?.assetLinks || {},
             schemaType: 'BlogPosting',
         },
         body: article.body || '',
         imagePrompt: article.imagePrompt || brief?.imagePrompt || `Professional realistic SaaS dashboard for ${topic.topic}, AI automation workflow, orange accents, no readable text.`,
         audioScript: article.audioScript || `${article.frontmatter?.title || brief?.title}. ${article.frontmatter?.description || brief?.description}`,
     }
+    normalized.frontmatter.mediaRecommendations = article.frontmatter?.mediaRecommendations || recommendMediaForArticle(normalized)
+    return normalized
 }
 
 export async function generateArticle(topicArg, briefArg, options = getPipelineOptions()) {
@@ -102,7 +114,7 @@ Return exactly this JSON shape:
   "imagePrompt": "",
   "audioScript": ""
 }
-Rules: no copied content, no fake data, no keyword stuffing, practical business tone, short paragraphs, useful examples, FAQ, sources. Include direct answer near top, H2/H3 headings, step-by-step workflow, real business examples, mistakes, CTA, and what to do next.
+Rules: no copied content, no fake data, no keyword stuffing, practical business tone, short paragraphs, useful examples, FAQ, sources. Include keyTakeaways, expertInsight, direct answer near top, H2/H3 headings, step-by-step workflow, real business examples, mistakes, CTA, and what to do next.
 Topic: ${JSON.stringify(topic)}
 Research brief: ${JSON.stringify(brief)}`
 

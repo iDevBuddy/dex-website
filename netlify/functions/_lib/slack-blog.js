@@ -37,10 +37,16 @@ export function helpText() {
         '`/blog report` - latest performance scaffold',
         '`/blog ideas` - topic discovery status',
         '`/blog generate` - discover topics and create one approval-only draft',
+        '`/blog sprint status` / `start` / `stop`',
         '`/blog new topic: [topic]` - add idea',
         '`/blog draft: [topic]` - request a draft',
         '`/blog approve latest` - publish latest approved draft',
+        '`/blog reject latest` / `rewrite latest`',
+        '`/blog change topic [topic]` / `add section [request]`',
+        '`/blog make expert latest` / `make simple latest` / `improve seo latest`',
+        '`/blog generate slides latest` / `generate infographic latest`',
         '`/blog schedule` - show the 4-per-week drafting schedule',
+        '`/blog adsense status` - AdSense readiness check',
         '`/blog improve [url]` - queue refresh',
         '`/blog generate image [url]` - regenerate image',
         '`/blog generate audio [url]` - generate/listen support',
@@ -174,12 +180,13 @@ export async function routeSlackCommand(payload) {
     }
 
     if (text === 'schedule') {
+        const sprint = process.env.FIRST_MONTH_AUTHORITY_SPRINT === 'true'
         return {
             response_type: 'ephemeral',
-            text: 'Blog auto-draft schedule: Monday, Tuesday, Thursday, Saturday at 10:00 AM Pakistan time.',
+            text: sprint ? 'Authority sprint schedule: daily at 10:00 AM Pakistan time.' : 'Blog auto-draft schedule: Monday, Tuesday, Thursday, Saturday at 10:00 AM Pakistan time.',
             blocks: slackBlocks({
                 title: 'Blog Schedule',
-                message: 'Auto-drafts run 4 times per week. Cron: `0 5 * * 1,2,4,6` which equals 10:00 AM Pakistan time.',
+                message: sprint ? 'Authority sprint runs daily. Cron: `0 5 * * *` equals 10:00 AM Pakistan time.' : 'Auto-drafts run 4 times per week after sprint. Normal cadence: Monday, Tuesday, Thursday, Saturday at 10:00 AM Pakistan time.',
                 fields: [
                     { label: 'Manual approval', value: process.env.MANUAL_APPROVAL === 'false' ? 'Off' : 'On' },
                     { label: 'Auto publish', value: process.env.USE_AUTO_PUBLISH === 'true' ? 'On' : 'Off' },
@@ -187,6 +194,17 @@ export async function routeSlackCommand(payload) {
                     { label: 'Minimum quality score', value: process.env.MIN_QUALITY_SCORE || '85' },
                 ],
             }),
+        }
+    }
+
+    if (text.startsWith('sprint ')) {
+        const action = extractAfter(text, 'sprint')
+        if (action === 'status') {
+            return { response_type: 'ephemeral', text: `Authority sprint is ${process.env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' ? 'enabled' : 'disabled'}. Daily content mode is ${process.env.DAILY_CONTENT_MODE === 'true' ? 'on' : 'off'}.` }
+        }
+        return {
+            response_type: 'ephemeral',
+            text: `Sprint ${action} request noted. To persist this, set FIRST_MONTH_AUTHORITY_SPRINT=${action === 'start' ? 'true' : 'false'} in Netlify/GitHub variables.`,
         }
     }
 
@@ -256,6 +274,45 @@ export async function routeSlackCommand(payload) {
                 fields: [{ label: 'GitHub', value: dispatch.ok ? dispatch.type : dispatch.reason || 'Not dispatched' }],
             }),
         }
+    }
+
+    if (text === 'reject latest') {
+        await createBlogDraft({ title: 'Latest draft', approvalStatus: 'Rejected', draftStatus: 'Rejected', notes: `Rejected from Slack by ${userName}` })
+        return { response_type: 'ephemeral', text: 'Latest draft marked rejected in Notion.' }
+    }
+
+    if (text === 'rewrite latest') {
+        const dispatch = await dispatchBlogWorkflow({ eventType: 'blog_rewrite_latest', inputs: { command: 'request_rewrite', forceDraft: 'true', requested_by: userName } })
+        return { response_type: 'ephemeral', text: `Rewrite latest routed. ${dispatch.ok ? 'GitHub dispatch sent.' : dispatch.reason || 'Not dispatched.'}` }
+    }
+
+    if (text.startsWith('change topic ')) {
+        const topic = extractAfter(text, 'change topic')
+        const dispatch = await dispatchBlogWorkflow({ workflow: process.env.BLOG_PIPELINE_WORKFLOW || 'blog-auto-draft.yml', inputs: { topic, forceDraft: 'true', dryRun: 'false', requested_by: userName } })
+        return { response_type: 'ephemeral', text: `New draft routed for changed topic: ${topic}. ${dispatch.ok ? 'GitHub dispatch sent.' : dispatch.reason || 'Not dispatched.'}` }
+    }
+
+    if (text.startsWith('add section ')) {
+        const request = extractAfter(text, 'add section')
+        await createBlogDraft({ title: 'Latest draft section request', draftStatus: 'Rewrite Needed', approvalStatus: 'Rewrite Needed', notes: `Add section: ${request}` })
+        return { response_type: 'ephemeral', text: `Section request saved for latest draft: ${request}` }
+    }
+
+    if (text === 'make expert latest' || text === 'make simple latest' || text === 'improve seo latest') {
+        const command = text === 'improve seo latest' ? 'improve_seo' : text === 'make expert latest' ? 'make_expert' : 'make_simple'
+        const dispatch = await dispatchBlogWorkflow({ eventType: command, inputs: { command, requested_by: userName } })
+        return { response_type: 'ephemeral', text: `${text} routed. ${dispatch.ok ? 'GitHub dispatch sent.' : dispatch.reason || 'Not dispatched.'}` }
+    }
+
+    if (text === 'generate slides latest' || text === 'generate infographic latest') {
+        const command = text.includes('slides') ? 'generate_slides' : 'generate_infographic'
+        const dispatch = await dispatchBlogWorkflow({ workflow: process.env.BLOG_PIPELINE_WORKFLOW || 'blog-auto-draft.yml', inputs: { command, requested_by: userName } })
+        return { response_type: 'ephemeral', text: `${text} routed. ${dispatch.ok ? 'GitHub dispatch sent.' : dispatch.reason || 'Not dispatched.'}` }
+    }
+
+    if (text === 'adsense status') {
+        const dispatch = await dispatchBlogWorkflow({ eventType: 'blog_adsense_status', inputs: { command: 'adsense_status', requested_by: userName } })
+        return { response_type: 'ephemeral', text: `AdSense readiness check routed. ${dispatch.ok ? 'GitHub dispatch sent.' : dispatch.reason || 'Not dispatched.'}` }
     }
 
     if (text.startsWith('improve ')) {

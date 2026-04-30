@@ -7,7 +7,8 @@ function allConfigured(env, names) {
 }
 
 function nextScheduledRun(env) {
-    const days = (env.BLOG_GENERATION_DAYS || 'MON,TUE,THU,SAT').split(',').map((day) => day.trim().toUpperCase())
+    const sprintActive = env.FIRST_MONTH_AUTHORITY_SPRINT === 'true'
+    const days = (sprintActive ? 'SUN,MON,TUE,WED,THU,FRI,SAT' : (env.BLOG_GENERATION_DAYS || 'MON,TUE,THU,SAT')).split(',').map((day) => day.trim().toUpperCase())
     const time = env.BLOG_GENERATION_TIME_UTC || '05:00'
     const [hour, minute] = time.split(':').map((value) => Number(value))
     const dayMap = { SUN: 0, MON: 1, TUE: 2, WED: 3, THU: 4, FRI: 5, SAT: 6 }
@@ -19,6 +20,13 @@ function nextScheduledRun(env) {
         if (targetDays.includes(candidate.getUTCDay()) && candidate > now) return candidate.toISOString()
     }
     return null
+}
+
+function sprintDay(env) {
+    if (env.FIRST_MONTH_AUTHORITY_SPRINT !== 'true') return 0
+    const start = env.AUTHORITY_SPRINT_START_DATE ? new Date(env.AUTHORITY_SPRINT_START_DATE) : new Date()
+    if (Number.isNaN(start.getTime())) return 1
+    return Math.min(Number(env.AUTHORITY_SPRINT_DAYS || 30), Math.max(1, Math.floor((Date.now() - start.getTime()) / 86400000) + 1))
 }
 
 export function getBlogStatus(env = process.env) {
@@ -67,6 +75,12 @@ export function getBlogStatus(env = process.env) {
             ? configured(env, 'OPENAI_API_KEY') && env.USE_GPT_IMAGE === 'true'
             : false
     const ttsProvider = env.TTS_PROVIDER || 'browser_fallback'
+    const realLlmRequired = env.REQUIRE_REAL_LLM === 'true'
+    const realImageRequired = env.REQUIRE_REAL_IMAGE_MODEL === 'true'
+    const realTtsRequired = env.REQUIRE_REAL_TTS === 'true'
+    const fallbackAllowedInProduction = env.ALLOW_FALLBACK_IN_PRODUCTION === 'true'
+    const ttsConfigured = ttsProvider === 'browser_fallback' ? !realTtsRequired : configured(env, 'TTS_API_URL') || configured(env, 'PIPER_TTS_URL') || configured(env, 'KOKORO_TTS_URL') || configured(env, 'MINIMAX_API_KEY') || configured(env, 'ELEVENLABS_API_KEY') || configured(env, 'OPENAI_API_KEY')
+    const productionReady = (!realLlmRequired || llmConfigured) && (!realImageRequired || imageConfigured) && (!realTtsRequired || ttsConfigured)
 
     const nextSteps = []
     if (!configured(env, 'NOTION_API_KEY') || !configured(env, 'NOTION_PARENT_PAGE_URL')) nextSteps.push('Add NOTION_API_KEY and NOTION_PARENT_PAGE_URL, then run npm run notion:setup.')
@@ -111,8 +125,8 @@ export function getBlogStatus(env = process.env) {
             },
             scheduledAutomation: {
                 enabled: true,
-                blogsPerWeek: Number(env.BLOGS_PER_WEEK || 4),
-                days: env.BLOG_GENERATION_DAYS || 'MON,TUE,THU,SAT',
+                blogsPerWeek: env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' ? 7 : Number(env.BLOGS_PER_WEEK || 4),
+                days: env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' ? 'DAILY' : (env.BLOG_GENERATION_DAYS || 'MON,TUE,THU,SAT'),
                 timeUtc: env.BLOG_GENERATION_TIME_UTC || '05:00',
                 timezone: env.BLOG_TIMEZONE || 'Asia/Karachi',
                 nextRunUtc: nextScheduledRun(env),
@@ -123,7 +137,7 @@ export function getBlogStatus(env = process.env) {
             },
             tts: {
                 provider: ttsProvider,
-                configured: ttsProvider === 'browser_fallback' || configured(env, 'TTS_API_URL'),
+                configured: ttsConfigured,
             },
             notebooklm: {
                 enabled: env.USE_NOTEBOOKLM === 'true',
@@ -133,6 +147,22 @@ export function getBlogStatus(env = process.env) {
         missingRequired,
         missingOptional,
         nextSteps,
+        authoritySprint: {
+            authoritySprintEnabled: env.FIRST_MONTH_AUTHORITY_SPRINT === 'true',
+            sprintDay: sprintDay(env),
+            sprintDays: Number(env.AUTHORITY_SPRINT_DAYS || 30),
+            dailyContentMode: env.DAILY_CONTENT_MODE === 'true',
+            dailyContentTarget: Number(env.DAILY_CONTENT_TARGET || 1),
+            minQualityScore: Number(env.MIN_QUALITY_SCORE || (env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' ? 88 : 85)),
+            minTopicScore: Number(env.MIN_TOPIC_SCORE || (env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' ? 78 : 75)),
+        },
+        providerStrictness: {
+            realLlmRequired,
+            realImageRequired,
+            realTtsRequired,
+            fallbackAllowedInProduction,
+            productionReady,
+        },
         phase4Pending: true,
     }
 }

@@ -86,6 +86,13 @@ export const blogPosts = Object.entries(postModules)
             faqs: Array.isArray(data.faqs) ? data.faqs : [],
             sources: Array.isArray(data.sources) ? data.sources : [],
             related: Array.isArray(data.related) ? data.related : [],
+            keyTakeaways: Array.isArray(data.keyTakeaways) ? data.keyTakeaways : [],
+            expertInsight: data.expertInsight || '',
+            assetLinks: data.assetLinks && typeof data.assetLinks === 'object' ? data.assetLinks : {},
+            mediaRecommendations: data.mediaRecommendations && typeof data.mediaRecommendations === 'object' ? data.mediaRecommendations : {},
+            contentPersona: data.contentPersona || 'Hybrid',
+            businessFunction: data.businessFunction || 'General',
+            authorityAngle: data.authorityAngle || 'practical_workflow',
         }
     })
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))

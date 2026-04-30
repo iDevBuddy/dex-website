@@ -18,13 +18,30 @@ This requires no server API. The article page reads the text in the user browser
 For generated audio files, configure:
 
 ```bash
-TTS_PROVIDER=api
+TTS_PROVIDER=browser_fallback | piper | kokoro | minimax | elevenlabs | openai
 TTS_API_URL=
 TTS_VOICE=
 TTS_SPEED=
+MINIMAX_API_KEY=
+ELEVENLABS_API_KEY=
+OPENAI_API_KEY=
+PIPER_TTS_URL=
+KOKORO_TTS_URL=
 ```
 
-Future providers can include Piper, Kokoro, Coqui, or another local TTS service.
+Free/local options:
+
+- `browser_fallback`: no API, reads in the browser.
+- `piper`: local Piper TTS service via `PIPER_TTS_URL`.
+- `kokoro`: local Kokoro service via `KOKORO_TTS_URL`.
+
+API options:
+
+- `minimax` with `MINIMAX_API_KEY`.
+- `elevenlabs` with `ELEVENLABS_API_KEY`.
+- `openai` with `OPENAI_API_KEY`.
+
+If `REQUIRE_REAL_TTS=false`, the browser fallback is allowed. If `REQUIRE_REAL_TTS=true`, missing provider credentials stop audio generation and notify the pipeline.
 
 ## Article behavior
 

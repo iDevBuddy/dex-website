@@ -4,8 +4,17 @@ import { dataDir, ensureBlogDirs, readJson, slugify } from './lib/content.mjs'
 import { getPipelineOptions, modeDetails, writePipelineJson } from './lib/cli.mjs'
 import { log, warn } from './lib/logger.mjs'
 import { syncBlogIdea } from './lib/notion-dashboard.mjs'
+import { enrichTopicPersona } from './lib/persona.mjs'
 
 const seeds = [
+    'GPT-OSS automation tricks for business workflows',
+    'Gemma AI agents for small business operations',
+    'best GitHub AI automation repos for business owners',
+    'Kaggle datasets for AI business automation projects',
+    'finance automation with AI agents',
+    'security automation workflows for small teams',
+    'AI customer support automation playbook',
+    'AI reporting automation for operations teams',
     'AI agents for small business',
     'Slack automation for service teams',
     'CRM automation with AI',
@@ -117,6 +126,7 @@ export async function discoverTopics(options = getPipelineOptions()) {
             status: 'discovered',
             createdAt: new Date().toISOString(),
         }))
+        .map(enrichTopicPersona)
         .filter((item) => item.topic.length > 8 && !seen.has(item.slug))
         .filter((item) => !/\btop\s+\d+|companies driving|earnings|ceo says|barron|vocal\.media|sponsored\b/i.test(item.topic))
 

@@ -104,6 +104,11 @@ export function blogDraftProperties(input = {}) {
         'Slack Thread': url(input.slackThread || input.responseUrl || ''),
         'Research Notes': richText(input.notes || input.researchNotes || ''),
         'Internal Links': richText(input.internalLinks || ''),
+        'Slides Status': select(input.slidesStatus || 'Not Started'),
+        'Infographic Status': select(input.infographicStatus || 'Not Started'),
+        'Asset Brief': richText(input.assetBrief || ''),
+        'Asset URLs': richText(input.assetUrls || ''),
+        'Media Recommendations': richText(input.mediaRecommendations ? JSON.stringify(input.mediaRecommendations) : ''),
         'Created Date': date(input.createdDate || new Date()),
         'Last Updated': date(input.lastUpdated || new Date()),
     }

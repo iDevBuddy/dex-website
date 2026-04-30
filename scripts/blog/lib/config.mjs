@@ -13,14 +13,27 @@ export const config = {
     publishingFrequency: process.env.PUBLISHING_FREQUENCY || 'weekly',
     manualApproval: process.env.MANUAL_APPROVAL !== 'false',
     autoPublish: process.env.USE_AUTO_PUBLISH === 'true',
-    minQualityScore: Number(process.env.MIN_QUALITY_SCORE || 85),
-    minTopicScore: Number(process.env.MIN_TOPIC_SCORE || 75),
+    firstMonthAuthoritySprint: process.env.FIRST_MONTH_AUTHORITY_SPRINT === 'true',
+    authoritySprintDays: Number(process.env.AUTHORITY_SPRINT_DAYS || 30),
+    dailyContentMode: process.env.DAILY_CONTENT_MODE === 'true',
+    dailyContentTarget: Number(process.env.DAILY_CONTENT_TARGET || 1),
+    minQualityScore: Number(process.env.MIN_QUALITY_SCORE || (process.env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' ? 88 : 85)),
+    minTopicScore: Number(process.env.MIN_TOPIC_SCORE || (process.env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' ? 78 : 75)),
     blogsPerWeek: Number(process.env.BLOGS_PER_WEEK || 4),
     blogGenerationDays: (process.env.BLOG_GENERATION_DAYS || 'MON,TUE,THU,SAT').split(',').map((day) => day.trim()).filter(Boolean),
     blogGenerationTimeUtc: process.env.BLOG_GENERATION_TIME_UTC || '05:00',
     blogTimezone: process.env.BLOG_TIMEZONE || 'Asia/Karachi',
     defaultBlogTone: process.env.DEFAULT_BLOG_TONE || 'Business Owner',
     defaultBlogStyle: process.env.DEFAULT_BLOG_STYLE || 'Practical Guide',
+    defaultContentPersona: process.env.DEFAULT_CONTENT_PERSONA || 'Hybrid',
+    defaultAuthorityAngle: process.env.DEFAULT_AUTHORITY_ANGLE || 'practical_workflow',
+    requireRealLlm: process.env.REQUIRE_REAL_LLM === 'true',
+    requireRealImageModel: process.env.REQUIRE_REAL_IMAGE_MODEL === 'true',
+    requireRealTts: process.env.REQUIRE_REAL_TTS === 'true',
+    allowFallbackInProduction: process.env.ALLOW_FALLBACK_IN_PRODUCTION === 'true',
+    useGamma: process.env.USE_GAMMA === 'true',
+    slidesProvider: process.env.SLIDES_PROVIDER || 'manual',
+    infographicProvider: process.env.INFOGRAPHIC_PROVIDER || 'image_model',
     localLlmUrl: process.env.LOCAL_LLM_URL || '',
     localLlmModel: process.env.LOCAL_LLM_MODEL || '',
     imageProvider: process.env.IMAGE_PROVIDER || 'local_comfyui',
@@ -29,6 +42,18 @@ export const config = {
     notionEnabled: process.env.USE_NOTION === 'true',
     searchConsoleEnabled: process.env.ENABLE_SEARCH_CONSOLE_MONITORING === 'true',
     ga4Enabled: process.env.ENABLE_GA4_MONITORING === 'true',
+}
+
+export function authoritySprintDay(startDate = process.env.AUTHORITY_SPRINT_START_DATE) {
+    if (!config.firstMonthAuthoritySprint) return 0
+    const start = startDate ? new Date(startDate) : new Date()
+    if (Number.isNaN(start.getTime())) return 1
+    const diff = Date.now() - start.getTime()
+    return Math.min(config.authoritySprintDays, Math.max(1, Math.floor(diff / 86400000) + 1))
+}
+
+export function authoritySprintActive() {
+    return config.firstMonthAuthoritySprint && authoritySprintDay() <= config.authoritySprintDays
 }
 
 export function validateConfig({ strict = false } = {}) {

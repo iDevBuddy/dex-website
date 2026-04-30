@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 const dayMap = { SUN: 0, MON: 1, TUE: 2, WED: 3, THU: 4, FRI: 5, SAT: 6 }
 
 export function getNextBlogRun(now = new Date(), env = process.env) {
-    const days = (env.BLOG_GENERATION_DAYS || 'MON,TUE,THU,SAT')
+    const days = (env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' ? 'SUN,MON,TUE,WED,THU,FRI,SAT' : (env.BLOG_GENERATION_DAYS || 'MON,TUE,THU,SAT'))
         .split(',')
         .map((day) => day.trim().toUpperCase())
         .filter(Boolean)
@@ -26,8 +26,9 @@ export function getNextBlogRun(now = new Date(), env = process.env) {
 export async function scheduleTest() {
     const nextRun = getNextBlogRun()
     const payload = {
-        blogsPerWeek: config.blogsPerWeek,
-        days: config.blogGenerationDays,
+        authoritySprintEnabled: config.firstMonthAuthoritySprint,
+        blogsPerWeek: config.firstMonthAuthoritySprint ? 7 : config.blogsPerWeek,
+        days: config.firstMonthAuthoritySprint ? ['DAILY'] : config.blogGenerationDays,
         timeUtc: config.blogGenerationTimeUtc,
         timezone: config.blogTimezone,
         localTime: '10:00 Pakistan time',

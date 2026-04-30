@@ -59,9 +59,13 @@ npm run blog:draft -- --topic "AI automation for small businesses"
 npm run blog:seo
 npm run blog:image
 npm run blog:audio
+npm run blog:media
+npm run blog:slides
+npm run blog:infographic
 npm run blog:quality
 npm run blog:publish
 npm run blog:schedule:test
+npm run blog:adsense
 ```
 
 ## Create the first manual blog post
@@ -97,10 +101,23 @@ Supported command intents include:
 - `/blog report`
 - `/blog ideas`
 - `/blog generate`
+- `/blog sprint status`
+- `/blog sprint start`
+- `/blog sprint stop`
 - `/blog new topic: [topic]`
 - `/blog draft: [topic]`
 - `/blog approve latest`
 - `/blog schedule`
+- `/blog reject latest`
+- `/blog rewrite latest`
+- `/blog change topic [topic]`
+- `/blog add section [request]`
+- `/blog make expert latest`
+- `/blog make simple latest`
+- `/blog improve seo latest`
+- `/blog generate slides latest`
+- `/blog generate infographic latest`
+- `/blog adsense status`
 - `/blog improve [url]`
 - `/blog generate image [url]`
 - `/blog generate audio [url]`
@@ -120,7 +137,7 @@ Interactive draft messages support:
 
 The Slack command center can dispatch GitHub workflows when `GITHUB_TOKEN` has the required repository/workflow permissions. Final content still publishes as Markdown in GitHub, never as Notion-hosted content.
 
-Automatic draft generation is scheduled in `.github/workflows/blog-auto-draft.yml` for Monday, Tuesday, Thursday, and Saturday at 10:00 AM Pakistan time. The cron is `0 5 * * 1,2,4,6` because Pakistan time is UTC+5. Manual approval remains on by default, so scheduled drafts go to Slack/Notion for review instead of publishing directly.
+Automatic draft generation is scheduled in `.github/workflows/blog-auto-draft.yml`. During the first-month authority sprint it runs daily at 10:00 AM Pakistan time with cron `0 5 * * *`. After the sprint, the workflow gates itself back to the normal Monday, Tuesday, Thursday, and Saturday cadence. Manual approval remains on by default, so scheduled drafts go to Slack/Notion for review instead of publishing directly.
 
 Check Phase 3 readiness:
 
@@ -191,6 +208,25 @@ OPENAI_MODEL=
 ```
 
 If no LLM is configured, draft generation fails safely and sends a clear Slack/Notion message instead of creating weak AI content.
+
+## Authority sprint mode
+
+First-month authority sprint mode uses stricter thresholds and daily draft generation:
+
+```bash
+FIRST_MONTH_AUTHORITY_SPRINT=true
+AUTHORITY_SPRINT_DAYS=30
+DAILY_CONTENT_MODE=true
+DAILY_CONTENT_TARGET=1
+MIN_QUALITY_SCORE=88
+MIN_TOPIC_SCORE=78
+```
+
+The content strategy prioritizes AI expert topics, business automation workflows, AI tools, GPT-OSS/Gemma, GitHub repos, Kaggle datasets, and function-specific automation for finance, security, sales, support, operations, ecommerce, HR, and analytics.
+
+## Media and assets
+
+The media intelligence agent recommends supporting assets for each draft: featured image, infographic, slides, checklist, workflow diagram, downloadable PDF, NotebookLM research summary, and social carousel. Slides and infographic generation are provider-based; if Gamma or an image provider is missing, the engine creates Notion/Slack tasks with detailed briefs instead of pretending the asset exists.
 
 ## Image model setup
 

@@ -2,11 +2,23 @@ name: Blog Auto Draft
 
 on:
   schedule:
-    - cron: '0 5 * * 1,2,4,6'
+    - cron: '0 5 * * *'
   workflow_dispatch:
     inputs:
+      mode:
+        description: 'Authority sprint or normal schedule mode'
+        required: false
+        default: sprint
+        type: choice
+        options:
+          - sprint
+          - normal
       topic:
         description: 'Optional topic to draft'
+        required: false
+        type: string
+      contentType:
+        description: 'Optional content type'
         required: false
         type: string
       forceDraft:
@@ -81,6 +93,20 @@ jobs:
       BLOG_TIMEZONE: ${{ vars.BLOG_TIMEZONE }}
       DEFAULT_BLOG_TONE: ${{ vars.DEFAULT_BLOG_TONE }}
       DEFAULT_BLOG_STYLE: ${{ vars.DEFAULT_BLOG_STYLE }}
+      FIRST_MONTH_AUTHORITY_SPRINT: ${{ vars.FIRST_MONTH_AUTHORITY_SPRINT }}
+      AUTHORITY_SPRINT_DAYS: ${{ vars.AUTHORITY_SPRINT_DAYS }}
+      DAILY_CONTENT_MODE: ${{ vars.DAILY_CONTENT_MODE }}
+      DAILY_CONTENT_TARGET: ${{ vars.DAILY_CONTENT_TARGET }}
+      DEFAULT_CONTENT_PERSONA: ${{ vars.DEFAULT_CONTENT_PERSONA }}
+      DEFAULT_AUTHORITY_ANGLE: ${{ vars.DEFAULT_AUTHORITY_ANGLE }}
+      REQUIRE_REAL_LLM: ${{ vars.REQUIRE_REAL_LLM }}
+      REQUIRE_REAL_IMAGE_MODEL: ${{ vars.REQUIRE_REAL_IMAGE_MODEL }}
+      REQUIRE_REAL_TTS: ${{ vars.REQUIRE_REAL_TTS }}
+      ALLOW_FALLBACK_IN_PRODUCTION: ${{ vars.ALLOW_FALLBACK_IN_PRODUCTION }}
+      USE_GAMMA: ${{ vars.USE_GAMMA }}
+      GAMMA_API_KEY: ${{ vars.GAMMA_API_KEY }}
+      SLIDES_PROVIDER: ${{ vars.SLIDES_PROVIDER }}
+      INFOGRAPHIC_PROVIDER: ${{ vars.INFOGRAPHIC_PROVIDER }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -97,7 +123,26 @@ jobs:
       - name: Validate schedule
         run: npm run blog:schedule:test
 
+      - name: Respect sprint or normal schedule
+        id: schedule_gate
+        if: github.event_name == 'schedule'
+        run: |
+          if [ "$FIRST_MONTH_AUTHORITY_SPRINT" = "true" ]; then
+            echo "Authority sprint is active; daily draft allowed."
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          DAY=$(date -u +%u)
+          if [ "$DAY" = "1" ] || [ "$DAY" = "2" ] || [ "$DAY" = "4" ] || [ "$DAY" = "6" ]; then
+            echo "Normal configured draft day."
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Not a normal draft day after sprint. Exiting cleanly."
+          echo "skip=true" >> "$GITHUB_OUTPUT"
+
       - name: Run blog automation command
+        if: steps.schedule_gate.outputs.skip != 'true'
         id: automation
         run: |
           COMMAND="${{ github.event.inputs.command }}"
@@ -107,6 +152,7 @@ jobs:
           if [ "${{ github.event.inputs.dryRun }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
           if [ "${{ github.event.inputs.forceDraft }}" = "true" ]; then ARGS="$ARGS --force-draft"; fi
           if [ -n "${{ github.event.inputs.topic }}" ]; then ARGS="$ARGS --topic \"${{ github.event.inputs.topic }}\""; fi
+          if [ -n "${{ github.event.inputs.contentType }}" ]; then echo "Content type: ${{ github.event.inputs.contentType }}"; fi
           if [ "$COMMAND" = "ideas" ]; then
             npm run blog:discover
             npm run blog:score
@@ -116,16 +162,23 @@ jobs:
             npm run blog:image
           elif [ "$COMMAND" = "generate_audio" ]; then
             npm run blog:audio
+          elif [ "$COMMAND" = "generate_slides" ]; then
+            npm run blog:slides
+          elif [ "$COMMAND" = "generate_infographic" ]; then
+            npm run blog:infographic
+          elif [ "$COMMAND" = "adsense_status" ]; then
+            npm run blog:adsense
           else
             echo "Running npm run blog:pipeline -- $ARGS"
             eval "npm run blog:pipeline -- $ARGS"
           fi
 
       - name: Build check
+        if: steps.schedule_gate.outputs.skip != 'true'
         run: npm run build
 
       - name: Commit draft packet for manual approval
-        if: env.USE_AUTO_PUBLISH != 'true' && steps.automation.outputs.command != 'approve_publish' && github.event.inputs.dryRun != 'true'
+        if: steps.schedule_gate.outputs.skip != 'true' && env.USE_AUTO_PUBLISH != 'true' && steps.automation.outputs.command != 'approve_publish' && github.event.inputs.dryRun != 'true'
         run: |
           git config user.name "AI Blog Engine"
           git config user.email "actions@github.com"
@@ -138,7 +191,7 @@ jobs:
           fi
 
       - name: Commit approved published post
-        if: env.USE_AUTO_PUBLISH == 'true'
+        if: steps.schedule_gate.outputs.skip != 'true' && env.USE_AUTO_PUBLISH == 'true'
         run: |
           git config user.name "AI Blog Engine"
           git config user.email "actions@github.com"
@@ -151,7 +204,7 @@ jobs:
           fi
 
       - name: Commit latest approved publish request
-        if: steps.automation.outputs.command == 'approve_publish'
+        if: steps.schedule_gate.outputs.skip != 'true' && steps.automation.outputs.command == 'approve_publish'
         run: |
           git config user.name "AI Blog Engine"
           git config user.email "actions@github.com"

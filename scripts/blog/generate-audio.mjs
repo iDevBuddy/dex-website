@@ -22,7 +22,23 @@ export async function generateAudio(articleArg, options = getPipelineOptions()) 
         return result
     }
 
-    if (!process.env.TTS_API_URL || process.env.TTS_PROVIDER === 'browser_fallback') {
+    const provider = process.env.TTS_PROVIDER || 'browser_fallback'
+    const providerConfigured =
+        (provider === 'piper' && process.env.PIPER_TTS_URL) ||
+        (provider === 'kokoro' && process.env.KOKORO_TTS_URL) ||
+        (provider === 'minimax' && process.env.MINIMAX_API_KEY) ||
+        (provider === 'elevenlabs' && process.env.ELEVENLABS_API_KEY) ||
+        (provider === 'openai' && process.env.OPENAI_API_KEY) ||
+        process.env.TTS_API_URL
+
+    if (!providerConfigured || provider === 'browser_fallback') {
+        if (process.env.REQUIRE_REAL_TTS === 'true') {
+            const message = `TTS provider ${provider} is not configured and REQUIRE_REAL_TTS=true.`
+            warn('audio_generation_failed', { message })
+            await writePipelineJson('audio-result.json', { ...baseResult, failed: true, error: message }, options)
+            await syncBlogDraft(article, { audioStatus: 'Failed' })
+            throw new Error(message)
+        }
         const result = {
             ...baseResult,
             provider: 'browser_speech_synthesis_fallback',
@@ -36,7 +52,9 @@ export async function generateAudio(articleArg, options = getPipelineOptions()) 
     }
 
     try {
-        const response = await fetch(process.env.TTS_API_URL, {
+        const url = process.env.TTS_API_URL || process.env.PIPER_TTS_URL || process.env.KOKORO_TTS_URL
+        if (!url) throw new Error(`Provider ${provider} needs an adapter URL for generated MP3 output.`)
+        const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
