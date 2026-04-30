@@ -1,0 +1,59 @@
+name: Blog Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Generate preview only"
+        default: "true"
+        required: true
+      force_publish:
+        description: "Publish even when manual approval is enabled"
+        default: "false"
+        required: true
+  schedule:
+    - cron: "0 9 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  blog-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Run blog pipeline
+        env:
+          SITE_URL: ${{ secrets.SITE_URL }}
+          LOCAL_LLM_URL: ${{ secrets.LOCAL_LLM_URL }}
+          LOCAL_LLM_MODEL: ${{ secrets.LOCAL_LLM_MODEL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          USE_SLACK: ${{ secrets.USE_SLACK }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          USE_NOTION: ${{ secrets.USE_NOTION }}
+          NOTION_BLOG_IDEAS_DB_ID: ${{ secrets.NOTION_BLOG_IDEAS_DB_ID }}
+          NOTION_BLOG_DRAFTS_DB_ID: ${{ secrets.NOTION_BLOG_DRAFTS_DB_ID }}
+          NOTION_PUBLISHED_POSTS_DB_ID: ${{ secrets.NOTION_PUBLISHED_POSTS_DB_ID }}
+          MANUAL_APPROVAL: "true"
+          MIN_QUALITY_SCORE: "85"
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ "${{ github.event.inputs.force_publish }}" = "true" ]; then ARGS="$ARGS --force"; fi
+          npm run blog:pipeline -- $ARGS
+      - name: Build after generated changes
+        run: npm run build
+      - name: Commit generated blog files
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run != 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(blog): publish approved AI blog update"
+          file_pattern: "content/blog public/blog data/blog public/sitemap.xml public/rss.xml public/robots.txt"

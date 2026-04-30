@@ -1,0 +1,59 @@
+import path from 'node:path'
+import { config } from './lib/config.mjs'
+import { dataDir, readJson, writeJson } from './lib/content.mjs'
+import { log } from './lib/logger.mjs'
+import { notifySlack } from './lib/slack.mjs'
+
+const checks = [
+    ['minimumWordCount', (article) => article.body.split(/\s+/).length >= 500, 12],
+    ['hasClearIntro', (article) => /^##\s+/m.test(article.body), 8],
+    ['hasExamples', (article) => /example|workflow|step/i.test(article.body), 10],
+    ['hasFaq', (article) => Array.isArray(article.frontmatter.faqs) && article.frontmatter.faqs.length >= 2, 10],
+    ['hasSources', (article) => Array.isArray(article.frontmatter.sources) && article.frontmatter.sources.length >= 1, 8],
+    ['hasImagePrompt', (article) => Boolean(article.imagePrompt), 8],
+    ['hasInternalLinks', (article) => /\/blog\/|\/#services|\/#contact/.test(JSON.stringify(article)), 8],
+    ['hasSchemaData', (article) => Boolean(article.frontmatter.title && article.frontmatter.description && article.frontmatter.publishedAt), 8],
+    ['noKeywordStuffing', (article) => !hasKeywordStuffing(article), 10],
+    ['hasBusinessValue', (article) => /business|customer|workflow|automation|operator|revenue|lead/i.test(article.body), 10],
+    ['hasConclusion', (article) => /what to do next|conclusion|next step/i.test(article.body), 8],
+]
+
+function hasKeywordStuffing(article) {
+    const keyword = String(article.frontmatter.targetKeyword || '').toLowerCase()
+    if (!keyword) return false
+    const words = article.body.toLowerCase().split(/\s+/).length
+    const occurrences = article.body.toLowerCase().split(keyword).length - 1
+    return occurrences / Math.max(words, 1) > 0.04
+}
+
+export function qualityScore(article) {
+    const results = checks.map(([name, test, points]) => ({ name, passed: test(article), points }))
+    const score = results.reduce((sum, result) => sum + (result.passed ? result.points : 0), 0)
+    return {
+        score,
+        passed: score >= config.minQualityScore,
+        minQualityScore: config.minQualityScore,
+        results,
+    }
+}
+
+export async function qualityCheck(articleArg) {
+    const article = articleArg || await readJson(path.join(dataDir, 'draft-article.json'), null)
+    if (!article) throw new Error('No draft article found.')
+    const report = qualityScore(article)
+    await writeJson(path.join(dataDir, 'quality-report.json'), report)
+    log('quality_score', report)
+    if (!report.passed) {
+        await notifySlack(`Blog quality check failed: ${article.frontmatter.title} scored ${report.score}/${report.minQualityScore}.`)
+    }
+    return report
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+    qualityCheck().then((report) => {
+        if (!report.passed) process.exit(2)
+    }).catch((error) => {
+        console.error(error)
+        process.exit(1)
+    })
+}

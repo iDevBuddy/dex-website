@@ -5,8 +5,25 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "prebuild": "node -e \"import('./scripts/blog/generate-static-assets.mjs').then(m=>m.generateStaticAssets())\"",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "blog:discover": "node -e \"import('./scripts/blog/discover-topics.mjs').then(m=>m.discoverTopics())\"",
+        "blog:score": "node -e \"import('./scripts/blog/score-topics.mjs').then(m=>m.scoreTopics())\"",
+        "blog:research": "node -e \"import('./scripts/blog/research-topic.mjs').then(m=>m.researchTopic())\"",
+        "blog:generate": "node -e \"import('./scripts/blog/generate-article.mjs').then(m=>m.generateArticle())\"",
+        "blog:seo": "node -e \"import('./scripts/blog/seo-optimize.mjs').then(m=>m.seoOptimize())\"",
+        "blog:quality": "node -e \"import('./scripts/blog/quality-check.mjs').then(m=>m.qualityCheck().then(r=>{if(!r.passed)process.exit(2)}))\"",
+        "blog:image": "node -e \"import('./scripts/blog/generate-image.mjs').then(m=>m.generateImage())\"",
+        "blog:audio": "node -e \"import('./scripts/blog/generate-audio.mjs').then(m=>m.generateAudio())\"",
+        "blog:publish": "node -e \"import('./scripts/blog/publish-post.mjs').then(m=>m.publishPost({force:process.argv.includes('--force'),dryRun:process.argv.includes('--dry-run')}))\" --",
+        "blog:pipeline": "node -e \"import('./scripts/blog/run-pipeline.mjs').then(m=>m.runPipeline())\" --",
+        "blog:performance": "node -e \"import('./scripts/blog/performance-report.mjs').then(m=>m.performanceReport())\"",
+        "blog:recommend": "node -e \"import('./scripts/blog/recommend-updates.mjs').then(m=>m.recommendUpdates())\"",
+        "blog:refresh": "node -e \"import('./scripts/blog/refresh-post.mjs').then(m=>m.refreshPost(process.argv.at(-1)))\" --",
+        "blog:links": "node -e \"import('./scripts/blog/internal-linker.mjs').then(m=>m.internalLinker())\"",
+        "blog:clusters": "node -e \"import('./scripts/blog/cluster-manager.mjs').then(m=>m.clusterManager())\"",
+        "blog:tone": "node -e \"import('./scripts/blog/tone-performance.mjs').then(m=>m.tonePerformance())\""
     },
     "dependencies": {
         "@humeai/voice-react": "^0.2.14",

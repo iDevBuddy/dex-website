@@ -3,45 +3,44 @@ export default function Footer() {
         <footer className="pt-14 pb-8 bg-dark-deeper border-t border-border">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                    {/* Brand */}
                     <div>
-                        <a href="#" className="font-mono text-lg font-bold text-white tracking-tight mb-4 block">
+                        <a href="/" className="font-mono text-lg font-bold text-white tracking-tight mb-4 block">
                             DEX <span className="text-accent">by Akif Saeed</span>
                         </a>
                         <p className="text-gray-500 text-[0.85rem] leading-relaxed max-w-[260px]">
-                            We build intelligent AI agents that automate operations, handle customer interactions, and drive results — 24/7.
+                            We build intelligent AI agents that automate operations, handle customer interactions, and drive results - 24/7.
                         </p>
                     </div>
 
-                    {/* Services */}
                     <div>
                         <h4 className="font-mono text-[0.78rem] text-gray-300 uppercase tracking-[2px] mb-5">Services</h4>
                         <div className="flex flex-col gap-2.5">
-                            <a href="#agents" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Voice Agents</a>
-                            <a href="#agents" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Chat Agents</a>
-                            <a href="#services" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Workflow Automation</a>
-                            <a href="#services" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">AI Consulting</a>
+                            <a href="/#agents" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Voice Agents</a>
+                            <a href="/#agents" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Chat Agents</a>
+                            <a href="/#services" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Workflow Automation</a>
+                            <a href="/#services" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">AI Consulting</a>
                         </div>
                     </div>
 
-                    {/* Industries */}
                     <div>
                         <h4 className="font-mono text-[0.78rem] text-gray-300 uppercase tracking-[2px] mb-5">Industries</h4>
                         <div className="flex flex-col gap-2.5">
-                            <a href="#industries" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Medical Clinics</a>
-                            <a href="#industries" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Law Firms</a>
-                            <a href="#industries" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Real Estate</a>
-                            <a href="#industries" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">E-commerce</a>
+                            <a href="/#industries" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Medical Clinics</a>
+                            <a href="/#industries" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Law Firms</a>
+                            <a href="/#industries" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Real Estate</a>
+                            <a href="/#industries" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">E-commerce</a>
                         </div>
                     </div>
 
-                    {/* Company */}
                     <div>
                         <h4 className="font-mono text-[0.78rem] text-gray-300 uppercase tracking-[2px] mb-5">Company</h4>
                         <div className="flex flex-col gap-2.5">
-                            <a href="#demo" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Live Demo</a>
-                            <a href="#process" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Our Process</a>
-                            <a href="#contact" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Contact Us</a>
+                            <a href="/blog" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Blog</a>
+                            <a href="/about" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">About</a>
+                            <a href="/contact" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Contact</a>
+                            <a href="/privacy" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Privacy Policy</a>
+                            <a href="/terms" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Terms</a>
+                            <a href="/disclaimer" className="text-[0.85rem] text-gray-500 hover:text-accent transition-colors duration-200">Disclaimer</a>
                         </div>
                     </div>
                 </div>

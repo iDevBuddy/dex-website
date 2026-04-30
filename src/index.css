@@ -76,6 +76,46 @@
             0 16px 48px rgba(0, 0, 0, 0.42),
             0 0 0 1px rgba(255, 255, 255, 0.03) inset;
     }
+
+    .blog-prose {
+        @apply text-gray-300;
+    }
+
+    .blog-prose h2 {
+        @apply text-3xl font-black text-white tracking-tight mt-12 mb-5 scroll-mt-28;
+    }
+
+    .blog-prose h3 {
+        @apply text-2xl font-bold text-white mt-9 mb-4 scroll-mt-28;
+    }
+
+    .blog-prose p {
+        @apply text-[1.04rem] leading-8 text-gray-300 mb-6;
+    }
+
+    .blog-prose ul {
+        @apply space-y-3 mb-7 pl-5;
+    }
+
+    .blog-prose li {
+        @apply text-[1.02rem] leading-8 text-gray-300 list-disc;
+    }
+
+    .blog-prose a {
+        @apply text-accent hover:text-white underline underline-offset-4;
+    }
+
+    .blog-prose strong {
+        @apply text-white font-semibold;
+    }
+
+    .blog-prose code {
+        @apply rounded bg-dark-card border border-border px-1.5 py-0.5 text-sm text-white;
+    }
+
+    .blog-prose blockquote {
+        @apply border-l-2 border-accent pl-5 text-lg leading-8 text-white bg-accent-dim p-5 rounded-r-lg mb-7;
+    }
 }
 
 button[aria-label="Start voice consultation"],

@@ -15,10 +15,11 @@ export default function Navbar() {
     const openChatbot = () => window.dispatchEvent(new CustomEvent('open-dex-chatbot'))
 
     const links = [
-        { label: 'Agents', href: '#agents' },
-        { label: 'Services', href: '#services' },
-        { label: 'Industries', href: '#industries' },
-        { label: 'Process', href: '#process' },
+        { label: 'Agents', href: '/#agents' },
+        { label: 'Services', href: '/#services' },
+        { label: 'Industries', href: '/#industries' },
+        { label: 'Process', href: '/#process' },
+        { label: 'Blog', href: '/blog' },
     ]
 
     return (
@@ -32,7 +33,7 @@ export default function Navbar() {
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-                <a href="#" className="font-mono text-lg font-bold text-white tracking-tight">
+                <a href="/" className="font-mono text-lg font-bold text-white tracking-tight">
                     DEX <span className="text-accent">by Akif Saeed</span>
                 </a>
 
@@ -54,7 +55,7 @@ export default function Navbar() {
                         Live Demo
                     </button>
                     <a
-                        href="#contact"
+                        href="/#contact"
                         className="ml-2 px-5 py-2.5 bg-accent text-white text-[0.82rem] font-semibold rounded-md hover:bg-accent-hover transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/20 focus:outline-none focus:ring-2 focus:ring-accent/50"
                     >
                         Get Started
@@ -99,7 +100,7 @@ export default function Navbar() {
                             Live Demo
                         </button>
                         <a
-                            href="#contact"
+                            href="/#contact"
                             onClick={() => setMobileOpen(false)}
                             className="mt-2 px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-md text-center hover:bg-accent-hover transition-colors"
                         >

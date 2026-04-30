@@ -1,0 +1,23 @@
+export default {
+    siteUrl: process.env.SITE_URL || 'https://dexbyakif.com',
+    brandName: process.env.BRAND_NAME || 'DEX by Akif Saeed',
+    authorName: process.env.AUTHOR_NAME || 'Akif Saeed',
+    authorBio: 'AI automation engineer building practical agents, workflow systems, and business automation infrastructure for service companies.',
+    defaultCategory: 'AI Automation',
+    categories: ['AI Automation', 'AI Agents', 'Workflow Automation', 'Business Automation', 'Slack Automation'],
+    brandColors: {
+        background: '#111111',
+        accent: '#e05132',
+        text: '#ffffff',
+    },
+    publishingFrequency: 'weekly',
+    manualApproval: process.env.MANUAL_APPROVAL !== 'false',
+    minQualityScore: Number(process.env.MIN_QUALITY_SCORE || 85),
+    localLlmUrl: process.env.LOCAL_LLM_URL || 'http://localhost:11434/v1/chat/completions',
+    imageProvider: process.env.IMAGE_PROVIDER || 'local_comfyui',
+    ttsProvider: process.env.TTS_PROVIDER || 'browser_fallback',
+    slackEnabled: process.env.USE_SLACK === 'true',
+    notionEnabled: process.env.USE_NOTION === 'true',
+    searchConsoleEnabled: process.env.ENABLE_SEARCH_CONSOLE_MONITORING === 'true',
+    ga4Enabled: process.env.ENABLE_GA4_MONITORING === 'true',
+}

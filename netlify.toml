@@ -18,6 +18,36 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
+  from = "/api/slack/commands"
+  to = "/.netlify/functions/slack-commands"
+  status = 200
+
+[[redirects]]
+  from = "/api/slack/interactions"
+  to = "/.netlify/functions/slack-interactions"
+  status = 200
+
+[[redirects]]
+  from = "/api/blog/report"
+  to = "/.netlify/functions/blog-report"
+  status = 200
+
+[[redirects]]
+  from = "/api/blog/approve"
+  to = "/.netlify/functions/blog-approve"
+  status = 200
+
+[[redirects]]
+  from = "/api/blog/improve"
+  to = "/.netlify/functions/blog-improve"
+  status = 200
+
+[[redirects]]
+  from = "/api/blog/run"
+  to = "/.netlify/functions/blog-run"
+  status = 200
+
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200

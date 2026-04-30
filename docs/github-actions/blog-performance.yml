@@ -1,0 +1,40 @@
+name: Blog Performance
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 8 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  performance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Generate performance report and recommendations
+        env:
+          GOOGLE_CLIENT_EMAIL: ${{ secrets.GOOGLE_CLIENT_EMAIL }}
+          GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
+          GOOGLE_SEARCH_CONSOLE_SITE_URL: ${{ secrets.GOOGLE_SEARCH_CONSOLE_SITE_URL }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          USE_NOTION: ${{ secrets.USE_NOTION }}
+          NOTION_PERFORMANCE_REPORTS_DB_ID: ${{ secrets.NOTION_PERFORMANCE_REPORTS_DB_ID }}
+          NOTION_REFRESH_QUEUE_DB_ID: ${{ secrets.NOTION_REFRESH_QUEUE_DB_ID }}
+        run: |
+          npm run blog:performance
+          npm run blog:recommend
+          npm run blog:tone
+          npm run blog:links
+          npm run blog:clusters
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(blog): update performance intelligence"
+          file_pattern: "data/blog"
