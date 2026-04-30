@@ -47,7 +47,6 @@ async function generateOpenAiImage({ article, output }) {
             model: process.env.OPENAI_IMAGE_MODEL || 'gpt-image-1',
             prompt,
             size: process.env.OPENAI_IMAGE_SIZE || '1536x1024',
-            response_format: 'b64_json',
         }),
     })
     if (!response.ok) throw new Error(`OpenAI image generation failed: ${response.status} ${await response.text()}`)

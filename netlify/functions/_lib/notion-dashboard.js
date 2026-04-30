@@ -28,6 +28,22 @@ export function status(name) {
     return select(name || 'Not Started')
 }
 
+function normalizedTone(value) {
+    const map = {
+        'Practical, Business-focused': 'Business Owner',
+        'Business owner practical guide': 'Business Owner',
+        'Business Owner': 'Business Owner',
+        'Expert guide': 'Expert Guide',
+        'Expert Guide': 'Expert Guide',
+        'Beginner Friendly': 'Beginner Friendly',
+        'Case Study': 'Case Study',
+        Listicle: 'Listicle',
+        Tutorial: 'Tutorial',
+        Checklist: 'Checklist',
+    }
+    return map[value] || 'Business Owner'
+}
+
 export function date(value = new Date()) {
     return { date: { start: new Date(value).toISOString() } }
 }
@@ -121,7 +137,7 @@ export function publishedPostProperties(input = {}) {
         Slug: richText(input.slug || ''),
         'Target Keyword': richText(input.targetKeyword || ''),
         Category: select(input.category || 'AI Automation'),
-        Tone: select(input.tone || 'Business Owner'),
+        Tone: select(normalizedTone(input.tone)),
         'Date Published': date(input.datePublished || new Date()),
         'Last Updated': date(input.lastUpdated || input.datePublished || new Date()),
         Clicks: number(input.clicks),

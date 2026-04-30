@@ -19,6 +19,19 @@ const sourceMap = {
     Pipeline: 'Manual',
 }
 
+const toneMap = {
+    'Practical, Business-focused': 'Business Owner',
+    'Business owner practical guide': 'Business Owner',
+    'Business Owner': 'Business Owner',
+    'Expert guide': 'Expert Guide',
+    'Expert Guide': 'Expert Guide',
+    'Beginner Friendly': 'Beginner Friendly',
+    'Case Study': 'Case Study',
+    Listicle: 'Listicle',
+    Tutorial: 'Tutorial',
+    Checklist: 'Checklist',
+}
+
 function statusText(value) {
     return selectProperty(value)
 }
@@ -81,7 +94,7 @@ export async function syncPublishedPost(article, quality = {}) {
         Slug: richTextProperty(frontmatter.slug),
         'Target Keyword': richTextProperty(frontmatter.targetKeyword || ''),
         Category: selectProperty(frontmatter.category || 'AI Automation'),
-        Tone: selectProperty(frontmatter.tone || 'Business Owner'),
+        Tone: selectProperty(toneMap[frontmatter.tone] || 'Business Owner'),
         'Date Published': dateProperty(frontmatter.publishedAt || new Date()),
         'Last Updated': dateProperty(frontmatter.updatedAt || frontmatter.publishedAt || new Date()),
         Clicks: numberProperty(0),

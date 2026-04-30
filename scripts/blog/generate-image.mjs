@@ -101,11 +101,22 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
         return fallbackResult
     } catch (error) {
         warn('image_generation_failed', { message: error.message })
-        const failed = { ...result, failed: true, error: error.message }
-        await writePipelineJson('image-result.json', failed, options)
-        await syncBlogDraft(article, { imageStatus: 'Failed', notes: `Image generation failed: ${error.message}` })
-        await notifySlack(`Image generation failed for ${article.frontmatter.title}: ${error.message}`)
-        return failed
+        if (process.env.REQUIRE_REAL_IMAGE_MODEL === 'true' && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true') {
+            const failed = { ...result, failed: true, error: error.message }
+            await writePipelineJson('image-result.json', failed, options)
+            await syncBlogDraft(article, { imageStatus: 'Failed', notes: `Image generation failed: ${error.message}` })
+            await notifySlack(`Image generation failed for ${article.frontmatter.title}: ${error.message}`)
+            return failed
+        }
+        const fallback = makePng()
+        await fs.writeFile(output, fallback)
+        article.frontmatter.image = `/blog/images/${slug}.png`
+        article.frontmatter.imageAlt ||= `AI automation workflow visual for ${article.frontmatter.title}`
+        const fallbackResult = { ...result, provider: 'fallback_png_after_provider_error', path: output, providerError: error.message }
+        await writePipelineJson('image-result.json', fallbackResult, options)
+        await syncBlogDraft(article, { imageStatus: 'Generated', notes: `Image provider failed, fallback generated: ${error.message}` })
+        await notifySlack(`Image provider failed for ${article.frontmatter.title}; fallback image generated.`)
+        return fallbackResult
     }
 }
 
