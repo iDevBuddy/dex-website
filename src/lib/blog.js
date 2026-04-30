@@ -50,11 +50,34 @@ function extractHeadings(body) {
     return body
         .split(/\r?\n/)
         .filter((line) => /^#{2,3}\s+/.test(line))
+        .filter((line) => !/^##\s+(references|sources|sources and references|research sources|sources used)\s*:?$/i.test(line.trim()))
         .map((line) => {
             const depth = line.startsWith('###') ? 3 : 2
             const text = line.replace(/^#{2,3}\s+/, '').trim()
             return { depth, text, id: slugify(text) }
         })
+}
+
+function sourceOrganizationFromUrl(url) {
+    try {
+        return new URL(url).hostname.replace(/^www\./, '')
+    } catch {
+        return ''
+    }
+}
+
+function normalizeSources(sources) {
+    if (!Array.isArray(sources)) return []
+    return sources
+        .filter((source) => source && source.title && source.url)
+        .map((source) => ({
+            title: source.title,
+            organization: source.organization || source.publication || sourceOrganizationFromUrl(source.url),
+            url: source.url,
+            type: source.type || 'Source',
+            supports: source.supports || source.reason || '',
+            authorityScore: source.authorityScore,
+        }))
 }
 
 export function slugify(value) {
@@ -84,7 +107,7 @@ export const blogPosts = Object.entries(postModules)
             imageAlt: data.imageAlt || data.title,
             category: data.category || 'AI Automation',
             faqs: Array.isArray(data.faqs) ? data.faqs : [],
-            sources: Array.isArray(data.sources) ? data.sources : [],
+            sources: normalizeSources(data.sources),
             related: Array.isArray(data.related) ? data.related : [],
             keyTakeaways: Array.isArray(data.keyTakeaways) ? data.keyTakeaways : [],
             expertInsight: data.expertInsight || '',
@@ -93,6 +116,11 @@ export const blogPosts = Object.entries(postModules)
             contentPersona: data.contentPersona || 'Hybrid',
             businessFunction: data.businessFunction || 'General',
             authorityAngle: data.authorityAngle || 'practical_workflow',
+            targetReader: data.targetReader || 'Business owner or operator',
+            searchIntent: data.searchIntent || 'Informational',
+            practicalUseCase: data.practicalUseCase || '',
+            implementationDifficulty: data.implementationDifficulty || '',
+            estimatedTimeToImplement: data.estimatedTimeToImplement || '',
         }
     })
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))

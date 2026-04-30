@@ -15,6 +15,7 @@ export default function MarkdownRenderer({ body }) {
     const lines = body.split(/\r?\n/)
     const nodes = []
     let list = []
+    let skipReferences = false
 
     const flushList = () => {
         if (list.length) {
@@ -29,6 +30,18 @@ export default function MarkdownRenderer({ body }) {
 
     lines.forEach((line) => {
         const trimmed = line.trim()
+        if (/^##\s+(references|sources|sources and references|research sources|sources used)\s*:?$/i.test(trimmed) || /^(\*\*)?references:(\*\*)?$/i.test(trimmed)) {
+            flushList()
+            skipReferences = true
+            return
+        }
+        if (skipReferences && /^##\s+/.test(trimmed)) {
+            skipReferences = false
+        }
+        if (skipReferences || /^---+$/.test(trimmed)) {
+            return
+        }
+
         if (!trimmed) {
             flushList()
             return

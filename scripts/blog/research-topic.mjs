@@ -2,6 +2,7 @@ import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } 
 import { log } from './lib/logger.mjs'
 import { createReviewLlmProvider } from './lib/llm-providers.mjs'
 import { enrichTopicPersona } from './lib/persona.mjs'
+import { selectSourcesForTopic } from './lib/source-selector.mjs'
 
 async function fetchResearchNotes(topic) {
     if (!process.env.NOTION_API_KEY || !process.env.NOTION_BLOG_DRAFTS_DB_ID) return ''
@@ -31,6 +32,7 @@ async function fetchResearchNotes(topic) {
 
 export function createResearchBrief(topic) {
     topic = enrichTopicPersona(topic)
+    const sourceSelection = selectSourcesForTopic(topic)
     return {
         topic: topic.topic,
         slug: topic.slug,
@@ -50,11 +52,12 @@ export function createResearchBrief(topic) {
             'What workflow should be automated first?',
             'What mistakes should be avoided?',
         ],
-        suggestedOutline: ['Direct answer', 'Business use case', 'Step-by-step workflow', 'Examples', 'Mistakes', 'FAQ', 'Next steps'],
-        sourcesToCite: [
-            'https://developers.google.com/search/docs/fundamentals/creating-helpful-content',
-            'https://developers.google.com/search/docs/fundamentals/seo-starter-guide',
-        ],
+        suggestedOutline: ['Short expert intro', 'Key takeaways', 'Direct answer', 'Practical explanation', 'Business use case', 'Step-by-step workflow', 'Tools', 'Expert insight', 'Mistakes', 'Implementation checklist', 'FAQ', 'CTA'],
+        sources: sourceSelection.sources,
+        sourcesToCite: sourceSelection.sources.map((source) => source.url),
+        sourceStatus: sourceSelection.sourceStatus,
+        sourceQualityScore: sourceSelection.sourceQualityScore,
+        sourceNotes: sourceSelection.sourceNotes,
         examplesToInclude: ['Slack intake workflow', 'CRM follow-up workflow', 'support triage workflow'],
         suggestedInternalLinks: ['/blog/ai-authority-blog-engine', '/#services', '/#contact'],
         suggestedCTA: 'Book an automation consult',
@@ -79,13 +82,19 @@ export async function researchTopic(topicArg, options = getPipelineOptions()) {
             const provider = createReviewLlmProvider()
             const health = await provider.healthCheck()
             if (health.configured) {
-                const refined = await provider.generateJson(`Improve this research brief as JSON only. Keep the same keys and add practical examples.\n${JSON.stringify(brief)}`)
+                const refined = await provider.generateJson(`Improve this research brief as JSON only. Keep the same keys and add practical examples. Do not invent sources and do not replace the provided sources array.\n${JSON.stringify(brief)}`)
                 brief = { ...brief, ...refined }
             }
         } catch (error) {
             log('research_model_fallback', { message: error.message })
         }
     }
+    const sourceSelection = selectSourcesForTopic(topic)
+    brief.sources = sourceSelection.sources
+    brief.sourcesToCite = sourceSelection.sources.map((source) => source.url)
+    brief.sourceStatus = sourceSelection.sourceStatus
+    brief.sourceQualityScore = sourceSelection.sourceQualityScore
+    brief.sourceNotes = sourceSelection.sourceNotes
     await writePipelineJson('research-brief.json', brief, options)
     log('research_brief_created', { topic: topic.topic, slug: topic.slug, ...modeDetails(options) })
     return brief

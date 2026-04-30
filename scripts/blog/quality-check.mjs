@@ -30,10 +30,26 @@ function hasKeywordStuffing(article) {
 export function qualityScore(article) {
     const results = checks.map(([name, test, points]) => ({ name, passed: test(article), points }))
     const score = results.reduce((sum, result) => sum + (result.passed ? result.points : 0), 0)
+    const sources = Array.isArray(article.frontmatter.sources) ? article.frontmatter.sources : []
+    const qualityScores = sources.map((source) => Number(source.authorityScore || 0)).filter(Boolean)
+    const sourceQualityScore = Number(article.frontmatter.sourceQualityScore || (qualityScores.length ? Math.round(qualityScores.reduce((sum, score) => sum + score, 0) / qualityScores.length) : 0))
+    const sourceGate = {
+        required: config.requireAuthenticSources,
+        passed: !config.requireAuthenticSources || (sources.length >= config.minAuthoritySourcesPerArticle && sourceQualityScore >= config.sourceMinAuthorityScore),
+        sourceCount: sources.length,
+        minSources: config.minAuthoritySourcesPerArticle,
+        sourceQualityScore,
+        minSourceQualityScore: config.sourceMinAuthorityScore,
+        status: sources.length >= config.minAuthoritySourcesPerArticle ? 'Ready' : 'Needs Research',
+        notes: sources.length >= config.minAuthoritySourcesPerArticle
+            ? `Source quality score ${sourceQualityScore}.`
+            : `Authentic sources needed before publishing. Need at least ${config.minAuthoritySourcesPerArticle} source(s).`,
+    }
     return {
         score,
-        passed: score >= config.minQualityScore,
+        passed: score >= config.minQualityScore && sourceGate.passed,
         minQualityScore: config.minQualityScore,
+        sourceGate,
         results,
     }
 }
@@ -61,6 +77,11 @@ export async function qualityCheck(articleArg, options = getPipelineOptions()) {
             qualityScore: report.score,
             draftStatus: report.passed ? 'Needs Review' : 'Rewrite Needed',
             approvalStatus: report.passed ? 'Waiting' : 'Rewrite Needed',
+            sourcesStatus: report.sourceGate.status,
+            sourceQualityScore: report.sourceGate.sourceQualityScore,
+            sourceNotes: report.sourceGate.notes,
+            publishReady: report.passed,
+            blockingIssues: report.sourceGate.passed ? '' : 'Authentic sources needed before publishing.',
         })
     }
     if (!report.passed && !options.dryRun) {
@@ -68,6 +89,9 @@ export async function qualityCheck(articleArg, options = getPipelineOptions()) {
     }
     if (report.passed && !options.dryRun) {
         await notifySlack(`Blog draft ready for approval: ${article.frontmatter.title}`, draftApprovalBlocks(article, report))
+    }
+    if (!report.sourceGate.passed && !options.dryRun) {
+        await notifySlack(`Authentic sources needed before publishing: ${article.frontmatter.title}. Add topic-specific sources in Notion or rerun source improvement.`)
     }
     return report
 }

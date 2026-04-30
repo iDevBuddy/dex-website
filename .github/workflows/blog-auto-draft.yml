@@ -95,8 +95,13 @@ jobs:
       DEFAULT_BLOG_STYLE: ${{ vars.DEFAULT_BLOG_STYLE }}
       FIRST_MONTH_AUTHORITY_SPRINT: ${{ vars.FIRST_MONTH_AUTHORITY_SPRINT }}
       AUTHORITY_SPRINT_DAYS: ${{ vars.AUTHORITY_SPRINT_DAYS }}
+      AUTHORITY_SPRINT_START_DATE: ${{ vars.AUTHORITY_SPRINT_START_DATE }}
       DAILY_CONTENT_MODE: ${{ vars.DAILY_CONTENT_MODE }}
       DAILY_CONTENT_TARGET: ${{ vars.DAILY_CONTENT_TARGET }}
+      REQUIRE_AUTHENTIC_SOURCES: ${{ vars.REQUIRE_AUTHENTIC_SOURCES }}
+      MIN_AUTHORITY_SOURCES_PER_ARTICLE: ${{ vars.MIN_AUTHORITY_SOURCES_PER_ARTICLE }}
+      MAX_SOURCES_PER_ARTICLE: ${{ vars.MAX_SOURCES_PER_ARTICLE }}
+      SOURCE_MIN_AUTHORITY_SCORE: ${{ vars.SOURCE_MIN_AUTHORITY_SCORE }}
       DEFAULT_CONTENT_PERSONA: ${{ vars.DEFAULT_CONTENT_PERSONA }}
       DEFAULT_AUTHORITY_ANGLE: ${{ vars.DEFAULT_AUTHORITY_ANGLE }}
       REQUIRE_REAL_LLM: ${{ vars.REQUIRE_REAL_LLM }}
@@ -168,6 +173,10 @@ jobs:
             npm run blog:infographic
           elif [ "$COMMAND" = "adsense_status" ]; then
             npm run blog:adsense
+          elif [ "$COMMAND" = "sources_latest" ]; then
+            npm run blog:sources
+          elif [ "$COMMAND" = "improve_sources" ]; then
+            npm run blog:sources -- --improve
           else
             echo "Running npm run blog:pipeline -- $ARGS"
             eval "npm run blog:pipeline -- $ARGS"

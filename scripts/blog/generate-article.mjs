@@ -6,6 +6,7 @@ import { notifySlack } from './lib/slack.mjs'
 import { createMainLlmProvider } from './lib/llm-providers.mjs'
 import { enrichTopicPersona } from './lib/persona.mjs'
 import { recommendMediaForArticle } from './lib/media-intelligence.mjs'
+import { selectSourcesForTopic } from './lib/source-selector.mjs'
 
 function parseJsonBlock(text) {
     const match = text.match(/\{[\s\S]*\}/)
@@ -17,6 +18,22 @@ function normalizeArticle(article, topic, brief) {
     topic = enrichTopicPersona(topic)
     const slug = article.frontmatter?.slug || topic.slug
     const today = new Date().toISOString().slice(0, 10)
+    const sourceSelection = brief?.sources?.length ? {
+        sources: brief.sources,
+        sourceStatus: brief.sourceStatus || 'Ready',
+        sourceQualityScore: brief.sourceQualityScore || 0,
+        sourceNotes: brief.sourceNotes || '',
+    } : selectSourcesForTopic(topic)
+    const sources = (sourceSelection.sources?.length ? sourceSelection.sources : (article.frontmatter?.sources || article.sources || []))
+        .filter((source) => source?.title && source?.url)
+        .map((source) => ({
+            title: source.title,
+            organization: source.organization || '',
+            url: source.url,
+            type: source.type || 'Source',
+            supports: source.supports || source.reason || '',
+            authorityScore: source.authorityScore,
+        }))
     const normalized = {
         ...article,
         frontmatter: {
@@ -34,6 +51,11 @@ function normalizeArticle(article, topic, brief) {
             contentPersona: article.frontmatter?.contentPersona || brief?.contentPersona || topic.contentPersona,
             businessFunction: article.frontmatter?.businessFunction || brief?.businessFunction || topic.businessFunction,
             authorityAngle: article.frontmatter?.authorityAngle || brief?.authorityAngle || topic.authorityAngle,
+            targetReader: article.frontmatter?.targetReader || brief?.targetReader || 'Business owner or operator',
+            searchIntent: article.frontmatter?.searchIntent || brief?.searchIntent || 'Informational',
+            practicalUseCase: article.frontmatter?.practicalUseCase || brief?.examplesToInclude?.[0] || 'Approval-based business workflow automation',
+            implementationDifficulty: article.frontmatter?.implementationDifficulty || 'Medium',
+            estimatedTimeToImplement: article.frontmatter?.estimatedTimeToImplement || '1-2 weeks for an MVP workflow',
             contentType: article.frontmatter?.contentType || brief?.contentFormat || 'How-To Guide',
             image: article.frontmatter?.image || `/blog/images/${slug}.png`,
             imageAlt: article.frontmatter?.imageAlt || `AI automation workflow visual for ${topic.topic}`,
@@ -44,7 +66,12 @@ function normalizeArticle(article, topic, brief) {
             readingTime: article.frontmatter?.readingTime || '',
             directAnswer: article.frontmatter?.directAnswer || `${topic.topic} works best when it is tied to a specific business workflow, quality checks, and human approval for risky actions.`,
             faqs: article.frontmatter?.faqs || article.faqs || [],
-            sources: article.frontmatter?.sources || article.sources || brief?.sourcesToCite?.map((url) => ({ title: url, url })) || [],
+            sources,
+            sourcesStatus: article.frontmatter?.sourcesStatus || sourceSelection.sourceStatus,
+            sourceQualityScore: article.frontmatter?.sourceQualityScore || sourceSelection.sourceQualityScore,
+            sourceNotes: article.frontmatter?.sourceNotes || sourceSelection.sourceNotes,
+            publishReady: article.frontmatter?.publishReady ?? sourceSelection.sourceStatus === 'Ready',
+            blockingIssues: article.frontmatter?.blockingIssues || (sourceSelection.sourceStatus === 'Ready' ? '' : 'Authentic sources needed before publishing.'),
             related: article.frontmatter?.related || article.related || ['/blog/ai-authority-blog-engine'],
             internalLinks: article.frontmatter?.internalLinks || article.internalLinkSuggestions || brief?.suggestedInternalLinks || [],
             keyTakeaways: article.frontmatter?.keyTakeaways || article.keyTakeaways || [],
@@ -97,6 +124,14 @@ Return exactly this JSON shape:
     "targetKeyword": "",
     "tone": "",
     "style": "",
+    "contentPersona": "",
+    "businessFunction": "",
+    "authorityAngle": "",
+    "targetReader": "",
+    "searchIntent": "",
+    "practicalUseCase": "",
+    "implementationDifficulty": "",
+    "estimatedTimeToImplement": "",
     "image": "",
     "imageAlt": "",
     "audioPath": "",
@@ -105,7 +140,7 @@ Return exactly this JSON shape:
     "updatedAt": "",
     "directAnswer": "",
     "faqs": [{"question":"","answer":""}],
-    "sources": [{"title":"","url":""}],
+    "sources": [{"title":"","organization":"","url":"","type":"","supports":""}],
     "related": [],
     "internalLinks": [],
     "schemaType": "BlogPosting"
@@ -114,7 +149,9 @@ Return exactly this JSON shape:
   "imagePrompt": "",
   "audioScript": ""
 }
-Rules: no copied content, no fake data, no keyword stuffing, practical business tone, short paragraphs, useful examples, FAQ, sources. Include keyTakeaways, expertInsight, direct answer near top, H2/H3 headings, step-by-step workflow, real business examples, mistakes, CTA, and what to do next.
+Writing structure: strong title, clear subtitle, short expert intro, key takeaways, direct answer block, practical explanation, real business use case, step-by-step workflow, tool recommendations if relevant, expert insight, common mistakes, implementation checklist, FAQ, CTA.
+Source rules: use only the provided research sources for claims. Do not invent sources. Do not add generic Google SEO docs unless this topic is actually about SEO or Google policy. Do not put a References, Sources, or Research Sources section in the body; sources belong only in frontmatter.sources.
+Quality rules: no copied content, no fake data, no keyword stuffing, no "AI is transforming the world" intro, no repeated filler phrases, practical business tone, short paragraphs, useful examples, FAQ, and clear next steps.
 Topic: ${JSON.stringify(topic)}
 Research brief: ${JSON.stringify(brief)}`
 

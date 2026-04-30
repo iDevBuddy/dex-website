@@ -1,5 +1,6 @@
 import { config } from './config.mjs'
 import { createMainLlmProvider } from './llm-providers.mjs'
+import { selectSourcesForTopic } from './source-selector.mjs'
 
 export async function generateWithModel(messages, { temperature = 0.4 } = {}) {
     const provider = createMainLlmProvider()
@@ -11,6 +12,7 @@ export async function generateWithModel(messages, { temperature = 0.4 } = {}) {
 export function buildFallbackArticle(topic, brief) {
     const slug = topic.slug
     const title = brief?.title || `How to Use ${topic.topic} in a Practical Business Automation Workflow`
+    const sourceSelection = brief?.sources?.length ? { sources: brief.sources } : selectSourcesForTopic(topic)
     const body = `## The direct business use case
 
 ${topic.topic} matters when it removes repetitive work, improves response speed, or gives leaders better visibility into operations.
@@ -67,12 +69,10 @@ Pick one workflow that happens every week, write down the manual steps, and crea
                     answer: 'Start with approval-based automation. Move toward full automation only when confidence, logs, and failure handling are strong.',
                 },
             ],
-            sources: [
-                {
-                    title: 'Google Search Essentials',
-                    url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content',
-                },
-            ],
+            sources: sourceSelection.sources,
+            sourcesStatus: sourceSelection.sources?.length >= config.minAuthoritySourcesPerArticle ? 'Ready' : 'Needs Research',
+            sourceQualityScore: brief?.sourceQualityScore || 0,
+            sourceNotes: brief?.sourceNotes || 'Fallback article used selected authoritative sources only.',
             related: [],
         },
         body,

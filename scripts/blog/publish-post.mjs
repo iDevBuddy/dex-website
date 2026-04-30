@@ -11,8 +11,13 @@ export async function publishPost(options = getPipelineOptions()) {
     await ensureBlogDirs()
     const article = options.article || await readPipelineJson('draft-article.json', null, options)
     const quality = options.quality || await readPipelineJson('quality-report.json', null, options)
+    const imageResult = await readPipelineJson('image-result.json', null, options)
     if (!article) throw new Error('No draft article found.')
     if (!quality?.passed && !options.force) throw new Error(`Quality check failed. Score: ${quality?.score || 0}/${config.minQualityScore}`)
+    if (config.requireAuthenticSources && !quality?.sourceGate?.passed) throw new Error('Publish blocked: authentic topic-specific sources are required before publishing.')
+    if (config.requireRealImageModel && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true' && (!imageResult || imageResult.failed || /fallback/i.test(imageResult.provider || ''))) {
+        throw new Error('Publish blocked: real image provider is required. Add COMFYUI_URL and COMFYUI_WORKFLOW_PATH.')
+    }
 
     const output = path.join(contentDir, `${article.frontmatter.slug}.md`)
     const approvalPacket = {

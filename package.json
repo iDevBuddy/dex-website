@@ -31,6 +31,8 @@
         "blog:tone": "node -e \"import('./scripts/blog/tone-performance.mjs').then(m=>m.tonePerformance())\"",
         "blog:schedule:test": "node scripts/blog/schedule-test.mjs",
         "blog:adsense": "node scripts/blog/adsense-check.mjs",
+        "blog:system-report": "node scripts/blog/system-report.mjs",
+        "blog:sources": "node scripts/blog/sources-latest.mjs",
         "phase3:check": "node scripts/blog/phase3-check.mjs"
     },
     "dependencies": {

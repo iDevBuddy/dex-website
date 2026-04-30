@@ -1,6 +1,7 @@
 import { createHmac, timingSafeEqual } from 'node:crypto'
 import { createBlogDraft, createBlogIdea, createPerformanceReport, createRefreshTask } from './notion-dashboard.js'
 import { dispatchBlogWorkflow } from './github-dispatch.js'
+import { buildSystemReport } from './system-report.js'
 
 export function json(statusCode, body) {
     return {
@@ -35,7 +36,9 @@ export function helpText() {
     return [
         '*DEX Blog commands*',
         '`/blog report` - latest performance scaffold',
+        '`/blog system report` - full system and provider report',
         '`/blog ideas` - topic discovery status',
+        '`/blog sources latest` / `improve sources latest`',
         '`/blog generate` - discover topics and create one approval-only draft',
         '`/blog sprint status` / `start` / `stop`',
         '`/blog new topic: [topic]` - add idea',
@@ -57,6 +60,20 @@ export function helpText() {
         '`/blog pause autopublish` / `/blog resume autopublish`',
         '`/blog status` - system status',
     ].join('\n')
+}
+
+function nextScheduledRun() {
+    const report = buildSystemReport(process.env)
+    return report.blogEngine.currentSchedule.nextRunUtc || 'not calculated'
+}
+
+function sprintText() {
+    const days = Number(process.env.AUTHORITY_SPRINT_DAYS || 30)
+    const start = process.env.AUTHORITY_SPRINT_START_DATE ? new Date(process.env.AUTHORITY_SPRINT_START_DATE) : new Date()
+    const day = process.env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' && !Number.isNaN(start.getTime())
+        ? Math.min(days, Math.max(1, Math.floor((Date.now() - start.getTime()) / 86400000) + 1))
+        : 0
+    return { day, days, remaining: Math.max(0, days - day), enabled: process.env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' }
 }
 
 export function slackBlocks({ title, message, fields = [], actions = [] }) {
@@ -146,6 +163,26 @@ export async function routeSlackCommand(payload) {
         }
     }
 
+    if (text === 'system report') {
+        const report = buildSystemReport(process.env)
+        return {
+            response_type: 'ephemeral',
+            text: 'System report generated.',
+            blocks: slackBlocks({
+                title: 'AI Blog Engine System Report',
+                message: `Full JSON report: ${process.env.SITE_URL || 'https://www.dexakif.com'}/api/blog/system-report`,
+                fields: [
+                    { label: 'Production ready', value: report.qualityGates.realImageRequired ? String(report.image.productionReady) : 'true' },
+                    { label: 'LLM', value: report.llm.primaryProvider },
+                    { label: 'Image provider', value: `${report.image.provider} (${report.image.productionReady ? 'ready' : 'missing setup'})` },
+                    { label: 'Manual approval', value: report.blogEngine.manualApproval ? 'On' : 'Off' },
+                    { label: 'Next run UTC', value: report.blogEngine.currentSchedule.nextRunUtc || 'not calculated' },
+                    { label: 'Phase 4', value: 'Pending' },
+                ],
+            }),
+        }
+    }
+
     if (text === 'ideas') {
         const dispatch = await dispatchBlogWorkflow({
             eventType: 'blog_ideas',
@@ -192,6 +229,8 @@ export async function routeSlackCommand(payload) {
                     { label: 'Auto publish', value: process.env.USE_AUTO_PUBLISH === 'true' ? 'On' : 'Off' },
                     { label: 'Minimum topic score', value: process.env.MIN_TOPIC_SCORE || '75' },
                     { label: 'Minimum quality score', value: process.env.MIN_QUALITY_SCORE || '85' },
+                    { label: 'Next run UTC', value: nextScheduledRun() },
+                    { label: 'Next run PKT', value: '10:00 AM Pakistan time' },
                 ],
             }),
         }
@@ -200,7 +239,8 @@ export async function routeSlackCommand(payload) {
     if (text.startsWith('sprint ')) {
         const action = extractAfter(text, 'sprint')
         if (action === 'status') {
-            return { response_type: 'ephemeral', text: `Authority sprint is ${process.env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' ? 'enabled' : 'disabled'}. Daily content mode is ${process.env.DAILY_CONTENT_MODE === 'true' ? 'on' : 'off'}.` }
+            const sprint = sprintText()
+            return { response_type: 'ephemeral', text: `Authority sprint is ${sprint.enabled ? 'enabled' : 'disabled'}. Day ${sprint.day}/${sprint.days}; ${sprint.remaining} day(s) remaining. Daily content mode is ${process.env.DAILY_CONTENT_MODE === 'true' ? 'on' : 'off'}. Next run: ${nextScheduledRun()} UTC.` }
         }
         return {
             response_type: 'ephemeral',
@@ -260,6 +300,15 @@ export async function routeSlackCommand(payload) {
         }
     }
 
+    if (text === 'draft tomorrow') {
+        const dispatch = await dispatchBlogWorkflow({
+            eventType: 'blog_draft_tomorrow',
+            workflow: process.env.BLOG_PIPELINE_WORKFLOW || 'blog-auto-draft.yml',
+            inputs: { mode: 'sprint', dryRun: 'false', forceDraft: 'false', requested_by: userName },
+        })
+        return { response_type: 'ephemeral', text: `Tomorrow sprint draft queued. ${dispatch.ok ? 'GitHub dispatch sent.' : dispatch.reason || 'Not dispatched.'}` }
+    }
+
     if (text === 'publish latest' || text === 'approve latest') {
         const dispatch = await dispatchBlogWorkflow({
             eventType: 'blog_publish_latest',
@@ -302,6 +351,15 @@ export async function routeSlackCommand(payload) {
         const command = text === 'improve seo latest' ? 'improve_seo' : text === 'make expert latest' ? 'make_expert' : 'make_simple'
         const dispatch = await dispatchBlogWorkflow({ eventType: command, inputs: { command, requested_by: userName } })
         return { response_type: 'ephemeral', text: `${text} routed. ${dispatch.ok ? 'GitHub dispatch sent.' : dispatch.reason || 'Not dispatched.'}` }
+    }
+
+    if (text === 'sources latest' || text === 'improve sources latest') {
+        const command = text === 'sources latest' ? 'sources_latest' : 'improve_sources'
+        const dispatch = await dispatchBlogWorkflow({ workflow: process.env.BLOG_PIPELINE_WORKFLOW || 'blog-auto-draft.yml', inputs: { command, requested_by: userName } })
+        const message = text === 'sources latest'
+            ? 'Latest source report routed.'
+            : 'Authentic source selector rerun routed for the latest draft.'
+        return { response_type: 'ephemeral', text: `${message} ${dispatch.ok ? 'GitHub dispatch sent.' : dispatch.reason || 'Not dispatched.'}` }
     }
 
     if (text === 'generate slides latest' || text === 'generate infographic latest') {

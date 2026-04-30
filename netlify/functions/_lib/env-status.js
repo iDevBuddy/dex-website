@@ -29,6 +29,29 @@ function sprintDay(env) {
     return Math.min(Number(env.AUTHORITY_SPRINT_DAYS || 30), Math.max(1, Math.floor((Date.now() - start.getTime()) / 86400000) + 1))
 }
 
+function imageProviderStatus(env) {
+    const provider = env.IMAGE_PROVIDER || 'local_comfyui'
+    const requiresRealImage = env.REQUIRE_REAL_IMAGE_MODEL === 'true'
+    const missingValues = []
+    if (provider === 'local_comfyui') {
+        if (!configured(env, 'COMFYUI_URL')) missingValues.push('COMFYUI_URL')
+        if (!configured(env, 'COMFYUI_WORKFLOW_PATH')) missingValues.push('COMFYUI_WORKFLOW_PATH')
+    } else if (provider === 'gpt_image') {
+        if (env.USE_GPT_IMAGE !== 'true') missingValues.push('USE_GPT_IMAGE=true')
+        if (!configured(env, 'OPENAI_API_KEY')) missingValues.push('OPENAI_API_KEY')
+    } else {
+        missingValues.push(`Unsupported IMAGE_PROVIDER=${provider}`)
+    }
+    const isConfigured = missingValues.length === 0
+    return {
+        configured: isConfigured,
+        provider,
+        requiresRealImage,
+        missingValues,
+        productionReady: !requiresRealImage || isConfigured,
+    }
+}
+
 export function getBlogStatus(env = process.env) {
     const missingRequired = [
         'SITE_URL',
@@ -55,6 +78,7 @@ export function getBlogStatus(env = process.env) {
         'OPENAI_MODEL',
         'COMFYUI_URL',
         'COMFYUI_WORKFLOW_PATH',
+        'COMFYUI_AUTH_HEADER',
         'TTS_API_URL',
         'TTS_VOICE',
         'TTS_SPEED',
@@ -68,12 +92,9 @@ export function getBlogStatus(env = process.env) {
     const reviewLlmConfigured = configured(env, 'REVIEW_LLM_URL') && configured(env, 'REVIEW_LLM_MODEL')
     const openAiFallbackConfigured = configured(env, 'OPENAI_API_KEY')
     const llmConfigured = mainLlmConfigured || openAiFallbackConfigured
-    const imageProvider = env.IMAGE_PROVIDER || 'local_comfyui'
-    const imageConfigured = imageProvider === 'local_comfyui'
-        ? configured(env, 'COMFYUI_URL') && configured(env, 'COMFYUI_WORKFLOW_PATH')
-        : imageProvider === 'gpt_image'
-            ? configured(env, 'OPENAI_API_KEY') && env.USE_GPT_IMAGE === 'true'
-            : false
+    const imageStatus = imageProviderStatus(env)
+    const imageProvider = imageStatus.provider
+    const imageConfigured = imageStatus.configured
     const ttsProvider = env.TTS_PROVIDER || 'browser_fallback'
     const realLlmRequired = env.REQUIRE_REAL_LLM === 'true'
     const realImageRequired = env.REQUIRE_REAL_IMAGE_MODEL === 'true'
@@ -134,6 +155,9 @@ export function getBlogStatus(env = process.env) {
             image: {
                 provider: imageProvider,
                 configured: imageConfigured,
+                requiresRealImage: imageStatus.requiresRealImage,
+                missingValues: imageStatus.missingValues,
+                productionReady: imageStatus.productionReady,
             },
             tts: {
                 provider: ttsProvider,
@@ -155,7 +179,15 @@ export function getBlogStatus(env = process.env) {
             dailyContentTarget: Number(env.DAILY_CONTENT_TARGET || 1),
             minQualityScore: Number(env.MIN_QUALITY_SCORE || (env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' ? 88 : 85)),
             minTopicScore: Number(env.MIN_TOPIC_SCORE || (env.FIRST_MONTH_AUTHORITY_SPRINT === 'true' ? 78 : 75)),
+            startDate: env.AUTHORITY_SPRINT_START_DATE || null,
         },
+        sourceQuality: {
+            authenticSourcesRequired: env.REQUIRE_AUTHENTIC_SOURCES === 'true',
+            minSourcesPerArticle: Number(env.MIN_AUTHORITY_SOURCES_PER_ARTICLE || 2),
+            maxSourcesPerArticle: Number(env.MAX_SOURCES_PER_ARTICLE || 6),
+            minAuthorityScore: Number(env.SOURCE_MIN_AUTHORITY_SCORE || 75),
+        },
+        imageProvider: imageStatus,
         providerStrictness: {
             realLlmRequired,
             realImageRequired,

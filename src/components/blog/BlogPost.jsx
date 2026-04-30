@@ -3,6 +3,7 @@ import { CalendarDays, Clock, Download, FileText, Presentation, RefreshCcw } fro
 import { buildBlogPostingSchema, buildFaqSchema, formatDate, getPostBySlug, getRelatedPosts } from '../../lib/blog'
 import { setSeo } from '../../lib/seo'
 import ArticleAudioPlayer from './ArticleAudioPlayer'
+import ActiveTableOfContents from './ActiveTableOfContents'
 import MarkdownRenderer from './MarkdownRenderer'
 
 export default function BlogPost({ slug }) {
@@ -73,24 +74,11 @@ export default function BlogPost({ slug }) {
                 </div>
 
                 <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[240px_minmax(0,760px)] gap-12">
-                    <aside className="hidden lg:block">
-                        <div className="sticky top-28 border-l border-border pl-5">
-                            <p className="font-mono text-xs text-gray-500 uppercase tracking-[0.2em] mb-4">Contents</p>
-                            <nav className="space-y-3">
-                                {post.headings.map((heading) => (
-                                    <a
-                                        key={heading.id}
-                                        href={`#${heading.id}`}
-                                        className={`block text-sm leading-5 text-gray-500 hover:text-accent transition-colors ${heading.depth === 3 ? 'pl-3' : ''}`}
-                                    >
-                                        {heading.text}
-                                    </a>
-                                ))}
-                            </nav>
-                        </div>
-                    </aside>
+                    <ActiveTableOfContents headings={post.headings} variant="desktop" />
 
                     <div>
+                        <ActiveTableOfContents headings={post.headings} variant="mobile" />
+
                         {post.directAnswer && (
                             <section className="mb-10 rounded-lg border border-accent/25 bg-accent-dim p-6">
                                 <h2 className="text-lg font-bold text-white mb-2">Direct Answer</h2>
@@ -142,17 +130,25 @@ export default function BlogPost({ slug }) {
                         )}
 
                         {post.sources.length > 0 && (
-                            <section className="mt-14 border-t border-border pt-10">
-                                <h2 className="text-3xl font-black text-white mb-6">Sources and References</h2>
-                                <ul className="space-y-3">
+                            <section className="mt-14 border-t border-border pt-10" aria-labelledby="research-sources">
+                                <h2 id="research-sources" className="text-3xl font-black text-white mb-3">Research Sources</h2>
+                                <p className="text-sm text-gray-500 mb-6">Topic-specific sources used to support the practical guidance in this article.</p>
+                                <div className="grid gap-4">
                                     {post.sources.map((source) => (
-                                        <li key={source.url}>
-                                            <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white transition-colors">
-                                                {source.title}
-                                            </a>
-                                        </li>
+                                        <article key={source.url} className="rounded-lg border border-border bg-dark-card/70 p-5">
+                                            <div className="flex flex-wrap items-start justify-between gap-3">
+                                                <div>
+                                                    <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-white font-semibold hover:text-accent transition-colors">
+                                                        {source.title}
+                                                    </a>
+                                                    <p className="text-xs uppercase tracking-[0.18em] text-gray-500 mt-1">{source.organization || source.type || 'External source'}</p>
+                                                </div>
+                                                {source.type && <span className="rounded-full border border-border px-3 py-1 text-xs text-gray-400">{source.type}</span>}
+                                            </div>
+                                            {source.supports && <p className="text-gray-400 leading-7 mt-4">{source.supports}</p>}
+                                        </article>
                                     ))}
-                                </ul>
+                                </div>
                             </section>
                         )}
 

@@ -85,9 +85,9 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
             return providerResult
         }
         if (process.env.REQUIRE_REAL_IMAGE_MODEL === 'true' && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true') {
-            const message = 'Real image model is required, but COMFYUI_URL/COMFYUI_WORKFLOW_PATH or GPT Image is not configured.'
-            await syncBlogDraft(article, { imageStatus: 'Failed', notes: message })
-            await notifySlack(`Image generation paused for ${article.frontmatter.title}: ${message}`)
+            const message = 'Real image provider is required. Add COMFYUI_URL and COMFYUI_WORKFLOW_PATH.'
+            await syncBlogDraft(article, { imageStatus: 'Failed', imageProviderStatus: 'Missing Provider', publishReady: false, blockingIssues: message, notes: message })
+            await notifySlack(message)
             throw new Error(message)
         }
         const fallback = makePng()
@@ -104,7 +104,7 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
         if (process.env.REQUIRE_REAL_IMAGE_MODEL === 'true' && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true') {
             const failed = { ...result, failed: true, error: error.message }
             await writePipelineJson('image-result.json', failed, options)
-            await syncBlogDraft(article, { imageStatus: 'Failed', notes: `Image generation failed: ${error.message}` })
+            await syncBlogDraft(article, { imageStatus: 'Failed', imageProviderStatus: 'Missing Provider', publishReady: false, blockingIssues: `Image generation failed: ${error.message}`, notes: `Image generation failed: ${error.message}` })
             await notifySlack(`Image generation failed for ${article.frontmatter.title}: ${error.message}`)
             return failed
         }

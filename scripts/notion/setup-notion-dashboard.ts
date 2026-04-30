@@ -11,6 +11,7 @@ type NotionProperty =
     | { number: { format?: string } }
     | { url: object }
     | { date: object }
+    | { checkbox: object }
     | { select: { options: SelectOption[] } }
 
 type DatabaseSpec = {
@@ -72,6 +73,7 @@ const title = (): NotionProperty => ({ title: {} })
 const number = (): NotionProperty => ({ number: { format: 'number' } })
 const url = (): NotionProperty => ({ url: {} })
 const date = (): NotionProperty => ({ date: {} })
+const checkbox = (): NotionProperty => ({ checkbox: {} })
 
 const databases: DatabaseSpec[] = [
     {
@@ -116,6 +118,15 @@ const databases: DatabaseSpec[] = [
             'Asset Brief': richText(),
             'Asset URLs': richText(),
             'Media Recommendations': richText(),
+            'Sources Status': select(['Ready', 'Needs Research', 'Missing', 'Approved']),
+            'Source Quality Score': number(),
+            'Source Notes': richText(),
+            'Content Persona': select(['AI Expert', 'Business Automation Expert', 'Hybrid']),
+            'Business Function': select(['Finance', 'Security', 'Marketing', 'Sales', 'Operations', 'Customer Support', 'Ecommerce', 'HR', 'Analytics', 'General']),
+            'Authority Angle': select(['expert_tricks', 'practical_workflow', 'tool_tutorial', 'case_study', 'trend_analysis', 'awareness', 'solution_guide']),
+            'Image Provider Status': select(['Configured', 'Missing Provider', 'Fallback Used', 'Generated', 'Failed']),
+            'Publish Ready': checkbox(),
+            'Blocking Issues': richText(),
             'Created Date': date(),
             'Last Updated': date(),
         },

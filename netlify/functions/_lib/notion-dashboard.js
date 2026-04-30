@@ -52,6 +52,10 @@ export function url(value) {
     return value ? { url: String(value).slice(0, 2000) } : { url: null }
 }
 
+export function checkbox(value) {
+    return { checkbox: Boolean(value) }
+}
+
 async function notionRequest(path, body, method = 'POST') {
     if (!process.env.NOTION_API_KEY) return { skipped: true, reason: 'NOTION_API_KEY missing' }
     const response = await fetch(`https://api.notion.com/v1/${path}`, {
@@ -125,6 +129,15 @@ export function blogDraftProperties(input = {}) {
         'Asset Brief': richText(input.assetBrief || ''),
         'Asset URLs': richText(input.assetUrls || ''),
         'Media Recommendations': richText(input.mediaRecommendations ? JSON.stringify(input.mediaRecommendations) : ''),
+        'Sources Status': select(input.sourcesStatus || 'Ready'),
+        'Source Quality Score': number(input.sourceQualityScore),
+        'Source Notes': richText(input.sourceNotes || ''),
+        'Content Persona': select(input.contentPersona || 'Hybrid'),
+        'Business Function': select(input.businessFunction || 'General'),
+        'Authority Angle': select(input.authorityAngle || 'practical_workflow'),
+        'Image Provider Status': select(input.imageProviderStatus || 'Configured'),
+        'Publish Ready': checkbox(input.publishReady),
+        'Blocking Issues': richText(input.blockingIssues || ''),
         'Created Date': date(input.createdDate || new Date()),
         'Last Updated': date(input.lastUpdated || new Date()),
     }
