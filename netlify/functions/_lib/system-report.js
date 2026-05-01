@@ -83,6 +83,7 @@ export function buildSystemReport(env = process.env, runtime = {}) {
             minAuthoritySourcesPerArticle: status.sourceQuality.minSourcesPerArticle,
             realImageRequired: status.providerStrictness.realImageRequired,
             manualApproval: status.manualApproval,
+            trendRecovery: status.trendRecovery,
         },
         pendingItems: {
             missingRequired: status.missingRequired,

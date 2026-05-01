@@ -14,17 +14,19 @@ export async function publishPost(options = getPipelineOptions()) {
     const imageResult = await readPipelineJson('image-result.json', null, options)
     if (!article) throw new Error('No draft article found.')
     if (!quality?.passed && !options.force) throw new Error(`Quality check failed. Score: ${quality?.score || 0}/${config.minQualityScore}`)
-    if (config.requireAuthenticSources && !quality?.sourceGate?.passed) throw new Error('Publish blocked: authentic topic-specific sources are required before publishing.')
-    if (config.requireRealImageModel && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true' && (!imageResult || imageResult.failed || /fallback/i.test(imageResult.provider || ''))) {
-        throw new Error('Publish blocked: real image provider is required. Add COMFYUI_URL and COMFYUI_WORKFLOW_PATH.')
-    }
 
     const output = path.join(contentDir, `${article.frontmatter.slug}.md`)
     const approvalPacket = {
         output,
         article,
         quality,
+        imageResult,
         approvalRequired: shouldRequireApproval(options),
+        blockingIssues: [
+            config.requireAuthenticSources && !quality?.sourceGate?.passed ? 'Authentic topic-specific sources are required before publishing.' : '',
+            quality?.trendOverride?.applied && !quality?.strictPassed ? 'Trend override requires manual editorial approval before publishing.' : '',
+            config.requireRealImageModel && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true' && (!imageResult || imageResult.failed || /fallback/i.test(imageResult.provider || '')) ? 'Real image provider is required before publishing.' : '',
+        ].filter(Boolean),
         ...modeDetails(options),
     }
     if (options.dryRun || shouldRequireApproval(options)) {
@@ -35,6 +37,12 @@ export async function publishPost(options = getPipelineOptions()) {
         }
         log('publish_pending_approval', { slug: article.frontmatter.slug, output, ...modeDetails(options) })
         return { pendingApproval: true, output, approvalPacket }
+    }
+
+    if (config.requireAuthenticSources && !quality?.sourceGate?.passed) throw new Error('Publish blocked: authentic topic-specific sources are required before publishing.')
+    if (quality?.trendOverride?.applied && !quality?.strictPassed) throw new Error('Publish blocked: trend override drafts require manual editorial approval.')
+    if (config.requireRealImageModel && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true' && (!imageResult || imageResult.failed || /fallback/i.test(imageResult.provider || ''))) {
+        throw new Error('Publish blocked: real image provider is required. Add COMFYUI_URL and COMFYUI_WORKFLOW_PATH.')
     }
 
     await fs.writeFile(output, stringifyFrontmatter(article.frontmatter, article.body))

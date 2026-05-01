@@ -4,6 +4,7 @@ import { log } from './lib/logger.mjs'
 import { draftApprovalBlocks, notifySlack } from './lib/slack.mjs'
 import { syncBlogDraft } from './lib/notion-dashboard.mjs'
 import { createReviewLlmProvider } from './lib/llm-providers.mjs'
+import { shouldApplyTrendQualityOverride } from './lib/trend-analysis.mjs'
 
 const checks = [
     ['minimumWordCount', (article) => article.body.split(/\s+/).length >= 500, 12],
@@ -27,7 +28,7 @@ function hasKeywordStuffing(article) {
     return occurrences / Math.max(words, 1) > 0.04
 }
 
-export function qualityScore(article) {
+export function qualityScore(article, { topic, options } = {}) {
     const results = checks.map(([name, test, points]) => ({ name, passed: test(article), points }))
     const score = results.reduce((sum, result) => sum + (result.passed ? result.points : 0), 0)
     const sources = Array.isArray(article.frontmatter.sources) ? article.frontmatter.sources : []
@@ -45,19 +46,24 @@ export function qualityScore(article) {
             ? `Source quality score ${sourceQualityScore}.`
             : `Authentic sources needed before publishing. Need at least ${config.minAuthoritySourcesPerArticle} source(s).`,
     }
+    const strictPassed = score >= config.minQualityScore && sourceGate.passed
+    const trendOverride = shouldApplyTrendQualityOverride({ score, minQualityScore: config.minQualityScore, sourceGate }, topic || article.frontmatter || {}, options || {})
     return {
         score,
-        passed: score >= config.minQualityScore && sourceGate.passed,
+        strictPassed,
+        passed: strictPassed || trendOverride.applied,
         minQualityScore: config.minQualityScore,
         sourceGate,
+        trendOverride,
+        publishMode: trendOverride.applied ? 'manual_trend_review' : strictPassed ? 'standard_review' : 'rewrite_required',
         results,
     }
 }
 
-export async function qualityCheck(articleArg, options = getPipelineOptions()) {
+export async function qualityCheck(articleArg, options = getPipelineOptions(), topicArg) {
     const article = articleArg || await readPipelineJson('draft-article.json', null, options)
     if (!article) throw new Error('No draft article found.')
-    const report = qualityScore(article)
+    const report = qualityScore(article, { topic: topicArg, options })
     if (!options.dryRun) {
         try {
             const provider = createReviewLlmProvider()
@@ -80,15 +86,19 @@ export async function qualityCheck(articleArg, options = getPipelineOptions()) {
             sourcesStatus: report.sourceGate.status,
             sourceQualityScore: report.sourceGate.sourceQualityScore,
             sourceNotes: report.sourceGate.notes,
-            publishReady: report.passed,
-            blockingIssues: report.sourceGate.passed ? '' : 'Authentic sources needed before publishing.',
+            publishReady: report.strictPassed,
+            blockingIssues: report.strictPassed ? '' : report.trendOverride.applied ? 'Trend override requires manual editorial approval before publishing.' : report.sourceGate.passed ? 'Quality score below threshold.' : 'Authentic sources needed before publishing.',
+            trendScore: report.trendOverride.trendScore,
+            marketSentiment: report.trendOverride.marketSentiment,
+            recoveryNotes: report.trendOverride.reason,
         })
     }
     if (!report.passed && !options.dryRun) {
         await notifySlack(`Blog quality check failed: ${article.frontmatter.title} scored ${report.score}/${report.minQualityScore}.`)
     }
     if (report.passed && !options.dryRun) {
-        await notifySlack(`Blog draft ready for approval: ${article.frontmatter.title}`, draftApprovalBlocks(article, report))
+        const label = report.trendOverride.applied ? 'Blog draft ready for manual trend review' : 'Blog draft ready for approval'
+        await notifySlack(`${label}: ${article.frontmatter.title}`, draftApprovalBlocks(article, report))
     }
     if (!report.sourceGate.passed && !options.dryRun) {
         await notifySlack(`Authentic sources needed before publishing: ${article.frontmatter.title}. Add topic-specific sources in Notion or rerun source improvement.`)

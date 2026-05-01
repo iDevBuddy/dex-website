@@ -138,6 +138,9 @@ export function blogDraftProperties(input = {}) {
         'Image Provider Status': select(input.imageProviderStatus || 'Configured'),
         'Publish Ready': checkbox(input.publishReady),
         'Blocking Issues': richText(input.blockingIssues || ''),
+        'Trend Score': number(input.trendScore),
+        'Market Sentiment': select(input.marketSentiment || 'neutral'),
+        'Recovery Notes': richText(input.recoveryNotes || ''),
         'Created Date': date(input.createdDate || new Date()),
         'Last Updated': date(input.lastUpdated || new Date()),
     }

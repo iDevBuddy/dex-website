@@ -89,6 +89,9 @@ export async function syncBlogDraft(article, overrides = {}) {
         'Image Provider Status': selectProperty(overrides.imageProviderStatus || (overrides.imageStatus === 'Failed' ? 'Failed' : 'Configured')),
         'Publish Ready': { checkbox: Boolean(overrides.publishReady ?? frontmatter.publishReady ?? false) },
         'Blocking Issues': richTextProperty(overrides.blockingIssues || frontmatter.blockingIssues || ''),
+        'Trend Score': numberProperty(overrides.trendScore || frontmatter.trendScore),
+        'Market Sentiment': selectProperty(overrides.marketSentiment || frontmatter.marketSentiment || 'neutral'),
+        'Recovery Notes': richTextProperty(overrides.recoveryNotes || ''),
         'Created Date': dateProperty(overrides.createdDate || new Date()),
         'Last Updated': dateProperty(overrides.lastUpdated || new Date()),
     })

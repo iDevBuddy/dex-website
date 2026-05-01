@@ -43,7 +43,7 @@ export function draftApprovalBlocks(article, quality) {
             type: 'section',
             text: {
                 type: 'mrkdwn',
-                text: `*${frontmatter.title}*\nQuality score: *${quality.score}/${quality.minQualityScore}*\nSEO/topic review complete. Final publishing source: GitHub Markdown/MDX.\n*Recommended assets:* ${assets.length ? assets.join(', ') : 'Featured Image'}`,
+                text: `*${frontmatter.title}*\nQuality score: *${quality.score}/${quality.minQualityScore}*\nReview mode: *${quality.publishMode || 'standard_review'}*\n${quality.trendOverride?.applied ? `Trend signal: *${quality.trendOverride.trendScore}/100*, sentiment: *${quality.trendOverride.marketSentiment}*. Manual approval required.\n` : ''}SEO/topic review complete. Final publishing source: GitHub Markdown/MDX.\n*Recommended assets:* ${assets.length ? assets.join(', ') : 'Featured Image'}`,
             },
         },
         {

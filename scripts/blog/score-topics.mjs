@@ -3,16 +3,18 @@ import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } 
 import { log } from './lib/logger.mjs'
 import { syncBlogIdea } from './lib/notion-dashboard.mjs'
 import { enrichTopicPersona } from './lib/persona.mjs'
+import { analyzeTrend } from './lib/trend-analysis.mjs'
 
 const highValueTerms = ['agent', 'automation', 'crm', 'slack', 'workflow', 'lead', 'business', 'ecommerce', 'support', 'appointment']
 
 export function scoreTopic(topic) {
     topic = enrichTopicPersona(topic)
     const text = `${topic.topic} ${topic.keyword}`.toLowerCase()
+    const trendAnalysis = analyzeTrend(topic)
     const manualBoost = topic.source === 'Manual seed' || topic.source === 'Manual command' ? 24 : 0
     const authorityBucketBoost = /\btrick|tool|github|kaggle|agent|security|finance|sales|support|operations|awareness|solution\b/i.test(text) ? 12 : 0
     const businessValue = highValueTerms.reduce((sum, term) => sum + (text.includes(term) ? 8 : 0), 30)
-    const trendPotential = topic.source?.includes('RSS') ? 18 : 10
+    const trendPotential = Math.max(topic.source?.includes('RSS') ? 18 : 10, Math.round(trendAnalysis.trendScore / 4))
     const intentClarity = /\bhow|guide|examples|tools|automation|agent|workflow\b/i.test(text) ? 15 : 8
     const seoOpportunity = /\bfor|how|guide|examples|tools|best|workflow\b/i.test(text) ? 10 : 6
     const lowCompetitionAngle = /\bsmall business|service|local|clinic|agency|slack|crm|workflow\b/i.test(text) ? 8 : 4
@@ -24,7 +26,12 @@ export function scoreTopic(topic) {
     return {
         ...topic,
         score,
-        trendScore: Math.min(100, trendPotential * 4),
+        trendScore: trendAnalysis.trendScore,
+        marketSentiment: trendAnalysis.marketSentiment,
+        marketSentimentScore: trendAnalysis.marketSentimentScore,
+        trendOverrideEligible: trendAnalysis.trendOverrideEligible,
+        trendOverrideReason: trendAnalysis.trendOverrideReason,
+        trendAnalysis,
         seoScore: Math.min(100, (intentClarity + seoOpportunity + lowCompetitionAngle) * 3),
         businessValue: businessValue >= 70 ? 'High' : businessValue >= 45 ? 'Medium' : 'Low',
         businessValueScore: Math.min(100, businessValue),

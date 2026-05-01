@@ -44,6 +44,11 @@ REQUIRE_AUTHENTIC_SOURCES=true
 MIN_AUTHORITY_SOURCES_PER_ARTICLE=2
 MAX_SOURCES_PER_ARTICLE=6
 SOURCE_MIN_AUTHORITY_SCORE=75
+ENABLE_TREND_QUALITY_OVERRIDE=true
+TREND_OVERRIDE_MIN_SCORE=82
+TREND_QUALITY_FLOOR=78
+QUALITY_FAILURE_RETRY_ENABLED=true
+QUALITY_FAILURE_MAX_RETRIES=2
 BLOGS_PER_WEEK=4
 BLOG_GENERATION_DAYS=MON,TUE,THU,SAT
 BLOG_GENERATION_TIME_UTC=05:00
@@ -81,14 +86,14 @@ OPENAI_MODEL=
 
 ```bash
 USE_IMAGE_MODEL=true
-IMAGE_PROVIDER=local_comfyui
+IMAGE_PROVIDER=gpt_image
 COMFYUI_URL=
 COMFYUI_WORKFLOW_PATH=
 COMFYUI_AUTH_HEADER=
-USE_GPT_IMAGE=false
+USE_GPT_IMAGE=true
 ```
 
-For protected ComfyUI servers, put the full auth header in `COMFYUI_AUTH_HEADER`, for example `Authorization: Bearer ...`. If your image provider uses a different API, keep `REQUIRE_REAL_IMAGE_MODEL=true` and add the provider URL/key after we wire that provider.
+The current production-safe default is `IMAGE_PROVIDER=gpt_image` with `USE_GPT_IMAGE=true`, because the site already has OpenAI credentials. If you want to switch to ComfyUI later, set `IMAGE_PROVIDER=local_comfyui`, then add `COMFYUI_URL` and `COMFYUI_WORKFLOW_PATH`. For protected ComfyUI servers, put the full auth header in `COMFYUI_AUTH_HEADER`, for example `Authorization: Bearer ...`.
 
 ## Audio variables
 

@@ -187,6 +187,13 @@ export function getBlogStatus(env = process.env) {
             maxSourcesPerArticle: Number(env.MAX_SOURCES_PER_ARTICLE || 6),
             minAuthorityScore: Number(env.SOURCE_MIN_AUTHORITY_SCORE || 75),
         },
+        trendRecovery: {
+            enabled: env.ENABLE_TREND_QUALITY_OVERRIDE !== 'false',
+            trendOverrideMinScore: Number(env.TREND_OVERRIDE_MIN_SCORE || 82),
+            trendQualityFloor: Number(env.TREND_QUALITY_FLOOR || 78),
+            qualityFailureRetryEnabled: env.QUALITY_FAILURE_RETRY_ENABLED !== 'false',
+            qualityFailureMaxRetries: Number(env.QUALITY_FAILURE_MAX_RETRIES || 2),
+        },
         imageProvider: imageStatus,
         providerStrictness: {
             realLlmRequired,

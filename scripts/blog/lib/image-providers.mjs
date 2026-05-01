@@ -4,7 +4,12 @@ export async function generateWithImageProvider({ article, output }) {
     const provider = process.env.IMAGE_PROVIDER || 'local_comfyui'
 
     if (provider === 'local_comfyui') {
-        return queueComfyUi({ article })
+        const result = await queueComfyUi({ article })
+        if (result) return result
+        if (process.env.USE_GPT_IMAGE === 'true' && process.env.OPENAI_API_KEY) {
+            return generateOpenAiImage({ article, output })
+        }
+        return null
     }
 
     if (provider === 'gpt_image' || process.env.USE_GPT_IMAGE === 'true') {
@@ -19,9 +24,14 @@ async function queueComfyUi({ article }) {
     const workflow = JSON.parse(await fs.readFile(process.env.COMFYUI_WORKFLOW_PATH, 'utf8'))
     const prompt = article.imagePrompt || article.frontmatter.imagePrompt || article.frontmatter.title
     const payload = JSON.parse(JSON.stringify(workflow).replaceAll('{{prompt}}', prompt))
+    const headers = { 'Content-Type': 'application/json' }
+    if (process.env.COMFYUI_AUTH_HEADER?.includes(':')) {
+        const [name, ...rest] = process.env.COMFYUI_AUTH_HEADER.split(':')
+        headers[name.trim()] = rest.join(':').trim()
+    }
     const response = await fetch(`${process.env.COMFYUI_URL.replace(/\/$/, '')}/prompt`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({ prompt: payload }),
     })
     if (!response.ok) throw new Error(`ComfyUI queue failed: ${response.status} ${await response.text()}`)
