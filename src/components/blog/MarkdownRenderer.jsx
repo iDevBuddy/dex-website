@@ -11,11 +11,13 @@ function inline(text) {
     })
 }
 
-export default function MarkdownRenderer({ body }) {
+export default function MarkdownRenderer({ body, skipSections = [] }) {
     const lines = body.split(/\r?\n/)
     const nodes = []
     let list = []
     let skipReferences = false
+    let skipNamedSection = false
+    const skipped = skipSections.map((section) => String(section).toLowerCase())
 
     const flushList = () => {
         if (list.length) {
@@ -30,6 +32,7 @@ export default function MarkdownRenderer({ body }) {
 
     lines.forEach((line) => {
         const trimmed = line.trim()
+        const headingText = trimmed.replace(/^#{2,3}\s+/, '').trim().toLowerCase()
         if (/^##\s+(references|sources|sources and references|research sources|sources used)\s*:?$/i.test(trimmed) || /^(\*\*)?references:(\*\*)?$/i.test(trimmed)) {
             flushList()
             skipReferences = true
@@ -38,7 +41,15 @@ export default function MarkdownRenderer({ body }) {
         if (skipReferences && /^##\s+/.test(trimmed)) {
             skipReferences = false
         }
-        if (skipReferences || /^---+$/.test(trimmed)) {
+        if (/^##\s+/.test(trimmed) && skipped.includes(headingText)) {
+            flushList()
+            skipNamedSection = true
+            return
+        }
+        if (skipNamedSection && /^##\s+/.test(trimmed)) {
+            skipNamedSection = false
+        }
+        if (skipReferences || skipNamedSection || /^---+$/.test(trimmed)) {
             return
         }
 

@@ -29,6 +29,13 @@ export function seoOptimizeArticle(article) {
     if (!frontmatter.expertInsight) {
         frontmatter.expertInsight = 'The strongest AI automation systems combine narrow workflow design, clear ownership, model-assisted drafting, and human review before irreversible actions.'
     }
+    frontmatter.businessProblem ||= frontmatter.mainPainPoint || ''
+    frontmatter.automationOpportunity ||= frontmatter.practicalUseCase || frontmatter.directAnswer || ''
+    frontmatter.whatYouWillBuild ||= ''
+    frontmatter.toolsNeeded ||= []
+    frontmatter.caseProblem ||= ''
+    frontmatter.caseResult ||= ''
+    frontmatter.businessImpact ||= ''
     frontmatter.contentPersona ||= process.env.DEFAULT_CONTENT_PERSONA || 'Hybrid'
     frontmatter.businessFunction ||= 'General'
     frontmatter.authorityAngle ||= process.env.DEFAULT_AUTHORITY_ANGLE || 'practical_workflow'

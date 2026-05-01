@@ -1,10 +1,113 @@
 import { useEffect } from 'react'
-import { CalendarDays, Clock, Download, FileText, Presentation, RefreshCcw } from 'lucide-react'
+import { CalendarDays, CheckCircle2, Clock, Download, FileText, Presentation, RefreshCcw } from 'lucide-react'
 import { buildBlogPostingSchema, buildFaqSchema, formatDate, getPostBySlug, getRelatedPosts } from '../../lib/blog'
 import { setSeo } from '../../lib/seo'
 import ArticleAudioPlayer from './ArticleAudioPlayer'
 import ActiveTableOfContents from './ActiveTableOfContents'
 import MarkdownRenderer from './MarkdownRenderer'
+
+function articleMode(post) {
+    const type = `${post.contentType || ''} ${post.style || ''} ${post.authorityAngle || ''}`.toLowerCase()
+    const category = `${post.category || ''}`.toLowerCase()
+    if (/case/.test(type)) return 'case-study'
+    if (/tutorial|tool_tutorial|how to build|walkthrough/.test(type)) return 'tutorial'
+    if (/business automation|workflow automation|lead generation|ecommerce automation/.test(category) || /business automation/.test(type)) return 'business-automation'
+    return 'informational'
+}
+
+function hasBodyHeading(body, label) {
+    return new RegExp(`^#{2,3}\\s+${label}\\b`, 'im').test(body || '')
+}
+
+function KeyTakeaways({ items = [], compact = false }) {
+    if (!items.length) return null
+    return (
+        <section className={`${compact ? 'my-10' : 'mb-10'} rounded-lg border border-border bg-dark-card p-6`}>
+            <h2 className="text-lg font-bold text-white mb-4">Key Takeaways</h2>
+            <div className="grid gap-3">
+                {items.map((item) => (
+                    <div key={item} className="grid grid-cols-[22px_1fr] gap-3 rounded-md border border-border/70 bg-dark-deeper/70 p-4">
+                        <CheckCircle2 size={18} className="mt-0.5 text-accent" aria-hidden="true" />
+                        <p className="text-gray-300 leading-7">{item}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
+    )
+}
+
+function EditorialOpener({ post }) {
+    const mode = articleMode(post)
+    const showDirectAnswer = post.directAnswer && (mode === 'informational' || /how-to|guide/i.test(post.contentType || ''))
+    const showTakeaways = post.keyTakeaways.length > 0 && mode !== 'tutorial' && mode !== 'case-study'
+
+    if (mode === 'tutorial') {
+        return (
+            <section className="mb-10 rounded-lg border border-border bg-dark-card p-6">
+                <h2 className="text-lg font-bold text-white mb-3">{post.whatYouWillBuild ? "What You'll Build" : 'What This Guide Covers'}</h2>
+                <p className="text-gray-300 leading-7 mb-5">{post.whatYouWillBuild || post.practicalUseCase || post.description}</p>
+                {post.toolsNeeded.length > 0 && (
+                    <div>
+                        <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-500 mb-3">Tools Needed</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {post.toolsNeeded.map((tool) => <span key={tool} className="rounded-full border border-border px-3 py-1 text-sm text-gray-300">{tool}</span>)}
+                        </div>
+                    </div>
+                )}
+            </section>
+        )
+    }
+
+    if (mode === 'case-study') {
+        return (
+            <section className="mb-10 grid md:grid-cols-3 gap-4">
+                {[
+                    ['Problem', post.caseProblem || post.businessProblem || post.description],
+                    ['Result', post.caseResult || post.directAnswer || 'A cleaner workflow with clearer ownership and measurable operational improvement.'],
+                    ['Business Impact', post.businessImpact || post.practicalUseCase || 'Less manual follow-up, better visibility, and fewer missed handoffs.'],
+                ].map(([label, value]) => (
+                    <div key={label} className="rounded-lg border border-border bg-dark-card p-5">
+                        <p className="font-mono text-xs uppercase tracking-[0.18em] text-accent mb-3">{label}</p>
+                        <p className="text-gray-300 leading-7">{value}</p>
+                    </div>
+                ))}
+            </section>
+        )
+    }
+
+    if (mode === 'business-automation') {
+        return (
+            <>
+                <section className="mb-10 rounded-lg border border-accent/25 bg-dark-card p-6">
+                    <p className="font-mono text-xs uppercase tracking-[0.18em] text-accent mb-3">Business Problem</p>
+                    <h2 className="text-xl font-bold text-white mb-3">{post.businessProblem || post.mainPainPoint || 'A repeatable workflow is costing time, focus, or revenue.'}</h2>
+                    <p className="text-gray-300 leading-7">{post.automationOpportunity || post.directAnswer || post.practicalUseCase || post.description}</p>
+                </section>
+                {showTakeaways && <KeyTakeaways items={post.keyTakeaways} />}
+            </>
+        )
+    }
+
+    return (
+        <>
+            {showDirectAnswer && (
+                <section className="mb-10 rounded-lg border border-accent/25 bg-accent-dim p-6">
+                    <h2 className="text-lg font-bold text-white mb-2">Direct Answer</h2>
+                    <p className="text-gray-200 leading-7">{post.directAnswer}</p>
+                </section>
+            )}
+            {showTakeaways && <KeyTakeaways items={post.keyTakeaways} />}
+        </>
+    )
+}
+
+function skippedBodySections(post) {
+    const mode = articleMode(post)
+    const sections = []
+    if (post.directAnswer && (mode === 'informational' || mode === 'business-automation' || /how-to|guide/i.test(post.contentType || ''))) sections.push('Direct Answer')
+    if (post.keyTakeaways.length > 0 && mode !== 'tutorial' && mode !== 'case-study') sections.push('Key Takeaways')
+    return sections
+}
 
 export default function BlogPost({ slug }) {
     const post = getPostBySlug(slug)
@@ -42,6 +145,8 @@ export default function BlogPost({ slug }) {
     }
 
     const relatedPosts = getRelatedPosts(post)
+    const hiddenSections = skippedBodySections(post)
+    const visibleHeadings = post.headings.filter((heading) => !hiddenSections.map((section) => section.toLowerCase()).includes(heading.text.toLowerCase()))
 
     return (
         <main id="main-content" className="pt-28 pb-24">
@@ -74,35 +179,21 @@ export default function BlogPost({ slug }) {
                 </div>
 
                 <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[240px_minmax(0,760px)] gap-12">
-                    <ActiveTableOfContents headings={post.headings} variant="desktop" />
+                    <ActiveTableOfContents headings={visibleHeadings} variant="desktop" />
 
                     <div>
-                        <ActiveTableOfContents headings={post.headings} variant="mobile" />
+                        <ActiveTableOfContents headings={visibleHeadings} variant="mobile" />
 
-                        {post.directAnswer && (
-                            <section className="mb-10 rounded-lg border border-accent/25 bg-accent-dim p-6">
-                                <h2 className="text-lg font-bold text-white mb-2">Direct Answer</h2>
-                                <p className="text-gray-200 leading-7">{post.directAnswer}</p>
-                            </section>
-                        )}
+                        <EditorialOpener post={post} />
 
-                        {post.keyTakeaways.length > 0 && (
-                            <section className="mb-10 rounded-lg border border-border bg-dark-card p-6">
-                                <h2 className="text-lg font-bold text-white mb-4">Key Takeaways</h2>
-                                <ul className="space-y-3 text-gray-300">
-                                    {post.keyTakeaways.map((item) => <li key={item} className="leading-7">- {item}</li>)}
-                                </ul>
-                            </section>
-                        )}
+                        <MarkdownRenderer body={post.body} skipSections={hiddenSections} />
 
-                        {post.expertInsight && (
-                            <section className="mb-10 rounded-lg border border-accent/30 bg-dark-deeper p-6">
+                        {post.expertInsight && !hasBodyHeading(post.body, 'Expert Insight') && (
+                            <section className="mt-12 rounded-lg border border-accent/30 bg-dark-deeper p-6">
                                 <h2 className="text-lg font-bold text-white mb-2">Expert Insight</h2>
                                 <p className="text-gray-200 leading-7">{post.expertInsight}</p>
                             </section>
                         )}
-
-                        <MarkdownRenderer body={post.body} />
 
                         {(post.assetLinks?.infographic || post.assetLinks?.slides || post.assetLinks?.downloadablePdf) && (
                             <section className="mt-14 border-t border-border pt-10">

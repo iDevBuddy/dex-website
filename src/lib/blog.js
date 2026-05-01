@@ -121,6 +121,15 @@ export const blogPosts = Object.entries(postModules)
             practicalUseCase: data.practicalUseCase || '',
             implementationDifficulty: data.implementationDifficulty || '',
             estimatedTimeToImplement: data.estimatedTimeToImplement || '',
+            toolsNeeded: Array.isArray(data.toolsNeeded) ? data.toolsNeeded : [],
+            whatYouWillBuild: data.whatYouWillBuild || '',
+            guideCovers: data.guideCovers || '',
+            businessProblem: data.businessProblem || '',
+            automationOpportunity: data.automationOpportunity || '',
+            caseProblem: data.caseProblem || '',
+            caseResult: data.caseResult || '',
+            businessImpact: data.businessImpact || '',
+            mainPainPoint: data.mainPainPoint || '',
         }
     })
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))

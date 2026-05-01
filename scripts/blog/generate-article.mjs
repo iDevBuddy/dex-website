@@ -54,6 +54,13 @@ function normalizeArticle(article, topic, brief) {
             targetReader: article.frontmatter?.targetReader || brief?.targetReader || 'Business owner or operator',
             searchIntent: article.frontmatter?.searchIntent || brief?.searchIntent || 'Informational',
             practicalUseCase: article.frontmatter?.practicalUseCase || brief?.examplesToInclude?.[0] || 'Approval-based business workflow automation',
+            businessProblem: article.frontmatter?.businessProblem || brief?.mainPainPoint || '',
+            automationOpportunity: article.frontmatter?.automationOpportunity || article.frontmatter?.directAnswer || brief?.description || '',
+            whatYouWillBuild: article.frontmatter?.whatYouWillBuild || '',
+            toolsNeeded: article.frontmatter?.toolsNeeded || [],
+            caseProblem: article.frontmatter?.caseProblem || '',
+            caseResult: article.frontmatter?.caseResult || '',
+            businessImpact: article.frontmatter?.businessImpact || '',
             implementationDifficulty: article.frontmatter?.implementationDifficulty || 'Medium',
             estimatedTimeToImplement: article.frontmatter?.estimatedTimeToImplement || '1-2 weeks for an MVP workflow',
             contentType: article.frontmatter?.contentType || brief?.contentFormat || 'How-To Guide',
@@ -130,6 +137,13 @@ Return exactly this JSON shape:
     "targetReader": "",
     "searchIntent": "",
     "practicalUseCase": "",
+    "businessProblem": "",
+    "automationOpportunity": "",
+    "whatYouWillBuild": "",
+    "toolsNeeded": [],
+    "caseProblem": "",
+    "caseResult": "",
+    "businessImpact": "",
     "implementationDifficulty": "",
     "estimatedTimeToImplement": "",
     "image": "",
@@ -149,7 +163,13 @@ Return exactly this JSON shape:
   "imagePrompt": "",
   "audioScript": ""
 }
-Writing structure: strong title, clear subtitle, short expert intro, key takeaways, direct answer block, practical explanation, real business use case, step-by-step workflow, tool recommendations if relevant, expert insight, common mistakes, implementation checklist, FAQ, CTA.
+Opening strategy: do not force every article to start with Direct Answer, Key Takeaways, and Expert Insight. Choose a natural editorial opening based on article type:
+- Informational/how-to: short expert intro; Direct Answer may appear near the top; Key Takeaways after the intro.
+- Tutorial: start with "What You'll Build" or "What This Guide Covers", then tools needed and steps.
+- Case study: start with problem, result, and business impact.
+- Business automation: start with the business problem and practical automation opportunity.
+Put keyTakeaways and directAnswer in frontmatter. Do not repeat "## Direct Answer" or "## Key Takeaways" in body when they are already in frontmatter. Place Expert Insight naturally inside the article only if it adds real judgment.
+Writing structure: strong title, clear subtitle, short expert intro, practical explanation, real business use case, step-by-step workflow, tool recommendations if relevant, common mistakes, implementation checklist, FAQ, CTA.
 Source rules: use only the provided research sources for claims. Do not invent sources. Do not add generic Google SEO docs unless this topic is actually about SEO or Google policy. Do not put a References, Sources, or Research Sources section in the body; sources belong only in frontmatter.sources.
 Quality rules: no copied content, no fake data, no keyword stuffing, no "AI is transforming the world" intro, no repeated filler phrases, practical business tone, short paragraphs, useful examples, FAQ, and clear next steps.
 Topic: ${JSON.stringify(topic)}
