@@ -87,6 +87,8 @@ export function buildSystemReport(env = process.env, runtime = {}) {
             realImageRequired: status.providerStrictness.realImageRequired,
             manualApproval: status.manualApproval,
             trendRecovery: status.trendRecovery,
+            duplicateDetection: status.duplicateDetection,
+            authenticity: status.authenticity,
         },
         pendingItems: {
             missingRequired: status.missingRequired,

@@ -58,6 +58,12 @@ export function createResearchBrief(topic) {
         sourceStatus: sourceSelection.sourceStatus,
         sourceQualityScore: sourceSelection.sourceQualityScore,
         sourceNotes: sourceSelection.sourceNotes,
+        duplicateStatus: topic.duplicateStatus || topic.duplicateAnalysis?.duplicateStatus || 'unique',
+        duplicateScore: topic.duplicateScore || topic.duplicateAnalysis?.duplicateScore || 0,
+        duplicateMatch: topic.duplicateMatch || topic.duplicateAnalysis?.bestMatch || null,
+        suggestedAngle: topic.suggestedAngle || topic.duplicateAnalysis?.suggestedAngle || '',
+        suggestedTopic: topic.suggestedTopic || topic.duplicateAnalysis?.suggestedTopic || '',
+        trendAnalysis: topic.trendAnalysis || null,
         examplesToInclude: ['Slack intake workflow', 'CRM follow-up workflow', 'support triage workflow'],
         suggestedInternalLinks: ['/blog/ai-authority-blog-engine', '/#services', '/#contact'],
         suggestedCTA: 'Book an automation consult',
@@ -96,7 +102,13 @@ export async function researchTopic(topicArg, options = getPipelineOptions()) {
     brief.sourceQualityScore = sourceSelection.sourceQualityScore
     brief.sourceNotes = sourceSelection.sourceNotes
     await writePipelineJson('research-brief.json', brief, options)
-    log('research_brief_created', { topic: topic.topic, slug: topic.slug, ...modeDetails(options) })
+    log('research_brief_created', {
+        topic: topic.topic,
+        slug: topic.slug,
+        duplicateStatus: brief.duplicateStatus,
+        sourceStatus: brief.sourceStatus,
+        ...modeDetails(options),
+    })
     return brief
 }
 

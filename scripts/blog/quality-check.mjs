@@ -5,6 +5,7 @@ import { draftApprovalBlocks, notifySlack } from './lib/slack.mjs'
 import { syncBlogDraft } from './lib/notion-dashboard.mjs'
 import { createReviewLlmProvider } from './lib/llm-providers.mjs'
 import { shouldApplyTrendQualityOverride } from './lib/trend-analysis.mjs'
+import { evaluateAuthenticity } from './lib/authenticity-check.mjs'
 
 const checks = [
     ['minimumWordCount', (article) => article.body.split(/\s+/).length >= 500, 12],
@@ -64,6 +65,19 @@ export async function qualityCheck(articleArg, options = getPipelineOptions(), t
     const article = articleArg || await readPipelineJson('draft-article.json', null, options)
     if (!article) throw new Error('No draft article found.')
     const report = qualityScore(article, { topic: topicArg, options })
+    const authenticity = await evaluateAuthenticity(article, topicArg || article.frontmatter || {})
+    report.authenticity = authenticity
+    if (!authenticity.passed) {
+        report.strictPassed = false
+        if (report.trendOverride.applied && authenticity.score >= Number(process.env.MIN_AUTHENTICITY_SCORE_FOR_TREND_OVERRIDE || 68)) {
+            report.passed = true
+            report.publishMode = 'manual_trend_authenticity_review'
+            report.trendOverride.reason = `${report.trendOverride.reason} Authenticity score ${authenticity.score}/${authenticity.minimum} requires manual review but is above trend override floor.`
+        } else {
+            report.passed = false
+            report.publishMode = 'rewrite_required'
+        }
+    }
     if (!options.dryRun) {
         try {
             const provider = createReviewLlmProvider()
@@ -90,7 +104,10 @@ export async function qualityCheck(articleArg, options = getPipelineOptions(), t
             blockingIssues: report.strictPassed ? '' : report.trendOverride.applied ? 'Trend override requires manual editorial approval before publishing.' : report.sourceGate.passed ? 'Quality score below threshold.' : 'Authentic sources needed before publishing.',
             trendScore: report.trendOverride.trendScore,
             marketSentiment: report.trendOverride.marketSentiment,
-            recoveryNotes: report.trendOverride.reason,
+            recoveryNotes: [
+                report.trendOverride.reason,
+                `Authenticity: ${authenticity.score}/${authenticity.minimum}. ${authenticity.notes}`,
+            ].join('\n'),
         })
     }
     if (!report.passed && !options.dryRun) {
@@ -102,6 +119,9 @@ export async function qualityCheck(articleArg, options = getPipelineOptions(), t
     }
     if (!report.sourceGate.passed && !options.dryRun) {
         await notifySlack(`Authentic sources needed before publishing: ${article.frontmatter.title}. Add topic-specific sources in Notion or rerun source improvement.`)
+    }
+    if (!authenticity.passed && !options.dryRun) {
+        await notifySlack(`Authenticity review needed: ${article.frontmatter.title} scored ${authenticity.score}/${authenticity.minimum}. ${authenticity.notes}`)
     }
     return report
 }

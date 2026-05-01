@@ -77,6 +77,12 @@ function normalizeArticle(article, topic, brief) {
             sourcesStatus: article.frontmatter?.sourcesStatus || sourceSelection.sourceStatus,
             sourceQualityScore: article.frontmatter?.sourceQualityScore || sourceSelection.sourceQualityScore,
             sourceNotes: article.frontmatter?.sourceNotes || sourceSelection.sourceNotes,
+            duplicateStatus: article.frontmatter?.duplicateStatus || brief?.duplicateStatus || topic.duplicateStatus || 'unique',
+            duplicateScore: article.frontmatter?.duplicateScore || brief?.duplicateScore || topic.duplicateScore || 0,
+            duplicateMatch: article.frontmatter?.duplicateMatch || brief?.duplicateMatch || topic.duplicateMatch || null,
+            suggestedAngle: article.frontmatter?.suggestedAngle || brief?.suggestedAngle || topic.suggestedAngle || '',
+            trendScore: article.frontmatter?.trendScore || topic.trendScore || topic.trendAnalysis?.trendScore || 0,
+            marketSentiment: article.frontmatter?.marketSentiment || topic.marketSentiment || topic.trendAnalysis?.marketSentiment || 'neutral',
             publishReady: article.frontmatter?.publishReady ?? sourceSelection.sourceStatus === 'Ready',
             blockingIssues: article.frontmatter?.blockingIssues || (sourceSelection.sourceStatus === 'Ready' ? '' : 'Authentic sources needed before publishing.'),
             related: article.frontmatter?.related || article.related || ['/blog/ai-authority-blog-engine'],
@@ -171,6 +177,7 @@ Opening strategy: do not force every article to start with Direct Answer, Key Ta
 Put keyTakeaways and directAnswer in frontmatter. Do not repeat "## Direct Answer" or "## Key Takeaways" in body when they are already in frontmatter. Place Expert Insight naturally inside the article only if it adds real judgment.
 Writing structure: strong title, clear subtitle, short expert intro, practical explanation, real business use case, step-by-step workflow, tool recommendations if relevant, common mistakes, implementation checklist, FAQ, CTA.
 Source rules: use only the provided research sources for claims. Do not invent sources. Do not add generic Google SEO docs unless this topic is actually about SEO or Google policy. Do not put a References, Sources, or Research Sources section in the body; sources belong only in frontmatter.sources.
+Duplicate/topic angle rules: if duplicateStatus is "similar" or "duplicate", do not rewrite the existing article. Use the suggestedAngle/suggestedTopic from the brief to create a narrower, more specific, service-focused article with different examples, different headings, and a sharper business use case.
 Quality rules: no copied content, no fake data, no keyword stuffing, no "AI is transforming the world" intro, no repeated filler phrases, practical business tone, short paragraphs, useful examples, FAQ, and clear next steps.
 Topic: ${JSON.stringify(topic)}
 Research brief: ${JSON.stringify(brief)}`

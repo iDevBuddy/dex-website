@@ -25,6 +25,7 @@ export async function publishPost(options = getPipelineOptions()) {
         blockingIssues: [
             config.requireAuthenticSources && !quality?.sourceGate?.passed ? 'Authentic topic-specific sources are required before publishing.' : '',
             quality?.trendOverride?.applied && !quality?.strictPassed ? 'Trend override requires manual editorial approval before publishing.' : '',
+            quality?.authenticity && !quality.authenticity.passed ? 'Authenticity/relevance review is required before publishing.' : '',
             config.requireRealImageModel && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true' && (!imageResult || imageResult.failed || /fallback/i.test(imageResult.provider || '')) ? 'Real image provider is required before publishing.' : '',
         ].filter(Boolean),
         ...modeDetails(options),
@@ -41,6 +42,7 @@ export async function publishPost(options = getPipelineOptions()) {
 
     if (config.requireAuthenticSources && !quality?.sourceGate?.passed) throw new Error('Publish blocked: authentic topic-specific sources are required before publishing.')
     if (quality?.trendOverride?.applied && !quality?.strictPassed) throw new Error('Publish blocked: trend override drafts require manual editorial approval.')
+    if (quality?.authenticity && !quality.authenticity.passed) throw new Error('Publish blocked: authenticity/relevance review is required before publishing.')
     if (config.requireRealImageModel && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true' && (!imageResult || imageResult.failed || /fallback/i.test(imageResult.provider || ''))) {
         throw new Error('Publish blocked: real image provider is required. Add COMFYUI_URL and COMFYUI_WORKFLOW_PATH.')
     }
