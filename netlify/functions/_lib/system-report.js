@@ -47,6 +47,9 @@ export function buildSystemReport(env = process.env, runtime = {}) {
         image: {
             provider: status.imageProvider.provider,
             comfyUiConfigured: configured(env, 'COMFYUI_URL') && configured(env, 'COMFYUI_WORKFLOW_PATH'),
+            replicateConfigured: configured(env, 'REPLICATE_API_KEY') && configured(env, 'REPLICATE_MODEL'),
+            replicateModel: env.REPLICATE_MODEL || '',
+            replicateImageSize: env.REPLICATE_IMAGE_SIZE || '1200x675',
             workflowPathConfigured: configured(env, 'COMFYUI_WORKFLOW_PATH'),
             gptImageEnabled: env.USE_GPT_IMAGE === 'true' && configured(env, 'OPENAI_API_KEY'),
             fallbackAllowed: env.ALLOW_FALLBACK_IN_PRODUCTION === 'true',

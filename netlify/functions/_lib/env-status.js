@@ -39,6 +39,9 @@ function imageProviderStatus(env) {
     } else if (provider === 'gpt_image') {
         if (env.USE_GPT_IMAGE !== 'true') missingValues.push('USE_GPT_IMAGE=true')
         if (!configured(env, 'OPENAI_API_KEY')) missingValues.push('OPENAI_API_KEY')
+    } else if (provider === 'replicate') {
+        if (!configured(env, 'REPLICATE_API_KEY')) missingValues.push('REPLICATE_API_KEY')
+        if (!configured(env, 'REPLICATE_MODEL')) missingValues.push('REPLICATE_MODEL')
     } else {
         missingValues.push(`Unsupported IMAGE_PROVIDER=${provider}`)
     }
@@ -76,6 +79,9 @@ export function getBlogStatus(env = process.env) {
         'REVIEW_LLM_MODEL',
         'OPENAI_API_KEY',
         'OPENAI_MODEL',
+        'REPLICATE_API_KEY',
+        'REPLICATE_MODEL',
+        'REPLICATE_IMAGE_SIZE',
         'COMFYUI_URL',
         'COMFYUI_WORKFLOW_PATH',
         'COMFYUI_AUTH_HEADER',

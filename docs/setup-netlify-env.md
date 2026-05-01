@@ -86,14 +86,17 @@ OPENAI_MODEL=
 
 ```bash
 USE_IMAGE_MODEL=true
-IMAGE_PROVIDER=gpt_image
+IMAGE_PROVIDER=replicate
+REPLICATE_API_KEY=
+REPLICATE_MODEL=stability-ai/stable-diffusion
+REPLICATE_IMAGE_SIZE=1200x675
 COMFYUI_URL=
 COMFYUI_WORKFLOW_PATH=
 COMFYUI_AUTH_HEADER=
 USE_GPT_IMAGE=true
 ```
 
-The current production-safe default is `IMAGE_PROVIDER=gpt_image` with `USE_GPT_IMAGE=true`, because the site already has OpenAI credentials. If you want to switch to ComfyUI later, set `IMAGE_PROVIDER=local_comfyui`, then add `COMFYUI_URL` and `COMFYUI_WORKFLOW_PATH`. For protected ComfyUI servers, put the full auth header in `COMFYUI_AUTH_HEADER`, for example `Authorization: Bearer ...`.
+The current production-safe default is `IMAGE_PROVIDER=replicate` using Replicate Stable Diffusion. Keep `REPLICATE_IMAGE_SIZE=1200x675` for blog hero images. If Replicate fails, the pipeline saves a fallback placeholder for preview, marks the image as failed in Notion, and notifies Slack. If you want to switch to ComfyUI later, set `IMAGE_PROVIDER=local_comfyui`, then add `COMFYUI_URL` and `COMFYUI_WORKFLOW_PATH`. For protected ComfyUI servers, put the full auth header in `COMFYUI_AUTH_HEADER`, for example `Authorization: Bearer ...`.
 
 ## Audio variables
 

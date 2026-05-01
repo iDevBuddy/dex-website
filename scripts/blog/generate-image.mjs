@@ -79,16 +79,26 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
         const providerOutput = await generateWithImageProvider({ article, output })
         if (providerOutput?.path || providerOutput?.queued) {
             const providerResult = { ...result, ...providerOutput }
+            article.frontmatter.image = `/blog/images/${slug}.png`
+            article.frontmatter.imageAlt = article.frontmatter.imageAlt || `Blog hero image for ${article.frontmatter.title}`
             await writePipelineJson('image-result.json', providerResult, options)
             log('image_generated', providerResult)
-            await syncBlogDraft(article, { imageStatus: providerOutput.queued ? 'Generating' : 'Generated' })
+            await syncBlogDraft(article, {
+                imageStatus: providerOutput.queued ? 'Generating' : 'Generated',
+                imageProviderStatus: providerOutput.queued ? 'Configured' : 'Generated',
+                assetUrls: providerOutput.sourceUrl || providerResult.url,
+            })
             return providerResult
         }
         if (process.env.REQUIRE_REAL_IMAGE_MODEL === 'true' && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true') {
             const message = 'Real image provider is required. Add COMFYUI_URL and COMFYUI_WORKFLOW_PATH.'
-            await syncBlogDraft(article, { imageStatus: 'Failed', imageProviderStatus: 'Missing Provider', publishReady: false, blockingIssues: message, notes: message })
+            const fallback = makePng()
+            await fs.writeFile(output, fallback)
+            const failedWithFallback = { ...result, failed: true, provider: 'fallback_png_after_missing_provider', path: output, error: message }
+            await writePipelineJson('image-result.json', failedWithFallback, options)
+            await syncBlogDraft(article, { imageStatus: 'Failed', imageProviderStatus: 'Missing Provider', publishReady: false, blockingIssues: message, notes: message, assetUrls: result.url })
             await notifySlack(message)
-            throw new Error(message)
+            return failedWithFallback
         }
         const fallback = makePng()
         await fs.writeFile(output, fallback)
@@ -102,10 +112,12 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
     } catch (error) {
         warn('image_generation_failed', { message: error.message })
         if (process.env.REQUIRE_REAL_IMAGE_MODEL === 'true' && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true') {
-            const failed = { ...result, failed: true, error: error.message }
+            const fallback = makePng()
+            await fs.writeFile(output, fallback)
+            const failed = { ...result, failed: true, provider: 'fallback_png_after_provider_error', path: output, error: error.message }
             await writePipelineJson('image-result.json', failed, options)
-            await syncBlogDraft(article, { imageStatus: 'Failed', imageProviderStatus: 'Missing Provider', publishReady: false, blockingIssues: `Image generation failed: ${error.message}`, notes: `Image generation failed: ${error.message}` })
-            await notifySlack(`Image generation failed for ${article.frontmatter.title}: ${error.message}`)
+            await syncBlogDraft(article, { imageStatus: 'Failed', imageProviderStatus: 'Failed', publishReady: false, blockingIssues: `Image generation failed: ${error.message}`, notes: `Image generation failed: ${error.message}`, assetUrls: result.url })
+            await notifySlack(`Image generation failed for ${article.frontmatter.title}: ${error.message}. A fallback placeholder was saved for draft preview.`)
             return failed
         }
         const fallback = makePng()
