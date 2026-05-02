@@ -3,6 +3,9 @@
     "private": true,
     "version": "1.0.0",
     "type": "module",
+    "engines": {
+        "node": ">=20"
+    },
     "scripts": {
         "dev": "vite",
         "prebuild": "node -e \"import('./scripts/blog/generate-static-assets.mjs').then(m=>m.generateStaticAssets())\"",
