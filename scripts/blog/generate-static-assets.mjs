@@ -3,7 +3,6 @@ import path from 'node:path'
 import { config } from './lib/config.mjs'
 import { ensureBlogDirs, readPosts } from './lib/content.mjs'
 import { log } from './lib/logger.mjs'
-import { generateImage } from './generate-image.mjs'
 
 function escapeXml(value) {
     return String(value || '').replace(/[<>&'"]/g, (char) => ({
@@ -19,16 +18,6 @@ export async function generateStaticAssets() {
     await ensureBlogDirs()
     await fs.mkdir(path.join(process.cwd(), 'public'), { recursive: true })
     const posts = await readPosts()
-    if (posts.length) {
-        await generateImage({
-            frontmatter: {
-                slug: posts[0].data.slug,
-                title: posts[0].data.title,
-                imageAlt: posts[0].data.imageAlt,
-            },
-            imagePrompt: `Featured image for ${posts[0].data.title}`,
-        })
-    }
 
     const urls = [
         { loc: '/', priority: '1.0' },
