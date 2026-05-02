@@ -220,12 +220,14 @@ jobs:
             npm run blog:discover
             npm run blog:score
           elif [ "$COMMAND" = "approve_publish" ]; then
-            if [ -n "${{ github.event.inputs.topic }}" ] || [ -n "${{ github.event.inputs.slug }}" ]; then
-              PUBLISH_ARGS="--force --auto-publish --force-draft"
-              if [ -n "${{ github.event.inputs.topic }}" ]; then PUBLISH_ARGS="$PUBLISH_ARGS --topic \"${{ github.event.inputs.topic }}\""; fi
-              if [ -n "${{ github.event.inputs.slug }}" ]; then PUBLISH_ARGS="$PUBLISH_ARGS --slug \"${{ github.event.inputs.slug }}\""; fi
-              echo "Running approval publish pipeline with $PUBLISH_ARGS"
-              eval "npm run blog:pipeline -- $PUBLISH_ARGS"
+            INPUT_SLUG="${{ github.event.inputs.slug }}"
+            DRAFT_SLUG=$(node -e "try{console.log(JSON.parse(require('fs').readFileSync('data/blog/draft-article.json','utf8')).frontmatter?.slug||'')}catch{console.log('')}")
+            if [ -n "$INPUT_SLUG" ] && [ "$DRAFT_SLUG" != "$INPUT_SLUG" ]; then
+              echo "Approved draft slug '$INPUT_SLUG' was not found in committed draft packet. Create/commit the draft packet before approval."
+              exit 1
+            fi
+            if [ "${{ github.event.inputs.dryRun }}" = "true" ]; then
+              npm run blog:publish -- --force --auto-publish --dry-run
             else
               npm run blog:publish -- --force --auto-publish
             fi
