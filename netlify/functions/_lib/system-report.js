@@ -36,13 +36,13 @@ export function buildSystemReport(env = process.env, runtime = {}) {
             autoPublish: status.autoPublish,
         },
         llm: {
-            primaryProvider: configured(env, 'LOCAL_LLM_URL') ? 'OpenAI-compatible local endpoint' : configured(env, 'OPENAI_API_KEY') ? 'OpenAI fallback' : 'missing',
-            primaryModel: env.LOCAL_LLM_MODEL || env.OPENAI_MODEL || '',
-            reviewProvider: configured(env, 'REVIEW_LLM_URL') ? 'OpenAI-compatible review endpoint' : configured(env, 'LOCAL_LLM_URL') ? 'main LLM fallback' : configured(env, 'OPENAI_API_KEY') ? 'OpenAI fallback' : 'missing',
-            reviewModel: env.REVIEW_LLM_MODEL || env.LOCAL_LLM_MODEL || env.OPENAI_MODEL || '',
+            primaryProvider: configured(env, 'NVIDIA_LLM_API_KEY') || configured(env, 'NVIDIA_QWEN_API_KEY') ? 'NVIDIA NIM Qwen' : configured(env, 'LOCAL_LLM_URL') ? 'OpenAI-compatible local endpoint' : configured(env, 'OPENAI_API_KEY') ? 'OpenAI fallback' : 'missing',
+            primaryModel: env.NVIDIA_LLM_MODEL || env.NVIDIA_QWEN_MODEL || env.LOCAL_LLM_MODEL || env.OPENAI_MODEL || '',
+            reviewProvider: configured(env, 'NVIDIA_REVIEW_LLM_API_KEY') || configured(env, 'NVIDIA_LLM_API_KEY') || configured(env, 'NVIDIA_QWEN_API_KEY') ? 'NVIDIA NIM Qwen review/main fallback' : configured(env, 'REVIEW_LLM_URL') ? 'OpenAI-compatible review endpoint' : configured(env, 'LOCAL_LLM_URL') ? 'main LLM fallback' : configured(env, 'OPENAI_API_KEY') ? 'OpenAI fallback' : 'missing',
+            reviewModel: env.NVIDIA_REVIEW_LLM_MODEL || env.NVIDIA_LLM_MODEL || env.NVIDIA_QWEN_MODEL || env.REVIEW_LLM_MODEL || env.LOCAL_LLM_MODEL || env.OPENAI_MODEL || '',
             fallbackEnabled: configured(env, 'OPENAI_API_KEY'),
             realLlmRequired: env.REQUIRE_REAL_LLM === 'true',
-            missingVariables: ['LOCAL_LLM_URL', 'LOCAL_LLM_MODEL', 'OPENAI_API_KEY'].filter((name) => !configured(env, name)),
+            missingVariables: ['NVIDIA_LLM_API_KEY', 'NVIDIA_LLM_MODEL', 'LOCAL_LLM_URL', 'LOCAL_LLM_MODEL', 'OPENAI_API_KEY'].filter((name) => !configured(env, name)),
         },
         image: {
             provider: status.imageProvider.provider,

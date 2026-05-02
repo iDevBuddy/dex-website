@@ -77,6 +77,9 @@ export function getBlogStatus(env = process.env) {
         'LOCAL_LLM_MODEL',
         'REVIEW_LLM_URL',
         'REVIEW_LLM_MODEL',
+        'NVIDIA_LLM_API_KEY',
+        'NVIDIA_LLM_URL',
+        'NVIDIA_LLM_MODEL',
         'OPENAI_API_KEY',
         'OPENAI_MODEL',
         'NVIDIA_API_KEY',
@@ -104,8 +107,10 @@ export function getBlogStatus(env = process.env) {
 
     const mainLlmConfigured = configured(env, 'LOCAL_LLM_URL') && configured(env, 'LOCAL_LLM_MODEL')
     const reviewLlmConfigured = configured(env, 'REVIEW_LLM_URL') && configured(env, 'REVIEW_LLM_MODEL')
+    const nvidiaQwenConfigured = (configured(env, 'NVIDIA_LLM_API_KEY') || configured(env, 'NVIDIA_QWEN_API_KEY')) && (configured(env, 'NVIDIA_LLM_MODEL') || configured(env, 'NVIDIA_QWEN_MODEL'))
+    const nvidiaReviewConfigured = (configured(env, 'NVIDIA_REVIEW_LLM_API_KEY') || configured(env, 'NVIDIA_LLM_API_KEY') || configured(env, 'NVIDIA_QWEN_API_KEY')) && (configured(env, 'NVIDIA_REVIEW_LLM_MODEL') || configured(env, 'NVIDIA_LLM_MODEL') || configured(env, 'NVIDIA_QWEN_MODEL'))
     const openAiFallbackConfigured = configured(env, 'OPENAI_API_KEY')
-    const llmConfigured = mainLlmConfigured || openAiFallbackConfigured
+    const llmConfigured = nvidiaQwenConfigured || mainLlmConfigured || openAiFallbackConfigured
     const imageStatus = imageProviderStatus(env)
     const imageProvider = imageStatus.provider
     const imageConfigured = imageStatus.configured
@@ -122,7 +127,7 @@ export function getBlogStatus(env = process.env) {
     if (!allConfigured(env, ['NOTION_BLOG_IDEAS_DB_ID', 'NOTION_BLOG_DRAFTS_DB_ID', 'NOTION_PUBLISHED_POSTS_DB_ID', 'NOTION_REFRESH_QUEUE_DB_ID', 'NOTION_PERFORMANCE_REPORTS_DB_ID'])) nextSteps.push('Copy generated Notion database IDs into Netlify environment variables.')
     if (!configured(env, 'SLACK_SIGNING_SECRET')) nextSteps.push('Add SLACK_SIGNING_SECRET for verified Slack commands.')
     if (!configured(env, 'GITHUB_TOKEN')) nextSteps.push('Add GITHUB_TOKEN with repo and workflow permissions to enable Slack/Notion dispatch.')
-    if (!llmConfigured) nextSteps.push('Add LOCAL_LLM_URL and LOCAL_LLM_MODEL, or OPENAI_API_KEY, to enable AI article generation.')
+    if (!llmConfigured) nextSteps.push('Add NVIDIA_LLM_API_KEY and NVIDIA_LLM_MODEL, or LOCAL_LLM_URL and LOCAL_LLM_MODEL, to enable AI article generation.')
     if (!imageConfigured) {
         if (imageProvider === 'nvidia_flux' || imageProvider === 'nvidia') {
             nextSteps.push('Add NVIDIA_API_KEY, NVIDIA_FLUX_URL, NVIDIA_FLUX_MODEL, and NVIDIA_IMAGE_SIZE to enable NVIDIA FLUX image generation.')
@@ -159,7 +164,8 @@ export function getBlogStatus(env = process.env) {
             llm: {
                 configured: llmConfigured,
                 mainConfigured: llmConfigured,
-                reviewConfigured: reviewLlmConfigured || llmConfigured,
+                reviewConfigured: nvidiaReviewConfigured || reviewLlmConfigured || llmConfigured,
+                nvidiaQwenConfigured,
                 openAiFallbackConfigured,
             },
             topicDiscovery: {

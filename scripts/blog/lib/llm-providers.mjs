@@ -52,6 +52,14 @@ class OpenAiCompatibleRuntimeProvider {
 }
 
 export function createMainLlmProvider(env = process.env) {
+    if ((env.USE_NVIDIA_QWEN === 'true' || configured(env.NVIDIA_LLM_API_KEY) || configured(env.NVIDIA_QWEN_API_KEY)) && configured(env.NVIDIA_LLM_MODEL || env.NVIDIA_QWEN_MODEL)) {
+        return new OpenAiCompatibleRuntimeProvider({
+            name: 'nvidia-qwen',
+            url: env.NVIDIA_LLM_URL || 'https://integrate.api.nvidia.com/v1/chat/completions',
+            model: env.NVIDIA_LLM_MODEL || env.NVIDIA_QWEN_MODEL || 'qwen/qwen3-coder-480b-a35b-instruct',
+            apiKey: env.NVIDIA_LLM_API_KEY || env.NVIDIA_QWEN_API_KEY,
+        })
+    }
     const hasLocal = configured(env.LOCAL_LLM_URL) && configured(env.LOCAL_LLM_MODEL)
     if (env.USE_GPT_OSS === 'true' && hasLocal) {
         return new OpenAiCompatibleRuntimeProvider({
@@ -81,6 +89,14 @@ export function createMainLlmProvider(env = process.env) {
 }
 
 export function createReviewLlmProvider(env = process.env) {
+    if ((env.USE_NVIDIA_QWEN_REVIEW === 'true' || configured(env.NVIDIA_REVIEW_LLM_API_KEY)) && configured(env.NVIDIA_REVIEW_LLM_MODEL || env.NVIDIA_LLM_MODEL || env.NVIDIA_QWEN_MODEL)) {
+        return new OpenAiCompatibleRuntimeProvider({
+            name: 'nvidia-qwen-review',
+            url: env.NVIDIA_REVIEW_LLM_URL || env.NVIDIA_LLM_URL || 'https://integrate.api.nvidia.com/v1/chat/completions',
+            model: env.NVIDIA_REVIEW_LLM_MODEL || env.NVIDIA_LLM_MODEL || env.NVIDIA_QWEN_MODEL || 'qwen/qwen3-coder-480b-a35b-instruct',
+            apiKey: env.NVIDIA_REVIEW_LLM_API_KEY || env.NVIDIA_LLM_API_KEY || env.NVIDIA_QWEN_API_KEY,
+        })
+    }
     if (configured(env.REVIEW_LLM_URL) && configured(env.REVIEW_LLM_MODEL)) {
         return new OpenAiCompatibleRuntimeProvider({
             name: 'review-openai-compatible',
