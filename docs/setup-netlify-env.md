@@ -86,17 +86,21 @@ OPENAI_MODEL=
 
 ```bash
 USE_IMAGE_MODEL=true
-IMAGE_PROVIDER=replicate
-REPLICATE_API_KEY=
-REPLICATE_MODEL=stability-ai/stable-diffusion
-REPLICATE_IMAGE_SIZE=1200x675
+IMAGE_PROVIDER=nvidia_flux
+NVIDIA_API_KEY=
+NVIDIA_FLUX_URL=https://ai.api.nvidia.com/v1/genai/black-forest-labs/flux.1-schnell
+NVIDIA_FLUX_MODEL=black-forest-labs/flux.1-schnell
+NVIDIA_IMAGE_SIZE=1200x675
+NVIDIA_FLUX_STEPS=4
+NVIDIA_FLUX_CFG_SCALE=0
+NVIDIA_FLUX_TIMEOUT_MS=120000
 COMFYUI_URL=
 COMFYUI_WORKFLOW_PATH=
 COMFYUI_AUTH_HEADER=
 USE_GPT_IMAGE=true
 ```
 
-The current production-safe default is `IMAGE_PROVIDER=replicate` using Replicate Stable Diffusion. Keep `REPLICATE_IMAGE_SIZE=1200x675` for blog hero images. If Replicate fails, the pipeline saves a fallback placeholder for preview, marks the image as failed in Notion, and notifies Slack. If you want to switch to ComfyUI later, set `IMAGE_PROVIDER=local_comfyui`, then add `COMFYUI_URL` and `COMFYUI_WORKFLOW_PATH`. For protected ComfyUI servers, put the full auth header in `COMFYUI_AUTH_HEADER`, for example `Authorization: Bearer ...`.
+The current production-safe default is `IMAGE_PROVIDER=nvidia_flux` using NVIDIA Build/NIM FLUX.1-schnell. Keep `NVIDIA_IMAGE_SIZE=1200x675` for blog hero intent; the provider will choose the closest NVIDIA-supported image dimensions. If NVIDIA FLUX fails, the pipeline saves a fallback placeholder for preview, marks the image as failed in Notion, and notifies Slack. If you want to switch to ComfyUI later, set `IMAGE_PROVIDER=local_comfyui`, then add `COMFYUI_URL` and `COMFYUI_WORKFLOW_PATH`. For protected ComfyUI servers, put the full auth header in `COMFYUI_AUTH_HEADER`, for example `Authorization: Bearer ...`.
 
 ## Audio variables
 

@@ -3,10 +3,6 @@ import fs from 'node:fs/promises'
 export async function generateWithImageProvider({ article, output }) {
     const provider = process.env.IMAGE_PROVIDER || 'local_comfyui'
 
-    if (provider === 'replicate') {
-        return generateReplicateImage({ article, output })
-    }
-
     if (provider === 'nvidia_flux' || provider === 'nvidia') {
         return generateNvidiaFluxImage({ article, output })
     }
@@ -28,7 +24,7 @@ export async function generateWithImageProvider({ article, output }) {
 }
 
 function imageDimensions() {
-    const [widthRaw, heightRaw] = String(process.env.REPLICATE_IMAGE_SIZE || process.env.NVIDIA_IMAGE_SIZE || '1200x675').split('x')
+    const [widthRaw, heightRaw] = String(process.env.NVIDIA_IMAGE_SIZE || '1200x675').split('x')
     const requestedWidth = Number(widthRaw) || 1200
     const requestedHeight = Number(heightRaw) || 675
     const ratio = requestedWidth / requestedHeight
@@ -42,7 +38,7 @@ function imageDimensions() {
 }
 
 function nvidiaDimensions() {
-    const [widthRaw, heightRaw] = String(process.env.NVIDIA_IMAGE_SIZE || process.env.REPLICATE_IMAGE_SIZE || '1200x675').split('x')
+    const [widthRaw, heightRaw] = String(process.env.NVIDIA_IMAGE_SIZE || '1200x675').split('x')
     const requestedWidth = Number(widthRaw) || 1200
     const requestedHeight = Number(heightRaw) || 675
     const ratio = requestedWidth / requestedHeight
@@ -113,82 +109,6 @@ function extractNvidiaImage(json = {}) {
     return null
 }
 
-async function replicateRequest(url, init = {}) {
-    const token = process.env.REPLICATE_API_KEY
-    if (!token) return null
-    const response = await fetch(url, {
-        ...init,
-        headers: {
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json',
-            ...(init.headers || {}),
-        },
-    })
-    if (!response.ok) throw new Error(`Replicate API failed: ${response.status} ${await response.text()}`)
-    return response.json()
-}
-
-async function pollReplicatePrediction(prediction) {
-    let current = prediction
-    for (let attempt = 0; attempt < 24; attempt += 1) {
-        if (['succeeded', 'failed', 'canceled'].includes(current.status)) return current
-        const getUrl = current.urls?.get || `https://api.replicate.com/v1/predictions/${current.id}`
-        await new Promise((resolve) => setTimeout(resolve, 5000))
-        current = await replicateRequest(getUrl, { method: 'GET' })
-    }
-    return current
-}
-
-async function generateReplicateImage({ article, output }) {
-    if (!process.env.REPLICATE_API_KEY) return null
-    const model = process.env.REPLICATE_MODEL || 'stability-ai/stable-diffusion'
-    const [owner, name] = model.split('/')
-    if (!owner || !name) throw new Error('REPLICATE_MODEL must use owner/model format, for example stability-ai/stable-diffusion.')
-    const { width, height, requestedWidth, requestedHeight } = imageDimensions()
-    const prompt = imagePrompt(article)
-    const modelDetails = await replicateRequest(`https://api.replicate.com/v1/models/${owner}/${name}`, { method: 'GET' })
-    const version = modelDetails?.latest_version?.id
-    if (!version) throw new Error(`Replicate model ${model} did not return a latest version.`)
-    const prediction = await replicateRequest('https://api.replicate.com/v1/predictions', {
-        method: 'POST',
-        headers: { Prefer: 'wait=60' },
-        body: JSON.stringify({
-            version,
-            input: {
-                prompt,
-                width,
-                height,
-                num_outputs: 1,
-                negative_prompt: 'text, words, letters, watermark, logo, blurry, distorted user interface, malformed hands',
-                scheduler: 'DPMSolverMultistep',
-                num_inference_steps: 35,
-                guidance_scale: 7.5,
-            },
-        }),
-    })
-    const completed = await pollReplicatePrediction(prediction)
-    if (completed.status !== 'succeeded') {
-        throw new Error(`Replicate prediction ${completed.id || ''} ended with status ${completed.status || 'unknown'}.`)
-    }
-    const url = outputUrl(completed)
-    if (!url) throw new Error('Replicate prediction did not return an image URL.')
-    const imageResponse = await fetch(url)
-    if (!imageResponse.ok) throw new Error(`Replicate image download failed: ${imageResponse.status}`)
-    await fs.writeFile(output, Buffer.from(await imageResponse.arrayBuffer()))
-    return {
-        provider: 'replicate',
-        path: output,
-        predictionId: completed.id,
-        sourceUrl: url,
-        width,
-        height,
-        requestedWidth,
-        requestedHeight,
-        model,
-        version,
-    }
-}
-
 async function generateNvidiaFluxImage({ article, output }) {
     const token = process.env.NVIDIA_API_KEY || process.env.NVIDIA_NIM_API_KEY
     if (!token) return null
@@ -196,26 +116,37 @@ async function generateNvidiaFluxImage({ article, output }) {
     const model = process.env.NVIDIA_FLUX_MODEL || 'black-forest-labs/flux.1-schnell'
     const { width, height, requestedWidth, requestedHeight } = nvidiaDimensions()
     const prompt = imagePrompt(article)
-    const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            prompt,
-            width,
-            height,
-            cfg_scale: Number(process.env.NVIDIA_FLUX_CFG_SCALE || 0),
-            mode: 'base',
-            samples: 1,
-            seed: Number(process.env.NVIDIA_FLUX_SEED || 0),
-            steps: Number(process.env.NVIDIA_FLUX_STEPS || 4),
-        }),
-    })
-    if (!response.ok) throw new Error(`NVIDIA FLUX API failed: ${response.status} ${await response.text()}`)
-    const json = await response.json()
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), Number(process.env.NVIDIA_FLUX_TIMEOUT_MS || 120000))
+    let json
+    try {
+        const response = await fetch(endpoint, {
+            method: 'POST',
+            signal: controller.signal,
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                prompt,
+                width,
+                height,
+                cfg_scale: Number(process.env.NVIDIA_FLUX_CFG_SCALE || 0),
+                mode: 'base',
+                samples: 1,
+                seed: Number(process.env.NVIDIA_FLUX_SEED || 0),
+                steps: Number(process.env.NVIDIA_FLUX_STEPS || 4),
+            }),
+        })
+        if (!response.ok) throw new Error(`NVIDIA FLUX API failed: ${response.status} ${await response.text()}`)
+        json = await response.json()
+    } catch (error) {
+        if (error.name === 'AbortError') throw new Error(`NVIDIA FLUX API timed out after ${process.env.NVIDIA_FLUX_TIMEOUT_MS || 120000}ms.`)
+        throw error
+    } finally {
+        clearTimeout(timeout)
+    }
     const image = extractNvidiaImage(json)
     if (!image) throw new Error(`NVIDIA FLUX response did not include a supported image payload. Keys: ${Object.keys(json).join(', ')}`)
     if (image.url) {
