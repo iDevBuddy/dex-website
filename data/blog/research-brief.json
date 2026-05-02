@@ -1,0 +1,201 @@
+{
+  "topic": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+  "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+  "targetKeyword": "planning ai needs memory, not just automation - logistics viewpoints",
+  "secondaryKeywords": [
+    "AI automation workflow",
+    "AI agents for business",
+    "workflow automation examples"
+  ],
+  "searchIntent": "Business owner or operator looking for practical implementation guidance.",
+  "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation.",
+  "mainPainPoint": "They want useful automation but do not want generic AI advice or risky SEO shortcuts.",
+  "competitorGaps": [
+    "Most posts explain concepts but do not provide a workflow.",
+    "Many posts ignore approval, logging, and failure handling.",
+    "Few connect AI automation to business outcomes."
+  ],
+  "questionsToAnswer": [
+    "What is Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints?",
+    "When should a business use it?",
+    "What workflow should be automated first?",
+    "What mistakes should be avoided?"
+  ],
+  "suggestedOutline": [
+    "Short expert intro",
+    "Key takeaways",
+    "Direct answer",
+    "Practical explanation",
+    "Business use case",
+    "Step-by-step workflow",
+    "Tools",
+    "Expert insight",
+    "Mistakes",
+    "Implementation checklist",
+    "FAQ",
+    "CTA"
+  ],
+  "sources": [
+    {
+      "title": "OpenAI Platform Documentation",
+      "organization": "OpenAI",
+      "url": "https://platform.openai.com/docs/",
+      "type": "Official documentation",
+      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "automation",
+        "workflow",
+        "prompt"
+      ],
+      "authorityScore": 83
+    },
+    {
+      "title": "GitHub Docs: GitHub Actions",
+      "organization": "GitHub",
+      "url": "https://docs.github.com/en/actions",
+      "type": "Official documentation",
+      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
+      "tags": [
+        "github",
+        "automation",
+        "workflow",
+        "ci",
+        "deployment"
+      ],
+      "authorityScore": 83
+    },
+    {
+      "title": "The State of AI",
+      "organization": "McKinsey & Company",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "type": "Industry report",
+      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
+      "tags": [
+        "ai",
+        "business",
+        "trend",
+        "strategy"
+      ],
+      "authorityScore": 80
+    },
+    {
+      "title": "Microsoft Learn: Azure AI Services",
+      "organization": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
+      "type": "Official documentation",
+      "supports": "Supports claims about practical AI service patterns, responsible deployment, and AI workflow building blocks.",
+      "tags": [
+        "ai",
+        "automation",
+        "workflow",
+        "business",
+        "agents"
+      ],
+      "authorityScore": 79
+    },
+    {
+      "title": "IBM: What Is Workflow Automation?",
+      "organization": "IBM",
+      "url": "https://www.ibm.com/topics/workflow-automation",
+      "type": "Industry explainer",
+      "supports": "Defines workflow automation and provides business context for improving repeatable operational processes.",
+      "tags": [
+        "workflow",
+        "automation",
+        "business",
+        "operations"
+      ],
+      "authorityScore": 76
+    }
+  ],
+  "sourcesToCite": [
+    "https://platform.openai.com/docs/",
+    "https://docs.github.com/en/actions",
+    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+    "https://learn.microsoft.com/en-us/azure/ai-services/",
+    "https://www.ibm.com/topics/workflow-automation"
+  ],
+  "sourceStatus": "Ready",
+  "sourceQualityScore": 80,
+  "sourceNotes": "Selected 5 authoritative sources with average authority score 80.",
+  "duplicateStatus": "unique",
+  "duplicateScore": 11,
+  "duplicateMatch": {
+    "slug": "ai-authority-blog-engine",
+    "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+    "url": "/blog/ai-authority-blog-engine",
+    "similarity": 0.11
+  },
+  "suggestedAngle": "",
+  "suggestedTopic": "",
+  "trendAnalysis": {
+    "trendScore": 75,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 68,
+    "matchedTrendTerms": [
+      "automation"
+    ],
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
+    "realtimeSignals": [
+      {
+        "source": "Google News",
+        "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints"
+      },
+      {
+        "source": "Google News",
+        "title": "Meta’s AI Capex Reset Turns Supply Chain Into a Board-Level Constraint - Logistics Viewpoints"
+      },
+      {
+        "source": "Google News",
+        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
+      },
+      {
+        "source": "Google News",
+        "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
+      },
+      {
+        "source": "Google News",
+        "title": "State Management Is the Missing Layer in Supply Chain AI - Logistics Viewpoints"
+      },
+      {
+        "source": "Google News",
+        "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
+      },
+      {
+        "source": "Google News",
+        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
+      },
+      {
+        "source": "Google News",
+        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+      }
+    ],
+    "realtimeSources": [
+      "Google News"
+    ],
+    "realtimeUnavailableSources": [
+      "Reddit: 403"
+    ]
+  },
+  "examplesToInclude": [
+    "Slack intake workflow: Automate customer request intake by capturing messages in Slack, logging them with context memory, and routing to the right team with approval steps.",
+    "CRM follow-up workflow: Use AI agents to remember customer interaction history and automate personalized follow-up emails with quality checks before sending.",
+    "Support triage workflow: Automate ticket classification with AI memory of past issues, escalate critical cases after approval, and log all actions for audit."
+  ],
+  "suggestedInternalLinks": [
+    "/blog/ai-authority-blog-engine",
+    "/#services",
+    "/#contact"
+  ],
+  "suggestedCTA": "Book an automation consult",
+  "contentFormat": "expert guide",
+  "contentPersona": "Business Automation Expert",
+  "businessFunction": "General",
+  "authorityAngle": "practical_workflow",
+  "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
+  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
+}
