@@ -47,6 +47,8 @@ export function buildSystemReport(env = process.env, runtime = {}) {
         image: {
             provider: status.imageProvider.provider,
             comfyUiConfigured: configured(env, 'COMFYUI_URL') && configured(env, 'COMFYUI_WORKFLOW_PATH'),
+            nvidiaFluxConfigured: (configured(env, 'NVIDIA_API_KEY') || configured(env, 'NVIDIA_NIM_API_KEY')) && configured(env, 'NVIDIA_FLUX_URL'),
+            nvidiaFluxModel: env.NVIDIA_FLUX_MODEL || 'black-forest-labs/flux.1-schnell',
             replicateConfigured: configured(env, 'REPLICATE_API_KEY') && configured(env, 'REPLICATE_MODEL'),
             replicateModel: env.REPLICATE_MODEL || '',
             replicateImageSize: env.REPLICATE_IMAGE_SIZE || '1200x675',

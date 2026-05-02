@@ -36,6 +36,9 @@ function imageProviderStatus(env) {
     if (provider === 'local_comfyui') {
         if (!configured(env, 'COMFYUI_URL')) missingValues.push('COMFYUI_URL')
         if (!configured(env, 'COMFYUI_WORKFLOW_PATH')) missingValues.push('COMFYUI_WORKFLOW_PATH')
+    } else if (provider === 'nvidia_flux' || provider === 'nvidia') {
+        if (!configured(env, 'NVIDIA_API_KEY') && !configured(env, 'NVIDIA_NIM_API_KEY')) missingValues.push('NVIDIA_API_KEY')
+        if (!configured(env, 'NVIDIA_FLUX_URL')) missingValues.push('NVIDIA_FLUX_URL')
     } else if (provider === 'gpt_image') {
         if (env.USE_GPT_IMAGE !== 'true') missingValues.push('USE_GPT_IMAGE=true')
         if (!configured(env, 'OPENAI_API_KEY')) missingValues.push('OPENAI_API_KEY')
@@ -79,6 +82,11 @@ export function getBlogStatus(env = process.env) {
         'REVIEW_LLM_MODEL',
         'OPENAI_API_KEY',
         'OPENAI_MODEL',
+        'NVIDIA_API_KEY',
+        'NVIDIA_FLUX_URL',
+        'NVIDIA_FLUX_MODEL',
+        'NVIDIA_IMAGE_SIZE',
+        'NVIDIA_FLUX_STEPS',
         'REPLICATE_API_KEY',
         'REPLICATE_MODEL',
         'REPLICATE_IMAGE_SIZE',
