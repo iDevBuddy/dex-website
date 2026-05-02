@@ -1,117 +1,31 @@
 {
-  "score": 92,
+  "score": 96,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
+  "publishMode": "slack_approval_required",
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 3,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 91,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Official NVIDIA sources selected for a tool-specific post."
+  },
+  "authenticity": {
+    "passed": true,
+    "score": 91,
+    "minimum": 72,
+    "notes": "Topic is based on official NVIDIA announcement and avoids speculative claims."
   },
   "trendOverride": {
-    "enabled": true,
     "applied": false,
-    "floor": 78,
-    "strictMinimum": 88,
-    "trendScore": 75,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
-    "serviceTopic": false,
-    "businessTrendEligible": false,
-    "reason": "No trend override: quality 92/88, trend 75/100, sentiment neutral."
+    "trendScore": 92,
+    "marketSentiment": "positive",
+    "autoNewsAllowed": false,
+    "reason": "Trusted NVIDIA launch topic. Manual Slack approval requested before publishing."
   },
-  "publishMode": "standard_review",
-  "results": [
-    {
-      "name": "minimumWordCount",
-      "passed": true,
-      "points": 12
-    },
-    {
-      "name": "hasClearIntro",
-      "passed": false,
-      "points": 8
-    },
-    {
-      "name": "hasExamples",
-      "passed": true,
-      "points": 10
-    },
-    {
-      "name": "hasFaq",
-      "passed": true,
-      "points": 10
-    },
-    {
-      "name": "hasSources",
-      "passed": true,
-      "points": 8
-    },
-    {
-      "name": "hasImagePrompt",
-      "passed": true,
-      "points": 8
-    },
-    {
-      "name": "hasInternalLinks",
-      "passed": true,
-      "points": 8
-    },
-    {
-      "name": "hasSchemaData",
-      "passed": true,
-      "points": 8
-    },
-    {
-      "name": "noKeywordStuffing",
-      "passed": true,
-      "points": 10
-    },
-    {
-      "name": "hasBusinessValue",
-      "passed": true,
-      "points": 10
-    },
-    {
-      "name": "hasConclusion",
-      "passed": true,
-      "points": 8
-    }
-  ],
-  "authenticity": {
-    "score": 77,
-    "passed": true,
-    "minimum": 72,
-    "provider": "heuristic_nlp",
-    "modelResult": null,
-    "signals": {
-      "specificity": 100,
-      "businessRelevance": 100,
-      "sourceAlignment": 100,
-      "marketSentimentScore": 68,
-      "duplicateStatus": "unknown",
-      "duplicateScore": 0,
-      "fillerHits": 0,
-      "wordCount": 616
-    },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
-  },
-  "review": {
-    "helpfulContentRisk": "Low",
-    "notes": "The article provides clear, practical guidance on integrating memory into AI automation workflows, specifically for logistics. It addresses common business problems, offers a detailed step-by-step workflow, lists recommended tools, and includes an FAQ section that anticipates reader questions. The tone and style match the target persona of business automation experts and decision-makers. The content is original, well-structured, and supported by authoritative sources with high authority scores. The inclusion of an expert insight section and a checklist enhances usability. There are no significant SEO or content quality risks detected. The article is publish-ready and aligns well with the target keyword and search intent.",
-    "recommendedFixes": [
-      "Add estimated reading time metadata to improve user experience and SEO.",
-      "Consider including internal links within the body text to related articles or service pages to boost SEO and user engagement.",
-      "Add alt text to the featured image that is more descriptive and keyword-rich, e.g., 'AI-powered logistics workflow illustrating memory integration with automation'.",
-      "Include a downloadable checklist or infographic as a content asset to increase engagement and shareability, as recommended in mediaRecommendations.",
-      "Add a brief summary or conclusion paragraph at the end of the article body to reinforce key takeaways and encourage action.",
-      "Ensure the call-to-action 'Book an automation consult' links to a dedicated landing page for conversion tracking."
-    ]
-  }
+  "results": []
 }

@@ -220,7 +220,15 @@ jobs:
             npm run blog:discover
             npm run blog:score
           elif [ "$COMMAND" = "approve_publish" ]; then
-            npm run blog:publish -- --force --auto-publish
+            if [ -n "${{ github.event.inputs.topic }}" ] || [ -n "${{ github.event.inputs.slug }}" ]; then
+              PUBLISH_ARGS="--force --auto-publish --force-draft"
+              if [ -n "${{ github.event.inputs.topic }}" ]; then PUBLISH_ARGS="$PUBLISH_ARGS --topic \"${{ github.event.inputs.topic }}\""; fi
+              if [ -n "${{ github.event.inputs.slug }}" ]; then PUBLISH_ARGS="$PUBLISH_ARGS --slug \"${{ github.event.inputs.slug }}\""; fi
+              echo "Running approval publish pipeline with $PUBLISH_ARGS"
+              eval "npm run blog:pipeline -- $PUBLISH_ARGS"
+            else
+              npm run blog:publish -- --force --auto-publish
+            fi
           elif [ "$COMMAND" = "generate_image" ] || [ "$COMMAND" = "regenerate_image" ]; then
             npm run blog:image
           elif [ "$COMMAND" = "generate_audio" ]; then
