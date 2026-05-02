@@ -41,7 +41,7 @@ export function parseFrontmatter(raw) {
 export function stringifyFrontmatter(data, body) {
     const lines = Object.entries(data).map(([key, value]) => {
         if (Array.isArray(value) || typeof value === 'object') return `${key}: ${JSON.stringify(value)}`
-        return `${key}: "${String(value).replaceAll('"', '\\"')}"`
+        return `${key}: ${JSON.stringify(String(value))}`
     })
     return `---\n${lines.join('\n')}\n---\n\n${body.trim()}\n`
 }
