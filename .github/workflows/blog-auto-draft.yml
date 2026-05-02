@@ -153,6 +153,9 @@ jobs:
       - name: Validate schedule
         run: npm run blog:schedule:test
 
+      - name: Validate image provider configuration
+        run: npm run blog:image:check
+
       - name: Respect sprint or normal schedule
         id: schedule_gate
         if: github.event_name == 'schedule'

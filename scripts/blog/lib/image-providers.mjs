@@ -64,11 +64,11 @@ function imagePrompt(article) {
         frontmatter.contentPersona,
         frontmatter.businessFunction,
     ].filter(Boolean).join(', ')
-    const base = article.imagePrompt || frontmatter.imagePrompt || frontmatter.title
+    const base = `A modern editorial hero image about ${frontmatter.title || 'AI business automation'}`
     return [
         base,
         `Editorial blog hero image for: ${keywords}`,
-        'premium business automation style, realistic SaaS workflow scene, clean composition, warm orange accent, no readable text, no logos, no distorted UI text',
+        'premium business automation style, realistic modern office environment, subtle abstract AI memory concept, glowing network lines, clean composition, warm orange accent, no diagrams, no interface screenshots, no text, no words, no letters, no numbers, no labels, no logos',
     ].filter(Boolean).join('. ')
 }
 
@@ -135,7 +135,7 @@ async function generateNvidiaFluxImage({ article, output }) {
                 cfg_scale: Number(process.env.NVIDIA_FLUX_CFG_SCALE || 0),
                 mode: 'base',
                 samples: 1,
-                seed: Number(process.env.NVIDIA_FLUX_SEED || 0),
+                seed: process.env.NVIDIA_FLUX_SEED ? Number(process.env.NVIDIA_FLUX_SEED) : Math.floor(Math.random() * 2147483647),
                 steps: Number(process.env.NVIDIA_FLUX_STEPS || 4),
             }),
         })

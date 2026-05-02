@@ -53,6 +53,17 @@ function makePng(width = 1280, height = 720) {
     ])
 }
 
+async function writeFallbackIfMissing(output) {
+    try {
+        const stat = await fs.stat(output)
+        if (stat.size > 0) return { preservedExisting: true }
+    } catch {
+        // No existing image to preserve.
+    }
+    await fs.writeFile(output, makePng())
+    return { preservedExisting: false }
+}
+
 export async function generateImage(articleArg, options = getPipelineOptions()) {
     await ensureBlogDirs()
     const article = articleArg || await readPipelineJson('draft-article.json', null, options)
@@ -91,17 +102,15 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
             return providerResult
         }
         if (process.env.REQUIRE_REAL_IMAGE_MODEL === 'true' && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true') {
-            const message = 'Real image provider is required. Add COMFYUI_URL and COMFYUI_WORKFLOW_PATH.'
-            const fallback = makePng()
-            await fs.writeFile(output, fallback)
-            const failedWithFallback = { ...result, failed: true, provider: 'fallback_png_after_missing_provider', path: output, error: message }
+            const message = imageProviderSetupMessage()
+            const fallback = await writeFallbackIfMissing(output)
+            const failedWithFallback = { ...result, failed: true, provider: 'fallback_png_after_missing_provider', path: output, error: message, ...fallback }
             await writePipelineJson('image-result.json', failedWithFallback, options)
             await syncBlogDraft(article, { imageStatus: 'Failed', imageProviderStatus: 'Missing Provider', publishReady: false, blockingIssues: message, notes: message, assetUrls: result.url })
             await notifySlack(message)
             return failedWithFallback
         }
-        const fallback = makePng()
-        await fs.writeFile(output, fallback)
+        await writeFallbackIfMissing(output)
         article.frontmatter.image = `/blog/images/${slug}.png`
         article.frontmatter.imageAlt ||= `AI automation workflow visual for ${article.frontmatter.title}`
         const fallbackResult = { ...result, provider: 'fallback_png', path: output }
@@ -112,16 +121,14 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
     } catch (error) {
         warn('image_generation_failed', { message: error.message })
         if (process.env.REQUIRE_REAL_IMAGE_MODEL === 'true' && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true') {
-            const fallback = makePng()
-            await fs.writeFile(output, fallback)
-            const failed = { ...result, failed: true, provider: 'fallback_png_after_provider_error', path: output, error: error.message }
+            const fallback = await writeFallbackIfMissing(output)
+            const failed = { ...result, failed: true, provider: 'fallback_png_after_provider_error', path: output, error: error.message, ...fallback }
             await writePipelineJson('image-result.json', failed, options)
             await syncBlogDraft(article, { imageStatus: 'Failed', imageProviderStatus: 'Failed', publishReady: false, blockingIssues: `Image generation failed: ${error.message}`, notes: `Image generation failed: ${error.message}`, assetUrls: result.url })
             await notifySlack(`Image generation failed for ${article.frontmatter.title}: ${error.message}. A fallback placeholder was saved for draft preview.`)
             return failed
         }
-        const fallback = makePng()
-        await fs.writeFile(output, fallback)
+        await writeFallbackIfMissing(output)
         article.frontmatter.image = `/blog/images/${slug}.png`
         article.frontmatter.imageAlt ||= `AI automation workflow visual for ${article.frontmatter.title}`
         const fallbackResult = { ...result, provider: 'fallback_png_after_provider_error', path: output, providerError: error.message }
@@ -130,6 +137,17 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
         await notifySlack(`Image provider failed for ${article.frontmatter.title}; fallback image generated.`)
         return fallbackResult
     }
+}
+
+function imageProviderSetupMessage() {
+    const provider = process.env.IMAGE_PROVIDER || 'local_comfyui'
+    if (provider === 'nvidia_flux' || provider === 'nvidia') {
+        return 'Real image provider is required. Add NVIDIA_API_KEY, NVIDIA_FLUX_URL, NVIDIA_FLUX_MODEL, and NVIDIA_IMAGE_SIZE.'
+    }
+    if (provider === 'gpt_image' || process.env.USE_GPT_IMAGE === 'true') {
+        return 'Real image provider is required. Add OPENAI_API_KEY and set USE_GPT_IMAGE=true.'
+    }
+    return 'Real image provider is required. Add COMFYUI_URL and COMFYUI_WORKFLOW_PATH.'
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

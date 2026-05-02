@@ -123,7 +123,15 @@ export function getBlogStatus(env = process.env) {
     if (!configured(env, 'SLACK_SIGNING_SECRET')) nextSteps.push('Add SLACK_SIGNING_SECRET for verified Slack commands.')
     if (!configured(env, 'GITHUB_TOKEN')) nextSteps.push('Add GITHUB_TOKEN with repo and workflow permissions to enable Slack/Notion dispatch.')
     if (!llmConfigured) nextSteps.push('Add LOCAL_LLM_URL and LOCAL_LLM_MODEL, or OPENAI_API_KEY, to enable AI article generation.')
-    if (!imageConfigured) nextSteps.push('Configure COMFYUI_URL and COMFYUI_WORKFLOW_PATH or enable GPT image.')
+    if (!imageConfigured) {
+        if (imageProvider === 'nvidia_flux' || imageProvider === 'nvidia') {
+            nextSteps.push('Add NVIDIA_API_KEY, NVIDIA_FLUX_URL, NVIDIA_FLUX_MODEL, and NVIDIA_IMAGE_SIZE to enable NVIDIA FLUX image generation.')
+        } else if (imageProvider === 'gpt_image') {
+            nextSteps.push('Add OPENAI_API_KEY and USE_GPT_IMAGE=true to enable GPT image generation.')
+        } else {
+            nextSteps.push('Configure COMFYUI_URL and COMFYUI_WORKFLOW_PATH, or switch IMAGE_PROVIDER to nvidia_flux.')
+        }
+    }
 
     return {
         ok: true,

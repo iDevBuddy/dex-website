@@ -4,8 +4,10 @@ dist
 .env.*
 !.env.example
 .vercel
+.netlify
 preview.log
 preview.err.log
 data/blog/dry-run/
 data/blog/image-result.json
 data/blog/audio-result.json
+data/blog/image-config-report.json

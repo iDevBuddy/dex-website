@@ -21,6 +21,7 @@
         "blog:quality": "node -e \"import('./scripts/blog/quality-check.mjs').then(m=>m.qualityCheck().then(r=>{if(!r.passed)process.exit(2)}))\" --",
         "blog:duplicates": "node scripts/blog/check-duplicates.mjs",
         "blog:authenticity": "node scripts/blog/authenticity-check.mjs",
+        "blog:image:check": "node scripts/blog/validate-image-config.mjs",
         "blog:image": "node -e \"import('./scripts/blog/generate-image.mjs').then(m=>m.generateImage())\" --",
         "blog:audio": "node -e \"import('./scripts/blog/generate-audio.mjs').then(m=>m.generateAudio())\" --",
         "blog:media": "node -e \"import('./scripts/blog/recommend-media.mjs').then(m=>m.recommendMedia())\" --",

@@ -44,7 +44,7 @@ export async function publishPost(options = getPipelineOptions()) {
     if (quality?.trendOverride?.applied && !quality?.strictPassed) throw new Error('Publish blocked: trend override drafts require manual editorial approval.')
     if (quality?.authenticity && !quality.authenticity.passed) throw new Error('Publish blocked: authenticity/relevance review is required before publishing.')
     if (config.requireRealImageModel && process.env.ALLOW_FALLBACK_IN_PRODUCTION !== 'true' && (!imageResult || imageResult.failed || /fallback/i.test(imageResult.provider || ''))) {
-        throw new Error('Publish blocked: real image provider is required. Add COMFYUI_URL and COMFYUI_WORKFLOW_PATH.')
+        throw new Error(`Publish blocked: real image provider is required. ${imageProviderSetupMessage()}`)
     }
 
     await fs.writeFile(output, stringifyFrontmatter(article.frontmatter, article.body))
@@ -52,6 +52,13 @@ export async function publishPost(options = getPipelineOptions()) {
     await notifySlack(`Blog published: ${article.frontmatter.title}\n${config.siteUrl}/blog/${article.frontmatter.slug}`)
     log('publish_success', { slug: article.frontmatter.slug, output })
     return { published: true, output }
+}
+
+function imageProviderSetupMessage() {
+    const provider = process.env.IMAGE_PROVIDER || 'local_comfyui'
+    if (provider === 'nvidia_flux' || provider === 'nvidia') return 'Add NVIDIA_API_KEY, NVIDIA_FLUX_URL, NVIDIA_FLUX_MODEL, and NVIDIA_IMAGE_SIZE.'
+    if (provider === 'gpt_image' || process.env.USE_GPT_IMAGE === 'true') return 'Add OPENAI_API_KEY and USE_GPT_IMAGE=true.'
+    return 'Add COMFYUI_URL and COMFYUI_WORKFLOW_PATH.'
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
