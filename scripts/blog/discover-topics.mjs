@@ -5,6 +5,7 @@ import { getPipelineOptions, modeDetails, writePipelineJson } from './lib/cli.mj
 import { log, warn } from './lib/logger.mjs'
 import { syncBlogIdea } from './lib/notion-dashboard.mjs'
 import { enrichTopicPersona } from './lib/persona.mjs'
+import { fetchOfficialAiNews } from './lib/official-news.mjs'
 
 const seeds = [
     'GPT-OSS automation tricks for business workflows',
@@ -105,6 +106,7 @@ export async function discoverTopics(options = getPipelineOptions()) {
 
     const feedTopics = (
         await Promise.all([
+            fetchOfficialAiNews(options.sourceLimit),
             fetchFeed('https://news.google.com/rss/search?q=AI%20automation%20business&hl=en-US&gl=US&ceid=US:en', 'Google News RSS', options.sourceLimit),
             fetchFeed('https://hnrss.org/newest?q=AI%20automation', 'Hacker News RSS', options.sourceLimit),
             fetchFeed('https://www.reddit.com/r/automation/.rss', 'Reddit r/automation RSS', options.sourceLimit),
@@ -122,7 +124,7 @@ export async function discoverTopics(options = getPipelineOptions()) {
             ...item,
             slug: slugify(item.topic),
             keyword: item.topic.toLowerCase(),
-            category: mapCategory(item.topic),
+            category: item.category || mapCategory(item.topic),
             status: 'discovered',
             createdAt: new Date().toISOString(),
         }))

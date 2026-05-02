@@ -179,12 +179,13 @@ export function shouldApplyTrendQualityOverride(report = {}, topic = {}, options
     const businessTrendEligible = serviceTopic
         && trend.trendScore >= Number(process.env.BUSINESS_TREND_OVERRIDE_MIN_SCORE || 72)
         && trend.marketSentiment !== 'risky'
+    const autoNewsAllowed = process.env.AI_NEWS_AUTO_PUBLISH !== 'false' && Boolean(topic.trustedNewsSource || topic.officialSource)
     const finalApplied = enabled
         && (trend.trendOverrideEligible || businessTrendEligible)
         && score >= floor
         && score < strictMinimum
         && sourceGatePassed
-        && !options.autoPublish
+        && (!options.autoPublish || autoNewsAllowed)
 
     return {
         enabled,
@@ -196,8 +197,9 @@ export function shouldApplyTrendQualityOverride(report = {}, topic = {}, options
         marketSentimentScore: trend.marketSentimentScore,
         serviceTopic,
         businessTrendEligible,
+        autoNewsAllowed,
         reason: finalApplied
-            ? `Manual trend review allowed: quality ${score}/${strictMinimum}, trend ${trend.trendScore}/100, sentiment ${trend.marketSentiment}${serviceTopic ? ', service/business topic' : ''}.`
+            ? `${autoNewsAllowed && options.autoPublish ? 'Automatic trusted-news trend override allowed' : 'Manual trend review allowed'}: quality ${score}/${strictMinimum}, trend ${trend.trendScore}/100, sentiment ${trend.marketSentiment}${serviceTopic ? ', service/business topic' : ''}.`
             : `No trend override: quality ${score}/${strictMinimum}, trend ${trend.trendScore}/100, sentiment ${trend.marketSentiment}.`,
     }
 }

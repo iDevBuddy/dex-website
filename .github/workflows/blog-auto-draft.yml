@@ -98,6 +98,13 @@ jobs:
       USE_LOCAL_TTS: ${{ vars.USE_LOCAL_TTS }}
       TTS_PROVIDER: ${{ vars.TTS_PROVIDER }}
       TTS_API_URL: ${{ vars.TTS_API_URL }}
+      NVIDIA_TTS_API_KEY: ${{ vars.NVIDIA_TTS_API_KEY }}
+      NVIDIA_TTS_SERVER: ${{ vars.NVIDIA_TTS_SERVER }}
+      NVIDIA_TTS_FUNCTION_ID: ${{ vars.NVIDIA_TTS_FUNCTION_ID }}
+      NVIDIA_TTS_VOICE: ${{ vars.NVIDIA_TTS_VOICE }}
+      NVIDIA_TTS_LANGUAGE_CODE: ${{ vars.NVIDIA_TTS_LANGUAGE_CODE }}
+      NVIDIA_TTS_SAMPLE_RATE: ${{ vars.NVIDIA_TTS_SAMPLE_RATE }}
+      NVIDIA_TTS_MAX_CHARS: ${{ vars.NVIDIA_TTS_MAX_CHARS }}
       MANUAL_APPROVAL: ${{ vars.MANUAL_APPROVAL }}
       USE_AUTO_PUBLISH: ${{ vars.USE_AUTO_PUBLISH }}
       MIN_QUALITY_SCORE: ${{ vars.MIN_QUALITY_SCORE }}
@@ -144,6 +151,12 @@ jobs:
       GAMMA_API_KEY: ${{ vars.GAMMA_API_KEY }}
       SLIDES_PROVIDER: ${{ vars.SLIDES_PROVIDER }}
       INFOGRAPHIC_PROVIDER: ${{ vars.INFOGRAPHIC_PROVIDER }}
+      ENABLE_AI_NEWS_TRACKING: ${{ vars.ENABLE_AI_NEWS_TRACKING }}
+      AI_NEWS_AUTO_PUBLISH: ${{ vars.AI_NEWS_AUTO_PUBLISH }}
+      AI_NEWS_SOURCE_LIMIT: ${{ vars.AI_NEWS_SOURCE_LIMIT }}
+      AI_NEWS_RECENCY_HOURS: ${{ vars.AI_NEWS_RECENCY_HOURS }}
+      ALLOW_OFFICIAL_IMAGE_PLACEHOLDER: ${{ vars.ALLOW_OFFICIAL_IMAGE_PLACEHOLDER }}
+      SEO_AUDIT_MIN_SCORE: ${{ vars.SEO_AUDIT_MIN_SCORE }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -154,8 +167,18 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Setup Python for NVIDIA TTS
+        if: env.TTS_PROVIDER == 'nvidia_tts' || env.TTS_PROVIDER == 'nvidia_riva'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Install NVIDIA Riva client
+        if: env.TTS_PROVIDER == 'nvidia_tts' || env.TTS_PROVIDER == 'nvidia_riva'
+        run: pip install nvidia-riva-client
 
       - name: Validate schedule
         run: npm run blog:schedule:test

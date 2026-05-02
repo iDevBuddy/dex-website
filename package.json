@@ -18,6 +18,8 @@
         "blog:generate": "node -e \"import('./scripts/blog/generate-article.mjs').then(m=>m.generateArticle())\" --",
         "blog:draft": "node -e \"import('./scripts/blog/run-pipeline.mjs').then(m=>m.runPipeline()).catch(e=>{console.error(e.message||e);process.exit(1)})\" --",
         "blog:seo": "node -e \"import('./scripts/blog/seo-optimize.mjs').then(m=>m.seoOptimize())\" --",
+        "blog:seo-audit": "node scripts/blog/seo-audit.mjs",
+        "blog:news": "node scripts/blog/news-pipeline.mjs",
         "blog:quality": "node -e \"import('./scripts/blog/quality-check.mjs').then(m=>m.qualityCheck().then(r=>{if(!r.passed)process.exit(2)}))\" --",
         "blog:duplicates": "node scripts/blog/check-duplicates.mjs",
         "blog:authenticity": "node scripts/blog/authenticity-check.mjs",

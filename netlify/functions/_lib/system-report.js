@@ -58,8 +58,8 @@ export function buildSystemReport(env = process.env, runtime = {}) {
         audioTts: {
             provider: env.TTS_PROVIDER || 'browser_fallback',
             browserFallbackStatus: env.REQUIRE_REAL_TTS === 'true' ? 'blocked by REQUIRE_REAL_TTS' : 'available',
-            mp3GenerationStatus: configured(env, 'TTS_API_URL') || configured(env, 'PIPER_TTS_URL') || configured(env, 'KOKORO_TTS_URL') || configured(env, 'MINIMAX_API_KEY') || configured(env, 'ELEVENLABS_API_KEY') ? 'configured' : 'not configured',
-            missingVariables: ['TTS_API_URL', 'TTS_VOICE', 'TTS_SPEED'].filter((name) => !configured(env, name)),
+            mp3GenerationStatus: configured(env, 'NVIDIA_TTS_API_KEY') || configured(env, 'NVIDIA_API_KEY') || configured(env, 'TTS_API_URL') || configured(env, 'PIPER_TTS_URL') || configured(env, 'KOKORO_TTS_URL') || configured(env, 'MINIMAX_API_KEY') || configured(env, 'ELEVENLABS_API_KEY') ? 'configured' : 'not configured',
+            missingVariables: ['TTS_API_URL', 'TTS_VOICE', 'TTS_SPEED', 'NVIDIA_TTS_API_KEY', 'NVIDIA_TTS_FUNCTION_ID', 'NVIDIA_TTS_VOICE'].filter((name) => !configured(env, name)),
         },
         slack: {
             commandCenterConfigured: allConfigured(env, ['SLACK_SIGNING_SECRET', 'SLACK_WEBHOOK_URL', 'SLACK_BLOG_CHANNEL_ID']),
@@ -88,6 +88,8 @@ export function buildSystemReport(env = process.env, runtime = {}) {
             trendRecovery: status.trendRecovery,
             duplicateDetection: status.duplicateDetection,
             authenticity: status.authenticity,
+            aiNews: status.aiNews,
+            seoAudit: status.seoAudit,
         },
         pendingItems: {
             missingRequired: status.missingRequired,

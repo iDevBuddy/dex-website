@@ -33,6 +33,15 @@ async function fetchResearchNotes(topic) {
 export function createResearchBrief(topic) {
     topic = enrichTopicPersona(topic)
     const sourceSelection = selectSourcesForTopic(topic)
+    const officialSource = topic.officialUrl ? [{
+        title: `${topic.officialSource || 'Official'} announcement: ${topic.topic}`,
+        organization: topic.officialSource || 'Official source',
+        url: topic.officialUrl,
+        type: 'Official announcement',
+        supports: 'Primary source for what was announced, product naming, capabilities, availability, and official positioning.',
+        authorityScore: 95,
+    }] : []
+    const sources = [...officialSource, ...sourceSelection.sources]
     return {
         topic: topic.topic,
         slug: topic.slug,
@@ -53,8 +62,8 @@ export function createResearchBrief(topic) {
             'What mistakes should be avoided?',
         ],
         suggestedOutline: ['Short expert intro', 'Key takeaways', 'Direct answer', 'Practical explanation', 'Business use case', 'Step-by-step workflow', 'Tools', 'Expert insight', 'Mistakes', 'Implementation checklist', 'FAQ', 'CTA'],
-        sources: sourceSelection.sources,
-        sourcesToCite: sourceSelection.sources.map((source) => source.url),
+        sources,
+        sourcesToCite: sources.map((source) => source.url),
         sourceStatus: sourceSelection.sourceStatus,
         sourceQualityScore: sourceSelection.sourceQualityScore,
         sourceNotes: sourceSelection.sourceNotes,
@@ -96,8 +105,16 @@ export async function researchTopic(topicArg, options = getPipelineOptions()) {
         }
     }
     const sourceSelection = selectSourcesForTopic(topic)
-    brief.sources = sourceSelection.sources
-    brief.sourcesToCite = sourceSelection.sources.map((source) => source.url)
+    const officialSource = topic.officialUrl ? [{
+        title: `${topic.officialSource || 'Official'} announcement: ${topic.topic}`,
+        organization: topic.officialSource || 'Official source',
+        url: topic.officialUrl,
+        type: 'Official announcement',
+        supports: 'Primary source for what was announced, product naming, capabilities, availability, and official positioning.',
+        authorityScore: 95,
+    }] : []
+    brief.sources = [...officialSource, ...sourceSelection.sources]
+    brief.sourcesToCite = brief.sources.map((source) => source.url)
     brief.sourceStatus = sourceSelection.sourceStatus
     brief.sourceQualityScore = sourceSelection.sourceQualityScore
     brief.sourceNotes = sourceSelection.sourceNotes

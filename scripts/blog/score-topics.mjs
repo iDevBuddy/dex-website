@@ -18,6 +18,7 @@ export function scoreTopic(topic, context = {}) {
     const duplicateAnalysis = context.duplicateAnalysis || topic.duplicateAnalysis || { duplicateStatus: 'unique', duplicateScore: 0 }
     const trendAnalysis = context.trendAnalysis || topic.trendAnalysis || analyzeTrend(topic)
     const manualBoost = topic.source === 'Manual seed' || topic.source === 'Manual command' ? 24 : 0
+    const officialNewsBoost = topic.trustedNewsSource || topic.officialSource ? 28 : 0
     const authorityBucketBoost = /\btrick|tool|github|kaggle|agent|security|finance|sales|support|operations|awareness|solution\b/i.test(text) ? 12 : 0
     const businessValue = highValueTerms.reduce((sum, term) => sum + (text.includes(term) ? 8 : 0), 30)
     const trendPotential = Math.max(topic.source?.includes('RSS') ? 18 : 10, Math.round(trendAnalysis.trendScore / 3.5))
@@ -30,7 +31,7 @@ export function scoreTopic(topic, context = {}) {
     const internalLinking = /\bagent|automation|workflow|crm|slack\b/i.test(text) ? 10 : 5
     const duplicatePenalty = duplicateAnalysis.duplicateStatus === 'duplicate' ? 28 : duplicateAnalysis.duplicateStatus === 'similar' ? 10 : 0
     const businessTrendBoost = isServiceTopic(text) && trendAnalysis.trendScore >= 70 && trendAnalysis.marketSentiment !== 'risky' ? 10 : 0
-    const score = Math.max(0, Math.min(100, businessValue + trendPotential + intentClarity + seoOpportunity + lowCompetitionAngle + topicalAuthority + monetization + aiAnswerPotential + internalLinking + manualBoost + authorityBucketBoost + businessTrendBoost - duplicatePenalty))
+    const score = Math.max(0, Math.min(100, businessValue + trendPotential + intentClarity + seoOpportunity + lowCompetitionAngle + topicalAuthority + monetization + aiAnswerPotential + internalLinking + manualBoost + officialNewsBoost + authorityBucketBoost + businessTrendBoost - duplicatePenalty))
     const duplicateHold = duplicateAnalysis.duplicateStatus === 'duplicate' && !trendAnalysis.trendOverrideEligible
     return {
         ...topic,
@@ -41,6 +42,12 @@ export function scoreTopic(topic, context = {}) {
         trendOverrideEligible: trendAnalysis.trendOverrideEligible,
         trendOverrideReason: trendAnalysis.trendOverrideReason,
         trendAnalysis,
+        officialSource: topic.officialSource || '',
+        officialUrl: topic.officialUrl || '',
+        officialImageRequired: Boolean(topic.officialImageRequired),
+        trustedNewsSource: Boolean(topic.trustedNewsSource),
+        toolSpecific: Boolean(topic.toolSpecific),
+        newsPublishedAt: topic.newsPublishedAt || '',
         duplicateStatus: duplicateAnalysis.duplicateStatus,
         duplicateScore: duplicateAnalysis.duplicateScore,
         duplicateMatch: duplicateAnalysis.bestMatch,

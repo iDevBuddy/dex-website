@@ -1,7 +1,10 @@
+import fs from 'node:fs/promises'
 import { audioDir, ensureBlogDirs } from './lib/content.mjs'
 import { getPipelineOptions, modeDetails, readPipelineJson, writePipelineJson } from './lib/cli.mjs'
 import { log, warn } from './lib/logger.mjs'
 import { syncBlogDraft } from './lib/notion-dashboard.mjs'
+import { notifySlack } from './lib/slack.mjs'
+import { generateNvidiaTtsAudio, ttsProviderConfigured } from './lib/tts-providers.mjs'
 
 export async function generateAudio(articleArg, options = getPipelineOptions()) {
     await ensureBlogDirs()
@@ -23,13 +26,7 @@ export async function generateAudio(articleArg, options = getPipelineOptions()) 
     }
 
     const provider = process.env.TTS_PROVIDER || 'browser_fallback'
-    const providerConfigured =
-        (provider === 'piper' && process.env.PIPER_TTS_URL) ||
-        (provider === 'kokoro' && process.env.KOKORO_TTS_URL) ||
-        (provider === 'minimax' && process.env.MINIMAX_API_KEY) ||
-        (provider === 'elevenlabs' && process.env.ELEVENLABS_API_KEY) ||
-        (provider === 'openai' && process.env.OPENAI_API_KEY) ||
-        process.env.TTS_API_URL
+    const providerConfigured = ttsProviderConfigured(provider)
 
     if (!providerConfigured || provider === 'browser_fallback') {
         if (process.env.REQUIRE_REAL_TTS === 'true') {
@@ -52,6 +49,29 @@ export async function generateAudio(articleArg, options = getPipelineOptions()) 
     }
 
     try {
+        if (provider === 'nvidia_tts' || provider === 'nvidia_riva') {
+            const ttsText = buildAudioScript(article)
+            const result = await generateNvidiaTtsAudio({
+                text: ttsText,
+                slug: article.frontmatter.slug,
+            })
+            article.frontmatter.audio = result.path
+            article.frontmatter.audioProvider = result.provider
+            article.frontmatter.audioVoice = result.voice
+            await writePipelineJson('draft-article.json', article, options)
+            const output = {
+                ...baseResult,
+                provider: result.provider,
+                path: result.path,
+                voice: result.voice,
+                fallback: false,
+            }
+            await writePipelineJson('audio-result.json', output, options)
+            log('audio_generated', output)
+            await syncBlogDraft(article, { audioStatus: 'Generated' })
+            return output
+        }
+
         const url = process.env.TTS_API_URL || process.env.PIPER_TTS_URL || process.env.KOKORO_TTS_URL
         if (!url) throw new Error(`Provider ${provider} needs an adapter URL for generated MP3 output.`)
         const response = await fetch(url, {
@@ -70,10 +90,34 @@ export async function generateAudio(articleArg, options = getPipelineOptions()) 
         return result
     } catch (error) {
         warn('audio_generation_failed', { message: error.message })
+        await clearAudioOutput(article.frontmatter.slug)
+        delete article.frontmatter.audio
+        delete article.frontmatter.audioProvider
+        delete article.frontmatter.audioVoice
+        await writePipelineJson('draft-article.json', article, options)
         const result = { ...baseResult, fallback: true, error: error.message }
         await writePipelineJson('audio-result.json', result, options)
         await syncBlogDraft(article, { audioStatus: 'Failed' })
+        await notifySlack(`Audio generation failed for ${article.frontmatter.title}: ${error.message}`)
         return result
+    }
+}
+
+function buildAudioScript(article) {
+    return [
+        article.frontmatter.title,
+        article.frontmatter.subtitle,
+        article.directAnswer,
+        article.body,
+        Array.isArray(article.faqs) ? article.faqs.map((faq) => `${faq.question}. ${faq.answer}`).join(' ') : '',
+    ].filter(Boolean).join('\n\n')
+}
+
+async function clearAudioOutput(slug) {
+    try {
+        await fs.unlink(`${audioDir}/${slug}.wav`)
+    } catch {
+        return
     }
 }
 

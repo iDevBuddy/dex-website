@@ -54,7 +54,10 @@ expertInsight: "The strongest AI automation systems combine narrow workflow desi
 assetLinks: {}
 schemaType: "BlogPosting"
 mediaRecommendations: {"featuredImage":true,"infographic":true,"slides":false,"checklist":true,"comparisonTable":false,"workflowDiagram":true,"downloadablePdf":false,"notebookLmResearch":false,"socialCarousel":false}
-assetBrief: "Create supporting assets for: AI Customer Support Automation Playbook for Small Service Businesses\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\nPersona: Business Automation Expert\nBusiness function: Customer Support\nAngle: practical_workflow\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
+assetBrief: "Create supporting assets for: AI Customer Support Automation Playbook for Small Service Businesses\\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\\nPersona: Business Automation Expert\\nBusiness function: Customer Support\\nAngle: practical_workflow\\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
+audio: "/blog/audio/ai-customer-support-automation-playbook-for-small-service-businesses.wav"
+audioProvider: "nvidia_tts"
+audioVoice: "Magpie-Multilingual.EN-US.Aria"
 ---
 
 ## A Practical Playbook for AI Customer Support Automation

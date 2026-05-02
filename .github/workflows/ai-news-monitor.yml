@@ -1,0 +1,125 @@
+name: AI News Monitor
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Optional trusted AI news topic override'
+        required: false
+        type: string
+      dryRun:
+        description: 'Run without publishing'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  monitor-news:
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: ${{ vars.SITE_URL }}
+      BRAND_NAME: ${{ vars.BRAND_NAME }}
+      AUTHOR_NAME: ${{ vars.AUTHOR_NAME }}
+      USE_SLACK: ${{ vars.USE_SLACK }}
+      SLACK_WEBHOOK_URL: ${{ vars.SLACK_WEBHOOK_URL }}
+      USE_NOTION: ${{ vars.USE_NOTION }}
+      NOTION_API_KEY: ${{ vars.NOTION_API_KEY }}
+      NOTION_BLOG_IDEAS_DB_ID: ${{ vars.NOTION_BLOG_IDEAS_DB_ID }}
+      NOTION_BLOG_DRAFTS_DB_ID: ${{ vars.NOTION_BLOG_DRAFTS_DB_ID }}
+      NOTION_PUBLISHED_POSTS_DB_ID: ${{ vars.NOTION_PUBLISHED_POSTS_DB_ID }}
+      NOTION_REFRESH_QUEUE_DB_ID: ${{ vars.NOTION_REFRESH_QUEUE_DB_ID }}
+      NOTION_PERFORMANCE_REPORTS_DB_ID: ${{ vars.NOTION_PERFORMANCE_REPORTS_DB_ID }}
+      USE_NVIDIA_QWEN: ${{ vars.USE_NVIDIA_QWEN }}
+      NVIDIA_LLM_API_KEY: ${{ vars.NVIDIA_LLM_API_KEY }}
+      NVIDIA_LLM_URL: ${{ vars.NVIDIA_LLM_URL }}
+      NVIDIA_LLM_MODEL: ${{ vars.NVIDIA_LLM_MODEL }}
+      NVIDIA_REVIEW_LLM_API_KEY: ${{ vars.NVIDIA_REVIEW_LLM_API_KEY }}
+      NVIDIA_REVIEW_LLM_URL: ${{ vars.NVIDIA_REVIEW_LLM_URL }}
+      NVIDIA_REVIEW_LLM_MODEL: ${{ vars.NVIDIA_REVIEW_LLM_MODEL }}
+      OPENAI_API_KEY: ${{ vars.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+      IMAGE_PROVIDER: ${{ vars.IMAGE_PROVIDER }}
+      NVIDIA_API_KEY: ${{ vars.NVIDIA_API_KEY }}
+      NVIDIA_FLUX_URL: ${{ vars.NVIDIA_FLUX_URL }}
+      NVIDIA_FLUX_MODEL: ${{ vars.NVIDIA_FLUX_MODEL }}
+      NVIDIA_IMAGE_SIZE: ${{ vars.NVIDIA_IMAGE_SIZE }}
+      TTS_PROVIDER: ${{ vars.TTS_PROVIDER }}
+      NVIDIA_TTS_API_KEY: ${{ vars.NVIDIA_TTS_API_KEY }}
+      NVIDIA_TTS_SERVER: ${{ vars.NVIDIA_TTS_SERVER }}
+      NVIDIA_TTS_FUNCTION_ID: ${{ vars.NVIDIA_TTS_FUNCTION_ID }}
+      NVIDIA_TTS_VOICE: ${{ vars.NVIDIA_TTS_VOICE }}
+      NVIDIA_TTS_LANGUAGE_CODE: ${{ vars.NVIDIA_TTS_LANGUAGE_CODE }}
+      NVIDIA_TTS_SAMPLE_RATE: ${{ vars.NVIDIA_TTS_SAMPLE_RATE }}
+      NVIDIA_TTS_MAX_CHARS: ${{ vars.NVIDIA_TTS_MAX_CHARS }}
+      USE_AUTO_PUBLISH: 'true'
+      MANUAL_APPROVAL: 'false'
+      AI_NEWS_AUTO_PUBLISH: ${{ vars.AI_NEWS_AUTO_PUBLISH }}
+      AI_NEWS_FORCE_DRAFT: ${{ vars.AI_NEWS_FORCE_DRAFT }}
+      ENABLE_AI_NEWS_TRACKING: ${{ vars.ENABLE_AI_NEWS_TRACKING }}
+      AI_NEWS_SOURCE_LIMIT: ${{ vars.AI_NEWS_SOURCE_LIMIT }}
+      AI_NEWS_RECENCY_HOURS: ${{ vars.AI_NEWS_RECENCY_HOURS }}
+      ALLOW_OFFICIAL_IMAGE_PLACEHOLDER: ${{ vars.ALLOW_OFFICIAL_IMAGE_PLACEHOLDER }}
+      SEO_AUDIT_MIN_SCORE: ${{ vars.SEO_AUDIT_MIN_SCORE }}
+      MIN_QUALITY_SCORE: ${{ vars.MIN_QUALITY_SCORE }}
+      MIN_TOPIC_SCORE: ${{ vars.MIN_TOPIC_SCORE }}
+      REQUIRE_AUTHENTIC_SOURCES: ${{ vars.REQUIRE_AUTHENTIC_SOURCES }}
+      REQUIRE_REAL_LLM: ${{ vars.REQUIRE_REAL_LLM }}
+      REQUIRE_REAL_IMAGE_MODEL: ${{ vars.REQUIRE_REAL_IMAGE_MODEL }}
+      ALLOW_FALLBACK_IN_PRODUCTION: ${{ vars.ALLOW_FALLBACK_IN_PRODUCTION }}
+      ENABLE_REALTIME_TRENDS: 'true'
+      ENABLE_TREND_QUALITY_OVERRIDE: 'true'
+      TREND_QUALITY_FLOOR: ${{ vars.TREND_QUALITY_FLOOR }}
+      TREND_OVERRIDE_MIN_SCORE: ${{ vars.TREND_OVERRIDE_MIN_SCORE }}
+      MIN_AUTHENTICITY_SCORE: ${{ vars.MIN_AUTHENTICITY_SCORE }}
+      MIN_AUTHENTICITY_SCORE_FOR_TREND_OVERRIDE: ${{ vars.MIN_AUTHENTICITY_SCORE_FOR_TREND_OVERRIDE }}
+      GITHUB_TOKEN: ${{ github.token }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Setup Python for NVIDIA TTS
+        if: env.TTS_PROVIDER == 'nvidia_tts' || env.TTS_PROVIDER == 'nvidia_riva'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install NVIDIA Riva client
+        if: env.TTS_PROVIDER == 'nvidia_tts' || env.TTS_PROVIDER == 'nvidia_riva'
+        run: pip install nvidia-riva-client
+
+      - name: Run trusted AI news pipeline
+        run: |
+          ARGS="--auto-publish --force-draft"
+          if [ "${{ github.event.inputs.dryRun }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ -n "${{ github.event.inputs.topic }}" ]; then ARGS="$ARGS --topic \"${{ github.event.inputs.topic }}\""; fi
+          eval "npm run blog:news -- $ARGS"
+
+      - name: Build check
+        run: npm run build
+
+      - name: Commit published AI news post
+        run: |
+          git config user.name "AI Blog Engine"
+          git config user.email "actions@github.com"
+          git add content/blog public/blog data/blog
+          if git diff --cached --quiet; then
+            echo "No AI news artifacts to commit."
+          else
+            git commit -m "chore: publish trusted AI news blog"
+            git push
+          fi

@@ -7,6 +7,7 @@ import { generateWithImageProvider } from './lib/image-providers.mjs'
 import { log, warn } from './lib/logger.mjs'
 import { syncBlogDraft } from './lib/notion-dashboard.mjs'
 import { notifySlack } from './lib/slack.mjs'
+import { fetchOfficialProductImage, requiresOfficialToolImage } from './lib/official-images.mjs'
 
 function crc32(buffer) {
     let crc = -1
@@ -87,6 +88,45 @@ export async function generateImage(articleArg, options = getPipelineOptions()) 
     }
 
     try {
+        if (requiresOfficialToolImage(article)) {
+            const official = await fetchOfficialProductImage({ article, output })
+            if (official) {
+                article.frontmatter.image = `/blog/images/${slug}.png`
+                article.frontmatter.imageAlt = article.frontmatter.imageAlt || `Official product image for ${article.frontmatter.title}`
+                const officialResult = { ...result, ...official, officialImageRequired: true }
+                await writePipelineJson('image-result.json', officialResult, options)
+                log('official_image_fetched', officialResult)
+                await syncBlogDraft(article, {
+                    imageStatus: 'Generated',
+                    imageProviderStatus: 'Official Source',
+                    assetUrls: official.sourceUrl || result.url,
+                })
+                return officialResult
+            }
+
+            const fallback = await writeFallbackIfMissing(output)
+            article.frontmatter.image = `/blog/images/${slug}.png`
+            article.frontmatter.imageAlt ||= `Official product image unavailable for ${article.frontmatter.title}; branded placeholder used for draft preview`
+            const missingOfficial = {
+                ...result,
+                provider: 'official_image_placeholder',
+                path: output,
+                failed: false,
+                officialImageRequired: true,
+                note: 'Official product image was required but no official og:image/twitter:image was found. AI image generation was skipped.',
+                ...fallback,
+            }
+            await writePipelineJson('image-result.json', missingOfficial, options)
+            await syncBlogDraft(article, {
+                imageStatus: 'Generated',
+                imageProviderStatus: 'Official Image Missing',
+                assetUrls: result.url,
+                notes: missingOfficial.note,
+            })
+            await notifySlack(`Official product image was not found for ${article.frontmatter.title}. AI image generation was skipped and a placeholder was saved for validation.`)
+            return missingOfficial
+        }
+
         const providerOutput = await generateWithImageProvider({ article, output })
         if (providerOutput?.path || providerOutput?.queued) {
             const providerResult = { ...result, ...providerOutput }

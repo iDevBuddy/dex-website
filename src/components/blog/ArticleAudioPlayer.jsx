@@ -14,6 +14,10 @@ export default function ArticleAudioPlayer({ title, text, audioSrc }) {
         }
     }, [])
 
+    useEffect(() => {
+        if (audioRef.current) audioRef.current.playbackRate = rate
+    }, [rate])
+
     const playBrowserVoice = () => {
         window.speechSynthesis.cancel()
         setProgress(0)
@@ -36,7 +40,6 @@ export default function ArticleAudioPlayer({ title, text, audioSrc }) {
 
     const play = () => {
         if (audioSrc && audioRef.current) {
-            audioRef.current.playbackRate = rate
             audioRef.current.play()
             setStatus('playing')
             return
@@ -78,7 +81,7 @@ export default function ArticleAudioPlayer({ title, text, audioSrc }) {
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
                 <div>
                     <p className="font-semibold text-white">Listen to this article</p>
-                    <p className="text-sm text-gray-500">{estimatedListenTime} min listen · {audioSrc ? 'MP3 audio available' : 'Browser voice fallback'}</p>
+                    <p className="text-sm text-gray-500">{estimatedListenTime} min listen | {audioSrc ? 'Humanized studio voice available' : 'Browser voice fallback'}</p>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                     <button onClick={status === 'playing' ? pause : play} className="p-2.5 rounded-md bg-accent text-white hover:bg-accent-hover transition-colors" aria-label={status === 'playing' ? 'Pause audio' : 'Play audio'}>

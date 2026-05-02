@@ -99,10 +99,17 @@ export function getBlogStatus(env = process.env) {
         'TTS_API_URL',
         'TTS_VOICE',
         'TTS_SPEED',
+        'NVIDIA_TTS_API_KEY',
+        'NVIDIA_TTS_FUNCTION_ID',
+        'NVIDIA_TTS_VOICE',
+        'NVIDIA_TTS_LANGUAGE_CODE',
         'GOOGLE_CLIENT_EMAIL',
         'GOOGLE_PRIVATE_KEY',
         'GOOGLE_SEARCH_CONSOLE_SITE_URL',
         'GA4_PROPERTY_ID',
+        'AI_NEWS_AUTO_PUBLISH',
+        'AI_NEWS_SOURCE_LIMIT',
+        'SEO_AUDIT_MIN_SCORE',
     ].filter((name) => !configured(env, name))
 
     const mainLlmConfigured = configured(env, 'LOCAL_LLM_URL') && configured(env, 'LOCAL_LLM_MODEL')
@@ -119,7 +126,11 @@ export function getBlogStatus(env = process.env) {
     const realImageRequired = env.REQUIRE_REAL_IMAGE_MODEL === 'true'
     const realTtsRequired = env.REQUIRE_REAL_TTS === 'true'
     const fallbackAllowedInProduction = env.ALLOW_FALLBACK_IN_PRODUCTION === 'true'
-    const ttsConfigured = ttsProvider === 'browser_fallback' ? !realTtsRequired : configured(env, 'TTS_API_URL') || configured(env, 'PIPER_TTS_URL') || configured(env, 'KOKORO_TTS_URL') || configured(env, 'MINIMAX_API_KEY') || configured(env, 'ELEVENLABS_API_KEY') || configured(env, 'OPENAI_API_KEY')
+    const ttsConfigured = ttsProvider === 'browser_fallback'
+        ? !realTtsRequired
+        : (ttsProvider === 'nvidia_tts' || ttsProvider === 'nvidia_riva')
+            ? configured(env, 'NVIDIA_TTS_API_KEY') || configured(env, 'NVIDIA_API_KEY')
+            : configured(env, 'TTS_API_URL') || configured(env, 'PIPER_TTS_URL') || configured(env, 'KOKORO_TTS_URL') || configured(env, 'MINIMAX_API_KEY') || configured(env, 'ELEVENLABS_API_KEY') || configured(env, 'OPENAI_API_KEY')
     const productionReady = (!realLlmRequired || llmConfigured) && (!realImageRequired || imageConfigured) && (!realTtsRequired || ttsConfigured)
 
     const nextSteps = []
@@ -135,6 +146,13 @@ export function getBlogStatus(env = process.env) {
             nextSteps.push('Add OPENAI_API_KEY and USE_GPT_IMAGE=true to enable GPT image generation.')
         } else {
             nextSteps.push('Configure COMFYUI_URL and COMFYUI_WORKFLOW_PATH, or switch IMAGE_PROVIDER to nvidia_flux.')
+        }
+    }
+    if (!ttsConfigured && ttsProvider !== 'browser_fallback') {
+        if (ttsProvider === 'nvidia_tts' || ttsProvider === 'nvidia_riva') {
+            nextSteps.push('Add NVIDIA_TTS_API_KEY and optionally NVIDIA_TTS_VOICE to enable NVIDIA humanized article audio.')
+        } else {
+            nextSteps.push(`Configure ${ttsProvider} TTS provider or switch TTS_PROVIDER=browser_fallback.`)
         }
     }
 
@@ -190,6 +208,7 @@ export function getBlogStatus(env = process.env) {
             tts: {
                 provider: ttsProvider,
                 configured: ttsConfigured,
+                nvidiaTtsConfigured: configured(env, 'NVIDIA_TTS_API_KEY') || configured(env, 'NVIDIA_API_KEY'),
             },
             notebooklm: {
                 enabled: env.USE_NOTEBOOKLM === 'true',
@@ -228,6 +247,18 @@ export function getBlogStatus(env = process.env) {
             enabled: env.ENABLE_DUPLICATE_TOPIC_DETECTION !== 'false',
             duplicateTopicThreshold: Number(env.DUPLICATE_TOPIC_THRESHOLD || 0.74),
             similarTopicThreshold: Number(env.SIMILAR_TOPIC_THRESHOLD || 0.52),
+        },
+        aiNews: {
+            enabled: env.ENABLE_AI_NEWS_TRACKING !== 'false',
+            autoPublish: env.AI_NEWS_AUTO_PUBLISH !== 'false',
+            sourceLimit: Number(env.AI_NEWS_SOURCE_LIMIT || 16),
+            recencyHours: Number(env.AI_NEWS_RECENCY_HOURS || 168),
+            officialImagePlaceholderAllowed: env.ALLOW_OFFICIAL_IMAGE_PLACEHOLDER !== 'false',
+        },
+        seoAudit: {
+            enabled: true,
+            tool: env.SEO_AUDIT_SKILL || 'local_seo_audit_bridge',
+            minScore: Number(env.SEO_AUDIT_MIN_SCORE || 82),
         },
         authenticity: {
             enabled: env.ENABLE_AUTHENTICITY_CHECK !== 'false',

@@ -3,6 +3,7 @@ import { scoreTopics } from './score-topics.mjs'
 import { researchTopic } from './research-topic.mjs'
 import { generateArticle } from './generate-article.mjs'
 import { seoOptimize } from './seo-optimize.mjs'
+import { runSeoAudit } from './seo-audit.mjs'
 import { generateImage } from './generate-image.mjs'
 import { generateAudio } from './generate-audio.mjs'
 import { qualityCheck } from './quality-check.mjs'
@@ -56,6 +57,8 @@ async function draftTopic(topic, options) {
     const brief = await researchTopic(topic, options)
     const draft = await generateArticle(topic, brief, options)
     let article = await seoOptimize(draft, options)
+    const seoAudit = await runSeoAudit(article, options)
+    article = seoAudit.article
     article = (await recommendMedia(options)).article
     const report = await qualityCheck(article, options, topic)
     if (!report.passed && !options.force) {

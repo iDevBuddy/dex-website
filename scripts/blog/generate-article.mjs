@@ -64,6 +64,11 @@ function normalizeArticle(article, topic, brief) {
             implementationDifficulty: article.frontmatter?.implementationDifficulty || 'Medium',
             estimatedTimeToImplement: article.frontmatter?.estimatedTimeToImplement || '1-2 weeks for an MVP workflow',
             contentType: article.frontmatter?.contentType || brief?.contentFormat || 'How-To Guide',
+            officialSource: article.frontmatter?.officialSource || topic.officialSource || '',
+            officialUrl: article.frontmatter?.officialUrl || topic.officialUrl || '',
+            officialImageRequired: Boolean(article.frontmatter?.officialImageRequired ?? topic.officialImageRequired),
+            toolSpecific: Boolean(article.frontmatter?.toolSpecific ?? topic.toolSpecific),
+            newsPublishedAt: article.frontmatter?.newsPublishedAt || topic.newsPublishedAt || '',
             image: article.frontmatter?.image || `/blog/images/${slug}.png`,
             imageAlt: article.frontmatter?.imageAlt || `AI automation workflow visual for ${topic.topic}`,
             audioPath: article.frontmatter?.audioPath || '',
@@ -179,6 +184,7 @@ Writing structure: strong title, clear subtitle, short expert intro, practical e
 Length and depth rules: body must be 900-1300 words. Include at least one concrete service-business scenario with named workflow steps, owner roles, handoff points, and measurable KPIs such as first response time, resolution time, booked calls, missed leads, revenue impact, customer satisfaction, or manual hours saved. Include a short troubleshooting/failure-handling subsection with API timeout, low-confidence AI output, duplicate tickets, and human approval handling. End with a clear "What to do next" or "Next steps" conclusion.
 Business relevance rules: use practical terms naturally where relevant: customer support, service business, owner, operator, workflow, CRM, escalation, follow-up, approval, logging, audit, KPI, revenue, lead, response time, support triage. Do not keyword-stuff; use them only in useful context.
 Source rules: use only the provided research sources for claims. Do not invent sources. Do not add generic Google SEO docs unless this topic is actually about SEO or Google policy. Do not put a References, Sources, or Research Sources section in the body; sources belong only in frontmatter.sources.
+News/tool rules: if officialSource or officialUrl is present, frame the post around what changed, who it affects, practical automation use cases, and what business owners should do next. Do not speculate beyond the official source. For tool-specific posts, do not request AI-generated hero imagery; the image system will use official screenshots/logos/product images.
 Duplicate/topic angle rules: if duplicateStatus is "similar" or "duplicate", do not rewrite the existing article. Use the suggestedAngle/suggestedTopic from the brief to create a narrower, more specific, service-focused article with different examples, different headings, and a sharper business use case.
 Quality rules: no copied content, no fake data, no keyword stuffing, no "AI is transforming the world" intro, no repeated filler phrases, practical business tone, short paragraphs, useful examples, FAQ, and clear next steps.
 Topic: ${JSON.stringify(topic)}

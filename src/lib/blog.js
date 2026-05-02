@@ -105,6 +105,7 @@ export const blogPosts = Object.entries(postModules)
             headings: extractHeadings(body),
             image: data.image || '/blog/images/ai-authority-blog-engine.png',
             imageAlt: data.imageAlt || data.title,
+            audio: data.audio || '',
             category: data.category || 'AI Automation',
             faqs: Array.isArray(data.faqs) ? data.faqs : [],
             sources: normalizeSources(data.sources),
