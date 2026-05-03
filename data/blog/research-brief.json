@@ -132,19 +132,15 @@
   "suggestedAngle": "",
   "suggestedTopic": "",
   "trendAnalysis": {
-    "trendScore": 75,
+    "trendScore": 69,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "matchedTrendTerms": [
       "automation"
     ],
     "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
     "realtimeSignals": [
-      {
-        "source": "Google News",
-        "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints"
-      },
       {
         "source": "Google News",
         "title": "Meta’s AI Capex Reset Turns Supply Chain Into a Board-Level Constraint - Logistics Viewpoints"
@@ -159,10 +155,6 @@
       },
       {
         "source": "Google News",
-        "title": "State Management Is the Missing Layer in Supply Chain AI - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
         "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
       },
       {
@@ -172,6 +164,14 @@
       {
         "source": "Google News",
         "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+      },
+      {
+        "source": "Google News",
+        "title": "Descartes Expands AI Innovation on Global Logistics Network with AI Agents for Freight Visibility - Logistics Viewpoints"
+      },
+      {
+        "source": "Google News",
+        "title": "Agent-Powered Enterprise: Productivity, Governance, and the Future of Work - Klover.ai"
       }
     ],
     "realtimeSources": [
@@ -182,9 +182,9 @@
     ]
   },
   "examplesToInclude": [
-    "Slack intake workflow: Automate customer request intake by capturing messages in Slack, logging them with context memory, and routing to the right team with approval steps.",
-    "CRM follow-up workflow: Use AI agents to remember customer interaction history and automate personalized follow-up emails with quality checks before sending.",
-    "Support triage workflow: Automate ticket classification with AI memory of past issues, escalate critical cases after approval, and log all actions for audit."
+    "Slack intake workflow",
+    "CRM follow-up workflow",
+    "support triage workflow"
   ],
   "suggestedInternalLinks": [
     "/blog/ai-authority-blog-engine",

@@ -1,31 +1,125 @@
 {
-  "score": 96,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
-  "publishMode": "slack_approval_required",
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 3,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 91,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Official NVIDIA sources selected for a tool-specific post."
-  },
-  "authenticity": {
-    "passed": true,
-    "score": 91,
-    "minimum": 72,
-    "notes": "Topic is based on official NVIDIA announcement and avoids speculative claims."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
+    "enabled": true,
     "applied": false,
-    "trendScore": 92,
-    "marketSentiment": "positive",
+    "floor": 78,
+    "strictMinimum": 88,
+    "trendScore": 69,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 65,
+    "serviceTopic": false,
+    "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "Trusted NVIDIA launch topic. Manual Slack approval requested before publishing."
+    "reason": "No trend override: quality 100/88, trend 69/100, sentiment neutral."
   },
-  "results": []
+  "publishMode": "standard_review",
+  "results": [
+    {
+      "name": "minimumWordCount",
+      "passed": true,
+      "points": 12
+    },
+    {
+      "name": "hasClearIntro",
+      "passed": true,
+      "points": 8
+    },
+    {
+      "name": "hasExamples",
+      "passed": true,
+      "points": 10
+    },
+    {
+      "name": "hasFaq",
+      "passed": true,
+      "points": 10
+    },
+    {
+      "name": "hasSources",
+      "passed": true,
+      "points": 8
+    },
+    {
+      "name": "hasImagePrompt",
+      "passed": true,
+      "points": 8
+    },
+    {
+      "name": "hasInternalLinks",
+      "passed": true,
+      "points": 8
+    },
+    {
+      "name": "hasSchemaData",
+      "passed": true,
+      "points": 8
+    },
+    {
+      "name": "noKeywordStuffing",
+      "passed": true,
+      "points": 10
+    },
+    {
+      "name": "hasBusinessValue",
+      "passed": true,
+      "points": 10
+    },
+    {
+      "name": "hasConclusion",
+      "passed": true,
+      "points": 8
+    }
+  ],
+  "authenticity": {
+    "score": 85,
+    "passed": true,
+    "minimum": 72,
+    "provider": "heuristic_nlp",
+    "modelResult": null,
+    "signals": {
+      "specificity": 100,
+      "businessRelevance": 100,
+      "sourceAlignment": 100,
+      "marketSentimentScore": 65,
+      "duplicateStatus": "unknown",
+      "duplicateScore": 0,
+      "fillerHits": 0,
+      "wordCount": 745
+    },
+    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+    "blockingIssue": ""
+  },
+  "review": {
+    "helpfulContentRisk": 8,
+    "notes": [
+      "The article provides a clear, practical guide to implementing AI memory in logistics workflows, which aligns well with the target audience of business operators and founders.",
+      "Content is well-structured with a strong use case, step-by-step implementation, and measurable outcomes.",
+      "Includes expert insight, common mistakes, and troubleshooting tips which add depth and authority.",
+      "Some sections like 'Tools Needed' and 'What to Do Next' could be expanded to provide more specific, actionable implementation details.",
+      "The article could benefit from more detailed examples of AI memory in action, such as specific prompts or memory structures used in LangChain or Azure AI.",
+      "The inclusion of KPIs and failure handling makes the guide actionable, but adding before/after workflow diagrams could enhance clarity."
+    ],
+    "recommendedFixes": [
+      "Add a visual workflow diagram showing AI memory integration in the logistics process to improve clarity and user engagement.",
+      "Expand the 'Tools Needed' section with specific setup steps or configuration examples for each tool (Slack, CRM, AI platforms).",
+      "Include a short code snippet or example prompt showing how AI memory is implemented in LangChain or Azure AI for educational value.",
+      "Add a downloadable checklist or workflow template in the assets section for readers to implement the guide easily.",
+      "Clarify the human-in-the-loop process with a specific example of how approval steps function in practice.",
+      "Enhance the 'Troubleshooting & Failure Handling' section with real-world examples or case studies for better relatability."
+    ]
+  }
 }

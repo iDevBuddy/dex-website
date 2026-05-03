@@ -12,25 +12,21 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 75,
+    "trendScore": 69,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 75,
+      "trendScore": 69,
       "marketSentiment": "neutral",
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 65,
       "matchedTrendTerms": [
         "automation"
       ],
       "trendOverrideEligible": false,
       "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
       "realtimeSignals": [
-        {
-          "source": "Google News",
-          "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints"
-        },
         {
           "source": "Google News",
           "title": "Meta’s AI Capex Reset Turns Supply Chain Into a Board-Level Constraint - Logistics Viewpoints"
@@ -45,10 +41,6 @@
         },
         {
           "source": "Google News",
-          "title": "State Management Is the Missing Layer in Supply Chain AI - Logistics Viewpoints"
-        },
-        {
-          "source": "Google News",
           "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
         },
         {
@@ -58,6 +50,14 @@
         {
           "source": "Google News",
           "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+        },
+        {
+          "source": "Google News",
+          "title": "Descartes Expands AI Innovation on Global Logistics Network with AI Agents for Freight Visibility - Logistics Viewpoints"
+        },
+        {
+          "source": "Google News",
+          "title": "Agent-Powered Enterprise: Productivity, Governance, and the Future of Work - Klover.ai"
         }
       ],
       "realtimeSources": [
@@ -82,7 +82,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.639Z"
+    "scoredAt": "2026-05-03T07:20:46.144Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Launchpad Build AI offers MLM for industrial automation design - The Robot Report",
@@ -153,12 +159,12 @@
       ]
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 3,
+    "duplicateScore": 6,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.03
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.06
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -167,7 +173,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.639Z"
+    "scoredAt": "2026-05-03T07:20:46.144Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
@@ -224,7 +236,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.639Z"
+    "scoredAt": "2026-05-03T07:20:46.144Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI automation for small businesses",
@@ -240,20 +258,20 @@
     "authorityAngle": "practical_workflow",
     "score": 100,
     "trendScore": 88,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 74,
     "trendOverrideEligible": true,
-    "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
+    "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: positive.",
     "trendAnalysis": {
       "trendScore": 88,
-      "marketSentiment": "neutral",
-      "marketSentimentScore": 68,
+      "marketSentiment": "positive",
+      "marketSentimentScore": 74,
       "matchedTrendTerms": [
         "automation",
         "small business"
       ],
       "trendOverrideEligible": true,
-      "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
+      "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: positive.",
       "realtimeSignals": [
         {
           "source": "Google News",
@@ -269,7 +287,7 @@
         },
         {
           "source": "Google News",
-          "title": "Confident but Cautious: TD Survey Finds Small Business Owners Optimistic About the Future, Yet Many Still Lack a Financial Safety Net - TD Stories"
+          "title": "Exclusive Data: Small Businesses Strive To Leverage AI, but Challenges Abound - BizTech Magazine"
         },
         {
           "source": "Google News",
@@ -277,15 +295,15 @@
         },
         {
           "source": "Google News",
-          "title": "Exclusive Data: Small Businesses Strive To Leverage AI, but Challenges Abound - BizTech Magazine"
-        },
-        {
-          "source": "Google News",
           "title": "AI Agents for Small Businesses: Benefits, Use Cases, and Getting Started - vocal.media"
         },
         {
           "source": "Google News",
-          "title": "SAP and Google Cloud Launch Multi-Agent AI for Smarter Marketing Campaigns - Small Business Trends"
+          "title": "Agentic AI Isn’t Just for Big Business Anymore — But Don’t Automate Before You’re Ready - Small Business Trends"
+        },
+        {
+          "source": "Google News",
+          "title": "Local SEO Expert Launches AI-Powered Services for Small Businesses - Milwaukee Journal Sentinel"
         }
       ],
       "realtimeSources": [
@@ -311,7 +329,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.639Z"
+    "scoredAt": "2026-05-03T07:20:46.144Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI customer support automation agents for service businesses in 2026",
@@ -328,13 +352,13 @@
     "score": 100,
     "trendScore": 100,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 71,
     "trendOverrideEligible": true,
     "trendOverrideReason": "Real-time trend validation found 13 signal(s) from 2 source(s). Sentiment: neutral.",
     "trendAnalysis": {
       "trendScore": 100,
       "marketSentiment": "neutral",
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 71,
       "matchedTrendTerms": [
         "agent",
         "ai agent",
@@ -346,11 +370,11 @@
       "realtimeSignals": [
         {
           "source": "Google News",
-          "title": "Enterprise AI Companies: Landscape Breakdown in 2026 - AIMultiple"
+          "title": "50 Business Ideas Positioned for Growth in 2026 and Beyond - U.S. Chamber of Commerce"
         },
         {
           "source": "Google News",
-          "title": "50 Business Ideas Positioned for Growth in 2026 and Beyond - U.S. Chamber of Commerce"
+          "title": "Enterprise AI Companies: Landscape Breakdown in 2026 - AIMultiple"
         },
         {
           "source": "Google News",
@@ -366,11 +390,11 @@
         },
         {
           "source": "Google News",
-          "title": "'I hate customer-service chatbots': The consumer-AI refund relationship is off to a rocky start - CNBC"
+          "title": "Customer service trends & statistics for 2026: Why consumers still trust humans over AI - SurveyMonkey"
         },
         {
           "source": "Google News",
-          "title": "Customer service trends & statistics for 2026: Why consumers still trust humans over AI - SurveyMonkey"
+          "title": "'I hate customer-service chatbots': The consumer-AI refund relationship is off to a rocky start - CNBC"
         },
         {
           "source": "Google News",
@@ -386,12 +410,12 @@
       ]
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 17,
+    "duplicateScore": 22,
     "duplicateMatch": {
-      "slug": "ai-automation-for-small-businesses",
-      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
-      "url": "/blog/ai-automation-for-small-businesses",
-      "similarity": 0.17
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.22
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -400,7 +424,13 @@
     "businessValueScore": 62,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.639Z"
+    "scoredAt": "2026-05-03T07:20:46.144Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
@@ -415,25 +445,21 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 75,
+    "trendScore": 69,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 75,
+      "trendScore": 69,
       "marketSentiment": "neutral",
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 65,
       "matchedTrendTerms": [
         "automation"
       ],
       "trendOverrideEligible": false,
       "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
       "realtimeSignals": [
-        {
-          "source": "Google News",
-          "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints"
-        },
         {
           "source": "Google News",
           "title": "Meta’s AI Capex Reset Turns Supply Chain Into a Board-Level Constraint - Logistics Viewpoints"
@@ -448,10 +474,6 @@
         },
         {
           "source": "Google News",
-          "title": "State Management Is the Missing Layer in Supply Chain AI - Logistics Viewpoints"
-        },
-        {
-          "source": "Google News",
           "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
         },
         {
@@ -461,6 +483,14 @@
         {
           "source": "Google News",
           "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+        },
+        {
+          "source": "Google News",
+          "title": "Descartes Expands AI Innovation on Global Logistics Network with AI Agents for Freight Visibility - Logistics Viewpoints"
+        },
+        {
+          "source": "Google News",
+          "title": "Agent-Powered Enterprise: Productivity, Governance, and the Future of Work - Klover.ai"
         }
       ],
       "realtimeSources": [
@@ -485,7 +515,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.639Z"
+    "scoredAt": "2026-05-03T07:20:46.144Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Launchpad Build AI offers MLM for industrial automation design - The Robot Report",
@@ -556,12 +592,12 @@
       ]
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 3,
+    "duplicateScore": 6,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.03
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.06
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -570,7 +606,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.639Z"
+    "scoredAt": "2026-05-03T07:20:46.144Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
@@ -627,7 +669,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.639Z"
+    "scoredAt": "2026-05-03T07:20:46.144Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI automation for small businesses",
@@ -643,20 +691,20 @@
     "authorityAngle": "practical_workflow",
     "score": 100,
     "trendScore": 88,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 74,
     "trendOverrideEligible": true,
-    "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
+    "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: positive.",
     "trendAnalysis": {
       "trendScore": 88,
-      "marketSentiment": "neutral",
-      "marketSentimentScore": 68,
+      "marketSentiment": "positive",
+      "marketSentimentScore": 74,
       "matchedTrendTerms": [
         "automation",
         "small business"
       ],
       "trendOverrideEligible": true,
-      "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
+      "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: positive.",
       "realtimeSignals": [
         {
           "source": "Google News",
@@ -672,7 +720,7 @@
         },
         {
           "source": "Google News",
-          "title": "Confident but Cautious: TD Survey Finds Small Business Owners Optimistic About the Future, Yet Many Still Lack a Financial Safety Net - TD Stories"
+          "title": "Exclusive Data: Small Businesses Strive To Leverage AI, but Challenges Abound - BizTech Magazine"
         },
         {
           "source": "Google News",
@@ -680,15 +728,15 @@
         },
         {
           "source": "Google News",
-          "title": "Exclusive Data: Small Businesses Strive To Leverage AI, but Challenges Abound - BizTech Magazine"
-        },
-        {
-          "source": "Google News",
           "title": "AI Agents for Small Businesses: Benefits, Use Cases, and Getting Started - vocal.media"
         },
         {
           "source": "Google News",
-          "title": "SAP and Google Cloud Launch Multi-Agent AI for Smarter Marketing Campaigns - Small Business Trends"
+          "title": "Agentic AI Isn’t Just for Big Business Anymore — But Don’t Automate Before You’re Ready - Small Business Trends"
+        },
+        {
+          "source": "Google News",
+          "title": "Local SEO Expert Launches AI-Powered Services for Small Businesses - Milwaukee Journal Sentinel"
         }
       ],
       "realtimeSources": [
@@ -714,7 +762,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.639Z"
+    "scoredAt": "2026-05-03T07:20:46.144Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI customer support automation agents for service businesses in 2026",
@@ -731,13 +785,13 @@
     "score": 100,
     "trendScore": 100,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 71,
     "trendOverrideEligible": true,
     "trendOverrideReason": "Real-time trend validation found 13 signal(s) from 2 source(s). Sentiment: neutral.",
     "trendAnalysis": {
       "trendScore": 100,
       "marketSentiment": "neutral",
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 71,
       "matchedTrendTerms": [
         "agent",
         "ai agent",
@@ -749,11 +803,11 @@
       "realtimeSignals": [
         {
           "source": "Google News",
-          "title": "Enterprise AI Companies: Landscape Breakdown in 2026 - AIMultiple"
+          "title": "50 Business Ideas Positioned for Growth in 2026 and Beyond - U.S. Chamber of Commerce"
         },
         {
           "source": "Google News",
-          "title": "50 Business Ideas Positioned for Growth in 2026 and Beyond - U.S. Chamber of Commerce"
+          "title": "Enterprise AI Companies: Landscape Breakdown in 2026 - AIMultiple"
         },
         {
           "source": "Google News",
@@ -769,11 +823,11 @@
         },
         {
           "source": "Google News",
-          "title": "'I hate customer-service chatbots': The consumer-AI refund relationship is off to a rocky start - CNBC"
+          "title": "Customer service trends & statistics for 2026: Why consumers still trust humans over AI - SurveyMonkey"
         },
         {
           "source": "Google News",
-          "title": "Customer service trends & statistics for 2026: Why consumers still trust humans over AI - SurveyMonkey"
+          "title": "'I hate customer-service chatbots': The consumer-AI refund relationship is off to a rocky start - CNBC"
         },
         {
           "source": "Google News",
@@ -789,12 +843,12 @@
       ]
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 17,
+    "duplicateScore": 22,
     "duplicateMatch": {
-      "slug": "ai-automation-for-small-businesses",
-      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
-      "url": "/blog/ai-automation-for-small-businesses",
-      "similarity": 0.17
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.22
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -803,7 +857,13 @@
     "businessValueScore": 62,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.639Z"
+    "scoredAt": "2026-05-03T07:20:46.144Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI automation for small businesses",
@@ -819,20 +879,20 @@
     "authorityAngle": "practical_workflow",
     "score": 100,
     "trendScore": 88,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 74,
     "trendOverrideEligible": true,
-    "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
+    "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: positive.",
     "trendAnalysis": {
       "trendScore": 88,
-      "marketSentiment": "neutral",
-      "marketSentimentScore": 68,
+      "marketSentiment": "positive",
+      "marketSentimentScore": 74,
       "matchedTrendTerms": [
         "automation",
         "small business"
       ],
       "trendOverrideEligible": true,
-      "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
+      "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: positive.",
       "realtimeSignals": [
         {
           "source": "Google News",
@@ -848,7 +908,7 @@
         },
         {
           "source": "Google News",
-          "title": "Confident but Cautious: TD Survey Finds Small Business Owners Optimistic About the Future, Yet Many Still Lack a Financial Safety Net - TD Stories"
+          "title": "Exclusive Data: Small Businesses Strive To Leverage AI, but Challenges Abound - BizTech Magazine"
         },
         {
           "source": "Google News",
@@ -856,15 +916,15 @@
         },
         {
           "source": "Google News",
-          "title": "Exclusive Data: Small Businesses Strive To Leverage AI, but Challenges Abound - BizTech Magazine"
-        },
-        {
-          "source": "Google News",
           "title": "AI Agents for Small Businesses: Benefits, Use Cases, and Getting Started - vocal.media"
         },
         {
           "source": "Google News",
-          "title": "SAP and Google Cloud Launch Multi-Agent AI for Smarter Marketing Campaigns - Small Business Trends"
+          "title": "Agentic AI Isn’t Just for Big Business Anymore — But Don’t Automate Before You’re Ready - Small Business Trends"
+        },
+        {
+          "source": "Google News",
+          "title": "Local SEO Expert Launches AI-Powered Services for Small Businesses - Milwaukee Journal Sentinel"
         }
       ],
       "realtimeSources": [
@@ -890,7 +950,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.640Z"
+    "scoredAt": "2026-05-03T07:20:46.144Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
@@ -947,7 +1013,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.640Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Workflows for work that runs the business - Mistral AI",
@@ -978,12 +1050,12 @@
       "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: positive."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 12,
+    "duplicateScore": 19,
     "duplicateMatch": {
-      "slug": "ai-automation-for-small-businesses",
-      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
-      "url": "/blog/ai-automation-for-small-businesses",
-      "similarity": 0.12
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.19
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -992,7 +1064,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.640Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "MIT AI expert warns automating Gen Z entry-level jobs could backfire—and cost companies their future workforce - Fortune",
@@ -1036,7 +1114,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.640Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Meta AI Business Assistant Cuts Advertiser Issue Resolution Time by 20% - CX Today",
@@ -1080,7 +1164,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.640Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Why Companies That Choose AI Augmentation Over Automation May Win in the Long Run - Harvard Business Review",
@@ -1124,7 +1214,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.640Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Beyond RPA Bots: What Happens When Automation Gets a Brain? - Oracle",
@@ -1168,7 +1264,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.640Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "The Agentic AI Advantage - FTI Consulting",
@@ -1213,7 +1315,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.640Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI Business Process Automation: Enhancing Workflow Efficiency - Netguru",
@@ -1258,7 +1366,13 @@
     "businessValueScore": 54,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.640Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Unlocking efficiency and reducing risk: How automation and AI are transforming tax reporting and withholding functions - The Tax Adviser",
@@ -1302,7 +1416,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.640Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Telkom Indonesia Intros Agentic AI by BigBox for Autonomous Business Process Automation - The Fast Mode",
@@ -1334,12 +1454,12 @@
       "trendOverrideReason": "Trending signal matched: agent, ai agent, automation. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 5,
+    "duplicateScore": 8,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.05
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.08
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -1348,7 +1468,13 @@
     "businessValueScore": 54,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.640Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI Automation is Transforming Small Businesses Across the US and UK - openPR.com",
@@ -1393,7 +1519,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "S.A.F.E.: RFC-style intent checks for privileged AI automation",
@@ -1437,7 +1569,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI automation is quietly de-skilling white-collar workers",
@@ -1481,7 +1619,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Show HN: Handrive – Free P2P file transfer with 40 MCP tools for AI automation",
@@ -1525,7 +1669,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Show HN: ROI-first AI automation framework for B2B companies",
@@ -1569,7 +1719,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "What Are Intelligence, AI, Automation System? Their Essences? How to Distinguish",
@@ -1613,7 +1769,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.145Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Remote Labor Index: Measuring AI Automation of Remote Work",
@@ -1643,12 +1805,12 @@
       "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 4,
+    "duplicateScore": 8,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.04
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.08
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -1657,7 +1819,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Remote Labor Index – Measuring AI Automation of Remote Work [pdf]",
@@ -1687,12 +1855,12 @@
       "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 4,
+    "duplicateScore": 8,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.04
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.08
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -1701,7 +1869,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI automation to drive mass white-collar job losses in 12-18 months",
@@ -1745,7 +1919,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Remote Labor Index: Measuring AI Automation of Remote Work",
@@ -1775,12 +1955,12 @@
       "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 4,
+    "duplicateScore": 8,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.04
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.08
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -1789,7 +1969,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Measuring AI Automation of Remote Work",
@@ -1819,12 +2005,12 @@
       "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 5,
+    "duplicateScore": 11,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.05
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.11
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -1833,7 +2019,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Marktoflow – CLI-native AI automation using Markdown and YAML",
@@ -1877,7 +2069,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI Automation Crushed Jobs in 2025 and What to Do Next",
@@ -1921,7 +2119,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "ChatGPT, Artificial Intelligence and Automation",
@@ -1966,7 +2170,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "I vibe coded a LinkedIn outreach automation tool, and made $2k in the first month",
@@ -2010,7 +2220,13 @@
     "businessValueScore": 38,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Thoughts on an automation architecture (Telegram + browser-use), am I on right path?",
@@ -2054,7 +2270,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "We built an agentic runtime to make AI automations easier to set up and more reliable",
@@ -2086,12 +2308,12 @@
       "trendOverrideReason": "Trending signal matched: agent, ai agent, automation. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 3,
+    "duplicateScore": 12,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.03
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.12
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -2100,7 +2322,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Showcase: Sunnyy - A voice-first assistant for Mac using MCP for local app automation (Notion, Linear, Postgres)",
@@ -2144,7 +2372,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "How We Debugged Token Bloat in a Multi-Agent Lead Research System (& Why Context Handoff Architecture Matters)",
@@ -2190,7 +2424,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "City Learns Flock Accessed Cameras in Children's Gymnastics Room as a Sales Demo",
@@ -2235,7 +2475,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "I let AI run our Marketing Department for 2 weeks... Our website traffic doubled",
@@ -2279,7 +2525,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "The &quot;Tutorial Hell&quot; in AI Automation is getting ridiculous. Why does every guide stop at the easy part?",
@@ -2323,7 +2575,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "What automation made a mess of for me",
@@ -2367,7 +2625,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Senate Judiciary Committee Advances Hawley's GUARD Act, Mandating ID Verification for AI Chatbot Users",
@@ -2411,7 +2675,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "I Cut Claude API Costs by 50% Using This Self Modifying Agentic System",
@@ -2456,7 +2726,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Pentagon inks deals with seven AI companies for classified military work | Trump administration",
@@ -2486,12 +2762,12 @@
       "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 3,
+    "duplicateScore": 5,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.03
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.05
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -2500,7 +2776,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "What to build while we still have access to cheap AI?",
@@ -2530,12 +2812,12 @@
       "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 7,
+    "duplicateScore": 10,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.07
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.1
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -2544,7 +2826,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "GPT-OSS automation tricks for business workflows",
@@ -2590,7 +2878,13 @@
     "businessValueScore": 54,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Gemma AI agents for small business operations",
@@ -2623,12 +2917,12 @@
       "trendOverrideReason": "Trending signal matched: agent, ai agent, gemma, small business. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 8,
+    "duplicateScore": 16,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.08
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.16
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -2637,7 +2931,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "best GitHub AI automation repos for business owners",
@@ -2682,7 +2982,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Kaggle datasets for AI business automation projects",
@@ -2726,7 +3032,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "finance automation with AI agents",
@@ -2759,12 +3071,12 @@
       "trendOverrideReason": "Trending signal matched: agent, ai agent, automation, finance. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 16,
+    "duplicateScore": 24,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.16
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.24
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -2773,7 +3085,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "security automation workflows for small teams",
@@ -2819,7 +3137,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI customer support automation playbook",
@@ -2850,12 +3174,12 @@
       "trendOverrideReason": "Trending signal matched: automation, customer support. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 20,
+    "duplicateScore": 28,
     "duplicateMatch": {
-      "slug": "ai-automation-for-small-businesses",
-      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
-      "url": "/blog/ai-automation-for-small-businesses",
-      "similarity": 0.2
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.28
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -2864,7 +3188,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI reporting automation for operations teams",
@@ -2895,12 +3225,12 @@
       "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 10,
+    "duplicateScore": 19,
     "duplicateMatch": {
-      "slug": "ai-automation-for-small-businesses",
-      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
-      "url": "/blog/ai-automation-for-small-businesses",
-      "similarity": 0.1
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.19
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -2909,7 +3239,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.644Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI agents for small business",
@@ -2955,7 +3291,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.644Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Slack automation for service teams",
@@ -2999,7 +3341,13 @@
     "businessValueScore": 46,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.644Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "CRM automation with AI",
@@ -3044,7 +3392,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.644Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI workflow automation examples",
@@ -3089,7 +3443,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.644Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "lead generation automation with AI",
@@ -3133,7 +3493,13 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.644Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "ecommerce customer support automation",
@@ -3178,7 +3544,13 @@
     "businessValueScore": 54,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.644Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "no-code AI automation stack",
@@ -3222,7 +3594,13 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.644Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI appointment booking agent",
@@ -3253,6 +3631,872 @@
       "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
+    "duplicateScore": 11,
+    "duplicateMatch": {
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.11
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 75,
+    "businessValue": "Medium",
+    "businessValueScore": 46,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
+  },
+  {
+    "topic": "I built an AI agent that runs my Reddit account – what should it do next?",
+    "keyword": "i built an ai agent that runs my reddit account – what should it do next?",
+    "source": "Notion",
+    "notionPageId": "3557287b-c47a-81dc-a806-cc8d7d1ea231",
+    "slug": "i-built-an-ai-agent-that-runs-my-reddit-account-what-should-it-do-next",
+    "category": "AI Agents",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.063Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 44,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 55,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 44,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 55,
+      "matchedTrendTerms": [
+        "agent",
+        "ai agent"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 18,
+    "duplicateMatch": {
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.18
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 75,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "Built a WhatsApp lead qualification bot for real estate brokers. Every single one closes more deals in the first week. Here's exactly how it works.",
+    "keyword": "built a whatsapp lead qualification bot for real estate brokers. every single one closes more deals in the first week. here's exactly how it works.",
+    "source": "Notion",
+    "notionPageId": "3557287b-c47a-8186-9740-f64cd6f7b4b4",
+    "slug": "built-a-whatsapp-lead-qualification-bot-for-real-estate-brokers-every-single-one-closes-more-deals-in-the-first-week-here-s-exactly-how-it-works",
+    "category": "Lead Generation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.063Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "Sales",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 18,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 55,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trend score 18; sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 18,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 55,
+      "matchedTrendTerms": [],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trend score 18; sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 9,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.09
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 87,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "Introducing Advanced Account Security",
+    "slug": "introducing-advanced-account-security",
+    "keyword": "introducing advanced account security",
+    "category": "AI Tools",
+    "source": "OpenAI News",
+    "officialSource": "OpenAI",
+    "officialUrl": "https://openai.com/index/advanced-account-security",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "Thu, 30 Apr 2026 00:00:00 GMT",
+    "newsDescription": "Introducing Advanced Account Security: phishing-resistant login, stronger recovery, and enhanced protections to safeguard sensitive data and prevent account takeover.",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 35,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "security"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: security. Sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Hybrid",
+    "businessFunction": "Security",
+    "authorityAngle": "expert_tricks",
+    "score": 100,
+    "trendScore": 35,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: security. Sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "Where the goblins came from",
+    "slug": "where-the-goblins-came-from",
+    "keyword": "where the goblins came from",
+    "category": "AI Tools",
+    "source": "OpenAI News",
+    "officialSource": "OpenAI",
+    "officialUrl": "https://openai.com/index/where-the-goblins-came-from",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "Wed, 29 Apr 2026 20:00:00 GMT",
+    "newsDescription": "How goblin outputs spread in AI models: timeline, root cause, and fixes behind personality-driven quirks in GPT-5 behavior.",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 18,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trend score 18; sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 18,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trend score 18; sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "Building the compute infrastructure for the Intelligence Age",
+    "slug": "building-the-compute-infrastructure-for-the-intelligence-age",
+    "keyword": "building the compute infrastructure for the intelligence age",
+    "category": "AI Tools",
+    "source": "OpenAI News",
+    "officialSource": "OpenAI",
+    "officialUrl": "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "Wed, 29 Apr 2026 15:00:00 GMT",
+    "newsDescription": "OpenAI scales Stargate to build the compute infrastructure powering AGI, adding new data center capacity to meet growing AI demand.",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 18,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trend score 18; sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 18,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trend score 18; sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 66,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "Cybersecurity in the Intelligence Age",
+    "slug": "cybersecurity-in-the-intelligence-age",
+    "keyword": "cybersecurity in the intelligence age",
+    "category": "AI Tools",
+    "source": "OpenAI News",
+    "officialSource": "OpenAI",
+    "officialUrl": "https://openai.com/index/cybersecurity-in-the-intelligence-age",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "Wed, 29 Apr 2026 04:00:00 GMT",
+    "newsDescription": "OpenAI outlines a five-part action plan for strengthening cybersecurity in the Intelligence Age, focused on democratizing AI-powered cyber defense and protecting critical systems.",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 35,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "security"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: security. Sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Hybrid",
+    "businessFunction": "Security",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 35,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: security. Sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 11,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.11
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "Our commitment to community safety",
+    "slug": "our-commitment-to-community-safety",
+    "keyword": "our commitment to community safety",
+    "category": "AI Tools",
+    "source": "OpenAI News",
+    "officialSource": "OpenAI",
+    "officialUrl": "https://openai.com/index/our-commitment-to-community-safety",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "Tue, 28 Apr 2026 00:00:00 GMT",
+    "newsDescription": "Learn how OpenAI protects community safety in ChatGPT through model safeguards, misuse detection, policy enforcement, and collaboration with safety experts.",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 18,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trend score 18; sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 18,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trend score 18; sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "OpenAI models, Codex, and Managed Agents come to AWS",
+    "slug": "openai-models-codex-and-managed-agents-come-to-aws",
+    "keyword": "openai models, codex, and managed agents come to aws",
+    "category": "AI Tools",
+    "source": "OpenAI News",
+    "officialSource": "OpenAI",
+    "officialUrl": "https://openai.com/index/openai-on-aws",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "Tue, 28 Apr 2026 00:00:00 GMT",
+    "newsDescription": "OpenAI GPT models, Codex, and Managed Agents are now available on AWS, enabling enterprises to build secure AI in their AWS environments.",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 35,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "agent"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: agent. Sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 35,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: agent. Sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 7,
+    "duplicateMatch": {
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.07
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 75,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "OpenAI available at FedRAMP Moderate",
+    "slug": "openai-available-at-fedramp-moderate",
+    "keyword": "openai available at fedramp moderate",
+    "category": "AI Tools",
+    "source": "OpenAI News",
+    "officialSource": "OpenAI",
+    "officialUrl": "https://openai.com/index/openai-available-at-fedramp-moderate",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "Mon, 27 Apr 2026 14:00:00 GMT",
+    "newsDescription": "OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies.",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 18,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trend score 18; sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 18,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trend score 18; sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "The next phase of the Microsoft OpenAI partnership",
+    "slug": "the-next-phase-of-the-microsoft-openai-partnership",
+    "keyword": "the next phase of the microsoft openai partnership",
+    "category": "AI Tools",
+    "source": "OpenAI News",
+    "officialSource": "OpenAI",
+    "officialUrl": "https://openai.com/index/next-phase-of-microsoft-partnership",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "Mon, 27 Apr 2026 06:00:00 GMT",
+    "newsDescription": "OpenAI and Microsoft announce an amended agreement that simplifies the partnership, adds long-term clarity, and supports continued AI innovation at scale.",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 18,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trend score 18; sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 18,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trend score 18; sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "An open-source spec for orchestration: Symphony",
+    "slug": "an-open-source-spec-for-orchestration-symphony",
+    "keyword": "an open-source spec for orchestration: symphony",
+    "category": "AI Tools",
+    "source": "OpenAI News",
+    "officialSource": "OpenAI",
+    "officialUrl": "https://openai.com/index/open-source-codex-orchestration-symphony",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "Mon, 27 Apr 2026 00:00:00 GMT",
+    "newsDescription": "Learn how Symphony, an open-source spec for Codex orchestration, turns issue trackers into always-on agent systems—boosting engineering output and reducing context switching.",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 18,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trend score 18; sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 18,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trend score 18; sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 66,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "Choco automates food distribution with AI agents",
+    "slug": "choco-automates-food-distribution-with-ai-agents",
+    "keyword": "choco automates food distribution with ai agents",
+    "category": "AI Tools",
+    "source": "OpenAI News",
+    "officialSource": "OpenAI",
+    "officialUrl": "https://openai.com/index/choco",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "Mon, 27 Apr 2026 00:00:00 GMT",
+    "newsDescription": "How Choco used OpenAI APIs to streamline food distribution, boost productivity, and unlock growth—an in-depth customer story on real-world AI impact.",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 44,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "agent",
+        "ai agent"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 44,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 75,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "Our principles",
+    "slug": "our-principles",
+    "keyword": "our principles",
+    "category": "AI Tools",
+    "source": "OpenAI News",
+    "officialSource": "OpenAI",
+    "officialUrl": "https://openai.com/index/our-principles",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "Sun, 26 Apr 2026 16:00:00 GMT",
+    "newsDescription": "Our mission is to ensure that AGI benefits all of humanity. Sam Altman shares five principles that guide our work.",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 18,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trend score 18; sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 18,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trend score 18; sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 6,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.06
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "Speed Up Unreal Engine NNE Inference with NVIDIA TensorRT for RTX Runtime",
+    "slug": "speed-up-unreal-engine-nne-inference-with-nvidia-tensorrt-for-rtx-runtime",
+    "keyword": "speed up unreal engine nne inference with nvidia tensorrt for rtx runtime",
+    "category": "AI Tools",
+    "source": "NVIDIA Technical Blog",
+    "officialSource": "NVIDIA",
+    "officialUrl": "https://developer.nvidia.com/blog/speed-up-unreal-engine-nne-inference-with-nvidia-tensorrt-for-rtx-runtime/",
+    "officialImageRequired": true,
+    "contentType": "AI Tool Tutorial",
+    "newsPublishedAt": "2026-04-30T17:41:40Z",
+    "newsDescription": "<img width=\"768\" height=\"432\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-768x432.png\" class=\"webfeedsFeaturedVisual wp-post-image\" alt=\"Decorative image.\" style=\"display: block; margin-bottom: 5px; clear:both;max-width: 100%;\" link_thumbnail=\"\" decoding=\"async\" fetchpriority=\"high\" srcset=\"https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-768x432.png 768w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-300x169.png 300w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-625x352.png 625w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-179x101.png 179w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-1536x864.png 1536w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-645x363.png 645w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-660x370.png 660w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-500x281.png 500w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-160x90.png 160w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-362x204.png 362w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-196x110.png 196w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-1024x576.png 1024w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX-960x540.png 960w, https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/TensorRT-RTX.png 1920w\" sizes=\"(max-width: 768px) 100vw, 768px\" title=\"TensorRT-RTX\" />Neural network techniques are increasingly used in computer graphics to boost image quality, improve performance, and streamline content creation. Approaches...",
+    "trustedNewsSource": true,
+    "toolSpecific": true,
+    "trendAnalysis": {
+      "trendScore": 18,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trend score 18; sentiment: neutral."
+    },
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 18,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trend score 18; sentiment: neutral.",
+    "duplicateStatus": "unique",
+    "duplicateScore": 6,
+    "duplicateMatch": {
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.06
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 66,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "CCC Mobile Scanning Links AI Automation With CCC ONE Usage And Valuation - simplywall.st",
+    "source": "Google News RSS",
+    "slug": "ccc-mobile-scanning-links-ai-automation-with-ccc-one-usage-and-valuation-simplywall-st",
+    "keyword": "ccc mobile scanning links ai automation with ccc one usage and valuation - simplywall.st",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 3,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.03
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 75,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Chinese Courts Just Ruled That AI Automation Is Not a Legal Reason to Fire Someone and Every HR Team Needs to Read This - Startup Fortune",
+    "source": "Google News RSS",
+    "slug": "chinese-courts-just-ruled-that-ai-automation-is-not-a-legal-reason-to-fire-someone-and-every-hr-team-needs-to-read-this-startup-fortune",
+    "keyword": "chinese courts just ruled that ai automation is not a legal reason to fire someone and every hr team needs to read this - startup fortune",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "HR",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 87,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Preliminary Findings on AI Automation from Worker Evaluations",
+    "source": "Hacker News RSS",
+    "slug": "preliminary-findings-on-ai-automation-from-worker-evaluations",
+    "keyword": "preliminary findings on ai automation from worker evaluations",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
     "duplicateScore": 5,
     "duplicateMatch": {
       "slug": "ai-authority-blog-engine",
@@ -3263,11 +4507,567 @@
     "suggestedAngle": "",
     "suggestedTopic": "",
     "seoScore": 75,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Thoth - Open Source Local-first AI Assistant - Architecture",
+    "source": "Reddit r/automation RSS",
+    "slug": "thoth-open-source-local-first-ai-assistant-architecture",
+    "keyword": "thoth - open source local-first ai assistant - architecture",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 58,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation, open source. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 58,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "automation",
+        "open source"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation, open source. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 66,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Google home Automation help",
+    "source": "Reddit r/automation RSS",
+    "slug": "google-home-automation-help",
+    "keyword": "google home automation help",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 75,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Need a good automation to apply for jobs ( linkedin , wellfound, foundit, indeed, etc)",
+    "source": "Reddit r/automation RSS",
+    "slug": "need-a-good-automation-to-apply-for-jobs-linkedin-wellfound-foundit-indeed-etc",
+    "keyword": "need a good automation to apply for jobs ( linkedin , wellfound, foundit, indeed, etc)",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 3,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.03
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 87,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Built a real estate lead workflow that qualifies Meta ad leads and routes them to voice or SMS — biggest hurdle was timing",
+    "source": "Reddit r/automation RSS",
+    "slug": "built-a-real-estate-lead-workflow-that-qualifies-meta-ad-leads-and-routes-them-to-voice-or-sms-biggest-hurdle-was-timing",
+    "keyword": "built a real estate lead workflow that qualifies meta ad leads and routes them to voice or sms — biggest hurdle was timing",
+    "category": "Workflow Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "Sales",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 58,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 58,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "automation",
+        "workflow"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 12,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.12
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 99,
     "businessValue": "Medium",
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.644Z"
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "What automation gives you the biggest time savings right now?",
+    "source": "Reddit r/automation RSS",
+    "slug": "what-automation-gives-you-the-biggest-time-savings-right-now",
+    "keyword": "what automation gives you the biggest time savings right now?",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 10,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.1
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 75,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Built a WhatsApp lead qualification bot for real estate brokers. Every single one closes more deals in the first week. Here's exactly how it works.",
+    "source": "Reddit r/automation RSS",
+    "slug": "built-a-whatsapp-lead-qualification-bot-for-real-estate-brokers-every-single-one-closes-more-deals-in-the-first-week-here-s-exactly-how-it-works",
+    "keyword": "built a whatsapp lead qualification bot for real estate brokers. every single one closes more deals in the first week. here's exactly how it works.",
+    "category": "Lead Generation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "Sales",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 9,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.09
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 87,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "I built an AI advisor that compares 10 workflow automation platforms using pricing data. No affiliate kickbacks, no &quot;best tool 2026&quot; slop. Here's exactly how it works.",
+    "source": "Reddit r/automation RSS",
+    "slug": "i-built-an-ai-advisor-that-compares-10-workflow-automation-platforms-using-pricing-data-no-affiliate-kickbacks-no-and-quot-best-tool-2026-and-quot-slop-here-s-exactly-how-it-works",
+    "keyword": "i built an ai advisor that compares 10 workflow automation platforms using pricing data. no affiliate kickbacks, no &quot;best tool 2026&quot; slop. here's exactly how it works.",
+    "category": "Workflow Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Hybrid",
+    "businessFunction": "Operations",
+    "authorityAngle": "tool_tutorial",
+    "score": 100,
+    "trendScore": 58,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 76,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: positive.",
+    "trendAnalysis": {
+      "trendScore": 58,
+      "marketSentiment": "positive",
+      "marketSentimentScore": 76,
+      "matchedTrendTerms": [
+        "automation",
+        "workflow"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: positive."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 99,
+    "businessValue": "Medium",
+    "businessValueScore": 46,
+    "searchIntent": "Commercial",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Asked Google Gemini about Ai Agency",
+    "source": "Reddit r/artificial RSS",
+    "slug": "asked-google-gemini-about-ai-agency",
+    "keyword": "asked google gemini about ai agency",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 66,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Commercial",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Could the best LLM be able to generate a symbolic AI that is superior to itself, or is there something superior about matrices vs graphs?",
+    "source": "Reddit r/artificial RSS",
+    "slug": "could-the-best-llm-be-able-to-generate-a-symbolic-ai-that-is-superior-to-itself-or-is-there-something-superior-about-matrices-vs-graphs",
+    "keyword": "could the best llm be able to generate a symbolic ai that is superior to itself, or is there something superior about matrices vs graphs?",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Hybrid",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 66,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "token budget is becoming part of my agent workflow design",
+    "source": "Reddit r/artificial RSS",
+    "slug": "token-budget-is-becoming-part-of-my-agent-workflow-design",
+    "keyword": "token budget is becoming part of my agent workflow design",
+    "category": "AI Agents",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "Operations",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 75,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: agent, ai agent, workflow. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 75,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "agent",
+        "ai agent",
+        "workflow"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: agent, ai agent, workflow. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 14,
+    "duplicateMatch": {
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.14
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 99,
+    "businessValue": "Medium",
+    "businessValueScore": 46,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "What most people call AI agents, we call sub-agents. The real ones don't get thrown away.",
+    "source": "Reddit r/artificial RSS",
+    "slug": "what-most-people-call-ai-agents-we-call-sub-agents-the-real-ones-don-t-get-thrown-away",
+    "keyword": "what most people call ai agents, we call sub-agents. the real ones don't get thrown away.",
+    "category": "AI Agents",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Hybrid",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 66,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 55,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 66,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 55,
+      "matchedTrendTerms": [
+        "agent",
+        "ai agent"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 75,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
   },
   {
     "topic": "Artificial Intelligence (AI)",
@@ -3311,7 +5111,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "The Override Problem: The Same AI Behavior That Helps Users Can Delete Production Data",
@@ -3341,12 +5147,12 @@
       "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 5,
+    "duplicateScore": 8,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.05
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.08
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -3355,7 +5161,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.146Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "I built a router that automatically sends your AI tasks to the most appropriate model to handle them at low cost - 9,200 tasks in, $21 saved at $0.14 actual cost",
@@ -3399,7 +5211,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Mark Zuckerberg Says AI Costs Contributed To Layoffs Of 8,000 Staffers, Report Says",
@@ -3443,7 +5261,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "AI outperforms doctors in Harvard trial of emergency triage diagnoses",
@@ -3487,7 +5311,313 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
+  },
+  {
+    "topic": "Chinese Court Rules That a Worker Cannot Be Replaced by AI - Futurism",
+    "source": "Google News RSS",
+    "slug": "chinese-court-rules-that-a-worker-cannot-be-replaced-by-ai-futurism",
+    "keyword": "chinese court rules that a worker cannot be replaced by ai - futurism",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 97,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 6,
+    "duplicateMatch": {
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.06
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Amazon Just Opened a New Front in the AI War -- Enterprise Software Is the Target - Money Morning",
+    "source": "Google News RSS",
+    "slug": "amazon-just-opened-a-new-front-in-the-ai-war-enterprise-software-is-the-target-money-morning",
+    "keyword": "amazon just opened a new front in the ai war -- enterprise software is the target - money morning",
+    "category": "AI Tools",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "tool_tutorial",
+    "score": 97,
+    "trendScore": 40,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trend score 40; sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 40,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trend score 40; sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 10,
+    "duplicateMatch": {
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.1
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Commercial",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Uber burned its entire 2026 AI coding budget in 4 months - $500-2k per engineer per month",
+    "source": "Reddit r/artificial RSS",
+    "slug": "uber-burned-its-entire-2026-ai-coding-budget-in-4-months-500-2k-per-engineer-per-month",
+    "keyword": "uber burned its entire 2026 ai coding budget in 4 months - $500-2k per engineer per month",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 97,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 2,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.02
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "AI is starting to beat doctors at making correct diagnoses",
+    "source": "Reddit r/artificial RSS",
+    "slug": "ai-is-starting-to-beat-doctors-at-making-correct-diagnoses",
+    "keyword": "ai is starting to beat doctors at making correct diagnoses",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 97,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 4,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.04
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "The AI Revolution Hollywood Feared Is Already Happening",
+    "source": "Reddit r/artificial RSS",
+    "slug": "the-ai-revolution-hollywood-feared-is-already-happening",
+    "keyword": "the ai revolution hollywood feared is already happening",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 97,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 4,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.04
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Introducing Advanced Account Security",
+    "keyword": "introducing advanced account security",
+    "source": "Notion",
+    "notionPageId": "3557287b-c47a-81c9-9ebf-da6a8d9f68a2",
+    "slug": "introducing-advanced-account-security",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.063Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "Security",
+    "authorityAngle": "expert_tricks",
+    "score": 95,
+    "trendScore": 44,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation, security. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 44,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation",
+        "security"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation, security. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
   },
   {
     "topic": "RetailBanker: Why financial services must embrace process orchestration",
@@ -3532,7 +5662,63 @@
     "businessValueScore": 30,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
+  },
+  {
+    "topic": "got sick of waiting for brokers to reply to me quickly.",
+    "source": "Reddit r/automation RSS",
+    "slug": "got-sick-of-waiting-for-brokers-to-reply-to-me-quickly",
+    "keyword": "got sick of waiting for brokers to reply to me quickly.",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 92,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 4,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.04
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 66,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
   },
   {
     "topic": "Okay this is funny",
@@ -3576,7 +5762,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.641Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Anthropic just analyzed 1 million Claude conversations. 6% of people were asking Claude whether to quit their jobs, who to date, and if they should move countries.",
@@ -3606,12 +5798,12 @@
       "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 3,
+    "duplicateScore": 5,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.03
+      "slug": "nvidia-agent-toolkit-openshell-business-automation",
+      "title": "NVIDIA Agent Toolkit and OpenShell: What Business Automation Teams Should Know",
+      "url": "/blog/nvidia-agent-toolkit-openshell-business-automation",
+      "similarity": 0.05
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
@@ -3620,7 +5812,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Public photos are not consent to biometric search infrastructure",
@@ -3664,7 +5862,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Product Hunt — The best new products, every day",
@@ -3708,7 +5912,313 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
+  },
+  {
+    "topic": "Automated my Monday morning catch-up",
+    "source": "Reddit r/automation RSS",
+    "slug": "automated-my-monday-morning-catch-up",
+    "keyword": "automated my monday morning catch-up",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 88,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Here is a fun project i created.",
+    "source": "Reddit r/automation RSS",
+    "slug": "here-is-a-fun-project-i-created",
+    "keyword": "here is a fun project i created.",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 88,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Every country needs to do this asap",
+    "source": "Reddit r/artificial RSS",
+    "slug": "every-country-needs-to-do-this-asap",
+    "keyword": "every country needs to do this asap",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 88,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "California to begin ticketing driverless cars that violate traffic laws",
+    "source": "Reddit r/artificial RSS",
+    "slug": "california-to-begin-ticketing-driverless-cars-that-violate-traffic-laws",
+    "keyword": "california to begin ticketing driverless cars that violate traffic laws",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "Customer Support",
+    "authorityAngle": "practical_workflow",
+    "score": 88,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 11,
+    "duplicateMatch": {
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.11
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "My dream of a fully generative game is getting pretty close to possible now. I made a demo where you can prompt any spell and fight online.",
+    "source": "Reddit r/artificial RSS",
+    "slug": "my-dream-of-a-fully-generative-game-is-getting-pretty-close-to-possible-now-i-made-a-demo-where-you-can-prompt-any-spell-and-fight-online",
+    "keyword": "my dream of a fully generative game is getting pretty close to possible now. i made a demo where you can prompt any spell and fight online.",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Hybrid",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 88,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 9,
+    "duplicateMatch": {
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.09
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Claude mythos preview GameJam contestant",
+    "source": "Reddit r/artificial RSS",
+    "slug": "claude-mythos-preview-gamejam-contestant",
+    "keyword": "claude mythos preview gamejam contestant",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 88,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 4,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.04
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
   },
   {
     "topic": "Copilot Health",
@@ -3752,7 +6262,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "DESIGN.md by Google Stitch",
@@ -3796,7 +6312,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Cloud Computer by Manus",
@@ -3840,7 +6362,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "YouTube TV Custom Multiview",
@@ -3884,7 +6412,13 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Emoji War",
@@ -3928,6 +6462,364 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-02T07:02:31.643Z"
+    "scoredAt": "2026-05-03T07:20:46.147Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
+  },
+  {
+    "topic": "Building the compute infrastructure for the Intelligence Age",
+    "keyword": "building the compute infrastructure for the intelligence age",
+    "source": "Notion",
+    "notionPageId": "3557287b-c47a-81c7-a1e4-d90a0ede77c2",
+    "slug": "building-the-compute-infrastructure-for-the-intelligence-age",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 84,
+    "trendScore": 27,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 27,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "ai-automation-for-small-businesses",
+      "title": "How to Use AI Automation for Small Businesses in a Practical Business Automation Workflow",
+      "url": "/blog/ai-automation-for-small-businesses",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 66,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
+  },
+  {
+    "topic": "Huddle01 VMs",
+    "source": "Product Hunt",
+    "slug": "huddle01-vms",
+    "keyword": "huddle01 vms",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 84,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 6,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.06
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Aximote In-Car App",
+    "source": "Product Hunt",
+    "slug": "aximote-in-car-app",
+    "keyword": "aximote in-car app",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 84,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "PandaProbe",
+    "source": "Product Hunt",
+    "slug": "pandaprobe",
+    "keyword": "pandaprobe",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 84,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Mockin 2.0",
+    "source": "Product Hunt",
+    "slug": "mockin-2-0",
+    "keyword": "mockin 2.0",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 84,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Microsoft Copilot Health",
+    "source": "Product Hunt",
+    "slug": "microsoft-copilot-health",
+    "keyword": "microsoft copilot health",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.064Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 84,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-03T07:20:46.148Z"
+  },
+  {
+    "topic": "Where the goblins came from",
+    "keyword": "where the goblins came from",
+    "source": "Notion",
+    "notionPageId": "3557287b-c47a-8100-869d-f5d7cc34d0ef",
+    "slug": "where-the-goblins-came-from",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-03T07:20:43.063Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 80,
+    "trendScore": 27,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 27,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 11,
+    "duplicateMatch": {
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.11
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-03T07:20:46.147Z"
   }
 ]
