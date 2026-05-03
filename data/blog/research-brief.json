@@ -155,6 +155,10 @@
       },
       {
         "source": "Google News",
+        "title": "State Management Is the Missing Layer in Supply Chain AI - Logistics Viewpoints"
+      },
+      {
+        "source": "Google News",
         "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
       },
       {
@@ -163,15 +167,11 @@
       },
       {
         "source": "Google News",
+        "title": "How to Build AI Agent Models That Reduce Manual Work by 80% - Nasscom"
+      },
+      {
+        "source": "Google News",
         "title": "NVIDIA and the Role of AI Infrastructure in Supply Chains - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "Descartes Expands AI Innovation on Global Logistics Network with AI Agents for Freight Visibility - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
       }
     ],
     "realtimeSources": [
@@ -198,5 +198,9 @@
   "authorityAngle": "practical_workflow",
   "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
   "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
-  "notebookLmResearchNotes": "AI generation failed: nvidia-qwen failed: 502 <html>\n<head><title>502 Bad Gateway</title></head>\n<body>\n<center><h1>502 Bad Gateway</h1></center>\n</body>\n</html>\n"
+  "practicalExamples": {
+    "Slack intake workflow": "Automate customer support requests from Slack messages into ticketing systems with AI categorization and escalation rules.",
+    "CRM follow-up workflow": "Use AI to analyze CRM entries and automatically schedule follow-ups based on lead status and interaction history.",
+    "support triage workflow": "Route incoming support tickets using AI to the correct department or agent based on content and urgency."
+  }
 }
