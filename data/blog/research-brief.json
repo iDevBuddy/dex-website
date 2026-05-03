@@ -132,15 +132,19 @@
   "suggestedAngle": "",
   "suggestedTopic": "",
   "trendAnalysis": {
-    "trendScore": 69,
+    "trendScore": 75,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 68,
     "matchedTrendTerms": [
       "automation"
     ],
     "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
     "realtimeSignals": [
+      {
+        "source": "Google News",
+        "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints"
+      },
       {
         "source": "Google News",
         "title": "Meta’s AI Capex Reset Turns Supply Chain Into a Board-Level Constraint - Logistics Viewpoints"
@@ -163,15 +167,11 @@
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+        "title": "A Developer’s Guide to Building Scalable AI: Workflows vs Agents - Towards Data Science"
       },
       {
         "source": "Google News",
-        "title": "Descartes Expands AI Innovation on Global Logistics Network with AI Agents for Freight Visibility - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "Agent-Powered Enterprise: Productivity, Governance, and the Future of Work - Klover.ai"
+        "title": "What agentic AI means for financial services - Infosys"
       }
     ],
     "realtimeSources": [

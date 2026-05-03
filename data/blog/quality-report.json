@@ -18,13 +18,13 @@
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 69,
+    "trendScore": 75,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 69/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 75/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 85,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,32 +94,30 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 745
+      "wordCount": 612
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 8,
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a clear, practical guide to implementing AI memory in logistics workflows, which aligns well with the target audience of business operators and founders.",
-      "Content is well-structured with a strong use case, step-by-step implementation, and measurable outcomes.",
-      "Includes expert insight, common mistakes, and troubleshooting tips which add depth and authority.",
-      "Some sections like 'Tools Needed' and 'What to Do Next' could be expanded to provide more specific, actionable implementation details.",
-      "The article could benefit from more detailed examples of AI memory in action, such as specific prompts or memory structures used in LangChain or Azure AI.",
-      "The inclusion of KPIs and failure handling makes the guide actionable, but adding before/after workflow diagrams could enhance clarity."
+      "The article provides a practical, step-by-step guide to building AI workflows with memory for service businesses",
+      "Content is structured around a real business use case (Slack support triage) with clear implementation steps",
+      "Includes specific tools (Slack, Notion, OpenAI API, Zapier/Make) and measurable outcomes",
+      "Addresses common implementation challenges like API timeouts, low-confidence outputs, and duplicate ticket handling",
+      "Provides a detailed checklist for implementation and troubleshooting"
     ],
     "recommendedFixes": [
-      "Add a visual workflow diagram showing AI memory integration in the logistics process to improve clarity and user engagement.",
-      "Expand the 'Tools Needed' section with specific setup steps or configuration examples for each tool (Slack, CRM, AI platforms).",
-      "Include a short code snippet or example prompt showing how AI memory is implemented in LangChain or Azure AI for educational value.",
-      "Add a downloadable checklist or workflow template in the assets section for readers to implement the guide easily.",
-      "Clarify the human-in-the-loop process with a specific example of how approval steps function in practice.",
-      "Enhance the 'Troubleshooting & Failure Handling' section with real-world examples or case studies for better relatability."
+      "Add more specific examples of prompts or API calls for the OpenAI integration to show how memory is actually implemented",
+      "Include a diagram or visual workflow to illustrate the end-to-end process described",
+      "Add a section on cost considerations for running these workflows (API costs, tooling costs)",
+      "Include specific error handling examples for common edge cases in workflow automation",
+      "Add a comparison table of different workflow automation tools (Zapier vs Make vs custom solutions)"
     ]
   }
 }
