@@ -66,7 +66,7 @@ export async function generateNvidiaTtsAudio({ text, slug }) {
         '--sample-rate',
         String(Number(process.env.NVIDIA_TTS_SAMPLE_RATE || 22050)),
         '--max-chars',
-        String(Number(process.env.NVIDIA_TTS_MAX_CHARS || 520)),
+        String(Math.min(Number(process.env.NVIDIA_TTS_MAX_CHARS || 380), 380)),
     ]
 
     try {

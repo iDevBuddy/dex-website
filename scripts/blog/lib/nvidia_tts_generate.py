@@ -13,7 +13,7 @@ DEFAULT_FUNCTION_ID = "877104f7-e885-42b9-8de8-f6e4c6303969"
 DEFAULT_VOICE = "Magpie-Multilingual.EN-US.Aria"
 DEFAULT_LANGUAGE_CODE = "en-US"
 DEFAULT_SAMPLE_RATE = 22050
-DEFAULT_MAX_CHARS = 520
+DEFAULT_MAX_CHARS = 380
 
 
 def split_text(text: str, max_chars: int) -> list[str]:
@@ -71,7 +71,7 @@ def main() -> int:
     args = parser.parse_args()
 
     text = Path(args.text_file).read_text(encoding="utf-8")
-    chunks = split_text(text, args.max_chars)
+    chunks = split_text(text, min(args.max_chars, 380))
     if not chunks:
         raise SystemExit("No text provided for TTS generation.")
 

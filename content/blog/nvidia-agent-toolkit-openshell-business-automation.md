@@ -48,6 +48,9 @@ assetBrief: "Use official NVIDIA product/announcement visuals only. Do not gener
 seoAuditScore: "100"
 seoAuditPassed: "true"
 seoAuditTool: "local_seo_audit_bridge"
+audio: "/blog/audio/nvidia-agent-toolkit-openshell-business-automation.wav"
+audioProvider: "nvidia_tts"
+audioVoice: "Magpie-Multilingual.EN-US.Aria"
 ---
 
 ## What NVIDIA Announced

@@ -14,6 +14,11 @@ on:
         required: false
         default: false
         type: boolean
+      autoPublish:
+        description: 'Publish automatically when all gates pass'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -56,9 +61,10 @@ jobs:
       NVIDIA_TTS_LANGUAGE_CODE: ${{ vars.NVIDIA_TTS_LANGUAGE_CODE }}
       NVIDIA_TTS_SAMPLE_RATE: ${{ vars.NVIDIA_TTS_SAMPLE_RATE }}
       NVIDIA_TTS_MAX_CHARS: ${{ vars.NVIDIA_TTS_MAX_CHARS }}
-      USE_AUTO_PUBLISH: 'true'
-      MANUAL_APPROVAL: 'false'
-      AI_NEWS_AUTO_PUBLISH: ${{ vars.AI_NEWS_AUTO_PUBLISH }}
+      USE_AUTO_PUBLISH: 'false'
+      MANUAL_APPROVAL: 'true'
+      AI_NEWS_FAIL_SOFT: 'true'
+      AI_NEWS_AUTO_PUBLISH: 'false'
       AI_NEWS_FORCE_DRAFT: ${{ vars.AI_NEWS_FORCE_DRAFT }}
       ENABLE_AI_NEWS_TRACKING: ${{ vars.ENABLE_AI_NEWS_TRACKING }}
       AI_NEWS_SOURCE_LIMIT: ${{ vars.AI_NEWS_SOURCE_LIMIT }}
@@ -104,7 +110,8 @@ jobs:
 
       - name: Run trusted AI news pipeline
         run: |
-          ARGS="--auto-publish --force-draft"
+          ARGS="--force-draft"
+          if [ "${{ github.event.inputs.autoPublish }}" = "true" ]; then ARGS="$ARGS --auto-publish"; fi
           if [ "${{ github.event.inputs.dryRun }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
           if [ -n "${{ github.event.inputs.topic }}" ]; then ARGS="$ARGS --topic \"${{ github.event.inputs.topic }}\""; fi
           eval "npm run blog:news -- $ARGS"
@@ -112,7 +119,7 @@ jobs:
       - name: Build check
         run: npm run build
 
-      - name: Commit published AI news post
+      - name: Commit AI news draft or published post artifacts
         run: |
           git config user.name "AI Blog Engine"
           git config user.email "actions@github.com"
@@ -120,6 +127,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No AI news artifacts to commit."
           else
-            git commit -m "chore: publish trusted AI news blog"
+            git commit -m "chore: save AI news monitor output"
             git push
           fi

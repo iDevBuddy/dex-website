@@ -89,18 +89,36 @@ export async function generateAudio(articleArg, options = getPipelineOptions()) 
         await syncBlogDraft(article, { audioStatus: 'Browser Fallback' })
         return result
     } catch (error) {
-        warn('audio_generation_failed', { message: error.message })
+        const safeMessage = summarizeAudioError(error)
+        warn('audio_generation_failed', { message: safeMessage })
         await clearAudioOutput(article.frontmatter.slug)
         delete article.frontmatter.audio
         delete article.frontmatter.audioProvider
         delete article.frontmatter.audioVoice
         await writePipelineJson('draft-article.json', article, options)
-        const result = { ...baseResult, fallback: true, error: error.message }
+        const result = {
+            ...baseResult,
+            provider: 'browser_speech_synthesis_fallback',
+            fallback: true,
+            error: safeMessage,
+            note: 'Generated audio failed, so the article page will use browser text-to-speech fallback.',
+        }
         await writePipelineJson('audio-result.json', result, options)
-        await syncBlogDraft(article, { audioStatus: 'Failed' })
-        await notifySlack(`Audio generation failed for ${article.frontmatter.title}: ${error.message}`)
+        await syncBlogDraft(article, { audioStatus: process.env.REQUIRE_REAL_TTS === 'true' ? 'Failed' : 'Browser Fallback' })
+        if (process.env.REQUIRE_REAL_TTS === 'true') {
+            await notifySlack(`Audio generation failed for ${article.frontmatter.title}: ${safeMessage}`)
+        }
         return result
     }
+}
+
+function summarizeAudioError(error) {
+    const raw = String(error?.message || error || '')
+    const sequenceMatch = raw.match(/Input sentence is longer than maximum sequence length:\s*([0-9]+\s*>\s*[0-9]+)/i)
+    if (sequenceMatch) return `NVIDIA TTS text chunk exceeded model limit (${sequenceMatch[1]}). Browser TTS fallback enabled.`
+    const statusMatch = raw.match(/status\s*=\s*StatusCode\.([A-Z_]+)/)
+    if (statusMatch) return `NVIDIA TTS returned ${statusMatch[1]}. Browser TTS fallback enabled.`
+    return `${raw.split('\n').find((line) => line.trim()) || 'TTS provider failed'}`.slice(0, 240)
 }
 
 function buildAudioScript(article) {
