@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 92,
+    "score": 72,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,32 +98,26 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 926
+      "wordCount": 643
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": 0.2,
     "notes": [
-      "The article provides practical, actionable content for implementing AI automation with memory in logistics workflows.",
-      "Strong use of real-world examples and measurable outcomes helps demonstrate value.",
-      "Content includes important considerations like approval steps, logging, and failure handling which improves trustworthiness.",
-      "Some sections could benefit from more specific technical implementation details to reduce helpfulness gaps.",
-      "The article demonstrates good expertise with workflow diagrams, KPI tracking, and practical next steps.",
-      "Could expand on how to implement memory storage patterns beyond just mentioning Notion.",
-      "Lacks specific code examples or prompts that would increase implementation clarity for readers.",
-      "The content balances technical depth with accessibility for business decision-makers."
+      "The content demonstrates strong practical value and avoids generic AI advice",
+      "Addresses specific business problems with concrete implementation steps",
+      "Content is focused on real use cases like CRM follow-up workflows with measurable KPIs",
+      "Content aligns well with target audience needs (founders, operators, marketers)",
+      "Uses business outcomes as the success metric rather than content volume"
     ],
     "recommendedFixes": [
-      "Add specific prompt examples for the OpenAI API integration to show how memory is implemented in practice.",
-      "Include a sample Notion database schema or structure to illustrate the memory component setup.",
-      "Add a brief code snippet or GitHub Actions workflow example to concretize the logging implementation.",
-      "Expand the troubleshooting section with specific error handling examples for the AI agent decision-making process.",
-      "Clarify the handoff protocol between AI and human operators with a concrete example.",
-      "Add a short section on measuring confidence thresholds and fallback mechanisms for low-confidence AI outputs.",
-      "Include a visual diagram of the workflow architecture showing the path from Slack intake to Notion memory to AI agent.",
-      "Add specific KPI tracking implementation examples (e.g., example metrics dashboard or tracking method)."
+      "Add a brief example of memory in action to illustrate the concept more clearly",
+      "Include a simple workflow diagram to complement the step-by-step section",
+      "Add 1-2 more specific metrics or case study results to strengthen examples",
+      "Define 'memory' more concretely in the intro—what counts as 'memory' in AI systems",
+      "Include 1-2 short paragraphs on how memory improves outcomes vs. memoryless systems"
     ]
   }
 }
