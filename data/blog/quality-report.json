@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 75,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 85,
+    "score": 72,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,29 +94,34 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 720
+      "wordCount": 670
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "low",
     "notes": [
-      "文章提供了实用的AI自动化工作流指南，重点介绍了在物流中使用带记忆功能的AI规划。",
-      "内容结构清晰，包含了实施步骤、工具需求、常见问题及解决方法。",
-      "提供了明确的实施清单和故障排除建议。",
-      "内容具有实际业务指导意义，适合企业主和运营人员参考。"
+      "The article provides a clear, practical guide to implementing memory-aware AI workflows, with a strong focus on business use cases",
+      "Content effectively explains the concept of 'planning AI with memory' and provides actionable implementation steps",
+      "Includes specific tools, workflows, and KPIs which adds practical value for target audience",
+      "Covers important aspects like human-in-the-loop validation, failure handling, and monitoring",
+      "Well-structured with clear implementation checklist and step-by-step workflow guidance",
+      "Addresses common mistakes and troubleshooting scenarios which adds comprehensive coverage",
+      "Content is well-organized with key takeaways, making it actionable for practitioners"
     ],
     "recommendedFixes": [
-      "增加更多实际案例和具体实施细节，以增强内容的实用性。",
-      "可以进一步细化AI自动化工作流的步骤，提供更具体的操作指南。",
-      "建议增加图表或图示，如工作流图、信息图等，以增强内容的直观性。",
-      "增加对实施过程中可能遇到的问题的解决方案，如API超时等问题的处理。",
-      "建议增加对实施难度和时间的评估，帮助读者更好地规划项目。"
+      "Add specific examples of prompt engineering techniques for the AI categorization step",
+      "Include more detailed technical implementation examples for the failure handling mechanisms",
+      "Provide specific code snippets or API integration examples for better developer adoption",
+      "Add more detailed metrics on actual implementation results (e.g., specific time savings, error reduction percentages)",
+      "Include more specific integration examples between the mentioned tools (Slack + OpenAI + Zapier + CRM)",
+      "Add more specific use cases beyond support triage to show broader applicability",
+      "Include more detailed security and compliance considerations for enterprise adoption"
     ]
   }
 }
