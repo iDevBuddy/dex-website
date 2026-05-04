@@ -85,44 +85,45 @@
     }
   ],
   "authenticity": {
-    "score": 75,
+    "score": 73,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 555
+      "wordCount": 666
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The content provides a clear, practical guide to implementing AI memory in business workflows.",
-      "The article includes specific examples, tools, and a case study which adds practical value.",
-      "Addresses a real business problem with measurable outcomes and implementation steps.",
-      "Content is well-structured with direct answer, key takeaways, and expert insight at the beginning.",
-      "Addresses common mistakes and includes troubleshooting tips, which adds to its helpfulness.",
-      "The article includes an implementation checklist and step-by-step guide, improving its utility.",
-      "Use of authoritative sources and structured data (FAQs, sources, etc.) indicates high quality and reduces helpful content risk.",
-      "The article is instructional and targets a clear persona with specific use cases, aligning with search intent."
+      "The article provides a clear, practical guide to building AI workflows with memory for business use cases, specifically focusing on a support triage workflow.",
+      "It includes actionable steps, tools, and metrics that directly address the target audience's needs (founders, operators, marketers).",
+      "The content avoids generic AI advice and provides specific implementation details, which aligns with the business problem of avoiding 'useless' automation.",
+      "The article includes a strong expert insight and real business impact metrics.",
+      "It provides a step-by-step guide with clear implementation instructions and troubleshooting tips.",
+      "The use of authoritative sources and internal linking strategy supports the article's credibility and SEO value."
     ],
     "recommendedFixes": [
-      "Add a visual workflow diagram to improve understanding of the AI memory-based workflow.",
-      "Include a downloadable checklist or PDF for easy implementation reference.",
-      "Add an infographic summarizing the workflow steps and tools used.",
-      "Consider adding a comparison table between traditional automation and memory-enabled AI workflows.",
-      "Include a 'notebookLmResearch' asset for technical readers who want to dive deeper into the memory concept.",
-      "Add a social media carousel for promoting the article and its key insights.",
-      "Consider adding a 'Related Posts' section to improve internal linking and reader engagement."
+      "Add a section on 'Why Memory Matters' to reinforce the core concept early in the article.",
+      "Include a brief comparison of AI with and without memory to clarify the value proposition for skeptical readers.",
+      "Add a visual (e.g., workflow diagram) to illustrate the support triage process and memory components.",
+      "Clarify the difference between AI automation and AI with memory in the introduction to set the right context.",
+      "Add a short summary of how to get started for readers who want to implement immediately.",
+      "Include a section on common mistakes to avoid when building AI workflows with memory.",
+      "Add a checklist or step-by-step guide for implementation with clear actions and tools needed.",
+      "Include metrics and KPIs to track success and failure in AI workflows.",
+      "Add troubleshooting tips for common implementation issues like API timeouts, low-confidence outputs, and duplicate tickets.",
+      "Conclude with a call to action for readers to start small and scale up, with a link to book an automation consult."
     ]
   }
 }
