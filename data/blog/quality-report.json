@@ -85,39 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 72,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
       "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 643
+      "wordCount": 604
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 0.2,
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The content demonstrates strong practical value and avoids generic AI advice",
-      "Addresses specific business problems with concrete implementation steps",
-      "Content is focused on real use cases like CRM follow-up workflows with measurable KPIs",
-      "Content aligns well with target audience needs (founders, operators, marketers)",
-      "Uses business outcomes as the success metric rather than content volume"
+      "The article provides a practical, step-by-step guide for implementing memory-backed AI workflows in logistics, with clear examples and use cases.",
+      "It includes implementation details for a Slack-based intake system with AI triage, which aligns with the target keyword and concept: 'Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints'.",
+      "The content demonstrates a solid understanding of logistics automation and includes relevant tools like Slack, Notion, and Make.com.",
+      "The article is well-structured with clear steps for building the workflow, common mistakes to avoid, and troubleshooting tips.",
+      "There is a strong focus on business outcomes, such as reducing missed leads and improving response times, which is aligned with the target audience of business automation users."
     ],
     "recommendedFixes": [
-      "Add a brief example of memory in action to illustrate the concept more clearly",
-      "Include a simple workflow diagram to complement the step-by-step section",
-      "Add 1-2 more specific metrics or case study results to strengthen examples",
-      "Define 'memory' more concretely in the intro—what counts as 'memory' in AI systems",
-      "Include 1-2 short paragraphs on how memory improves outcomes vs. memoryless systems"
+      "Clarify the distinction between 'memory' in AI and 'automation' to better highlight the value of memory-backed planning, especially for non-technical readers.",
+      "Add more specific examples of how memory improves logistics planning (e.g., contextual rerouting based on past delays).",
+      "Include a diagram or visual workflow to support the explanation of the Slack → AI → Notion process.",
+      "Strengthen the connection between memory and decision accuracy by including a brief example or case study.",
+      "Ensure that the article's metadata and internal linking aligns with the target keyword and concept for better SEO."
     ]
   }
 }
