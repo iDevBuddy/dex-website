@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 75/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 75/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 77,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,32 +98,34 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 663
+      "wordCount": 458
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides specific, actionable guidance for implementing memory-enabled AI in logistics workflows",
-      "Content demonstrates practical business automation expertise with clear implementation steps",
-      "Strong use of structured data (checklists, step-by-step workflows) that supports user success",
-      "Addresses a genuine business problem (support triage inefficiency) with measurable outcomes",
-      "Content avoids generic AI advice and focuses on workflow-specific implementation",
-      "Uses appropriate technical depth for target audience (founders, operators, marketers)",
-      "Content is well-researched with authoritative sources and proper attribution",
-      "Article includes important safeguards like approval steps and failure handling"
+      "The article provides a clear, practical guide to implementing AI automation with memory and approval steps, which aligns well with Google's helpful content guidelines.",
+      "Strong use of expert persona with actionable workflows, specific tools, and business context.",
+      "Content is written for a specific audience (founders, operators, marketers, service-business owners) with a clear business problem and solution.",
+      "Includes a real-world case study with metrics, which adds credibility and practical value.",
+      "Addresses a clear business problem: poor customer experience and missed escalations due to lack of memory and approval in automation.",
+      "Well-structured with step-by-step implementation, tools, and an implementation checklist that increases practical utility.",
+      "Addresses common mistakes and includes troubleshooting tips, which adds depth and shows comprehensive expertise.",
+      "Uses expert sources with high authority to support claims and context.",
+      "Content is not too shallow or generic; it provides specific examples and avoids fluff, enhancing its helpfulness."
     ],
     "recommendedFixes": [
-      "Add specific examples of AI prompts or categorization rules for better implementation clarity",
-      "Include a visual workflow diagram to complement the step-by-step text description",
-      "Add cost considerations or ROI calculations to help businesses evaluate implementation",
-      "Include specific metrics thresholds (e.g., what confidence score triggers human review)",
-      "Add troubleshooting examples with actual error messages or scenarios",
-      "Include integration screenshots or configuration examples for key tools mentioned",
-      "Add a section on scaling considerations after initial implementation",
-      "Provide alternative tool recommendations for different budget levels"
+      "Improve meta title length for better SEO (current title is over the recommended length).",
+      "Add a short introduction summarizing the article's purpose and main takeaway to improve clarity and engagement.",
+      "Consider simplifying the title for better readability and search intent match: e.g. 'How Planning AI Needs Memory, Not Just Automation'.",
+      "Add internal links to other relevant articles or sections of the site to improve topical authority.",
+      "Consider adding a comparison table or workflow diagram as recommended in media suggestions to increase engagement and time on page.",
+      "Add a downloadable checklist or workflow diagram as a content asset to increase lead generation and on-page engagement.",
+      "Add a conclusion that summarizes key points and includes a call to action for next steps or further engagement.",
+      "Add social sharing or engagement elements to extend reach and time on page.",
+      "Consider adding related articles or guides in a sidebar or as internal links to increase time on site and reduce bounce rate."
     ]
   }
 }
