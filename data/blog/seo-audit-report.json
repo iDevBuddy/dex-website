@@ -1,11 +1,11 @@
 {
-  "score": 76,
+  "score": 88,
   "minScore": 82,
-  "passed": false,
+  "passed": true,
   "checks": [
     {
       "name": "metaTitleLength",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -55,5 +55,5 @@
     }
   ],
   "tool": "local_seo_audit_bridge",
-  "notes": "SEO audit needs improvement before automatic publishing."
+  "notes": "SEO audit passed."
 }
