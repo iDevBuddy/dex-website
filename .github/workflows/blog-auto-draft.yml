@@ -82,8 +82,7 @@ jobs:
       USE_GEMMA: ${{ vars.USE_GEMMA }}
       OPENAI_API_KEY: ${{ vars.OPENAI_API_KEY }}
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-      USE_IMAGE_MODEL: ${{ vars.USE_IMAGE_MODEL }}
-      IMAGE_PROVIDER: ${{ vars.IMAGE_PROVIDER }}
+      IMAGE_PROVIDER: nvidia_flux
       NVIDIA_API_KEY: ${{ vars.NVIDIA_API_KEY }}
       NVIDIA_NIM_API_KEY: ${{ vars.NVIDIA_NIM_API_KEY }}
       NVIDIA_FLUX_URL: ${{ vars.NVIDIA_FLUX_URL }}
@@ -92,9 +91,6 @@ jobs:
       NVIDIA_FLUX_STEPS: ${{ vars.NVIDIA_FLUX_STEPS }}
       NVIDIA_FLUX_CFG_SCALE: ${{ vars.NVIDIA_FLUX_CFG_SCALE }}
       NVIDIA_FLUX_TIMEOUT_MS: ${{ vars.NVIDIA_FLUX_TIMEOUT_MS }}
-      COMFYUI_URL: ${{ vars.COMFYUI_URL }}
-      COMFYUI_WORKFLOW_PATH: ${{ vars.COMFYUI_WORKFLOW_PATH }}
-      USE_GPT_IMAGE: ${{ vars.USE_GPT_IMAGE }}
       USE_LOCAL_TTS: ${{ vars.USE_LOCAL_TTS }}
       TTS_PROVIDER: ${{ vars.TTS_PROVIDER }}
       TTS_API_URL: ${{ vars.TTS_API_URL }}
