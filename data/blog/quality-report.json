@@ -8,10 +8,10 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 69,
+    "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 74,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
-      "marketSentimentScore": 69,
+      "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 674
+      "wordCount": 623
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,18 +106,24 @@
   "review": {
     "helpfulContentRisk": "medium",
     "notes": [
-      "The article provides a detailed guide on implementing Launchpad Build AI's Manufacturing Language Model for industrial automation design. The content is highly specific and technical, which aligns well with the 'expert guide' style. However, the target keyword 'launchpad build ai offers mlm for industrial automation design - the robot report' is used in a somewhat unnatural way in the title and slug, potentially affecting readability and user intent match.",
-      "The article's content is rich with technical details and step-by-step implementation, but it lacks a clear connection to the keyword's intent, which may cause some mismatch in user expectations.",
-      "The article's primary focus is on the technical implementation of the AI model, but it does not clearly address the search intent of the keyword, which is 'launchpad build ai offers mlm for industrial automation design'. The content should better reflect the search query in its title and main content to improve its helpfulness and match user intent.",
-      "The article's frontmatter and content do not fully align with the keyword's intent, which is to provide a guide on 'launchpad build ai offers mlm for industrial automation design'. The content should be more focused on the specific implementation of the MLM model in industrial automation design.",
-      "The article's content is also missing a clear call to action for the reader to implement the solution, which would improve the article's helpfulness."
+      "The article provides valuable technical guidance on implementing memory-enabled AI for logistics planning, which is a unique and practical angle",
+      "Content includes specific metrics (60% reduction in redundant checks, 35% improvement in planning accuracy) which adds credibility",
+      "Article includes practical implementation steps, tools, and workflows that align well with search intent for business automation",
+      "Some sections could be expanded for better user understanding - particularly the business impact and ROI justification",
+      "The content is technically sound but could benefit from more detailed explanation of how memory specifically improves outcomes",
+      "Good use of structured approach with clear steps, tools, and implementation guidance",
+      "Could improve by adding more specific examples of how memory retention solves real business problems in logistics",
+      "The article mentions 'approval steps' and 'quality checks' in the frontmatter but doesn't elaborate on these in the body content"
     ],
     "recommendedFixes": [
-      "Align the article's content more closely with the keyword's intent by focusing on how to use the Launchpad Build AI's MLM for industrial automation design, rather than just mentioning it in the title.",
-      "Consider revising the title and subtitle to better reflect the content of the article and the search intent.",
-      "Add a clear call to action for the reader to implement the solution, such as 'Implement the solution in your industrial automation design workflow' or 'Start using the Launchpad Build AI's MLM for your industrial automation design'.",
-      "Include a section on how to use the Launchpad Build AI's MLM in the context of the article's content, rather than just listing the steps to implement the solution.",
-      "Consider adding a section on how to integrate the MLM model with existing project management systems like Jira or Slack, as mentioned in the article's content."
+      "Expand the 'Business Use Case' section with more detailed before/after scenarios showing specific memory-driven improvements",
+      "Add a subsection on 'Quality Assurance in Memory-Enabled Workflows' to explain how memory improves decision accuracy",
+      "Include specific examples of memory failures in logistics (e.g., repeated supplier vetting, route re-analysis) and how the solution addresses them",
+      "Add more detailed implementation guidance for the approval workflow steps mentioned in the frontmatter",
+      "Include specific metrics on how memory retention improves planning accuracy in real logistics scenarios",
+      "Provide more context on how the memory system handles data conflicts or outdated information",
+      "Add a brief comparison with traditional automation to highlight the specific advantages of memory-enabled planning",
+      "Include error handling considerations for memory operations in the workflow"
     ]
   }
 }
