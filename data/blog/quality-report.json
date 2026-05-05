@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 48,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 69,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 48/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,43 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 74,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 69,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 902
+      "wordCount": 674
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "medium",
     "notes": [
-      "The article provides practical, step-by-step guidance on implementing Google's AI Max in business workflows, which aligns well with the 'practical_workflow' angle and target audience of business owners/operators",
-      "Content effectively addresses the target keyword and related concept, with strong semantic coverage including 'AI Max expansion', 'upstream automation', 'customer support triage', and 'approval workflows'",
-      "The article includes specific implementation details like confidence thresholds, escalation paths, and KPIs that add practical value",
-      "Some sections could benefit from more concrete examples or data points to strengthen credibility (e.g., specific AI Max API configuration details, exact confidence score impacts)",
-      "The content references external sources appropriately but could integrate more direct quotes or statistics to support key claims about business impact",
-      "Implementation checklist and troubleshooting sections provide actionable value and improve the expert guide format",
-      "Missing some depth in explaining how exactly AI Max interprets intent probabilistically - could use a brief technical explanation for the expert audience"
+      "The article provides a detailed guide on implementing Launchpad Build AI's Manufacturing Language Model for industrial automation design. The content is highly specific and technical, which aligns well with the 'expert guide' style. However, the target keyword 'launchpad build ai offers mlm for industrial automation design - the robot report' is used in a somewhat unnatural way in the title and slug, potentially affecting readability and user intent match.",
+      "The article's content is rich with technical details and step-by-step implementation, but it lacks a clear connection to the keyword's intent, which may cause some mismatch in user expectations.",
+      "The article's primary focus is on the technical implementation of the AI model, but it does not clearly address the search intent of the keyword, which is 'launchpad build ai offers mlm for industrial automation design'. The content should better reflect the search query in its title and main content to improve its helpfulness and match user intent.",
+      "The article's frontmatter and content do not fully align with the keyword's intent, which is to provide a guide on 'launchpad build ai offers mlm for industrial automation design'. The content should be more focused on the specific implementation of the MLM model in industrial automation design.",
+      "The article's content is also missing a clear call to action for the reader to implement the solution, which would improve the article's helpfulness."
     ],
     "recommendedFixes": [
-      "Add 1-2 specific examples of prompt structures or configuration settings for AI Max to make the implementation steps more tangible",
-      "Include a brief visual workflow diagram or example flow to illustrate the approval process",
-      "Add 1-2 sentences on how to actually access or configure AI Max (e.g., through Vertex AI, specific APIs, or Google Cloud services)",
-      "Expand on the 'probabilistic interpretation' with a simple example of how this differs from rule-based automation",
-      "Include a short section on A/B testing the implementation to measure impact",
-      "Add a sentence about data requirements for training the AI on historical tickets (e.g., minimum dataset size, format requirements)",
-      "Clarify what 'AI Max' actually refers to - while based on the sources it's likely Google's advertising AI technology, a brief definition would help readers unfamiliar with the specific product"
+      "Align the article's content more closely with the keyword's intent by focusing on how to use the Launchpad Build AI's MLM for industrial automation design, rather than just mentioning it in the title.",
+      "Consider revising the title and subtitle to better reflect the content of the article and the search intent.",
+      "Add a clear call to action for the reader to implement the solution, such as 'Implement the solution in your industrial automation design workflow' or 'Start using the Launchpad Build AI's MLM for your industrial automation design'.",
+      "Include a section on how to use the Launchpad Build AI's MLM in the context of the article's content, rather than just listing the steps to implement the solution.",
+      "Consider adding a section on how to integrate the MLM model with existing project management systems like Jira or Slack, as mentioned in the article's content."
     ]
   }
 }
