@@ -37,90 +37,71 @@
   ],
   "sources": [
     {
-      "title": "OpenAI Platform Documentation",
-      "organization": "OpenAI",
-      "url": "https://platform.openai.com/docs/",
-      "type": "Official documentation",
-      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
-      "tags": [
-        "ai",
-        "llm",
-        "agents",
-        "automation",
-        "workflow",
-        "prompt"
-      ],
-      "authorityScore": 83
+      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+      "type": "Web research",
+      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
+      "authorityScore": 95,
+      "publishedDate": ""
     },
     {
-      "title": "GitHub Docs: GitHub Actions",
-      "organization": "GitHub",
-      "url": "https://docs.github.com/en/actions",
-      "type": "Official documentation",
-      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
-      "tags": [
-        "github",
-        "automation",
-        "workflow",
-        "ci",
-        "deployment"
-      ],
-      "authorityScore": 83
+      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
+      "type": "Web research",
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
+      "publishedDate": ""
     },
     {
-      "title": "The State of AI",
-      "organization": "McKinsey & Company",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "type": "Industry report",
-      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
-      "tags": [
-        "ai",
-        "business",
-        "trend",
-        "strategy"
-      ],
-      "authorityScore": 80
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+      "type": "Web research",
+      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+      "authorityScore": 95,
+      "publishedDate": ""
     },
     {
-      "title": "Microsoft Learn: Azure AI Services",
-      "organization": "Microsoft",
-      "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
-      "type": "Official documentation",
-      "supports": "Supports claims about practical AI service patterns, responsible deployment, and AI workflow building blocks.",
-      "tags": [
-        "ai",
-        "automation",
-        "workflow",
-        "business",
-        "agents"
-      ],
-      "authorityScore": 79
+      "title": "Ceres AI Enhances Integration with John Deere Operations Center | iGrow Smart Farming News posted on the topic | LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/smart-farming-news_ceres-ai-enhances-integration-with-john-deere-activity-7414282179784036353-MKgG",
+      "type": "Web research",
+      "supports": "🧠 Trust by design\nExplainable, human-in-the-loop AI ensures decisions remain transparent, auditable, and aligned with sustainability and resilience objectives.\nSustainable supply chains are about fas",
+      "authorityScore": 95,
+      "publishedDate": ""
     },
     {
-      "title": "IBM: What Is Workflow Automation?",
-      "organization": "IBM",
-      "url": "https://www.ibm.com/topics/workflow-automation",
-      "type": "Industry explainer",
-      "supports": "Defines workflow automation and provides business context for improving repeatable operational processes.",
-      "tags": [
-        "workflow",
-        "automation",
-        "business",
-        "operations"
-      ],
-      "authorityScore": 76
+      "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
+      "organization": "tryenvoy.ai",
+      "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+      "type": "Web research",
+      "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Automation Roadmap: Learn Tools, Concepts, and Build Agents in 6 Months | by Sarah Morino | Artificial Intelligence in Plain English",
+      "organization": "ai.plainenglish.io",
+      "url": "https://ai.plainenglish.io/ai-automation-roadmap-learn-tools-concepts-and-build-agents-in-6-months-1bf97a1d2715",
+      "type": "Web research",
+      "supports": "How do I build an AI agent?\n\nBuilding an AI agent involves combining structured workflows with intelligent decision‑making. Platforms like Flowise and n8n make this process accessible by providing vis",
+      "authorityScore": 95,
+      "publishedDate": ""
     }
   ],
   "sourcesToCite": [
-    "https://platform.openai.com/docs/",
-    "https://docs.github.com/en/actions",
-    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-    "https://learn.microsoft.com/en-us/azure/ai-services/",
-    "https://www.ibm.com/topics/workflow-automation"
+    "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+    "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
+    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+    "https://www.linkedin.com/posts/smart-farming-news_ceres-ai-enhances-integration-with-john-deere-activity-7414282179784036353-MKgG",
+    "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+    "https://ai.plainenglish.io/ai-automation-roadmap-learn-tools-concepts-and-build-agents-in-6-months-1bf97a1d2715"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -167,11 +148,11 @@
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+        "title": "Seizing the agentic AI advantage - McKinsey & Company"
       },
       {
         "source": "Google News",
-        "title": "Seizing the agentic AI advantage - McKinsey & Company"
+        "title": "Agent-Powered Enterprise: Productivity, Governance, and the Future of Work - Klover.ai"
       }
     ],
     "realtimeSources": [
@@ -197,5 +178,61 @@
   "businessFunction": "General",
   "authorityAngle": "practical_workflow",
   "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
-  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
+  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
+  "webResearchSources": [
+    {
+      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+      "type": "Web research",
+      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
+      "type": "Web research",
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+      "type": "Web research",
+      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Ceres AI Enhances Integration with John Deere Operations Center | iGrow Smart Farming News posted on the topic | LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/smart-farming-news_ceres-ai-enhances-integration-with-john-deere-activity-7414282179784036353-MKgG",
+      "type": "Web research",
+      "supports": "🧠 Trust by design\nExplainable, human-in-the-loop AI ensures decisions remain transparent, auditable, and aligned with sustainability and resilience objectives.\nSustainable supply chains are about fas",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
+      "organization": "tryenvoy.ai",
+      "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+      "type": "Web research",
+      "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Automation Roadmap: Learn Tools, Concepts, and Build Agents in 6 Months | by Sarah Morino | Artificial Intelligence in Plain English",
+      "organization": "ai.plainenglish.io",
+      "url": "https://ai.plainenglish.io/ai-automation-roadmap-learn-tools-concepts-and-build-agents-in-6-months-1bf97a1d2715",
+      "type": "Web research",
+      "supports": "How do I build an AI agent?\n\nBuilding an AI agent involves combining structured workflows with intelligent decision‑making. Platforms like Flowise and n8n make this process accessible by providing vis",
+      "authorityScore": 95,
+      "publishedDate": ""
+    }
+  ]
 }

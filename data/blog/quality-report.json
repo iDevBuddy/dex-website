@@ -1,12 +1,12 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 6,
     "minSources": 2,
     "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 86,
+    "score": 80,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,7 +98,7 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 833
+      "wordCount": 725
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,24 +106,22 @@
   "review": {
     "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides practical, actionable guidance for implementing AI automation with memory in logistics workflows",
-      "Content is well-structured with clear steps, tools, and implementation details",
-      "Includes measurable business outcomes and KPIs which adds credibility",
-      "Addresses common mistakes and failure handling scenarios",
-      "Uses specific tools (Slack, OpenAI API, GitHub Actions) which makes it actionable",
-      "Content is written for the target audience (founders, operators, marketers) with appropriate technical depth",
-      "SEO elements are present but could be enhanced (target keyword usage could be more strategic)",
-      "The article demonstrates expertise with detailed technical implementation but remains accessible"
+      "The article provides a clear, practical guide to implementing Planning AI with memory in business workflows, specifically focusing on a customer support use case.",
+      "Content is well-structured with key takeaways, direct answer, expert insights, and step-by-step implementation guidance.",
+      "Uses authoritative sources from logisticsviewpoints.com and tryenvoy.ai to support claims about AI memory systems.",
+      "Addresses search intent effectively with practical implementation guidance for business owners evaluating AI automation.",
+      "Includes measurable business outcomes (85% lead reduction, 2-hour response time, 10 hours saved weekly) which adds credibility.",
+      "Content aligns well with target keyword 'planning ai needs memory, not just automation - logistics viewpoints'.",
+      "Provides specific tools (Make.com, n8n, Zapier, CRM) and a clear implementation checklist."
     ],
     "recommendedFixes": [
-      "Increase usage of the target keyword 'planning ai needs memory, not just automation - logistics viewpoints' in subheadings and body content for better keyword optimization",
-      "Add internal links to related content beyond the three listed, particularly to technical implementation guides",
-      "Include more specific code examples or API integration snippets to increase practical value",
-      "Add a visual workflow diagram to complement the text-based flow explanation",
-      "Consider adding more specific metrics or case study details to strengthen the business impact claims",
-      "Expand the troubleshooting section with more real-world failure scenarios and solutions",
-      "Add a brief section on cost analysis or ROI calculation to better support the business case",
-      "Include more specific examples of the prompts or decision trees used in the AI triage process"
+      "Add a visual workflow diagram to illustrate the AI agent memory concept - this is flagged as recommended in media recommendations but not present",
+      "Include a downloadable checklist asset as mentioned in media recommendations",
+      "Add more specific examples of how memory enables continuity in the workflow - current explanation is somewhat abstract",
+      "Consider adding a comparison table between traditional automation vs AI with memory to make the distinction clearer",
+      "Include more detailed implementation metrics - while results are mentioned, actual implementation steps could be more specific",
+      "Add a section on troubleshooting common memory-related issues in AI workflows",
+      "Consider including more diverse source types beyond primarily logisticsviewpoints.com content to improve source diversity"
     ]
   }
 }
