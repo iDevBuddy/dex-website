@@ -70,10 +70,7 @@ function trendOverrideBlocksPublishing(quality = {}) {
 }
 
 function imageProviderSetupMessage() {
-    const provider = process.env.IMAGE_PROVIDER || 'local_comfyui'
-    if (provider === 'nvidia_flux' || provider === 'nvidia') return 'Add NVIDIA_API_KEY, NVIDIA_FLUX_URL, NVIDIA_FLUX_MODEL, and NVIDIA_IMAGE_SIZE.'
-    if (provider === 'gpt_image' || process.env.USE_GPT_IMAGE === 'true') return 'Add OPENAI_API_KEY and USE_GPT_IMAGE=true.'
-    return 'Add COMFYUI_URL and COMFYUI_WORKFLOW_PATH.'
+    return 'Add NVIDIA_API_KEY and NVIDIA_FLUX_URL to your GitHub repo vars.'
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

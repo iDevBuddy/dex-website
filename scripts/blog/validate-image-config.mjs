@@ -9,19 +9,9 @@ function has(name) {
 }
 
 function providerReport() {
-    const provider = process.env.IMAGE_PROVIDER || 'local_comfyui'
+    const provider = process.env.IMAGE_PROVIDER || 'nvidia_flux'
     const missing = []
     const warnings = []
-
-    if (provider === 'replicate') {
-        return {
-            provider,
-            configured: false,
-            productionReady: false,
-            missing: ['IMAGE_PROVIDER=nvidia_flux'],
-            warnings: ['Replicate has been removed from this project. Use NVIDIA FLUX only.'],
-        }
-    }
 
     if (provider === 'nvidia_flux' || provider === 'nvidia') {
         if (!has('NVIDIA_API_KEY') && !has('NVIDIA_NIM_API_KEY')) missing.push('NVIDIA_API_KEY')
@@ -29,14 +19,8 @@ function providerReport() {
         if (!has('NVIDIA_FLUX_MODEL')) warnings.push('NVIDIA_FLUX_MODEL is missing; the default FLUX.1-schnell model will be used.')
         if (!has('NVIDIA_IMAGE_SIZE')) warnings.push('NVIDIA_IMAGE_SIZE is missing; 1200x675 intent will be used.')
         if (!has('NVIDIA_FLUX_TIMEOUT_MS')) warnings.push('NVIDIA_FLUX_TIMEOUT_MS is missing; 120000ms will be used.')
-    } else if (provider === 'local_comfyui') {
-        if (!has('COMFYUI_URL')) missing.push('COMFYUI_URL')
-        if (!has('COMFYUI_WORKFLOW_PATH')) missing.push('COMFYUI_WORKFLOW_PATH')
-    } else if (provider === 'gpt_image') {
-        if (!has('OPENAI_API_KEY')) missing.push('OPENAI_API_KEY')
-        if (process.env.USE_GPT_IMAGE !== 'true') warnings.push('Set USE_GPT_IMAGE=true when IMAGE_PROVIDER=gpt_image.')
     } else {
-        missing.push(`Unsupported IMAGE_PROVIDER=${provider}`)
+        missing.push(`Unsupported IMAGE_PROVIDER=${provider}. Only nvidia_flux is supported.`)
     }
 
     return {
