@@ -70,15 +70,16 @@ function extractImage(json = {}) {
     return null
 }
 
-async function generateStableDiffusionImage({ article, output }) {
+async function generateStableDiffusionImage({ article, output }, attempt = 0) {
     const token = process.env.NVIDIA_API_KEY || process.env.NVIDIA_NIM_API_KEY
     if (!token) return null
     const endpoint = process.env.NVIDIA_SD_URL || process.env.NVIDIA_FLUX_URL || SD_ENDPOINT
     const model = process.env.NVIDIA_SD_MODEL || process.env.NVIDIA_FLUX_MODEL || SD_MODEL
     const { width, height, requestedWidth, requestedHeight } = sdDimensions()
     const prompt = article.imagePrompt || imagePrompt(article)
+    const timeoutMs = Number(process.env.NVIDIA_IMAGE_TIMEOUT_MS || process.env.NVIDIA_FLUX_TIMEOUT_MS || 180000)
     const controller = new AbortController()
-    const timeout = setTimeout(() => controller.abort(), Number(process.env.NVIDIA_IMAGE_TIMEOUT_MS || process.env.NVIDIA_FLUX_TIMEOUT_MS || 180000))
+    const timeout = setTimeout(() => controller.abort(), timeoutMs)
     let json
     try {
         const response = await fetch(endpoint, {
@@ -104,7 +105,12 @@ async function generateStableDiffusionImage({ article, output }) {
         if (!response.ok) throw new Error(`Stable Diffusion API failed: ${response.status} ${await response.text()}`)
         json = await response.json()
     } catch (error) {
-        if (error.name === 'AbortError') throw new Error(`Stable Diffusion API timed out after ${process.env.NVIDIA_IMAGE_TIMEOUT_MS || 180000}ms.`)
+        clearTimeout(timeout)
+        if (attempt < 2) {
+            await new Promise((r) => setTimeout(r, 12000))
+            return generateStableDiffusionImage({ article, output }, attempt + 1)
+        }
+        if (error.name === 'AbortError') throw new Error(`Stable Diffusion API timed out after ${timeoutMs}ms (${attempt + 1} attempts).`)
         throw error
     } finally {
         clearTimeout(timeout)
