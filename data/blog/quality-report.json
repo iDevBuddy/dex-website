@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 75/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 75/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 92,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,7 +98,7 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 863
+      "wordCount": 495
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,23 +106,22 @@
   "review": {
     "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a comprehensive, practical guide to building memory-enabled AI workflows, specifically targeting logistics service businesses.",
-      "Content is well-structured with clear steps, tools, and implementation advice that align with the target audience's needs.",
-      "The article includes a strong business case with measurable results (72% reduction in missed leads, 65% improvement in first response time).",
-      "Use of authoritative sources (OpenAI, GitHub, McKinsey) supports claims and adds credibility.",
-      "SEO elements like target keyword, meta description, and FAQ are well-optimized for search intent.",
-      "Implementation checklist, troubleshooting tips, and KPIs provide actionable value to readers.",
-      "The tone and style match the 'Business Automation Expert' persona and 'Founder, operator, marketer, or service-business owner' target reader.",
-      "The article could benefit from visual assets like workflow diagrams or infographics to enhance understanding."
+      "The article provides practical, actionable guidance for implementing memory-enabled AI workflows, with a clear use case in logistics support triage.",
+      "Content is well-structured with a logical flow: problem explanation → solution overview → implementation steps → KPIs and troubleshooting.",
+      "Use of specific tools (Slack, Notion, OpenAI API, CRM) grounds the advice in real-world applicability.",
+      "Addresses common mistakes and includes a troubleshooting section, which adds value for readers.",
+      "The article aligns with search intent (Informational) and targets the right audience (founders, operators, marketers).",
+      "Content avoids generic AI advice and focuses on measurable business outcomes, which aligns with the stated business problem.",
+      "The inclusion of sources from authoritative organizations (OpenAI, McKinsey, IBM, etc.) supports claims and improves credibility."
     ],
     "recommendedFixes": [
-      "Add a workflow diagram to visually represent the step-by-step process described in the article.",
-      "Include an infographic summarizing the key differences between simple automation and memory-enabled AI.",
-      "Create a downloadable checklist in PDF format for readers to use during implementation.",
-      "Add alt text to the featured image for better accessibility and SEO.",
-      "Consider adding a comparison table of tools (Slack, CRM, GitHub Actions, OpenAI API) to help readers choose the right stack.",
-      "Include a brief section on cost considerations or budgeting for implementing such workflows.",
-      "Add a short conclusion section summarizing the main points and reinforcing the value proposition."
+      "Add a brief explanation of how memory is technically implemented (e.g., using Notion as a memory store with API calls) to increase technical clarity for readers.",
+      "Include a simple diagram or visual representation of the workflow (even if text-based) to improve content richness and support the 'workflowDiagram' asset recommendation.",
+      "Expand on the 'human approval' mechanism—how is confidence measured? How is approval triggered and tracked?",
+      "Clarify how Notion is used for memory storage—provide a short example or structure (e.g., schema for storing past decisions).",
+      "Consider adding a short section on cost/benefit or when not to use memory-enabled AI to balance the recommendation and avoid over-promising.",
+      "The FAQ section is strong but could be expanded with 1-2 more technical or implementation-focused questions (e.g., 'How do I sync Notion with OpenAI?', 'How do I handle data privacy with memory storage?').",
+      "The 'What to Do Next' section could include a downloadable checklist or Notion template link to increase engagement and conversion."
     ]
   }
 }
