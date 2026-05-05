@@ -157,6 +157,7 @@ jobs:
       TAVILY_API_KEY: ${{ vars.TAVILY_API_KEY }}
       MEDIUM_INTEGRATION_TOKEN: ${{ vars.MEDIUM_INTEGRATION_TOKEN }}
       MEDIUM_PUBLISH_STATUS: ${{ vars.MEDIUM_PUBLISH_STATUS }}
+      GITHUB_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
