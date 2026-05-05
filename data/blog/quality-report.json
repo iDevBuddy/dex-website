@@ -85,39 +85,44 @@
     }
   ],
   "authenticity": {
-    "score": 75,
+    "score": 92,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 604
+      "wordCount": 863
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a practical, step-by-step guide for implementing memory-backed AI workflows in logistics, with clear examples and use cases.",
-      "It includes implementation details for a Slack-based intake system with AI triage, which aligns with the target keyword and concept: 'Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints'.",
-      "The content demonstrates a solid understanding of logistics automation and includes relevant tools like Slack, Notion, and Make.com.",
-      "The article is well-structured with clear steps for building the workflow, common mistakes to avoid, and troubleshooting tips.",
-      "There is a strong focus on business outcomes, such as reducing missed leads and improving response times, which is aligned with the target audience of business automation users."
+      "The article provides a comprehensive, practical guide to building memory-enabled AI workflows, specifically targeting logistics service businesses.",
+      "Content is well-structured with clear steps, tools, and implementation advice that align with the target audience's needs.",
+      "The article includes a strong business case with measurable results (72% reduction in missed leads, 65% improvement in first response time).",
+      "Use of authoritative sources (OpenAI, GitHub, McKinsey) supports claims and adds credibility.",
+      "SEO elements like target keyword, meta description, and FAQ are well-optimized for search intent.",
+      "Implementation checklist, troubleshooting tips, and KPIs provide actionable value to readers.",
+      "The tone and style match the 'Business Automation Expert' persona and 'Founder, operator, marketer, or service-business owner' target reader.",
+      "The article could benefit from visual assets like workflow diagrams or infographics to enhance understanding."
     ],
     "recommendedFixes": [
-      "Clarify the distinction between 'memory' in AI and 'automation' to better highlight the value of memory-backed planning, especially for non-technical readers.",
-      "Add more specific examples of how memory improves logistics planning (e.g., contextual rerouting based on past delays).",
-      "Include a diagram or visual workflow to support the explanation of the Slack → AI → Notion process.",
-      "Strengthen the connection between memory and decision accuracy by including a brief example or case study.",
-      "Ensure that the article's metadata and internal linking aligns with the target keyword and concept for better SEO."
+      "Add a workflow diagram to visually represent the step-by-step process described in the article.",
+      "Include an infographic summarizing the key differences between simple automation and memory-enabled AI.",
+      "Create a downloadable checklist in PDF format for readers to use during implementation.",
+      "Add alt text to the featured image for better accessibility and SEO.",
+      "Consider adding a comparison table of tools (Slack, CRM, GitHub Actions, OpenAI API) to help readers choose the right stack.",
+      "Include a brief section on cost considerations or budgeting for implementing such workflows.",
+      "Add a short conclusion section summarizing the main points and reinforcing the value proposition."
     ]
   }
 }
