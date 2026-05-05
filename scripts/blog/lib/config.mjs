@@ -50,7 +50,7 @@ export const config = {
     infographicProvider: process.env.INFOGRAPHIC_PROVIDER || 'image_model',
     localLlmUrl: process.env.LOCAL_LLM_URL || '',
     localLlmModel: process.env.LOCAL_LLM_MODEL || '',
-    imageProvider: process.env.IMAGE_PROVIDER || 'nvidia_flux',
+    imageProvider: process.env.IMAGE_PROVIDER || 'stable_diffusion',
     ttsProvider: process.env.TTS_PROVIDER || 'browser_fallback',
     slackEnabled: process.env.USE_SLACK === 'true',
     notionEnabled: process.env.USE_NOTION === 'true',

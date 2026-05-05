@@ -70,7 +70,7 @@ function trendOverrideBlocksPublishing(quality = {}) {
 }
 
 function imageProviderSetupMessage() {
-    return 'Add NVIDIA_API_KEY and NVIDIA_FLUX_URL to your GitHub repo vars.'
+    return 'Add NVIDIA_API_KEY to your GitHub repo vars. Stable Diffusion 3.5 Large via NVIDIA build.nvidia.com.'
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

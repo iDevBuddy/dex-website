@@ -54,15 +54,16 @@ jobs:
       USE_GEMMA: ${{ vars.USE_GEMMA }}
       OPENAI_API_KEY: ${{ vars.OPENAI_API_KEY }}
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-      IMAGE_PROVIDER: nvidia_flux
+      IMAGE_PROVIDER: stable_diffusion
       NVIDIA_API_KEY: ${{ vars.NVIDIA_API_KEY }}
       NVIDIA_NIM_API_KEY: ${{ vars.NVIDIA_NIM_API_KEY }}
-      NVIDIA_FLUX_URL: ${{ vars.NVIDIA_FLUX_URL }}
-      NVIDIA_FLUX_MODEL: ${{ vars.NVIDIA_FLUX_MODEL }}
+      NVIDIA_SD_URL: ${{ vars.NVIDIA_SD_URL }}
+      NVIDIA_SD_MODEL: ${{ vars.NVIDIA_SD_MODEL }}
       NVIDIA_IMAGE_SIZE: ${{ vars.NVIDIA_IMAGE_SIZE }}
-      NVIDIA_FLUX_STEPS: ${{ vars.NVIDIA_FLUX_STEPS }}
-      NVIDIA_FLUX_CFG_SCALE: ${{ vars.NVIDIA_FLUX_CFG_SCALE }}
-      NVIDIA_FLUX_TIMEOUT_MS: ${{ vars.NVIDIA_FLUX_TIMEOUT_MS }}
+      NVIDIA_SD_STEPS: ${{ vars.NVIDIA_SD_STEPS }}
+      NVIDIA_SD_CFG_SCALE: ${{ vars.NVIDIA_SD_CFG_SCALE }}
+      NVIDIA_SD_NEGATIVE_PROMPT: ${{ vars.NVIDIA_SD_NEGATIVE_PROMPT }}
+      NVIDIA_IMAGE_TIMEOUT_MS: ${{ vars.NVIDIA_IMAGE_TIMEOUT_MS }}
       USE_LOCAL_TTS: ${{ vars.USE_LOCAL_TTS }}
       TTS_PROVIDER: ${{ vars.TTS_PROVIDER }}
       TTS_API_URL: ${{ vars.TTS_API_URL }}
