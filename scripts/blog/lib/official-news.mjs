@@ -7,9 +7,17 @@ const defaultFeeds = [
     { source: 'NVIDIA Blog', organization: 'NVIDIA', url: 'https://blogs.nvidia.com/feed/' },
     { source: 'Google AI Blog', organization: 'Google', url: 'https://research.google/blog/rss/' },
     { source: 'Meta Engineering', organization: 'Meta', url: 'https://engineering.fb.com/feed/' },
+    { source: 'Anthropic News', organization: 'Anthropic', url: 'https://www.anthropic.com/rss.xml' },
+    { source: 'Microsoft Research AI', organization: 'Microsoft', url: 'https://www.microsoft.com/en-us/research/blog/feed/' },
+    { source: 'HuggingFace Blog', organization: 'Hugging Face', url: 'https://huggingface.co/blog/feed.xml' },
+    { source: 'TechCrunch AI', organization: 'TechCrunch', url: 'https://techcrunch.com/category/artificial-intelligence/feed/' },
+    { source: 'VentureBeat AI', organization: 'VentureBeat', url: 'https://venturebeat.com/ai/feed/' },
+    { source: 'MIT Technology Review', organization: 'MIT Technology Review', url: 'https://www.technologyreview.com/feed/' },
+    { source: 'The Verge AI', organization: 'The Verge', url: 'https://www.theverge.com/rss/ai-artificial-intelligence/index.xml' },
+    { source: 'Wired AI', organization: 'Wired', url: 'https://www.wired.com/feed/tag/artificial-intelligence/rss' },
 ]
 
-const trustedOrganizations = ['openai', 'nvidia', 'meta', 'google', 'anthropic', 'microsoft', 'hugging face']
+const trustedOrganizations = ['openai', 'nvidia', 'meta', 'google', 'anthropic', 'microsoft', 'hugging face', 'techcrunch', 'venturebeat', 'mit technology review', 'the verge', 'wired']
 const newsSignals = ['announces', 'announce', 'launch', 'launches', 'released', 'release', 'introduces', 'update', 'model', 'tool', 'api', 'agent', 'platform', 'product', 'developer', 'ai']
 const toolSignals = ['chatgpt', 'gpt', 'sora', 'codex', 'openai', 'nvidia', 'nim', 'cuda', 'tensor', 'blackwell', 'llama', 'meta ai', 'gemini', 'vertex ai', 'notebooklm', 'claude', 'anthropic', 'hugging face', 'copilot']
 

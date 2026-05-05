@@ -3,6 +3,7 @@ import { log } from './lib/logger.mjs'
 import { createReviewLlmProvider } from './lib/llm-providers.mjs'
 import { enrichTopicPersona } from './lib/persona.mjs'
 import { selectSourcesForTopic } from './lib/source-selector.mjs'
+import { searchWeb, webResultsToSources, webSearchEnabled } from './lib/web-search.mjs'
 
 async function fetchResearchNotes(topic) {
     if (!process.env.NOTION_API_KEY || !process.env.NOTION_BLOG_DRAFTS_DB_ID) return ''
@@ -85,6 +86,24 @@ export function createResearchBrief(topic) {
     }
 }
 
+async function fetchWebSources(topic) {
+    if (!webSearchEnabled()) return []
+    const queries = [
+        `${topic.topic} latest news 2025`,
+        `${topic.keyword || topic.topic} business automation guide`,
+    ]
+    const results = await Promise.all(queries.map((q) => searchWeb(q, { maxResults: 4 })))
+    const sources = results
+        .filter(Boolean)
+        .flatMap((r) => webResultsToSources(r.results, 0.5))
+    const seen = new Set()
+    return sources.filter((s) => {
+        if (seen.has(s.url)) return false
+        seen.add(s.url)
+        return true
+    }).slice(0, 6)
+}
+
 export async function researchTopic(topicArg, options = getPipelineOptions()) {
     const topics = await readPipelineJson('topics.json', [], options)
     const topic = topicArg || topics.find((item) => item.slug === options.slug || item.topic === options.topic) || topics.find((item) => item.status === 'scored_ready') || topics[0]
@@ -92,6 +111,13 @@ export async function researchTopic(topicArg, options = getPipelineOptions()) {
     let brief = createResearchBrief(topic)
     const researchNotes = await fetchResearchNotes(topic)
     if (researchNotes) brief.notebookLmResearchNotes = researchNotes
+
+    const webSources = options.dryRun ? [] : await fetchWebSources(topic)
+    if (webSources.length) {
+        log('web_research_sources_found', { topic: topic.topic, count: webSources.length })
+        brief.webResearchSources = webSources
+    }
+
     if (!options.dryRun) {
         try {
             const provider = createReviewLlmProvider()
@@ -104,6 +130,7 @@ export async function researchTopic(topicArg, options = getPipelineOptions()) {
             log('research_model_fallback', { message: error.message })
         }
     }
+
     const sourceSelection = selectSourcesForTopic(topic)
     const officialSource = topic.officialUrl ? [{
         title: `${topic.officialSource || 'Official'} announcement: ${topic.topic}`,
@@ -113,17 +140,22 @@ export async function researchTopic(topicArg, options = getPipelineOptions()) {
         supports: 'Primary source for what was announced, product naming, capabilities, availability, and official positioning.',
         authorityScore: 95,
     }] : []
-    brief.sources = [...officialSource, ...sourceSelection.sources]
+    brief.sources = [...officialSource, ...webSources, ...sourceSelection.sources]
+        .filter((s, i, arr) => s?.url && arr.findIndex((x) => x.url === s.url) === i)
+        .slice(0, Number(process.env.MAX_SOURCES_PER_ARTICLE || 6))
     brief.sourcesToCite = brief.sources.map((source) => source.url)
-    brief.sourceStatus = sourceSelection.sourceStatus
+    brief.sourceStatus = brief.sources.length >= 2 ? 'Ready' : sourceSelection.sourceStatus
     brief.sourceQualityScore = sourceSelection.sourceQualityScore
-    brief.sourceNotes = sourceSelection.sourceNotes
+    brief.sourceNotes = webSources.length
+        ? `${webSources.length} live web sources found via Tavily. ${sourceSelection.sourceNotes}`
+        : sourceSelection.sourceNotes
     await writePipelineJson('research-brief.json', brief, options)
     log('research_brief_created', {
         topic: topic.topic,
         slug: topic.slug,
         duplicateStatus: brief.duplicateStatus,
         sourceStatus: brief.sourceStatus,
+        webSourcesFound: webSources.length,
         ...modeDetails(options),
     })
     return brief

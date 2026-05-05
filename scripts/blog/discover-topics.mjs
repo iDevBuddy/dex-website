@@ -31,6 +31,8 @@ const sourceLabels = {
     'Hacker News RSS': 'Hacker News',
     'Reddit r/automation RSS': 'Reddit',
     'Reddit r/artificial RSS': 'Reddit',
+    'Reddit r/MachineLearning RSS': 'Reddit',
+    'Reddit r/ChatGPT RSS': 'Reddit',
     'Manual seed': 'Manual',
     'Manual command': 'Slack',
     'Notion': 'Notion',
@@ -108,9 +110,14 @@ export async function discoverTopics(options = getPipelineOptions()) {
         await Promise.all([
             fetchOfficialAiNews(options.sourceLimit),
             fetchFeed('https://news.google.com/rss/search?q=AI%20automation%20business&hl=en-US&gl=US&ceid=US:en', 'Google News RSS', options.sourceLimit),
+            fetchFeed('https://news.google.com/rss/search?q=AI%20agents%20workflow&hl=en-US&gl=US&ceid=US:en', 'Google News RSS', options.sourceLimit),
+            fetchFeed('https://news.google.com/rss/search?q=AI%20tools%20small%20business&hl=en-US&gl=US&ceid=US:en', 'Google News RSS', options.sourceLimit),
             fetchFeed('https://hnrss.org/newest?q=AI%20automation', 'Hacker News RSS', options.sourceLimit),
+            fetchFeed('https://hnrss.org/newest?q=LLM+agents', 'Hacker News RSS', options.sourceLimit),
             fetchFeed('https://www.reddit.com/r/automation/.rss', 'Reddit r/automation RSS', options.sourceLimit),
             fetchFeed('https://www.reddit.com/r/artificial/.rss', 'Reddit r/artificial RSS', options.sourceLimit),
+            fetchFeed('https://www.reddit.com/r/MachineLearning/.rss', 'Reddit r/MachineLearning RSS', options.sourceLimit),
+            fetchFeed('https://www.reddit.com/r/ChatGPT/.rss', 'Reddit r/ChatGPT RSS', options.sourceLimit),
             fetchFeed('https://www.producthunt.com/feed', 'Product Hunt', options.sourceLimit),
         ])
     ).flat()

@@ -153,6 +153,9 @@ jobs:
       AI_NEWS_RECENCY_HOURS: ${{ vars.AI_NEWS_RECENCY_HOURS }}
       ALLOW_OFFICIAL_IMAGE_PLACEHOLDER: ${{ vars.ALLOW_OFFICIAL_IMAGE_PLACEHOLDER }}
       SEO_AUDIT_MIN_SCORE: ${{ vars.SEO_AUDIT_MIN_SCORE }}
+      TAVILY_API_KEY: ${{ vars.TAVILY_API_KEY }}
+      MEDIUM_INTEGRATION_TOKEN: ${{ vars.MEDIUM_INTEGRATION_TOKEN }}
+      MEDIUM_PUBLISH_STATUS: ${{ vars.MEDIUM_PUBLISH_STATUS }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -288,3 +291,7 @@ jobs:
             git commit -m "chore: publish latest approved AI blog"
             git push
           fi
+
+      - name: Cross-post to Medium
+        if: steps.schedule_gate.outputs.skip != 'true' && steps.automation.outputs.command == 'approve_publish' && env.MEDIUM_INTEGRATION_TOKEN != ''
+        run: npm run blog:crosspost

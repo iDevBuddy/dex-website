@@ -30,6 +30,7 @@
         "blog:slides": "node -e \"import('./scripts/blog/generate-slides.mjs').then(m=>m.generateSlides())\" --",
         "blog:infographic": "node -e \"import('./scripts/blog/generate-infographic.mjs').then(m=>m.generateInfographic())\" --",
         "blog:publish": "node -e \"import('./scripts/blog/publish-post.mjs').then(m=>m.publishPost())\" --",
+        "blog:crosspost": "node -e \"import('./scripts/blog/publish-medium.mjs').then(m=>m.publishToMedium())\" --",
         "blog:pipeline": "node -e \"import('./scripts/blog/run-pipeline.mjs').then(m=>m.runPipeline()).catch(e=>{console.error(e.message||e);process.exit(1)})\" --",
         "blog:performance": "node -e \"import('./scripts/blog/performance-report.mjs').then(m=>m.performanceReport())\"",
         "blog:recommend": "node -e \"import('./scripts/blog/recommend-updates.mjs').then(m=>m.recommendUpdates())\"",
