@@ -227,6 +227,11 @@ jobs:
               echo "Approved draft slug '$INPUT_SLUG' was not found in committed draft packet. Create/commit the draft packet before approval."
               exit 1
             fi
+            IMAGE_OK=$(node -e "try{const r=JSON.parse(require('fs').readFileSync('data/blog/image-result.json','utf8'));console.log(r.failed===true?'no':'yes')}catch{console.log('no')}" 2>/dev/null || echo "no")
+            if [ "$IMAGE_OK" = "no" ]; then
+              echo "Image missing or failed — regenerating before publish..."
+              npm run blog:image
+            fi
             if [ "${{ github.event.inputs.dryRun }}" = "true" ]; then
               npm run blog:publish -- --force --auto-publish --dry-run
             else
