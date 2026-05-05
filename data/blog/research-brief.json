@@ -37,12 +37,21 @@
   ],
   "sources": [
     {
+      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+      "type": "Web research",
+      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
       "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
-      "authorityScore": 81,
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -50,17 +59,17 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
-      "authorityScore": 73,
+      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+      "title": "How AI Is Transforming the Logistics Industry in 2025 | Smart Supply Chains",
+      "organization": "byexpress.com",
+      "url": "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
       "type": "Web research",
-      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
-      "authorityScore": 66,
+      "supports": "Track ROI — Use data to evaluate performance, customer satisfaction, and cost savings.\n\nCompanies that delay AI adoption risk losing out to faster, leaner competitors already leveraging the power of a",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -80,35 +89,19 @@
       "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
       "authorityScore": 54,
       "publishedDate": ""
-    },
-    {
-      "title": "OpenAI Platform Documentation",
-      "organization": "OpenAI",
-      "url": "https://platform.openai.com/docs/",
-      "type": "Official documentation",
-      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
-      "tags": [
-        "ai",
-        "llm",
-        "agents",
-        "automation",
-        "workflow",
-        "prompt"
-      ],
-      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
+    "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
-    "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+    "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
-    "https://innovecs.com/blog/ai-supply-chain-planning/",
-    "https://platform.openai.com/docs/"
+    "https://innovecs.com/blog/ai-supply-chain-planning/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -143,11 +136,11 @@
       },
       {
         "source": "Google News",
-        "title": "Meta’s AI Capex Reset Turns Supply Chain Into a Board-Level Constraint - Logistics Viewpoints"
+        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
       },
       {
         "source": "Google News",
-        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
+        "title": "Meta’s AI Capex Reset Turns Supply Chain Into a Board-Level Constraint - Logistics Viewpoints"
       },
       {
         "source": "Google News",
@@ -170,18 +163,9 @@
     ]
   },
   "examplesToInclude": [
-    {
-      "title": "Slack intake workflow",
-      "description": "Automate customer support requests from Slack channels with AI triage and escalation paths based on message content and user history."
-    },
-    {
-      "title": "CRM follow-up workflow",
-      "description": "Use AI to analyze CRM data and automatically assign follow-up tasks to sales reps based on lead behavior and historical engagement."
-    },
-    {
-      "title": "Support triage workflow",
-      "description": "Route incoming support tickets to the correct team based on issue type, urgency, and customer tier using AI classification."
-    }
+    "Slack intake workflow",
+    "CRM follow-up workflow",
+    "support triage workflow"
   ],
   "suggestedInternalLinks": [
     "/blog/ai-authority-blog-engine",
@@ -197,12 +181,21 @@
   "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
   "webResearchSources": [
     {
+      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+      "type": "Web research",
+      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
       "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
-      "authorityScore": 81,
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -210,17 +203,17 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
-      "authorityScore": 73,
+      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+      "title": "How AI Is Transforming the Logistics Industry in 2025 | Smart Supply Chains",
+      "organization": "byexpress.com",
+      "url": "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
       "type": "Web research",
-      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
-      "authorityScore": 66,
+      "supports": "Track ROI — Use data to evaluate performance, customer satisfaction, and cost savings.\n\nCompanies that delay AI adoption risk losing out to faster, leaner competitors already leveraging the power of a",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
