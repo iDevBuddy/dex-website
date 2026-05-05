@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 48,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 48/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 80,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,34 +94,34 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 725
+      "wordCount": 902
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a clear, practical guide to implementing Planning AI with memory in business workflows, specifically focusing on a customer support use case.",
-      "Content is well-structured with key takeaways, direct answer, expert insights, and step-by-step implementation guidance.",
-      "Uses authoritative sources from logisticsviewpoints.com and tryenvoy.ai to support claims about AI memory systems.",
-      "Addresses search intent effectively with practical implementation guidance for business owners evaluating AI automation.",
-      "Includes measurable business outcomes (85% lead reduction, 2-hour response time, 10 hours saved weekly) which adds credibility.",
-      "Content aligns well with target keyword 'planning ai needs memory, not just automation - logistics viewpoints'.",
-      "Provides specific tools (Make.com, n8n, Zapier, CRM) and a clear implementation checklist."
+      "The article provides practical, step-by-step guidance on implementing Google's AI Max in business workflows, which aligns well with the 'practical_workflow' angle and target audience of business owners/operators",
+      "Content effectively addresses the target keyword and related concept, with strong semantic coverage including 'AI Max expansion', 'upstream automation', 'customer support triage', and 'approval workflows'",
+      "The article includes specific implementation details like confidence thresholds, escalation paths, and KPIs that add practical value",
+      "Some sections could benefit from more concrete examples or data points to strengthen credibility (e.g., specific AI Max API configuration details, exact confidence score impacts)",
+      "The content references external sources appropriately but could integrate more direct quotes or statistics to support key claims about business impact",
+      "Implementation checklist and troubleshooting sections provide actionable value and improve the expert guide format",
+      "Missing some depth in explaining how exactly AI Max interprets intent probabilistically - could use a brief technical explanation for the expert audience"
     ],
     "recommendedFixes": [
-      "Add a visual workflow diagram to illustrate the AI agent memory concept - this is flagged as recommended in media recommendations but not present",
-      "Include a downloadable checklist asset as mentioned in media recommendations",
-      "Add more specific examples of how memory enables continuity in the workflow - current explanation is somewhat abstract",
-      "Consider adding a comparison table between traditional automation vs AI with memory to make the distinction clearer",
-      "Include more detailed implementation metrics - while results are mentioned, actual implementation steps could be more specific",
-      "Add a section on troubleshooting common memory-related issues in AI workflows",
-      "Consider including more diverse source types beyond primarily logisticsviewpoints.com content to improve source diversity"
+      "Add 1-2 specific examples of prompt structures or configuration settings for AI Max to make the implementation steps more tangible",
+      "Include a brief visual workflow diagram or example flow to illustrate the approval process",
+      "Add 1-2 sentences on how to actually access or configure AI Max (e.g., through Vertex AI, specific APIs, or Google Cloud services)",
+      "Expand on the 'probabilistic interpretation' with a simple example of how this differs from rule-based automation",
+      "Include a short section on A/B testing the implementation to measure impact",
+      "Add a sentence about data requirements for training the AI on historical tickets (e.g., minimum dataset size, format requirements)",
+      "Clarify what 'AI Max' actually refers to - while based on the sources it's likely Google's advertising AI technology, a brief definition would help readers unfamiliar with the specific product"
     ]
   }
 }
