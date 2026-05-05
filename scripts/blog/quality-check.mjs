@@ -8,7 +8,7 @@ import { shouldApplyTrendQualityOverride } from './lib/trend-analysis.mjs'
 import { evaluateAuthenticity } from './lib/authenticity-check.mjs'
 
 const checks = [
-    ['minimumWordCount', (article) => article.body.split(/\s+/).length >= 500, 12],
+    ['minimumWordCount', (article) => article.body.split(/\s+/).length >= 700, 12],
     ['hasClearIntro', (article) => /^##\s+/m.test(article.body), 8],
     ['hasExamples', (article) => /example|workflow|step/i.test(article.body), 10],
     ['hasFaq', (article) => Array.isArray(article.frontmatter.faqs) && article.frontmatter.faqs.length >= 2, 10],
