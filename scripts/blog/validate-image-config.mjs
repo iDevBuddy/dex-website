@@ -9,22 +9,17 @@ function has(name) {
 }
 
 function providerReport() {
-    const provider = process.env.IMAGE_PROVIDER || 'nvidia_flux'
+    const provider = process.env.IMAGE_PROVIDER || 'stable_diffusion'
     const missing = []
     const warnings = []
 
-    if (provider === 'nvidia_flux' || provider === 'nvidia') {
-        if (!has('NVIDIA_API_KEY') && !has('NVIDIA_NIM_API_KEY')) missing.push('NVIDIA_API_KEY')
-        if (!has('NVIDIA_FLUX_URL')) missing.push('NVIDIA_FLUX_URL')
-        if (!has('NVIDIA_FLUX_MODEL')) warnings.push('NVIDIA_FLUX_MODEL is missing; the default FLUX.1-schnell model will be used.')
-        if (!has('NVIDIA_IMAGE_SIZE')) warnings.push('NVIDIA_IMAGE_SIZE is missing; 1200x675 intent will be used.')
-        if (!has('NVIDIA_FLUX_TIMEOUT_MS')) warnings.push('NVIDIA_FLUX_TIMEOUT_MS is missing; 120000ms will be used.')
-    } else {
-        missing.push(`Unsupported IMAGE_PROVIDER=${provider}. Only nvidia_flux is supported.`)
-    }
+    if (!has('NVIDIA_API_KEY') && !has('NVIDIA_NIM_API_KEY')) missing.push('NVIDIA_API_KEY')
+    if (!has('NVIDIA_SD_URL') && !has('NVIDIA_FLUX_URL')) warnings.push('NVIDIA_SD_URL not set; using default Stable Diffusion 3.5 Large endpoint.')
+    if (!has('NVIDIA_IMAGE_SIZE')) warnings.push('NVIDIA_IMAGE_SIZE not set; 1024x576 will be used.')
 
     return {
-        provider,
+        provider: provider,
+        model: process.env.NVIDIA_SD_MODEL || 'stabilityai/stable-diffusion-3-5-large',
         configured: missing.length === 0,
         productionReady: missing.length === 0,
         missing,
@@ -84,7 +79,7 @@ export async function validateImageConfig({ live = process.argv.includes('--live
     return report
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
     validateImageConfig().catch((error) => {
         console.error(error)
         process.exit(1)
