@@ -15,9 +15,11 @@ const defaultFeeds = [
     { source: 'MIT Technology Review', organization: 'MIT Technology Review', url: 'https://www.technologyreview.com/feed/' },
     { source: 'The Verge AI', organization: 'The Verge', url: 'https://www.theverge.com/rss/ai-artificial-intelligence/index.xml' },
     { source: 'Wired AI', organization: 'Wired', url: 'https://www.wired.com/feed/tag/artificial-intelligence/rss' },
+    { source: 'GitHub Blog', organization: 'GitHub', url: 'https://github.blog/feed/' },
+    { source: 'GitHub Changelog', organization: 'GitHub', url: 'https://github.blog/changelog/feed/' },
 ]
 
-const trustedOrganizations = ['openai', 'nvidia', 'meta', 'google', 'anthropic', 'microsoft', 'hugging face', 'techcrunch', 'venturebeat', 'mit technology review', 'the verge', 'wired']
+const trustedOrganizations = ['openai', 'nvidia', 'meta', 'google', 'anthropic', 'microsoft', 'hugging face', 'techcrunch', 'venturebeat', 'mit technology review', 'the verge', 'wired', 'github']
 const newsSignals = ['announces', 'announce', 'launch', 'launches', 'released', 'release', 'introduces', 'update', 'model', 'tool', 'api', 'agent', 'platform', 'product', 'developer', 'ai']
 const toolSignals = ['chatgpt', 'gpt', 'sora', 'codex', 'openai', 'nvidia', 'nim', 'cuda', 'tensor', 'blackwell', 'llama', 'meta ai', 'gemini', 'vertex ai', 'notebooklm', 'claude', 'anthropic', 'hugging face', 'copilot']
 

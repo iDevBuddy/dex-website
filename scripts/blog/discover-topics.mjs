@@ -33,6 +33,7 @@ const sourceLabels = {
     'Reddit r/artificial RSS': 'Reddit',
     'Reddit r/MachineLearning RSS': 'Reddit',
     'Reddit r/ChatGPT RSS': 'Reddit',
+    'GitHub Trending': 'GitHub',
     'Manual seed': 'Manual',
     'Manual command': 'Slack',
     'Notion': 'Notion',
@@ -48,6 +49,34 @@ function mapCategory(topic) {
     if (/how|guide|tutorial|setup/.test(text)) return 'Tutorials'
     if (/business|small business/.test(text)) return 'Business Automation'
     return config.defaultCategory
+}
+
+async function fetchGitHubTrending(limit = 8) {
+    try {
+        const since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)
+        const queries = [
+            `topic:ai-automation+topic:llm created:>${since}`,
+            `topic:ai-agents created:>${since}`,
+        ]
+        const headers = { 'User-Agent': 'DEXBlogEngine/1.0', Accept: 'application/vnd.github+json' }
+        if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`
+        const results = await Promise.all(queries.map(async (q) => {
+            const response = await fetch(
+                `https://api.github.com/search/repositories?q=${encodeURIComponent(q)}&sort=stars&order=desc&per_page=${limit}`,
+                { headers },
+            )
+            if (!response.ok) return []
+            const data = await response.json()
+            return (data.items || []).map((repo) => ({
+                topic: `${repo.full_name}: ${repo.description || repo.name} — new AI automation repo`,
+                source: 'GitHub Trending',
+            }))
+        }))
+        return results.flat().slice(0, limit)
+    } catch (error) {
+        warn('github_trending_failed', { message: error.message })
+        return []
+    }
 }
 
 async function fetchFeed(url, source, limit = 12) {
@@ -119,6 +148,7 @@ export async function discoverTopics(options = getPipelineOptions()) {
             fetchFeed('https://www.reddit.com/r/MachineLearning/.rss', 'Reddit r/MachineLearning RSS', options.sourceLimit),
             fetchFeed('https://www.reddit.com/r/ChatGPT/.rss', 'Reddit r/ChatGPT RSS', options.sourceLimit),
             fetchFeed('https://www.producthunt.com/feed', 'Product Hunt', options.sourceLimit),
+            fetchGitHubTrending(options.sourceLimit),
         ])
     ).flat()
 
