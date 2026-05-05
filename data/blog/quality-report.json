@@ -6,25 +6,25 @@
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 6,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 48,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 48/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 75,
+    "score": 86,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,31 +94,36 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 592
+      "wordCount": 833
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides specific, actionable guidance for implementing AI Max in business workflows with concrete examples and KPIs",
-      "Content addresses a genuine business need (support ticket automation) with measurable outcomes",
-      "Includes practical implementation details like tools needed, workflow steps, and troubleshooting",
-      "Provides clear success metrics and common mistakes to avoid",
-      "Content is written from a clear expert perspective with business automation focus",
-      "Addresses the target keyword naturally in context of explaining the automation shift trend"
+      "The article provides practical, actionable guidance for implementing AI automation with memory in logistics workflows",
+      "Content is well-structured with clear steps, tools, and implementation details",
+      "Includes measurable business outcomes and KPIs which adds credibility",
+      "Addresses common mistakes and failure handling scenarios",
+      "Uses specific tools (Slack, OpenAI API, GitHub Actions) which makes it actionable",
+      "Content is written for the target audience (founders, operators, marketers) with appropriate technical depth",
+      "SEO elements are present but could be enhanced (target keyword usage could be more strategic)",
+      "The article demonstrates expertise with detailed technical implementation but remains accessible"
     ],
     "recommendedFixes": [
-      "Consider adding more specific technical implementation details for the AI Max API integration steps",
-      "Include additional real-world examples from different industry verticals to broaden appeal",
-      "Add more specific metrics about implementation costs or resource requirements",
-      "Consider including more detailed troubleshooting scenarios with code examples",
-      "Could expand on specific AI Max API limitations and how to handle them"
+      "Increase usage of the target keyword 'planning ai needs memory, not just automation - logistics viewpoints' in subheadings and body content for better keyword optimization",
+      "Add internal links to related content beyond the three listed, particularly to technical implementation guides",
+      "Include more specific code examples or API integration snippets to increase practical value",
+      "Add a visual workflow diagram to complement the text-based flow explanation",
+      "Consider adding more specific metrics or case study details to strengthen the business impact claims",
+      "Expand the troubleshooting section with more real-world failure scenarios and solutions",
+      "Add a brief section on cost analysis or ROI calculation to better support the business case",
+      "Include more specific examples of the prompts or decision trees used in the AI triage process"
     ]
   }
 }
