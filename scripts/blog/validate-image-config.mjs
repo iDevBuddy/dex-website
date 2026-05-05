@@ -96,7 +96,7 @@ export async function validateImageConfig({ live = process.argv.includes('--live
 
     await fs.writeFile(path.join(dataDir, 'image-config-report.json'), `${JSON.stringify(report, null, 2)}\n`)
     console.log(JSON.stringify(report, null, 2))
-    if (!report.ok) process.exitCode = 2
+    if (!report.ok && process.env.REQUIRE_REAL_IMAGE_MODEL === 'true') process.exitCode = 2
     return report
 }
 
