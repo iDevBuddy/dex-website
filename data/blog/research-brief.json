@@ -1,7 +1,7 @@
 {
-  "topic": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
-  "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
-  "targetKeyword": "planning ai needs memory, not just automation - logistics viewpoints",
+  "topic": "The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
+  "slug": "the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday",
+  "targetKeyword": "the rundown: google expands ai max as automation shifts upstream - digiday",
   "secondaryKeywords": [
     "AI automation workflow",
     "AI agents for business",
@@ -16,7 +16,7 @@
     "Few connect AI automation to business outcomes."
   ],
   "questionsToAnswer": [
-    "What is Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints?",
+    "What is The Rundown: Google expands AI Max as automation shifts upstream - Digiday?",
     "When should a business use it?",
     "What workflow should be automated first?",
     "What mistakes should be avoided?"
@@ -68,6 +68,34 @@
       "authorityScore": 83
     },
     {
+      "title": "Google Search Central: Creating Helpful Content",
+      "organization": "Google Search Central",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "type": "Official documentation",
+      "supports": "Use only for articles specifically discussing SEO, search quality, helpful content, or Google policy.",
+      "tags": [
+        "seo",
+        "google",
+        "content",
+        "search"
+      ],
+      "authorityScore": 81
+    },
+    {
+      "title": "Google Search Central: SEO Starter Guide",
+      "organization": "Google Search Central",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "type": "Official documentation",
+      "supports": "Use only for SEO-specific articles that explain crawlability, metadata, search snippets, or indexing basics.",
+      "tags": [
+        "seo",
+        "google",
+        "content",
+        "search"
+      ],
+      "authorityScore": 81
+    },
+    {
       "title": "The State of AI",
       "organization": "McKinsey & Company",
       "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
@@ -95,83 +123,42 @@
         "agents"
       ],
       "authorityScore": 79
-    },
-    {
-      "title": "IBM: What Is Workflow Automation?",
-      "organization": "IBM",
-      "url": "https://www.ibm.com/topics/workflow-automation",
-      "type": "Industry explainer",
-      "supports": "Defines workflow automation and provides business context for improving repeatable operational processes.",
-      "tags": [
-        "workflow",
-        "automation",
-        "business",
-        "operations"
-      ],
-      "authorityScore": 76
     }
   ],
   "sourcesToCite": [
     "https://platform.openai.com/docs/",
     "https://docs.github.com/en/actions",
+    "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
     "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-    "https://learn.microsoft.com/en-us/azure/ai-services/",
-    "https://www.ibm.com/topics/workflow-automation"
+    "https://learn.microsoft.com/en-us/azure/ai-services/"
   ],
   "sourceStatus": "Ready",
-  "sourceQualityScore": 80,
-  "sourceNotes": "Selected 5 authoritative sources with average authority score 80.",
+  "sourceQualityScore": 81,
+  "sourceNotes": "Selected 6 authoritative sources with average authority score 81.",
   "duplicateStatus": "unique",
-  "duplicateScore": 11,
+  "duplicateScore": 3,
   "duplicateMatch": {
     "slug": "ai-authority-blog-engine",
     "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
     "url": "/blog/ai-authority-blog-engine",
-    "similarity": 0.11
+    "similarity": 0.03
   },
   "suggestedAngle": "",
   "suggestedTopic": "",
   "trendAnalysis": {
-    "trendScore": 75,
+    "trendScore": 48,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 59,
     "matchedTrendTerms": [
       "automation"
     ],
     "trendOverrideEligible": false,
-    "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
+    "trendOverrideReason": "Real-time trend validation found 1 signal(s) from 1 source(s). Sentiment: neutral.",
     "realtimeSignals": [
       {
         "source": "Google News",
-        "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "A Recent Conversation with Logicplan: Transportation Planning Beyond the TMS - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
-      },
-      {
-        "source": "Google News",
-        "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
-      },
-      {
-        "source": "Google News",
-        "title": "Meta’s AI Capex Reset Turns Supply Chain Into a Board-Level Constraint - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
-      },
-      {
-        "source": "Google News",
-        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
-      },
-      {
-        "source": "Google News",
-        "title": "Seizing the agentic AI advantage - McKinsey & Company"
+        "title": "The Rundown: Google expands AI Max as automation shifts upstream - Digiday"
       }
     ],
     "realtimeSources": [
@@ -196,6 +183,6 @@
   "contentPersona": "Business Automation Expert",
   "businessFunction": "General",
   "authorityAngle": "practical_workflow",
-  "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
-  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
+  "title": "How to Use The Rundown: Google expands AI Max as automation shifts upstream - Digiday in a Practical Business Automation Workflow",
+  "description": "A practical guide to applying The Rundown: Google expands AI Max as automation shifts upstream - Digiday with approval steps, quality checks, and measurable business outcomes."
 }

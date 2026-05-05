@@ -1,36 +1,36 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 75,
+    "trendScore": 48,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 75/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 48/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,34 +94,31 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 495
+      "wordCount": 592
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The article provides practical, actionable guidance for implementing memory-enabled AI workflows, with a clear use case in logistics support triage.",
-      "Content is well-structured with a logical flow: problem explanation → solution overview → implementation steps → KPIs and troubleshooting.",
-      "Use of specific tools (Slack, Notion, OpenAI API, CRM) grounds the advice in real-world applicability.",
-      "Addresses common mistakes and includes a troubleshooting section, which adds value for readers.",
-      "The article aligns with search intent (Informational) and targets the right audience (founders, operators, marketers).",
-      "Content avoids generic AI advice and focuses on measurable business outcomes, which aligns with the stated business problem.",
-      "The inclusion of sources from authoritative organizations (OpenAI, McKinsey, IBM, etc.) supports claims and improves credibility."
+      "The article provides specific, actionable guidance for implementing AI Max in business workflows with concrete examples and KPIs",
+      "Content addresses a genuine business need (support ticket automation) with measurable outcomes",
+      "Includes practical implementation details like tools needed, workflow steps, and troubleshooting",
+      "Provides clear success metrics and common mistakes to avoid",
+      "Content is written from a clear expert perspective with business automation focus",
+      "Addresses the target keyword naturally in context of explaining the automation shift trend"
     ],
     "recommendedFixes": [
-      "Add a brief explanation of how memory is technically implemented (e.g., using Notion as a memory store with API calls) to increase technical clarity for readers.",
-      "Include a simple diagram or visual representation of the workflow (even if text-based) to improve content richness and support the 'workflowDiagram' asset recommendation.",
-      "Expand on the 'human approval' mechanism—how is confidence measured? How is approval triggered and tracked?",
-      "Clarify how Notion is used for memory storage—provide a short example or structure (e.g., schema for storing past decisions).",
-      "Consider adding a short section on cost/benefit or when not to use memory-enabled AI to balance the recommendation and avoid over-promising.",
-      "The FAQ section is strong but could be expanded with 1-2 more technical or implementation-focused questions (e.g., 'How do I sync Notion with OpenAI?', 'How do I handle data privacy with memory storage?').",
-      "The 'What to Do Next' section could include a downloadable checklist or Notion template link to increase engagement and conversion."
+      "Consider adding more specific technical implementation details for the AI Max API integration steps",
+      "Include additional real-world examples from different industry verticals to broaden appeal",
+      "Add more specific metrics about implementation costs or resource requirements",
+      "Consider including more detailed troubleshooting scenarios with code examples",
+      "Could expand on specific AI Max API limitations and how to handle them"
     ]
   }
 }

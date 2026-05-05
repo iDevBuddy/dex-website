@@ -12,15 +12,15 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 75,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 75,
+      "trendScore": 68,
       "marketSentiment": "neutral",
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 65,
       "matchedTrendTerms": [
         "automation"
       ],
@@ -41,10 +41,6 @@
         },
         {
           "source": "Google News",
-          "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
-        },
-        {
-          "source": "Google News",
           "title": "Meta’s AI Capex Reset Turns Supply Chain Into a Board-Level Constraint - Logistics Viewpoints"
         },
         {
@@ -53,11 +49,15 @@
         },
         {
           "source": "Google News",
-          "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+          "title": "Seizing the agentic AI advantage - McKinsey & Company"
         },
         {
           "source": "Google News",
-          "title": "Seizing the agentic AI advantage - McKinsey & Company"
+          "title": "What agentic AI means for financial services - Infosys"
+        },
+        {
+          "source": "Google News",
+          "title": "Agentic AI: The future of autonomous intelligence - KPMG"
         }
       ],
       "realtimeSources": [
@@ -82,7 +82,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.457Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -103,13 +103,13 @@
     "businessFunction": "Analytics",
     "authorityAngle": "tool_tutorial",
     "score": 100,
-    "trendScore": 75,
+    "trendScore": 68,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 75,
+      "trendScore": 68,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -132,11 +132,11 @@
         },
         {
           "source": "Google News",
-          "title": "Jack in the Box to pilot Miso Robotics’ Flippy - The Robot Report"
+          "title": "Boston Dynamics partners with Analog to deploy robots in the UAE - The Robot Report"
         },
         {
           "source": "Google News",
-          "title": "Boston Dynamics partners with Analog to deploy robots in the UAE - The Robot Report"
+          "title": "Jack in the Box to pilot Miso Robotics’ Flippy - The Robot Report"
         },
         {
           "source": "Google News",
@@ -144,11 +144,11 @@
         },
         {
           "source": "Google News",
-          "title": "ABB launches IP67-rated IRB 1100 industrial robot for harsh environments - The Robot Report"
+          "title": "Vention launches turnkey sanding robot for wood workers - The Robot Report"
         },
         {
           "source": "Google News",
-          "title": "Vention launches turnkey sanding robot for wood workers - The Robot Report"
+          "title": "ABB launches IP67-rated IRB 1100 industrial robot for harsh environments - The Robot Report"
         }
       ],
       "realtimeSources": [
@@ -173,7 +173,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.457Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -194,13 +194,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 55,
+    "trendScore": 48,
     "marketSentiment": "neutral",
     "marketSentimentScore": 59,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 1 signal(s) from 1 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 55,
+      "trendScore": 48,
       "marketSentiment": "neutral",
       "marketSentimentScore": 59,
       "matchedTrendTerms": [
@@ -236,7 +236,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.457Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -251,32 +251,28 @@
     "notionPageId": "3537287b-c47a-8125-9d21-fa60c6b3ea1f",
     "slug": "ai-automation-for-small-businesses",
     "category": "Business Automation",
-    "status": "scored_ready",
+    "status": "duplicate_hold",
     "createdAt": "2026-05-02T07:02:27.524Z",
     "contentPersona": "Business Automation Expert",
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 88,
+    "trendScore": 81,
     "marketSentiment": "neutral",
     "marketSentimentScore": 68,
-    "trendOverrideEligible": true,
+    "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 88,
+      "trendScore": 81,
       "marketSentiment": "neutral",
       "marketSentimentScore": 68,
       "matchedTrendTerms": [
         "automation",
         "small business"
       ],
-      "trendOverrideEligible": true,
+      "trendOverrideEligible": false,
       "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
       "realtimeSignals": [
-        {
-          "source": "Google News",
-          "title": "Future of AI for Small Businesses - Microsoft"
-        },
         {
           "source": "Google News",
           "title": "The AI Tools Small Businesses Are Using - Small Business & Entrepreneurship Council"
@@ -291,6 +287,14 @@
         },
         {
           "source": "Google News",
+          "title": "SAP, Google Cloud debut AI agents for small business marketing - MSN"
+        },
+        {
+          "source": "Google News",
+          "title": "Future of AI for Small Businesses - Microsoft"
+        },
+        {
+          "source": "Google News",
           "title": "Exclusive Data: Small Businesses Strive To Leverage AI, but Challenges Abound - BizTech Magazine"
         },
         {
@@ -299,11 +303,7 @@
         },
         {
           "source": "Google News",
-          "title": "Joe Lonsdale: AI's Role in Small Business Growth - StartupHub.ai"
-        },
-        {
-          "source": "Google News",
-          "title": "How AI Automation Is Helping Small Businesses Scale in 2026 - The AI Journal"
+          "title": "Main Street’s make-or-break upgrade: Why small businesses are racing to modernize their tech - Fortune"
         }
       ],
       "realtimeSources": [
@@ -329,7 +329,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.457Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -424,7 +424,7 @@
     "businessValueScore": 62,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.457Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -445,15 +445,15 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 75,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 75,
+      "trendScore": 68,
       "marketSentiment": "neutral",
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 65,
       "matchedTrendTerms": [
         "automation"
       ],
@@ -474,10 +474,6 @@
         },
         {
           "source": "Google News",
-          "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
-        },
-        {
-          "source": "Google News",
           "title": "Meta’s AI Capex Reset Turns Supply Chain Into a Board-Level Constraint - Logistics Viewpoints"
         },
         {
@@ -486,11 +482,15 @@
         },
         {
           "source": "Google News",
-          "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+          "title": "Seizing the agentic AI advantage - McKinsey & Company"
         },
         {
           "source": "Google News",
-          "title": "Seizing the agentic AI advantage - McKinsey & Company"
+          "title": "What agentic AI means for financial services - Infosys"
+        },
+        {
+          "source": "Google News",
+          "title": "Agentic AI: The future of autonomous intelligence - KPMG"
         }
       ],
       "realtimeSources": [
@@ -515,7 +515,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -536,13 +536,13 @@
     "businessFunction": "Analytics",
     "authorityAngle": "tool_tutorial",
     "score": 100,
-    "trendScore": 75,
+    "trendScore": 68,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 75,
+      "trendScore": 68,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -565,11 +565,11 @@
         },
         {
           "source": "Google News",
-          "title": "Jack in the Box to pilot Miso Robotics’ Flippy - The Robot Report"
+          "title": "Boston Dynamics partners with Analog to deploy robots in the UAE - The Robot Report"
         },
         {
           "source": "Google News",
-          "title": "Boston Dynamics partners with Analog to deploy robots in the UAE - The Robot Report"
+          "title": "Jack in the Box to pilot Miso Robotics’ Flippy - The Robot Report"
         },
         {
           "source": "Google News",
@@ -577,11 +577,11 @@
         },
         {
           "source": "Google News",
-          "title": "ABB launches IP67-rated IRB 1100 industrial robot for harsh environments - The Robot Report"
+          "title": "Vention launches turnkey sanding robot for wood workers - The Robot Report"
         },
         {
           "source": "Google News",
-          "title": "Vention launches turnkey sanding robot for wood workers - The Robot Report"
+          "title": "ABB launches IP67-rated IRB 1100 industrial robot for harsh environments - The Robot Report"
         }
       ],
       "realtimeSources": [
@@ -606,7 +606,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -627,13 +627,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 55,
+    "trendScore": 48,
     "marketSentiment": "neutral",
     "marketSentimentScore": 59,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 1 signal(s) from 1 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 55,
+      "trendScore": 48,
       "marketSentiment": "neutral",
       "marketSentimentScore": 59,
       "matchedTrendTerms": [
@@ -669,7 +669,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -684,32 +684,28 @@
     "notionPageId": "3537287b-c47a-81e2-9708-de199c791dea",
     "slug": "ai-automation-for-small-businesses",
     "category": "Business Automation",
-    "status": "scored_ready",
+    "status": "duplicate_hold",
     "createdAt": "2026-05-02T07:02:27.524Z",
     "contentPersona": "Business Automation Expert",
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 88,
+    "trendScore": 81,
     "marketSentiment": "neutral",
     "marketSentimentScore": 68,
-    "trendOverrideEligible": true,
+    "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 88,
+      "trendScore": 81,
       "marketSentiment": "neutral",
       "marketSentimentScore": 68,
       "matchedTrendTerms": [
         "automation",
         "small business"
       ],
-      "trendOverrideEligible": true,
+      "trendOverrideEligible": false,
       "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
       "realtimeSignals": [
-        {
-          "source": "Google News",
-          "title": "Future of AI for Small Businesses - Microsoft"
-        },
         {
           "source": "Google News",
           "title": "The AI Tools Small Businesses Are Using - Small Business & Entrepreneurship Council"
@@ -724,6 +720,14 @@
         },
         {
           "source": "Google News",
+          "title": "SAP, Google Cloud debut AI agents for small business marketing - MSN"
+        },
+        {
+          "source": "Google News",
+          "title": "Future of AI for Small Businesses - Microsoft"
+        },
+        {
+          "source": "Google News",
           "title": "Exclusive Data: Small Businesses Strive To Leverage AI, but Challenges Abound - BizTech Magazine"
         },
         {
@@ -732,11 +736,7 @@
         },
         {
           "source": "Google News",
-          "title": "Joe Lonsdale: AI's Role in Small Business Growth - StartupHub.ai"
-        },
-        {
-          "source": "Google News",
-          "title": "How AI Automation Is Helping Small Businesses Scale in 2026 - The AI Journal"
+          "title": "Main Street’s make-or-break upgrade: Why small businesses are racing to modernize their tech - Fortune"
         }
       ],
       "realtimeSources": [
@@ -762,7 +762,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -857,7 +857,7 @@
     "businessValueScore": 62,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -872,32 +872,28 @@
     "notionPageId": "3537287b-c47a-81ff-a63c-f3418ae9a520",
     "slug": "ai-automation-for-small-businesses",
     "category": "Business Automation",
-    "status": "scored_ready",
+    "status": "duplicate_hold",
     "createdAt": "2026-05-02T07:02:27.525Z",
     "contentPersona": "Business Automation Expert",
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 88,
+    "trendScore": 81,
     "marketSentiment": "neutral",
     "marketSentimentScore": 68,
-    "trendOverrideEligible": true,
+    "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 88,
+      "trendScore": 81,
       "marketSentiment": "neutral",
       "marketSentimentScore": 68,
       "matchedTrendTerms": [
         "automation",
         "small business"
       ],
-      "trendOverrideEligible": true,
+      "trendOverrideEligible": false,
       "trendOverrideReason": "Real-time trend validation found 24 signal(s) from 2 source(s). Sentiment: neutral.",
       "realtimeSignals": [
-        {
-          "source": "Google News",
-          "title": "Future of AI for Small Businesses - Microsoft"
-        },
         {
           "source": "Google News",
           "title": "The AI Tools Small Businesses Are Using - Small Business & Entrepreneurship Council"
@@ -912,6 +908,14 @@
         },
         {
           "source": "Google News",
+          "title": "SAP, Google Cloud debut AI agents for small business marketing - MSN"
+        },
+        {
+          "source": "Google News",
+          "title": "Future of AI for Small Businesses - Microsoft"
+        },
+        {
+          "source": "Google News",
           "title": "Exclusive Data: Small Businesses Strive To Leverage AI, but Challenges Abound - BizTech Magazine"
         },
         {
@@ -920,11 +924,7 @@
         },
         {
           "source": "Google News",
-          "title": "Joe Lonsdale: AI's Role in Small Business Growth - StartupHub.ai"
-        },
-        {
-          "source": "Google News",
-          "title": "How AI Automation Is Helping Small Businesses Scale in 2026 - The AI Journal"
+          "title": "Main Street’s make-or-break upgrade: Why small businesses are racing to modernize their tech - Fortune"
         }
       ],
       "realtimeSources": [
@@ -950,7 +950,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -971,13 +971,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 55,
+    "trendScore": 48,
     "marketSentiment": "neutral",
     "marketSentimentScore": 59,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Real-time trend validation found 1 signal(s) from 1 source(s). Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 55,
+      "trendScore": 48,
       "marketSentiment": "neutral",
       "marketSentimentScore": 59,
       "matchedTrendTerms": [
@@ -1013,7 +1013,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1033,13 +1033,13 @@
     "businessFunction": "Operations",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 58,
+    "trendScore": 51,
     "marketSentiment": "positive",
     "marketSentimentScore": 76,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: positive.",
     "trendAnalysis": {
-      "trendScore": 58,
+      "trendScore": 51,
       "marketSentiment": "positive",
       "marketSentimentScore": 76,
       "matchedTrendTerms": [
@@ -1064,7 +1064,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.794Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1084,13 +1084,13 @@
     "businessFunction": "General",
     "authorityAngle": "expert_tricks",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1114,7 +1114,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1134,13 +1134,13 @@
     "businessFunction": "General",
     "authorityAngle": "solution_guide",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1164,7 +1164,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1184,13 +1184,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1214,7 +1214,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1234,13 +1234,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1264,7 +1264,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1284,13 +1284,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 66,
+    "trendScore": 59,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 66,
+      "trendScore": 59,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -1315,7 +1315,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1335,13 +1335,13 @@
     "businessFunction": "Operations",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 58,
+    "trendScore": 51,
     "marketSentiment": "positive",
     "marketSentimentScore": 76,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: positive.",
     "trendAnalysis": {
-      "trendScore": 58,
+      "trendScore": 51,
       "marketSentiment": "positive",
       "marketSentimentScore": 76,
       "matchedTrendTerms": [
@@ -1366,7 +1366,7 @@
     "businessValueScore": 54,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1386,13 +1386,13 @@
     "businessFunction": "Security",
     "authorityAngle": "tool_tutorial",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1416,7 +1416,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1436,13 +1436,13 @@
     "businessFunction": "Operations",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 75,
+    "trendScore": 68,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: agent, ai agent, automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 75,
+      "trendScore": 68,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1468,7 +1468,7 @@
     "businessValueScore": 54,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1488,13 +1488,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 58,
+    "trendScore": 51,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, small business. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 58,
+      "trendScore": 51,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1519,7 +1519,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1539,13 +1539,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1569,7 +1569,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1589,13 +1589,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1619,7 +1619,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1639,13 +1639,13 @@
     "businessFunction": "General",
     "authorityAngle": "tool_tutorial",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "positive",
     "marketSentimentScore": 76,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: positive.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "positive",
       "marketSentimentScore": 76,
       "matchedTrendTerms": [
@@ -1669,7 +1669,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1689,13 +1689,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1719,7 +1719,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1739,13 +1739,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1769,7 +1769,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1789,13 +1789,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1819,7 +1819,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1839,13 +1839,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1869,7 +1869,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1889,13 +1889,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1919,7 +1919,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1939,13 +1939,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -1969,7 +1969,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -1989,13 +1989,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -2019,7 +2019,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2039,13 +2039,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -2069,7 +2069,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2089,13 +2089,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -2119,7 +2119,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2139,13 +2139,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 66,
+    "trendScore": 59,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, gpt. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 66,
+      "trendScore": 59,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2170,7 +2170,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.458Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2190,13 +2190,13 @@
     "businessFunction": "General",
     "authorityAngle": "tool_tutorial",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -2220,7 +2220,7 @@
     "businessValueScore": 38,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2240,13 +2240,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2270,7 +2270,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2290,13 +2290,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 75,
+    "trendScore": 68,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: agent, ai agent, automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 75,
+      "trendScore": 68,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2322,7 +2322,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2342,13 +2342,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2372,7 +2372,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2392,13 +2392,13 @@
     "businessFunction": "Sales",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 75,
+    "trendScore": 68,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: agent, ai agent, automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 75,
+      "trendScore": 68,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2424,7 +2424,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2444,13 +2444,13 @@
     "businessFunction": "Sales",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 58,
+    "trendScore": 51,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, sales. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 58,
+      "trendScore": 51,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2475,7 +2475,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2495,13 +2495,13 @@
     "businessFunction": "Marketing",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2525,7 +2525,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2545,13 +2545,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -2575,7 +2575,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2595,13 +2595,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2625,7 +2625,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2645,13 +2645,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2675,7 +2675,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2695,13 +2695,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 66,
+    "trendScore": 59,
     "marketSentiment": "neutral",
     "marketSentimentScore": 55,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 66,
+      "trendScore": 59,
       "marketSentiment": "neutral",
       "marketSentimentScore": 55,
       "matchedTrendTerms": [
@@ -2726,7 +2726,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2746,13 +2746,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2776,7 +2776,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2796,13 +2796,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2826,7 +2826,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2846,13 +2846,13 @@
     "businessFunction": "Operations",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 53,
+    "trendScore": 46,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, workflow, gpt. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 53,
+      "trendScore": 46,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -2878,7 +2878,7 @@
     "businessValueScore": 54,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2898,13 +2898,13 @@
     "businessFunction": "Operations",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 62,
+    "trendScore": 55,
     "marketSentiment": "neutral",
     "marketSentimentScore": 55,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: agent, ai agent, gemma, small business. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 62,
+      "trendScore": 55,
       "marketSentiment": "neutral",
       "marketSentimentScore": 55,
       "matchedTrendTerms": [
@@ -2931,7 +2931,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -2951,13 +2951,13 @@
     "businessFunction": "General",
     "authorityAngle": "tool_tutorial",
     "score": 100,
-    "trendScore": 44,
+    "trendScore": 37,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, github. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 44,
+      "trendScore": 37,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -2982,7 +2982,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3002,13 +3002,13 @@
     "businessFunction": "General",
     "authorityAngle": "tool_tutorial",
     "score": 100,
-    "trendScore": 27,
+    "trendScore": 20,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 27,
+      "trendScore": 20,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -3032,7 +3032,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3052,13 +3052,13 @@
     "businessFunction": "Finance",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 62,
+    "trendScore": 55,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: agent, ai agent, automation, finance. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 62,
+      "trendScore": 55,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -3085,7 +3085,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3105,13 +3105,13 @@
     "businessFunction": "Security",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 53,
+    "trendScore": 46,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, workflow, security. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 53,
+      "trendScore": 46,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -3137,7 +3137,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3157,13 +3157,13 @@
     "businessFunction": "Customer Support",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 44,
+    "trendScore": 37,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, customer support. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 44,
+      "trendScore": 37,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -3188,7 +3188,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3208,13 +3208,13 @@
     "businessFunction": "Analytics",
     "authorityAngle": "tool_tutorial",
     "score": 100,
-    "trendScore": 36,
+    "trendScore": 29,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 36,
+      "trendScore": 29,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -3239,7 +3239,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3259,13 +3259,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 53,
+    "trendScore": 46,
     "marketSentiment": "neutral",
     "marketSentimentScore": 55,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: agent, ai agent, small business. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 53,
+      "trendScore": 46,
       "marketSentiment": "neutral",
       "marketSentimentScore": 55,
       "matchedTrendTerms": [
@@ -3291,7 +3291,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3311,13 +3311,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 27,
+    "trendScore": 20,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 27,
+      "trendScore": 20,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -3341,7 +3341,7 @@
     "businessValueScore": 46,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3361,13 +3361,13 @@
     "businessFunction": "Sales",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 44,
+    "trendScore": 37,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, crm. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 44,
+      "trendScore": 37,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -3392,7 +3392,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3412,13 +3412,13 @@
     "businessFunction": "Operations",
     "authorityAngle": "case_study",
     "score": 100,
-    "trendScore": 36,
+    "trendScore": 29,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 36,
+      "trendScore": 29,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -3443,7 +3443,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3463,13 +3463,13 @@
     "businessFunction": "Sales",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 27,
+    "trendScore": 20,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 27,
+      "trendScore": 20,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -3493,7 +3493,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3513,13 +3513,13 @@
     "businessFunction": "Customer Support",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 44,
+    "trendScore": 37,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, customer support. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 44,
+      "trendScore": 37,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -3544,7 +3544,7 @@
     "businessValueScore": 54,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3564,13 +3564,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 27,
+    "trendScore": 20,
     "marketSentiment": "neutral",
     "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 27,
+      "trendScore": 20,
       "marketSentiment": "neutral",
       "marketSentimentScore": 69,
       "matchedTrendTerms": [
@@ -3594,7 +3594,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3614,13 +3614,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 100,
-    "trendScore": 44,
+    "trendScore": 37,
     "marketSentiment": "neutral",
     "marketSentimentScore": 55,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 44,
+      "trendScore": 37,
       "marketSentiment": "neutral",
       "marketSentimentScore": 55,
       "matchedTrendTerms": [
@@ -3645,7 +3645,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z",
+    "scoredAt": "2026-05-05T07:20:38.459Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -3703,7 +3703,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Built a WhatsApp lead qualification bot for real estate brokers. Every single one closes more deals in the first week. Here's exactly how it works.",
@@ -3752,7 +3752,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.795Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Introducing Advanced Account Security",
@@ -3804,7 +3804,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Where the goblins came from",
@@ -3854,7 +3854,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Building the compute infrastructure for the Intelligence Age",
@@ -3904,7 +3904,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Cybersecurity in the Intelligence Age",
@@ -3956,7 +3956,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Our commitment to community safety",
@@ -4006,7 +4006,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "OpenAI models, Codex, and Managed Agents come to AWS",
@@ -4058,7 +4058,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "OpenAI available at FedRAMP Moderate",
@@ -4108,7 +4108,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "The next phase of the Microsoft OpenAI partnership",
@@ -4158,7 +4158,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "An open-source spec for orchestration: Symphony",
@@ -4208,7 +4208,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Choco automates food distribution with AI agents",
@@ -4261,7 +4261,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Our principles",
@@ -4311,7 +4311,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Speed Up Unreal Engine NNE Inference with NVIDIA TensorRT for RTX Runtime",
@@ -4361,7 +4361,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "CCC Mobile Scanning Links AI Automation With CCC ONE Usage And Valuation - simplywall.st",
@@ -4411,7 +4411,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Chinese Courts Just Ruled That AI Automation Is Not a Legal Reason to Fire Someone and Every HR Team Needs to Read This - Startup Fortune",
@@ -4461,7 +4461,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Preliminary Findings on AI Automation from Worker Evaluations",
@@ -4511,7 +4511,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Thoth - Open Source Local-first AI Assistant - Architecture",
@@ -4562,7 +4562,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Google home Automation help",
@@ -4612,7 +4612,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Need a good automation to apply for jobs ( linkedin , wellfound, foundit, indeed, etc)",
@@ -4662,7 +4662,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Built a real estate lead workflow that qualifies Meta ad leads and routes them to voice or SMS — biggest hurdle was timing",
@@ -4713,7 +4713,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "What automation gives you the biggest time savings right now?",
@@ -4763,7 +4763,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Built a WhatsApp lead qualification bot for real estate brokers. Every single one closes more deals in the first week. Here's exactly how it works.",
@@ -4813,7 +4813,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "I built an AI advisor that compares 10 workflow automation platforms using pricing data. No affiliate kickbacks, no &quot;best tool 2026&quot; slop. Here's exactly how it works.",
@@ -4864,7 +4864,7 @@
     "businessValueScore": 46,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Asked Google Gemini about Ai Agency",
@@ -4914,7 +4914,7 @@
     "businessValueScore": 30,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Could the best LLM be able to generate a symbolic AI that is superior to itself, or is there something superior about matrices vs graphs?",
@@ -4964,7 +4964,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "token budget is becoming part of my agent workflow design",
@@ -5016,7 +5016,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "What most people call AI agents, we call sub-agents. The real ones don't get thrown away.",
@@ -5067,7 +5067,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "AI is moving from chatbots to real workflows. Here is what I think technical learners should focus on.",
@@ -5119,7 +5119,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Meta expands AI business assistant to all advertisers in its latest push toward automation - eMarketer",
@@ -5170,7 +5170,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "How Robin AI is Solving the Global IT Talent Shortage by Executing Tasks Autonomously - Ventureburn",
@@ -5219,7 +5219,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Meta expands AI business assistant to all advertisers in its latest push toward automation - eMarketer",
@@ -5270,7 +5270,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "Chinese court rules companies can't fire workers just because AI is cheaper — ruling says automation alone doesn't justify layoffs - Tom's Hardware",
@@ -5320,7 +5320,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.459Z"
   },
   {
     "topic": "​​How Robin AI is Solving the Global IT Talent Shortage by Executing Tasks Autonomously - Ventureburn",
@@ -5368,7 +5368,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Meta expands AI business assistant to all advertisers in its latest push toward automation - eMarketer",
@@ -5418,7 +5418,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "5 AI Automation Trends That Will Define Business in the Next 5 Years - Modern Diplomacy",
@@ -5468,7 +5468,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "the golden handbook on how to get clients for your automation business",
@@ -5518,7 +5518,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "how I automated most of my customer support with n8n",
@@ -5569,7 +5569,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "An AI Agent Cost/Token Tracker",
@@ -5621,7 +5621,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "AI agents hiring other AI agents",
@@ -5672,7 +5672,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Build AI-Powered Games with NVIDIA DLSS 4.5, RTX, and Unreal Engine 5",
@@ -5722,7 +5722,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "AI voice generation has a workflow problem, not just a quality problem",
@@ -5773,7 +5773,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "VNYX raises €1 million to scale robotics and AI for automated fashion resale - Robotics & Automation News",
@@ -5823,7 +5823,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "What’s an automation you built that looked useless at first, but ended up being a game changer?",
@@ -5873,7 +5873,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Bridging the gap: Legacy tools gain enterprise AI support - TechTarget",
@@ -5921,7 +5921,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Signal Lock: Closing the Prediction-Execution Gap in Agentic AI Systems",
@@ -5972,7 +5972,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "After 40 automation builds for law firms, accounting practices, and agencies, two things kill almost every workflow before it makes it to Monday morning. Neither of them is the API.",
@@ -6024,7 +6024,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "UiPath and Databricks partner to launch new capabilities to integrate enterprise data intelligence and agentic automation - FutureCIO",
@@ -6077,7 +6077,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Convoso for Salesforce Brings AI-Powered Dialing and Campaign Automation to AgentExchange - The Fast Mode",
@@ -6131,7 +6131,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Automating GPU Kernel Translation with AI Agents: cuTile Python to cuTile.jl",
@@ -6183,7 +6183,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "How to Build, Run, and Scale High-Quality Creator Workflows in ComfyUI",
@@ -6235,7 +6235,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "How to Build, Run, and Scale High-Quality Creator Workflows in ComfyUI",
@@ -6287,7 +6287,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Automating GPU Kernel Translation with AI Agents: cuTile Python to cuTile.jl",
@@ -6340,7 +6340,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Powering AI Factories with NVIDIA Enterprise Reference Architectures",
@@ -6390,7 +6390,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Convoso for Salesforce Brings AI-Powered Dialing and Campaign Automation to AgentExchange - The Fast Mode",
@@ -6443,7 +6443,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "UiPath and Databricks partner to launch new capabilities to integrate enterprise data intelligence and agentic automation - FutureCIO",
@@ -6495,7 +6495,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "After 40 automation builds for law firms, accounting practices, and agencies, two things kill almost every workflow before it makes it to Monday morning. Neither of them is the API.",
@@ -6546,7 +6546,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "What automation tool can we make for gyms",
@@ -6596,7 +6596,7 @@
     "businessValueScore": 38,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.796Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Multi-agent n8n pipeline: Telegram → Sora 2 → finished UGC video ad in 10 minutes",
@@ -6648,7 +6648,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Xiaomi mimo coding plan is a absolute scam/misleading marketing",
@@ -6696,7 +6696,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Maturing collaborative AI agents for enterprise-scale impact - SDxCentral",
@@ -6747,7 +6747,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Agentic AI In Regulated Industries: The Business Case For Compliance Automation - The Norfolk Daily News",
@@ -6799,7 +6799,7 @@
     "businessValueScore": 54,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Coral Raises $12.5M to Scale AI Healthcare Automation Platform - citybiz",
@@ -6849,7 +6849,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Is your business ready for AI-driven automation? - ITWeb",
@@ -6899,7 +6899,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Automation RoadMap?",
@@ -6949,7 +6949,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "WOW24-7 Launches Automation & AI Department to Scale Enterprise AI in Customer Experience - TMX Newsfile",
@@ -6999,7 +6999,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Zyter Launches Praxis, an AI Engine for Executing End-to-end Enterprise Workflows - GlobeNewswire",
@@ -7050,7 +7050,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Build or Buy AI Agents? CX Leaders Face a Call, Says 8×8 - CX Today",
@@ -7101,7 +7101,7 @@
     "businessValueScore": 46,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Writing my thesis on AI and content creation, looking for creators willing to answer a few questions",
@@ -7151,7 +7151,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Scaling Biomolecular Modeling Using Context Parallelism in NVIDIA BioNeMo",
@@ -7201,7 +7201,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "BPX Launches Advanced Enterprise AI Solutions to Enable End-to-End Process Automation - AiThority",
@@ -7252,7 +7252,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Building an agentic AI strategy that pays off - without risking business failure - ZDNET",
@@ -7303,7 +7303,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "I stress-tested my friend Mike's support email router with 50 weird edge cases. Here's what broke.",
@@ -7353,7 +7353,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "What's the best AI voice generator?",
@@ -7403,7 +7403,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "How AI is modernizing EPCs - Latitude Media",
@@ -7452,7 +7452,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "How AI is modernizing EPCs - Latitude Media",
@@ -7501,7 +7501,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "How AI is modernizing EPCs - Latitude Media",
@@ -7550,7 +7550,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Appian co-founder says process automation beats AI hype - SiliconANGLE",
@@ -7601,7 +7601,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "What’s the most underrated automation you use every day?",
@@ -7651,7 +7651,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Anyone else waste days switching between automation tools before committing?",
@@ -7701,7 +7701,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "How OpenAI delivers low-latency voice AI at scale",
@@ -7751,7 +7751,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "KYC SiteScan Adds Five AI Features to Merchant Know Your Customer Automation - Yahoo Finance Singapore",
@@ -7802,7 +7802,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "AI that turns any business idea into a running business automatically. Here's what we learned.",
@@ -7852,7 +7852,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Optimize Supply Chain Decision Systems Using NVIDIA cuOpt Agent Skills",
@@ -7904,7 +7904,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "AI firms should face 'minimum wage for robots' to limit job cuts, says tech boss - Yahoo",
@@ -7954,7 +7954,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "MoneyHero Group reports first profitable quarter as AI automation drives costs down - Manila Standard",
@@ -8004,7 +8004,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "Vertical vs. Horizontal: Who wins the Agentic AI race in banking?",
@@ -8055,7 +8055,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "On-device AI changes how people behave with sensitive data. I noticed this while building a therapy prep voice agent",
@@ -8106,7 +8106,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "AI firms should face 'minimum wage for robots' to limit job cuts, says tech boss - Yahoo News New Zealand",
@@ -8156,7 +8156,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "I feel peer pressure to build AI agents for simple task when &quot;old school&quot; automations are 100% sufficient",
@@ -8208,7 +8208,7 @@
     "businessValueScore": 46,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.460Z"
   },
   {
     "topic": "how do you catch automations breaking before the client tells you",
@@ -8258,7 +8258,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "The case for AI increasing your salary",
@@ -8308,7 +8308,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Self Awareness & Context Management in Thoth - Architecture",
@@ -8358,7 +8358,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "what automation actually changed how you work, not just saved a few clicks",
@@ -8408,7 +8408,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "OpenAI and PwC collaborate to reimagine the office of the CFO",
@@ -8458,7 +8458,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "IBM unveils its blueprint to help enterprises run AI at the core of their business - Network World",
@@ -8508,7 +8508,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Improving AI agents through better evaluations - InfoWorld",
@@ -8559,7 +8559,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.799Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "I'm looking for an AI Automation Engineer role or gig",
@@ -8609,7 +8609,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.799Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "What are some automations that manufacturers need ?",
@@ -8659,7 +8659,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.799Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Is AI automation actually saving time in your company or adding complexity?",
@@ -8709,7 +8709,7 @@
     "businessValueScore": 38,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.799Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Does Software Defined Automation only make sense for large systems?",
@@ -8759,7 +8759,109 @@
     "businessValueScore": 38,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.799Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
+  },
+  {
+    "topic": "how does Ava 2.0 actually handle reply classification? asking from a workflow perspective.",
+    "source": "Reddit r/automation RSS",
+    "slug": "how-does-ava-2-0-actually-handle-reply-classification-asking-from-a-workflow-perspective",
+    "keyword": "how does ava 2.0 actually handle reply classification? asking from a workflow perspective.",
+    "category": "Workflow Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-05T07:20:36.297Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "Operations",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 58,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 58,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "automation",
+        "workflow"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 9,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.09
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 99,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-05T07:20:38.462Z"
+  },
+  {
+    "topic": "Agentic API Grader by SaaStr.ai",
+    "source": "Product Hunt",
+    "slug": "agentic-api-grader-by-saastr-ai",
+    "keyword": "agentic api grader by saastr.ai",
+    "category": "AI Agents",
+    "status": "scored_ready",
+    "createdAt": "2026-05-05T07:20:36.297Z",
+    "contentPersona": "AI Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 100,
+    "trendScore": 66,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 55,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 66,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 55,
+      "matchedTrendTerms": [
+        "agent",
+        "ai agent"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: agent, ai agent. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 75,
+    "businessValue": "Low",
+    "businessValueScore": 38,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Artificial Intelligence (AI)",
@@ -8773,13 +8875,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 97,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -8803,7 +8905,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z",
+    "scoredAt": "2026-05-05T07:20:38.461Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -8823,13 +8925,13 @@
     "businessFunction": "General",
     "authorityAngle": "solution_guide",
     "score": 97,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -8853,7 +8955,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z",
+    "scoredAt": "2026-05-05T07:20:38.461Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -8873,13 +8975,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 97,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -8903,7 +9005,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z",
+    "scoredAt": "2026-05-05T07:20:38.461Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -8923,13 +9025,13 @@
     "businessFunction": "Analytics",
     "authorityAngle": "tool_tutorial",
     "score": 97,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -8953,7 +9055,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z",
+    "scoredAt": "2026-05-05T07:20:38.461Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -8973,13 +9075,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 97,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -9003,7 +9105,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z",
+    "scoredAt": "2026-05-05T07:20:38.461Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -9059,7 +9161,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Amazon Just Opened a New Front in the AI War -- Enterprise Software Is the Target - Money Morning",
@@ -9107,7 +9209,7 @@
     "businessValueScore": 30,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Uber burned its entire 2026 AI coding budget in 4 months - $500-2k per engineer per month",
@@ -9157,7 +9259,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "AI is starting to beat doctors at making correct diagnoses",
@@ -9207,7 +9309,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "The AI Revolution Hollywood Feared Is Already Happening",
@@ -9257,7 +9359,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Internet Is Getting Remade For AI. What Does It Mean For You?",
@@ -9308,7 +9410,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "𝕏 is now marking your photos if they are made or partially made by AI",
@@ -9358,7 +9460,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Contrary to contemporary belief: AI can (and should) be used to increase your income",
@@ -9408,7 +9510,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "T6 Active — AI Recursive Translator Experiment",
@@ -9458,7 +9560,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Exclusive: UiPath CMO Michael Atalla on AI at work - The Rundown AI",
@@ -9508,7 +9610,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "AI finds signs of pancreatic cancer before tumors develop",
@@ -9558,7 +9660,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "AI helps create bacterium that’s partially missing a universal amino acid",
@@ -9608,7 +9710,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Writing the loss function: AI, feeds, and the engagement optimizer",
@@ -9658,7 +9760,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "TikTok · AIENTERTAINMENTONE",
@@ -9708,7 +9810,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Chinese courts rule that firing employees to replace them with AI is illegal - Cybernews",
@@ -9758,7 +9860,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "am I the only one whose friends are completely divided on AI?",
@@ -9808,7 +9910,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "AI in r/artificial",
@@ -9858,7 +9960,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "“AI without processes is fast and confident, but often wrong” - Techzine Global",
@@ -9909,7 +10011,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "‘AI is more efficient’ is not enough reason to lay off staff, says Chinese court - cio.com",
@@ -9959,7 +10061,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Chinese court rules companies can't fire workers just because AI can replace them - TechSpot",
@@ -10009,7 +10111,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.797Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Launchpad Build AI opens El Segundo HQ after USD $11m - IT Brief UK",
@@ -10059,7 +10161,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "The Hidden Layer: Where AI Actually Pulls Wellness Brand Mentions From (Part 1)",
@@ -10109,7 +10211,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Richard Dawkins (AI) Refutes Richard Dawkins (Human) on AI Conciousness",
@@ -10159,7 +10261,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Built a simple OpenAI Powered TTS feature into my AI platform - truly unlimited free generations, no paywalls, want to know if this is actually useful",
@@ -10209,7 +10311,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Will AI Take My Job? - YouTube",
@@ -10259,7 +10361,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Chinese court sides with worker who was replaced by AI",
@@ -10309,7 +10411,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Anthropic Launches Enterprise AI Firm With Wall Street Giants",
@@ -10359,7 +10461,57 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.799Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
+  },
+  {
+    "topic": "Generic AI won’t fix mortgage lending. Intelligent AI will. - HousingWire",
+    "source": "Google News RSS",
+    "slug": "generic-ai-won-t-fix-mortgage-lending-intelligent-ai-will-housingwire",
+    "keyword": "generic ai won’t fix mortgage lending. intelligent ai will. - housingwire",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-05T07:20:36.297Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "solution_guide",
+    "score": 97,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 69,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 69,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 3,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.03
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Introducing Advanced Account Security",
@@ -10411,7 +10563,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "RetailBanker: Why financial services must embrace process orchestration",
@@ -10425,13 +10577,13 @@
     "businessFunction": "Operations",
     "authorityAngle": "practical_workflow",
     "score": 92,
-    "trendScore": 58,
+    "trendScore": 51,
     "marketSentiment": "neutral",
     "marketSentimentScore": 55,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation, workflow. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 58,
+      "trendScore": 51,
       "marketSentiment": "neutral",
       "marketSentimentScore": 55,
       "matchedTrendTerms": [
@@ -10456,7 +10608,7 @@
     "businessValueScore": 30,
     "searchIntent": "Commercial",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z",
+    "scoredAt": "2026-05-05T07:20:38.461Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -10512,7 +10664,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Built a script to email me if my favorite Discord server goes quiet for 2 hours. Totally useless. But I learned webhooks.",
@@ -10562,7 +10714,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Richard Dawkins spent 3 days with Claude and named her &quot;Claudia.&quot; what he concluded after is hard to defend.",
@@ -10612,7 +10764,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "I gave my local LLM a &quot;suffering&quot; meter, and now it won’t stop self-modifying to fix its own stress.",
@@ -10662,7 +10814,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Best free VPN for PC with no registration and no speed limits?",
@@ -10712,7 +10864,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Beginner looking for help for nonprofit",
@@ -10762,7 +10914,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "What I’m Hearing About Cognitive Debt (So Far)",
@@ -10812,7 +10964,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.799Z"
+    "scoredAt": "2026-05-05T07:20:38.461Z"
   },
   {
     "topic": "Okay this is funny",
@@ -10826,13 +10978,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 88,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -10856,7 +11008,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z",
+    "scoredAt": "2026-05-05T07:20:38.461Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -10876,13 +11028,13 @@
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
     "score": 88,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -10906,7 +11058,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z",
+    "scoredAt": "2026-05-05T07:20:38.461Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -10926,13 +11078,13 @@
     "businessFunction": "Analytics",
     "authorityAngle": "practical_workflow",
     "score": 88,
-    "trendScore": 49,
+    "trendScore": 42,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
       "marketSentimentScore": 62,
       "matchedTrendTerms": [
@@ -10956,57 +11108,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z",
-    "officialSource": "",
-    "officialUrl": "",
-    "officialImageRequired": false,
-    "trustedNewsSource": false,
-    "toolSpecific": false,
-    "newsPublishedAt": ""
-  },
-  {
-    "topic": "Product Hunt — The best new products, every day",
-    "source": "Product Hunt",
-    "slug": "product-hunt-the-best-new-products-every-day",
-    "keyword": "product hunt — the best new products, every day",
-    "category": "AI Automation",
-    "status": "scored_ready",
-    "createdAt": "2026-05-02T07:02:27.525Z",
-    "contentPersona": "Business Automation Expert",
-    "businessFunction": "General",
-    "authorityAngle": "practical_workflow",
-    "score": 88,
-    "trendScore": 49,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 69,
-    "trendOverrideEligible": false,
-    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
-    "trendAnalysis": {
-      "trendScore": 49,
-      "marketSentiment": "neutral",
-      "marketSentimentScore": 69,
-      "matchedTrendTerms": [
-        "automation"
-      ],
-      "trendOverrideEligible": false,
-      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
-    },
-    "duplicateStatus": "unique",
-    "duplicateScore": 4,
-    "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.04
-    },
-    "suggestedAngle": "",
-    "suggestedTopic": "",
-    "seoScore": 66,
-    "businessValue": "Low",
-    "businessValueScore": 30,
-    "searchIntent": "Informational",
-    "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z",
+    "scoredAt": "2026-05-05T07:20:38.462Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -11062,7 +11164,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Here is a fun project i created.",
@@ -11112,7 +11214,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Every country needs to do this asap",
@@ -11162,7 +11264,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "California to begin ticketing driverless cars that violate traffic laws",
@@ -11212,7 +11314,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "My dream of a fully generative game is getting pretty close to possible now. I made a demo where you can prompt any spell and fight online.",
@@ -11262,7 +11364,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Claude mythos preview GameJam contestant",
@@ -11312,7 +11414,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Does anyone have experience with closing",
@@ -11362,7 +11464,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "[ Removed by Reddit ]",
@@ -11412,7 +11514,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Twitter bookmarks to Notion, one sentence, done",
@@ -11462,7 +11564,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Standardized Complexity",
@@ -11512,7 +11614,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Initial Excitement. No Quick Wins",
@@ -11562,7 +11664,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Any engineering graduates wanna read my dissertation?",
@@ -11612,7 +11714,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Richard Dawkins Chats with Claude and Thinks it's Conscious",
@@ -11662,7 +11764,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "I automated the parts around meetings. The parts inside meetings are still a mess.",
@@ -11712,7 +11814,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "claude Mythos x Godong Engine game Jam day 2 - final release",
@@ -11762,7 +11864,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "is it legal to scrape mercedes data using their API - as a company",
@@ -11812,7 +11914,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Sleek Analytics for iOS",
@@ -11862,7 +11964,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "I've built NexusAI Ecosystem with @base44!",
@@ -11912,7 +12014,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Microsoft's E7 license introduces new pricing approach - No Jitter",
@@ -11962,7 +12064,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "If Claude App gave you the same control as Claude CLI then would you bother with the CLI?",
@@ -12012,7 +12114,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "I spent hours with REPLIT's free day of coding...did you?",
@@ -12062,7 +12164,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Automated ticket routing would save me so much time",
@@ -12112,7 +12214,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "AEO? SEO? Help please?",
@@ -12162,7 +12264,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Us vs Captcha",
@@ -12212,7 +12314,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Yoda Translator - Toy 500k Param Model",
@@ -12262,7 +12364,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "ROCm 7.2.3 brings minor updates, ROCm XIO documentation",
@@ -12312,7 +12414,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "The &quot;Boring Utility&quot; gap that Zapier structurally can't bridge.",
@@ -12362,20 +12464,20 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "Urgent",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
-    "topic": "Copilot Health",
-    "source": "Product Hunt",
-    "slug": "copilot-health",
-    "keyword": "copilot health",
+    "topic": "Driver control with python",
+    "source": "Reddit r/automation RSS",
+    "slug": "driver-control-with-python",
+    "keyword": "driver control with python",
     "category": "AI Automation",
     "status": "scored_ready",
-    "createdAt": "2026-05-02T07:02:27.525Z",
+    "createdAt": "2026-05-05T07:20:36.297Z",
     "contentPersona": "Business Automation Expert",
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
-    "score": 84,
+    "score": 88,
     "trendScore": 49,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
@@ -12391,6 +12493,62 @@
       "trendOverrideEligible": false,
       "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
     },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-05T07:20:38.462Z"
+  },
+  {
+    "topic": "Kilo Code for VS Code 7",
+    "source": "Product Hunt",
+    "slug": "kilo-code-for-vs-code-7",
+    "keyword": "kilo code for vs code 7",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-05T07:20:36.297Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 88,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
     "duplicateStatus": "unique",
     "duplicateScore": 6,
     "duplicateMatch": {
@@ -12401,40 +12559,34 @@
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
-    "seoScore": 54,
+    "seoScore": 66,
     "businessValue": "Low",
     "businessValueScore": 30,
     "searchIntent": "Informational",
-    "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z",
-    "officialSource": "",
-    "officialUrl": "",
-    "officialImageRequired": false,
-    "trustedNewsSource": false,
-    "toolSpecific": false,
-    "newsPublishedAt": ""
+    "priority": "Urgent",
+    "scoredAt": "2026-05-05T07:20:38.463Z"
   },
   {
-    "topic": "DESIGN.md by Google Stitch",
+    "topic": "Product Hunt — The best new products, every day",
     "source": "Product Hunt",
-    "slug": "design-md-by-google-stitch",
-    "keyword": "design.md by google stitch",
+    "slug": "product-hunt-the-best-new-products-every-day",
+    "keyword": "product hunt — the best new products, every day",
     "category": "AI Automation",
     "status": "scored_ready",
     "createdAt": "2026-05-02T07:02:27.525Z",
     "contentPersona": "Business Automation Expert",
     "businessFunction": "General",
     "authorityAngle": "practical_workflow",
-    "score": 84,
-    "trendScore": 49,
+    "score": 86,
+    "trendScore": 42,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 69,
     "trendOverrideEligible": false,
     "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
     "trendAnalysis": {
-      "trendScore": 49,
+      "trendScore": 42,
       "marketSentiment": "neutral",
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 69,
       "matchedTrendTerms": [
         "automation"
       ],
@@ -12442,171 +12594,21 @@
       "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
     },
     "duplicateStatus": "unique",
-    "duplicateScore": 5,
+    "duplicateScore": 4,
     "duplicateMatch": {
       "slug": "ai-authority-blog-engine",
       "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
       "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.05
+      "similarity": 0.04
     },
     "suggestedAngle": "",
     "suggestedTopic": "",
-    "seoScore": 54,
+    "seoScore": 66,
     "businessValue": "Low",
     "businessValueScore": 30,
     "searchIntent": "Informational",
-    "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z",
-    "officialSource": "",
-    "officialUrl": "",
-    "officialImageRequired": false,
-    "trustedNewsSource": false,
-    "toolSpecific": false,
-    "newsPublishedAt": ""
-  },
-  {
-    "topic": "Cloud Computer by Manus",
-    "source": "Product Hunt",
-    "slug": "cloud-computer-by-manus",
-    "keyword": "cloud computer by manus",
-    "category": "AI Automation",
-    "status": "scored_ready",
-    "createdAt": "2026-05-02T07:02:27.525Z",
-    "contentPersona": "Business Automation Expert",
-    "businessFunction": "General",
-    "authorityAngle": "practical_workflow",
-    "score": 84,
-    "trendScore": 49,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
-    "trendOverrideEligible": false,
-    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
-    "trendAnalysis": {
-      "trendScore": 49,
-      "marketSentiment": "neutral",
-      "marketSentimentScore": 62,
-      "matchedTrendTerms": [
-        "automation"
-      ],
-      "trendOverrideEligible": false,
-      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
-    },
-    "duplicateStatus": "unique",
-    "duplicateScore": 5,
-    "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.05
-    },
-    "suggestedAngle": "",
-    "suggestedTopic": "",
-    "seoScore": 54,
-    "businessValue": "Low",
-    "businessValueScore": 30,
-    "searchIntent": "Informational",
-    "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z",
-    "officialSource": "",
-    "officialUrl": "",
-    "officialImageRequired": false,
-    "trustedNewsSource": false,
-    "toolSpecific": false,
-    "newsPublishedAt": ""
-  },
-  {
-    "topic": "YouTube TV Custom Multiview",
-    "source": "Product Hunt",
-    "slug": "youtube-tv-custom-multiview",
-    "keyword": "youtube tv custom multiview",
-    "category": "AI Automation",
-    "status": "scored_ready",
-    "createdAt": "2026-05-02T07:02:27.525Z",
-    "contentPersona": "Business Automation Expert",
-    "businessFunction": "General",
-    "authorityAngle": "practical_workflow",
-    "score": 84,
-    "trendScore": 49,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
-    "trendOverrideEligible": false,
-    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
-    "trendAnalysis": {
-      "trendScore": 49,
-      "marketSentiment": "neutral",
-      "marketSentimentScore": 62,
-      "matchedTrendTerms": [
-        "automation"
-      ],
-      "trendOverrideEligible": false,
-      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
-    },
-    "duplicateStatus": "unique",
-    "duplicateScore": 5,
-    "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.05
-    },
-    "suggestedAngle": "",
-    "suggestedTopic": "",
-    "seoScore": 54,
-    "businessValue": "Low",
-    "businessValueScore": 30,
-    "searchIntent": "Informational",
-    "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z",
-    "officialSource": "",
-    "officialUrl": "",
-    "officialImageRequired": false,
-    "trustedNewsSource": false,
-    "toolSpecific": false,
-    "newsPublishedAt": ""
-  },
-  {
-    "topic": "Emoji War",
-    "source": "Product Hunt",
-    "slug": "emoji-war",
-    "keyword": "emoji war",
-    "category": "AI Automation",
-    "status": "scored_ready",
-    "createdAt": "2026-05-02T07:02:27.525Z",
-    "contentPersona": "Business Automation Expert",
-    "businessFunction": "General",
-    "authorityAngle": "practical_workflow",
-    "score": 84,
-    "trendScore": 49,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
-    "trendOverrideEligible": false,
-    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
-    "trendAnalysis": {
-      "trendScore": 49,
-      "marketSentiment": "neutral",
-      "marketSentimentScore": 62,
-      "matchedTrendTerms": [
-        "automation"
-      ],
-      "trendOverrideEligible": false,
-      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
-    },
-    "duplicateStatus": "unique",
-    "duplicateScore": 6,
-    "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.06
-    },
-    "suggestedAngle": "",
-    "suggestedTopic": "",
-    "seoScore": 54,
-    "businessValue": "Low",
-    "businessValueScore": 30,
-    "searchIntent": "Informational",
-    "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z",
+    "priority": "Urgent",
+    "scoredAt": "2026-05-05T07:20:38.462Z",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
@@ -12663,7 +12665,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Huddle01 VMs",
@@ -12713,7 +12715,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Aximote In-Car App",
@@ -12763,7 +12765,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "PandaProbe",
@@ -12813,7 +12815,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Mockin 2.0",
@@ -12863,7 +12865,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Microsoft Copilot Health",
@@ -12913,7 +12915,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Regulus by Cumbuca",
@@ -12963,7 +12965,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Claude Code & Codex Usage Trading Cards",
@@ -13013,7 +13015,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Replyke V7",
@@ -13063,7 +13065,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Codex Pets",
@@ -13113,7 +13115,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Panels Store",
@@ -13163,7 +13165,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Visitor Profiles and Timeline by Croct",
@@ -13213,7 +13215,7 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   },
   {
     "topic": "Claude Code & Codex Usage Trading Cards by Rudel",
@@ -13263,7 +13265,457 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
+  },
+  {
+    "topic": "PanicMode",
+    "source": "Product Hunt",
+    "slug": "panicmode",
+    "keyword": "panicmode",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-05T07:20:36.297Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 84,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-05T07:20:38.462Z"
+  },
+  {
+    "topic": "Breathwrk",
+    "source": "Product Hunt",
+    "slug": "breathwrk",
+    "keyword": "breathwrk",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-05T07:20:36.297Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 84,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-05T07:20:38.463Z"
+  },
+  {
+    "topic": "Tollecode",
+    "source": "Product Hunt",
+    "slug": "tollecode",
+    "keyword": "tollecode",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-05T07:20:36.297Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 84,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-05T07:20:38.463Z"
+  },
+  {
+    "topic": "Ghostwriter",
+    "source": "Product Hunt",
+    "slug": "ghostwriter",
+    "keyword": "ghostwriter",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-05T07:20:36.297Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 84,
+    "trendScore": 49,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 49,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": "",
+    "duplicateStatus": "unique",
+    "duplicateScore": 8,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.08
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-05T07:20:38.463Z"
+  },
+  {
+    "topic": "Copilot Health",
+    "source": "Product Hunt",
+    "slug": "copilot-health",
+    "keyword": "copilot health",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-02T07:02:27.525Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 82,
+    "trendScore": 42,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 42,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "duplicateStatus": "unique",
+    "duplicateScore": 6,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.06
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-05T07:20:38.462Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
+  },
+  {
+    "topic": "DESIGN.md by Google Stitch",
+    "source": "Product Hunt",
+    "slug": "design-md-by-google-stitch",
+    "keyword": "design.md by google stitch",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-02T07:02:27.525Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 82,
+    "trendScore": 42,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 42,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-05T07:20:38.462Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
+  },
+  {
+    "topic": "Cloud Computer by Manus",
+    "source": "Product Hunt",
+    "slug": "cloud-computer-by-manus",
+    "keyword": "cloud computer by manus",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-02T07:02:27.525Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 82,
+    "trendScore": 42,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 42,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-05T07:20:38.462Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
+  },
+  {
+    "topic": "YouTube TV Custom Multiview",
+    "source": "Product Hunt",
+    "slug": "youtube-tv-custom-multiview",
+    "keyword": "youtube tv custom multiview",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-02T07:02:27.525Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 82,
+    "trendScore": 42,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 42,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "duplicateStatus": "unique",
+    "duplicateScore": 5,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.05
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-05T07:20:38.462Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
+  },
+  {
+    "topic": "Emoji War",
+    "source": "Product Hunt",
+    "slug": "emoji-war",
+    "keyword": "emoji war",
+    "category": "AI Automation",
+    "status": "scored_ready",
+    "createdAt": "2026-05-02T07:02:27.525Z",
+    "contentPersona": "Business Automation Expert",
+    "businessFunction": "General",
+    "authorityAngle": "practical_workflow",
+    "score": 82,
+    "trendScore": 42,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
+    "trendOverrideEligible": false,
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "trendAnalysis": {
+      "trendScore": 42,
+      "marketSentiment": "neutral",
+      "marketSentimentScore": 62,
+      "matchedTrendTerms": [
+        "automation"
+      ],
+      "trendOverrideEligible": false,
+      "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral."
+    },
+    "duplicateStatus": "unique",
+    "duplicateScore": 6,
+    "duplicateMatch": {
+      "slug": "ai-authority-blog-engine",
+      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+      "url": "/blog/ai-authority-blog-engine",
+      "similarity": 0.06
+    },
+    "suggestedAngle": "",
+    "suggestedTopic": "",
+    "seoScore": 54,
+    "businessValue": "Low",
+    "businessValueScore": 30,
+    "searchIntent": "Informational",
+    "priority": "High",
+    "scoredAt": "2026-05-05T07:20:38.462Z",
+    "officialSource": "",
+    "officialUrl": "",
+    "officialImageRequired": false,
+    "trustedNewsSource": false,
+    "toolSpecific": false,
+    "newsPublishedAt": ""
   },
   {
     "topic": "Where the goblins came from",
@@ -13314,6 +13766,6 @@
     "businessValueScore": 30,
     "searchIntent": "Informational",
     "priority": "High",
-    "scoredAt": "2026-05-05T06:12:51.798Z"
+    "scoredAt": "2026-05-05T07:20:38.462Z"
   }
 ]
