@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 72,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,27 +98,30 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 703
+      "wordCount": 587
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 8,
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a practical, implementation-focused guide to building memory-enabled AI workflows in logistics.",
-      "Content is structured around a real-world use case (support triage) with measurable business outcomes.",
-      "Addresses common automation pitfalls like skipping approval steps and not tracking context.",
-      "Strong use of logistics-specific examples and clear implementation checklist.",
-      "Content is informationally sound and provides sufficient detail for a technical audience.",
-      "The article emphasizes a safe, incremental approach to automation with human oversight."
+      "The article provides practical, actionable guidance for implementing AI with memory in logistics workflows, which addresses a real business need",
+      "Content is well-structured with clear takeaways, implementation steps, and expert insights",
+      "Addresses common mistakes and includes troubleshooting guidance which adds practical value",
+      "Uses specific metrics and KPIs that readers can act on",
+      "Content is original and provides business-focused value without appearing AI-generated",
+      "Some sections feel brief and could benefit from more detailed explanation, particularly the 'Step-by-Step Workflow' section which lists three different workflows but doesn't deeply explain any of them",
+      "The article could better address potential technical challenges and limitations of the approach",
+      "More specific examples of how memory improves logistics outcomes would strengthen the content"
     ],
     "recommendedFixes": [
-      "Consider adding a section on integrating memory into no-code workflow tools like Zapier or Make, as the focus is on practical implementation.",
-      "Add a brief explanation of how to set up the Notion/Airtable logging system with specific fields and structure.",
-      "Include a short architecture diagram or flow description showing how memory is stored and referenced in the AI workflow.",
-      "Add specific, tested examples of prompt structures for the AI categorization step.",
-      "Consider adding a troubleshooting example with a specific error message and how to resolve it in the workflow."
+      "Expand the Step-by-Step Workflow section to provide detailed implementation guidance for at least one workflow type rather than listing three briefly",
+      "Add more specific examples of how memory-enhanced AI improves logistics decision-making with concrete scenarios",
+      "Include a brief section on potential technical challenges and limitations of implementing AI with memory in logistics",
+      "Add 2-3 more detailed case study elements or specific examples to illustrate key concepts",
+      "Consider adding a short section on 'When This Approach Doesn't Work Well' to set proper expectations",
+      "Enhance the Tools section with more specific integration details between the mentioned tools"
     ]
   }
 }

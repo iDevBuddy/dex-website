@@ -64,6 +64,15 @@
       "publishedDate": ""
     },
     {
+      "title": "How AI Is Transforming the Logistics Industry in 2025 - ByExpress",
+      "organization": "byexpress.com",
+      "url": "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
+      "type": "Web research",
+      "supports": "Explore how AI is transforming the logistics industry in 2025 with smart warehousing, predictive analytics, route optimization,",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
       "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
       "organization": "tryenvoy.ai",
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
@@ -80,35 +89,19 @@
       "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
       "authorityScore": 54,
       "publishedDate": ""
-    },
-    {
-      "title": "OpenAI Platform Documentation",
-      "organization": "OpenAI",
-      "url": "https://platform.openai.com/docs/",
-      "type": "Official documentation",
-      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
-      "tags": [
-        "ai",
-        "llm",
-        "agents",
-        "automation",
-        "workflow",
-        "prompt"
-      ],
-      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+    "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
-    "https://innovecs.com/blog/ai-supply-chain-planning/",
-    "https://platform.openai.com/docs/"
+    "https://innovecs.com/blog/ai-supply-chain-planning/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -139,10 +132,6 @@
       },
       {
         "source": "Google News",
-        "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
-      },
-      {
-        "source": "Google News",
         "title": "I tried 70+ best AI tools in 2026 - TechRadar"
       },
       {
@@ -152,6 +141,10 @@
       {
         "source": "Google News",
         "title": "Seizing the agentic AI advantage - McKinsey & Company"
+      },
+      {
+        "source": "Google News",
+        "title": "Agent-Powered Enterprise: Productivity, Governance, and the Future of Work - Klover.ai"
       },
       {
         "source": "Google News",
@@ -211,6 +204,15 @@
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
       "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "How AI Is Transforming the Logistics Industry in 2025 - ByExpress",
+      "organization": "byexpress.com",
+      "url": "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
+      "type": "Web research",
+      "supports": "Explore how AI is transforming the logistics industry in 2025 with smart warehousing, predictive analytics, route optimization,",
       "authorityScore": 95,
       "publishedDate": ""
     },
