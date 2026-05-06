@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 77,
+    "score": 85,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,25 +98,29 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 581
+      "wordCount": 721
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "minimal",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a clear, practical guide to implementing AI automation in logistics workflows, which aligns with the content persona and expertise level.",
-      "The content includes specific examples, tools, and a structured implementation plan, making it useful for the target audience of business professionals looking to implement AI automation.",
-      "The article references multiple authoritative sources and provides a detailed implementation timeline and business impact, increasing its credibility.",
-      "Content addresses workflow automation with a focus on memory-enabled AI for logistics planning, which is highly relevant to the target topic.",
-      "The article references logisticsviewpoints.com as a source, which adds credibility and context to the logistics automation focus."
+      "The article provides practical, workflow-focused guidance on implementing AI automation for support triage, which aligns well with the target audience of business owners and operators.",
+      "Content demonstrates clear expertise through structured implementation steps, tool recommendations, and business impact metrics.",
+      "Some sections like 'Direct Answer' and 'Expert Insight' could be better integrated into the flow rather than presented as separate blocks.",
+      "The article references external sources appropriately and supports claims with data, enhancing authority.",
+      "FAQs and implementation checklist add value but are somewhat repetitive of content already covered in the body text.",
+      "The article avoids generic AI advice and focuses on specific, measurable outcomes, which addresses the stated business problem."
     ],
     "recommendedFixes": [
-      "Add a clear, step-by-step visual guide or workflow diagram to improve user experience and provide better guidance.",
-      "Include meta-descriptions and alt-text for images to improve accessibility and search engine optimization.",
-      "Incorporate internal link structure to enhance content discoverability and support content authority.",
-      "Improve the technical content by adding a summary of the process and emphasize the business use case for better indexing and clarity."
+      "Integrate the 'Direct Answer' section into the introduction or 'What This Guide Covers' section for better content flow.",
+      "Expand the 'Expert Insight' section into a dedicated paragraph with context about why memory is crucial in AI workflows, possibly including a brief case study or example.",
+      "Move the implementation checklist to a downloadable asset to improve user experience and reduce on-page redundancy.",
+      "Consider reorganizing the content to improve readability - the current structure has some repetitive elements and standalone sections that break the reading flow.",
+      "Add internal linking to related articles or services to improve SEO and user engagement.",
+      "Include more specific examples of AI memory in action, such as how past ticket data influences future categorization decisions.",
+      "Strengthen the conclusion by summarizing key benefits and linking to next steps in your service offerings."
     ]
   }
 }
