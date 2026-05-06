@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 77,
+    "score": 85,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,25 +98,29 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 591
+      "wordCount": 715
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    " helpfulContentRisk": "Medium - The content provides practical value but lacks depth in technical implementation details and real-world examples that demonstrate robustness under varied conditions.",
     "notes": [
-      "The article provides a practical, step-by-step guide to implementing memory-enabled AI workflows.",
-      "Content is well-structured with clear implementation steps, use cases, and business outcomes.",
-      "The tone aligns with a business automation expert perspective as intended.",
-      "The content demonstrates understanding of technical implementation details.",
-      "Minor improvements could include more specific tool recommendations and clearer connections between memory and business impact."
+      "The article explains the concept of 'Planning AI needs memory' but doesn't provide sufficient technical depth for complex implementation scenarios.",
+      "Several sections appear to be incomplete or cut off mid-sentence, particularly the 'Expert Insight' section and parts of the 'Business Use Case'.",
+      "The article could benefit from more detailed examples of actual AI implementation workflows and clearer explanation of how memory is implemented in practice."
     ],
     "recommendedFixes": [
-      "Add specific examples of AI workflow tools (e.g., mention Langchain, LlamaIndex) for different use cases.",
-      "Clarify how memory layers persist context and improve automation outcomes.",
-      "Include implementation timeline and expected business impact (e.g. reduced hours, improved response times).",
-      "Provide measurable outcomes for memory-enabled AI (e.g. reduced manual hours, improved response times)."
+      "Complete the cut-off sentences in the 'Expert Insight' and 'Business Use Case' sections to provide full context to readers.",
+      "Add specific technical examples of how to implement memory in AI agents, including code snippets or platform-specific instructions.",
+      "Include diagrams or visual representations of the workflow architecture to better illustrate the concept.",
+      "Expand on the 'Tools' section with specific examples of AI platforms or tools that provide memory capabilities.",
+      "Clarify the distinction between traditional automation and memory-enabled AI workflows with concrete examples.",
+      "Add a detailed implementation section showing how to build a context-aware AI agent with memory.",
+      "Include error handling strategies and specific troubleshooting steps for common AI workflow failures.",
+      "Provide more comprehensive KPI tracking examples with specific metrics and tools for measurement.",
+      "Add a section comparing traditional automation vs. AI with memory to highlight the advantages.",
+      "Include real-world case studies or examples from industry use."
     ]
   }
 }
