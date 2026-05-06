@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,10 +8,10 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
@@ -19,18 +19,18 @@
     "floor": 78,
     "strictMinimum": 88,
     "trendScore": 68,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment positive."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 85,
+    "score": 73,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,32 +94,30 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 759
+      "wordCount": 619
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The article provides practical, actionable guidance for implementing AI with memory in logistics workflows",
-      "Content is well-researched with multiple authoritative sources cited",
-      "Content is focused on business outcomes and avoids generic AI advice as intended",
-      "Implementation difficulty and time estimates are provided to set proper expectations",
-      "Includes specific examples, tools, and KPIs that align with the target audience of business operators",
-      "Content avoids typical AI hype language and focuses on real implementation details",
-      "SEO optimization appears strong with clear target keyword usage in headers and structured around user intent"
+      "The article provides a detailed, practical guide to implementing AI automation using Launchpad Build AI's MLM, which aligns with the informational search intent.",
+      "The content is well-structured and includes specific steps, tools, and a clear use case, making it highly actionable for the target audience.",
+      "The article includes a practical implementation guide with a real-world case study, which enhances its value and reduces the risk of being considered 'thin' or 'low-quality' by search engines.",
+      "Implementation checklist and troubleshooting section add substantial value and improve the article's depth.",
+      "The article could further improve by adding more visual assets like workflow diagrams or comparison tables to increase engagement and time on page."
     ],
     "recommendedFixes": [
-      "Consider adding more specific examples of AI memory implementation challenges in logistics",
-      "Include a brief comparison table of before/after metrics to emphasize business impact",
-      "Add a short conclusion section summarizing key implementation challenges and benefits",
-      "Consider adding implementation examples for the tools mentioned (Slack, CRM, Zapier/Make) to increase practical utility",
-      "The article could benefit from more explicit connections between the sources cited and the implementation steps"
+      "Add a workflow diagram to visually represent the process, which can help readers understand the implementation steps more clearly.",
+      "Include a comparison table or data showing before-and-after metrics for the case study to highlight the business impact more effectively.",
+      "Add an infographic or social carousel to increase visual engagement and shareability.",
+      "Consider adding a downloadable PDF checklist for readers to use as a quick reference, which can improve lead generation.",
+      "Add a CTA or banner to promote related services like automation audits or consultations to improve conversion."
     ]
   }
 }
