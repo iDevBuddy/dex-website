@@ -69,26 +69,33 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 95,
+      "authorityScore": 68,
       "publishedDate": ""
     },
     {
-      "title": "Logistics Viewpoints | ARC Advisory Group",
-      "organization": "arcweb.com",
-      "url": "https://www.arcweb.com/aggregator/sources/2",
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "Logistics Viewpoints\n\n4 days 22 hours ago\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requires systems that retain context, le",
-      "authorityScore": 95,
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
       "publishedDate": ""
     },
     {
-      "title": "What logistics executives should demand from AI and data programs | Lumenalta",
-      "organization": "lumenalta.com",
-      "url": "https://lumenalta.com/insights/10-ai-program-requirements-logistics-executives-should-set",
-      "type": "Web research",
-      "supports": "Set clear business outcomes for AI in Logistics\n Confirm data readiness before scaling automation and analytics\n 10 requirements Logistics executives should set for AI programs\n 1. A use case backlog ",
-      "authorityScore": 95,
-      "publishedDate": ""
+      "title": "OpenAI Platform Documentation",
+      "organization": "OpenAI",
+      "url": "https://platform.openai.com/docs/",
+      "type": "Official documentation",
+      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "automation",
+        "workflow",
+        "prompt"
+      ],
+      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
@@ -96,12 +103,12 @@
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
-    "https://www.arcweb.com/aggregator/sources/2",
-    "https://lumenalta.com/insights/10-ai-program-requirements-logistics-executives-should-set"
+    "https://innovecs.com/blog/ai-supply-chain-planning/",
+    "https://platform.openai.com/docs/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -144,15 +151,15 @@
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
-      },
-      {
-        "source": "Google News",
         "title": "Seizing the agentic AI advantage - McKinsey & Company"
       },
       {
         "source": "Google News",
         "title": "CVG, Lufthansa, ADR, FRA and DataArt discuss agentic AI - Future Travel Experience"
+      },
+      {
+        "source": "Google News",
+        "title": "A Developer’s Guide to Building Scalable AI: Workflows vs Agents - Towards Data Science"
       }
     ],
     "realtimeSources": [
@@ -213,25 +220,16 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 95,
+      "authorityScore": 68,
       "publishedDate": ""
     },
     {
-      "title": "Logistics Viewpoints | ARC Advisory Group",
-      "organization": "arcweb.com",
-      "url": "https://www.arcweb.com/aggregator/sources/2",
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "Logistics Viewpoints\n\n4 days 22 hours ago\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requires systems that retain context, le",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "What logistics executives should demand from AI and data programs | Lumenalta",
-      "organization": "lumenalta.com",
-      "url": "https://lumenalta.com/insights/10-ai-program-requirements-logistics-executives-should-set",
-      "type": "Web research",
-      "supports": "Set clear business outcomes for AI in Logistics\n Confirm data readiness before scaling automation and analytics\n 10 requirements Logistics executives should set for AI programs\n 1. A use case backlog ",
-      "authorityScore": 95,
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
       "publishedDate": ""
     }
   ]

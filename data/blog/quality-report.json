@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 85,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,29 +98,27 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 721
+      "wordCount": 703
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": 8,
     "notes": [
-      "The article provides practical, workflow-focused guidance on implementing AI automation for support triage, which aligns well with the target audience of business owners and operators.",
-      "Content demonstrates clear expertise through structured implementation steps, tool recommendations, and business impact metrics.",
-      "Some sections like 'Direct Answer' and 'Expert Insight' could be better integrated into the flow rather than presented as separate blocks.",
-      "The article references external sources appropriately and supports claims with data, enhancing authority.",
-      "FAQs and implementation checklist add value but are somewhat repetitive of content already covered in the body text.",
-      "The article avoids generic AI advice and focuses on specific, measurable outcomes, which addresses the stated business problem."
+      "The article provides a practical, implementation-focused guide to building memory-enabled AI workflows in logistics.",
+      "Content is structured around a real-world use case (support triage) with measurable business outcomes.",
+      "Addresses common automation pitfalls like skipping approval steps and not tracking context.",
+      "Strong use of logistics-specific examples and clear implementation checklist.",
+      "Content is informationally sound and provides sufficient detail for a technical audience.",
+      "The article emphasizes a safe, incremental approach to automation with human oversight."
     ],
     "recommendedFixes": [
-      "Integrate the 'Direct Answer' section into the introduction or 'What This Guide Covers' section for better content flow.",
-      "Expand the 'Expert Insight' section into a dedicated paragraph with context about why memory is crucial in AI workflows, possibly including a brief case study or example.",
-      "Move the implementation checklist to a downloadable asset to improve user experience and reduce on-page redundancy.",
-      "Consider reorganizing the content to improve readability - the current structure has some repetitive elements and standalone sections that break the reading flow.",
-      "Add internal linking to related articles or services to improve SEO and user engagement.",
-      "Include more specific examples of AI memory in action, such as how past ticket data influences future categorization decisions.",
-      "Strengthen the conclusion by summarizing key benefits and linking to next steps in your service offerings."
+      "Consider adding a section on integrating memory into no-code workflow tools like Zapier or Make, as the focus is on practical implementation.",
+      "Add a brief explanation of how to set up the Notion/Airtable logging system with specific fields and structure.",
+      "Include a short architecture diagram or flow description showing how memory is stored and referenced in the AI workflow.",
+      "Add specific, tested examples of prompt structures for the AI categorization step.",
+      "Consider adding a troubleshooting example with a specific error message and how to resolve it in the workflow."
     ]
   }
 }
