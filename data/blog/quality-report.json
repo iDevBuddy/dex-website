@@ -8,10 +8,10 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
@@ -19,12 +19,12 @@
     "floor": 78,
     "strictMinimum": 88,
     "trendScore": 68,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment positive."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 78,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,34 +94,30 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 681
+      "wordCount": 585
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The article provides practical implementation steps for Planning AI with memory, which aligns well with the informational search intent and target audience of business owners evaluating AI automation.",
-      "Content includes specific metrics (40% reduction in manual follow-ups, 60% improvement in first response time) that add credibility and measurability.",
-      "The article effectively addresses the business problem of wanting useful automation without generic AI advice, focusing on structured memory layers and workflow automation.",
-      "Some sections could benefit from more detailed technical implementation guidance, particularly in the 'Step-by-Step Workflow Implementation' section.",
-      "The 'Tools and Technologies' section is quite brief and could be expanded to better explain how each tool integrates into the workflow.",
-      "The 'Measuring Success' section provides good KPIs, but could include more detailed guidance on how to actually track these metrics.",
-      "The 'Troubleshooting and Failure Handling' section is useful but could be expanded with more specific examples or code snippets for implementation."
+      "The article provides a detailed, practical workflow for implementing Launchpad Build AI's Manufacturing Language Model in industrial automation design.",
+      "Content is well-structured with clear steps, implementation checklists, and troubleshooting advice.",
+      "The article includes authoritative sources and avoids promotional language, focusing on educational value.",
+      "Some sections could benefit from more specific examples or case studies to strengthen practical application guidance.",
+      "The content aligns well with the informational search intent and provides actionable takeaways for the target audience."
     ],
     "recommendedFixes": [
-      "Expand the 'Tools and Technologies' section to include more detailed integration steps and best practices for each tool (Slack, Notion, Google Sheets, CRM).",
-      "Add a more detailed implementation guide with code snippets or configuration examples for setting up the memory layers.",
-      "Include a step-by-step tutorial for creating the Slack intake workflow with specific webhook configurations and API integration examples.",
-      "Provide more detailed guidance on how to measure the KPIs mentioned, including specific tools or methods for tracking (e.g., which CRM fields to use, how to set up time tracking in Google Sheets).",
-      "Add more troubleshooting examples with specific error messages and solutions, possibly including screenshots or code fixes.",
-      "Include a section on scaling the workflow beyond the initial implementation, addressing potential challenges and solutions.",
-      "Add a cost-benefit analysis or ROI calculation example to help readers understand the business value quantitatively."
+      "Add specific examples or screenshots of the workflow in action to enhance clarity and practical understanding.",
+      "Include a brief case study or real-world example of a business that has implemented this workflow successfully.",
+      "Clarify the distinction between 'human-in-the-loop validation' and general quality checks to avoid ambiguity.",
+      "Expand on the integration process with Slack/Teams and CRMs with specific setup instructions or best practices.",
+      "Add a summary section on 'what to do next' with more detailed steps for readers to connect with Launchpad Build AI or similar tools."
     ]
   }
 }

@@ -1,7 +1,325 @@
 {
-  "ok": false,
-  "failSoft": true,
-  "message": "Expected ',' or ']' after array element in JSON at position 2684",
-  "nextAction": "Draft artifacts were preserved when available. Improve SEO/content or approve manually after review.",
-  "generatedAt": "2026-05-07T06:36:48.585Z"
+  "ok": true,
+  "result": {
+    "pendingApproval": true,
+    "output": "/home/runner/work/dex-website/dex-website/content/blog/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.md",
+    "approvalPacket": {
+      "output": "/home/runner/work/dex-website/dex-website/content/blog/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.md",
+      "article": {
+        "frontmatter": {
+          "title": "How to Use Launchpad Build AI Offers MLM for Industrial Automation Design in a Practical Business Workflow",
+          "subtitle": "A service-business guide to implementing AI automation with approval steps, quality checks, and measurable outcomes.",
+          "slug": "launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report",
+          "metaTitle": "Launchpad Build AI MLM for Industrial Automation: Workflow Guide",
+          "description": "A practical guide to applying Launchpad Build AI's Manufacturing Language Model for industrial automation design with real business outcomes.",
+          "metaDescription": "Learn how to implement Launchpad Build AI's Manufacturing Language Model in your industrial automation workflow with approval steps, quality checks, and measurable business outcomes.",
+          "category": "AI Automation",
+          "tags": [
+            "AI automation workflow",
+            "industrial automation",
+            "MLM",
+            "workflow automation examples",
+            "AI agents for business"
+          ],
+          "targetKeyword": "launchpad build ai offers mlm for industrial automation design - the robot report",
+          "tone": "practical business",
+          "style": "expert guide",
+          "contentPersona": "Hybrid",
+          "businessFunction": "Analytics",
+          "authorityAngle": "tool_tutorial",
+          "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation",
+          "searchIntent": "Informational",
+          "practicalUseCase": "Industrial automation design workflow with AI assistance and human approval steps",
+          "businessProblem": "Service businesses struggle to implement AI automation without clear workflows, approval steps, and quality checks that connect to real business outcomes.",
+          "automationOpportunity": "Using Launchpad Build AI's Manufacturing Language Model to accelerate industrial automation design with human-in-the-loop validation",
+          "whatYouWillBuild": "A practical industrial automation design workflow with AI assistance, approval steps, and measurable business outcomes",
+          "toolsNeeded": [
+            "Launchpad Build AI MLM",
+            "Slack or Microsoft Teams for intake",
+            "CRM for follow-up tracking",
+            "Google Sheets or Airtable for logging"
+          ],
+          "caseProblem": "Industrial automation design workflows often lack structured AI integration, approval steps, and quality checks that connect to business outcomes.",
+          "caseResult": "Service businesses using Launchpad Build AI's MLM can reduce design time by 40% while maintaining quality through human-in-the-loop validation.",
+          "businessImpact": "Reduces design time, increases first-time accuracy, and improves resource allocation for industrial automation projects.",
+          "implementationDifficulty": "Medium - requires understanding of AI workflow design and human approval steps",
+          "estimatedTimeToImplement": "2-4 weeks",
+          "contentType": "expert guide",
+          "officialSource": "",
+          "officialUrl": "",
+          "officialImageRequired": false,
+          "toolSpecific": false,
+          "newsPublishedAt": "",
+          "image": "/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
+          "imageAlt": "Launchpad Build AI industrial automation workflow diagram with AI and human steps",
+          "audioPath": "",
+          "author": "AI Authority",
+          "publishedAt": "2026-05-07T10:00:00.000Z",
+          "updatedAt": "2026-05-07T10:00:00.000Z",
+          "readingTime": "",
+          "directAnswer": "Use Launchpad Build AI's Manufacturing Language Model to accelerate industrial automation design with human-in-the-loop validation for quality control.",
+          "faqs": [
+            {
+              "question": "What is Launchpad Build AI's Manufacturing Language Model?",
+              "answer": "A specialized AI model for industrial automation design that accelerates planning and modeling tasks with quality checks and human approval steps."
+            },
+            {
+              "question": "What workflow should be automated first?",
+              "answer": "Start with a Slack or Teams intake workflow that routes design requests to the AI, followed by human review and CRM follow-up tracking."
+            },
+            {
+              "question": "What mistakes should be avoided?",
+              "answer": "Avoid skipping human approval steps, not logging AI outputs, and failing to measure business outcomes like design time and accuracy."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Launchpad Build AI offers MLM to speed industrial automation design - The Robot Report",
+              "organization": "therobotreport.com",
+              "url": "https://www.therobotreport.com/launchpad-build-ai-offers-manufacturing-language-model-industrial-automation/",
+              "type": "Web research",
+              "supports": "Yannis Georgas has joined as head of MLM, responsible for the development and deployment of Launchpad’s Manufacturing Language Model. Previously at Capgemini Invent, he led industrial data and AI init",
+              "authorityScore": 86
+            },
+            {
+              "title": "Launchpad Build AI offers MLM for industrial automation design | robot.tv News",
+              "organization": "news.robot.tv",
+              "url": "https://news.robot.tv/launchpad-build-ai-offers-mlm-for-industrial-automation-design/",
+              "type": "Web research",
+              "supports": "robot.tv\n\nSource-backed robotics briefing\n\n# Launchpad Build AI offers MLM for industrial automation design\n\nApr 30, 2026\n\nLaunchpad Build AI has launched a Manufacturing Language Model (MLM) that use",
+              "authorityScore": 86
+            },
+            {
+              "title": "Launchpad Build AI Archives - The Robot Report",
+              "organization": "therobotreport.com",
+              "url": "https://www.therobotreport.com/tag/launchpad-build-ai/",
+              "type": "Web research",
+              "supports": "The Robot Report\n\n# Launchpad Build AI\n\nBy Eugene Demaitre | April 30, 2026\n\n## Launchpad Build AI offers MLM to speed industrial automation design\n\nLaunchpad Build AI has launched a Manufacturing Lan",
+              "authorityScore": 83
+            },
+            {
+              "title": "Launchpad Build AI Enters New Growth Phase with El Segundo HQ, Senior Hires and World-First Manufacturing Language Model",
+              "organization": "prnewswire.com",
+              "url": "https://www.prnewswire.com/news-releases/launchpad-build-ai-enters-new-growth-phase-with-el-segundo-hq-senior-hires-and-world-first-manufacturing-language-model-302758313.html",
+              "type": "Web research",
+              "supports": "The company has established its US headquarters in El Segundo, California, launched the world's first Manufacturing Language Model (MLM™), appointed senior technical leadership, and rebranded to Launc",
+              "authorityScore": 75
+            },
+            {
+              "title": "Launchpad Build AI Enters New Growth Phase with El Segundo HQ ...",
+              "organization": "finance.yahoo.com",
+              "url": "https://finance.yahoo.com/sectors/technology/articles/launchpad-build-ai-enters-growth-140000572.html",
+              "type": "Web research",
+              "supports": "Chris Pimentel, Mayor of El Segundo, said:  \n\"El Segundo's interdisciplinary hard tech community is truly unique, and Launchpad Build AI is exactly the kind of innovative, technology-driven company ou",
+              "authorityScore": 72
+            },
+            {
+              "title": "OpenAI Platform Documentation",
+              "organization": "OpenAI",
+              "url": "https://platform.openai.com/docs/",
+              "type": "Official documentation",
+              "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+              "authorityScore": 82
+            }
+          ],
+          "sourcesStatus": "Ready",
+          "sourceQualityScore": 82,
+          "sourceNotes": "5 live web sources found via Tavily. Selected 4 authoritative sources with average authority score 82.",
+          "duplicateStatus": "unique",
+          "duplicateScore": 6,
+          "duplicateMatch": {
+            "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+            "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+            "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+            "similarity": 0.06
+          },
+          "suggestedAngle": "",
+          "trendScore": 68,
+          "marketSentiment": "positive",
+          "publishReady": true,
+          "blockingIssues": "",
+          "related": [],
+          "internalLinks": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
+          "keyTakeaways": [
+            "Start with one measurable business workflow before scaling AI automation.",
+            "Use human approval for customer-facing or high-risk actions.",
+            "Judge success by response time, quality, and revenue impact, not content volume."
+          ],
+          "expertInsight": "The strongest AI automation systems combine narrow workflow design, clear ownership, model-assisted drafting, and human review before irreversible actions.",
+          "assetLinks": {},
+          "schemaType": "BlogPosting",
+          "mediaRecommendations": {
+            "featuredImage": true,
+            "infographic": false,
+            "slides": true,
+            "checklist": true,
+            "comparisonTable": true,
+            "workflowDiagram": true,
+            "downloadablePdf": false,
+            "notebookLmResearch": false,
+            "socialCarousel": true
+          },
+          "seoAuditScore": 64,
+          "seoAuditPassed": false,
+          "seoAuditTool": "local_seo_audit_bridge",
+          "assetBrief": "Create supporting assets for: How to Use Launchpad Build AI Offers MLM for Industrial Automation Design in a Practical Business Workflow\nRecommended assets: featuredImage, slides, checklist, comparisonTable, workflowDiagram, socialCarousel\nPersona: Hybrid\nBusiness function: Analytics\nAngle: tool_tutorial\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
+        },
+        "body": "## Expert Insight: Industrial Automation Design Gets Real with AI\n\nIndustrial automation design is entering a new phase—powered by AI. Launchpad Build AI's Manufacturing Language Model (MLM) is one of the first specialized models for industrial design tasks, enabling service businesses to reduce design time while maintaining quality through human-in-the-loop validation.\n\n## Key Takeaways\n\n- Launchpad Build AI's MLM accelerates industrial automation design with quality checks.\n- Start with a Slack or Teams intake workflow for design requests.\n- Route AI outputs through human approval steps and CRM follow-up.\n- Measure outcomes like design time, first-time accuracy, and resource savings.\n\n## Direct Answer\n\nUse Launchpad Build AI's Manufacturing Language Model to accelerate industrial automation design with human-in-the-loop validation for quality control.\n\n## What This Guide Covers\n\nThis guide walks through a practical workflow for service businesses using Launchpad Build AI's Manufacturing Language Model:\n\n1. **Slack or Teams Intake Workflow**: Capture design requests in Slack or Teams with a structured intake form.\n2. **AI Processing with Human Approval**: Route to Launchpad Build AI for design suggestions, with human review steps.\n3. **CRM Follow-Up Workflow**: Log AI outputs and human decisions in CRM for tracking.\n4. **Measuring Success**: Track design time, first-time accuracy, and manual hours saved.\n\n## Tools You'll Need\n\n- Launchpad Build AI MLM\n- Slack or Microsoft Teams for intake\n- CRM (e.g., HubSpot, Salesforce) for follow-up tracking\n- Google Sheets or Airtable for logging\n\n## Business Use Case: Industrial Automation Design\n\nA service business uses Launchpad Build AI's MLM to accelerate design tasks. The workflow includes:\n\n- **Step 1**: A Slack bot captures design requests with structured forms.\n- **Step 2**: AI generates design suggestions, routed through human approval steps.\n- **Step 3**: Approved outputs are logged in CRM for follow-up.\n- **Step 4**: KPIs like design time, accuracy, and manual hours saved are tracked.\n\n## Step-by-Step Workflow\n\n1. **Slack Intake**: Use Slack or Teams to capture design requests with a structured form.\n2. **AI Processing**: Route to Launchpad Build AI for design suggestions.\n3. **Human Approval**: Review AI outputs with quality checks and approval steps.\n4. **CRM Logging**: Log AI outputs and human decisions in CRM.\n5. **KPI Tracking**: Measure design time, accuracy, and resource savings.\n\n## Measuring Success: KPIs That Matter\n\n- **Design time saved** (target: 40% reduction)\n- **First-time accuracy** (target: >85%)\n- **Manual hours saved** (target: 30% reduction)\n- **Customer satisfaction** (target: >4.5/5)\n\n## Common Mistakes to Avoid\n\n- Skipping human approval steps\n- Not logging AI outputs in CRM\n- Failing to measure business outcomes\n- Ignoring fallback for API timeouts or low-confidence AI outputs\n\n## Implementation Checklist\n\n- [ ] Set up Slack or Teams intake form\n- [ ] Configure Launchpad Build AI MLM\n- [ ] Define human approval steps\n- [ ] Integrate with CRM for follow-up\n- [ ] Set up KPI tracking (design time, accuracy)\n\n## Troubleshooting and Failure Handling\n\n- **API Timeout**: Add a retry mechanism with human fallback.\n- **Low-Confidence AI Output**: Route to human review with escalation.\n- **Duplicate Tickets**: Use deduplication logic in CRM.\n- **Human Approval**: Require approval for all AI outputs before final use.\n\n## What to Do Next\n\nBook an automation consult to explore how Launchpad Build AI's MLM can accelerate your industrial automation design workflow with human-in-the-loop validation.\n\n[Book an automation consult](/#contact)",
+        "imagePrompt": "Launchpad Build AI industrial automation workflow diagram with AI and human steps",
+        "audioScript": "How to Use Launchpad Build AI Offers MLM for Industrial Automation Design in a Practical Business Workflow. A practical guide to applying Launchpad Build AI's Manufacturing Language Model for industrial automation design with real business outcomes."
+      },
+      "quality": {
+        "score": 88,
+        "strictPassed": true,
+        "passed": true,
+        "minQualityScore": 88,
+        "sourceGate": {
+          "required": true,
+          "passed": true,
+          "sourceCount": 6,
+          "minSources": 2,
+          "sourceQualityScore": 82,
+          "minSourceQualityScore": 75,
+          "status": "Ready",
+          "notes": "Source quality score 82."
+        },
+        "trendOverride": {
+          "enabled": true,
+          "applied": false,
+          "floor": 78,
+          "strictMinimum": 88,
+          "trendScore": 68,
+          "marketSentiment": "positive",
+          "marketSentimentScore": 72,
+          "serviceTopic": false,
+          "businessTrendEligible": false,
+          "autoNewsAllowed": false,
+          "reason": "No trend override: quality 88/88, trend 68/100, sentiment positive."
+        },
+        "publishMode": "standard_review",
+        "results": [
+          {
+            "name": "minimumWordCount",
+            "passed": false,
+            "points": 12
+          },
+          {
+            "name": "hasClearIntro",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasExamples",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasFaq",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasSources",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasImagePrompt",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasInternalLinks",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasSchemaData",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "noKeywordStuffing",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasBusinessValue",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasConclusion",
+            "passed": true,
+            "points": 8
+          }
+        ],
+        "authenticity": {
+          "score": 77,
+          "passed": true,
+          "minimum": 72,
+          "provider": "heuristic_nlp",
+          "modelResult": null,
+          "signals": {
+            "specificity": 100,
+            "businessRelevance": 100,
+            "sourceAlignment": 100,
+            "marketSentimentScore": 72,
+            "duplicateStatus": "unknown",
+            "duplicateScore": 0,
+            "fillerHits": 0,
+            "wordCount": 585
+          },
+          "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+          "blockingIssue": ""
+        },
+        "review": {
+          "helpfulContentRisk": "low",
+          "notes": [
+            "The article provides a detailed, practical workflow for implementing Launchpad Build AI's Manufacturing Language Model in industrial automation design.",
+            "Content is well-structured with clear steps, implementation checklists, and troubleshooting advice.",
+            "The article includes authoritative sources and avoids promotional language, focusing on educational value.",
+            "Some sections could benefit from more specific examples or case studies to strengthen practical application guidance.",
+            "The content aligns well with the informational search intent and provides actionable takeaways for the target audience."
+          ],
+          "recommendedFixes": [
+            "Add specific examples or screenshots of the workflow in action to enhance clarity and practical understanding.",
+            "Include a brief case study or real-world example of a business that has implemented this workflow successfully.",
+            "Clarify the distinction between 'human-in-the-loop validation' and general quality checks to avoid ambiguity.",
+            "Expand on the integration process with Slack/Teams and CRMs with specific setup instructions or best practices.",
+            "Add a summary section on 'what to do next' with more detailed steps for readers to connect with Launchpad Build AI or similar tools."
+          ]
+        }
+      },
+      "imageResult": {
+        "slug": "launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report",
+        "output": "/home/runner/work/dex-website/dex-website/public/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
+        "url": "/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
+        "alt": "Launchpad Build AI industrial automation workflow diagram with AI and human steps",
+        "provider": "fallback_png_after_provider_error",
+        "prompt": "Launchpad Build AI industrial automation workflow diagram with AI and human steps",
+        "dryRun": false,
+        "manualApproval": true,
+        "autoPublish": false,
+        "force": false,
+        "failed": true,
+        "path": "/home/runner/work/dex-website/dex-website/public/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
+        "error": "Stable Diffusion API failed: 404 404 page not found\n",
+        "preservedExisting": true
+      },
+      "approvalRequired": true,
+      "blockingIssues": [
+        "SEO audit must pass before publishing.",
+        "Real image provider is required before publishing."
+      ],
+      "dryRun": false,
+      "manualApproval": true,
+      "autoPublish": false,
+      "force": false
+    }
+  }
 }
