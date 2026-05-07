@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 72,
+    "trendScore": 62,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 77,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,11 +94,11 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 72,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 585
+      "wordCount": 576
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,18 +106,20 @@
   "review": {
     "helpfulContentRisk": "low",
     "notes": [
-      "The article provides a detailed, practical workflow for implementing Launchpad Build AI's Manufacturing Language Model in industrial automation design.",
-      "Content is well-structured with clear steps, implementation checklists, and troubleshooting advice.",
-      "The article includes authoritative sources and avoids promotional language, focusing on educational value.",
-      "Some sections could benefit from more specific examples or case studies to strengthen practical application guidance.",
-      "The content aligns well with the informational search intent and provides actionable takeaways for the target audience."
+      "The article provides practical, actionable guidance on implementing AI agents with memory for logistics workflows.",
+      "Content is well-researched with multiple authoritative sources cited.",
+      "The tone and style align with the target persona of a business automation expert.",
+      "Article includes a clear use case (Slack intake workflow) with measurable business outcomes.",
+      "Addresses common mistakes and includes implementation checklist which adds practical value.",
+      "SEO elements like title, meta description and slug are well-optimized for the target keyword.",
+      "The article avoids generic advice and focuses on specific, real-world application."
     ],
     "recommendedFixes": [
-      "Add specific examples or screenshots of the workflow in action to enhance clarity and practical understanding.",
-      "Include a brief case study or real-world example of a business that has implemented this workflow successfully.",
-      "Clarify the distinction between 'human-in-the-loop validation' and general quality checks to avoid ambiguity.",
-      "Expand on the integration process with Slack/Teams and CRMs with specific setup instructions or best practices.",
-      "Add a summary section on 'what to do next' with more detailed steps for readers to connect with Launchpad Build AI or similar tools."
+      "Consider adding a brief conclusion section to summarize key points and reinforce the value proposition.",
+      "Include a visual diagram of the workflow to enhance understanding and appeal to readers who prefer visual learning.",
+      "Add a section on 'Measuring Success' to help readers understand how to track and evaluate the impact of their AI implementation over time.",
+      "Consider adding a short case study or testimonial to further validate the approach in practice.",
+      "Include a callout box or sidebar with a quick summary of the tools needed and their roles in the workflow for quick reference."
     ]
   }
 }
