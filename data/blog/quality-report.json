@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 62,
   "strictPassed": false,
   "passed": false,
   "minQualityScore": 88,
@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 69,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 62/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "rewrite_required",
   "results": [
@@ -35,7 +35,7 @@
     },
     {
       "name": "hasClearIntro",
-      "passed": true,
+      "passed": false,
       "points": 8
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "name": "noKeywordStuffing",
-      "passed": true,
+      "passed": false,
       "points": 10
     },
     {
@@ -80,44 +80,46 @@
     },
     {
       "name": "hasConclusion",
-      "passed": true,
+      "passed": false,
       "points": 8
     }
   ],
   "authenticity": {
-    "score": 50,
+    "score": 49,
     "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 96,
-      "businessRelevance": 51,
+      "specificity": 67,
+      "businessRelevance": 44,
       "sourceAlignment": 100,
-      "marketSentimentScore": 69,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 644
+      "wordCount": 60
     },
     "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
     "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "medium",
+    "helpfulContentRisk": "MEDIUM",
     "notes": [
-      "The article provides a practical guide to implementing AI automation workflows, which aligns with the frontmatter's intent. The content appears to be unique and offers value by explaining how to use a specific tool (Launchpad Build AI's MLM) for industrial automation design.",
-      "However, the article has SEO issues: the meta description is truncated, and the content lacks keyword optimization for search terms.",
-      "Some sections are repetitive and could be more concise - for example, the 'What to do next' section repeats 'monitor for quality and safety' multiple times",
-      "The sources are cited with high authority scores, which supports credibility",
-      "The article could be improved by adding more specific examples and reducing repetition"
+      "The article content is currently just a placeholder and does not contain actual implementation guidance as promised in the title.",
+      "Meta descriptions and title tags are keyword-stuffed and could trigger SEO penalties from search engines.",
+      "The content lacks the depth and practical examples that match the 'practical guide' promise in the title.",
+      "No actual workflow steps or technical implementation details are provided in the body.",
+      "Sources are mostly self-referential from logisticsviewpoints.com, which may indicate thin or circular linking issues from an SEO perspective."
     ],
     "recommendedFixes": [
-      "Shorten the meta description to under 160 characters for better SEO",
-      "Deduplicate content in the 'What to do next' section to focus on key outcomes",
-      "Add internal and/or outbound links to boost domain authority and provide social proof",
-      "Improve keyword targeting by incorporating related industry terms like 'manufacturing design automation' and 'industrial AI' for better search visibility",
-      "Include a case study or example to increase the article's value and practical applicability"
+      "Replace placeholder content with actual step-by-step implementation guide matching the 'practical guide' description",
+      "Rewrite meta title and description to be more natural and less keyword-stuffed",
+      "Add specific examples of implementing memory-enabled AI workflows",
+      "Include actual code snippets or configuration examples for the mentioned tools (Slack, CRM)",
+      "Add screenshots or diagrams showing the actual workflow implementation",
+      "Clarify value statements with specific metrics (e.g., '20% reduction in planning time' rather than generic 'improvement')",
+      "Diversify sources to include at least 2-3 external references to passivity and thin content checks"
     ]
   }
 }
