@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "trendScore": 68,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment positive."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 72,
+    "score": 91,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,11 +94,11 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 618
+      "wordCount": 795
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,22 +106,22 @@
   "review": {
     "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides practical, actionable guidance for implementing AI memory systems in logistics workflows, which aligns well with the informational search intent and target audience of business operators.",
-      "Content includes specific tools (Slack, Notion, CRM, Zapier/Make) and measurable outcomes (60% faster response time, 35% better resolution) which adds credibility and practical value.",
-      "The article demonstrates good structure with clear steps, implementation checklist, and troubleshooting section, making it useful for the target audience.",
-      "However, the article could benefit from more detailed implementation examples and use cases beyond the single logistics company example to better support the broader 'business automation' category.",
-      "SEO elements are underdeveloped - title has 'logistics' focus but content covers general AI memory concepts that could apply to any business. More specific logistics industry examples would strengthen the content.",
-      "The article would benefit from more specific data points and KPIs from the implementation to demonstrate ROI.",
-      "Some content overlaps with generic workflow automation guides, which could trigger duplicate content risks despite being topically relevant."
+      "The article provides a detailed, practical guide on using Launchpad Build AI's MLM in industrial automation design workflows, which aligns well with the informational search intent and target reader profile.",
+      "It includes structured implementation steps, a real-world case study, and clear KPIs to measure success, enhancing its value for the target audience.",
+      "The content references authoritative sources like The Robot Report and PR Newswire, supporting claims with credible external data.",
+      "Potential risks include over-reliance on AI without sufficient human review, especially if confidence scores are ignored or approval steps are skipped.",
+      "Some technical implementation details (e.g., Zapier/Make.com setup) could benefit from visual aids or links to tutorials for better clarity.",
+      "The article assumes some familiarity with tools like Slack, CRM systems, and CAD software, which may not be universal among all readers.",
+      "While the article mentions troubleshooting, it lacks depth in handling model inaccuracies or edge cases beyond initial prompts."
     ],
     "recommendedFixes": [
-      "Add 2-3 specific logistics industry examples beyond the generic support triage use case to demonstrate domain expertise",
-      "Include specific metrics dashboards or implementation examples showing 'time saved' or 'improved efficiency' in logistics operations",
-      "Add related logistics-specific KPIs (e.g., on-time delivery impact, inventory turnover improvements) to strengthen the logistics viewpoint angle",
-      "Enhance SEO by adding related logistics AI case studies or implementation examples with measurable outcomes",
-      "Add specific examples of implementation results (e.g., 'reduced first response time by 60%' should include specific time period, volume handled, and business impact metrics)",
-      "Include a detailed workflow diagram showing the AI memory implementation in the logistics use case",
-      "Add specific KPIs for logistics operations (e.g., shipment delays, on-time delivery rates) to measure the business impact"
+      "Add a workflow diagram or infographic to visually represent the AI-assisted design process for easier understanding.",
+      "Include a downloadable checklist or PDF summarizing the implementation steps and common mistakes to avoid.",
+      "Provide more context or beginner-friendly explanations for non-technical readers regarding tools like Zapier, Make.com, and CAD integration.",
+      "Expand the troubleshooting section with specific examples of how to re-prompt or refine inputs when the model produces low-confidence outputs.",
+      "Consider adding a comparison table showing before-and-after metrics from the case study to highlight business impact more clearly.",
+      "Embed or link to short video tutorials or screen recordings demonstrating key steps like setting up the CRM form or triggering the MLM API.",
+      "Clarify the limitations of the MLM and emphasize that it is an assistant tool, not a full replacement for human expertise."
     ]
   }
 }
