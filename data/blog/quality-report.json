@@ -1,7 +1,7 @@
 {
-  "score": 100,
-  "strictPassed": true,
-  "passed": true,
+  "score": 62,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -24,18 +24,18 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 62/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
       "name": "hasClearIntro",
-      "passed": true,
+      "passed": false,
       "points": 8
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "name": "noKeywordStuffing",
-      "passed": true,
+      "passed": false,
       "points": 10
     },
     {
@@ -80,44 +80,31 @@
     },
     {
       "name": "hasConclusion",
-      "passed": true,
+      "passed": false,
       "points": 8
     }
   ],
   "authenticity": {
-    "score": 84,
-    "passed": true,
+    "score": 49,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 97,
-      "businessRelevance": 79,
+      "specificity": 67,
+      "businessRelevance": 44,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 739
+      "wordCount": 67
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "low",
-    "notes": [
-      "The article provides a clear, structured approach to implementing AI planning with memory",
-      "Content is well-researched and includes practical workflows and examples",
-      "Strong emphasis on business outcomes and measurable results",
-      "Good use of internal linking and source citations",
-      "Content is written from a clear expert perspective (Business Automation Expert)"
-    ],
-    "recommendedFixes": [
-      "Add more specific examples of prompt structures for better implementation guidance",
-      "Include more detailed troubleshooting scenarios for common edge cases",
-      "Consider adding a section on monitoring and maintaining memory systems over time",
-      "Could benefit from more detailed tool-specific integration examples",
-      "Add cost-estimates or ROI calculations to strengthen the business case"
-    ]
+    "skipped": true,
+    "reason": "Unexpected token ',', ...\"entation.\",\n  \"The a\"... is not valid JSON"
   }
 }
