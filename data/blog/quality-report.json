@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 72,
+    "trendScore": 62,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 91,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,34 +94,35 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 72,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 795
+      "wordCount": 629
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a detailed, practical guide on using Launchpad Build AI's MLM in industrial automation design workflows, which aligns well with the informational search intent and target reader profile.",
-      "It includes structured implementation steps, a real-world case study, and clear KPIs to measure success, enhancing its value for the target audience.",
-      "The content references authoritative sources like The Robot Report and PR Newswire, supporting claims with credible external data.",
-      "Potential risks include over-reliance on AI without sufficient human review, especially if confidence scores are ignored or approval steps are skipped.",
-      "Some technical implementation details (e.g., Zapier/Make.com setup) could benefit from visual aids or links to tutorials for better clarity.",
-      "The article assumes some familiarity with tools like Slack, CRM systems, and CAD software, which may not be universal among all readers.",
-      "While the article mentions troubleshooting, it lacks depth in handling model inaccuracies or edge cases beyond initial prompts."
+      "The article provides a clear, practical guide to implementing memory-driven AI in logistics planning workflows.",
+      "Content is well-structured with defined use cases, tools, implementation steps, and measurable outcomes.",
+      "Includes expert insights, common mistakes, troubleshooting tips, and an implementation checklist.",
+      "Uses specific examples (Slack-based workflow) and quantifiable results (35% reduction in missed deliveries).",
+      "Incorporates SEO best practices with relevant keywords and meta descriptions.",
+      "Provides internal linking opportunities and references authoritative sources.",
+      "Content aligns well with target audience (founders, operators, marketers) and their business problems."
     ],
     "recommendedFixes": [
-      "Add a workflow diagram or infographic to visually represent the AI-assisted design process for easier understanding.",
-      "Include a downloadable checklist or PDF summarizing the implementation steps and common mistakes to avoid.",
-      "Provide more context or beginner-friendly explanations for non-technical readers regarding tools like Zapier, Make.com, and CAD integration.",
-      "Expand the troubleshooting section with specific examples of how to re-prompt or refine inputs when the model produces low-confidence outputs.",
-      "Consider adding a comparison table showing before-and-after metrics from the case study to highlight business impact more clearly.",
-      "Embed or link to short video tutorials or screen recordings demonstrating key steps like setting up the CRM form or triggering the MLM API.",
-      "Clarify the limitations of the MLM and emphasize that it is an assistant tool, not a full replacement for human expertise."
+      "Add a workflow diagram as suggested in mediaRecommendations to improve visual understanding",
+      "Include an infographic summarizing the key benefits and implementation steps",
+      "Create a downloadable checklist asset for readers to follow during implementation",
+      "Add alt text to the featured image for better accessibility and SEO",
+      "Consider adding a comparison table showing traditional automation vs memory-driven AI benefits",
+      "Include more specific technical implementation details for the AI agent configuration",
+      "Add a section on cost-benefit analysis or ROI calculation framework",
+      "Include a brief mention of potential integration challenges with existing ERP/CRM systems"
     ]
   }
 }
