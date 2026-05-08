@@ -37,21 +37,12 @@
   ],
   "sources": [
     {
-      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
-      "type": "Web research",
-      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
       "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
       "publishedDate": ""
     },
     {
@@ -59,8 +50,8 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
-      "authorityScore": 95,
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
       "publishedDate": ""
     },
     {
@@ -69,35 +60,44 @@
       "url": "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
       "type": "Web research",
       "supports": "Track ROI — Use data to evaluate performance, customer satisfaction, and cost savings.\n\nCompanies that delay AI adoption risk losing out to faster, leaner competitors already leveraging the power of a",
+      "authorityScore": 66,
+      "publishedDate": ""
+    },
+    {
+      "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
+      "organization": "tryenvoy.ai",
+      "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+      "type": "Web research",
+      "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "From Automation to Agency: A New Era of Supply Chain Intelligence - How Agentic AI is Redefining Value in Manufacturing Supply Chains - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
-      "authorityScore": 64,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "The Coming Memory Crunch: Preparing for AI-Driven Demand",
-      "organization": "randtech.com",
-      "url": "https://randtech.com/memory-crunch-ai-demand-supply-chain-preparation/",
+      "title": "Enterprise AI Automation Guide: GenAI, AI Agents & Workflows",
+      "organization": "ciklum.com",
+      "url": "https://www.ciklum.com/enterprise-ai-automation-guide/",
       "type": "Web research",
-      "supports": "With:\n\n internal quality labs\n global logistics hubs\n AS6081, AS9120, ISO 9001 certifications\n dedicated commodity experts\n cross-industry visibility\n\nThis approach enables confidence in availability,",
-      "authorityScore": 51,
+      "supports": "Enterprise AI automation combines artificial intelligence, including LLMs and machine learning, with traditional execution tools to manage end-to-end business processes. Unlike traditional automation,",
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ],
   "sourcesToCite": [
-    "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
     "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
-    "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
-    "https://randtech.com/memory-crunch-ai-demand-supply-chain-preparation/"
+    "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+    "https://innovecs.com/blog/ai-supply-chain-planning/",
+    "https://www.ciklum.com/enterprise-ai-automation-guide/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
@@ -120,7 +120,7 @@
       "automation"
     ],
     "trendOverrideEligible": false,
-    "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
+    "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sent notiment: neutral.",
     "realtimeSignals": [
       {
         "source": "Google News",
@@ -148,11 +148,11 @@
       },
       {
         "source": "Google News",
-        "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
+        "title": "CVG, Lufthansa, ADR, FRA and DataArt discuss agentic AI - Future Travel Experience"
       },
       {
         "source": "Google News",
-        "title": "CVG, Lufthansa, ADR, FRA and DataArt discuss agentic AI - Future Travel Experience"
+        "title": "A Developer’s Guide to Building Scalable AI: Workflows vs Agents - Towards Data Science"
       }
     ],
     "realtimeSources": [
@@ -181,21 +181,12 @@
   "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
   "webResearchSources": [
     {
-      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
-      "type": "Web research",
-      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
       "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
       "publishedDate": ""
     },
     {
@@ -203,8 +194,8 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
-      "authorityScore": 95,
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
       "publishedDate": ""
     },
     {
@@ -213,25 +204,34 @@
       "url": "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
       "type": "Web research",
       "supports": "Track ROI — Use data to evaluate performance, customer satisfaction, and cost savings.\n\nCompanies that delay AI adoption risk losing out to faster, leaner competitors already leveraging the power of a",
+      "authorityScore": 66,
+      "publishedDate": ""
+    },
+    {
+      "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
+      "organization": "tryenvoy.ai",
+      "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+      "type": "Web research",
+      "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "From Automation to Agency: A New Era of Supply Chain Intelligence - How Agentic AI is Redefining Value in Manufacturing Supply Chains - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
-      "authorityScore": 64,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "The Coming Memory Crunch: Preparing for AI-Driven Demand",
-      "organization": "randtech.com",
-      "url": "https://randtech.com/memory-crunch-ai-demand-supply-chain-preparation/",
+      "title": "Enterprise AI Automation Guide: GenAI, AI Agents & Workflows",
+      "organization": "ciklum.com",
+      "url": "https://www.ciklum.com/enterprise-ai-automation-guide/",
       "type": "Web research",
-      "supports": "With:\n\n internal quality labs\n global logistics hubs\n AS6081, AS9120, ISO 9001 certifications\n dedicated commodity experts\n cross-industry visibility\n\nThis approach enables confidence in availability,",
-      "authorityScore": 51,
+      "supports": "Enterprise AI automation combines artificial intelligence, including LLMs and machine learning, with traditional execution tools to manage end-to-end business processes. Unlike traditional automation,",
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ]
