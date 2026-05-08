@@ -85,34 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 74,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 678
+      "wordCount": 603
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 6,
-    "notes": "The article provides practical value with clear implementation steps, but has some gaps in structured data presentation and keyword optimization that could reduce its search visibility and user engagement.",
+    "helpfulContentRisk": "low",
+    "notes": [
+      "The article provides a clear, practical framework for implementing AI automation with memory for logistics use cases.",
+      "Content is highly relevant to the target keyword and search intent (informational) with a strong focus on business workflows.",
+      "The article includes structured elements like key takeaways, step-by-step workflows, checklists, and expert insights which improve its utility.",
+      "Content is well-structured for technical readers and aligns with Google's helpful content guidelines by being specific, in-depth, and actionable.",
+      "Minor concerns: The title and some headings are quite long and could be slightly optimized for readability and keyword emphasis. The article could also benefit from visual assets (e.g., workflow diagram, checklist) to improve engagement and comprehension."
+    ],
     "recommendedFixes": [
-      "Add structured data/FAQ sections to address common implementation questions",
-      "Include explicit internal linking to related content",
-      "Optimize for semantic keywords like 'AI memory', 'logistics automation', and 'workflow optimization'",
-      "Add a comprehensive tools list with brief descriptions of how each tool integrates",
-      "Include actual workflow screenshots or diagrams to improve practical utility",
-      "Add a summary table comparing different AI tools for logistics automation"
+      "Shorten the title to improve clarity and focus on the core keyword: 'Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints' → 'Planning AI with Memory for Logistics Automation'.",
+      "Add visual assets like an infographic or workflow diagram to break up text and improve engagement (as suggested in mediaRecommendations).",
+      "Ensure internal linking to related articles or resources to improve topical authority and user experience.",
+      "Consider adding a brief conclusion summarizing the main points and reinforcing the value of memory-enabled AI workflows.",
+      "Implement the implementation checklist as a downloadable asset for readers."
     ]
   }
 }
