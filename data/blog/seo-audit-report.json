@@ -1,5 +1,5 @@
 {
-  "score": 54,
+  "score": 56,
   "minScore": 82,
   "passed": false,
   "checks": [
@@ -20,12 +20,12 @@
     },
     {
       "name": "singleH1HandledByTemplate",
-      "passed": true,
+      "passed": false,
       "points": 8
     },
     {
       "name": "semanticHeadings",
-      "passed": false,
+      "passed": true,
       "points": 10
     },
     {

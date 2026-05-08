@@ -1,5 +1,5 @@
 {
-  "score": 62,
+  "score": 88,
   "strictPassed": false,
   "passed": false,
   "minQualityScore": 88,
@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 69,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 62/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "rewrite_required",
   "results": [
@@ -35,7 +35,7 @@
     },
     {
       "name": "hasClearIntro",
-      "passed": false,
+      "passed": true,
       "points": 8
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "name": "noKeywordStuffing",
-      "passed": false,
+      "passed": true,
       "points": 10
     },
     {
@@ -80,31 +80,44 @@
     },
     {
       "name": "hasConclusion",
-      "passed": false,
+      "passed": true,
       "points": 8
     }
   ],
   "authenticity": {
-    "score": 49,
+    "score": 50,
     "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 67,
-      "businessRelevance": 44,
+      "specificity": 96,
+      "businessRelevance": 51,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 69,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 67
+      "wordCount": 644
     },
     "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
     "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "skipped": true,
-    "reason": "Unexpected token ',', ...\"entation.\",\n  \"The a\"... is not valid JSON"
+    "helpfulContentRisk": "medium",
+    "notes": [
+      "The article provides a practical guide to implementing AI automation workflows, which aligns with the frontmatter's intent. The content appears to be unique and offers value by explaining how to use a specific tool (Launchpad Build AI's MLM) for industrial automation design.",
+      "However, the article has SEO issues: the meta description is truncated, and the content lacks keyword optimization for search terms.",
+      "Some sections are repetitive and could be more concise - for example, the 'What to do next' section repeats 'monitor for quality and safety' multiple times",
+      "The sources are cited with high authority scores, which supports credibility",
+      "The article could be improved by adding more specific examples and reducing repetition"
+    ],
+    "recommendedFixes": [
+      "Shorten the meta description to under 160 characters for better SEO",
+      "Deduplicate content in the 'What to do next' section to focus on key outcomes",
+      "Add internal and/or outbound links to boost domain authority and provide social proof",
+      "Improve keyword targeting by incorporating related industry terms like 'manufacturing design automation' and 'industrial AI' for better search visibility",
+      "Include a case study or example to increase the article's value and practical applicability"
+    ]
   }
 }
