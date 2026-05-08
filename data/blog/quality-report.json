@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 72,
+    "trendScore": 62,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,43 +85,34 @@
     }
   ],
   "authenticity": {
-    "score": 73,
+    "score": 74,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 79,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
-      "marketSentimentScore": 72,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 666
+      "wordCount": 678
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
     "helpfulContentRisk": 6,
-    "notes": [
-      "The article provides a practical guide to implementing Launchpad Build AI's Manufacturing Language Model in industrial automation workflows, which is a valuable and relevant topic.",
-      "Content is well-structured with clear sections covering tools needed, workflow steps, KPIs, common mistakes, and troubleshooting.",
-      "The article includes specific implementation details, checklists, and practical advice for using the MLM in real-world scenarios.",
-      "It references authoritative sources and includes use cases with measurable business outcomes.",
-      "Some sections could benefit from more detailed explanations or examples to improve clarity and reduce ambiguity for readers.",
-      "The article could enhance credibility by including more specific data or case studies showing the actual results of using the MLM.",
-      "There's a potential risk of being seen as too promotional without sufficient evidence or varied external sources."
-    ],
+    "notes": "The article provides practical value with clear implementation steps, but has some gaps in structured data presentation and keyword optimization that could reduce its search visibility and user engagement.",
     "recommendedFixes": [
-      "Add specific examples or case studies demonstrating measurable outcomes from using Launchpad Build AI's MLM.",
-      "Include more detailed explanations of how the MLM integrates with each tool mentioned (Slack, CRM, etc.) for better practical guidance.",
-      "Clarify any technical jargon or assumptions about the reader's prior knowledge of industrial automation design.",
-      "Add visual aids like workflow diagrams or screenshots to illustrate key steps in the automation process.",
-      "Incorporate more varied external sources or quotes from industry professionals to support claims about the MLM's effectiveness.",
-      "Consider adding a section on potential challenges or limitations of using the MLM in different industrial environments.",
-      "Provide more context on how the KPIs are measured and why they matter for business outcomes."
+      "Add structured data/FAQ sections to address common implementation questions",
+      "Include explicit internal linking to related content",
+      "Optimize for semantic keywords like 'AI memory', 'logistics automation', and 'workflow optimization'",
+      "Add a comprehensive tools list with brief descriptions of how each tool integrates",
+      "Include actual workflow screenshots or diagrams to improve practical utility",
+      "Add a summary table comparing different AI tools for logistics automation"
     ]
   }
 }
