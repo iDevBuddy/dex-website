@@ -55,15 +55,6 @@
       "publishedDate": ""
     },
     {
-      "title": "Launchpad Build AI Archives - The Robot Report",
-      "organization": "therobotreport.com",
-      "url": "https://www.therobotreport.com/tag/launchpad-build-ai/",
-      "type": "Web research",
-      "supports": "The Robot Report\n\n# Launchpad Build AI\n\nBy Eugene Demaitre | April 30, 2026\n\n## Launchpad Build AI offers MLM to speed industrial automation design\n\nLaunchpad Build AI has launched a Manufacturing Lan",
-      "authorityScore": 83,
-      "publishedDate": ""
-    },
-    {
       "title": "Launchpad Build AI Enters New Growth Phase with El Segundo HQ, Senior Hires and World-First Manufacturing Language Model",
       "organization": "prnewswire.com",
       "url": "https://www.prnewswire.com/news-releases/launchpad-build-ai-enters-new-growth-phase-with-el-segundo-hq-senior-hires-and-world-first-manufacturing-language-model-302758313.html",
@@ -77,38 +68,40 @@
       "organization": "finance.yahoo.com",
       "url": "https://finance.yahoo.com/sectors/technology/articles/launchpad-build-ai-enters-growth-140000572.html",
       "type": "Web research",
-      "supports": "Chris Pimentel, Mayor of El Segundo, said:  \n\"El Segundo's interdisciplinary hard tech community is truly unique, and Launchpad Build AI is exactly the kind of innovative, technology-driven company ou",
-      "authorityScore": 71,
+      "supports": "Product Launch: Manufacturing Language Model (MLM™)Launchpad Build AI has launched the world's first Manufacturing Language Model (MLM™), purpose-built for industrial automation design.\n\nThe MLM™ demo",
+      "authorityScore": 75,
       "publishedDate": ""
     },
     {
-      "title": "OpenAI Platform Documentation",
-      "organization": "OpenAI",
-      "url": "https://platform.openai.com/docs/",
-      "type": "Official documentation",
-      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
-      "tags": [
-        "ai",
-        "llm",
-        "agents",
-        "automation",
-        "workflow",
-        "prompt"
-      ],
-      "authorityScore": 82
+      "title": "Launchpad Build AI Unveils Model to Democratize Factory Automation",
+      "organization": "briefglance.com",
+      "url": "https://briefglance.com/articles/launchpad-build-ai-unveils-model-to-democratize-factory-automation",
+      "type": "Web research",
+      "supports": "EL SEGUNDO, CA – April 30, 2026 – In a significant move signaling a new era of industrial innovation, AI robotics firm Launchpad Build AI today announced a major strategic expansion. The company is es",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Launchpad Build AI Archives - The Robot Report",
+      "organization": "therobotreport.com",
+      "url": "https://www.therobotreport.com/tag/launchpad-build-ai/",
+      "type": "Web research",
+      "supports": "The Robot Report\n\n# Launchpad Build AI\n\nBy Eugene Demaitre | April 30, 2026\n\n## Launchpad Build AI offers MLM to speed industrial automation design\n\nLaunchpad Build AI has launched a Manufacturing Lan",
+      "authorityScore": 95,
+      "publishedDate": ""
     }
   ],
   "sourcesToCite": [
     "https://www.therobotreport.com/launchpad-build-ai-offers-manufacturing-language-model-industrial-automation/",
     "https://news.robot.tv/launchpad-build-ai-offers-mlm-for-industrial-automation-design/",
-    "https://www.therobotreport.com/tag/launchpad-build-ai/",
     "https://www.prnewswire.com/news-releases/launchpad-build-ai-enters-new-growth-phase-with-el-segundo-hq-senior-hires-and-world-first-manufacturing-language-model-302758313.html",
     "https://finance.yahoo.com/sectors/technology/articles/launchpad-build-ai-enters-growth-140000572.html",
-    "https://platform.openai.com/docs/"
+    "https://briefglance.com/articles/launchpad-build-ai-unveils-model-to-democratize-factory-automation",
+    "https://www.therobotreport.com/tag/launchpad-build-ai/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 82,
-  "sourceNotes": "5 live web sources found via Tavily. Selected 4 authoritative sources with average authority score 82.",
+  "sourceNotes": "6 live web sources found via Tavily. Selected 4 authoritative sources with average authority score 82.",
   "duplicateStatus": "unique",
   "duplicateScore": 6,
   "duplicateMatch": {
@@ -121,13 +114,13 @@
   "suggestedTopic": "",
   "trendAnalysis": {
     "trendScore": 68,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 69,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "matchedTrendTerms": [
       "automation"
     ],
     "trendOverrideEligible": false,
-    "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
+    "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: positive.",
     "realtimeSignals": [
       {
         "source": "Google News",
@@ -139,6 +132,10 @@
       },
       {
         "source": "Google News",
+        "title": "Reliable Robotics raises funding for fully automated aircraft - The Robot Report"
+      },
+      {
+        "source": "Google News",
         "title": "Gecko Robotics expands work with U.S. Navy - The Robot Report"
       },
       {
@@ -147,7 +144,7 @@
       },
       {
         "source": "Google News",
-        "title": "Boston Dynamics partners with Analog to deploy robots in the UAE - The Robot Report"
+        "title": "Boston Dynamics partners with Analog to deploy robots in the UAE"
       },
       {
         "source": "Google News",
@@ -156,10 +153,6 @@
       {
         "source": "Google News",
         "title": "Universal Logic Announces New Neocortex DIY Software - The Robot Report"
-      },
-      {
-        "source": "Google News",
-        "title": "Vention launches turnkey sanding robot for wood workers - The Robot Report"
       }
     ],
     "realtimeSources": [
@@ -175,8 +168,7 @@
     "support triage workflow"
   ],
   "suggestedInternalLinks": [
-    "/blog/ai-authority-blog-engine",
-    "/#services",
+    "/blog/ai-authority-blog-engine/#services",
     "/#contact"
   ],
   "suggestedCTA": "Book an automation consult",
@@ -193,7 +185,7 @@
       "organization": "therobotreport.com",
       "url": "https://www.therobotreport.com/launchpad-build-ai-offers-manufacturing-language-model-industrial-automation/",
       "type": "Web research",
-      "supports": "Yannis Georgas has joined as head of MLM, responsible for the development and deployment of Launchpad’s Manufacturing Language Model. Previously at Capgemini Invent, he led industrial data and AI init",
+      "supports": "Yannis Georgas has joined as head of MLM, responsible for the development and deployment of Launchpad’s Manufacturing Language Model. Previously at Capgemini Invent, he led industrial data and AI initiatives.",
       "authorityScore": 86,
       "publishedDate": ""
     },
@@ -202,17 +194,8 @@
       "organization": "news.robot.tv",
       "url": "https://news.robot.tv/launchpad-build-ai-offers-mlm-for-industrial-automation-design/",
       "type": "Web research",
-      "supports": "robot.tv\n\nSource-backed robotics briefing\n\n# Launchpad Build AI offers MLM for industrial automation design\n\nApr 30, 2026\n\nLaunchpad Build AI has launched a Manufacturing Language Model (MLM) that use",
+      "supports": "robot.tv\n\nSource-backed robotics briefing\n\n# Launchpad Build AI offers MLM for industrial automation design\n\nApr 30, 2026\n\nLaunchpad Build AI has launched a Manufacturing Language Model (MLM) that uses",
       "authorityScore": 86,
-      "publishedDate": ""
-    },
-    {
-      "title": "Launchpad Build AI Archives - The Robot Report",
-      "organization": "therobotreport.com",
-      "url": "https://www.therobotreport.com/tag/launchpad-build-ai/",
-      "type": "Web research",
-      "supports": "The Robot Report\n\n# Launchpad Build AI\n\nBy Eugene Demaitre | April 30, 2026\n\n## Launchpad Build AI offers MLM to speed industrial automation design\n\nLaunchpad Build AI has launched a Manufacturing Lan",
-      "authorityScore": 83,
       "publishedDate": ""
     },
     {
@@ -220,7 +203,7 @@
       "organization": "prnewswire.com",
       "url": "https://www.prnewswire.com/news-releases/launchpad-build-ai-enters-new-growth-phase-with-el-segundo-hq-senior-hires-and-world-first-manufacturing-language-model-302758313.html",
       "type": "Web research",
-      "supports": "The company has established its US headquarters in El Segundo, California, launched the world's first Manufacturing Language Model (MLM™), appointed senior technical leadership, and rebranded to Launc",
+      "supports": "The company has established its US headquarters in El Segundo, California, launched the world's first Manufacturing Language Model (MLM™), purpose-built for industrial automation design.\n\nThe MLM™ demo",
       "authorityScore": 75,
       "publishedDate": ""
     },
@@ -229,8 +212,26 @@
       "organization": "finance.yahoo.com",
       "url": "https://finance.yahoo.com/sectors/technology/articles/launchpad-build-ai-enters-growth-140000572.html",
       "type": "Web research",
-      "supports": "Chris Pimentel, Mayor of El Segundo, said:  \n\"El Segundo's interdisciplinary hard tech community is truly unique, and Launchpad Build AI is exactly the kind of innovative, technology-driven company ou",
-      "authorityScore": 71,
+      "supports": "Product Launch: Manufacturing Language Model (MLM™)Launchpad Build AI has launched the world's first Manufacturing Language Model (MLM™), purpose-built for industrial automation design.\n\nThe MLM™ demo",
+      "authorityScore": 75,
+      "publishedDate": ""
+    },
+    {
+      "title": "Launchpad Build AI Unveils Model to Democratize Factory Automation",
+      "organization": "briefglance.com",
+      "url": "https://briefglance.com/articles/launchepad-build-ai-unveils-model-to-democratize-factory-automation",
+      "type": "Web research",
+      "supports": "EL SEGUNDO, CA – April 30, 2026 – In a significant move signaling a new era of industrial innovation, AI robotics firm Launchpad Build AI today announced a major strategic expansion. The company is establishing its US headquarters in El Segundo, California, launching the world's first Manufacturing Language Model (MLM™), appointing senior technical leadership, and rebranding to Launchpad Build AI.\n\nThe MLM™ demo",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Launchpad Build AI Archives - The Robot Report",
+      "organization": "therobotreport.com",
+      "url": "https://www.therobotreport.com/tag/launchpad-build-ai/",
+      "type": "Web research",
+      "supports": "The Robot Report\n\n# Launchpad Build AI\n\nBy Eugene Demaitre | April 30, 2026\n\n## Launchpad Build AI offers MLM to speed industrial automation design\n\nLaunchpad Build AI has launched a Manufacturing Language Model (MLM) that uses",
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ]

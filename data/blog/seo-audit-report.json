@@ -1,16 +1,16 @@
 {
-  "score": 78,
+  "score": 64,
   "minScore": 82,
   "passed": false,
   "checks": [
     {
       "name": "metaTitleLength",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
       "name": "metaDescriptionLength",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -25,7 +25,7 @@
     },
     {
       "name": "semanticHeadings",
-      "passed": false,
+      "passed": true,
       "points": 10
     },
     {
