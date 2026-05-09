@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -20,17 +20,17 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 75,
+    "score": 92,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,17 +94,30 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 568
+      "wordCount": 942
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 429 {\"status\":429,\"title\":\"Too Many Requests\"}"
+    "helpfulContentRisk": "Medium",
+    "notes": [
+      "The article provides a detailed, practical guide to building memory-aware AI workflows.",
+      "Content is structured around real implementation advice with technical workflows and business impact guidance.",
+      "The use of specific, authoritative, and recent logistics viewpoints adds credibility.",
+      "The article includes clear steps, business context, and avoids generic AI hype.",
+      "Potential risk: some sections may come across as too technical for non-technical readers, but the overall content is well-researched and aligned with practical outcomes."
+    ],
+    "recommendedFixes": [
+      "Consider adding a visual flow diagram or asset to accompany the 'Workflow Implementation' section for better content experience.",
+      "Include a brief mention or footnote about how memory-aware AI stacks can be integrated with existing tools (e.g., Slack, CRMs) for practical examples.",
+      "Expand on how to handle edge cases or integration failures for a more robust implementation guide.",
+      "Add a section on compliance and security considerations when using AI agent platforms in a business context.",
+      "Clarify which tools are best for specific workflow steps like ticket triage."
+    ]
   }
 }
