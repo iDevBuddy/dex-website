@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 69,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 86,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,35 +94,17 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 69,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 761
+      "wordCount": 568
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
-    "notes": [
-      "The content provides a detailed, practical guide that aligns well with the target keyword and search intent.",
-      "The article includes a clear business case and quantifiable outcomes (e.g., 'reducing manual effort by up to 60%') which adds credibility and value.",
-      "Content includes practical steps, tools needed, and implementation checklists which improve the value and reduce thin content risk.",
-      "The article provides a direct, information- and goal-oriented structure with specific implementation of a use case using Launchpad Build AI's Manufacturing Language Model.",
-      "The article includes key takeaways, warnings, and a step-by-step guide which supports the practical use case and provides clear value.",
-      "There is a moderate commercial tone that could be better balanced with neutral educational content to improve helpfulness for the reader.",
-      "The content includes specific KPIs, tools, and a case study with results, which supports the article's value and reduces risk of being considered thin.",
-      "The article includes implementation difficulty and time-to-implement estimates, which are useful for practitioners."
-    ],
-    "recommendedFixes": [
-      "Consider reducing the promotional tone in places and balancing it with more neutral educational framing to improve helpful content factors.",
-      "Add a brief comparison to general LLM use cases in manufacturing or emphasize the uniqueness of the MLM approach.",
-      "Include a section on how the model compares to general-purpose LLMs for manufacturing use—addressing why a specialized model like MLM is preferred over general models.",
-      "Add visual assets (e.g., workflow diagram, checklist) to improve user engagement and reduce perceived thinness.",
-      "Include a downloadable PDF or slide deck to support the guide's implementation.",
-      "Add a comparison table of general automation tools vs. Launchpad Build AI's MLM to position the solution in the market context.",
-      "Add a social carousel or supporting media to increase engagement and clarify the implementation for the reader."
-    ]
+    "skipped": true,
+    "reason": "nvidia-qwen failed: 429 {\"status\":429,\"title\":\"Too Many Requests\"}"
   }
 }
