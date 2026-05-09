@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 78,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 96,
+      "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
-      "fillerHits": 0,
-      "wordCount": 668
+      "fillerHits": 1,
+      "wordCount": 817
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,19 +106,17 @@
   "review": {
     "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides practical, actionable guidance for implementing memory-aware AI workflows in logistics and service operations.",
-      "Content is well-structured with clear use cases, implementation steps, and business impact metrics.",
-      "The article correctly identifies common pitfalls in AI automation and offers specific solutions.",
-      "Use of internal research citations and authoritative sources strengthens credibility.",
-      "Tone and language align well with the target audience of business automation professionals.",
-      "The article includes specific tools (Make.com, Zapier, HubSpot, Salesforce) and platforms (Envoy AI) which adds practical utility."
+      "Content provides specific, actionable implementation guide for AI workflow with memory",
+      "Addresses real business problem of lead triage in logistics context",
+      "Includes measurable KPIs and concrete implementation steps",
+      "Cites authoritative sources and provides implementation checklist",
+      "Content is original and non-duplicate with unique practical approach"
     ],
     "recommendedFixes": [
-      "Add a workflow diagram as a visual asset to accompany the step-by-step workflow section - this would significantly improve understanding and implementation ease.",
-      "Include a downloadable checklist PDF version of the 'Implementation Checklist' section for readers to use as a practical tool.",
-      "Consider adding a brief comparison table showing before/after results of implementing memory-aware AI to illustrate business impact more vividly.",
-      "Add a section on 'When to Use Human-in-the-Loop' with specific decision criteria to help readers understand approval step placement.",
-      "Include mobile-responsive formatting considerations for the checklist and workflow elements to improve user experience on all devices."
+      "Add more specific technical implementation details for each step",
+      "Include error handling examples for common API failures",
+      "Add more detailed cost/benefit analysis of implementation",
+      "Provide specific code examples for the workflow implementation"
     ]
   }
 }
