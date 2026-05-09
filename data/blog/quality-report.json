@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 50,
+    "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 50/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,44 +85,31 @@
     }
   ],
   "authenticity": {
-    "score": 91,
+    "score": 89,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 899
+      "wordCount": 797
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 100,
-    "notes": [
-      "The article provides a comprehensive, practical guide to implementing Google's AI Max in business workflows.",
-      "Strong structure with clear sections covering implementation, use cases, and step-by-step workflows.",
-      "Addresses common mistakes and troubleshooting, which adds significant value for practitioners.",
-      "Content is well-researched with multiple authoritative sources cited.",
-      "Tone and style align with the 'expert guide' positioning.",
-      "Content includes a real-world case study with measurable outcomes, adding credibility and practical value.",
-      "Well-defined KPIs and tool recommendations support the practical implementation focus.",
-      "The article includes an implementation checklist and a 'what to do next' section, guiding readers effectively.",
-      "The article is well-targeted to the service business owner or operator, focusing on practical outcomes."
-    ],
+    "helpfulContentRisk": 85,
+    "notes": "The content is highly detailed and provides a practical implementation guide. The article explains how to build a memory-aware AI system for logistics planning, with clear step-by-step instructions, use cases, and tooling recommendations. It covers both technical implementation and business impact, making it suitable for an expert audience in the logistics/automation space. The content is well-structured and includes implementation advice, but the presentation of the 'implementation steps' section could be made more visual (e.g., with a workflow diagram) to enhance clarity.",
     "recommendedFixes": [
-      "Consider adding a visual workflow diagram to enhance understanding of the step-by-step process.",
-      "Include a downloadable checklist or PDF summary for easier implementation.",
-      "Add a comparison table showing before-and-after metrics for stronger impact illustration.",
-      "Incorporate a section on potential cost savings or ROI calculation to further engage business readers.",
-      "Clarify any compliance or data privacy considerations when using AI Max, especially for regulated industries.",
-      "Provide a brief summary or visual of integrations between tools like Slack, CRM, and Zapier for better clarity."
+      "Consider adding a visual workflow diagram to improve clarity of the step-by-step process.",
+      "Add a section on data on long-term outcomes post-implementation to demonstrate value.",
+      "Include a case study or result section to show the real-world impact of the implementation."
     ]
   }
 }
