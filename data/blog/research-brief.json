@@ -46,21 +46,30 @@
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
-      "type": "Web research",
-      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
-      "authorityScore": 73,
-      "publishedDate": ""
-    },
-    {
       "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
       "type": "Web research",
       "supports": "AI is moving beyond isolated copilots and technical architecture into coordinated operational decision systems. This ARC Advisory Group white paper explains how supply chain AI is shifting from capabi",
       "authorityScore": 65,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Memory Breakthrough Opens New Possibilities for Supply Chain",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/pulse/ai-memory-breakthrough-opens-new-possibilities-supply-chain-xiajc",
+      "type": "Web research",
+      "supports": "A significant breakthrough in AI memory architecture is turning heads in the tech and logistics worlds alike. A new memory design built specifically for AI workloads promises dramatically faster data ",
+      "authorityScore": 65,
+      "publishedDate": ""
+    },
+    {
+      "title": "State Management Is the Missing Layer in Supply Chain AI - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/04/27/state-management-is-the-missing-layer-in-supply-chain-ai/",
+      "type": "Web research",
+      "supports": "Memory is part of state, but state is broader.\n\nIn supply chain AI, state includes the current condition of the business object being managed. That object might be an order, shipment, supplier, SKU, l",
+      "authorityScore": 53,
       "publishedDate": ""
     },
     {
@@ -80,35 +89,19 @@
       "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
       "authorityScore": 54,
       "publishedDate": ""
-    },
-    {
-      "title": "OpenAI Platform Documentation",
-      "organization": "OpenAI",
-      "url": "https://platform.openai.com/docs/",
-      "type": "Official documentation",
-      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
-      "tags": [
-        "ai",
-        "llm",
-        "agents",
-        "automation",
-        "workflow",
-        "prompt"
-      ],
-      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
-    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
     "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
+    "https://www.linkedin.com/pulse/ai-memory-breakthrough-opens-new-possibilities-supply-chain-xiajc",
+    "https://logisticsviewpoints.com/2026/04/27/state-management-is-the-missing-layer-in-supply-chain-ai/",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
-    "https://innovecs.com/blog/ai-supply-chain-planning/",
-    "https://platform.openai.com/docs/"
+    "https://innovecs.com/blog/ai-supply-chain-planning/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -135,6 +128,10 @@
       },
       {
         "source": "Google News",
+        "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
+      },
+      {
+        "source": "Google News",
         "title": "I tried 70+ best AI tools in 2026 - TechRadar"
       },
       {
@@ -147,11 +144,15 @@
       },
       {
         "source": "Google News",
-        "title": "A Developer’s Guide to Building Scalable AI: Workflows vs Agents - Towards Data Science"
+        "title": "Secure by Design: Multi-Agent Architecture in the Supply Chain - Logistics Viewpoints"
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
+        "title": "CVG, Lufthansa, ADR, FRA and DataArt discuss agentic AI - Future Travel Experience"
+      },
+      {
+        "source": "Google News",
+        "title": "A Developer’s Guide to Building Scalable AI: Workflows vs Agents - Towards Data Science"
       }
     ],
     "realtimeSources": [
@@ -189,14 +190,6 @@
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
-      "type": "Web research",
-      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
-      "authorityScore": 73
-    },
-    {
       "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
@@ -206,9 +199,27 @@
       "publishedDate": ""
     },
     {
+      "title": "AI Memory Breakthrough Opens New Possibilities for Supply Chain",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/pulse/ai-memory-breakthrough-opens-new-possibilities-supply-chain-xiajc",
+      "type": "Web research",
+      "supports": "A significant breakthrough in AI memory architecture is turning heads in the tech and logistics worlds alike. A new memory design built specifically for AI workloads promises dramatically faster data ",
+      "authorityScore": 65,
+      "publishedDate": ""
+    },
+    {
+      "title": "State Management Is the Missing Layer in Supply Chain AI - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/04/27/state-management-is-the-missing-layer-in-supply-chain-ai/",
+      "type": "Web research",
+      "supports": "Memory is part of state, but state is broader.\n\nIn supply chain AI, state includes the current condition of the business object being managed. That object might be an order, shipment, supplier, SKU, l",
+      "authorityScore": 53,
+      "publishedDate": ""
+    },
+    {
       "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
       "organization": "tryenvoy.ai",
-      "url": "https://tryenv01",
+      "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
       "authorityScore": 68,
@@ -223,6 +234,5 @@
       "authorityScore": 54,
       "publishedDate": ""
     }
-  ],
-  " duplicateScore": 11
+  ]
 }

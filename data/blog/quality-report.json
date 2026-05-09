@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,31 +85,40 @@
     }
   ],
   "authenticity": {
-    "score": 89,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
-      "businessRelevance": 93,
+      "specificity": 96,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 797
+      "wordCount": 668
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 85,
-    "notes": "The content is highly detailed and provides a practical implementation guide. The article explains how to build a memory-aware AI system for logistics planning, with clear step-by-step instructions, use cases, and tooling recommendations. It covers both technical implementation and business impact, making it suitable for an expert audience in the logistics/automation space. The content is well-structured and includes implementation advice, but the presentation of the 'implementation steps' section could be made more visual (e.g., with a workflow diagram) to enhance clarity.",
+    "helpfulContentRisk": "Low",
+    "notes": [
+      "The article provides practical, actionable guidance for implementing memory-aware AI workflows in logistics and service operations.",
+      "Content is well-structured with clear use cases, implementation steps, and business impact metrics.",
+      "The article correctly identifies common pitfalls in AI automation and offers specific solutions.",
+      "Use of internal research citations and authoritative sources strengthens credibility.",
+      "Tone and language align well with the target audience of business automation professionals.",
+      "The article includes specific tools (Make.com, Zapier, HubSpot, Salesforce) and platforms (Envoy AI) which adds practical utility."
+    ],
     "recommendedFixes": [
-      "Consider adding a visual workflow diagram to improve clarity of the step-by-step process.",
-      "Add a section on data on long-term outcomes post-implementation to demonstrate value.",
-      "Include a case study or result section to show the real-world impact of the implementation."
+      "Add a workflow diagram as a visual asset to accompany the step-by-step workflow section - this would significantly improve understanding and implementation ease.",
+      "Include a downloadable checklist PDF version of the 'Implementation Checklist' section for readers to use as a practical tool.",
+      "Consider adding a brief comparison table showing before/after results of implementing memory-aware AI to illustrate business impact more vividly.",
+      "Add a section on 'When to Use Human-in-the-Loop' with specific decision criteria to help readers understand approval step placement.",
+      "Include mobile-responsive formatting considerations for the checklist and workflow elements to improve user experience on all devices."
     ]
   }
 }
