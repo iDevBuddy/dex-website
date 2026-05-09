@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
+    "trendScore": 50,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 50/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 92,
+    "score": 91,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,30 +94,35 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 942
+      "wordCount": 899
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": 100,
     "notes": [
-      "The article provides a detailed, practical guide to building memory-aware AI workflows.",
-      "Content is structured around real implementation advice with technical workflows and business impact guidance.",
-      "The use of specific, authoritative, and recent logistics viewpoints adds credibility.",
-      "The article includes clear steps, business context, and avoids generic AI hype.",
-      "Potential risk: some sections may come across as too technical for non-technical readers, but the overall content is well-researched and aligned with practical outcomes."
+      "The article provides a comprehensive, practical guide to implementing Google's AI Max in business workflows.",
+      "Strong structure with clear sections covering implementation, use cases, and step-by-step workflows.",
+      "Addresses common mistakes and troubleshooting, which adds significant value for practitioners.",
+      "Content is well-researched with multiple authoritative sources cited.",
+      "Tone and style align with the 'expert guide' positioning.",
+      "Content includes a real-world case study with measurable outcomes, adding credibility and practical value.",
+      "Well-defined KPIs and tool recommendations support the practical implementation focus.",
+      "The article includes an implementation checklist and a 'what to do next' section, guiding readers effectively.",
+      "The article is well-targeted to the service business owner or operator, focusing on practical outcomes."
     ],
     "recommendedFixes": [
-      "Consider adding a visual flow diagram or asset to accompany the 'Workflow Implementation' section for better content experience.",
-      "Include a brief mention or footnote about how memory-aware AI stacks can be integrated with existing tools (e.g., Slack, CRMs) for practical examples.",
-      "Expand on how to handle edge cases or integration failures for a more robust implementation guide.",
-      "Add a section on compliance and security considerations when using AI agent platforms in a business context.",
-      "Clarify which tools are best for specific workflow steps like ticket triage."
+      "Consider adding a visual workflow diagram to enhance understanding of the step-by-step process.",
+      "Include a downloadable checklist or PDF summary for easier implementation.",
+      "Add a comparison table showing before-and-after metrics for stronger impact illustration.",
+      "Incorporate a section on potential cost savings or ROI calculation to further engage business readers.",
+      "Clarify any compliance or data privacy considerations when using AI Max, especially for regulated industries.",
+      "Provide a brief summary or visual of integrations between tools like Slack, CRM, and Zapier for better clarity."
     ]
   }
 }
