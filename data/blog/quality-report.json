@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 20,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 69,
+    "marketSentimentScore": 56,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 20/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,41 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 73,
+    "score": 72,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
-      "businessRelevance": 86,
+      "specificity": 94,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 69,
+      "marketSentimentScore": 56,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 578
+      "wordCount": 452
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "MEDIUM",
+    "helpfulContentRisk": "medium",
     "notes": [
-      "The content provides a practical guide for implementing Launchpad Build AI's MLM in business workflows, which is helpful for the target audience.",
-      "Article includes real-world examples and step-by-step implementation, supporting the 'informational' search intent.",
-      "Implementation checklists and troubleshooting steps add utility for readers.",
-      "Content could be more helpful by including specific examples of business impact metrics or case studies.",
-      "Some sections feel generic; adding unique company use cases would improve specificity.",
-      "The article could better address potential reader concerns by focusing more on cost-benefit or limitations of the technology."
+      "The article's title and meta title are overly complex and keyword-stuffed, which may hurt readability and SEO. The keyword 'The Rundown: Google expands AI Max as automation shifts upstream - Digiday' is repeated excessively and appears to be a specific article title rather than a search term, making it a poor target keyword.",
+      "The content lacks clarity on what 'Digiday's Rundown' actually is, which could confuse readers. The article should define this term early on for better understanding.",
+      "The article's focus on 'Digiday's Rundown' as a tool for business automation is unclear. The connection between the Digiday article and business workflows is not well-established.",
+      "There are inconsistencies in the tools mentioned. The article lists 'Digiday's Rundown' as a tool, but it's unclear if this refers to a specific product or the Digiday article itself. This needs clarification.",
+      "The business use case example is vague and lacks specific metrics or outcomes that would make it more compelling and actionable."
     ],
     "recommendedFixes": [
-      "Add a specific business impact example with time/effort saved metrics.",
-      "Include a short case study or testimonial from a service business using the technology.",
-      "Clarify how the tool fits into various industrial automation stages with visual examples or templates.",
-      "Add specific error handling for common pitfalls in implementation (e.g., API failures, low-confidence outputs).",
-      "Expand on the training needs for team members involved in the workflow.",
-      "Add alternative tools or methods for businesses that can't use Launchpad Build AI directly (e.g., other visual input methods)."
+      "Revise the title and meta title to be more concise and focused on the core topic: 'How to Automate Customer Support Workflows with Google AI Max and Digiday Insights'.",
+      "Clarify what 'Digiday's Rundown' refers to and provide a clear definition of how it's used for business automation.",
+      "Restructure the content to focus on the practical application of AI Max for business automation, removing the repetitive keyword stuffing.",
+      "Provide a clear explanation of how Digiday's Rundown (the article/product) integrates with AI Max for workflow automation.",
+      "Include specific metrics and a step-by-step implementation guide for the business use case, with measurable outcomes."
     ]
   }
 }
