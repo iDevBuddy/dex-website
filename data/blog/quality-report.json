@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 82,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -97,27 +97,31 @@
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
-      "fillerHits": 1,
-      "wordCount": 751
+      "fillerHits": 0,
+      "wordCount": 679
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides valuable, practical insights into the importance of memory in AI planning systems, particularly for logistics and service businesses.",
-      "Content is well-structured with clear takeaways, practical examples, and actionable steps.",
-      "The integration of expert insights and authoritative sources strengthens the credibility of the content.",
-      "Use of internal linking and SEO elements appears appropriate and supportive of the main topic.",
-      "The article effectively addresses the target audience (founders, operators, marketers) with relevant business outcomes and implementation guidance."
+      "The article provides practical, actionable guidance on implementing AI with memory in logistics workflows",
+      "Content is well-structured with clear business use case, step-by-step implementation, and measurable outcomes",
+      "Addresses common mistakes and includes troubleshooting guidance which adds practical value",
+      "Uses specific examples (customer inquiry triage) and quantifiable results (15-minute response time, 30% satisfaction increase)",
+      "Includes relevant tools, implementation checklist, and clear next steps for readers",
+      "Content aligns well with target keyword and search intent (informational) for business decision makers",
+      "Sources are authoritative and relevant to logistics industry, supporting key claims"
     ],
     "recommendedFixes": [
-      "Consider adding a visual workflow diagram to illustrate the step-by-step AI workflow, as indicated in media recommendations.",
-      "Include a checklist asset to help readers implement the memory layer integration steps more easily.",
-      "Add an infographic summarizing the key benefits of memory-aware AI in logistics for better content engagement.",
-      "Ensure the featured image accurately represents the concept of AI memory in logistics for improved visual appeal.",
-      "Consider expanding on specific tool implementations (e.g., LangChain examples) to provide more technical depth for advanced readers."
+      "Add more specific technical implementation details for the AI agent with memory configuration",
+      "Include a visual workflow diagram to illustrate the ticket triage process",
+      "Expand on the memory aspect with concrete examples of how state is maintained across interactions",
+      "Add more detailed guidance on selecting appropriate approval workflow engines",
+      "Include cost considerations or ROI calculations to strengthen business case",
+      "Add section on scaling beyond the initial 100 tickets/week example",
+      "Provide more specific prompts or examples of how the AI categorizes sensitive vs. non-sensitive cases"
     ]
   }
 }

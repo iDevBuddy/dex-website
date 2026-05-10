@@ -41,8 +41,8 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
-      "authorityScore": 81,
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -50,17 +50,26 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
-      "authorityScore": 73,
+      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "AI Memory Breakthrough Opens New Possibilities for Supply Chain",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/pulse/ai-memory-breakthrough-opens-new-possibilities-supply-chain-xiajc",
+      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
       "type": "Web research",
-      "supports": "A significant breakthrough in AI memory architecture is turning heads in the tech and logistics worlds alike. A new memory design built specifically for AI workloads promises dramatically faster data ",
-      "authorityScore": 65,
+      "supports": "AI played a more visible and reliable role inside the warehouse in 2025. Rather than attempting full autonomy, AI supported decision-making by predicting where bottlenecks would occur.\n\nThe strongest ",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "HUboo Logistics",
+      "organization": "huboo.cc",
+      "url": "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl",
+      "type": "Web research",
+      "supports": "HUboo Logistics\n\n# Planning AI Needs Memory, Not Just Automation\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requires systems ",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -69,16 +78,7 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
-      "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
-      "authorityScore": 95,
+      "authorityScore": 68,
       "publishedDate": ""
     },
     {
@@ -86,17 +86,17 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/27/state-management-is-the-missing-layer-in-supply-chain-ai/",
       "type": "Web research",
-      "supports": "AI is moving beyond isolated copilots and technical architecture into coordinated operational decision systems. This ARC Advisory Group white paper explains how supply chain AI is shifting from capabi",
-      "authorityScore": 95,
+      "supports": "Explore Our Domains  \nPlanning, Execution & Visibility | Transportation & Logistics Operations | Warehousing, Fulfillment & Automation | Global Trade & Compliance | AI & Advanced Analytics | Data, Int",
+      "authorityScore": 55,
       "publishedDate": ""
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
-    "https://www.linkedin.com/pulse/ai-memory-breakthrough-opens-new-possibilities-supply-chain-xiajc",
+    "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
+    "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
-    "https://innovecs.com/blog/ai-supply-chain-planning/",
     "https://logisticsviewpoints.com/2026/04/27/state-management-is-the-missing-layer-in-supply-chain-ai/"
   ],
   "sourceStatus": "Ready",
@@ -144,15 +144,15 @@
       },
       {
         "source": "Google News",
-        "title": "Agent-Powered Enterprise: Productivity, Governance, and the Future of Work - Klover.ai"
-      },
-      {
-        "source": "Google News",
         "title": "Secure by Design: Multi-Agent Architecture in the Supply Chain - Logistics Viewpoints"
       },
       {
         "source": "Google News",
         "title": "CVG, Lufthansa, ADR, FRA and DataArt discuss agentic AI - Future Travel Experience"
+      },
+      {
+        "source": "Google News",
+        "title": "A Developer’s Guide to Building Scalable AI: Workflows vs Agents - Towards Data Science"
       }
     ],
     "realtimeSources": [
@@ -163,9 +163,18 @@
     ]
   },
   "examplesToInclude": [
-    "Slack intake workflow",
-    "CRM follow-up workflow",
-    "support triage workflow"
+    {
+      "name": "Slack intake workflow",
+      "description": "Automate customer inquiry triage using AI to categorize and assign tickets based on urgency and topic, with manual approval for sensitive issues."
+    },
+    {
+      "name": "CRM follow-up workflow",
+      "description": "Use AI to draft personalized follow-up emails after meetings, with human review before sending to ensure tone and accuracy."
+    },
+    {
+      "name": "Support triage workflow",
+      "description": "AI analyzes incoming support tickets and routes them to the correct department, with escalation protocols for unresolved issues."
+    }
   ],
   "suggestedInternalLinks": [
     "/blog/ai-authority-blog-engine",
@@ -185,8 +194,8 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
-      "authorityScore": 81,
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -194,17 +203,26 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
-      "authorityScore": 73,
+      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "AI Memory Breakthrough Opens New Possibilities for Supply Chain",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/pulse/ai-memory-breakthrough-opens-new-possibilities-supply-chain-xiajc",
+      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
       "type": "Web research",
-      "supports": "A significant breakthrough in AI memory architecture is turning heads in the tech and logistics worlds alike. A new memory design built specifically for AI workloads promises dramatically faster data ",
-      "authorityScore": 65,
+      "supports": "AI played a more visible and reliable role inside the warehouse in 2025. Rather than attempting full autonomy, AI supported decision-making by predicting where bottlenecks would occur.\n\nThe strongest ",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "HUboo Logistics",
+      "organization": "huboo.cc",
+      "url": "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl",
+      "type": "Web research",
+      "supports": "HUboo Logistics\n\n# Planning AI Needs Memory, Not Just Automation\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requires systems ",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -213,16 +231,7 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
-      "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
-      "authorityScore": 95,
+      "authorityScore": 68,
       "publishedDate": ""
     },
     {
@@ -230,8 +239,8 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/27/state-management-is-the-missing-layer-in-supply-chain-ai/",
       "type": "Web research",
-      "supports": "AI is moving beyond isolated copilots and technical architecture into coordinated operational decision systems. This ARC Advisory Group white paper explains how supply chain AI is shifting from capabi",
-      "authorityScore": 95,
+      "supports": "Explore Our Domains  \nPlanning, Execution & Visibility | Transportation & Logistics Operations | Warehousing, Fulfillment & Automation | Global Trade & Compliance | AI & Advanced Analytics | Data, Int",
+      "authorityScore": 55,
       "publishedDate": ""
     }
   ]
