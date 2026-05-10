@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 69,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 86,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,34 +94,32 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 69,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 760
+      "wordCount": 567
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a detailed, practical guide on implementing Launchpad Build AI's MLM for industrial automation workflows, which aligns well with the informational search intent.",
-      "Content includes specific metrics (e.g., 40% faster design cycles, 35% higher approval rates) and actionable steps, enhancing credibility and usefulness.",
-      "Use of expert quotes and authoritative sources supports the 'tool_tutorial' angle and builds trust.",
-      "Some sections could benefit from more concrete examples or screenshots for enhanced clarity, especially in the workflow implementation steps.",
-      "The article assumes some prior knowledge of tools like Slack, CRM, and Google Drive, which may not be fully accessible to all target readers.",
-      "While the content is original and well-structured, it lacks internal linking beyond generic calls to action, missing opportunities to deepen user engagement.",
-      "The inclusion of a checklist and troubleshooting section adds practical value but could be formatted as downloadable assets for better UX."
+      "The article provides a clear, practical guide to implementing memory-aware AI workflows in logistics, which aligns well with the target keyword and user intent.",
+      "Content is well-structured with actionable steps, addressing a real business problem with measurable outcomes.",
+      "The article includes a strong practical use case and clear implementation steps, making it valuable for the target audience of business decision-makers.",
+      "The content includes implementation details, tools, and a clear business outcome, which supports both user and search intent effectively.",
+      "Some sections could benefit from more detailed technical implementation guidance, especially around the workflow and approval steps.",
+      "The article references KPIs and outcomes but could include more specific examples or data points to strengthen the value proposition."
     ],
     "recommendedFixes": [
-      "Add visual aids such as workflow diagrams or screenshots to illustrate key steps in the implementation process.",
-      "Include more specific, real-world examples or case studies to demonstrate how different industries or company sizes can adapt the workflow.",
-      "Expand on the 'Why Use' section by comparing Launchpad Build AI MLM with traditional methods or competing tools, possibly through a comparison table.",
-      "Convert the implementation checklist into a downloadable PDF or interactive tool to increase engagement and provide added value.",
-      "Enhance internal linking strategy by connecting to related blog posts, service pages, or the AI Authority Blog Engine for better site structure and SEO.",
-      "Clarify technical terms and provide brief definitions or tooltips for non-expert readers in the Hybrid persona.",
-      "Add a summary table of KPIs and how they should be tracked/measured to make the 'Measuring Success' section more actionable."
+      "Add more specific examples of memory-aware AI implementation in logistics (e.g., sample prompts, decision trees).",
+      "Include a short case study or example of memory-aware AI in action (e.g., before/after workflow).",
+      "Clarify the distinction between 'memory-aware' and 'traditional automation' with a practical example or visual.",
+      "Add a troubleshooting section for common AI workflow failures and how to resolve them.",
+      "Include a 'lessons learned' or 'implementation pitfalls' section based on real-world examples.",
+      "Expand on the 'quality check' layer with specific examples of validation rules or decision checkpoints."
     ]
   }
 }
