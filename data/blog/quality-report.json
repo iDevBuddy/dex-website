@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -18,19 +18,19 @@
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
+    "trendScore": 68,
     "marketSentiment": "neutral",
     "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 77,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,30 +98,13 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 679
+      "wordCount": 749
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
-    "notes": [
-      "The article provides practical, actionable guidance on implementing AI with memory in logistics workflows",
-      "Content is well-structured with clear business use case, step-by-step implementation, and measurable outcomes",
-      "Addresses common mistakes and includes troubleshooting guidance which adds practical value",
-      "Uses specific examples (customer inquiry triage) and quantifiable results (15-minute response time, 30% satisfaction increase)",
-      "Includes relevant tools, implementation checklist, and clear next steps for readers",
-      "Content aligns well with target keyword and search intent (informational) for business decision makers",
-      "Sources are authoritative and relevant to logistics industry, supporting key claims"
-    ],
-    "recommendedFixes": [
-      "Add more specific technical implementation details for the AI agent with memory configuration",
-      "Include a visual workflow diagram to illustrate the ticket triage process",
-      "Expand on the memory aspect with concrete examples of how state is maintained across interactions",
-      "Add more detailed guidance on selecting appropriate approval workflow engines",
-      "Include cost considerations or ROI calculations to strengthen business case",
-      "Add section on scaling beyond the initial 100 tickets/week example",
-      "Provide more specific prompts or examples of how the AI categorizes sensitive vs. non-sensitive cases"
-    ]
+    "skipped": true,
+    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
   }
 }
