@@ -85,41 +85,41 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 73,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
       "marketSentimentScore": 69,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 685
+      "wordCount": 578
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "MEDIUM",
     "notes": [
-      "The content is highly technical and specific, targeting industrial automation professionals.",
-      "The article provides a clear, step-by-step implementation guide for Launchpad Build AI's MLM in manufacturing environments.",
-      "Use of jargon is appropriate for the target audience (industrial automation, engineering, and operations professionals).",
-      "Content includes practical workflows, real-world case studies, and implementation advice.",
-      "The article aligns well with the informational search intent and provides value to founder/operator personas evaluating AI automation tools.",
-      "Sources are cited from authoritative industry publications, supporting the content's credibility.",
-      "SEO elements like title, description, and slug are well-optimized for 'launchpad build ai offers mlm for industrial automation design'."
+      "The content provides a practical guide for implementing Launchpad Build AI's MLM in business workflows, which is helpful for the target audience.",
+      "Article includes real-world examples and step-by-step implementation, supporting the 'informational' search intent.",
+      "Implementation checklists and troubleshooting steps add utility for readers.",
+      "Content could be more helpful by including specific examples of business impact metrics or case studies.",
+      "Some sections feel generic; adding unique company use cases would improve specificity.",
+      "The article could better address potential reader concerns by focusing more on cost-benefit or limitations of the technology."
     ],
     "recommendedFixes": [
-      "Consider adding schema markup for better SEO performance tracking.",
-      "Add internal links to related content or service pages for improved site structure and user navigation.",
-      "Include a downloadable checklist or workflow diagram to support the step-by-step guide in the article.",
-      "Clarify the difference between the AI-generated design and final implementation to manage user expectations.",
-      "Add a section on model limitations or constraints to improve content transparency and trust."
+      "Add a specific business impact example with time/effort saved metrics.",
+      "Include a short case study or testimonial from a service business using the technology.",
+      "Clarify how the tool fits into various industrial automation stages with visual examples or templates.",
+      "Add specific error handling for common pitfalls in implementation (e.g., API failures, low-confidence outputs).",
+      "Expand on the training needs for team members involved in the workflow.",
+      "Add alternative tools or methods for businesses that can't use Launchpad Build AI directly (e.g., other visual input methods)."
     ]
   }
 }

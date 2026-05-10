@@ -82,13 +82,20 @@
       "publishedDate": ""
     },
     {
-      "title": "Launchpad Build AI opens El Segundo HQ after USD $11m",
-      "organization": "itbrief.co.uk",
-      "url": "https://itbrief.co.uk/story/launchpad-build-ai-opens-el-segundo-hq-after-usd-11m",
-      "type": "Web research",
-      "supports": "> \"El Segundo's interdisciplinary hard tech community is truly unique, and Launchpad Build AI is exactly the kind of innovative, technology-driven company our city attracts and nurtures. They are not ",
-      "authorityScore": 75,
-      "publishedDate": ""
+      "title": "OpenAI Platform Documentation",
+      "organization": "OpenAI",
+      "url": "https://platform.openai.com/docs/",
+      "type": "Official documentation",
+      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "automation",
+        "workflow",
+        "prompt"
+      ],
+      "authorityScore": 82
     }
   ],
   "sourcesToCite": [
@@ -97,11 +104,11 @@
     "https://briefglance.com/articles/launchpad-build-ai-unveils-model-to-democratize-factory-automation",
     "https://www.prnewswire.com/news-releases/launchpad-build-ai-enters-new-growth-phase-with-el-segundo-hq-senior-hires-and-world-first-manufacturing-language-model-302758313.html",
     "https://www.therobotreport.com/tag/launchpad-build-ai/",
-    "https://itbrief.co.uk/story/launchpad-build-ai-opens-el-segundo-hq-after-usd-11m"
+    "https://platform.openai.com/docs/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 82,
-  "sourceNotes": "6 live web sources found via Tavily. Selected 4 authoritative sources with average authority score 82.",
+  "sourceNotes": "5 live web sources found via Tavily. Selected 4 authoritative sources with average authority score 82.",
   "duplicateStatus": "unique",
   "duplicateScore": 6,
   "duplicateMatch": {
@@ -136,10 +143,6 @@
       },
       {
         "source": "Google News",
-        "title": "Veo Robotics announces redesigned FreeMove 2.0 Engine - The Robot Report"
-      },
-      {
-        "source": "Google News",
         "title": "Jack in the Box to pilot Miso Robotics’ Flippy - The Robot Report"
       },
       {
@@ -153,6 +156,10 @@
       {
         "source": "Google News",
         "title": "H2 Clipper plans to deploy robotic swarms in aerospace manufacturing - The Robot Report"
+      },
+      {
+        "source": "Google News",
+        "title": "Universal Logic Announces New Neocortex DIY Software - The Robot Report"
       }
     ],
     "realtimeSources": [
@@ -193,7 +200,7 @@
     {
       "title": "Launchpad Build AI offers MLM for industrial automation design | robot.tv News",
       "organization": "news.robot.tv",
-      "url": "https://news.robot.tv/launchpad-build-ai-offers-mlm-for-industrial-automation/",
+      "url": "https://news.robot.tv/launchpad-build-ai-offers-mlm-for-industrial-automation-design/",
       "type": "Web research",
       "supports": "robot.tv\n\nSource-backed robotics briefing\n\n# Launchpad Build AI offers MLM for industrial automation design\n\nApr 30, 2026\n\nLaunchpad Build AI has launched a Manufacturing Language Model (MLM) that use",
       "authorityScore": 95,
@@ -222,17 +229,8 @@
       "organization": "therobotreport.com",
       "url": "https://www.therobotreport.com/tag/launchpad-build-ai/",
       "type": "Web research",
-      "supports": "The Robot Report\n\n# Launchpad Build AI\n\nBy Eugene Demaitre | April 30, 2026\n\n## Launchpad Build AI offers MLM to speed industrial automation design\n\nLaunchpad Build AI has launched a Manufacturing Lan",
+      "supports": "The Robot Report\n\n# Launchpad Build AI\n\nBy Eugene Demaitre | April 30, 2026\n\n## Launchpad Build AI offers MLM to speed industrial design\n\nLaunchpad Build AI has launched a Manufacturing Lan",
       "authorityScore": 90,
-      "publishedDate": ""
-    },
-    {
-      "title": "Launchpad Build AI opens El Segundo HQ after USD $11m",
-      "organization": "itbrief.co.uk",
-      "url": "https://itbrief.co.uk/story/launchpad-build-ai-opens-el-segundo-hq-after-usd-11m",
-      "type": "Web research",
-      "supports": "> \"El Segundo's interdisciplinary hard tech community is truly unique, and Launchpad Build AI is exactly the kind of innovative, technology-driven company our city attracts and nurtures. They are not ",
-      "authorityScore": 75,
       "publishedDate": ""
     }
   ]
