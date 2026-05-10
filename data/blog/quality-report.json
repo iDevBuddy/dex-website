@@ -85,39 +85,41 @@
     }
   ],
   "authenticity": {
-    "score": 87,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
       "marketSentimentScore": 69,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 708
+      "wordCount": 685
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The article provides a detailed, practical guide on implementing Launchpad Build AI's MLM in industrial automation workflows, which aligns well with the informational search intent.",
-      "Content includes structured steps, real-world use cases, and clear KPIs, making it highly relevant for the target audience of founders, operators, and marketers.",
-      "Some sections, such as 'Step-by-Step Workflow' and 'Measuring Success,' could benefit from more specific examples or data to increase depth and clarity.",
-      "The article integrates internal links and references authoritative sources, which supports credibility and SEO value.",
-      "Potential risk lies in the assumption of reader familiarity with Launchpad Build AI and its MLM, which may hinder understanding for new users."
+      "The content is highly technical and specific, targeting industrial automation professionals.",
+      "The article provides a clear, step-by-step implementation guide for Launchpad Build AI's MLM in manufacturing environments.",
+      "Use of jargon is appropriate for the target audience (industrial automation, engineering, and operations professionals).",
+      "Content includes practical workflows, real-world case studies, and implementation advice.",
+      "The article aligns well with the informational search intent and provides value to founder/operator personas evaluating AI automation tools.",
+      "Sources are cited from authoritative industry publications, supporting the content's credibility.",
+      "SEO elements like title, description, and slug are well-optimized for 'launchpad build ai offers mlm for industrial automation design'."
     ],
     "recommendedFixes": [
-      "Add a brief introductory section explaining what Launchpad Build AI and its MLM are for novice readers to ensure broader accessibility.",
-      "Include more specific data or examples in the 'Step-by-Step Workflow' section to enhance clarity and practical application.",
-      "Clarify how the human-in-the-loop process works in practice, especially for users unfamiliar with AI implementation in industrial settings.",
-      "Consider adding a short summary or definition of the MLM model’s capabilities to better frame the context for readers.",
-      "In the 'Common Mistakes to Avoid' section, provide actionable advice or scenarios to illustrate each mistake, increasing the practical value."
+      "Consider adding schema markup for better SEO performance tracking.",
+      "Add internal links to related content or service pages for improved site structure and user navigation.",
+      "Include a downloadable checklist or workflow diagram to support the step-by-step guide in the article.",
+      "Clarify the difference between the AI-generated design and final implementation to manage user expectations.",
+      "Add a section on model limitations or constraints to improve content transparency and trust."
     ]
   }
 }
