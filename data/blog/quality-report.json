@@ -1,7 +1,7 @@
 {
   "score": 88,
-  "strictPassed": false,
-  "passed": false,
+  "strictPassed": true,
+  "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -26,7 +26,7 @@
     "autoNewsAllowed": false,
     "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "rewrite_required",
+  "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,40 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 65,
-    "passed": false,
+    "score": 76,
+    "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 651
+      "wordCount": 599
     },
-    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
-    "blockingIssue": "Authenticity score below publishing threshold."
+    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+    "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "medium",
     "notes": [
-      "The content appears to be original and provides practical, actionable advice for implementing AI automation with memory in logistics workflows.",
-      "The article includes specific examples, step-by-step workflows, and tool recommendations which adds to its credibility and usefulness.",
-      "Content includes relevant citations from authoritative sources, though the sources are primarily from logisticsviewpoints.com which may indicate potential self-referencing.",
-      "The article avoids generic AI advice and focuses on specific business problems and solutions, aligning with the stated business problem of avoiding generic advice.",
-      "Some sections like 'Expert Insight' and 'Practical Explanation' appear to reuse content from other sources with minimal paraphrasing, which could pose a minor originality risk.",
-      "The content does not appear to include any risky SEO shortcuts or keyword stuffing based on review."
+      "The article provides practical, actionable guidance for implementing memory-aware AI automation in business workflows, which aligns well with the target audience of founders, operators, and marketers.",
+      "Content is well-structured with clear examples (support triage workflow) and defined KPIs, making it useful for readers.",
+      "The article includes implementation details, tool recommendations, and a step-by-step guide, which supports the 'practical business' intent.",
+      "Some sections (e.g., FAQ and Key Takeaways) are repetitive, but overall the content is focused and relevant to the topic.",
+      "Minor E-E-A-T risk exists due to potential lack of clear disclosure about the author's business automation expertise, but the content is otherwise factual and practical."
     ],
     "recommendedFixes": [
-      "Ensure all content is properly paraphrased, especially in sections where direct quotes from sources are used, to maintain originality.",
-      "Diversify the source citations - currently, heavy reliance on logisticsviewpoints.com could be flagged as self-referential content.",
-      "Clarify the distinction between 'Practical Explanation' and 'Business Use Case' sections to avoid content duplication and improve readability.",
-      "Add more specific data points or case study results to support the KPIs mentioned in the 'Measuring Success' section for better credibility.",
-      "Consider adding a brief conclusion section to summarize key points and reinforce the main message about AI memory importance."
+      "Add a clear author bio or credentials section to establish expertise and improve E-E-A-T (Expertise, Experience, Authoritativeness, and Trustworthiness).",
+      "Include a disclosure about results or case study data to support the claims made in the article (e.g., 35% fewer missed leads).",
+      "Clarify the connection between the examples and the sources used, especially regarding any quoted or referenced material.",
+      "Ensure all factual claims (e.g., performance percentages, timing) are clearly attributed to case studies or data sources where possible.",
+      "Improve content flow by reducing repetition between sections (e.g., Key Takeaways and Direct Answer)."
     ]
   }
 }
