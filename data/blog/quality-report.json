@@ -1,7 +1,7 @@
 {
   "score": 88,
-  "strictPassed": true,
-  "passed": true,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -18,15 +18,15 @@
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 62,
     "marketSentiment": "neutral",
     "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,41 +85,40 @@
     }
   ],
   "authenticity": {
-    "score": 78,
-    "passed": true,
+    "score": 65,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
-      "fillerHits": 1,
-      "wordCount": 727
+      "fillerHits": 0,
+      "wordCount": 651
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a practical, step-by-step guide for implementing memory-enabled AI workflows, which aligns with the 'practical guide' tone and expert audience expectations.",
-      "Content demonstrates strong expertise with specific tools (Slack, Notion, Make.com/Zapier, Maestro Agents) and measurable business outcomes.",
-      "The inclusion of real metrics (e.g., 60% reduction in manual hours, 4 hours to 30 minutes response time improvement) adds credibility and practical value.",
-      "Some sections like 'Practical Explanation' and 'Expert Insight' are repetitive and could be consolidated for better flow and to avoid content bloat.",
-      "The article includes multiple authoritative sources and directly addresses the target keyword in the title and throughout, supporting SEO goals.",
-      "The 'Mistakes to Avoid' and 'Troubleshooting' sections add depth and practical utility for the target audience of business operators.",
-      "The article could improve by reducing redundancy between the two 'Expert Insight' sections and the repetition in the 'FAQ' section which mirrors earlier content."
+      "The content appears to be original and provides practical, actionable advice for implementing AI automation with memory in logistics workflows.",
+      "The article includes specific examples, step-by-step workflows, and tool recommendations which adds to its credibility and usefulness.",
+      "Content includes relevant citations from authoritative sources, though the sources are primarily from logisticsviewpoints.com which may indicate potential self-referencing.",
+      "The article avoids generic AI advice and focuses on specific business problems and solutions, aligning with the stated business problem of avoiding generic advice.",
+      "Some sections like 'Expert Insight' and 'Practical Explanation' appear to reuse content from other sources with minimal paraphrasing, which could pose a minor originality risk.",
+      "The content does not appear to include any risky SEO shortcuts or keyword stuffing based on review."
     ],
     "recommendedFixes": [
-      "Consolidate the two 'Expert Insight' sections into one cohesive explanation to improve readability and reduce redundancy.",
-      "Reorganize the 'Practical Explanation' section to provide a more detailed breakdown of how memory-enabled AI works in practice, with concrete examples.",
-      "Differentiate content between the 'FAQ' and earlier sections to avoid redundancy; use the FAQ to clarify nuanced points not covered in the main content.",
-      "Add internal linking opportunities to related guides or tools for improved SEO and reader engagement.",
-      "Include visual asset recommendations (e.g., workflow diagram, checklist, infographic) to enhance understanding and provide practical takeaways."
+      "Ensure all content is properly paraphrased, especially in sections where direct quotes from sources are used, to maintain originality.",
+      "Diversify the source citations - currently, heavy reliance on logisticsviewpoints.com could be flagged as self-referential content.",
+      "Clarify the distinction between 'Practical Explanation' and 'Business Use Case' sections to avoid content duplication and improve readability.",
+      "Add more specific data points or case study results to support the KPIs mentioned in the 'Measuring Success' section for better credibility.",
+      "Consider adding a brief conclusion section to summarize key points and reinforce the main message about AI memory importance."
     ]
   }
 }
