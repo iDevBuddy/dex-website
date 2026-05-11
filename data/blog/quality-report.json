@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 20,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 56,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 20/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,39 +85,41 @@
     }
   ],
   "authenticity": {
-    "score": 72,
+    "score": 78,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 94,
-      "businessRelevance": 100,
+      "specificity": 100,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
-      "marketSentimentScore": 56,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
-      "fillerHits": 0,
-      "wordCount": 452
+      "fillerHits": 1,
+      "wordCount": 727
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "medium",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article's title and meta title are overly complex and keyword-stuffed, which may hurt readability and SEO. The keyword 'The Rundown: Google expands AI Max as automation shifts upstream - Digiday' is repeated excessively and appears to be a specific article title rather than a search term, making it a poor target keyword.",
-      "The content lacks clarity on what 'Digiday's Rundown' actually is, which could confuse readers. The article should define this term early on for better understanding.",
-      "The article's focus on 'Digiday's Rundown' as a tool for business automation is unclear. The connection between the Digiday article and business workflows is not well-established.",
-      "There are inconsistencies in the tools mentioned. The article lists 'Digiday's Rundown' as a tool, but it's unclear if this refers to a specific product or the Digiday article itself. This needs clarification.",
-      "The business use case example is vague and lacks specific metrics or outcomes that would make it more compelling and actionable."
+      "The article provides a practical, step-by-step guide for implementing memory-enabled AI workflows, which aligns with the 'practical guide' tone and expert audience expectations.",
+      "Content demonstrates strong expertise with specific tools (Slack, Notion, Make.com/Zapier, Maestro Agents) and measurable business outcomes.",
+      "The inclusion of real metrics (e.g., 60% reduction in manual hours, 4 hours to 30 minutes response time improvement) adds credibility and practical value.",
+      "Some sections like 'Practical Explanation' and 'Expert Insight' are repetitive and could be consolidated for better flow and to avoid content bloat.",
+      "The article includes multiple authoritative sources and directly addresses the target keyword in the title and throughout, supporting SEO goals.",
+      "The 'Mistakes to Avoid' and 'Troubleshooting' sections add depth and practical utility for the target audience of business operators.",
+      "The article could improve by reducing redundancy between the two 'Expert Insight' sections and the repetition in the 'FAQ' section which mirrors earlier content."
     ],
     "recommendedFixes": [
-      "Revise the title and meta title to be more concise and focused on the core topic: 'How to Automate Customer Support Workflows with Google AI Max and Digiday Insights'.",
-      "Clarify what 'Digiday's Rundown' refers to and provide a clear definition of how it's used for business automation.",
-      "Restructure the content to focus on the practical application of AI Max for business automation, removing the repetitive keyword stuffing.",
-      "Provide a clear explanation of how Digiday's Rundown (the article/product) integrates with AI Max for workflow automation.",
-      "Include specific metrics and a step-by-step implementation guide for the business use case, with measurable outcomes."
+      "Consolidate the two 'Expert Insight' sections into one cohesive explanation to improve readability and reduce redundancy.",
+      "Reorganize the 'Practical Explanation' section to provide a more detailed breakdown of how memory-enabled AI works in practice, with concrete examples.",
+      "Differentiate content between the 'FAQ' and earlier sections to avoid redundancy; use the FAQ to clarify nuanced points not covered in the main content.",
+      "Add internal linking opportunities to related guides or tools for improved SEO and reader engagement.",
+      "Include visual asset recommendations (e.g., workflow diagram, checklist, infographic) to enhance understanding and provide practical takeaways."
     ]
   }
 }
