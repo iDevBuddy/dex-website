@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 50,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 50/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,29 +94,31 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 586
+      "wordCount": 530
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": 20,
     "notes": [
-      "The article provides a clear, practical guide on using AI with memory for logistics and service businesses, focusing on a relevant use case (support ticket triage) with measurable business outcomes.",
-      "Content is well-structured with key takeaways, direct answer, step-by-step workflow, and implementation checklist which improves readability and user engagement.",
-      "Use of authoritative sources from reputable logistics and AI industry sources enhances credibility and supports the central thesis effectively.",
-      "The article emphasizes measurable business outcomes (e.g., reduced response time, increased lead conversion) which aligns well with informational search intent and user needs.",
-      "Minor opportunity to improve internal linking and keyword usage for better topical authority and SEO performance."
+      "The content provides a clear, practical guide to implementing AI Max in business workflows with real examples.",
+      "Implementation steps are well-defined with specific tools and measurable outcomes.",
+      "The article includes helpful sections like error handling, common mistakes, and troubleshooting.",
+      "Content is focused on providing value through educational implementation steps rather than just theory.",
+      "The target keyword 'the rundown: google expands ai max as automation shifts upstream - digiday' is included in the article naturally through the title and meta descriptions, but the content does not appear to be a direct copy of the source article, which reduces helpfulContentRisk.",
+      "The article provides unique value in explaining practical implementation of AI Max for business automation."
     ],
     "recommendedFixes": [
-      "Add internal links to related content (e.g., /blog/ai-authority-blog-engine or other relevant guides) to improve topical depth and site structure for SEO.",
-      "Include more specific keyword variations in headings and subheadings (e.g., 'AI automation in logistics,' 'memory-enabled workflows') to better align with semantic SEO practices.",
-      "Consider adding a brief section comparing traditional automation vs. AI with memory to improve keyword clustering around the core topic.",
-      "Add a 'Why It Matters' section to explicitly connect the benefits of AI memory to business outcomes for improved topical authority and user engagement."
+      "Consider adding a brief summary of the Digiday article's main points to further establish the content's relevance to the keyword's context.",
+      "Include a comparison table of Google AI Max vs. other automation tools to provide additional reader value.",
+      "Add more specific metrics or case study results to further validate the outcomes mentioned.",
+      "Ensure internal linking to related workflow articles or guides for better content authority.",
+      "The target keyword is used appropriately in the title, H1, and meta descriptions, but consider including it in the first 100 words for stronger SEO alignment."
     ]
   }
 }
