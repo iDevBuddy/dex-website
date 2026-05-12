@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,10 +8,10 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
@@ -19,18 +19,18 @@
     "floor": 78,
     "strictMinimum": 88,
     "trendScore": 68,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment positive."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,38 +85,48 @@
     }
   ],
   "authenticity": {
-    "score": 84,
+    "score": 88,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 97,
-      "businessRelevance": 100,
+      "specificity": 100,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 727
+      "wordCount": 745
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "MEDIUM",
     "notes": [
-      "The content provides practical, actionable guidance on implementing AI workflows with memory for logistics use cases, which aligns with search intent",
-      "Article includes specific examples, tools, and implementation steps that help business users take action",
-      "Addresses common mistakes and includes troubleshooting guidance, making it more helpful for practitioners",
-      "Content could be improved by adding more specific technical implementation details and real-world examples of prompt structures"
+      "The article provides a clear, practical workflow for implementing Launchpad Build AI's Manufacturing Language Model in industrial automation design",
+      "Content is well-structured with specific examples, tools, and a step-by-step implementation guide",
+      "Addresses a real business problem (slow, error-prone industrial design documentation) with measurable solutions",
+      "Includes specific KPIs, implementation steps, and workflow diagrams that make it actionable for the target audience",
+      "Content effectively combines multiple sources and presents a detailed case study with quantifiable results",
+      "Good use of structured data (sources, case studies, and KPIs) to support the practical value of the workflow",
+      "Addresses common implementation mistakes and includes a troubleshooting section",
+      "Uses a clear expert insight and key takeaways section to guide implementation",
+      "Good balance of technical implementation details with business impact metrics"
     ],
     "recommendedFixes": [
-      "Add specific prompt templates for workflow implementation",
-      "Include more detailed examples of tool configurations (e.g., specific Zapier/Make integrations)",
-      "Add diagrams or visual workflow examples for better understanding",
-      "Provide more specific error handling examples for common failure scenarios",
-      "Include additional technical details about memory implementation in AI workflows"
+      "Add a section on data security and compliance considerations when using AI in industrial design contexts",
+      "Include specific examples of prompt engineering best practices for the MLM integration to improve accuracy",
+      "Add a cost-benefit analysis section showing potential ROI and implementation costs for business readers",
+      "Provide more detailed technical specifications for integrating with the tools (e.g., API rate limits, error handling specifications)",
+      "Add a specific section on scaling the solution beyond the initial use case",
+      "Include a brief explanation of how the Manufacturing Language Model differs from general AI models",
+      "Add a comparison table of before/after implementation metrics for the case study company",
+      "Expand the 'Tools Needed' section with specific integration steps for each tool (Slack, CRM, etc.)",
+      "Include a section on change management when implementing AI in existing teams/design processes",
+      "Add implementation templates or sample prompts for the design documentation process"
     ]
   }
 }
