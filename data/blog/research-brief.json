@@ -41,26 +41,17 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
-      "authorityScore": 81,
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Nearshoring Is Creating New Infrastructure Bottlenecks – WIGO BLOG",
-      "organization": "blog.wigologistics.com",
-      "url": "https://blog.wigologistics.com/2026/04/30/nearshoring-is-creating-new-infrastructure-bottlenecks/",
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "Nearshoring does not remove complexity. It moves some of it closer to home.\n\nThat is where the next set of constraints will determine whether nearshoring delivers on its promise.\n\nThe post Nearshoring",
-      "authorityScore": 76,
-      "publishedDate": ""
-    },
-    {
-      "title": "HUboo Logistics",
-      "organization": "huboo.cc",
-      "url": "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl",
-      "type": "Web research",
-      "supports": "HUboo Logistics\n\n# Planning AI Needs Memory, Not Just Automation\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requires systems ",
-      "authorityScore": 75,
+      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -68,8 +59,17 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
       "type": "Web research",
-      "supports": "AI is moving beyond isolated copilots and technical architecture into coordinated operational decision systems. This ARC Advisory Group white paper explains how supply chain AI is shifting from capabi",
-      "authorityScore": 65,
+      "supports": "AI played a more visible and reliable role inside the warehouse in 2025. Rather than attempting full autonomy, AI supported decision-making by predicting where bottlenecks would occur.\n\nThe strongest ",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "The future of logistics: How generative AI and agentic AI is creating a new era of efficiency and innovation | The Microsoft Cloud Blog",
+      "organization": "microsoft.com",
+      "url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/mobility/2025/03/20/the-future-of-logistics-how-generative-ai-and-agentic-ai-is-creating-a-new-era-of-efficiency-and-innovation/",
+      "type": "Web research",
+      "supports": "Historically, logistics has lagged other industries in digital transformation. More than 75% of industry leaders acknowledge that their sector has been slow to embrace digital innovation. Instead of p",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -78,7 +78,7 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 68,
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -86,16 +86,16 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
-    "https://blog.wigologistics.com/2026/04/30/nearshoring-is-creating-new-infrastructure-bottlenecks/",
-    "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl",
+    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
     "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
+    "https://www.microsoft.com/en-us/microsoft-cloud/blog/mobility/2025/03/20/the-future-of-logistics-how-generative-ai-and-agentic-ai-is-creating-a-new-era-of-efficiency-and-innovation/",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
     "https://innovecs.com/blog/ai-supply-chain-planning/"
   ],
@@ -163,36 +163,9 @@
     ]
   },
   "examplesToInclude": [
-    {
-      "name": "Slack intake workflow",
-      "description": "Automate customer inquiry intake from Slack channels with AI classification and assignment to appropriate team members based on issue type and priority level.",
-      "tools": [
-        "Slack API",
-        "OpenAI GPT",
-        "Zapier"
-      ],
-      "benefits": "Reduces manual triage time by 75% and ensures faster response times for high-priority issues."
-    },
-    {
-      "name": "CRM follow-up workflow",
-      "description": "Automated follow-up sequence for leads in CRM with personalized messaging based on interaction history and deal stage.",
-      "tools": [
-        "Salesforce API",
-        "OpenAI GPT",
-        "Salesforce Flow"
-      ],
-      "benefits": "Increases lead conversion rates by 30% through consistent, timely follow-ups without manual intervention."
-    },
-    {
-      "name": "Support triage workflow",
-      "description": "AI-powered ticket categorization and routing system that analyzes customer messages and assigns to correct support tier with escalation protocols.",
-      "tools": [
-        "Zendesk API",
-        "OpenAI GPT",
-        "Make.com"
-      ],
-      "benefits": "Reduces average resolution time by 40% and improves first-contact resolution rate by automated proper routing."
-    }
+    "Slack intake workflow",
+    "CRM follow-up workflow",
+    "support triage workflow"
   ],
   "suggestedInternalLinks": [
     "/blog/ai-authority-blog-engine",
@@ -206,33 +179,24 @@
   "authorityAngle": "practical_workflow",
   "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
   "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
-  "notebookLmResearchNotes": "Image generation failed: Stable Diffusion API failed: 404 404 page not found\n",
+  "notebookLmResearchNotes": "AI generation failed: nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}",
   "webResearchSources": [
     {
       "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
-      "authorityScore": 81,
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Nearshoring Is Creating New Infrastructure Bottlenecks – WIGO BLOG",
-      "organization": "blog.wigologistics.com",
-      "url": "https://blog.wigologistics.com/2026/04/30/nearshoring-is-creating-new-infrastructure-bottlenecks/",
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "Nearshoring does not remove complexity. It moves some of it closer to home.\n\nThat is where the next set of constraints will determine whether nearshoring delivers on its promise.\n\nThe post Nearshoring",
-      "authorityScore": 76,
-      "publishedDate": ""
-    },
-    {
-      "title": "HUboo Logistics",
-      "organization": "huboo.cc",
-      "url": "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl",
-      "type": "Web research",
-      "supports": "HUboo Logistics\n\n# Planning AI Needs Memory, Not Just Automation\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requires systems ",
-      "authorityScore": 75,
+      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -240,8 +204,17 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
       "type": "Web research",
-      "supports": "AI is moving beyond isolated copilots and technical architecture into coordinated operational decision systems. This ARC Advisory Group white paper explains how supply chain AI is shifting from capabi",
-      "authorityScore": 65,
+      "supports": "AI played a more visible and reliable role inside the warehouse in 2025. Rather than attempting full autonomy, AI supported decision-making by predicting where bottlenecks would occur.\n\nThe strongest ",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "The future of logistics: How generative AI and agentic AI is creating a new era of efficiency and innovation | The Microsoft Cloud Blog",
+      "organization": "microsoft.com",
+      "url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/mobility/2025/03/20/the-future-of-logistics-how-generative-ai-and-agentic-ai-is-creating-a-new-era-of-efficiency-and-innovation/",
+      "type": "Web research",
+      "supports": "Historically, logistics has lagged other industries in digital transformation. More than 75% of industry leaders acknowledge that their sector has been slow to embrace digital innovation. Instead of p",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -250,7 +223,7 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 68,
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -258,57 +231,9 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
       "publishedDate": ""
     }
-  ],
-  "practicalImplementation": {
-    "firstWorkflow": {
-      "name": "Customer Inquiry Processing",
-      "priority": "High",
-      "reason": "Direct revenue impact with clear success metrics",
-      "steps": [
-        "Inbound message detection",
-        "AI content analysis and categorization",
-        "Priority scoring and assignment",
-        "Automated response generation",
-        "Human review and approval step",
-        "Follow-up scheduling"
-      ],
-      "tools": [
-        "Slack",
-        "OpenAI API",
-        "Google Sheets",
-        "Zapier"
-      ],
-      "successMetrics": "Response time under 2 hours, 90% customer satisfaction"
-    }
-  },
-  "commonMistakes": [
-    {
-      "mistake": "Skipping human review steps",
-      "impact": "Increased errors and customer complaints",
-      "solution": "Implement mandatory approval gates for high-impact decisions"
-    },
-    {
-      "mistake": "No error handling protocols",
-      "impact": "Workflow failures cause operational disruptions",
-      "solution": "Build fallback procedures and alert systems for failed tasks"
-    },
-    {
-      "mistake": "Ignoring data quality",
-      "impact": "AI makes decisions based on outdated or incorrect information",
-      "solution": "Regular data validation checks and source verification processes"
-    }
-  ],
-  "implementationChecklist": [
-    "Define clear success metrics before implementation",
-    "Map out complete workflow including failure states",
-    "Establish approval and review checkpoints",
-    "Set up monitoring and alerting for errors",
-    "Document all workflow steps and decision points",
-    "Test with small dataset before full deployment",
-    "Create rollback plan for workflow changes"
   ]
 }

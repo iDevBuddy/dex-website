@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,10 +8,10 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
@@ -19,18 +19,18 @@
     "floor": 78,
     "strictMinimum": 88,
     "trendScore": 68,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 72,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,48 +85,38 @@
     }
   ],
   "authenticity": {
-    "score": 88,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 72,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 745
+      "wordCount": 586
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "MEDIUM",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a clear, practical workflow for implementing Launchpad Build AI's Manufacturing Language Model in industrial automation design",
-      "Content is well-structured with specific examples, tools, and a step-by-step implementation guide",
-      "Addresses a real business problem (slow, error-prone industrial design documentation) with measurable solutions",
-      "Includes specific KPIs, implementation steps, and workflow diagrams that make it actionable for the target audience",
-      "Content effectively combines multiple sources and presents a detailed case study with quantifiable results",
-      "Good use of structured data (sources, case studies, and KPIs) to support the practical value of the workflow",
-      "Addresses common implementation mistakes and includes a troubleshooting section",
-      "Uses a clear expert insight and key takeaways section to guide implementation",
-      "Good balance of technical implementation details with business impact metrics"
+      "The article provides a clear, practical guide on using AI with memory for logistics and service businesses, focusing on a relevant use case (support ticket triage) with measurable business outcomes.",
+      "Content is well-structured with key takeaways, direct answer, step-by-step workflow, and implementation checklist which improves readability and user engagement.",
+      "Use of authoritative sources from reputable logistics and AI industry sources enhances credibility and supports the central thesis effectively.",
+      "The article emphasizes measurable business outcomes (e.g., reduced response time, increased lead conversion) which aligns well with informational search intent and user needs.",
+      "Minor opportunity to improve internal linking and keyword usage for better topical authority and SEO performance."
     ],
     "recommendedFixes": [
-      "Add a section on data security and compliance considerations when using AI in industrial design contexts",
-      "Include specific examples of prompt engineering best practices for the MLM integration to improve accuracy",
-      "Add a cost-benefit analysis section showing potential ROI and implementation costs for business readers",
-      "Provide more detailed technical specifications for integrating with the tools (e.g., API rate limits, error handling specifications)",
-      "Add a specific section on scaling the solution beyond the initial use case",
-      "Include a brief explanation of how the Manufacturing Language Model differs from general AI models",
-      "Add a comparison table of before/after implementation metrics for the case study company",
-      "Expand the 'Tools Needed' section with specific integration steps for each tool (Slack, CRM, etc.)",
-      "Include a section on change management when implementing AI in existing teams/design processes",
-      "Add implementation templates or sample prompts for the design documentation process"
+      "Add internal links to related content (e.g., /blog/ai-authority-blog-engine or other relevant guides) to improve topical depth and site structure for SEO.",
+      "Include more specific keyword variations in headings and subheadings (e.g., 'AI automation in logistics,' 'memory-enabled workflows') to better align with semantic SEO practices.",
+      "Consider adding a brief section comparing traditional automation vs. AI with memory to improve keyword clustering around the core topic.",
+      "Add a 'Why It Matters' section to explicitly connect the benefits of AI memory to business outcomes for improved topical authority and user engagement."
     ]
   }
 }
