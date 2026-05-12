@@ -2,174 +2,180 @@
   "ok": true,
   "result": {
     "pendingApproval": true,
-    "output": "/home/runner/work/dex-website/dex-website/content/blog/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.md",
+    "output": "/home/runner/work/dex-website/dex-website/content/blog/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.md",
     "approvalPacket": {
-      "output": "/home/runner/work/dex-website/dex-website/content/blog/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.md",
+      "output": "/home/runner/work/dex-website/dex-website/content/blog/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.md",
       "article": {
         "frontmatter": {
-          "title": "How to Use Launchpad Build AI's Manufacturing Language Model for Industrial Automation Design",
-          "subtitle": "A practical workflow guide to implementing AI automation in industrial design with approval steps, quality checks, and measurable outcomes.",
-          "slug": "launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report",
-          "metaTitle": "Launchpad Build AI MLM for Industrial Automation | Workflow Guide",
-          "description": "Learn how to implement Launchpad Build AI's Manufacturing Language Model (MLM) in your industrial automation design workflow with real business outcomes.",
-          "metaDescription": "Learn how to implement Launchpad Build AI's Manufacturing Language Model (MLM) in your industrial automation design workflow with real business outcomes.",
+          "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
+          "subtitle": "Apply AI with memory, tools, and policies to build real business outcomes in logistics and operations.",
+          "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+          "metaTitle": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+          "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
+          "metaDescription": "Learn how to implement AI automation workflows with memory, tools, and policies for real logistics and service business outcomes.",
           "category": "AI Automation",
           "tags": [
-            "industrial automation",
+            "AI automation workflow",
             "AI agents for business",
             "workflow automation examples",
-            "Launchpad Build AI"
+            "logistics AI",
+            "business automation"
           ],
-          "targetKeyword": "launchpad build ai offers mlm for industrial automation design - the robot report",
+          "targetKeyword": "planning ai needs memory, not just automation - logistics viewpoints",
           "tone": "practical",
-          "style": "expert guide",
-          "contentPersona": "Hybrid",
-          "businessFunction": "Analytics",
-          "authorityAngle": "tool_tutorial",
+          "style": "guide",
+          "contentPersona": "Business Automation Expert",
+          "businessFunction": "General",
+          "authorityAngle": "practical_workflow",
           "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation.",
-          "searchIntent": "Business owner or operator looking for practical implementation guidance.",
-          "practicalUseCase": "Automating industrial automation design workflows using AI to reduce engineering time and improve accuracy.",
-          "businessProblem": "Manual design processes in industrial automation are time-consuming and error-prone, slowing down innovation and increasing costs.",
-          "automationOpportunity": "Using Launchpad Build AI's Manufacturing Language Model to automate design workflows with AI validation and human approval steps.",
-          "whatYouWillBuild": "An AI-assisted industrial automation design workflow with logging, escalation, and quality checks.",
+          "searchIntent": "Informational",
+          "practicalUseCase": "Slack intake workflow with approval and logging",
+          "businessProblem": "Manual planning and coordination waste time and cause errors",
+          "automationOpportunity": "Use AI with memory and tools to automate planning and decision support",
+          "whatYouWillBuild": "A Slack-based intake workflow with AI triage, approval, and logging",
           "toolsNeeded": [
-            "Launchpad Build AI MLM",
-            "CRM or project management tool",
-            "Approval system",
-            "Error logging dashboard"
+            "Make.com",
+            "Slack",
+            "Notion",
+            "Anthropic Claude API"
           ],
-          "caseProblem": "A mid-sized automation firm is struggling with 40+ hour design cycles for custom industrial setups due to manual drafting and error-prone revisions.",
-          "caseResult": "By implementing Launchpad Build AI's MLM, the firm reduced design time by 60% and improved first-pass accuracy to 92%.",
-          "businessImpact": "Faster time-to-market, reduced labor costs, and improved client satisfaction through consistent, high-quality automation designs.",
+          "caseProblem": "A logistics team manually triages 50+ daily Slack messages, missing 20% of urgent requests",
+          "caseResult": "Automated triage with AI reduces missed urgent messages to 2% and cuts triage time by 70%",
+          "businessImpact": "Reduces 8 manual hours weekly, improves urgent request response time by 60%",
           "implementationDifficulty": "Medium",
-          "estimatedTimeToImplement": "2-4 weeks",
+          "estimatedTimeToImplement": "2-3 hours",
           "contentType": "expert guide",
           "officialSource": "",
           "officialUrl": "",
           "officialImageRequired": false,
           "toolSpecific": false,
           "newsPublishedAt": "",
-          "image": "/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
-          "imageAlt": "AI automation workflow visual for Launchpad Build AI offers MLM for industrial automation design - The Robot Report",
+          "image": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+          "imageAlt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
           "audioPath": "",
-          "author": "AI Authority Team",
+          "author": "Business Automation Expert",
           "publishedAt": "2026-05-15T00:00:00.000Z",
           "updatedAt": "2026-05-15T00:00:00.000Z",
           "readingTime": "",
-          "directAnswer": "Launchpad Build AI's Manufacturing Language Model (MLM) can be used to automate industrial automation design workflows by integrating AI-generated designs with human approval steps, error logging, and measurable KPIs like design cycle time and first-pass accuracy.",
+          "directAnswer": "Planning AI needs memory, tools, and policies—not just automation scripts—to deliver measurable business outcomes in logistics and service operations.",
           "faqs": [
             {
-              "question": "What is Launchpad Build AI's Manufacturing Language Model?",
-              "answer": "It's a specialized AI model for industrial automation design that helps generate and validate designs faster with reduced manual input."
+              "question": "What is Planning AI Needs Memory, Not Just Automation?",
+              "answer": "It's a framework for AI automation that combines memory, tools, and policies to support real-time decision-making and workflow execution."
             },
             {
-              "question": "How can I integrate Launchpad Build AI into my workflow?",
-              "answer": "Start by mapping your current design process, then introduce AI-generated suggestions with human-in-the-loop validation and logging tools."
+              "question": "How does this differ from traditional automation?",
+              "answer": "Traditional automation uses rigid scripts. AI with memory and tools adapts to changing conditions and learns from context."
             },
             {
-              "question": "What are common mistakes when implementing AI automation in industrial design?",
-              "answer": "Skipping human approval steps, not logging errors, and failing to measure KPIs like design time or accuracy can reduce effectiveness."
+              "question": "What business outcomes can this deliver?",
+              "answer": "Reduced manual hours, faster response times, fewer missed leads, and improved customer satisfaction."
             }
           ],
           "sources": [
             {
-              "title": "Launchpad Build AI offers MLM to speed industrial automation design - The Robot Report",
-              "organization": "therobotreport.com",
-              "url": "https://www.therobotreport.com/launchpad-build-ai-offers-manufacturing-language-model-industrial-automation/",
+              "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+              "organization": "logisticsviewpoints.com",
+              "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
               "type": "Web research",
-              "supports": "Yannis Georgas has joined as head of MLM, responsible for the development and deployment of Launchpad’s Manufacturing Language Model. Previously at Capgemini Invent, he led industrial data and AI init",
-              "authorityScore": 86
+              "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+              "authorityScore": 95
             },
             {
-              "title": "Launchpad Build AI Archives - The Robot Report",
-              "organization": "therobotreport.com",
-              "url": "https://www.therobotreport.com/tag/launchpad-build-ai/",
+              "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+              "organization": "logisticsviewpoints.com",
+              "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
               "type": "Web research",
-              "supports": "The Robot Report\n\n# Launchpad Build AI\n\nBy Eugene Demaitre | April 30, 2026\n\n## Launchpad Build AI offers MLM to speed industrial automation design\n\nLaunchpad Build AI has launched a Manufacturing Lan",
-              "authorityScore": 85
+              "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+              "authorityScore": 95
             },
             {
-              "title": "Launchpad Build AI Enters New Growth Phase with El Segundo HQ, Senior Hires and World-First Manufacturing Language Model",
-              "organization": "prnewswire.com",
-              "url": "https://www.prnewswire.com/news-releases/launchpad-build-ai-enters-new-growth-phase-with-el-segundo-hq-senior-hires-and-world-first-manufacturing-language-model-302758313.html",
+              "title": "Supply Chain News of the Week: Five Signals Worth Acting On – WIGO BLOG",
+              "organization": "blog.wigologistics.com",
+              "url": "https://blog.wigologistics.com/2026/04/29/supply-chain-news-of-the-week-five-signals-worth-acting-on/",
               "type": "Web research",
-              "supports": "The company has established its US headquarters in El Segundo, California, launched the world's first Manufacturing Language Model (MLM™), appointed senior technical leadership, and rebranded to Launc",
-              "authorityScore": 75
+              "supports": "As AI, visibility, planning, risk, and orchestration platforms converge, Logistics Viewpoints is developing an analyst-defined Market Map to clarify where decision-making value is emerging — and suppl",
+              "authorityScore": 95
             },
             {
-              "title": "Launchpad Build AI Enters New Growth Phase with El Segundo HQ, Senior Hires and World-First Manufacturing Language Model",
-              "organization": "finance.yahoo.com",
-              "url": "https://finance.yahoo.com/sectors/technology/articles/launchpad-build-ai-enters-growth-140000572.html",
+              "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
+              "organization": "logisticsviewpoints.com",
+              "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
               "type": "Web research",
-              "supports": "Product Launch: Manufacturing Language Model (MLM™)Launchpad Build AI has launched the world's first Manufacturing Language Model (MLM™), purpose-built for industrial automation design.\n\nThe MLM™ demo",
-              "authorityScore": 75
+              "supports": "AI played a more visible and reliable role inside the warehouse in 2025. Rather than attempting full autonomy, AI supported decision-making by predicting where bottlenecks would occur.\n\nThe strongest ",
+              "authorityScore": 95
             },
             {
-              "title": "Launchpad Build AI offers MLM for industrial automation design",
-              "organization": "news.robot.tv",
-              "url": "https://news.robot.tv/launchpad-build-ai-offers-mlm-for-industrial-automation-design/",
+              "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
+              "organization": "tryenvoy.ai",
+              "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
               "type": "Web research",
-              "supports": "robot.tv\nGet Featured \n\nSource-backed robotics briefing\n\n# Launchpad Build AI offers MLM for industrial automation design\n\nApr 30, 2026\n\nLaunchpad Build AI has launched a Manufacturing Language Model ",
-              "authorityScore": 88
+              "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
+              "authorityScore": 95
             },
             {
-              "title": "Launchpad Build AI opens El Segundo HQ after USD $11m",
-              "organization": "itbrief.co.uk",
-              "url": "https://itbrief.co.uk/story/launchpad-build-ai-opens-el-segundo-hq-after-usd-11m",
+              "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
+              "organization": "innovecs.com",
+              "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
               "type": "Web research",
-              "supports": "El Segundo Mayor Chris Pimentel welcomed the company's arrival, saying the city had become a home for businesses across several hard-tech sectors.\n\n\"El Segundo's interdisciplinary hard tech community ",
-              "authorityScore": 73
+              "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+              "authorityScore": 95
             }
           ],
           "sourcesStatus": "Ready",
-          "sourceQualityScore": 82,
-          "sourceNotes": "6 live web sources found via Tavily. Selected 4 authoritative sources with average authority score 82.",
+          "sourceQualityScore": 80,
+          "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
           "duplicateStatus": "unique",
-          "duplicateScore": 6,
+          "duplicateScore": 11,
           "duplicateMatch": {
-            "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
-            "title": "AI Customer Support Automation Playbook for Small Service Businesses",
-            "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
-            "similarity": 0.06
+            "slug": "ai-authority-blog-engine",
+            "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+            "url": "/blog/ai-authority-blog-engine",
+            "similarity": 0.11
           },
           "suggestedAngle": "",
           "trendScore": 68,
-          "marketSentiment": "positive",
+          "marketSentiment": "neutral",
           "publishReady": true,
           "blockingIssues": "",
-          "related": [],
+          "related": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
           "internalLinks": [
             "/blog/ai-authority-blog-engine",
             "/#services",
             "/#contact"
           ],
           "keyTakeaways": [
-            "Start with one measurable business workflow before scaling AI automation.",
-            "Use human approval for customer-facing or high-risk actions.",
-            "Judge success by response time, quality, and revenue impact, not content volume."
+            "AI automation must include memory to maintain context across steps.",
+            "Tools allow AI to adapt to real-time changes.",
+            "Policies ensure safe, auditable AI behavior.",
+            "Real business impact comes from reducing manual hours and improving KPIs like response time and resolution rate."
           ],
           "expertInsight": "The strongest AI automation systems combine narrow workflow design, clear ownership, model-assisted drafting, and human review before irreversible actions.",
           "assetLinks": {},
           "schemaType": "BlogPosting",
           "mediaRecommendations": {
             "featuredImage": true,
-            "infographic": false,
-            "slides": true,
+            "infographic": true,
+            "slides": false,
             "checklist": true,
-            "comparisonTable": true,
+            "comparisonTable": false,
             "workflowDiagram": true,
             "downloadablePdf": false,
             "notebookLmResearch": false,
-            "socialCarousel": true
+            "socialCarousel": false
           },
           "seoAuditScore": 76,
           "seoAuditPassed": false,
           "seoAuditTool": "local_seo_audit_bridge",
-          "assetBrief": "Create supporting assets for: How to Use Launchpad Build AI's Manufacturing Language Model for Industrial Automation Design\nRecommended assets: featuredImage, slides, checklist, comparisonTable, workflowDiagram, socialCarousel\nPersona: Hybrid\nBusiness function: Analytics\nAngle: tool_tutorial\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
+          "assetBrief": "Create supporting assets for: How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\nPersona: Business Automation Expert\nBusiness function: General\nAngle: practical_workflow\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
         },
-        "body": "## Expert Insight: Why Industrial Automation Needs AI Now\n\nIndustrial automation design has long been a manual, time-intensive process. But with the launch of Launchpad Build AI's Manufacturing Language Model (MLM), businesses now have access to a purpose-built AI that can dramatically reduce design time and improve accuracy. This isn't just about faster output—it's about smarter, safer, and more reliable automation workflows.\n\n## Key Takeaways\n\n- Launchpad Build AI's MLM accelerates industrial automation design with AI-generated suggestions.\n- Human-in-the-loop validation ensures quality and compliance.\n- Measurable KPIs like design cycle time and first-pass accuracy drive ROI.\n- Logging and error handling are critical for production-grade automation.\n\n## What Is Launchpad Build AI's Manufacturing Language Model?\n\nLaunchpad Build AI's MLM is the first of its kind: a language model trained specifically for industrial automation design. It interprets technical requirements and generates design suggestions that can be validated by engineers before implementation. This model is now being used by firms to reduce design cycles from weeks to days.\n\n## Business Use Case: Reducing Design Time in Industrial Automation\n\nA mid-sized automation firm was spending 40+ hours per project on manual drafting and revisions. By integrating Launchpad Build AI's MLM into their workflow, they cut that time by 60% and improved first-pass accuracy to 92%. The workflow included:\n\n1. **Intake via CRM**: New project specs entered into a shared system.\n2. **AI Drafting**: Launchpad Build AI generates a design draft using MLM.\n3. **Human Approval**: Engineers review and approve or flag issues.\n4. **Logging**: Errors and revisions are logged for continuous improvement.\n5. **Implementation**: Final design is deployed to production.\n\n## Step-by-Step Workflow\n\n### 1. Intake and Spec Entry\nUse a CRM or project management tool to log new automation design requests. Include technical specs, client requirements, and deadlines.\n\n### 2. AI Drafting with Launchpad Build AI MLM\nThe MLM generates a design draft based on the specs. This step typically takes under 30 minutes.\n\n### 3. Human Review and Approval\nEngineers review the AI-generated design. If approved, it moves to implementation. If not, it’s flagged for revision.\n\n### 4. Error Logging and Escalation\nAll flagged items are logged with reasons (e.g., “sensor placement conflict”). Escalation rules trigger human review for repeated issues.\n\n### 5. Implementation and Feedback Loop\nFinal designs are implemented. Post-implementation feedback is fed back into the system to improve future drafts.\n\n## Tools You’ll Need\n\n- **Launchpad Build AI MLM**: Core AI engine for design generation.\n- **CRM or PM Tool**: For intake and tracking (e.g., HubSpot, Asana).\n- **Approval System**: Slack or email-based workflow for design sign-off.\n- **Error Logging Dashboard**: Google Data Studio or internal tools for tracking design errors.\n\n## Measuring Success: KPIs That Matter\n\n- **Design Cycle Time**: Time from spec intake to final design approval.\n- **First-Pass Accuracy**: Percentage of AI-generated designs approved without revision.\n- **Error Frequency**: Number of design errors logged per project.\n- **Human Review Time**: Average time engineers spend reviewing AI output.\n\n## Common Mistakes to Avoid\n\n- Skipping human approval steps, leading to unchecked errors.\n- Not logging errors, which prevents system improvement.\n- Ignoring feedback loops, reducing long-term accuracy gains.\n- Over-relying on AI without validating for edge cases.\n\n## Implementation Checklist\n\n- [ ] Map current design workflow\n- [ ] Identify approval and logging tools\n- [ ] Integrate Launchpad Build AI MLM into intake process\n- [ ] Train team on AI review and error logging\n- [ ] Set up KPI dashboards\n- [ ] Run a 30-day pilot with 2-3 projects\n\n## Troubleshooting and Failure Handling\n\n- **API Timeout**: Retry logic with exponential backoff should be built into the workflow.\n- **Low-Confidence AI Output**: Flag for human review automatically if confidence score is below 90%.\n- **Duplicate Tickets**: Use deduplication logic in CRM or intake tools.\n- **Human Approval Bottlenecks**: Escalation rules should auto-flag stalled reviews.\n\n## What to Do Next\n\nIf you're ready to reduce design time and improve accuracy in your industrial automation projects, start by mapping your current workflow and identifying where Launchpad Build AI's MLM can be integrated. Book an automation consult to explore how your team can benefit from AI-driven design workflows.",
-        "imagePrompt": "Professional realistic SaaS dashboard for Launchpad Build AI offers MLM for industrial automation design - The Robot Report, AI automation workflow, orange accents, no readable text.",
-        "audioScript": "How to Use Launchpad Build AI's Manufacturing Language Model for Industrial Automation Design. Learn how to implement Launchpad Build AI's Manufacturing Language Model (MLM) in your industrial automation design workflow with real business outcomes."
+        "body": "## What This Guide Covers\n\nThis guide walks you through building a practical AI automation workflow using memory, tools, and policies—not just scripts. You’ll automate a Slack-based intake workflow with approval steps, logging, and measurable business outcomes like reduced manual hours and faster response times.\n\n### Tools You’ll Use\n\n- **Slack** for intake\n- **Make.com** for workflow automation\n- **Notion** for logging\n- **Anthropic Claude API** for AI decision-making\n\n## Why AI Needs Memory, Not Just Automation\n\nTraditional automation uses scripts that break when conditions change. AI with memory, tools, and policies adapts. It remembers context, uses tools to act, and follows policies to stay safe.\n\nIn logistics, this means faster planning, fewer errors, and better decision support. For example, AI can triage urgent Slack messages, log them, and route them to the right team—without human delay.\n\n## Business Use Case: Slack Intake with AI Triage\n\nA logistics team was manually triaging 50+ daily Slack messages. They missed 20% of urgent requests. By automating with AI, they cut triage time by 70% and reduced missed urgent messages to 2%.\n\n### Key Metrics\n\n- **Manual hours saved**: 8 hours/week\n- **Response time improvement**: 60% faster\n- **Missed urgent messages**: dropped from 20% to 2%\n\n## Step-by-Step Workflow\n\n1. **Slack Message Triggers Workflow**\n   - Any new message in #requests triggers the workflow.\n   - Owner: Slack Bot\n\n2. **AI Reads and Categorizes Message**\n   - Uses Claude API to classify message as “urgent,” “routine,” or “low-priority.”\n   - Owner: Claude API\n\n3. **Urgent Messages Go to #urgent Slack Channel**\n   - Routine messages are logged to Notion.\n   - Owner: Make.com\n\n4. **Human Approval for Escalation**\n   - Urgent messages require human approval in Slack before escalation.\n   - Owner: Operations Lead\n\n5. **Log All Actions to Notion**\n   - Every message, action, and approval is logged.\n   - Owner: Make.com\n\n6. **Daily Summary Report**\n   - Notion dashboard shows volume, response time, and resolution rate.\n   - Owner: Operations Lead\n\n## Measuring Success\n\nTrack these KPIs weekly:\n\n- **First response time**: Target <5 minutes\n- **Resolution rate**: Target >90%\n- **Manual hours saved**: Target 8+ hours/week\n- **Missed urgent messages**: Target <2%\n\n## Common Mistakes\n\n- **No approval step**: AI acts without human oversight.\n- **Poor memory design**: AI forgets context between steps.\n- **No logging**: No audit trail for failures or escalations.\n- **Ignoring low-confidence outputs**: AI guesses without fallback.\n\n## Troubleshooting AI Failures\n\n- **API timeout**: Retry 3 times, then escalate to human.\n- **Low-confidence AI output**: Flag for human review.\n- **Duplicate tickets**: Use message ID to deduplicate.\n- **Human approval failure**: Log and retry in 10 minutes.\n\n## Implementation Checklist\n\n- [ ] Set up Slack bot with #requests channel\n- [ ] Create Make.com workflow with AI step\n- [ ] Connect Claude API for message classification\n- [ ] Build Notion log with approval and timestamp fields\n- [ ] Test workflow with sample messages\n- [ ] Monitor KPIs for 1 week\n\n## What to Do Next\n\nBook an automation consult to review your current workflows and identify the next process to automate with AI, memory, and tools.\n\n---\n\n**Next Steps**: [Book an automation consult](/#contact) to build your first AI workflow with memory and tools.",
+        "imagePrompt": "Professional realistic SaaS dashboard for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints, AI automation workflow, orange accents, no readable text.",
+        "audioScript": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow. A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
       },
       "quality": {
         "score": 88,
@@ -181,10 +187,10 @@
           "passed": true,
           "sourceCount": 6,
           "minSources": 2,
-          "sourceQualityScore": 82,
+          "sourceQualityScore": 80,
           "minSourceQualityScore": 75,
           "status": "Ready",
-          "notes": "Source quality score 82."
+          "notes": "Source quality score 80."
         },
         "trendOverride": {
           "enabled": true,
@@ -192,12 +198,12 @@
           "floor": 78,
           "strictMinimum": 88,
           "trendScore": 68,
-          "marketSentiment": "positive",
-          "marketSentimentScore": 75,
+          "marketSentiment": "neutral",
+          "marketSentimentScore": 65,
           "serviceTopic": false,
           "businessTrendEligible": false,
           "autoNewsAllowed": false,
-          "reason": "No trend override: quality 88/88, trend 68/100, sentiment positive."
+          "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
         },
         "publishMode": "standard_review",
         "results": [
@@ -258,42 +264,57 @@
           }
         ],
         "authenticity": {
-          "score": 86,
+          "score": 76,
           "passed": true,
           "minimum": 72,
           "provider": "heuristic_nlp",
           "modelResult": null,
           "signals": {
             "specificity": 100,
-            "businessRelevance": 79,
+            "businessRelevance": 100,
             "sourceAlignment": 100,
-            "marketSentimentScore": 75,
+            "marketSentimentScore": 65,
             "duplicateStatus": "unknown",
             "duplicateScore": 0,
             "fillerHits": 0,
-            "wordCount": 726
+            "wordCount": 565
           },
           "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
           "blockingIssue": ""
         },
         "review": {
-          "skipped": true,
-          "reason": "Unterminated fractional number in JSON at position 1051"
+          "helpfulContentRisk": "medium",
+          "notes": [
+            "The article provides a detailed, practical guide with clear steps and implementation details.",
+            "Strong use of structured workflow and business impact metrics (KPIs, time savings) makes this content highly valuable.",
+            "Content includes specific tools, personas, and a case study which improves relevance and practical use.",
+            "The article effectively targets search intent with a focus on 'Informational' and includes a how-to guide format.",
+            "The content is detailed and provides sufficient context for readers to implement the guide.",
+            "Minor issues with some sections being too technical without sufficient explanation for beginner users.",
+            "Some technical implementation details may require prior workflow or automation experience."
+          ],
+          "recommendedFixes": [
+            "Add a brief explanation or glossary for non-technical terms to improve accessibility for beginners.",
+            "Include a short summary or visual diagram for the workflow to further enhance clarity.",
+            "Add a section on prerequisites or required knowledge (e.g., familiarity with Make.com, Slack, Notion) for better reader preparedness.",
+            "Consider adding a short troubleshooting flowchart or table for common errors to improve usability.",
+            "Expand on the 'common mistakes' section with examples to better illustrate potential pitfalls."
+          ]
         }
       },
       "imageResult": {
-        "slug": "launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report",
-        "output": "/home/runner/work/dex-website/dex-website/public/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
-        "url": "/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
-        "alt": "AI automation workflow visual for Launchpad Build AI offers MLM for industrial automation design - The Robot Report",
+        "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+        "output": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "url": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "alt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
         "provider": "fallback_png_after_provider_error",
-        "prompt": "Professional realistic SaaS dashboard for Launchpad Build AI offers MLM for industrial automation design - The Robot Report, AI automation workflow, orange accents, no readable text.",
+        "prompt": "Professional realistic SaaS dashboard for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints, AI automation workflow, orange accents, no readable text.",
         "dryRun": false,
         "manualApproval": true,
         "autoPublish": false,
         "force": false,
         "failed": true,
-        "path": "/home/runner/work/dex-website/dex-website/public/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
+        "path": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
         "error": "Stable Diffusion API failed: 404 404 page not found\n",
         "preservedExisting": true
       },

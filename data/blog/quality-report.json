@@ -8,10 +8,10 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
@@ -19,12 +19,12 @@
     "floor": 78,
     "strictMinimum": 88,
     "trendScore": 68,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 75,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,26 +85,41 @@
     }
   ],
   "authenticity": {
-    "score": 86,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 79,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 75,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 726
+      "wordCount": 565
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "Unterminated fractional number in JSON at position 1051"
+    "helpfulContentRisk": "medium",
+    "notes": [
+      "The article provides a detailed, practical guide with clear steps and implementation details.",
+      "Strong use of structured workflow and business impact metrics (KPIs, time savings) makes this content highly valuable.",
+      "Content includes specific tools, personas, and a case study which improves relevance and practical use.",
+      "The article effectively targets search intent with a focus on 'Informational' and includes a how-to guide format.",
+      "The content is detailed and provides sufficient context for readers to implement the guide.",
+      "Minor issues with some sections being too technical without sufficient explanation for beginner users.",
+      "Some technical implementation details may require prior workflow or automation experience."
+    ],
+    "recommendedFixes": [
+      "Add a brief explanation or glossary for non-technical terms to improve accessibility for beginners.",
+      "Include a short summary or visual diagram for the workflow to further enhance clarity.",
+      "Add a section on prerequisites or required knowledge (e.g., familiarity with Make.com, Slack, Notion) for better reader preparedness.",
+      "Consider adding a short troubleshooting flowchart or table for common errors to improve usability.",
+      "Expand on the 'common mistakes' section with examples to better illustrate potential pitfalls."
+    ]
   }
 }
