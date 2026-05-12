@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 20,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 56,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 20/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 91,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,32 +94,31 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 56,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 565
+      "wordCount": 971
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "medium",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a detailed, practical guide with clear steps and implementation details.",
-      "Strong use of structured workflow and business impact metrics (KPIs, time savings) makes this content highly valuable.",
-      "Content includes specific tools, personas, and a case study which improves relevance and practical use.",
-      "The article effectively targets search intent with a focus on 'Informational' and includes a how-to guide format.",
-      "The content is detailed and provides sufficient context for readers to implement the guide.",
-      "Minor issues with some sections being too technical without sufficient explanation for beginner users.",
-      "Some technical implementation details may require prior workflow or automation experience."
+      "The article provides practical, step-by-step guidance for implementing Google AI Max in business workflows.",
+      "Content is well-structured around a real-world case study (digital marketing agency) which adds credibility and applicability.",
+      "The article includes clear implementation steps, tools needed, and specific KPIs to track.",
+      "It addresses common mistakes and troubleshooting scenarios, which increases its value for practitioners.",
+      "Use of authoritative sources and data points like time saved and conversion increases supports the article's claims.",
+      "Content includes an implementation checklist and FAQ, improving usability for readers."
     ],
     "recommendedFixes": [
-      "Add a brief explanation or glossary for non-technical terms to improve accessibility for beginners.",
-      "Include a short summary or visual diagram for the workflow to further enhance clarity.",
-      "Add a section on prerequisites or required knowledge (e.g., familiarity with Make.com, Slack, Notion) for better reader preparedness.",
-      "Consider adding a short troubleshooting flowchart or table for common errors to improve usability.",
-      "Expand on the 'common mistakes' section with examples to better illustrate potential pitfalls."
+      "Add a visual workflow diagram to illustrate the steps in the automation process, as suggested by the mediaRecommendations field in frontmatter.",
+      "Include a downloadable checklist or workflow diagram as an asset to increase engagement and provide added value.",
+      "Clarify the distinction between Google AI Max and other Google automation tools to avoid confusion for new users.",
+      "Consider adding an example template or sample workflow configuration for the tools mentioned (e.g., Zapier, CRM settings) for better hands-on implementation guidance.",
+      "Add a section on 'how to verify AI Max is working as intended' for quality assurance during implementation."
     ]
   }
 }
