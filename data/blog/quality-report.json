@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 50,
+    "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 50/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 75,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,31 +94,31 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 530
+      "wordCount": 751
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 20,
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The content provides a clear, practical guide to implementing AI Max in business workflows with real examples.",
-      "Implementation steps are well-defined with specific tools and measurable outcomes.",
-      "The article includes helpful sections like error handling, common mistakes, and troubleshooting.",
-      "Content is focused on providing value through educational implementation steps rather than just theory.",
-      "The target keyword 'the rundown: google expands ai max as automation shifts upstream - digiday' is included in the article naturally through the title and meta descriptions, but the content does not appear to be a direct copy of the source article, which reduces helpfulContentRisk.",
-      "The article provides unique value in explaining practical implementation of AI Max for business automation."
+      "The article provides a well-structured, practical guide to implementing Planning AI with memory in logistics workflows.",
+      "Content is highly relevant to the target audience (founders, operators, marketers, service-business owners) and aligns with search intent (informational).",
+      "Strong use of structured data including frontmatter, key takeaways, step-by-step workflows, and implementation checklists.",
+      "Includes specific business metrics, KPIs, and case study results which add credibility and practical value.",
+      "Addresses common mistakes and troubleshooting scenarios, enhancing the article's utility.",
+      "SEO elements are strong with appropriate use of target keyword in title, meta description, and tags.",
+      "Content demonstrates expertise with expert insight quotes and references to authoritative sources."
     ],
     "recommendedFixes": [
-      "Consider adding a brief summary of the Digiday article's main points to further establish the content's relevance to the keyword's context.",
-      "Include a comparison table of Google AI Max vs. other automation tools to provide additional reader value.",
-      "Add more specific metrics or case study results to further validate the outcomes mentioned.",
-      "Ensure internal linking to related workflow articles or guides for better content authority.",
-      "The target keyword is used appropriately in the title, H1, and meta descriptions, but consider including it in the first 100 words for stronger SEO alignment."
+      "Consider adding internal links to other relevant blog posts or service pages within the 'What to Do Next' section to improve site SEO and user engagement.",
+      "Enhance the 'Tool Recommendations' section by including brief descriptions or key features of each tool to provide more actionable guidance.",
+      "Add a short conclusion section to summarize key points and reinforce the main message about the importance of memory in Planning AI.",
+      "Include a call-to-action (CTA) at the end to encourage reader engagement, such as inviting comments or sharing experiences."
     ]
   }
 }
