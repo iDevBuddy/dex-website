@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 20,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 56,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 20/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 91,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,31 +94,31 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 56,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 971
+      "wordCount": 606
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The article provides practical, step-by-step guidance for implementing Google AI Max in business workflows.",
-      "Content is well-structured around a real-world case study (digital marketing agency) which adds credibility and applicability.",
-      "The article includes clear implementation steps, tools needed, and specific KPIs to track.",
-      "It addresses common mistakes and troubleshooting scenarios, which increases its value for practitioners.",
-      "Use of authoritative sources and data points like time saved and conversion increases supports the article's claims.",
-      "Content includes an implementation checklist and FAQ, improving usability for readers."
+      "The article provides a clear, practical guide focused on implementing AI with memory in business workflows.",
+      "Content is well-structured with a logical flow from concept to implementation.",
+      "Strong use of logistics-specific examples that align with the target audience (founders, operators, marketers).",
+      "Includes authoritative sources and references to real-world use cases, enhancing credibility.",
+      "Addresses practical concerns like approval steps, failure handling, and quality checks, which increases trust and reduces AI-related risks.",
+      "The inclusion of a checklist, key takeaways, and implementation steps makes the content immediately actionable."
     ],
     "recommendedFixes": [
-      "Add a visual workflow diagram to illustrate the steps in the automation process, as suggested by the mediaRecommendations field in frontmatter.",
-      "Include a downloadable checklist or workflow diagram as an asset to increase engagement and provide added value.",
-      "Clarify the distinction between Google AI Max and other Google automation tools to avoid confusion for new users.",
-      "Consider adding an example template or sample workflow configuration for the tools mentioned (e.g., Zapier, CRM settings) for better hands-on implementation guidance.",
-      "Add a section on 'how to verify AI Max is working as intended' for quality assurance during implementation."
+      "Add a visual workflow diagram to illustrate the Slack-based lead triage process for improved clarity.",
+      "Include a downloadable checklist or Notion template to enhance usability.",
+      "Expand on the specific AI tools or prompts used in the workflow to provide more technical depth for advanced readers.",
+      "Clarify how memory is implemented in the AI system (e.g., session storage, vector databases) to better support the core premise of 'memory over automation'.",
+      "Add a brief comparison table of AI tools (e.g., Zapier AI, Notion, Slack setup) to help readers evaluate options."
     ]
   }
 }
