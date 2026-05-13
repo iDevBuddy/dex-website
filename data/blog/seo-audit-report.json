@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 92,
   "minScore": 82,
   "passed": true,
   "checks": [
@@ -20,7 +20,7 @@
     },
     {
       "name": "singleH1HandledByTemplate",
-      "passed": true,
+      "passed": false,
       "points": 8
     },
     {
@@ -50,7 +50,7 @@
     },
     {
       "name": "notThinContent",
-      "passed": false,
+      "passed": true,
       "points": 12
     }
   ],
