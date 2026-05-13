@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,41 +85,35 @@
     }
   ],
   "authenticity": {
-    "score": 89,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 824
+      "wordCount": 570
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 85,
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a detailed, practical guide on implementing AI with memory in logistics workflows, which is a unique and valuable angle.",
-      "Strong use of expert insight and structured workflow explanation helps establish authority and practical application.",
-      "The content includes clear steps, tools, and a real-world case example which supports the informational intent.",
-      "Some sections like 'Troubleshooting' and 'Common Mistakes' add value by addressing potential user concerns and guiding implementation.",
-      "The article is search-intent friendly and offers a clear direct answer. However, it could improve depth in certain areas like technical implementation or integration challenges.",
-      "Lacks cons and trade-offs of using AI with memory, which could increase helpfulness and balance."
+      "The article provides a strong practical framework for implementing memory-aware AI workflows with a case study, structured outline, and implementation steps. However, the content could benefit from clearer distinctions between general AI concepts and logistics-specific applications, and some sections need expansion for better reader comprehension."
     ],
     "recommendedFixes": [
-      "Add a section comparing traditional automation and AI with memory in a table for better clarity and skimmability.",
-      "Include a short section on potential challenges or limitations of using AI with memory to improve content balance and trustworthiness.",
-      "Add more detailed implementation steps or code-level examples for technical readers.",
-      "Include a visual workflow or checklist to improve practicality and skimmability.",
-      "Add a section on how to evaluate if AI with memory is needed vs. traditional automation to help readers self-select.",
-      "Expand on the types of workflows that benefit most from AI with memory to increase relevance for the reader."
+      "Expand the 'Practical Explanation' section with 1-2 concrete examples of memory layers in logistics (e.g., tracking shipment history or supplier performance) to better align with the logistics focus.",
+      "Clarify the difference between 'agentic AI' and general AI automation in the introduction to avoid conceptual ambiguity for business readers.",
+      "Add a short section comparing memory-aware vs. memoryless AI automation in logistics workflows to highlight the business value (e.g., reduced rerouting, faster exception handling).",
+      "Include a sentence in the 'Measuring Success' section that ties KPIs directly to business outcomes like cost savings or error reduction.",
+      "Add one internal link to the AI Authority Blog Engine article for cross-content SEO value and reader journey support."
     ]
   }
 }
