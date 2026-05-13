@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,33 +85,41 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 89,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 594
+      "wordCount": 824
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
-    "notes": "The article provides a clear, practical guide to building AI workflows with memory for logistics use cases. The content is well-researched and provides actionable steps. However, the article could benefit from more detailed examples of prompt engineering for the AI classification step, and a deeper explanation of how the 'memory' is technically implemented in the workflow. The article also assumes a certain level of technical know-how from the reader, which may not suit all in the target audience.",
+    "helpfulContentRisk": 85,
+    "notes": [
+      "The article provides a detailed, practical guide on implementing AI with memory in logistics workflows, which is a unique and valuable angle.",
+      "Strong use of expert insight and structured workflow explanation helps establish authority and practical application.",
+      "The content includes clear steps, tools, and a real-world case example which supports the informational intent.",
+      "Some sections like 'Troubleshooting' and 'Common Mistakes' add value by addressing potential user concerns and guiding implementation.",
+      "The article is search-intent friendly and offers a clear direct answer. However, it could improve depth in certain areas like technical implementation or integration challenges.",
+      "Lacks cons and trade-offs of using AI with memory, which could increase helpfulness and balance."
+    ],
     "recommendedFixes": [
-      "Add a brief explanation or example of the prompt engineering involved in the AI triage step",
-      "Include a short technical explanation of how to implement memory using Notion or Airtable in the workflow",
-      "Optionally, add a section on how to handle rate limits and API failures with the AI API",
-      "Add a sentence or two on how to secure the API keys and manage the data in the Notion or Airtable base for beginners",
-      "Include a brief mention of how to handle data privacy, especially when using 3rd party tools like Notion and Make.com"
+      "Add a section comparing traditional automation and AI with memory in a table for better clarity and skimmability.",
+      "Include a short section on potential challenges or limitations of using AI with memory to improve content balance and trustworthiness.",
+      "Add more detailed implementation steps or code-level examples for technical readers.",
+      "Include a visual workflow or checklist to improve practicality and skimmability.",
+      "Add a section on how to evaluate if AI with memory is needed vs. traditional automation to help readers self-select.",
+      "Expand on the types of workflows that benefit most from AI with memory to increase relevance for the reader."
     ]
   }
 }
