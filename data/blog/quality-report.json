@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,42 +85,33 @@
     }
   ],
   "authenticity": {
-    "score": 72,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 466
+      "wordCount": 594
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
     "helpfulContentRisk": "Low",
-    "notes": [
-      "The article provides practical, actionable guidance for implementing AI with memory in logistics workflows.",
-      "Content is well-structured with clear takeaways, step-by-step instructions, and expert insights.",
-      "Includes relevant KPIs and troubleshooting tips that add significant value for the target audience.",
-      "Uses specific examples (Slack-based workflow) that make the content relatable and implementable.",
-      "Incorporates expert insight and real-world business impact metrics (40% time reduction, 30% accuracy improvement).",
-      "Sources are authoritative and relevant, supporting key claims about AI in logistics.",
-      "Content aligns well with search intent (informational) and target keyword focus."
-    ],
+    "notes": "The article provides a clear, practical guide to building AI workflows with memory for logistics use cases. The content is well-researched and provides actionable steps. However, the article could benefit from more detailed examples of prompt engineering for the AI classification step, and a deeper explanation of how the 'memory' is technically implemented in the workflow. The article also assumes a certain level of technical know-how from the reader, which may not suit all in the target audience.",
     "recommendedFixes": [
-      "Add a brief section on how to choose the right AI tool with memory capabilities for logistics planning.",
-      "Include a short comparison of traditional automation vs. AI with memory to highlight the value proposition more clearly.",
-      "Expand on the implementation checklist with estimated timeframes for each step.",
-      "Add a sentence or two on data privacy considerations when implementing AI memory in logistics workflows.",
-      "Consider adding a visual workflow diagram to improve skimmability and reinforce the step-by-step process.",
-      "Clarify how the AI agent with memory integrates with existing CRM and Slack setups for better practical adoption."
+      "Add a brief explanation or example of the prompt engineering involved in the AI triage step",
+      "Include a short technical explanation of how to implement memory using Notion or Airtable in the workflow",
+      "Optionally, add a section on how to handle rate limits and API failures with the AI API",
+      "Add a sentence or two on how to secure the API keys and manage the data in the Notion or Airtable base for beginners",
+      "Include a brief mention of how to handle data privacy, especially when using 3rd party tools like Notion and Make.com"
     ]
   }
 }
