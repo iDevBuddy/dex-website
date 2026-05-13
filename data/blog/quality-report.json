@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -18,19 +18,19 @@
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
+    "trendScore": 68,
     "marketSentiment": "neutral",
     "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 83,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,30 +98,26 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 975
+      "wordCount": 553
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low - The content provides substantial value with structured guidance on implementing Planning AI with memory. It includes specific workflows, tools, KPIs, and practical implementation steps that directly address the target problem of useful business automation. The content is informationally rich, actionable, and avoids generic AI advice. Minor improvements could enhance clarity, but overall it serves a clear purpose for the target audience.",
+    "helpfulContentRisk": 0.2,
     "notes": [
-      "Content effectively addresses a specific, non-trivial business problem with practical workflow guidance.",
-      "Includes a clear step-by-step implementation guide with tool recommendations (Slack, CRM, Notion, etc.) and KPIs.",
-      "Addresses a service-business scenario with operational context, approval steps, and quality checks.",
-      "Content includes structured guidance for a specific workflow (support tri3age) with measurable outcomes.",
-      "Minor redundancy in the 'Business Use Case' section (repeats the same sentence twice) - consider revising for content quality.",
-      "The 'Common Mistakes' section effectively highlights what to avoid, aligning with the intent to provide practical, safe guidance.",
-      "Tone and structure align with the 'expert guide' style and 'business automation expert' persona.",
-      "The article could further emphasize the connection between memory in AI and structured operational context for stronger topical relevance."
+      "The content appears to be high quality and focused on practical business applications of AI automation in logistics.",
+      "The article provides a clear, step-by-step implementation guide which is valuable for the target audience.",
+      "Strong emphasis on measurable outcomes and KPIs makes the content actionable for business users.",
+      "The content includes expert insights and practical advice, reducing the risk of unhelpful or AI-generated content flags.",
+      "The article emphasizes structured context and human-in-the-loop validation, which aligns with search quality guidelines for helpful content."
     ],
     "recommendedFixes": [
-      "Remove redundant sentence in 'Business Use Case' section to improve readability.",
-      "Add a brief example or case study to illustrate the workflow in action for better user understanding.",
-      "Clarify the connection between memory and structured operational context for better topical focus.",
-      "Emphasize the role of memory in AI planning more explicitly to align with the article's core premise.",
-      "Consider adding a visual workflow diagram to support the 'expert guide' and 'practical_workflow' content persona and angle.",
-      "Add a sentence to the conclusion that reinforces the value of memory in AI planning for logistics."
+      "Ensure all steps include specific, actionable guidance with business context",
+      "Add more specific examples of tools for each step of the workflow",
+      "Include more detailed troubleshooting steps for common implementation issues",
+      "Clarify the exact process for setting up the AI agent platform integration",
+      "Provide more specific metrics or ranges for the KPIs to set clearer expectations"
     ]
   }
 }

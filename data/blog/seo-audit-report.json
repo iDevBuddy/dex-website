@@ -1,11 +1,11 @@
 {
-  "score": 92,
+  "score": 76,
   "minScore": 82,
-  "passed": true,
+  "passed": false,
   "checks": [
     {
       "name": "metaTitleLength",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -20,7 +20,7 @@
     },
     {
       "name": "singleH1HandledByTemplate",
-      "passed": false,
+      "passed": true,
       "points": 8
     },
     {
@@ -50,10 +50,10 @@
     },
     {
       "name": "notThinContent",
-      "passed": true,
+      "passed": false,
       "points": 12
     }
   ],
   "tool": "local_seo_audit_bridge",
-  "notes": "SEO audit passed."
+  "notes": "SEO audit needs improvement before automatic publishing."
 }
