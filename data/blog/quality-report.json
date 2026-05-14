@@ -1,17 +1,17 @@
 {
-  "score": 100,
-  "strictPassed": true,
-  "passed": true,
+  "score": 88,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
@@ -19,18 +19,18 @@
     "floor": 78,
     "strictMinimum": 88,
     "trendScore": 68,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 75,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment positive."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,46 +85,40 @@
     }
   ],
   "authenticity": {
-    "score": 86,
-    "passed": true,
+    "score": 67,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 79,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 75,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 822
+      "wordCount": 508
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "LOW",
     "notes": [
-      "The article provides a comprehensive, practical guide to implementing memory-driven AI automation in logistics contexts.",
-      "Content is well-researched with multiple authoritative sources cited and linked.",
-      "The tone and depth align well with the target persona of business automation experts and decision-makers.",
-      "The article includes structured implementation steps, tools, and KPIs, which adds practical value.",
-      "Use of checklists, step-by-step guides, and workflow examples supports reader understanding and application.",
-      "Content avoids generic AI advice and focuses on structured, practical workflows, addressing the business problem noted.",
-      "Addresses key concerns like data privacy, human oversight, and system integration, which reduces risk of promoting unsafe or incomplete implementations.",
-      "Content is positioned as informational with a clear 'practical guide' format, matching the search intent.",
-      "Internal and external linking to authoritative sources supports content credibility and depth."
+      "The content provides practical, step-by-step implementation guidance for Launchpad Build AI's Manufacturing Language Model in industrial automation design",
+      "Article includes specific business outcomes, use cases, and clear value proposition",
+      "Content avoids generic AI advice and focuses on measurable workflows with quality control steps",
+      "Addresses business concerns about maintaining quality with human review processes",
+      "Well-structured with tools needed, implementation checklist, and common mistakes to avoid",
+      "Includes specific KPIs for measuring success and business impact metrics"
     ],
     "recommendedFixes": [
-      "Consider adding a brief summary or callout box in the introduction to immediately signal the article's practical value and target use cases (e.g., 'This guide shows how to implement AI automation with memory for logistics tasks like support triage and CRM follow-ups.').",
-      "Add anchor links or a 'Table of Contents' for improved user experience and easier navigation of the guide.",
-      "Clarify the distinction between 'memory' and 'chat history' earlier in the article to help readers understand the core concept quickly.",
-      "Include a short section on 'Why This Matters for Your Business' to connect the technical content to real ROI earlier and reinforce value.",
-      "Add a visual, such as a workflow diagram or checklist, to increase skimmability and support the article’s 'practical' angle.",
-      "Consider adding a brief case study or example from a real-world logistics scenario to increase relatability for the target audience.",
-      "Ensure all outbound links have appropriate `rel='nofollow'` or `rel='sponsored'` tags if not directly endorsing the linked content, to stay compliant with SEO best practices.",
-      "Add a 'Key Terms' or 'Glossary' section to clarify technical terms like 'structured memory' and 'AI agents' for broader audience accessibility."
+      "Add a clear definition of Launchpad Build AI's Manufacturing Language Model and its unique value for the manufacturing domain",
+      "Include a brief explanation of how the Manufacturing Language Model differs from general-purpose models",
+      "Add specific examples of prompt engineering or customizations for industrial automation use cases",
+      "Include examples of the AI output for industrial automation design documentation",
+      "Add a section comparing manual documentation vs. AI-assisted documentation in the workflow"
     ]
   }
 }

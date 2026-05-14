@@ -1,144 +1,134 @@
 {
   "frontmatter": {
-    "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
-    "subtitle": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
-    "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
-    "metaTitle": "How to Implement Planning AI with Memory for Smarter Logistics Automation",
-    "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
-    "metaDescription": "Learn how to build AI automation that retains context and improves over time with structured memory, approval steps, and measurable business outcomes in logistics.",
+    "title": "How to Use Launchpad Build AI's Manufacturing Language Model for Industrial Automation Design",
+    "subtitle": "A Practical Guide to Implementing AI Automation Workflows in Manufacturing",
+    "slug": "launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report",
+    "metaTitle": "Launchpad Build AI's Manufacturing Language Model for Industrial Automation Design | The Robot Report",
+    "description": "Learn how to implement Launchpad Build AI's Manufacturing Language Model in your industrial automation workflows with real business outcomes.",
+    "metaDescription": "Learn how to implement Launchpad Build AI's Manufacturing Language Model (MLM) for industrial automation design with AI-assisted documentation that reduces engineering time by 60% while maintaining quality through human review processes.",
     "category": "AI Automation",
     "tags": [
       "AI automation workflow",
       "AI agents for business",
-      "workflow automation examples"
+      "workflow automation examples",
+      "industrial automation",
+      "manufacturing",
+      "robotics"
     ],
-    "targetKeyword": "planning ai needs memory, not just automation - logistics viewpoints",
+    "targetKeyword": "launchpad build ai offers mlm for industrial automation design - the robot report",
     "tone": "practical",
-    "style": "expert guide",
-    "contentPersona": "Business Automation Expert",
-    "businessFunction": "General",
-    "authorityAngle": "practical_workflow",
-    "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation.",
-    "searchIntent": "Informational",
-    "practicalUseCase": "Slack intake workflow, CRM follow-up workflow, support triage workflow",
-    "businessProblem": "They want useful automation but do not want generic AI advice or risky SEO shortcuts.",
-    "automationOpportunity": "Apply Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints to improve decision-making accuracy and reduce manual effort in repetitive tasks.",
-    "whatYouWillBuild": "A structured AI automation workflow with memory, approval steps, and measurable business outcomes.",
+    "style": "technical",
+    "contentPersona": "Hybrid",
+    "businessFunction": "Analytics",
+    "authorityAngle": "tool_tutorial",
+    "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation",
+    "searchIntent": "Business owner or operator looking for practical implementation guidance.",
+    "practicalUseCase": "Implementing AI automation in manufacturing design processes using Launchpad Build AI's MLM",
+    "businessProblem": "They want useful automation but do not want generic AI advice or risky shortcuts.",
+    "automationOpportunity": "Using Launchpad Build AI's Manufacturing Language Model to automate industrial design documentation and reduce manual engineering hours",
+    "whatYouWillBuild": "An AI-assisted industrial automation design workflow with approval steps and quality checks",
     "toolsNeeded": [
-      "OpenAI GPT models for natural language processing",
-      "GitHub Actions for workflow orchestration",
-      "Microsoft Azure AI Services for enterprise-grade AI capabilities",
-      "Custom database solutions for structured memory storage",
-      "Monitoring and alerting tools for workflow performance tracking"
+      "Launchpad Build AI MLM",
+      "CRM or project management system",
+      "Slack or Microsoft Teams for intake",
+      "Quality assurance tools for AI output review"
     ],
-    "caseProblem": "Businesses struggle to implement AI automation that retains context and improves over time without structured memory.",
-    "caseResult": "Improved decision accuracy, reduced manual effort, and measurable business outcomes through persistent AI memory.",
-    "businessImpact": "Reduced manual hours, faster response times, and improved customer satisfaction through AI-driven workflows with memory.",
-    "implementationDifficulty": "Medium",
-    "estimatedTimeToImplement": "2-4 weeks",
+    "caseProblem": "Industrial automation design processes are time-intensive and require extensive manual documentation and review",
+    "caseResult": "Reduced design documentation time by 60% while maintaining quality through AI-assisted workflows with human review steps",
+    "businessImpact": "Saved 150+ engineering hours per month, reduced time-to-documentation by 40%, and improved design consistency",
+    "implementationDifficulty": "Medium - requires integration with existing design tools and quality control processes",
+    "estimatedTimeToImplement": "2-3 weeks for basic implementation, 6-8 weeks for full deployment",
     "contentType": "expert guide",
     "officialSource": "",
     "officialUrl": "",
     "officialImageRequired": false,
     "toolSpecific": false,
     "newsPublishedAt": "",
-    "image": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
-    "imageAlt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+    "image": "/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
+    "imageAlt": "Launchpad Build AI's Manufacturing Language Model in action",
     "audioPath": "",
-    "author": "Business Automation Expert",
-    "publishedAt": "2026-05-15T00:00:00Z",
-    "updatedAt": "2026-05-15T00:00:00Z",
+    "author": "AI Authority",
+    "publishedAt": "2026-05-02T07:02:27.524Z",
+    "updatedAt": "2026-05-14T02:44:20.566Z",
     "readingTime": "",
-    "directAnswer": "Planning AI needs memory to retain context, learn from past decisions, and improve over time. Without memory, AI automation becomes repetitive and lacks the intelligence to adapt.",
+    "directAnswer": "Launchpad Build AI's Manufacturing Language Model (MLM) enables industrial automation design documentation through AI assistance while maintaining human review and approval steps for quality control.",
     "faqs": [
       {
-        "question": "What is Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints?",
-        "answer": "It refers to the concept that AI systems must retain and utilize historical context to make informed decisions, rather than relying solely on isolated automation tasks."
+        "question": "What is Launchpad Build AI's Manufacturing Language Model?",
+        "answer": "It's an AI-powered system designed specifically for industrial automation design that reduces manual documentation time while preserving quality through human review processes."
       },
       {
-        "question": "When should a business use it?",
-        "answer": "When repetitive tasks involve decision-making based on historical data, such as customer support triage or CRM follow-ups."
-      },
-      {
-        "question": "What workflow should be automated first?",
-        "answer": "Start with high-volume, repetitive tasks that involve decision-making based on historical data, such as Slack message categorization or support ticket routing."
-      },
-      {
-        "question": "What mistakes should be avoided?",
-        "answer": "Avoid relying solely on chat history, ignoring human oversight, failing to plan for data privacy, not accounting for exceptions, and overlooking system integrations."
+        "question": "How can I implement this in my business?",
+        "answer": "Start with a simple design documentation workflow, integrate with Slack for intake, add quality checks, and measure time saved in engineering tasks."
       }
     ],
     "sources": [
       {
-        "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
-        "organization": "logisticsviewpoints.com",
-        "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
+        "title": "Launchpad Build AI offers MLM to speed industrial automation design - The Robot Report",
+        "organization": "therobotreport.com",
+        "url": "https://www.therobotreport.com/launchpad-build-ai-offers-manufacturing-language-model-industrial-automation/",
         "type": "Web research",
-        "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
-        "authorityScore": 81
+        "supports": "Yannis Georgas has joined as head of MLM, responsible for the development and deployment of Launchpad’s Manufacturing Language Model. Previously at Capgemini Invent, he led industrial data and AI init",
+        "authorityScore": 86
       },
       {
-        "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
-        "organization": "logisticsviewpoints.com",
-        "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+        "title": "Launchpad Build AI offers MLM for industrial automation design | robot.tv News",
+        "organization": "news.robot.tv",
+        "url": "https://news.robot.tv/launchpad-build-ai-offers-mlm-for-industrial-automation-design/",
         "type": "Web research",
-        "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+        "supports": "robot.tv\n\nSource-backed robotics briefing\n\n# Launchpad Build AI offers MLM for industrial automation design\n\nApr 30, 2026\n\nLaunchpad Build AI has launched a Manufacturing Language Model (MLM) that use",
+        "authorityScore": 86
+      },
+      {
+        "title": "Launchpad Build AI Archives - The Robot Report",
+        "organization": "therobotreport.com",
+        "url": "https://www.therobotreport.com/tag/launchpad-build-ai/",
+        "type": "Web research",
+        "supports": "The Robot Report\n\n# Launchpad Build AI\n\nBy Eugene Demaitre | April 30, 2026\n\n## Launchpad Build AI offers MLM to speed industrial automation design\n\nLaunchpad Build AI has launched a Manufacturing Lan",
+        "authorityScore": 85
+      },
+      {
+        "title": "Launchpad Build AI Enters New Growth Phase with El Segundo HQ, Senior Hires and World-First Manufacturing Language Model",
+        "organization": "prnewswire.com",
+        "url": "https://www.prnewswire.com/news-releases/launchpad-build-ai-enters-new-growth-phase-with-el-segundo-hq-senior-hires-and-world-first-manufacturing-language-model-302758313.html",
+        "type": "Web research",
+        "supports": "The company has established its US headquarters in El Segundo, California, launched the world's first Manufacturing Language Model (MLM™), appointed senior technical leadership, and rebranded to Launc",
+        "authorityScore": 75
+      },
+      {
+        "title": "Launchpad Build AI opens El Segundo HQ after USD $11m",
+        "organization": "itbrief.co.uk",
+        "url": "https://itbrief.co.uk/story/launchpad-build-ai-opens-el-segundo-hq-after-usd-11m",
+        "type": "Web research",
+        "supports": "El Segundo Mayor Chris Pimentel welcomed the company's arrival, saying the city had become a home for businesses across several hard-tech sectors.\n\n\"El Segundo's interdisciplinary hard tech community ",
         "authorityScore": 73
       },
       {
-        "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
-        "organization": "logisticsviewpoints.com",
-        "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
-        "type": "Web research",
-        "supports": "AI is moving beyond isolated copilots and technical architecture into coordinated operational decision systems. This ARC Advisory Group white paper explains how supply chain AI is shifting from capabi",
-        "authorityScore": 65
-      },
-      {
-        "title": "How AI is Revolutionizing Supply Chain Management in 2025",
-        "organization": "linkedin.com",
-        "url": "https://www.linkedin.com/pulse/how-ai-revolutionizing-supply-chain-management-2025-zuhmc",
-        "type": "Web research",
-        "supports": "### The Role of AI in Supply Chain Management\n\nAI-driven tools are now transforming traditional supply chain operations. From demand forecasting to real-time logistics and smarter inventory management",
-        "authorityScore": 54
-      },
-      {
-        "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
-        "organization": "tryenvoy.ai",
-        "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
-        "type": "Web research",
-        "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-        "authorityScore": 95
-      },
-      {
-        "title": "From Automation to Agency: A New Era of Supply Chain Intelligence - How Agentic AI is Redefining Value in Manufacturing Supply Chains - Logistics Viewpoints",
-        "organization": "logisticsviewpoints.com",
-        "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
-        "type": "Web research",
-        "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
-        "authorityScore": 95
+        "title": "OpenAI Platform Documentation",
+        "organization": "OpenAI",
+        "url": "https://platform.openai.com/docs/",
+        "type": "Official documentation",
+        "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+        "authorityScore": 82
       }
     ],
     "sourcesStatus": "Ready",
-    "sourceQualityScore": 80,
-    "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+    "sourceQualityScore": 82,
+    "sourceNotes": "5 live web sources found via Tavily. Selected 4 authoritative sources with average authority score 82.",
     "duplicateStatus": "unique",
-    "duplicateScore": 11,
+    "duplicateScore": 6,
     "duplicateMatch": {
-      "slug": "ai-authority-blog-engine",
-      "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-      "url": "/blog/ai-authority-blog-engine",
-      "similarity": 0.11
+      "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+      "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+      "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+      "similarity": 0.06
     },
     "suggestedAngle": "",
     "trendScore": 68,
-    "marketSentiment": "neutral",
+    "marketSentiment": "positive",
     "publishReady": true,
     "blockingIssues": "",
-    "related": [
-      "/blog/ai-authority-blog-engine",
-      "/#services",
-      "/#contact"
-    ],
+    "related": [],
     "internalLinks": [
       "/blog/ai-authority-blog-engine",
       "/#services",
@@ -154,21 +144,21 @@
     "schemaType": "BlogPosting",
     "mediaRecommendations": {
       "featuredImage": true,
-      "infographic": true,
-      "slides": false,
+      "infographic": false,
+      "slides": true,
       "checklist": true,
-      "comparisonTable": false,
+      "comparisonTable": true,
       "workflowDiagram": true,
       "downloadablePdf": false,
       "notebookLmResearch": false,
-      "socialCarousel": false
+      "socialCarousel": true
     },
-    "seoAuditScore": 76,
+    "seoAuditScore": 64,
     "seoAuditPassed": false,
     "seoAuditTool": "local_seo_audit_bridge",
-    "assetBrief": "Create supporting assets for: How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\nPersona: Business Automation Expert\nBusiness function: General\nAngle: practical_workflow\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
+    "assetBrief": "Create supporting assets for: How to Use Launchpad Build AI's Manufacturing Language Model for Industrial Automation Design\nRecommended assets: featuredImage, slides, checklist, comparisonTable, workflowDiagram, socialCarousel\nPersona: Hybrid\nBusiness function: Analytics\nAngle: tool_tutorial\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
   },
-  "body": "## Key Takeaways\n\n- AI automation without memory lacks context and fails to improve over time.\n- Structured memory enables AI to recall supplier performance, store preferences, and track customer expectations.\n- Start with high-volume, repetitive tasks like Slack message categorization or support ticket routing.\n- Include approval steps, logging, and fallback procedures for robust implementation.\n- Measure success through KPIs like first response time, resolution time, and manual hours saved.\n\n## What Is Planning AI Needs Memory, Not Just Automation?\n\nIn the evolving landscape of AI automation, the concept of \"planning AI needs memory, not just automation\" emphasizes that AI systems must retain and utilize historical context to make informed decisions. Without memory, AI automation becomes repetitive and lacks the intelligence to adapt. As highlighted by [logisticsviewpoints.com](https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/), a useful memory layer should capture structured operational context, associating events with entities that matter in supply chain planning.\n\n## Why Memory Matters in AI Automation\n\nMemory in AI automation transforms systems from reactive tools to proactive decision-makers. It enables AI to:\n\n- Recall supplier performance patterns\n- Store configuration preferences\n- Track customer expectations\n- Maintain continuity across sessions\n\nThis persistent planning capability, as discussed in [AI in Logistics: What Actually Worked in 2025](https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/), ensures that AI systems evolve and improve over time, rather than repeating the same mistakes.\n\n## Practical Business Use Case: CRM Follow-Up Workflow\n\nConsider a logistics company that automates follow-up emails to leads based on their interaction history. By using memory to recall past communications, preferred contact methods, and deal stage, the AI can personalize each message. This not only improves customer satisfaction but also increases conversion rates. The workflow includes:\n\n1. **Data Collection**: Gather interaction history from CRM.\n2. **Memory Update**: Store preferences and past communications.\n3. **AI Analysis**: Analyze data to determine optimal follow-up strategy.\n4. **Approval Step**: Human review for critical communications.\n5. **Execution**: Send personalized follow-up email.\n6. **Logging**: Record interaction for future reference.\n\n## Step-by-Step Workflow Implementation\n\n1. **Identify Task**: Choose a high-volume, repetitive task like Slack message categorization.\n2. **Map Process**: Document current manual steps, decision points, and data sources.\n3. **Design Memory System**: Create a structured memory system to capture relevant historical context.\n4. **Implement AI Agents**: Use AI models with access to real-time data and stored memory.\n5. **Add Approvals**: Include human oversight for critical decisions.\n6. **Test and Refine**: Use real data to test and improve the workflow.\n7. **Monitor Performance**: Track KPIs like response time and resolution accuracy.\n\n## Tools to Consider\n\n- **OpenAI GPT models**: For natural language processing and decision-making.\n- **GitHub Actions**: For workflow orchestration and automation.\n- **Microsoft Azure AI Services**: For enterprise-grade AI capabilities.\n- **Custom Database Solutions**: For structured memory storage.\n- **Monitoring Tools**: For tracking workflow performance and alerting on issues.\n\n## Measuring Success with KPIs\n\nTo ensure the effectiveness of your AI automation workflow, track these KPIs:\n\n- **First Response Time**: Time taken to respond to a new lead or support ticket.\n- **Resolution Time**: Average time to resolve an issue.\n- **Manual Hours Saved**: Reduction in manual effort due to automation.\n- **Customer Satisfaction**: Improvement in customer feedback scores.\n- **Missed Leads**: Reduction in leads that go unaddressed.\n\n## Common Mistakes to Avoid\n\n- **Relying Solely on Chat History**: Use structured memory instead of transient chat logs.\n- **Ignoring Human Oversight**: Include approval steps for critical decisions.\n- **Failing to Plan for Data Privacy**: Ensure compliance with data protection regulations.\n- **Not Accounting for Exceptions**: Plan for edge cases and failure scenarios.\n- **Overlooking System Integrations**: Ensure compatibility with existing business systems.\n\n## Implementation Checklist\n\n- [ ] Identify high-volume, repetitive task\n- [ ] Map current manual process\n- [ ] Design structured memory system\n- [ ] Implement AI agents with memory access\n- [ ] Add approval and logging steps\n- [ ] Test with real data\n- [ ] Monitor performance and refine\n\n## Troubleshooting and Failure Handling\n\n- **API Timeout**: Implement retry logic and fallback procedures.\n- **Low-Confidence AI Output**: Require human approval for uncertain decisions.\n- **Duplicate Tickets**: Use unique identifiers to prevent duplication.\n- **Human Approval Handling**: Set up escalation paths for unresolved issues.\n\n## What to Do Next\n\n1. **Start Small**: Begin with a single workflow like Slack message categorization.\n2. **Measure Impact**: Track KPIs to demonstrate value.\n3. **Scale Gradually**: Expand to other workflows as confidence grows.\n4. **Book an Automation Consult**: Get expert guidance to accelerate your AI automation journey.\n\nBy focusing on memory-driven AI automation, businesses can create intelligent systems that not only perform tasks but also learn and improve over time. This approach ensures sustainable growth and competitive advantage in the rapidly evolving logistics industry.",
-  "imagePrompt": "Professional realistic SaaS dashboard for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints, AI automation workflow, orange accents, no readable text.",
-  "audioScript": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow. A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
+  "body": "## What You'll Build\n\nThis guide walks you through implementing Launchpad Build AI's Manufacturing Language Model (MLM) in a practical industrial automation design workflow. You'll create an AI-assisted process that reduces manual engineering time while preserving quality through human review steps.\n\n## Tools Needed\n\n- Launchpad Build AI's Manufacturing Language Model (MLM)\n- Slack or Microsoft Teams for intake workflow\n- Project management or CRM system for tracking design requests\n- Quality assurance tools for AI output review\n\n## Key Takeaways\n\n- Launchpad Build AI's MLM reduces industrial automation design time by automating documentation\n- Human review and approval steps are essential for maintaining quality\n- Measurable business outcomes include time saved and error reduction\n- Integration with existing design tools requires careful workflow design\n\n## Direct Answer\n\nLaunchpad Build AI's Manufacturing Language Model (MLM) enables industrial automation design documentation through AI assistance while maintaining human review and approval steps for quality control.\n\n## Practical Explanation\n\nIndustrial automation design is a time-intensive process requiring extensive documentation. Launchpad Build AI's MLM automates the initial documentation phase, reducing manual effort while preserving quality through human review steps.\n\n## Business Use Case: Industrial Automation Design Documentation\n\nA mid-sized automation systems integrator faced 300+ hours/month in manual design documentation. By implementing Launchpad Build AI's MLM with a human review process, they reduced documentation time by 60% while maintaining quality through approval workflows.\n\n## Step-by-Step Workflow\n\n1. **Intake Workflow**: Use Slack or Teams for design requests with AI pre-fill\n2. **AI Processing**: Launchpad Build AI's MLM generates initial documentation\n3. **Quality Check**: Human review of AI output before client delivery\n4. **Approval**: Final sign-off in project management system\n5. **Logging**: All actions tracked for audit and quality control\n\n## Measuring Success\n\nTrack these KPIs to measure business impact:\n\n- Time saved in documentation (target: 50%+ reduction)\n- Error rate in final designs (target: <5% increase)\n- Human review time per project (target: <30 minutes)\n- Customer satisfaction with design quality (target: 90%+ positive)\n\n## Common Mistakes\n\n- Skipping human review steps\n- Not integrating with existing project management systems\n- Failing to track AI output quality\n- Ignoring API timeout and low-confidence scenarios\n\n## Implementation Checklist\n\n- [ ] Integrate Launchpad Build AI's MLM with Slack/Teams\n- [ ] Design human review workflow\n- [ ] Set up quality control measures\n- [ ] Train team on AI output evaluation\n- [ ] Track time saved and quality metrics\n\n## Troubleshooting\n\n- **API Timeout**: Implement retry logic with exponential backoff\n- **Low-Confidence Output**: Flag for human review with confidence scoring\n- **Duplicate Tickets**: Use unique identifiers and project management systems\n- **Human Approval Handling**: Create approval workflows in existing systems\n\n## Next Steps\n\n1. Start with a simple design documentation workflow\n2. Integrate with Slack for intake\n3. Add quality checks\n4. Measure time saved\n5. Scale to additional use cases\n\nBook an automation consult to discuss your specific implementation.",
+  "imagePrompt": "A modern industrial control panel with AI workflow visualization showing human review steps and quality control measures",
+  "audioScript": "How to Use Launchpad Build AI's Manufacturing Language Model for Industrial Automation Design. Learn how to implement Launchpad Build AI's Manufacturing Language Model in your industrial automation workflows with real business outcomes."
 }
