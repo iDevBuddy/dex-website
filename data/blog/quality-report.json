@@ -1,32 +1,32 @@
 {
   "score": 88,
-  "strictPassed": false,
-  "passed": false,
+  "strictPassed": true,
+  "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 75,
+    "trendScore": 62,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "rewrite_required",
+  "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,40 +85,38 @@
     }
   ],
   "authenticity": {
-    "score": 67,
-    "passed": false,
+    "score": 90,
+    "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 79,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 75,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 508
+      "wordCount": 721
     },
-    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
-    "blockingIssue": "Authenticity score below publishing threshold."
+    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+    "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "LOW",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The content provides practical, step-by-step implementation guidance for Launchpad Build AI's Manufacturing Language Model in industrial automation design",
-      "Article includes specific business outcomes, use cases, and clear value proposition",
-      "Content avoids generic AI advice and focuses on measurable workflows with quality control steps",
-      "Addresses business concerns about maintaining quality with human review processes",
-      "Well-structured with tools needed, implementation checklist, and common mistakes to avoid",
-      "Includes specific KPIs for measuring success and business impact metrics"
+      "The content provides a practical, example-based guide to implementing memory-enabled AI in logistics workflows. The article covers the key components of a support triage system with memory, including tools, steps, and KPIs.",
+      "The article effectively explains the distinction between simple automation and Planning AI with memory, using structured operational context.",
+      "The content includes a clear step-by-step workflow, implementation checklist, and troubleshooting tips which enhance practical value.",
+      "Some sections could be expanded with more specific examples or case studies to further improve depth and reduce generic advice risk.",
+      "The article would benefit from more specific details on how memory is implemented in the AI stack to avoid potential overgeneralization."
     ],
     "recommendedFixes": [
-      "Add a clear definition of Launchpad Build AI's Manufacturing Language Model and its unique value for the manufacturing domain",
-      "Include a brief explanation of how the Manufacturing Language Model differs from general-purpose models",
-      "Add specific examples of prompt engineering or customizations for industrial automation use cases",
-      "Include examples of the AI output for industrial automation design documentation",
-      "Add a section comparing manual documentation vs. AI-assisted documentation in the workflow"
+      "Add specific real-world examples of memory implementation (e.g., example prompts or configurations for AI tools).",
+      "Include a brief explanation of how memory is practically implemented in the AI system (e.g., memory retention mechanisms).",
+      "Add diagrams or visuals to illustrate the workflow and memory touchpoints for better clarity.",
+      "Clarify how memory is stored and used in practice (e.g., structured context tracking)."
     ]
   }
 }

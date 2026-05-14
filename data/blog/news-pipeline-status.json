@@ -1,7 +1,328 @@
 {
-  "ok": false,
-  "failSoft": true,
-  "message": "Bad control character in string literal in JSON at position 222",
-  "nextAction": "Draft artifacts were preserved when available. Improve SEO/content or approve manually after review.",
-  "generatedAt": "2026-05-14T02:55:31.455Z"
+  "ok": true,
+  "result": {
+    "pendingApproval": true,
+    "output": "/home/runner/work/dex-website/dex-website/content/blog/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.md",
+    "approvalPacket": {
+      "output": "/home/runner/work/dex-website/dex-website/content/blog/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.md",
+      "article": {
+        "frontmatter": {
+          "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
+          "subtitle": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, logging, and measurable business outcomes.",
+          "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+          "metaTitle": "How to Use Planning AI Needs Memory, Not Just Automation - Log",
+          "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, logging, and measurable business outcomes.",
+          "metaDescription": "Learn how to implement Planning AI Needs Memory, Not Just Automation in your logistics business with real-world examples, workflows, and KPIs.",
+          "category": "AI Automation",
+          "tags": [
+            "AI automation workflow",
+            "AI agents for business",
+            "workflow automation examples"
+          ],
+          "targetKeyword": "planning ai needs memory, not just automation - logistics viewpoints",
+          "tone": "practical",
+          "style": "business automation guide",
+          "contentPersona": "Business Automation Expert",
+          "businessFunction": "General",
+          "authorityAngle": "practical_workflow",
+          "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation.",
+          "searchIntent": "Business owner or operator looking for practical implementation guidance.",
+          "practicalUseCase": "Implementing a support triage workflow using Planning AI with memory in a logistics business",
+          "businessProblem": "Businesses want useful automation but do not want generic AI advice or risky shortcuts.",
+          "automationOpportunity": "Using AI with memory to maintain context across sessions and improve decision-making",
+          "whatYouWillBuild": "An AI-powered support triage system that uses memory to maintain context and improve response accuracy",
+          "toolsNeeded": [
+            "Slack",
+            "CRM",
+            "AI agent with memory capabilities"
+          ],
+          "caseProblem": "A logistics business struggles with inconsistent support triage due to lack of memory retention in AI tools",
+          "caseResult": "Improved first response time and resolution time through memory-enabled AI workflows",
+          "businessImpact": "Reduced manual hours spent on support triage and improved customer satisfaction",
+          "implementationDifficulty": "Medium",
+          "estimatedTimeToImplement": "2-4 hours",
+          "contentType": "expert guide",
+          "officialSource": "",
+          "officialUrl": "",
+          "officialImageRequired": false,
+          "toolSpecific": false,
+          "newsPublishedAt": "",
+          "image": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+          "imageAlt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+          "audioPath": "",
+          "author": "Business Automation Expert",
+          "publishedAt": "2026-05-14T06:44:03.597Z",
+          "updatedAt": "2026-05-14T06:44:03.597Z",
+          "readingTime": "",
+          "directAnswer": "Planning AI with memory enables logistics businesses to build persistent, context-aware workflows that improve decision-making and reduce manual effort.",
+          "faqs": [
+            {
+              "question": "What is Planning AI Needs Memory, Not Just Automation?",
+              "answer": "It's a concept where AI systems use memory to maintain context across sessions, enabling more accurate and persistent decision-making in logistics operations."
+            },
+            {
+              "question": "When should a business use it?",
+              "answer": "When they need to maintain continuity across AI interactions and improve long-term planning accuracy."
+            },
+            {
+              "question": "What workflow should be automated first?",
+              "answer": "Support triage workflows are ideal for initial automation because they benefit most from memory-enabled AI."
+            },
+            {
+              "question": "What mistakes should be avoided?",
+              "answer": "Avoid treating AI memory as simple chat history; instead, use structured operational context to drive real business outcomes."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+              "organization": "logisticsviewpoints.com",
+              "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
+              "type": "Web research",
+              "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+              "authorityScore": 81
+            },
+            {
+              "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+              "organization": "logisticsviewpoints.com",
+              "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+              "type": "Web research",
+              "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+              "authorityScore": 73
+            },
+            {
+              "title": "AI in Supply Chain: 2025 Trends | EASE Logistics",
+              "organization": "easelogistics.com",
+              "url": "https://easelogistics.com/2025/05/14/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence/",
+              "type": "Web research",
+              "supports": "Logo\nLogo\nLogo\n\n# Supply Chain Trends for 2025: The Impact of Artificial Intelligence\n\n# THE ROAD AHEAD\n\nSign up to get the latest news and announcement from EASE.\n\nTHE ROAD AHEAD\n\nMay 14, 2025\n\n### S",
+              "authorityScore": 67
+            },
+            {
+              "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
+              "organization": "logisticsviewpoints.com",
+              "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
+              "type": "Web research",
+              "supports": "AI is moving beyond isolated copilots and technical architecture into coordinated operational decision systems. This ARC Advisory Group white paper explains how supply chain AI is shifting from capabi",
+              "authorityScore": 65
+            },
+            {
+              "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
+              "organization": "tryenvoy.ai",
+              "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+              "type": "Web research",
+              "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
+              "authorityScore": 95
+            },
+            {
+              "title": "Memory is the next step that AI companies need to solve : r/ArtificialInteligence",
+              "organization": "reddit.com",
+              "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1q6w0o6/memory_is_the_next_step_that_ai_companies_need_to/",
+              "type": "Web research",
+              "supports": "Good memory. Not just memory that sticks a bunch of vectors in a database. Memory that takes the best of what we discovered building cache, RAM, and hard disk. But also the best parts of us. Our abili",
+              "authorityScore": 95
+            }
+          ],
+          "sourcesStatus": "Ready",
+          "sourceQualityScore": 80,
+          "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+          "duplicateStatus": "unique",
+          "duplicateScore": 11,
+          "duplicateMatch": {
+            "slug": "ai-authority-blog-engine",
+            "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+            "url": "/blog/ai-authority-blog-engine",
+            "similarity": 0.11
+          },
+          "suggestedAngle": "",
+          "trendScore": 62,
+          "marketSentiment": "neutral",
+          "publishReady": true,
+          "blockingIssues": "",
+          "related": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
+          "internalLinks": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
+          "keyTakeaways": [
+            "Start with one measurable business workflow before scaling AI automation.",
+            "Use human approval for customer-facing or high-risk actions.",
+            "Judge success by response time, quality, and revenue impact, not content volume."
+          ],
+          "expertInsight": "The strongest AI automation systems combine narrow workflow design, clear ownership, model-assisted drafting, and human review before irreversible actions.",
+          "assetLinks": {},
+          "schemaType": "BlogPosting",
+          "mediaRecommendations": {
+            "featuredImage": true,
+            "infographic": true,
+            "slides": false,
+            "checklist": true,
+            "comparisonTable": false,
+            "workflowDiagram": true,
+            "downloadablePdf": false,
+            "notebookLmResearch": false,
+            "socialCarousel": false
+          },
+          "seoAuditScore": 88,
+          "seoAuditPassed": true,
+          "seoAuditTool": "local_seo_audit_bridge",
+          "assetBrief": "Create supporting assets for: How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\nPersona: Business Automation Expert\nBusiness function: General\nAngle: practical_workflow\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
+        },
+        "body": "## Why Memory Changes Everything for AI in Logistics\n\nIn the fast-moving world of logistics, AI isn't just about automating tasks—it's about making those automations *meaningful*. The difference between a basic automation script and a true AI agent lies in its ability to remember. As [logisticsviewpoints.com](https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/) explains, memory enables AI to go beyond one-off actions and build persistent, context-aware planning capabilities. This is especially critical in logistics, where supplier performance, customer expectations, and operational configurations must be tracked across sessions.\n\n### Key Takeaways\n\n- Memory transforms AI from a one-time tool to a persistent planning system.\n- Structured memory helps recall past decisions and supplier performance.\n- Context-aware AI improves support triage, configuration tracking, and customer interactions.\n- Memory enables AI to adapt to change, unlike rigid scripts.\n\n## A Practical Business Use Case: Support Triage with Memory\n\nLet's walk through a real-world example. A logistics business uses a support triage workflow where customer requests come in through Slack. The AI agent uses memory to recall past interactions, supplier performance, and customer preferences. This enables faster resolution times and fewer escalations.\n\n## Step-by-Step Workflow: Support Triage with Memory\n\n1. **Slack Intake**: Customer requests are captured in Slack channels.\n2. **AI Triage**: The AI agent uses memory to recall past interactions and customer preferences.\n3. **Routing**: Requests are routed based on priority and historical data.\n4. **Response**: The AI generates a response using memory to maintain context.\n5. **Logging**: All interactions are logged for audit and future memory building.\n6. **Approval**: High-priority decisions are escalated to human operators for approval.\n7. **Follow-up**: The system schedules follow-ups based on memory of past interactions.\n\n## Tools That Enable Memory-Driven Workflows\n\nTo implement this workflow, you'll need tools that support memory retention and structured data use. These include:\n\n- Slack for intake\n- A CRM with memory capabilities\n- AI agents that can store and recall context\n- Logging systems for audit trails\n- Approval workflows for sensitive decisions\n\n## Measuring Success: KPIs That Matter\n\nTo ensure your memory-enabled AI system delivers value, track these KPIs:\n\n- **First Response Time**: How quickly does the AI respond?\n- **Resolution Time**: How long to close tickets?\n- **Missed Leads**: Are customers being lost in the process?\n- **Customer Satisfaction**: Are the right customers getting the right responses?\n- **Manual Hours Saved**: How much time are operators saving?\n\n## Common Mistakes to Avoid\n\n- **Mistaking memory for chat history**: Memory should be structured and tied to entities like suppliers, customers, and configurations.\n- **Ignoring approval steps**: High-stakes decisions should still go through human review.\n- **Not logging interactions**: Without logs, memory becomes inconsistent.\n- **Skipping failure handling**: What happens on API timeout or low-confidence output?\n\n## Implementation Checklist\n\n- [ ] Identify a support triage workflow to automate first\n- [ ] Choose tools that support memory and context\n- [ ] Map out the workflow with memory touchpoints\n- [ ] Set up logging and approval steps\n- [ ] Train the AI on past data\n- [ ] Monitor KPIs like first response time and resolution time\n\n## Troubleshooting and Failure Handling\n\nEven the best systems fail. Here's how to handle common issues:\n\n- **API Timeout**: Retry logic with exponential backoff\n- **Low-Confidence AI Output**: Escalate to human review\n- **Duplicate Tickets**: Use memory to detect and merge duplicates\n- **Human Approval**: Required for high-stakes decisions\n\n## What to Do Next\n\nOnce you've built your memory-enabled AI system:\n\n1. Monitor KPIs like resolution time and customer satisfaction\n2. Expand memory use to other workflows\n3. Add more tools to improve adaptability\n4. Train new team members on the system\n5. Iterate based on logging data\n\n## Conclusion\n\nMemory isn't just about remembering—it's about *knowing* what to remember and when to act on it. In logistics, that means building AI systems that recall supplier performance, track customer expectations, and maintain continuity across sessions. With the right tools and workflows, you can build a more persistent, context-aware system that delivers real business value.\n\n### Book an automation consult to get help building your memory-enabled AI system.",
+        "imagePrompt": "A logistics warehouse with AI agents working alongside human operators, showing memory-driven decision points and data flows",
+        "audioScript": "Welcome to the future of logistics automation. Today we're talking about how memory changes everything for AI in your supply chain. I'm your host, Business Automation Expert, and in this guide we'll show you how to build a support triage system that remembers. We'll walk through a real business use case, show you the tools you need, and give you a step-by-step workflow. You'll also learn how to avoid common mistakes, and what KPIs to track. Let's get started."
+      },
+      "quality": {
+        "score": 88,
+        "strictPassed": true,
+        "passed": true,
+        "minQualityScore": 88,
+        "sourceGate": {
+          "required": true,
+          "passed": true,
+          "sourceCount": 6,
+          "minSources": 2,
+          "sourceQualityScore": 80,
+          "minSourceQualityScore": 75,
+          "status": "Ready",
+          "notes": "Source quality score 80."
+        },
+        "trendOverride": {
+          "enabled": true,
+          "applied": false,
+          "floor": 78,
+          "strictMinimum": 88,
+          "trendScore": 62,
+          "marketSentiment": "neutral",
+          "marketSentimentScore": 65,
+          "serviceTopic": false,
+          "businessTrendEligible": false,
+          "autoNewsAllowed": false,
+          "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+        },
+        "publishMode": "standard_review",
+        "results": [
+          {
+            "name": "minimumWordCount",
+            "passed": false,
+            "points": 12
+          },
+          {
+            "name": "hasClearIntro",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasExamples",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasFaq",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasSources",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasImagePrompt",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasInternalLinks",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasSchemaData",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "noKeywordStuffing",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasBusinessValue",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasConclusion",
+            "passed": true,
+            "points": 8
+          }
+        ],
+        "authenticity": {
+          "score": 90,
+          "passed": true,
+          "minimum": 72,
+          "provider": "heuristic_nlp",
+          "modelResult": null,
+          "signals": {
+            "specificity": 100,
+            "businessRelevance": 100,
+            "sourceAlignment": 100,
+            "marketSentimentScore": 65,
+            "duplicateStatus": "unknown",
+            "duplicateScore": 0,
+            "fillerHits": 0,
+            "wordCount": 721
+          },
+          "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+          "blockingIssue": ""
+        },
+        "review": {
+          "helpfulContentRisk": "Medium",
+          "notes": [
+            "The content provides a practical, example-based guide to implementing memory-enabled AI in logistics workflows. The article covers the key components of a support triage system with memory, including tools, steps, and KPIs.",
+            "The article effectively explains the distinction between simple automation and Planning AI with memory, using structured operational context.",
+            "The content includes a clear step-by-step workflow, implementation checklist, and troubleshooting tips which enhance practical value.",
+            "Some sections could be expanded with more specific examples or case studies to further improve depth and reduce generic advice risk.",
+            "The article would benefit from more specific details on how memory is implemented in the AI stack to avoid potential overgeneralization."
+          ],
+          "recommendedFixes": [
+            "Add specific real-world examples of memory implementation (e.g., example prompts or configurations for AI tools).",
+            "Include a brief explanation of how memory is practically implemented in the AI system (e.g., memory retention mechanisms).",
+            "Add diagrams or visuals to illustrate the workflow and memory touchpoints for better clarity.",
+            "Clarify how memory is stored and used in practice (e.g., structured context tracking)."
+          ]
+        }
+      },
+      "imageResult": {
+        "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+        "output": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "url": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "alt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+        "provider": "fallback_png_after_provider_error",
+        "prompt": "A logistics warehouse with AI agents working alongside human operators, showing memory-driven decision points and data flows",
+        "dryRun": false,
+        "manualApproval": true,
+        "autoPublish": false,
+        "force": false,
+        "failed": true,
+        "path": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "error": "Stable Diffusion API failed: 404 404 page not found\n",
+        "preservedExisting": true
+      },
+      "approvalRequired": true,
+      "blockingIssues": [
+        "Real image provider is required before publishing."
+      ],
+      "dryRun": false,
+      "manualApproval": true,
+      "autoPublish": false,
+      "force": false
+    }
+  }
 }
