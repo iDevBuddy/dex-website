@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,25 +98,29 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 721
+      "wordCount": 695
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The content provides a practical, example-based guide to implementing memory-enabled AI in logistics workflows. The article covers the key components of a support triage system with memory, including tools, steps, and KPIs.",
-      "The article effectively explains the distinction between simple automation and Planning AI with memory, using structured operational context.",
-      "The content includes a clear step-by-step workflow, implementation checklist, and troubleshooting tips which enhance practical value.",
-      "Some sections could be expanded with more specific examples or case studies to further improve depth and reduce generic advice risk.",
-      "The article would benefit from more specific details on how memory is implemented in the AI stack to avoid potential overgeneralization."
+      "The article provides a comprehensive, practical guide to implementing memory-enabled AI planning workflows in logistics.",
+      "Content is well-researched and includes actionable steps for business owners to follow.",
+      "The article emphasizes structured workflows, memory layers, and practical business outcomes which aligns with the specified low-risk, high-value content strategy.",
+      "Use of authoritative sources and structured examples reduces risk of generic or low-quality content.",
+      "The article includes implementation checklists, troubleshooting steps, and clear workflows that support the practical business automation angle.",
+      "Tone and style are consistent with informational intent and target logistics professionals or business operators.",
+      "The content avoids technical jargon while remaining detailed and useful for practitioners."
     ],
     "recommendedFixes": [
-      "Add specific real-world examples of memory implementation (e.g., example prompts or configurations for AI tools).",
-      "Include a brief explanation of how memory is practically implemented in the AI system (e.g., memory retention mechanisms).",
-      "Add diagrams or visuals to illustrate the workflow and memory touchpoints for better clarity.",
-      "Clarify how memory is stored and used in practice (e.g., structured context tracking)."
+      "Consider adding anchor links to each section header to improve in-page navigation for readers.",
+      "Add a visual workflow diagram to improve content accessibility and support the 'workflowDiagram' media recommendation.",
+      "Include a downloadable checklist or short PDF summary to support the 'checklist' and 'downloadablePdf' asset recommendations.",
+      "Clarify the 'toolsNeeded' section with specific examples of how tools like Slack and CRMs are used in the workflow for better implementation guidance.",
+      "Add a comparison table or brief case study showing before/after results of using memory-enabled AI in logistics for better content engagement.",
+      "Consider adding a section on how to measure ROI or business impact with example metrics (e.g. % time saved, % error reduction) for reader clarity."
     ]
   }
 }
