@@ -55,53 +55,66 @@
       "publishedDate": ""
     },
     {
-      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
+      "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
+      "organization": "tryenvoy.ai",
+      "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
-      "supports": "AI is moving beyond isolated copilots and technical architecture into coordinated operational decision systems. This ARC Advisory Group white paper explains how supply chain AI is shifting from capabi",
-      "authorityScore": 65,
+      "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
+      "authorityScore": 68,
       "publishedDate": ""
     },
     {
-      "title": "Industry Insights: AI in Logistics | Reshaping How Goods Move Globally | Association for Advancing Automation",
-      "organization": "automate.org",
-      "url": "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "“Logistics operations need more than just automation; they require solutions that embrace the industry's dynamic nature — from shifting workflows and peak seasons to evolving customer demands,” Amel A",
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
       "authorityScore": 54,
       "publishedDate": ""
     },
     {
-      "title": "Planning AI Needs Memory, Not Just Automation | Supply Chain & Logistics | Crebral | Crebral",
-      "organization": "crebral.ai",
-      "url": "https://www.crebral.ai/work/SUPPLYCHAIN/ae9dffc0-6673-43ba-aef7-26a6245e4e3a",
-      "type": "Web research",
-      "supports": "Crebral\n\n# Planning AI Needs Memory, Not Just Automation\n\n## Original Claim\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requir",
-      "authorityScore": 85,
-      "publishedDate": ""
+      "title": "OpenAI Platform Documentation",
+      "organization": "OpenAI",
+      "url": "https://platform.openai.com/docs/",
+      "type": "Official documentation",
+      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "automation",
+        "workflow",
+        "prompt"
+      ],
+      "authorityScore": 83
     },
     {
-      "title": "AI Beyond Automation: How Intelligence Is Reshaping Business ...",
-      "organization": "mobilepayinsights.com",
-      "url": "https://mobilepayinsights.com/ai-beyond-automation-how-intelligence-is-reshaping-business-strategy/",
-      "type": "Web research",
-      "supports": "By bridging the gap between insight and action, this integration turns predictions into significant outcomes. For example, an AI model learns from feedback to get better over time, and a logistics pla",
-      "authorityScore": 54,
-      "publishedDate": ""
+      "title": "GitHub Docs: GitHub Actions",
+      "organization": "GitHub",
+      "url": "https://docs.github.com/en/actions",
+      "type": "Official documentation",
+      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
+      "tags": [
+        "github",
+        "automation",
+        "workflow",
+        "ci",
+        "deployment"
+      ],
+      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
-    "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
-    "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
-    "https://www.crebral.ai/work/SUPPLYCHAIN/ae9dffc0-6673-43ba-aef7-26a6245e4e3a",
-    "https://mobilepayinsights.com/ai-beyond-automation-how-intelligence-is-reshaping-business-strategy/"
+    "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+    "https://innovecs.com/blog/ai-supply-chain-planning/",
+    "https://platform.openai.com/docs/",
+    "https://docs.github.com/en/actions"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "4 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -200,38 +213,20 @@
       "publishedDate": ""
     },
     {
-      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
+      "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
+      "organization": "tryenvoy.ai",
+      "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
-      "supports": "AI is moving beyond isolated copilots and technical architecture into coordinated operational decision systems. This ARC Advisory Group white paper explains how supply chain AI is shifting from capabi",
-      "authorityScore": 65,
+      "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
+      "authorityScore": 68,
       "publishedDate": ""
     },
     {
-      "title": "Industry Insights: AI in Logistics | Reshaping How Goods Move Globally | Association for Advancing Automation",
-      "organization": "automate.org",
-      "url": "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "“Logistics operations need more than just automation; they require solutions that embrace the industry's dynamic nature — from shifting workflows and peak seasons to evolving customer demands,” Amel A",
-      "authorityScore": 54,
-      "publishedDate": ""
-    },
-    {
-      "title": "Planning AI Needs Memory, Not Just Automation | Supply Chain & Logistics | Crebral | Crebral",
-      "organization": "crebral.ai",
-      "url": "https://www.crebral.ai/work/SUPPLYCHAIN/ae9dffc0-6673-43ba-aef7-26a6245e4e3a",
-      "type": "Web research",
-      "supports": "Crebral\n\n# Planning AI Needs Memory, Not Just Automation\n\n## Original Claim\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requir",
-      "authorityScore": 85,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Beyond Automation: How Intelligence Is Reshaping Business ...",
-      "organization": "mobilepayinsights.com",
-      "url": "https://mobilepayinsights.com/ai-beyond-automation-how-intelligence-is-reshaping-business-strategy/",
-      "type": "Web research",
-      "supports": "By bridging the gap between insight and action, this integration turns predictions into significant outcomes. For example, an AI model learns from feedback to get better over time, and a logistics pla",
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
       "authorityScore": 54,
       "publishedDate": ""
     }

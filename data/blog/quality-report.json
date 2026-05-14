@@ -85,42 +85,41 @@
     }
   ],
   "authenticity": {
-    "score": 77,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 695
+      "wordCount": 619
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": 82,
     "notes": [
-      "The article provides a comprehensive, practical guide to implementing memory-enabled AI planning workflows in logistics.",
-      "Content is well-researched and includes actionable steps for business owners to follow.",
-      "The article emphasizes structured workflows, memory layers, and practical business outcomes which aligns with the specified low-risk, high-value content strategy.",
-      "Use of authoritative sources and structured examples reduces risk of generic or low-quality content.",
-      "The article includes implementation checklists, troubleshooting steps, and clear workflows that support the practical business automation angle.",
-      "Tone and style are consistent with informational intent and target logistics professionals or business operators.",
-      "The content avoids technical jargon while remaining detailed and useful for practitioners."
+      "The article provides a well-structured, practical guide to implementing memory-aware AI in business workflows, specifically for logistics and support functions.",
+      "Content is highly relevant for the target audience of business automation implementers, with concrete examples, KPIs, and implementation steps.",
+      "The article includes a strong expert insight on combining narrow workflow design with human review, which adds authority and practical value.",
+      "Use of authoritative sources like logisticsviewpoints.com and structured content from credible documentation enhances trust and topical strength.",
+      "The article includes a detailed case study with measurable business outcomes, increasing its value for practitioners.",
+      "Some sections could benefit from clearer subheadings or visual separation to improve readability for technical implementation steps.",
+      "The content could be enhanced by including alternative tools or methods for readers with different technical capacities (e.g., low-code vs. custom API setups)."
     ],
     "recommendedFixes": [
-      "Consider adding anchor links to each section header to improve in-page navigation for readers.",
-      "Add a visual workflow diagram to improve content accessibility and support the 'workflowDiagram' media recommendation.",
-      "Include a downloadable checklist or short PDF summary to support the 'checklist' and 'downloadablePdf' asset recommendations.",
-      "Clarify the 'toolsNeeded' section with specific examples of how tools like Slack and CRMs are used in the workflow for better implementation guidance.",
-      "Add a comparison table or brief case study showing before/after results of using memory-enabled AI in logistics for better content engagement.",
-      "Consider adding a section on how to measure ROI or business impact with example metrics (e.g. % time saved, % error reduction) for reader clarity."
+      "Add visual assets like workflow diagrams and checklists to improve skimming and implementation for readers.",
+      "Consider splitting dense paragraphs under 'Step-by-Step Workflow' into bullet-point substeps for better readability.",
+      "Clarify the distinction between tools like Zapier vs. Make.com in workflow examples to avoid confusion for newer users.",
+      "Add a brief section on how to evaluate confidence thresholds for low-confidence AI outputs to support the 'failure handling' section.",
+      "Include a short troubleshooting flowchart or decision tree as a visual asset to support the failure handling recommendations."
     ]
   }
 }
