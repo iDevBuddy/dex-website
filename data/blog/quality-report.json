@@ -18,13 +18,13 @@
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 62,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,39 +85,40 @@
     }
   ],
   "authenticity": {
-    "score": 78,
+    "score": 74,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 97,
+      "specificity": 95,
       "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 730
+      "wordCount": 555
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": false,
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a practical use case focused on lead triage in a service business, which may not fully align with the logistics viewpoint angle suggested in the title and metadata.",
-      "Content is generally high-quality and informative, but the shift from logistics examples to service business lead triage could confuse readers about the article's primary focus.",
-      "Some sections like 'Tools Needed' list 'Support for triage' and 'Data harmonization tools' without specific tool names, which reduces practical value.",
-      "Multiple expert insights are repetitive, suggesting an opportunity to consolidate and expand unique perspectives.",
-      "The article mentions measuring success metrics (e.g., 'First Response Time': Reduced by 40%') without providing a baseline or context for how these metrics were measured or what tools were used."
+      "The article provides practical, actionable content for implementing AI memory in logistics/business automation workflows, which aligns well with the informational search intent and target audience of operators/service business owners.",
+      "Content includes clear steps, tools needed, and specific outcomes, making it useful for readers wanting to implement real workflows.",
+      "Some sections (e.g., 'What You'll Build', 'Step-by-Step Workflow') are repetitive in their language and could be more varied to improve readability and SEO value.",
+      "The article references authoritative sources and includes data points (like 90% reduction in missed leads), which supports trust and expertise signals.",
+      "Could benefit from more varied sentence structure and keyword usage to reduce repetition of phrases like 'AI memory layer' and 'context across sessions'."
     ],
     "recommendedFixes": [
-      "Clarify the primary business context (logistics vs. service business lead triage) and ensure consistent messaging throughout the article.",
-      "Specify concrete tools in the 'Tools Needed' section rather than listing generic categories like 'Support for triage'.",
-      "Consolidate and expand the expert insights to provide more unique value and avoid repetition.",
-      "Add specific details about how the success metrics are defined and measured to improve the credibility of the claimed results.",
-      "Add a section explaining how logistics-specific memory-enabled AI applications differ from general service business applications, to better align with the title's logistics focus."
+      "Vary the phrasing in the 'What You'll Build' and 'Step-by-Step Workflow' sections to avoid repetitive language and improve engagement. For example, instead of frequently repeating 'AI memory layer', use synonyms like 'context retention', 'persistent memory', or 'AI recall engine'.",
+      "Add internal links to other relevant guides or case studies to improve content depth and site authority structure.",
+      "Include a brief visual reference or workflow diagram to break up text and improve readability (as noted in mediaRecommendations).",
+      "Consider adding alt text to images that reinforce keyword 'Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints'.",
+      "Use header variations (H2, H3) to break up dense sections like 'Step-by-Step Workflow' and 'Troubleshooting' for better readability and SEO structure.",
+      "Add a short conclusion summarizing the transformational impact of using AI with memory in a business context, reinforcing the core message."
     ]
   }
 }
