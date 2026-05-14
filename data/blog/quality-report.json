@@ -18,13 +18,13 @@
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
+    "trendScore": 68,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,40 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 78,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
+      "specificity": 97,
       "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 643
+      "wordCount": 730
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 8.5,
+    "helpfulContentRisk": false,
     "notes": [
-      "The article provides valuable, practical insights into implementing memory layers in AI logistics planning, which addresses a genuine business problem.",
-      "Content is well-researched with authoritative sources and includes actionable workflows, checklists, and troubleshooting tips.",
-      "The article effectively targets the specified audience (founders, operators, marketers) with appropriate technical depth without being overly complex.",
-      "Some sections could benefit from more specific examples or case studies to further illustrate abstract concepts like 'structured memory layers.'",
-      "The tone and style align well with the 'practical' and 'informational' intent, making it suitable for the target reader.",
-      "SEO elements are strong, with clear target keywords used naturally and good meta descriptions."
+      "The article provides a practical use case focused on lead triage in a service business, which may not fully align with the logistics viewpoint angle suggested in the title and metadata.",
+      "Content is generally high-quality and informative, but the shift from logistics examples to service business lead triage could confuse readers about the article's primary focus.",
+      "Some sections like 'Tools Needed' list 'Support for triage' and 'Data harmonization tools' without specific tool names, which reduces practical value.",
+      "Multiple expert insights are repetitive, suggesting an opportunity to consolidate and expand unique perspectives.",
+      "The article mentions measuring success metrics (e.g., 'First Response Time': Reduced by 40%') without providing a baseline or context for how these metrics were measured or what tools were used."
     ],
     "recommendedFixes": [
-      "Add 1-2 short case studies or real-world examples of logistics firms successfully using AI memory layers to increase credibility and practical applicability.",
-      "Include a visual workflow diagram as recommended in media suggestions to enhance understanding of the step-by-step process.",
-      "Expand on the 'troubleshooting' section with specific tool recommendations or integration examples (e.g., naming specific AI agent platforms or knowledge base systems).",
-      "Clarify the structure of the 'structured memory layer' with a brief example (e.g., a sample schema or data model) to make the concept more tangible for readers.",
-      "Consider adding a brief comparison table (as suggested in media recommendations) between traditional automation and agentic planning with memory to highlight the value proposition."
+      "Clarify the primary business context (logistics vs. service business lead triage) and ensure consistent messaging throughout the article.",
+      "Specify concrete tools in the 'Tools Needed' section rather than listing generic categories like 'Support for triage'.",
+      "Consolidate and expand the expert insights to provide more unique value and avoid repetition.",
+      "Add specific details about how the success metrics are defined and measured to improve the credibility of the claimed results.",
+      "Add a section explaining how logistics-specific memory-enabled AI applications differ from general service business applications, to better align with the title's logistics focus."
     ]
   }
 }
