@@ -41,17 +41,8 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "http://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
-      "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
       "publishedDate": ""
     },
     {
@@ -59,8 +50,8 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
-      "authorityScore": 95,
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
       "publishedDate": ""
     },
     {
@@ -68,36 +59,45 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
       "type": "Web research",
-      "supports": "AI played a more visible and reliable role inside the warehouse in 2025. Rather than attempting full autonomy, AI supported decision-making by predicting where bottlenecks would occur.\n\nThe strongest ",
+      "supports": "In 2026, AI will become a standard decision layer within WMS and WES systems, particularly in environments with high SKU variability or seasonality.\n\n### Integration Became the Largest Technical Chall",
+      "authorityScore": 60,
+      "publishedDate": ""
+    },
+    {
+      "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
+      "organization": "tryenvoy.ai",
+      "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+      "type": "Web research",
+      "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "title": "From Automation to Agency: A New Era of Supply Chain Intelligence - How Agentic AI is Redefining Value in Manufacturing Supply Chains - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+      "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
       "type": "Web research",
-      "supports": "Explore Our Domains  \nPlanning, Execution & Visibility | Transportation & Logistics Operations | Warehousing, Fulfillment & Automation | Global Trade & Compliance | AI & Advanced Analytics | Data, Int",
-      "authorityScore": 81,
+      "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com?p=34886",
+      "title": "The Coming Memory Crunch: Preparing for AI-Driven Demand",
+      "organization": "randtech.com",
+      "url": "https://randtech.com/memory-crunch-ai-demand-supply-chain-preparation/",
       "type": "Web research",
-      "supports": "AI is moving beyond isolated copilots and into coordinated, operational decision systems. This ARC Advisory Group white paper explains how A2A, MCP, retrieval architectures, and graph-enhanced reasoni",
-      "authorityScore": 78,
+      "supports": "_“Each generation of AI infrastructure requires multiples more memory than the previous one — it’s not incremental, it’s exponential.”_\n\nMeanwhile, AI inference — not just training — is now proliferat",
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
-    "http://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
     "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
-    "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-    "https://logisticsviewpoints.com?p=34886"
+    "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+    "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
+    "https://randtech.com/memory-crunch-ai-demand-supply-chain-preparation/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
@@ -113,7 +113,7 @@
   "suggestedAngle": "",
   "suggestedTopic": "",
   "trendAnalysis": {
-    "trendScore": 68,
+    "trendScore": 62,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "matchedTrendTerms": [
@@ -124,6 +124,10 @@
     "realtimeSignals": [
       {
         "source": "Google News",
+        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
+      },
+      {
+        "source": "Google News",
         "title": "Secure by Design: Multi-Agent Architecture in the Supply Chain - Logistics Viewpoints"
       },
       {
@@ -132,15 +136,7 @@
       },
       {
         "source": "Google News",
-        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
-      },
-      {
-        "source": "Google News",
         "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
-      },
-      {
-        "source": "Google News",
-        "title": "Seizing the agentic AI advantage - McKinsey & Company"
       },
       {
         "source": "Google News",
@@ -148,11 +144,15 @@
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
+        "title": "2026 supply chain predictions - Supply Chain Management Review"
       },
       {
         "source": "Google News",
-        "title": "2026 supply chain predictions - Supply Chain Management Review"
+        "title": "Seizing the agentic AI advantage - McKinsey & Company"
+      },
+      {
+        "source": "Google News",
+        "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
       }
     ],
     "realtimeSources": [
@@ -185,17 +185,8 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "http://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
-      "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
       "publishedDate": ""
     },
     {
@@ -203,8 +194,8 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
-      "authorityScore": 95,
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
       "publishedDate": ""
     },
     {
@@ -212,26 +203,35 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
       "type": "Web research",
-      "supports": "AI played a more visible and reliable role inside the warehouse in 2025. Rather than attempting full autonomy, AI supported decision-making by predicting where bottlenecks would occur.\n\nThe strongest ",
+      "supports": "In 2026, AI will become a standard decision layer within WMS and WES systems, particularly in environments with high SKU variability or seasonality.\n\n### Integration Became the Largest Technical Chall",
+      "authorityScore": 60,
+      "publishedDate": ""
+    },
+    {
+      "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
+      "organization": "tryenvoy.ai",
+      "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+      "type": "Web research",
+      "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "title": "From Automation to Agency: A New Era of Supply Chain Intelligence - How Agentic AI is Redefining Value in Manufacturing Supply Chains - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+      "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
       "type": "Web research",
-      "supports": "Explore Our Domains  \nPlanning, Execution & Visibility | Transportation & Logistics Operations | Warehousing, Fulfillment & Automation | Global Trade & Compliance | AI & Advanced Analytics | Data, Int",
-      "authorityScore": 81,
+      "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com?p=34886",
+      "title": "The Coming Memory Crunch: Preparing for AI-Driven Demand",
+      "organization": "randtech.com",
+      "url": "https://randtech.com/memory-crunch-ai-demand-supply-chain-preparation/",
       "type": "Web research",
-      "supports": "AI is moving beyond isolated copilots and into coordinated, operational decision systems. This ARC Advisory Group white paper explains how A2A, MCP, retrieval architectures, and graph-enhanced reasoni",
-      "authorityScore": 78,
+      "supports": "_“Each generation of AI infrastructure requires multiples more memory than the previous one — it’s not incremental, it’s exponential.”_\n\nMeanwhile, AI inference — not just training — is now proliferat",
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ]
