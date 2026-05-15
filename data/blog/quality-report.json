@@ -18,13 +18,13 @@
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,40 +85,26 @@
     }
   ],
   "authenticity": {
-    "score": 74,
+    "score": 88,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 95,
+      "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 555
+      "wordCount": 700
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
-    "notes": [
-      "The article provides practical, actionable content for implementing AI memory in logistics/business automation workflows, which aligns well with the informational search intent and target audience of operators/service business owners.",
-      "Content includes clear steps, tools needed, and specific outcomes, making it useful for readers wanting to implement real workflows.",
-      "Some sections (e.g., 'What You'll Build', 'Step-by-Step Workflow') are repetitive in their language and could be more varied to improve readability and SEO value.",
-      "The article references authoritative sources and includes data points (like 90% reduction in missed leads), which supports trust and expertise signals.",
-      "Could benefit from more varied sentence structure and keyword usage to reduce repetition of phrases like 'AI memory layer' and 'context across sessions'."
-    ],
-    "recommendedFixes": [
-      "Vary the phrasing in the 'What You'll Build' and 'Step-by-Step Workflow' sections to avoid repetitive language and improve engagement. For example, instead of frequently repeating 'AI memory layer', use synonyms like 'context retention', 'persistent memory', or 'AI recall engine'.",
-      "Add internal links to other relevant guides or case studies to improve content depth and site authority structure.",
-      "Include a brief visual reference or workflow diagram to break up text and improve readability (as noted in mediaRecommendations).",
-      "Consider adding alt text to images that reinforce keyword 'Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints'.",
-      "Use header variations (H2, H3) to break up dense sections like 'Step-by-Step Workflow' and 'Troubleshooting' for better readability and SEO structure.",
-      "Add a short conclusion summarizing the transformational impact of using AI with memory in a business context, reinforcing the core message."
-    ]
+    "skipped": true,
+    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
   }
 }
