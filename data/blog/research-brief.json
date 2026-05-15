@@ -73,12 +73,12 @@
       "publishedDate": ""
     },
     {
-      "title": "Launchpad Build AI Enters New Growth Phase with El Segundo HQ, Senior Hires and World-First Manufacturing Language Model",
-      "organization": "finance.yahoo.com",
-      "url": "https://finance.yahoo.com/sectors/technology/articles/launchpad-build-ai-enters-growth-140000572.html",
+      "title": "Launchpad Build AI Archives - The Robot Report",
+      "organization": "therobotreport.com",
+      "url": "https://www.therobotreport.com/tag/launchpad-build-ai/",
       "type": "Web research",
-      "supports": "Product Launch: Manufacturing Language Model (MLM™)Launchpad Build AI has launched the world's first Manufacturing Language Model (MLM™), purpose-built for industrial automation design.\n\nThe MLM™ demo",
-      "authorityScore": 95,
+      "supports": "The Robot Report\n\n# Launchpad Build AI\n\nBy Eugene Demaitre | April 30, 2026\n\n## Launchpad Build AI offers MLM to speed industrial automation design\n\nLaunchpad Build AI has launched a Manufacturing Lan",
+      "authorityScore": 90,
       "publishedDate": ""
     },
     {
@@ -87,7 +87,7 @@
       "url": "https://www.roboticscenter.ai/news/digest/2026-04-30-launchpad-build-ai-offers-mlm-to-speed-industrial/",
       "type": "Web research",
       "supports": "Robotics.Center ← News\n\nContact\n\nGeneral\n\n# Launchpad Build AI offers MLM to speed industrial automation design\n\nSource: The Robot Report · Apr 30, 2026\n\nLaunchpad Build AI says its Manufacturing Lang",
-      "authorityScore": 95,
+      "authorityScore": 88,
       "publishedDate": ""
     }
   ],
@@ -96,7 +96,7 @@
     "https://briefglance.com/articles/launchpad-build-ai-unveils-model-to-democratize-factory-automation",
     "https://www.prnewswire.com/news-releases/launchpad-build-ai-enters-new-growth-phase-with-el-segundo-hq-senior-hires-and-world-first-manufacturing-language-model-302758313.html",
     "https://www.launchpad.build/",
-    "https://finance.yahoo.com/sectors/technology/articles/launchpad-build-ai-enters-growth-140000572.html",
+    "https://www.therobotreport.com/tag/launchpad-build-ai/",
     "https://www.roboticscenter.ai/news/digest/2026-04-30-launchpad-build-ai-offers-mlm-to-speed-industrial/"
   ],
   "sourceStatus": "Ready",
@@ -120,7 +120,7 @@
       "automation"
     ],
     "trendOverrideEligible": false,
-    "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: positive.",
+    "trendOverrideReason": "Real-time trend validation found 11 signal(s) from 1 source(s). Sentiment: positive.",
     "realtimeSignals": [
       {
         "source": "Google News",
@@ -217,12 +217,12 @@
       "publishedDate": ""
     },
     {
-      "title": "Launchpad Build AI Enters New Growth Phase with El Segundo HQ, Senior Hires and World-First Manufacturing Language Model",
-      "organization": "finance.yahoo.com",
-      "url": "https://finance.yahoo.com/sectors/technology/articles/launchpad-build-ai-enters-growth-140000572.html",
+      "title": "Launchpad Build AI Archives - The Robot Report",
+      "organization": "therobotreport.com",
+      "url": "https://www.therobotreport.com/tag/launchpad-build-ai/",
       "type": "Web research",
-      "supports": "Product Launch: Manufacturing Language Model (MLM™)Launchpad Build AI has launched the world's first Manufacturing Language Model (MLM™), purpose-built for industrial automation design.\n\nThe MLM™ demo",
-      "authorityScore": 95,
+      "supports": "The Robot Report\n\n# Launchpad Build AI\n\nBy Eugene Demaitre | April 30, 2026\n\n## Launchpad Build AI offers MLM to speed industrial automation design\n\nLaunchpad Build AI has launched a Manufacturing Lan",
+      "authorityScore": 90,
       "publishedDate": ""
     },
     {
@@ -231,8 +231,22 @@
       "url": "https://www.roboticscenter.ai/news/digest/2026-04-30-launchpad-build-ai-offers-mlm-to-speed-industrial/",
       "type": "Web research",
       "supports": "Robotics.Center ← News\n\nContact\n\nGeneral\n\n# Launchpad Build AI offers MLM to speed industrial automation design\n\nSource: The Robot Report · Apr 30, 2026\n\nLaunchpad Build AI says its Manufacturing Lang",
-      "authorityScore": 95,
+      "authorityScore": 88,
       "publishedDate": ""
+    }
+  ],
+  "practicalExamples": [
+    {
+      "example": "Slack intake workflow",
+      "description": "Use Launchpad Build AI's MLM to automatically categorize and assign incoming Slack messages from factory floor operators, reducing response time by 60%."
+    },
+    {
+      "example": "CRM follow-up workflow",
+      "description": "Automate follow-ups on stalled industrial automation deals by analyzing CRM data and generating personalized outreach emails based on client interaction history."
+    },
+    {
+      "example": "Support triage workflow",
+      "description": "Implement an AI triage system that routes technical support tickets to appropriate teams based on issue complexity and urgency, improving resolution times."
     }
   ]
 }
