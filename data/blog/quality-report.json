@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 78,
+    "trendScore": 62,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 74,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,32 +94,29 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 78,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 657
+      "wordCount": 641
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "MEDIUM",
     "notes": [
-      "The content provides a practical, step-by-step guide for implementing Launchpad Build AI's MLM in industrial automation workflows, which aligns well with the informational search intent.",
-      "Strong use of structured workflows (Slack, CRM, support triage) gives readers clear value and actionability.",
-      "Content includes KPIs, implementation checklists, and troubleshooting tips, enhancing its utility for target readers (founders, operators, marketers).",
-      "Use of authoritative sources and a clear, tool-focused tutorial style supports the 'tool_tutorial' angle and reduces risk of generic AI advice.",
-      "Content avoids risky SEO shortcuts and focuses on business outcomes, aligning with the stated business problem of avoiding generic AI advice.",
-      "Minor concerns: Some sections could benefit from more specific examples or data to further reduce helpful content risk."
+      "The article provides valuable practical guidance for implementing memory-aware AI in logistics workflows",
+      "Content is well-researched with credible sources and includes specific metrics and implementation steps",
+      "Some sections could benefit from clearer connection to the logistics viewpoint angle mentioned in title",
+      "The content focuses heavily on the technical implementation without sufficient business context",
+      "Could better address the 'logistics viewpoints' aspect mentioned in the title and target keyword"
     ],
     "recommendedFixes": [
-      "Add specific, real-world examples or case studies showing time/cost savings from using Launchpad Build AI's MLM in the workflows described.",
-      "Include a short visual (e.g., workflow diagram or checklist) to increase engagement and clarify setup steps.",
-      "Clarify how ROI or business impact is measured in each use case (e.g., before/after time tracking, cost metrics).",
-      "Add a brief section comparing manual vs. automated workflows with example metrics (e.g., 'reduced design time by X hours').",
-      "Expand on failure handling examples with sample logic or templates for readers to copy and implement easily.",
-      "Include a 'before and after' implementation template for a sample workflow to boost perceived value and reduce genericness."
+      "Add more specific logistics industry examples and use cases to strengthen the 'logistics viewpoints' angle",
+      "Include more concrete numbers or examples from actual logistics companies",
+      "Better integrate the logistics perspective throughout the article, not just in the title",
+      "Consider adding a section on logistics-specific challenges that memory-aware AI solves"
     ]
   }
 }
