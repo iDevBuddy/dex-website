@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 88,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,13 +98,31 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 700
+      "wordCount": 528
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
+    "helpfulContentRisk": "Medium",
+    "notes": [
+      "The article provides a practical, workflow-focused approach to implementing AI automation with memory, which aligns well with the informational search intent and target audience of business decision-makers.",
+      "Content is grounded in a real-world use case (logistics support triage) with measurable outcomes, adding credibility and reducing generic AI advice risk.",
+      "Use of authoritative sources (logisticsviewpoints.com, tryenvoy.ai) supports claims and improves E-E-A-T signals.",
+      "The article includes structured implementation steps, tools, and a checklist, which enhances practical value.",
+      "Some sections could benefit from more detailed technical guidance or examples to further reduce ambiguity for readers.",
+      "The title and meta title are keyword-stuffed and may appear awkward to users and search engines. Suggestion: Simplify for better clarity and readability.",
+      "Internal linking is present but could be more contextually integrated to improve topical authority and user engagement."
+    ],
+    "recommendedFixes": [
+      "Refine the title and meta title to improve readability and reduce keyword stuffing. Example: 'How to Use Planning AI with Memory for Logistics Support Triage' or 'Memory-Driven AI Automation for Logistics Businesses'.",
+      "Add a brief conclusion section summarizing key points and reinforcing the business impact.",
+      "Enhance internal linking by adding descriptive anchor text that connects related concepts (e.g., link 'AI agents with memory' to a relevant internal guide).",
+      "Include a visual asset like a workflow diagram or checklist to improve engagement and time-on-page metrics.",
+      "Consider adding a short case study summary or testimonial for increased social proof.",
+      "Add a 'Next Steps' CTA section with clearer anchor text to service pages or related guides to improve conversion and topical depth.",
+      "Ensure all headings are descriptive and scannable for better UX and accessibility.",
+      "Clarify the 'Tools and Implementation' section with specific tool recommendations or setup tips to increase practical utility."
+    ]
   }
 }
