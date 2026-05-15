@@ -41,8 +41,8 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
       "publishedDate": ""
     },
     {
@@ -50,26 +50,35 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
-      "authorityScore": 95,
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
       "publishedDate": ""
     },
     {
-      "title": "How AI Is Transforming the Logistics Industry in 2025 - ByExpress",
+      "title": "How AI Is Transforming the Logistics Industry in 2025 | Smart Supply Chains",
       "organization": "byexpress.com",
       "url": "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
       "type": "Web research",
-      "supports": "Explore how AI is transforming the logistics industry in 2025 with smart warehousing, predictive analytics, route optimization,",
-      "authorityScore": 95,
+      "supports": "Track ROI — Use data to evaluate performance, customer satisfaction, and cost savings.\n\nCompanies that delay AI adoption risk losing out to faster, leaner competitors already leveraging the power of a",
+      "authorityScore": 66,
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
+      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
       "type": "Web research",
-      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
-      "authorityScore": 95,
+      "supports": "In 2026, AI will become a standard decision layer within WMS and WES systems, particularly in environments with high SKU variability or seasonality.\n\n### Integration Became the Largest Technical Chall",
+      "authorityScore": 60,
+      "publishedDate": ""
+    },
+    {
+      "title": "Planning AI Needs Memory, Not Just Automation | Supply Chain & Logistics | Crebral | Crebral",
+      "organization": "crebral.ai",
+      "url": "https://www.crebral.ai/work/SUPPLYCHAIN/ae9dffc0-6673-43ba-aef7-26a6245e4e3a",
+      "type": "Web research",
+      "supports": "Crebral\n\n# Planning AI Needs Memory, Not Just Automation\n\n## Original Claim\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requir",
+      "authorityScore": 85,
       "publishedDate": ""
     },
     {
@@ -78,16 +87,7 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "HUboo Logistics",
-      "organization": "huboo.cc",
-      "url": "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl",
-      "type": "Web research",
-      "supports": "HUboo Logistics\n\nBack to list\n\nIndustryInternational全球行业\n\n# Planning AI Needs Memory, Not Just Automation\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage o",
-      "authorityScore": 95,
+      "authorityScore": 68,
       "publishedDate": ""
     }
   ],
@@ -95,9 +95,9 @@
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
     "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
-    "https://innovecs.com/blog/ai-supply-chain-planning/",
-    "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
-    "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl"
+    "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
+    "https://www.crebral.ai/work/SUPPLYCHAIN/ae9dffc0-6673-43ba-aef7-26a6245e4e3a",
+    "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
@@ -113,7 +113,7 @@
   "suggestedAngle": "",
   "suggestedTopic": "",
   "trendAnalysis": {
-    "trendScore": 68,
+    "trendScore": 62,
     "marketSentiment": "neutral",
     "marketSentimentScore": 59,
     "matchedTrendTerms": [
@@ -140,15 +140,15 @@
       },
       {
         "source": "Google News",
+        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+      },
+      {
+        "source": "Google News",
         "title": "Seizing the agentic AI advantage - McKinsey & Company"
       },
       {
         "source": "Google News",
         "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
       },
       {
         "source": "Google News",
@@ -185,8 +185,8 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
       "publishedDate": ""
     },
     {
@@ -194,26 +194,35 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
-      "authorityScore": 95,
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
       "publishedDate": ""
     },
     {
-      "title": "How AI Is Transforming the Logistics Industry in 2025 - ByExpress",
+      "title": "How AI Is Transforming the Logistics Industry in 2025 | Smart Supply Chains",
       "organization": "byexpress.com",
       "url": "https://byexpress.com/how-ai-is-transforming-the-logistics-industry-in-2025/",
       "type": "Web research",
-      "supports": "Explore how AI is transforming the logistics industry in 2025 with smart warehousing, predictive analytics, route optimization,",
-      "authorityScore": 95,
+      "supports": "Track ROI — Use data to evaluate performance, customer satisfaction, and cost savings.\n\nCompanies that delay AI adoption risk losing out to faster, leaner competitors already leveraging the power of a",
+      "authorityScore": 66,
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
+      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
       "type": "Web research",
-      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
-      "authorityScore": 95,
+      "supports": "In 2026, AI will become a standard decision layer within WMS and WES systems, particularly in environments with high SKU variability or seasonality.\n\n### Integration Became the Largest Technical Chall",
+      "authorityScore": 60,
+      "publishedDate": ""
+    },
+    {
+      "title": "Planning AI Needs Memory, Not Just Automation | Supply Chain & Logistics | Crebral | Crebral",
+      "organization": "crebral.ai",
+      "url": "https://www.crebral.ai/work/SUPPLYCHAIN/ae9dffc0-6673-43ba-aef7-26a6245e4e3a",
+      "type": "Web research",
+      "supports": "Crebral\n\n# Planning AI Needs Memory, Not Just Automation\n\n## Original Claim\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requir",
+      "authorityScore": 85,
       "publishedDate": ""
     },
     {
@@ -222,16 +231,7 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "HUboo Logistics",
-      "organization": "huboo.cc",
-      "url": "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl",
-      "type": "Web research",
-      "supports": "HUboo Logistics\n\nBack to list\n\nIndustryInternational全球行业\n\n# Planning AI Needs Memory, Not Just Automation\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage o",
-      "authorityScore": 95,
+      "authorityScore": 68,
       "publishedDate": ""
     }
   ]
