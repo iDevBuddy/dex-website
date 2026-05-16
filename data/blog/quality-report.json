@@ -1,32 +1,32 @@
 {
   "score": 88,
-  "strictPassed": true,
-  "passed": true,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 66,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 78,
+    "trendScore": 62,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 66/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,8 +85,8 @@
     }
   ],
   "authenticity": {
-    "score": 79,
-    "passed": true,
+    "score": 71,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
@@ -94,17 +94,37 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 78,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 675
+      "wordCount": 657
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
+    "helpfulContentRisk": "Low",
+    "notes": [
+      "The article provides a detailed, practical guide to implementing AI automation with memory and context awareness.",
+      "Content is well-researched and includes authoritative sources with high relevance to the topic.",
+      "The article demonstrates clear understanding of the target audience (founders, operators, marketers) and their needs.",
+      "It avoids generic AI advice and focuses on specific, actionable implementation steps.",
+      "The content is structured logically with a real-world use case, step-by-step workflow, and measurable outcomes.",
+      "The article emphasizes human-in-the-loop workflows, which reduces risks associated with over-automation.",
+      "Content is grounded in practical use cases, not theoretical speculation."
+    ],
+    "recommendedFixes": [
+      "Add a visual workflow diagram to improve clarity and user understanding of the automation steps.",
+      "Include an infographic summarizing the key components of 'Planning AI with memory' for better content skimming.",
+      "Create a downloadable checklist for implementing the workflow in the checklist section to improve engagement and practical value.",
+      "Add alt text to all images for accessibility and better SEO.",
+      "Consider adding a comparison table between traditional automation and AI agents with memory to emphasize the differentiation.",
+      "Add internal links to related content like 'ai authority blog engine' to improve site structure and user navigation.",
+      "Improve the opening hook with a compelling statistic or question to increase reader engagement.",
+      "Add a short conclusion summarizing the transformational impact of the workflow on business outcomes.",
+      "Include a call to action for readers to engage with the content or related services.",
+      "Add schema markup to the page to improve search engine understanding and click-through rates."
+    ]
   }
 }
