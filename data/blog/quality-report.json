@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 78,
+    "trendScore": 62,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 89,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 79,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 78,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 1037
+      "wordCount": 714
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,18 +106,21 @@
   "review": {
     "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a detailed, practical guide to implementing Launchpad Build AI's Manufacturing Language Model in industrial automation design workflows.",
-      "Content includes structured implementation steps, business outcomes, and real-world use cases which enhance credibility and practical applicability.",
-      "Some technical depth about the MLM's specific functionalities could be expanded for better reader understanding.",
-      "The article references external sources and statistics effectively, but could benefit from more internal explanation of how exactly the MLM operates differently from generic models.",
-      "The inclusion of implementation checklists, failure handling, and KPIs adds strong practical value for the target audience."
+      "The article provides practical insights into implementing AI with memory in logistics workflows, which is valuable for the target audience",
+      "Content is well-structured with clear takeaways, step-by-step guidance, and business-focused KPIs",
+      "The article effectively addresses a real business problem (manual planning inefficiencies) with concrete solutions",
+      "Uses relevant examples and measurable outcomes to demonstrate value",
+      "Could benefit from more specific technical implementation details for the tools mentioned",
+      "Some sections could be expanded with more detailed explanations of how memory is implemented in practice",
+      "The content aligns well with search intent and provides actionable information"
     ],
     "recommendedFixes": [
-      "Add a brief technical explanation of how the Manufacturing Language Model (MLM) differs from general-purpose AI in practical terms (e.g., training data, unique features).",
-      "Include visual examples of the workflow or sample prompts to give readers a clearer idea of how to interact with the model.",
-      "Clarify the 'confidence scoring' mechanism with a short description or example to help readers understand how the system evaluates its own outputs.",
-      "Consider adding a short section comparing traditional automation design methods versus using the AI model to emphasize the value proposition.",
-      "Include a real or sample API response/output to illustrate what the AI-generated designs look like in practice."
+      "Add more specific technical details about implementing memory tracking in the mentioned tools (Slack, CRM, AI workflow platform)",
+      "Include more detailed examples of how memory is used in actual logistics scenarios beyond the high-level description",
+      "Expand the 'Troubleshooting and Failure Handling' section with more concrete examples and solutions",
+      "Provide additional context on how to choose which workflows to automate first based on business impact",
+      "Include more specific metrics or KPIs that businesses can use to measure success",
+      "Add more detailed implementation steps for different experience levels (beginner vs advanced users)"
     ]
   }
 }
