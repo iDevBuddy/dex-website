@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 91,
+    "score": 87,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
       "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 909
+      "wordCount": 705
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,20 +106,22 @@
   "review": {
     "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides practical, actionable guidance on implementing AI with memory layers in business workflows, specifically targeting logistics and customer support use cases.",
-      "Content is well-structured with clear takeaways, step-by-step implementation, and real business metrics, aligning with the target audience's intent (founders, operators, marketers).",
-      "Some sections could benefit from more specific examples or data points to further reduce abstraction and increase applicability.",
-      "The article references external sources but could better integrate direct quotes or case study elements to enhance authority and originality.",
-      "SEO elements like title, meta description, and target keyword usage are present but could be optimized for clarity and search intent alignment.",
-      "The 'Common Mistakes' section is useful but could be expanded with more granular examples or preventative workflows."
+      "The article provides a comprehensive guide to implementing memory-enabled AI automation in logistics workflows.",
+      "Content is well-structured with clear step-by-step instructions and practical examples.",
+      "Addresses a relevant and timely topic in AI automation with real business impact metrics.",
+      "Some sections could benefit from more detailed technical implementation guidance.",
+      "The article would benefit from more specific code examples or configuration details for the mentioned tools.",
+      "While the concept is explained well, readers might struggle with actual implementation without more hands-on examples."
     ],
     "recommendedFixes": [
-      "Add specific, real-world examples of memory-layer implementations (e.g., example prompts, tool configurations, or before/after metrics).",
-      "Include a brief case study or annotated workflow diagram to illustrate memory-informed decision-making in practice.",
-      "Strengthen the connection between memory layers and business KPIs by including a sample dashboard or tracking framework.",
-      "Clarify the distinction between 'memory' and 'chat history' with a comparative table or visual.",
-      "Enhance the FAQ section with more technical 'how-to' guidance, such as setup steps for tools like Make.com or Zapier in this context.",
-      "Add a 'Memory Layer Checklist' as a downloadable asset to increase engagement and provide tangible value."
+      "Add specific code snippets or configuration examples for connecting Slack to Notion/Airtable via Zapier/Make",
+      "Include actual prompts or API call examples for the OpenAI integration",
+      "Provide a downloadable template for the Notion/Airtable memory database structure",
+      "Add screenshots or diagrams showing the workflow in action",
+      "Include error handling code examples for the API timeout and low-confidence scenarios mentioned in troubleshooting",
+      "Add a section on cost considerations for running these workflows (API costs, tool subscription costs)",
+      "Provide more specific guidance on how to structure the memory storage for optimal retrieval",
+      "Include a sample JSON structure of what the memory data looks like in practice"
     ]
   }
 }
