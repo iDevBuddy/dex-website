@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "trendScore": 68,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 78,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment positive."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,38 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 79,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 78,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 641
+      "wordCount": 1037
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "MEDIUM",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides valuable practical guidance for implementing memory-aware AI in logistics workflows",
-      "Content is well-researched with credible sources and includes specific metrics and implementation steps",
-      "Some sections could benefit from clearer connection to the logistics viewpoint angle mentioned in title",
-      "The content focuses heavily on the technical implementation without sufficient business context",
-      "Could better address the 'logistics viewpoints' aspect mentioned in the title and target keyword"
+      "The article provides a detailed, practical guide to implementing Launchpad Build AI's Manufacturing Language Model in industrial automation design workflows.",
+      "Content includes structured implementation steps, business outcomes, and real-world use cases which enhance credibility and practical applicability.",
+      "Some technical depth about the MLM's specific functionalities could be expanded for better reader understanding.",
+      "The article references external sources and statistics effectively, but could benefit from more internal explanation of how exactly the MLM operates differently from generic models.",
+      "The inclusion of implementation checklists, failure handling, and KPIs adds strong practical value for the target audience."
     ],
     "recommendedFixes": [
-      "Add more specific logistics industry examples and use cases to strengthen the 'logistics viewpoints' angle",
-      "Include more concrete numbers or examples from actual logistics companies",
-      "Better integrate the logistics perspective throughout the article, not just in the title",
-      "Consider adding a section on logistics-specific challenges that memory-aware AI solves"
+      "Add a brief technical explanation of how the Manufacturing Language Model (MLM) differs from general-purpose AI in practical terms (e.g., training data, unique features).",
+      "Include visual examples of the workflow or sample prompts to give readers a clearer idea of how to interact with the model.",
+      "Clarify the 'confidence scoring' mechanism with a short description or example to help readers understand how the system evaluates its own outputs.",
+      "Consider adding a short section comparing traditional automation design methods versus using the AI model to emphasize the value proposition.",
+      "Include a real or sample API response/output to illustrate what the AI-generated designs look like in practice."
     ]
   }
 }
