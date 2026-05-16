@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -20,17 +20,17 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,33 +94,32 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 798
+      "wordCount": 560
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": 3,
     "notes": [
-      "The article provides a practical, well-structured guide to implementing AI automation with memory for service businesses.",
-      "It includes a clear use case (Slack-to-CRM workflow) with measurable business outcomes.",
-      "Content is expert-level and aligns with search intent (informational) and target audience (founders, operators, marketers).",
-      "SEO elements are strong: title, meta description, and structured data are optimized around the target keyword.",
-      "The article includes implementation steps, tools needed, and troubleshooting advice, enhancing its practical value.",
-      "Use of authoritative sources and data-backed results improves credibility and E-E-A-T compliance.",
-      "The content avoids generic AI hype and focuses on specific logistics and business automation challenges."
+      "The content provides practical value for implementing AI planning workflows with memory in logistics",
+      "Addresses a real business problem (manual effort in logistics planning) with measurable outcomes",
+      "Includes specific tools, steps, and implementation guidance that readers can act on",
+      "Content is well-researched with authoritative sources and citations",
+      "Addresses common mistakes and includes troubleshooting guidance",
+      "Provides clear metrics for success (80% reduction in manual hours, 60% improvement in decision accuracy)"
     ],
     "recommendedFixes": [
-      "Add internal links to other relevant guides or case studies to improve topical authority and user navigation.",
-      "Include a visual diagram of the workflow (e.g., Slack → AI Triage → Memory Layer → CRM) to enhance understanding.",
-      "Consider adding a brief comparison table between traditional automation and memory-enabled AI for better clarity.",
-      "Add a downloadable checklist or workflow diagram as a supporting asset for better engagement and time on page.",
-      "Ensure the featured image and any future infographic align with the article's visual representation of the workflow.",
-      "Add schema markup for the blog post and consider optimizing the meta description for higher CTR."
+      "Add more specific technical implementation details for the memory layer integration",
+      "Include examples of actual prompts or API calls for the OpenAI integration",
+      "Provide more detailed troubleshooting scenarios beyond the basic failure handling mentioned",
+      "Add a section on cost considerations for the recommended tool stack",
+      "Include a brief comparison of before/after metrics from a sample implementation",
+      "Add specific error handling for the workflow steps described"
     ]
   }
 }

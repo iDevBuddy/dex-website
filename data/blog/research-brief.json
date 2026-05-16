@@ -55,12 +55,21 @@
       "publishedDate": ""
     },
     {
+      "title": "Planning AI Needs Memory, Not Just Automation | Supply Chain & Logistics | Crebral | Crebral",
+      "organization": "crebral.ai",
+      "url": "https://www.crebral.ai/work/SUPPLYCHAIN/ae9dffc0-6673-43ba-aef7-26a6245e4e3a",
+      "type": "Web research",
+      "supports": "Crebral\n\n# Planning AI Needs Memory, Not Just Automation\n\n## Original Claim\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requir",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
       "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
       "organization": "tryenvoy.ai",
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 68,
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -68,8 +77,8 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -87,34 +96,19 @@
         "prompt"
       ],
       "authorityScore": 83
-    },
-    {
-      "title": "GitHub Docs: GitHub Actions",
-      "organization": "GitHub",
-      "url": "https://docs.github.com/en/actions",
-      "type": "Official documentation",
-      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
-      "tags": [
-        "github",
-        "automation",
-        "workflow",
-        "ci",
-        "deployment"
-      ],
-      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+    "https://www.crebral.ai/work/SUPPLYCHAIN/ae9dffc0-6673-43ba-aef7-26a6245e4e3a",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
     "https://innovecs.com/blog/ai-supply-chain-planning/",
-    "https://platform.openai.com/docs/",
-    "https://docs.github.com/en/actions"
+    "https://platform.openai.com/docs/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "4 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -128,7 +122,7 @@
   "trendAnalysis": {
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 59,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -137,11 +131,7 @@
     "realtimeSignals": [
       {
         "source": "Google News",
-        "title": "Why Enterprise AI Systems Fail: It’s Not RAG – It’s Context Control - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "Architecting the AI Supply Chain: A 10-Part Downloadable Executive Guide - ARC Advisory Group"
+        "title": "Why Enterprise AI Systems Fail: It's Not RAG – It's Context Control - Logistics Viewpoints"
       },
       {
         "source": "Google News",
@@ -166,6 +156,10 @@
       {
         "source": "Google News",
         "title": "Agentic AI: The future of autonomous intelligence - KPMG"
+      },
+      {
+        "source": "Google News",
+        "title": "How to Build AI Agent Models That Reduce Manual Work by 80% - Nasscom"
       }
     ],
     "realtimeSources": [
@@ -212,12 +206,21 @@
       "publishedDate": ""
     },
     {
+      "title": "Planning AI Needs Memory, Not Just Automation | Supply Chain & Logistics | Crebral | Crebral",
+      "organization": "crebral.ai",
+      "url": "https://www.crebral.ai/work/SUPPLYCHAIN/ae9dffc0-6673-43ba-aef7-26a6245e4e3a",
+      "type": "Web research",
+      "supports": "Crebral\n\n# Planning AI Needs Memory, Not Just Automation\n\n## Original Claim\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage of supply chain planning requir",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
       "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
       "organization": "tryenvoy.ai",
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 68,
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -225,8 +228,8 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ]
