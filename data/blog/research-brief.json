@@ -55,30 +55,21 @@
       "publishedDate": ""
     },
     {
-      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
-      "type": "Web research",
-      "supports": "In 2026, AI will become a standard decision layer within WMS and WES systems, particularly in environments with high SKU variability or seasonality.\n\n### Integration Became the Largest Technical Chall",
-      "authorityScore": 60,
-      "publishedDate": ""
-    },
-    {
-      "title": "HUboo Logistics",
-      "organization": "huboo.cc",
-      "url": "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl",
-      "type": "Web research",
-      "supports": "HUboo Logistics\n\nBack to list\n\nIndustryInternational全球行业\n\n# Planning AI Needs Memory, Not Just Automation\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage o",
-      "authorityScore": 79,
-      "publishedDate": ""
-    },
-    {
       "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
       "organization": "tryenvoy.ai",
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 68,
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "From Automation to Agency: A New Era of Supply Chain Intelligence - How Agentic AI is Redefining Value in Manufacturing Supply Chains - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
+      "type": "Web research",
+      "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -86,22 +77,38 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
       "publishedDate": ""
+    },
+    {
+      "title": "OpenAI Platform Documentation",
+      "organization": "OpenAI",
+      "url": "https://platform.openai.com/docs/",
+      "type": "Official documentation",
+      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "automation",
+        "workflow",
+        "prompt"
+      ],
+      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
-    "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
-    "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
-    "https://innovecs.com/blog/ai-supply-chain-planning/"
+    "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
+    "https://innovecs.com/blog/ai-supply-chain-planning/",
+    "https://platform.openai.com/docs/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -124,7 +131,7 @@
     "realtimeSignals": [
       {
         "source": "Google News",
-        "title": "Why Enterprise AI Systems Fail: It’s Not RAG – It’s Context Control - Logistics Viewpoints"
+        "title": "Secure by Design: Multi-Agent Architecture in the Supply Chain - Logistics Viewpoints"
       },
       {
         "source": "Google News",
@@ -140,15 +147,15 @@
       },
       {
         "source": "Google News",
+        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+      },
+      {
+        "source": "Google News",
         "title": "Seizing the agentic AI advantage - McKinsey & Company"
       },
       {
         "source": "Google News",
-        "title": "Secure by Design: Multi-Agent Architecture in the Supply Chain - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
+        "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
       },
       {
         "source": "Google News",
@@ -199,30 +206,21 @@
       "publishedDate": ""
     },
     {
-      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
-      "type": "Web research",
-      "supports": "In 2026, AI will become a standard decision layer within WMS and WES systems, particularly in environments with high SKU variability or seasonality.\n\n### Integration Became the Largest Technical Chall",
-      "authorityScore": 60,
-      "publishedDate": ""
-    },
-    {
-      "title": "HUboo Logistics",
-      "organization": "huboo.cc",
-      "url": "https://www.huboo.cc/en/news/industry-live-logistics-viewpoints-ppdyzl",
-      "type": "Web research",
-      "supports": "HUboo Logistics\n\nBack to list\n\nIndustryInternational全球行业\n\n# Planning AI Needs Memory, Not Just Automation\n\nAI can make planning work faster, but speed is not the same as intelligence. The next stage o",
-      "authorityScore": 79,
-      "publishedDate": ""
-    },
-    {
       "title": "The New Logistics AI Stack: LLM + Tools + Memory + Policies | Nonlinear blog",
       "organization": "tryenvoy.ai",
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 68,
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "From Automation to Agency: A New Era of Supply Chain Intelligence - How Agentic AI is Redefining Value in Manufacturing Supply Chains - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
+      "type": "Web research",
+      "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -230,8 +228,8 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ]
