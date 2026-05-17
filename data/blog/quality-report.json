@@ -1,32 +1,32 @@
 {
   "score": 88,
-  "strictPassed": false,
-  "passed": false,
+  "strictPassed": true,
+  "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 56,
+    "trendScore": 64,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 78,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 64/100, sentiment positive."
   },
-  "publishMode": "rewrite_required",
+  "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,40 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 71,
-    "passed": false,
+    "score": 74,
+    "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 79,
       "sourceAlignment": 100,
-      "marketSentimentScore": 56,
+      "marketSentimentScore": 78,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 666
+      "wordCount": 631
     },
-    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
-    "blockingIssue": "Authenticity score below publishing threshold."
+    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+    "blockingIssue": ""
   },
   "review": {
     "helpfulContentRisk": "low",
     "notes": [
-      "The article provides practical, actionable guidance for implementing AI automation in logistics workflows, which aligns well with the search intent of business owners seeking implementation advice",
-      "Content is well-researched with 5 authoritative sources cited, supporting the helpful content guidelines",
-      "Article includes specific metrics (reduced planning time by 50%, improved accuracy by 30%) and concrete implementation steps",
-      "Covers important user concerns like approval steps, quality checks, and measurable business outcomes as promised in the subtitle",
-      "Content avoids generic AI advice and provides specific workflows with Slack, CRM, and support triage examples",
-      "The article includes practical elements like implementation checklist, troubleshooting steps, and common mistakes to avoid"
+      "The content is highly specific and technical, focused on a niche AI tool (Launchpad Build AI's MLM) for industrial automation design, which reduces broad helpfulness risk.",
+      "The article includes practical implementation steps, specific business outcomes, and real metrics, aligning with user intent for actionable AI automation guides.",
+      "Use of jargon and tool-specific language may limit accessibility for general audiences, but fits the target audience of operators and engineers.",
+      "The content includes authoritative sources and data-backed results, supporting credibility.",
+      "Strong use of structured data (frontmatter, sources, implementation steps) indicates high-quality, original content with clear business value."
     ],
     "recommendedFixes": [
-      "Add more specific examples of AI workflow tools beyond just naming the category",
-      "Include more detailed implementation timeline beyond the 2-4 week estimate",
-      "Provide specific KPI benchmarks for measuring success rather than just listing metrics",
-      "Add a concrete example with actual numbers for ROI or time savings",
-      "Include a brief comparison of before/after implementation to strengthen the business case"
+      "Clarify that the guide assumes prior knowledge of industrial automation concepts, which may need a brief introduction for broader audiences.",
+      "Consider adding a short glossary or tooltip definitions for terms like 'MLM' or 'human-in-the-loop' to improve accessibility.",
+      "Add a summary section at the end of the article to reinforce key takeaways and next steps for easier skimming.",
+      "Include alt text for all recommended media assets to improve SEO and accessibility compliance.",
+      "Add internal links to related guides or case studies to improve site structure and user engagement."
     ]
   }
 }
