@@ -1,7 +1,7 @@
 {
   "score": 88,
-  "strictPassed": true,
-  "passed": true,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -20,13 +20,13 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 56,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
     "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,8 +85,8 @@
     }
   ],
   "authenticity": {
-    "score": 75,
-    "passed": true,
+    "score": 71,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
@@ -94,32 +94,31 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 56,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 560
+      "wordCount": 666
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": 3,
+    "helpfulContentRisk": "low",
     "notes": [
-      "The content provides practical value for implementing AI planning workflows with memory in logistics",
-      "Addresses a real business problem (manual effort in logistics planning) with measurable outcomes",
-      "Includes specific tools, steps, and implementation guidance that readers can act on",
-      "Content is well-researched with authoritative sources and citations",
-      "Addresses common mistakes and includes troubleshooting guidance",
-      "Provides clear metrics for success (80% reduction in manual hours, 60% improvement in decision accuracy)"
+      "The article provides practical, actionable guidance for implementing AI automation in logistics workflows, which aligns well with the search intent of business owners seeking implementation advice",
+      "Content is well-researched with 5 authoritative sources cited, supporting the helpful content guidelines",
+      "Article includes specific metrics (reduced planning time by 50%, improved accuracy by 30%) and concrete implementation steps",
+      "Covers important user concerns like approval steps, quality checks, and measurable business outcomes as promised in the subtitle",
+      "Content avoids generic AI advice and provides specific workflows with Slack, CRM, and support triage examples",
+      "The article includes practical elements like implementation checklist, troubleshooting steps, and common mistakes to avoid"
     ],
     "recommendedFixes": [
-      "Add more specific technical implementation details for the memory layer integration",
-      "Include examples of actual prompts or API calls for the OpenAI integration",
-      "Provide more detailed troubleshooting scenarios beyond the basic failure handling mentioned",
-      "Add a section on cost considerations for the recommended tool stack",
-      "Include a brief comparison of before/after metrics from a sample implementation",
-      "Add specific error handling for the workflow steps described"
+      "Add more specific examples of AI workflow tools beyond just naming the category",
+      "Include more detailed implementation timeline beyond the 2-4 week estimate",
+      "Provide specific KPI benchmarks for measuring success rather than just listing metrics",
+      "Add a concrete example with actual numbers for ROI or time savings",
+      "Include a brief comparison of before/after implementation to strengthen the business case"
     ]
   }
 }
