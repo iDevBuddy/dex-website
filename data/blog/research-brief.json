@@ -46,21 +46,12 @@
       "publishedDate": ""
     },
     {
-      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
-      "authorityScore": 66,
-      "publishedDate": ""
-    },
-    {
-      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
-      "type": "Web research",
-      "supports": "In 2026, AI will become a standard decision layer within WMS and WES systems, particularly in environments with high SKU variability or seasonality.\n\n### Integration Became the Largest Technical Chall",
-      "authorityScore": 60,
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
       "publishedDate": ""
     },
     {
@@ -69,7 +60,16 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 95,
+      "authorityScore": 68,
+      "publishedDate": ""
+    },
+    {
+      "title": "From Automation to Agency: A New Era of Supply Chain Intelligence - How Agentic AI is Redefining Value in Manufacturing Supply Chains - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
+      "type": "Web research",
+      "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
+      "authorityScore": 64,
       "publishedDate": ""
     },
     {
@@ -77,31 +77,38 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
-      "authorityScore": 95,
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
       "publishedDate": ""
     },
     {
-      "title": "WHICH AI COMPANY IS BEST FOR SUPPLY CHAIN AND LOGISTICS? | Brittain Ladd",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/posts/brittainladd_ai-retail-logistics-activity-7402726631452381184-vh1B",
-      "type": "Web research",
-      "supports": "engineers and logistics SMEs into your operation. They interview operators, walk workflows, observe exceptions, and map the real-world logic behind your processes. 2️⃣ Integration Into Your TMS/WMS/ER",
-      "authorityScore": 95,
-      "publishedDate": ""
+      "title": "OpenAI Platform Documentation",
+      "organization": "OpenAI",
+      "url": "https://platform.openai.com/docs/",
+      "type": "Official documentation",
+      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "automation",
+        "workflow",
+        "prompt"
+      ],
+      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
-    "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
-    "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
+    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
+    "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
     "https://innovecs.com/blog/ai-supply-chain-planning/",
-    "https://www.linkedin.com/posts/brittainladd_ai-retail-logistics-activity-7402726631452381184-vh1B"
+    "https://platform.openai.com/docs/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -152,7 +159,7 @@
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
+        "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
       }
     ],
     "realtimeSources": [
@@ -190,21 +197,12 @@
       "publishedDate": ""
     },
     {
-      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
-      "authorityScore": 66,
-      "publishedDate": ""
-    },
-    {
-      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
-      "type": "Web research",
-      "supports": "In 2026, AI will become a standard decision layer within WMS and WES systems, particularly in environments with high SKU variability or seasonality.\n\n### Integration Became the Largest Technical Chall",
-      "authorityScore": 60,
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
       "publishedDate": ""
     },
     {
@@ -213,7 +211,16 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 95,
+      "authorityScore": 68,
+      "publishedDate": ""
+    },
+    {
+      "title": "From Automation to Agency: A New Era of Supply Chain Intelligence - How Agentic AI is Redefining Value in Manufacturing Supply Chains - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
+      "type": "Web research",
+      "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
+      "authorityScore": 64,
       "publishedDate": ""
     },
     {
@@ -221,62 +228,53 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "WHICH AI COMPANY IS BEST FOR SUPPLY CHAIN AND LOGISTICS? | Brittain Ladd",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/posts/brittainladd_ai-retail-logistics-activity-7402726631452381184-vh1B",
-      "type": "Web research",
-      "supports": "engineers and logistics SMEs into your operation. They interview operators, walk workflows, observe exceptions, and map the real-world logic behind your processes. 2️⃣ Integration Into Your TMS/WMS/ER",
-      "authorityScore": 95,
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
       "publishedDate": ""
     }
   ],
-  "practicalExamples": [
-    {
-      "example": "Slack intake workflow",
-      "description": "Use AI to categorize and assign incoming Slack messages to appropriate team members based on content and urgency, with memory of past interactions to avoid duplicate responses."
+  "practicalExamples": {
+    "Slack intake workflow": {
+      "description": "Automate the intake of customer requests from Slack channels into a ticketing system with AI triage and response prioritization.",
+      "tools": [
+        "Slack API",
+        "Zapier",
+        "OpenAI GPT models"
+      ],
+      "steps": [
+        "Set up a Slack bot to monitor specific channels or DMs",
+        "Use AI to categorize and tag incoming messages",
+        "Automatically create tickets in a CRM or support system",
+        "Assign priority levels based on content analysis"
+      ]
     },
-    {
-      "example": "CRM follow-up workflow",
-      "description": "Automate customer follow-ups in CRM systems by using AI memory to track conversation history and personalize messages, ensuring no lead falls through the cracks."
+    "CRM follow-up workflow": {
+      "description": "Automate customer follow-ups based on CRM data using AI to personalize messages and schedule outreach.",
+      "tools": [
+        "CRM (e.g., HubSpot)",
+        "OpenAI API",
+        "Email automation tools"
+      ],
+      "steps": [
+        "Identify leads requiring follow-up",
+        "Generate personalized email content using CRM data",
+        "Schedule and send emails based on lead activity",
+        "Log interactions and update CRM records"
+      ]
     },
-    {
-      "example": "support triage workflow",
-      "description": "Implement AI-powered support ticket routing that remembers previous issues and customer preferences to assign tickets to the most suitable agent with relevant context."
+    "support triage workflow": {
+      "description": "Use AI to triage support tickets by urgency and route them to the correct team members.",
+      "tools": [
+        "Zendesk API",
+        "OpenAI GPT models",
+        "Slack or email notifications"
+      ],
+      "steps": [
+        "Intake support tickets from multiple channels",
+        "Categorize and prioritize tickets using AI",
+        "Route tickets to appropriate departments",
+        "Automatically generate responses for common issues"
+      ]
     }
-  ],
-  "implementationSteps": [
-    {
-      "step": 1,
-      "action": "Identify a high-volume, repetitive workflow that requires decision-making based on context (e.g., customer inquiries, order processing)."
-    },
-    {
-      "step": 2,
-      "action": "Map out the workflow steps, including all decision points and required data inputs, using tools like flowcharts or process mapping software."
-    },
-    {
-      "step": 3,
-      "action": "Design a memory system that captures and stores relevant context for each workflow instance, using databases or specialized AI memory solutions."
-    },
-    {
-      "step": 4,
-      "action": "Implement approval gates and quality checks at critical decision points to ensure AI actions align with business policies and standards."
-    },
-    {
-      "step": 5,
-      "action": "Set up logging and monitoring to track AI decisions, performance metrics, and identify areas for improvement or potential issues."
-    },
-    {
-      "step": 6,
-      "action": "Establish clear failure handling procedures, including fallback processes and human intervention triggers when AI cannot make confident decisions."
-    },
-    {
-      "step": 7,
-      "action": "Connect workflow outcomes to measurable business metrics (e.g., response time, customer satisfaction, error rates) to validate ROI and guide optimization."
-    }
-  ]
+  }
 }

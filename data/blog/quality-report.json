@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 64,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 78,
+    "trendScore": 62,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 64/100, sentiment positive."
+    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,39 +85,42 @@
     }
   ],
   "authenticity": {
-    "score": 74,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 79,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 78,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 631
+      "wordCount": 764
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The content is highly specific and technical, focused on a niche AI tool (Launchpad Build AI's MLM) for industrial automation design, which reduces broad helpfulness risk.",
-      "The article includes practical implementation steps, specific business outcomes, and real metrics, aligning with user intent for actionable AI automation guides.",
-      "Use of jargon and tool-specific language may limit accessibility for general audiences, but fits the target audience of operators and engineers.",
-      "The content includes authoritative sources and data-backed results, supporting credibility.",
-      "Strong use of structured data (frontmatter, sources, implementation steps) indicates high-quality, original content with clear business value."
+      "The article provides practical, actionable guidance on implementing AI automation with memory capabilities, which is valuable and non-generic content",
+      "Strong focus on logistics viewpoints and real business outcomes differentiates it from generic AI automation content",
+      "Content demonstrates expertise through specific metrics (60% response time reduction, 35% satisfaction improvement)",
+      "Addresses common mistakes and includes implementation checklist which adds practical value",
+      "Uses authoritative sources from logisticsviewpoints.com and tryenvoy.ai to support key points",
+      "Content is informational and solves a real business problem rather than using SEO shortcuts"
     ],
     "recommendedFixes": [
-      "Clarify that the guide assumes prior knowledge of industrial automation concepts, which may need a brief introduction for broader audiences.",
-      "Consider adding a short glossary or tooltip definitions for terms like 'MLM' or 'human-in-the-loop' to improve accessibility.",
-      "Add a summary section at the end of the article to reinforce key takeaways and next steps for easier skimming.",
-      "Include alt text for all recommended media assets to improve SEO and accessibility compliance.",
-      "Add internal links to related guides or case studies to improve site structure and user engagement."
+      "Add more specific technical implementation details for the Slack workflow example to increase practical value",
+      "Include a workflow diagram as suggested in media recommendations to better illustrate the memory-driven AI concept",
+      "Add a checklist asset as recommended to provide actionable implementation steps",
+      "Expand on the specific KPIs measurement framework with concrete examples of how to track ROI",
+      "Include more specific examples of the 'memory layer' implementation in practice",
+      "Add a comparison table showing traditional automation vs. AI with memory approaches",
+      "Include more details about the 'structured operational context' implementation"
     ]
   }
 }
