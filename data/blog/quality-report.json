@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 56,
+    "trendScore": 64,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 75,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 64/100, sentiment positive."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 79,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,11 +94,11 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 56,
+      "marketSentimentScore": 75,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 688
+      "wordCount": 686
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,18 +106,18 @@
   "review": {
     "helpfulContentRisk": "Medium",
     "notes": [
-      "The content provides a detailed, practical guide to implementing memory-aware AI workflows, which is valuable for the target audience of business automation practitioners.",
-      "Strong technical implementation details and clear step-by-step instructions make this content highly relevant for the intended use case.",
-      "The logistics-focused angle with concrete metrics and business impact demonstrates real value to readers.",
-      "Content includes specific tools, implementation steps, and troubleshooting advice that aligns well with the expert guide tone.",
-      "Some minor areas could be enhanced for clarity and SEO optimization, but overall the content is solid and helpful."
+      "The article provides a detailed, practical guide on implementing Launchpad Build AI's MLM for industrial automation design, which aligns well with the informational search intent.",
+      "Content is structured with clear steps, use cases, and includes tools and workflows, making it actionable for the target audience.",
+      "There is some risk of over-optimization due to repeated keyword usage (e.g., 'Launchpad Build AI offers MLM for industrial automation design') which could appear forced or repetitive to search engines.",
+      "The article lacks sufficient internal linking to authoritative sources or related content on the site, reducing its helpfulness and authority potential.",
+      "Some sections like 'Troubleshooting and Failure Handling' and 'Implementation Checklist' are helpful but could benefit from more specific examples or data."
     ],
     "recommendedFixes": [
-      "Add internal links to related content earlier in the article to improve SEO and user navigation.",
-      "Include more specific examples of memory store integration (e.g., code snippets or configuration details) to increase technical depth.",
-      "Clarify the business impact section with more explicit ties to KPIs and outcomes to strengthen the value proposition.",
-      "Enhance the SEO meta description to better align with the target keyword and search intent.",
-      "Consider adding a summary or callout section highlighting the core benefits and outcomes to improve skimmability and reader engagement."
+      "Diversify the keyword usage to avoid repetition. Use variations like 'industrial automation with Launchpad Build AI', 'MLM for automation design', or 'AI-driven factory layout automation' to maintain topical relevance without over-optimization.",
+      "Add more internal links to related guides, tools, or case studies on the site to improve content helpfulness and topical depth.",
+      "Include a downloadable checklist or workflow diagram as a supporting asset to increase engagement and perceived value.",
+      "In the 'Measuring Success' section, add specific examples or benchmarks (e.g., 'A 50% reduction in design time translates to 10 hours saved per project') to make KPIs more tangible.",
+      "Enhance the 'Business Use Case' section with a short client testimonial or anonymized data point to increase trust and authority."
     ]
   }
 }
