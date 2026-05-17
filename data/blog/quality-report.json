@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,7 +98,7 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 764
+      "wordCount": 603
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,21 +106,20 @@
   "review": {
     "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides practical, actionable guidance on implementing AI automation with memory capabilities, which is valuable and non-generic content",
-      "Strong focus on logistics viewpoints and real business outcomes differentiates it from generic AI automation content",
-      "Content demonstrates expertise through specific metrics (60% response time reduction, 35% satisfaction improvement)",
-      "Addresses common mistakes and includes implementation checklist which adds practical value",
-      "Uses authoritative sources from logisticsviewpoints.com and tryenvoy.ai to support key points",
-      "Content is informational and solves a real business problem rather than using SEO shortcuts"
+      "The article provides valuable insights into the importance of memory in AI workflows, particularly for logistics planning.",
+      "Content is well-structured with clear steps, use cases, and implementation guidance.",
+      "Some sections could benefit from more specific examples or deeper technical details.",
+      "The business case study is compelling but could include more concrete data or metrics.",
+      "FAQs address key questions but could be expanded to cover more edge cases or implementation challenges.",
+      "SEO elements are present but could be optimized further for better search visibility."
     ],
     "recommendedFixes": [
-      "Add more specific technical implementation details for the Slack workflow example to increase practical value",
-      "Include a workflow diagram as suggested in media recommendations to better illustrate the memory-driven AI concept",
-      "Add a checklist asset as recommended to provide actionable implementation steps",
-      "Expand on the specific KPIs measurement framework with concrete examples of how to track ROI",
-      "Include more specific examples of the 'memory layer' implementation in practice",
-      "Add a comparison table showing traditional automation vs. AI with memory approaches",
-      "Include more details about the 'structured operational context' implementation"
+      "Add more specific examples of memory implementation in logistics scenarios",
+      "Include additional metrics or case study data to strengthen the business impact claims",
+      "Expand FAQ section to cover more implementation challenges and edge cases",
+      "Enhance SEO optimization by incorporating more related keywords and improving meta descriptions",
+      "Add visual elements like workflow diagrams or infographics to improve content engagement",
+      "Include more detailed technical implementation steps for connecting AI memory layers with specific tools"
     ]
   }
 }

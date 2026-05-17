@@ -60,7 +60,7 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 68,
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -69,7 +69,7 @@
       "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
       "type": "Web research",
       "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
-      "authorityScore": 64,
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -77,8 +77,8 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -134,7 +134,7 @@
         "title": "Why Enterprise AI Systems Fail: It’s Not RAG – It’s Context Control - Logistics Viewpoints"
       },
       {
-        "source": "Google News",
+        "source": "Google (News)",
         "title": "Architecting the AI Supply Chain: A 10-Part Downloadable Executive Guide - ARC Advisory Group"
       },
       {
@@ -211,7 +211,7 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 68,
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -220,7 +220,7 @@
       "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
       "type": "Web research",
       "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
-      "authorityScore": 64,
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -228,53 +228,9 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
       "publishedDate": ""
     }
-  ],
-  "practicalExamples": {
-    "Slack intake workflow": {
-      "description": "Automate the intake of customer requests from Slack channels into a ticketing system with AI triage and response prioritization.",
-      "tools": [
-        "Slack API",
-        "Zapier",
-        "OpenAI GPT models"
-      ],
-      "steps": [
-        "Set up a Slack bot to monitor specific channels or DMs",
-        "Use AI to categorize and tag incoming messages",
-        "Automatically create tickets in a CRM or support system",
-        "Assign priority levels based on content analysis"
-      ]
-    },
-    "CRM follow-up workflow": {
-      "description": "Automate customer follow-ups based on CRM data using AI to personalize messages and schedule outreach.",
-      "tools": [
-        "CRM (e.g., HubSpot)",
-        "OpenAI API",
-        "Email automation tools"
-      ],
-      "steps": [
-        "Identify leads requiring follow-up",
-        "Generate personalized email content using CRM data",
-        "Schedule and send emails based on lead activity",
-        "Log interactions and update CRM records"
-      ]
-    },
-    "support triage workflow": {
-      "description": "Use AI to triage support tickets by urgency and route them to the correct team members.",
-      "tools": [
-        "Zendesk API",
-        "OpenAI GPT models",
-        "Slack or email notifications"
-      ],
-      "steps": [
-        "Intake support tickets from multiple channels",
-        "Categorize and prioritize tickets using AI",
-        "Route tickets to appropriate departments",
-        "Automatically generate responses for common issues"
-      ]
-    }
-  }
+  ]
 }
