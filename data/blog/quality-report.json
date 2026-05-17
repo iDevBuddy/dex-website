@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,13 +98,28 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 790
+      "wordCount": 604
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
+    "helpfulContentRisk": "Low",
+    "notes": [
+      "The article provides substantial, practical value for its target audience of logistics professionals and business operators evaluating AI automation.",
+      "Content is well-researched with multiple authoritative sources cited throughout, enhancing credibility and depth.",
+      "The article successfully addresses a specific business problem (manual logistics planning inefficiencies) with concrete solutions.",
+      "Informational search intent is well-matched with clear, structured guidance on implementing memory-aware AI systems.",
+      "Content includes practical workflows, implementation checklists, and troubleshooting steps that enhance its utility.",
+      "The article balances technical depth with accessibility for business decision-makers.",
+      "Use of expert insights and real-world case examples strengthens the content's authority and applicability."
+    ],
+    "recommendedFixes": [
+      "Consider expanding the 'Step-by-Step Workflow' section with more detailed examples or visual aids (e.g., diagrams) to further enhance clarity for complex implementation steps.",
+      "Add a brief comparison table of traditional automation vs. memory-aware AI to highlight the value proposition more vividly.",
+      "Include a short summary or callout section highlighting the top 3 business benefits of memory-aware AI for quick skimming.",
+      "Enhance the FAQ section with more specific questions related to implementation challenges (e.g., handling edge cases, integration difficulties).",
+      "Consider adding a real-time monitoring or alerting step in the workflow to reflect modern AI operations best practices."
+    ]
   }
 }

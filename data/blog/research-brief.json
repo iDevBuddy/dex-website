@@ -64,11 +64,11 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
+      "title": "AI Is Already Moving the Logistics Industry Forward | BCG",
+      "organization": "bcg.com",
+      "url": "https://www.bcg.com/publications/2026/ai-is-already-moving-the-logistics-industry-forward",
       "type": "Web research",
-      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
+      "supports": "Respondents to the 2025 survey agreed on AI's transformative potential but indicated little actual adoption of the technology. This year's",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -82,33 +82,26 @@
       "publishedDate": ""
     },
     {
-      "title": "OpenAI Platform Documentation",
-      "organization": "OpenAI",
-      "url": "https://platform.openai.com/docs/",
-      "type": "Official documentation",
-      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
-      "tags": [
-        "ai",
-        "llm",
-        "agents",
-        "automation",
-        "workflow",
-        "prompt"
-      ],
-      "authorityScore": 83
+      "title": "The AI Business Planning Landscape: A Complete Guide",
+      "organization": "pigment.com",
+      "url": "https://www.pigment.com/blog/understanding-the-modern-ai-landscape",
+      "type": "Web research",
+      "supports": "Agentic AI extends beyond prompt-based responses by combining language models, tools, planning, and memory to complete multi-step workflows with autonomous decisions.\n Across FP&A, sales, supply chain",
+      "authorityScore": 61,
+      "publishedDate": ""
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
-    "https://innovecs.com/blog/ai-supply-chain-planning/",
+    "https://www.bcg.com/publications/2026/ai-is-already-moving-the-logistics-industry-forward",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
-    "https://platform.openai.com/docs/"
+    "https://www.pigment.com/blog/understanding-the-modern-ai-landscape"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -151,15 +144,15 @@
       },
       {
         "source": "Google News",
+        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+      },
+      {
+        "source": "Google News",
         "title": "Seizing the agentic AI advantage - McKinsey & Company"
       },
       {
         "source": "Google News",
         "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
-      },
-      {
-        "source": "Google News",
-        "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
       }
     ],
     "realtimeSources": [
@@ -215,11 +208,11 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
+      "title": "AI Is Already Moving the Logistics Industry Forward | BCG",
+      "organization": "bcg.com",
+      "url": "https://www.bcg.com/publications/2026/ai-is-already-moving-the-logistics-industry-forward",
       "type": "Web research",
-      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
+      "supports": "Respondents to the 2025 survey agreed on AI's transformative potential but indicated little actual adoption of the technology. This year's",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -230,6 +223,15 @@
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
       "authorityScore": 68,
+      "publishedDate": ""
+    },
+    {
+      "title": "The AI Business Planning Landscape: A Complete Guide",
+      "organization": "pigment.com",
+      "url": "https://www.pigment.com/blog/understanding-the-modern-ai-landscape",
+      "type": "Web research",
+      "supports": "Agentic AI extends beyond prompt-based responses by combining language models, tools, planning, and memory to complete multi-step workflows with autonomous decisions.\n Across FP&A, sales, supply chain",
+      "authorityScore": 61,
       "publishedDate": ""
     }
   ]
