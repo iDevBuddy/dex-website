@@ -37,15 +37,6 @@
   ],
   "sources": [
     {
-      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025",
-      "type": "Web research",
-      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
       "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
@@ -55,20 +46,29 @@
       "publishedDate": ""
     },
     {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "title": "Why Enterprise AI Systems Fail: It’s Not RAG - It’s Context Control - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com?p=34886",
+      "url": "https://logisticsviewpoints.com/2026/04/17/why-enterprise-ai-systems-fail-its-not-rag-its-context-control/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "supports": "### Why This Matters in Supply Chains\n\nThis matters more in supply chains than in many other domains because supply chain work is rarely a single-turn exercise. It is multi-step, multi-system, and tim",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Is Already Moving the Logistics Industry Forward | BCG",
+      "organization": "bcg.com",
+      "url": "https://www.bcg.com/publications/2026/ai-is-already-moving-the-logistics-industry-forward",
+      "type": "Web research",
+      "supports": "Respondents to the 2025 survey agreed on AI's transformative potential but indicated little actual adoption of the technology. This year's",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -78,7 +78,7 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 68,
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -87,15 +87,15 @@
       "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
       "type": "Web research",
       "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
-      "authorityScore": 64,
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ],
   "sourcesToCite": [
-    "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025",
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
-    "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-    "https://logisticsviewpoints.com?p=34886",
+    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+    "https://logisticsviewpoints.com/2026/04/17/why-enterprise-ai-systems-fail-its-not-rag-its-context-control/",
+    "https://www.bcg.com/publications/2026/ai-is-already-moving-the-logistics-industry-forward",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
     "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/"
   ],
@@ -115,7 +115,7 @@
   "trendAnalysis": {
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 56,
+    "marketSentimentScore": 65,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -132,7 +132,11 @@
       },
       {
         "source": "Google News",
-        "title": "The 2026 AI predictions bonanza - Frontier Enterprise"
+        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
+      },
+      {
+        "source": "Google News",
+        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
       },
       {
         "source": "Google News",
@@ -148,11 +152,7 @@
       },
       {
         "source": "Google News",
-        "title": "The Rise of AI Agents: Anticipating Cybersecurity Opportunities, Risks, and the Next Frontier - R Street Institute"
-      },
-      {
-        "source": "Google News",
-        "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
+        "title": "A Developer’s Guide to Building Scalable AI: Workflows vs Agents - towardsdatascience.com"
       }
     ],
     "realtimeSources": [
@@ -181,38 +181,38 @@
   "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
   "webResearchSources": [
     {
-      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025",
-      "type": "Web research",
-      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
       "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offering",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+      "url": "https: //logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "title": "Why Enterprise AI Systems Fail: It’s Not RAG - It’s Context Control - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com?p=34886",
+      "url": "https://logisticsviewpoints.com/2026/04/17/why-enterprise-ai-systems-fail-its-not-rag-its-context-control/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "supports": "### Why This Matters in Supply Chains\n\nThis matters more in supply chains than in many other domains because supply chain work is rarely a single-turn exercise. It is multi-step, multi-system, and tim",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Is Already Moving the Logistics Industry Forward | BCG",
+      "organization": "bcg.com",
+      "url": "https://www.bcg.com/publications/2026/ai-is-already-moving-the-logistics-industry-forward",
+      "type": "Web research",
+      "supports": "Respondents to the 2025 survey agreed on AI's transformative potential but indicated little actual adoption of the technology. This year's",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -222,7 +222,7 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 68,
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -231,7 +231,7 @@
       "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
       "type": "Web research",
       "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
-      "authorityScore": 64,
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ]
