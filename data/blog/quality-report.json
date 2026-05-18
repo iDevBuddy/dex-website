@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,26 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 85,
+    "score": 74,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 795
+      "wordCount": 672
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
+    "helpfulContentRisk": "low",
+    "notes": [
+      "The article provides a clear, practical guide to implementing memory-enabled AI workflows in logistics with specific tools and measurable outcomes.",
+      "Content is well-structured with a real business use case, step-by-step implementation, and clear KPIs for measuring success.",
+      "Includes authoritative sources and addresses a key gap in current AI automation: persistent memory for context retention.",
+      "Content aligns well with informational search intent and targets a clear reader persona (founder, operator, marketer, service-business owner).",
+      "Addresses both technical implementation and business impact, making it valuable for practitioners."
+    ],
+    "recommendedFixes": [
+      "Add a brief explanation of how memory is implemented technically (e.g., schema design in Notion) to improve depth.",
+      "Include a diagram or visualization of the workflow to improve clarity and engagement.",
+      "Add a short section on how to handle data privacy or security in the workflow, especially when storing supplier/customer data in AI memory.",
+      "Consider expanding the 'Tools & Integrations' section with setup tips or common pitfalls for each tool.",
+      "Add a sentence or two explaining how the memory layer is updated and maintained over time to prevent staleness or inaccuracies."
+    ]
   }
 }

@@ -46,39 +46,12 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th/",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "Guest Commentary | By Chris Cunnane • 06/03/2025\n\nOrder fulfillment is the complete process from when an order is placed until the shipment is delivered. Accurately fulfilling thousands of orders for ",
-      "authorityScore": 62,
-      "publishedDate": ""
-    },
-    {
-      "title": "Industry Insights: AI in Logistics | Reshaping How Goods Move Globally | Association for Advancing Automation",
-      "organization": "automate.org",
-      "url": "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
-      "type": "Web research",
-      "supports": "“Logistics operations need more than just automation; they require solutions that embrace the industry's dynamic nature — from shifting workflows and peak seasons to evolving customer demands,” Amel A",
-      "authorityScore": 54,
-      "publishedDate": ""
-    },
-    {
-      "title": "Leaders Build AI Agents that multiply output Discipline on execution ...",
-      "organization": "facebook.com",
-      "url": "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780/",
-      "type": "Web research",
-      "supports": "We're seeing AI move fast in logistics, & it's not just about automation anymore. It's about orchestration: connecting systems, data, and",
-      "authorityScore": 52,
-      "publishedDate": ""
-    },
-    {
-      "title": "Why LLMs need more memory, not parameters | Matt Asay posted on the topic | LinkedIn",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
-      "type": "Web research",
-      "supports": "Matt Asay Great post, Matt. You’re absolutely right — AI needs memory, and databases are the unsung heroes in that transformation. But the real unlock isn’t just having memory — it’s designing the rig",
-      "authorityScore": 95,
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
       "publishedDate": ""
     },
     {
@@ -86,22 +59,67 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
-      "authorityScore": 95,
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
       "publishedDate": ""
+    },
+    {
+      "title": "OpenAI Platform Documentation",
+      "organization": "OpenAI",
+      "url": "https://platform.openai.com/docs/",
+      "type": "Official documentation",
+      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "automation",
+        "workflow",
+        "prompt"
+      ],
+      "authorityScore": 83
+    },
+    {
+      "title": "GitHub Docs: GitHub Actions",
+      "organization": "GitHub",
+      "url": "https://docs.github.com/en/actions",
+      "type": "Official documentation",
+      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
+      "tags": [
+        "github",
+        "automation",
+        "workflow",
+        "ci",
+        "deployment"
+      ],
+      "authorityScore": 83
+    },
+    {
+      "title": "The State of AI",
+      "organization": "McKinsey & Company",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "type": "Industry report",
+      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
+      "tags": [
+        "ai",
+        "business",
+        "trend",
+        "strategy"
+      ],
+      "authorityScore": 80
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
-    "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th/",
-    "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
-    "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780/",
-    "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
-    "https://innovecs.com/blog/ai-supply-chain-planning/"
+    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+    "https://innovecs.com/blog/ai-supply-chain-planning/",
+    "https://platform.openai.com/docs/",
+    "https://docs.github.com/en/actions",
+    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "3 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -148,11 +166,11 @@
       },
       {
         "source": "Google News",
-        "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
+        "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
+        "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
       }
     ],
     "realtimeSources": [
@@ -190,48 +208,21 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th/",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
       "type": "Web research",
-      "supports": "Guest Commentary | By Chris Cunnane • 06/03/2025\n\nOrder fulfillment is the complete process from when an order is placed until the shipment is delivered. Accurately fulfilling thousands of orders for ",
-      "authorityScore": 62,
-      "publishedDate": ""
-    },
-    {
-      "title": "Industry Insights: AI in Logistics | Reshaping How Goods Move Globally | Association for Advancing Automation",
-      "organization": "automate.org",
-      "url": "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
-      "type": "Web research",
-      "supports": "“Logistics operations need more than just automation; they require solutions that embrace the industry's dynamic nature — from shifting workflows and peak seasons to evolving customer demands,” Amel A",
-      "authorityScore": 54,
-      "published1Date": ""
-    },
-    {
-      "title": "Leaders Build AI Agents that multiply output Discipline on execution ...",
-      "organization": "facebook.com",
-      "url": "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780/",
-      "type": "Web research",
-      "supports": "We're seeing AI move fast in logistics, & it's not just about automation anymore. It's about orchestration: connecting systems, data, and",
-      "authorityScore": 52,
-      "publishedDate": ""
-    },
-    {
-      "title": "Why LLMs need more memory, not parameters | Matt Asay posted on the topic | LinkedIn",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
-      "type": "Web research",
-      "supports": "Matt Asay Great post, Matt. You’re absolutely right — AI needs memory, and databases are the unsung heroes in that transformation. But the real unlock isn’t just having memory — it’s designing the rig",
-      "authorityScore": 95,
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
       "publishedDate": ""
     },
     {
       "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
       "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
+      "url": "https://innovecs.com/blog/ai-supply-chains-planning/",
       "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
-      "authorityScore": 95,
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
       "publishedDate": ""
     }
   ]
