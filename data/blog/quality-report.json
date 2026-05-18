@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -20,17 +20,17 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 56,
+    "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 89,
+    "score": 73,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,31 +94,30 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 56,
+      "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 795
+      "wordCount": 672
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low - The content provides specific, actionable guidance for implementing memory layers in AI workflows, includes practical examples, and avoids generic AI advice. It's focused on a logistics use case with concrete implementation steps.",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a clear framework for implementing memory in AI workflows with specific tools (Slack, Notion, CRM, OpenAI API)",
-      "Includes measurable business outcomes (40% reduction in manual hours, 60% increase in planning accuracy)",
-      "Addresses search intent well - practical implementation guidance for business owners",
-      "Covers important aspects like approval steps, quality checks, and failure handling",
-      "Provides specific KPIs for measuring success (first response time, resolution time, manual hours saved)",
-      "Content aligns well with target keyword and search intent"
+      "The article provides a comprehensive, practical guide on implementing Planning AI with memory in business automation workflows.",
+      "Content is well-structured with clear takeaways, step-by-step implementation, and addresses common pitfalls.",
+      "The article includes relevant tools, implementation checklists, and troubleshooting advice, making it actionable.",
+      "Use of expert insights and authoritative sources enhances credibility and provides a strong foundation.",
+      "The article aligns well with search intent (informational) and targets a business-savvy audience effectively.",
+      "Content includes key metrics and business impact outcomes, which adds practical value for readers."
     ],
     "recommendedFixes": [
-      "Add more specific technical implementation details for the memory layer setup",
-      "Include more concrete examples of memory storage structures",
-      "Provide additional troubleshooting scenarios specific to logistics contexts",
-      "Expand on integration examples between tools (Slack → Notion/CRM → AI)",
-      "Add more specific metrics for logistics planning success"
+      "Consider adding a visual workflow diagram to enhance understanding of the step-by-step process described.",
+      "Include a real-world case study or example with before/after metrics to further illustrate business impact.",
+      "Add a section on how to measure the success of the implemented workflow with specific tools or KPI dashboards.",
+      "Clarify the distinction between 'Planning AI' and traditional automation earlier to avoid potential confusion for readers."
     ]
   }
 }
