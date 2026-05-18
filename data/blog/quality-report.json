@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,39 +85,42 @@
     }
   ],
   "authenticity": {
-    "score": 73,
+    "score": 72,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 79,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 672
+      "wordCount": 638
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The article provides a comprehensive, practical guide on implementing Planning AI with memory in business automation workflows.",
-      "Content is well-structured with clear takeaways, step-by-step implementation, and addresses common pitfalls.",
-      "The article includes relevant tools, implementation checklists, and troubleshooting advice, making it actionable.",
-      "Use of expert insights and authoritative sources enhances credibility and provides a strong foundation.",
-      "The article aligns well with search intent (informational) and targets a business-savvy audience effectively.",
-      "Content includes key metrics and business impact outcomes, which adds practical value for readers."
+      "The article provides a well-structured, practical guide to implementing memory-enabled AI in logistics planning workflows.",
+      "Content is highly relevant and specific to the target keyword with clear logistical use cases.",
+      "Addresses a genuine business problem with a detailed workflow and implementation guide, including tools, case studies, and KPIs.",
+      "The article includes expert insights, authoritative sources, and a clear 'what you'll build' outcome, aligning with the informational search intent.",
+      "Use of checklists, step-by-step guides, and implementation difficulty/estimates adds practical value for the target reader.",
+      "Content is well-optimized for the target keyword and includes semantic variations like 'memory-enabled AI' and 'context awareness'.",
+      "The article could benefit from more structured data (e.g., comparison tables or workflow diagrams) to improve skimmability and user engagement."
     ],
     "recommendedFixes": [
-      "Consider adding a visual workflow diagram to enhance understanding of the step-by-step process described.",
-      "Include a real-world case study or example with before/after metrics to further illustrate business impact.",
-      "Add a section on how to measure the success of the implemented workflow with specific tools or KPI dashboards.",
-      "Clarify the distinction between 'Planning AI' and traditional automation earlier to avoid potential confusion for readers."
+      "Add a workflow diagram to visually represent the 5-step process for better clarity and user engagement.",
+      "Include a downloadable checklist or infographic summarizing the implementation steps and tools needed.",
+      "Add a comparison table of AI agents with memory capabilities to help readers make informed tooling decisions.",
+      "Incorporate a brief troubleshooting flowchart or table for common failure modes and their resolutions.",
+      "Consider adding a social carousel or slide deck summarizing key points for easier sharing and content repurposing.",
+      "Enhance internal linking to related articles or services to improve site structure and SEO."
     ]
   }
 }

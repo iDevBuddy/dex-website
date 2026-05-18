@@ -37,6 +37,15 @@
   ],
   "sources": [
     {
+      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+      "type": "Web research",
+      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
       "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
@@ -46,29 +55,20 @@
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+      "title": "Logistics Viewpoints Weekly News: From Reactive to Real-Time – Supply Chains Rewrite the Rules - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+      "url": "https://logisticsviewpoints.com/2025/07/17/logistics-weekly-from-reactive-to-real-time-supply-chains-rewrite-the-rules/",
       "type": "Web research",
-      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
+      "supports": "Tariffs, however, are now the unexpected disruptors driving technological urgency. In “Tariffs Are the New Normal: Boardrooms Are Finally Demanding a Pivot to Real-Time Supply Chain Orchestration”, Ki",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Why Enterprise AI Systems Fail: It’s Not RAG - It’s Context Control - Logistics Viewpoints",
+      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/04/17/why-enterprise-ai-systems-fail-its-not-rag-its-context-control/",
+      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
       "type": "Web research",
-      "supports": "### Why This Matters in Supply Chains\n\nThis matters more in supply chains than in many other domains because supply chain work is rarely a single-turn exercise. It is multi-step, multi-system, and tim",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
-      "type": "Web research",
-      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
+      "supports": "AI played a more visible and reliable role inside the warehouse in 2025. Rather than attempting full autonomy, AI supported decision-making by predicting where bottlenecks would occur.\n\nThe strongest ",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -78,26 +78,26 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 95,
+      "authorityScore": 68,
       "publishedDate": ""
     },
     {
-      "title": "From Automation to Agency: A New Era of Supply Chain Intelligence - How Agentic AI is Redefining Value in Manufacturing Supply Chains - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
-      "authorityScore": 95,
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
       "publishedDate": ""
     }
   ],
   "sourcesToCite": [
+    "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
-    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
-    "https://logisticsviewpoints.com/2026/04/17/why-enterprise-ai-systems-fail-its-not-rag-its-context-control/",
-    "https://innovecs.com/blog/ai-supply-chain-planning/",
+    "https://logisticsviewpoints.com/2025/07/17/logistics-weekly-from-reactive-to-real-time-supply-chains-rewrite-the-rules/",
+    "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
     "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
-    "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/"
+    "https://innovecs.com/blog/ai-supply-chain-planning/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
@@ -115,7 +115,7 @@
   "trendAnalysis": {
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -148,11 +148,11 @@
       },
       {
         "source": "Google News",
-        "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
+        "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
+        "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
       }
     ],
     "realtimeSources": [
@@ -181,6 +181,15 @@
   "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
   "webResearchSources": [
     {
+      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025/",
+      "type": "Web research",
+      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
       "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
@@ -190,29 +199,20 @@
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+      "title": "Logistics Viewpoints Weekly News: From Reactive to Real-Time – Supply Chains Rewrite the Rules - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+      "url": "https://logisticsviewpoints.com/2025/07/17/logistics-weekly-from-reactive-to-real-time-supply-chains-rewrite-the-rules/",
       "type": "Web research",
-      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
+      "supports": "Tariffs, however, are now the unexpected disruptors driving technological urgency. In “Tariffs Are the New Normal: Boardrooms Are Finally Demanding a Pivot to Real-Time Supply Chain Orchestration”, Ki",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Why Enterprise AI Systems Fail: It’s Not RAG - It’s Context Control - Logistics Viewpoints",
+      "title": "The Future of Warehouse Automation: What 2025 Taught Us - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/04/17/why-enterprise-ai-systems-fail-its-not-rag-its-context-control/",
+      "url": "https://logisticsviewpoints.com/2026/01/05/the-future-of-warehouse-automation-what-2025-taught-us/",
       "type": "Web research",
-      "supports": "### Why This Matters in Supply Chains\n\nThis matters more in supply chains than in many other domains because supply chain work is rarely a single-turn exercise. It is multi-step, multi-system, and tim",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
-      "type": "Web research",
-      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
+      "supports": "AI played a more visible and reliable role inside the warehouse in 2025. Rather than attempting full autonomy, AI supported decision-making by predicting where bottlenecks would occur.\n\nThe strongest ",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -222,16 +222,16 @@
       "url": "https://tryenvoy.ai/blog/the-new-logistics-ai-stack-llm-tools-memory-policies",
       "type": "Web research",
       "supports": "The difference from old-school automation is flexibility. Scripts broke when anything changed. Tools let an agent adapt and complete the workflow, which is why OpenAI and Anthropic both position them ",
-      "authorityScore": 95,
+      "authorityScore": 68,
       "publishedDate": ""
     },
     {
-      "title": "From Automation to Agency: A New Era of Supply Chain Intelligence - How Agentic AI is Redefining Value in Manufacturing Supply Chains - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/11/03/from-automation-to-agency-a-new-era-of-supply-chain-intelligence-how-agentic-ai-is-redefining-value-in-manufacturing-supply-chains/",
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": ": Agents can monitor the environment, flag issues early and quickly suggest and orchestrate corrective actions to maintain service levels. Autonomous agents can ingest sales, market, weather, operatio",
-      "authorityScore": 95,
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
       "publishedDate": ""
     }
   ]
