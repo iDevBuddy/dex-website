@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 64,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 75,
+    "trendScore": 62,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 56,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 64/100, sentiment positive."
+    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 79,
+    "score": 89,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,30 +94,31 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 75,
+      "marketSentimentScore": 56,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 686
+      "wordCount": 795
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "Low - The content provides specific, actionable guidance for implementing memory layers in AI workflows, includes practical examples, and avoids generic AI advice. It's focused on a logistics use case with concrete implementation steps.",
     "notes": [
-      "The article provides a detailed, practical guide on implementing Launchpad Build AI's MLM for industrial automation design, which aligns well with the informational search intent.",
-      "Content is structured with clear steps, use cases, and includes tools and workflows, making it actionable for the target audience.",
-      "There is some risk of over-optimization due to repeated keyword usage (e.g., 'Launchpad Build AI offers MLM for industrial automation design') which could appear forced or repetitive to search engines.",
-      "The article lacks sufficient internal linking to authoritative sources or related content on the site, reducing its helpfulness and authority potential.",
-      "Some sections like 'Troubleshooting and Failure Handling' and 'Implementation Checklist' are helpful but could benefit from more specific examples or data."
+      "The article provides a clear framework for implementing memory in AI workflows with specific tools (Slack, Notion, CRM, OpenAI API)",
+      "Includes measurable business outcomes (40% reduction in manual hours, 60% increase in planning accuracy)",
+      "Addresses search intent well - practical implementation guidance for business owners",
+      "Covers important aspects like approval steps, quality checks, and failure handling",
+      "Provides specific KPIs for measuring success (first response time, resolution time, manual hours saved)",
+      "Content aligns well with target keyword and search intent"
     ],
     "recommendedFixes": [
-      "Diversify the keyword usage to avoid repetition. Use variations like 'industrial automation with Launchpad Build AI', 'MLM for automation design', or 'AI-driven factory layout automation' to maintain topical relevance without over-optimization.",
-      "Add more internal links to related guides, tools, or case studies on the site to improve content helpfulness and topical depth.",
-      "Include a downloadable checklist or workflow diagram as a supporting asset to increase engagement and perceived value.",
-      "In the 'Measuring Success' section, add specific examples or benchmarks (e.g., 'A 50% reduction in design time translates to 10 hours saved per project') to make KPIs more tangible.",
-      "Enhance the 'Business Use Case' section with a short client testimonial or anonymized data point to increase trust and authority."
+      "Add more specific technical implementation details for the memory layer setup",
+      "Include more concrete examples of memory storage structures",
+      "Provide additional troubleshooting scenarios specific to logistics contexts",
+      "Expand on integration examples between tools (Slack → Notion/CRM → AI)",
+      "Add more specific metrics for logistics planning success"
     ]
   }
 }
