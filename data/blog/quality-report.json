@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -20,17 +20,17 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 56,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,34 +94,31 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 56,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 743
+      "wordCount": 602
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 8.5,
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a solid practical framework for implementing memory-enabled AI workflows, which is a valuable and timely topic.",
-      "Content is well-structured with clear takeaways, use case implementation, and technical guidance.",
-      "The logistics support triage example is relevant and demonstrates measurable business impact.",
-      "Addresses a common pain point (AI lacking memory/context) and provides actionable solutions.",
-      "Good balance of technical implementation details and business value.",
-      "Includes important considerations like human approval steps, error handling, and KPIs.",
-      "SEO elements are mostly strong with good use of target keyword and related terms throughout."
+      "The article provides practical, actionable guidance on implementing AI with memory in business workflows.",
+      "Content is well-structured with clear examples, implementation steps, and measurable outcomes.",
+      "Target keyword 'planning ai needs memory, not just automation - logistics viewpoints' is used in meta tags but could be better integrated into the main content.",
+      "The article cites authoritative sources and includes relevant implementation details.",
+      "Content follows SEO best practices with proper heading structure and internal linking.",
+      "No significant helpful content risks identified - content appears unique and valuable."
     ],
     "recommendedFixes": [
-      "Add a visual workflow diagram to illustrate the memory-enabled AI process - this would significantly improve comprehension and user engagement.",
-      "Include a checklist or downloadable PDF asset as mentioned in media recommendations to increase lead generation potential.",
-      "Consider adding a comparison table showing before/after metrics or traditional AI vs memory-enabled AI benefits.",
-      "Add internal links to related blog posts or service pages beyond the current generic links.",
-      "Include more specific examples of structured memory storage patterns in Notion/Airtable for better implementation guidance.",
-      "Add a section on cost considerations or ROI calculation framework for businesses evaluating implementation.",
-      "Include mobile-responsive workflow considerations since logistics operations often involve mobile interactions."
+      "Optimize the title tag and H1 to better match the target keyword 'planning ai needs memory, not just automation - logistics viewpoints' for improved SEO alignment",
+      "Add the target keyword naturally to the first paragraph and throughout the content where appropriate",
+      "Consider adding the implementation checklist and workflow steps as a downloadable asset",
+      "Include more specific metrics and results from the business use case to strengthen E-E-A-T",
+      "Add a brief conclusion section summarizing key points and next steps"
     ]
   }
 }
