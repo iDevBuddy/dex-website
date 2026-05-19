@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 85,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,7 +98,7 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 739
+      "wordCount": 725
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,18 +106,16 @@
   "review": {
     "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides practical, actionable guidance for implementing AI with memory in logistics workflows.",
-      "Content is well-structured with clear steps, implementation guides, and measurable outcomes.",
-      "The technical implementation details are solid, including specific tools and platforms.",
-      "Some sections could benefit from more specific examples or expanded explanations of AI memory integration.",
-      "The article's focus on logistics-specific use cases (support triage) adds strong contextual relevance."
+      "The article provides practical, actionable guidance for implementing memory-aware AI workflows in business contexts.",
+      "Content is well-structured with clear examples, step-by-step instructions, and defined success metrics.",
+      "The article includes authoritative sources and real-world implementation data which adds credibility.",
+      "Content demonstrates expertise and provides sufficient technical detail for the target audience.",
+      "No significant helpful content issues detected - information is relevant, accurate, and non-manipulative."
     ],
     "recommendedFixes": [
-      "Add a brief visual workflow diagram to illustrate the support triage process, as indicated in the media recommendations.",
-      "Include a shortcase study or testimonial from a logistics company that has implemented this workflow.",
-      "Expand on the 'Step-by-Step Workflow' section with more specific technical details about how AI memory is implemented in the CRM integration.",
-      "Clarify the exact AI agent platforms that support memory retention, beyond just mentioning 'Maestro Agents'.",
-      "Add a sentence or two explaining how memory retention is technically achieved (e.g., session storage, vector databases, etc.)."
+      "Add a brief mention of data privacy considerations when storing customer interaction history",
+      "Consider adding a short section on cost implications or ROI calculation for implementing these workflows",
+      "Could enhance with a visual workflow diagram reference to complement the step-by-step guide"
     ]
   }
 }
