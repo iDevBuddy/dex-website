@@ -55,12 +55,30 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
+      "title": "Why LLMs need more memory, not parameters | Matt Asay posted on the topic | LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
+      "type": "Web research",
+      "supports": "Matt Asay Great post, Matt. You’re absolutely right — AI needs memory, and databases are the unsung heroes in that transformation. But the real unlock isn’t just having memory — it’s designing the rig",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Supply Chain Planning: A Complete Guide",
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Beyond Chatbots: How AI Agents Are Transforming Business Process Automation | TSI",
+      "organization": "thestrategyinstitute.org",
+      "url": "https://www.thestrategyinstitute.org/insights/beyond-chatbots-how-ai-agents-are-transforming-business-process-automation",
+      "type": "Web research",
+      "supports": "What makes this different from a workflow automation tool is memory and judgment. AI agents retain context across conversations and tasks. They can distinguish between a routine situation and an edge ",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -78,48 +96,19 @@
         "prompt"
       ],
       "authorityScore": 83
-    },
-    {
-      "title": "GitHub Docs: GitHub Actions",
-      "organization": "GitHub",
-      "url": "https://docs.github.com/en/actions",
-      "type": "Official documentation",
-      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
-      "tags": [
-        "github",
-        "automation",
-        "workflow",
-        "ci",
-        "deployment"
-      ],
-      "authorityScore": 83
-    },
-    {
-      "title": "The State of AI",
-      "organization": "McKinsey & Company",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "type": "Industry report",
-      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
-      "tags": [
-        "ai",
-        "business",
-        "trend",
-        "strategy"
-      ],
-      "authorityScore": 80
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026/",
+    "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
     "https://innovecs.com/blog/ai-supply-chain-planning/",
-    "https://platform.openai.com/docs/",
-    "https://docs.github.com/en/actions",
-    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
+    "https://www.thestrategyinstitute.org/insights/beyond-chatbots-how-ai-agents-are-transforming-business-process-automation",
+    "https://platform.openai.com/docs/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "3 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -166,18 +155,19 @@
       },
       {
         "source": "Google News",
-        "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
+        "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
+        "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
       }
     ],
     "realtimeSources": [
       "Google News"
     ],
     "realtimeUnavailableSources": [
-      "Reddit: 403"
+      "Reddit: 403",
+      "Hacker News: This operation was aborted"
     ]
   },
   "examplesToInclude": [
@@ -217,12 +207,30 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
+      "title": "Why LLMs need more memory, not parameters | Matt Asay posted on the topic | LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
+      "type": "Web research",
+      "supports": "Matt Asay Great post, Matt. You’re absolutely right — AI needs memory, and databases are the unsung heroes in that transformation. But the real unlock isn’t just having memory — it’s designing the rig",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Supply Chain Planning: A Complete Guide",
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Beyond Chatbots: How AI Agents Are Transforming Business Process Automation | TSI",
+      "organization": "thestrategyinstitute.org",
+      "url": "https://www.thestrategyinstitute.org/insights/beyond-chatbots-how-ai-agents-are-transforming-business-process-automation",
+      "type": "Web research",
+      "supports": "What makes this different from a workflow automation tool is memory and judgment. AI agents retain context across conversations and tasks. They can distinguish between a routine situation and an edge ",
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ]
