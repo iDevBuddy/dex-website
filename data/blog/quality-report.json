@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 56,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 75,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,11 +94,11 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 56,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 602
+      "wordCount": 739
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,19 +106,18 @@
   "review": {
     "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides practical, actionable guidance on implementing AI with memory in business workflows.",
-      "Content is well-structured with clear examples, implementation steps, and measurable outcomes.",
-      "Target keyword 'planning ai needs memory, not just automation - logistics viewpoints' is used in meta tags but could be better integrated into the main content.",
-      "The article cites authoritative sources and includes relevant implementation details.",
-      "Content follows SEO best practices with proper heading structure and internal linking.",
-      "No significant helpful content risks identified - content appears unique and valuable."
+      "The article provides practical, actionable guidance for implementing AI with memory in logistics workflows.",
+      "Content is well-structured with clear steps, implementation guides, and measurable outcomes.",
+      "The technical implementation details are solid, including specific tools and platforms.",
+      "Some sections could benefit from more specific examples or expanded explanations of AI memory integration.",
+      "The article's focus on logistics-specific use cases (support triage) adds strong contextual relevance."
     ],
     "recommendedFixes": [
-      "Optimize the title tag and H1 to better match the target keyword 'planning ai needs memory, not just automation - logistics viewpoints' for improved SEO alignment",
-      "Add the target keyword naturally to the first paragraph and throughout the content where appropriate",
-      "Consider adding the implementation checklist and workflow steps as a downloadable asset",
-      "Include more specific metrics and results from the business use case to strengthen E-E-A-T",
-      "Add a brief conclusion section summarizing key points and next steps"
+      "Add a brief visual workflow diagram to illustrate the support triage process, as indicated in the media recommendations.",
+      "Include a shortcase study or testimonial from a logistics company that has implemented this workflow.",
+      "Expand on the 'Step-by-Step Workflow' section with more specific technical details about how AI memory is implemented in the CRM integration.",
+      "Clarify the exact AI agent platforms that support memory retention, beyond just mentioning 'Maestro Agents'.",
+      "Add a sentence or two explaining how memory retention is technically achieved (e.g., session storage, vector databases, etc.)."
     ]
   }
 }
