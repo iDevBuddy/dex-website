@@ -41,8 +41,17 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
-      "authorityScore": 81,
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI, Automation, and the Supply Chain Hype: What's Real in 2025?",
+      "organization": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=VzjQnnIk0Ag",
+      "type": "Web research",
+      "supports": "Is AI the future of supply chain—or just another shiny object? In this bold and entertaining News Edition of Let's Talk Supply Chain,",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -50,7 +59,16 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI in Logistics: What Worked in 2025 & What Will Scale in 2026 For ...",
+      "organization": "instagram.com",
+      "url": "https://www.instagram.com/p/DUl2CdNgYc4/",
+      "type": "Web research",
+      "supports": "Smarter routing & planning. AI-driven route optimization helped reduce shipping costs by up to 15% and improved on-time delivery through real-",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -64,51 +82,26 @@
       "publishedDate": ""
     },
     {
-      "title": "WHICH AI COMPANY IS BEST FOR SUPPLY CHAIN AND LOGISTICS? | Brittain Ladd",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/posts/brittainladd_ai-retail-logistics-activity-7402726631452381184-vh1B",
+      "title": "Beyond Chatbots: How AI Agents Are Transforming Business Process Automation | TSI",
+      "organization": "thestrategyinstitute.org",
+      "url": "https://www.thestrategyinstitute.org/insights/beyond-chatbots-how-ai-agents-are-transforming-business-process-automation",
       "type": "Web research",
-      "supports": "engineers and logistics SMEs into your operation. They interview operators, walk workflows, observe exceptions, and map the real-world logic behind your processes. 2️⃣ Integration Into Your TMS/WMS/ER",
+      "supports": "What makes this different from a workflow automation tool is memory and judgment. AI agents retain context across conversations and tasks. They can distinguish between a routine situation and an edge ",
       "authorityScore": 95,
       "publishedDate": ""
-    },
-    {
-      "title": "Top 15 Logistics AI Use Cases & Examples",
-      "organization": "aimultiple.com",
-      "url": "https://aimultiple.com/logistics-ai",
-      "type": "Web research",
-      "supports": "This kind of predictive planning supports a more resilient supply chain, capable of navigating the volatility that defines the modern logistics landscape.\n\nReal-life example:\n\nArgents Express Group, a",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "OpenAI Platform Documentation",
-      "organization": "OpenAI",
-      "url": "https://platform.openai.com/docs/",
-      "type": "Official documentation",
-      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
-      "tags": [
-        "ai",
-        "llm",
-        "agents",
-        "automation",
-        "workflow",
-        "prompt"
-      ],
-      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
+    "https://www.youtube.com/watch?v=VzjQnnIk0Ag",
     "https://innovecs.com/blog/ai-supply-chain-planning/",
+    "https://www.instagram.com/p/DUl2CdNgYc4/",
     "https://www.linkedin.com/posts/brittainladd_pallet-ai-logistics-workforce-activity-7386388759405191169-IK5k",
-    "https://www.linkedin.com/posts/brittainladd_ai-retail-logistics-activity-7402726631452381184-vh1B",
-    "https://aimultiple.com/logistics-ai",
-    "https://platform.openai.com/docs/"
+    "https://www.thestrategyinstitute.org/insights/beyond-chatbots-how-ai-agents-are-transforming-business-process-automation"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -151,15 +144,15 @@
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
-      },
-      {
-        "source": "Google News",
         "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
       },
       {
         "source": "Google News",
         "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
+      },
+      {
+        "source": "Google News",
+        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
       }
     ],
     "realtimeSources": [
@@ -192,8 +185,17 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
-      "authorityScore": 81,
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI, Automation, and the Supply Chain Hype: What's Real in 2025?",
+      "organization": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=VzjQnnIk0Ag",
+      "type": "Web research",
+      "supports": "Is AI the future of supply chain—or just another shiny object? In this bold and entertaining News Edition of Let's Talk Supply Chain,",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -201,7 +203,16 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
       "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI in Logistics: What Worked in 2025 & What Will Scale in 2026 For ...",
+      "organization": "instagram.com",
+      "url": "https://www.instagram.com/p/DUl2CdNgsg4/",
+      "type": "Web research",
+      "supports": "Smarter routing & planning. AI-driven route optimization helped reduce shipping costs by up to 15% and improved on-time delivery through real-",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -215,20 +226,11 @@
       "publishedDate": ""
     },
     {
-      "title": "WHICH AI COMPANY IS BEST FOR SUPPLY CHAIN AND LOGISTICS? | Brittain Ladd",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/posts/brittainladd_ai-retail-logistics-activity-7402726631452381184-vh1B",
+      "title": "Beyond Chatbots: How AI Agents Are Transforming Business Process Automation | TSI",
+      "organization": "thestrategyinstitute.org",
+      "url": "https://www.thestrategyinstitute.org/insights/beyond-chatbots-how-ai-agents-are-transforming-business-process-automation",
       "type": "Web research",
-      "supports": "engineers and logistics SMEs into your operation. They interview operators, walk workflows, observe exceptions, and map the real-world logic behind your processes. 2️⃣ Integration Into Your TMS/WMS/ER",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "Top 15 Logistics AI Use Cases & Examples",
-      "organization": "aimultiple.com",
-      "url": "https://aimultiple.com/logistics-ai",
-      "type": "Web research",
-      "supports": "This kind of predictive planning supports a more resilient supply chain, capable of navigating the volatility that defines the modern logistics landscape.\n\nReal-life example:\n\nArgents Express Group, a",
+      "supports": "What makes this different from a workflow automation tool is memory and judgment. AI agents retain context across conversations and tasks. They can distinguish between a routine situation and an edge ",
       "authorityScore": 95,
       "publishedDate": ""
     }

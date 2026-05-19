@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 85,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,24 +98,26 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 725
+      "wordCount": 486
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "MEDIUM",
     "notes": [
-      "The article provides practical, actionable guidance for implementing memory-aware AI workflows in business contexts.",
-      "Content is well-structured with clear examples, step-by-step instructions, and defined success metrics.",
-      "The article includes authoritative sources and real-world implementation data which adds credibility.",
-      "Content demonstrates expertise and provides sufficient technical detail for the target audience.",
-      "No significant helpful content issues detected - information is relevant, accurate, and non-manipulative."
+      "The article provides practical, actionable guidance for implementing AI automation in logistics with a focus on memory-enabled agents, which aligns well with the target audience of business decision-makers.",
+      "Content includes real-world examples, implementation steps, and clear business outcomes, which supports the informational search intent.",
+      "The article references specific tools (e.g., Kinaxis Maestro) and includes KPIs, which adds credibility and practical value.",
+      "Some sections could benefit from more detailed technical guidance, especially around integration challenges and error handling in complex workflows.",
+      "The content lacks deep dive into potential pitfalls like data privacy, model drift, or scalability concerns with AI agents—topics important to enterprise adoption."
     ],
     "recommendedFixes": [
-      "Add a brief mention of data privacy considerations when storing customer interaction history",
-      "Consider adding a short section on cost implications or ROI calculation for implementing these workflows",
-      "Could enhance with a visual workflow diagram reference to complement the step-by-step guide"
+      "Add a section on data requirements and infrastructure needed to support memory-aware AI agents (e.g., persistent context storage, latency considerations).",
+      "Include a brief comparison of AI agent platforms or frameworks (e.g., Maestro vs. custom LLM agents) to help readers make informed tooling decisions.",
+      "Expand on error handling by including a short architecture diagram or flow for how to handle low-confidence outputs or API failures.",
+      "Clarify how to audit and maintain AI agent performance over time, especially as data patterns evolve.",
+      "Add a short case study or customer example under 'Real-World Business Use Case' with specific metrics or post-implementation results."
     ]
   }
 }
