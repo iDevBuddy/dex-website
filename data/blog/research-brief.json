@@ -46,24 +46,6 @@
       "publishedDate": ""
     },
     {
-      "title": "Industry Insights: AI in Logistics | Reshaping How Goods Move Globally | Association for Advancing Automation",
-      "organization": "automate.org",
-      "url": "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
-      "type": "Web research",
-      "supports": "This team provides value beyond investigating and planning solutions; it enables ongoing cross-functional evaluation of results and builds institutional knowledge to support future integrations. Plann",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th/",
-      "type": "Web research",
-      "supports": "Guest Commentary | By Chris Cunnane • 06/03/2025\n\nOrder fulfillment is the complete process from when an order is placed until the shipment is delivered. Accurately fulfilling thousands of orders for ",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
       "title": "AI Supply Chain Planning: A Complete Guide",
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
@@ -73,35 +55,66 @@
       "publishedDate": ""
     },
     {
-      "title": "Beyond Chatbots: How AI Agents Are Transforming Business Process Automation | TSI",
-      "organization": "thestrategyinstitute.org",
-      "url": "https://www.thestrategyinstitute.org/insights/beyond-chatbots-how-ai-agents-are-transforming-business-process-automation",
+      "title": "AI in Logistics: What Worked in 2025 & What Will Scale in 2026 For ...",
+      "organization": "instagram.com",
+      "url": "https://www.instagram.com/p/DUl2CdNgYc4/",
       "type": "Web research",
-      "supports": "What makes this different from a workflow automation tool is memory and judgment. AI agents retain context across conversations and tasks. They can distinguish between a routine situation and an edge ",
+      "supports": "Smarter routing & planning. AI-driven route optimization helped reduce shipping costs by up to 15% and improved on-time delivery through real-",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "AI and Automation: Comprehensive Best Practices and Guide | WorkDone.AI",
-      "organization": "workdone.ai",
-      "url": "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide/",
+      "title": "Leaders Build AI Agents that multiply output Discipline on execution ...",
+      "organization": "facebook.com",
+      "url": "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780/",
       "type": "Web research",
-      "supports": "### Defining AI and Automation\n\nArtificial Intelligence (AI) refers to technologies that enhance machine capabilities, allowing them to handle complex tasks like problem-solving. Automation, meanwhile",
+      "supports": "RAG, multimodal models, LLMOps, and workflow automation are merging into one AI fabric that spans context, action, and memory. From automation",
       "authorityScore": 95,
       "publishedDate": ""
+    },
+    {
+      "title": "OpenAI Platform Documentation",
+      "organization": "OpenAI",
+      "url": "https://platform.openai.com/docs/",
+      "type": "Official documentation",
+      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "automation",
+        "workflow",
+        "prompt"
+      ],
+      "authorityScore": 83
+    },
+    {
+      "title": "GitHub Docs: GitHub Actions",
+      "organization": "GitHub",
+      "url": "https://docs.github.com/en/actions",
+      "type": "Official documentation",
+      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
+      "tags": [
+        "github",
+        "automation",
+        "workflow",
+        "ci",
+        "deployment"
+      ],
+      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
-    "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
-    "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th/",
     "https://innovecs.com/blog/ai-supply-chain-planning/",
-    "https://www.thestrategyinstitute.org/insights/beyond-chatbots-how-ai-agents-are-transforming-business-process-automation",
-    "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide/"
+    "https://www.instagram.com/p/DUl2CdNgYc4/",
+    "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780/",
+    "https://platform.openai.com/docs/",
+    "https://docs.github.com/en/actions"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "4 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -136,11 +149,11 @@
       },
       {
         "source": "Google News",
-        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
+        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
       },
       {
         "source": "Google News",
-        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
+        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
       },
       {
         "source": "Google News",
@@ -190,24 +203,6 @@
       "publishedDate": ""
     },
     {
-      "title": "Industry Insights: AI in Logistics | Reshaping How Goods Move Globally | Association for Advancing Automation",
-      "organization": "automate.org",
-      "url": "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
-      "type": "Web research",
-      "supports": "This team provides value beyond investigating and planning solutions; it enables ongoing cross-functional evaluation of results and builds institutional knowledge to support future integrations. Plann",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th/",
-      "type": "Web research",
-      "supports": "Guest Commentary | By Chris Cunnane • 06/03/2025\n\nOrder fulfillment is the complete process from when an order is placed until the shipment is delivered. Accurately fulfilling thousands of orders for ",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
       "title": "AI Supply Chain Planning: A Complete Guide",
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
@@ -217,22 +212,36 @@
       "publishedDate": ""
     },
     {
-      "title": "Beyond Chatbots: How AI Agents Are Transforming Business Process Automation | TSI",
-      "organization": "thestrategyinstitute.org",
-      "url": "https://www.thestrategyinstitute.org/insights/beyond-chatbots-how-ai-agents-are-transforming-business-process-automation",
+      "title": "AI in Logistics: What Worked in 2025 & What Will Scale in 2026 For ...",
+      "organization": "instagram.com",
+      "url": "https://www.instagram.com/p/DUl2CdNgYc4/",
       "type": "Web research",
-      "supports": "What makes this different from a workflow automation tool is memory and judgment. AI agents retain context across conversations and tasks. They can distinguish between a routine situation and an edge ",
+      "supports": "Smarter routing & planning. AI-driven route optimization helped reduce shipping costs by up to 15% and improved on-time delivery through real-",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "AI and Automation: Comprehensive Best Practices and Guide | WorkDone.AI",
-      "organization": "workdone.ai",
-      "url": "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide/",
+      "title": "Leaders Build AI Agents that multiply output Discipline on execution ...",
+      "organization": "facebook.com",
+      "url": "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780/",
       "type": "Web research",
-      "supports": "### Defining AI and Automation\n\nArtificial Intelligence (AI) refers to technologies that enhance machine capabilities, allowing them to handle complex tasks like problem-solving. Automation, meanwhile",
+      "supports": "RAG, multimodal models, LLMOps, and workflow automation are merging into one AI fabric that spans context, action, and memory. From automation",
       "authorityScore": 95,
       "publishedDate": ""
+    }
+  ],
+  "examples": [
+    {
+      "title": "Slack Intake Workflow",
+      "description": "Automate the process of receiving and categorizing customer inquiries through Slack using AI to tag, assign, and prioritize messages based on urgency and topic."
+    },
+    {
+      "title": "CRM Follow-Up Workflow",
+      "description": "Use AI to automatically log customer interactions and schedule follow-ups in CRM systems, reducing manual data entry and improving response times."
+    },
+    {
+      "title": "Support Triage Workflow",
+      "description": "Implement AI-based ticket routing that analyzes incoming support requests and assigns them to the correct department or agent based on content and priority."
     }
   ]
 }
