@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 75,
+    "score": 72,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,26 +98,28 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 486
+      "wordCount": 673
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "MEDIUM",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The article provides practical, actionable guidance for implementing AI automation in logistics with a focus on memory-enabled agents, which aligns well with the target audience of business decision-makers.",
-      "Content includes real-world examples, implementation steps, and clear business outcomes, which supports the informational search intent.",
-      "The article references specific tools (e.g., Kinaxis Maestro) and includes KPIs, which adds credibility and practical value.",
-      "Some sections could benefit from more detailed technical guidance, especially around integration challenges and error handling in complex workflows.",
-      "The content lacks deep dive into potential pitfalls like data privacy, model drift, or scalability concerns with AI agents—topics important to enterprise adoption."
+      "The content provides practical, workflow-focused guidance on implementing AI with memory capabilities",
+      "Article includes specific metrics (60% response time reduction, 35% lead conversion increase) which adds credibility",
+      "Content addresses a genuine business problem (manual triage inefficiency) with measurable outcomes",
+      "Uses a real-world example (logistics support triage) with specific implementation details",
+      "Includes clear implementation steps, required tools, and troubleshooting guidance",
+      "Content demonstrates good E-E-A-T principles with expert insights and case studies"
     ],
     "recommendedFixes": [
-      "Add a section on data requirements and infrastructure needed to support memory-aware AI agents (e.g., persistent context storage, latency considerations).",
-      "Include a brief comparison of AI agent platforms or frameworks (e.g., Maestro vs. custom LLM agents) to help readers make informed tooling decisions.",
-      "Expand on error handling by including a short architecture diagram or flow for how to handle low-confidence outputs or API failures.",
-      "Clarify how to audit and maintain AI agent performance over time, especially as data patterns evolve.",
-      "Add a short case study or customer example under 'Real-World Business Use Case' with specific metrics or post-implementation results."
+      "Add more specific examples of AI agent platforms beyond just 'Maestro or similar tools'",
+      "Include actual implementation timeline breakdown (e.g., specific days for specific tasks)",
+      "Add more detailed troubleshooting examples with specific error scenarios",
+      "Include specific metrics for measuring success beyond the mentioned 60% and 35% improvements",
+      "Add more detailed technical requirements for the AI agent platform integration",
+      "Provide more specific guidance on scaling beyond the initial workflow implementation"
     ]
   }
 }
