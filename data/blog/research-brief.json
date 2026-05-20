@@ -41,26 +41,17 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
+      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th/",
       "type": "Web research",
-      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI in Logistics: What Worked in 2025 & What Will Scale in 2026 For ...",
-      "organization": "instagram.com",
-      "url": "https://www.instagram.com/p/DUl2CdNgYc4/",
-      "type": "Web research",
-      "supports": "Smarter routing & planning. AI-driven route optimization helped reduce shipping costs by up to 15% and improved on-time delivery through real-",
-      "authorityScore": 95,
+      "supports": "Guest Commentary | By Chris Cunnane • 06/03/2025\n\nOrder fulfillment is the complete process from when an order is placed until the shipment is delivered. Accurately fulfilling thousands of orders for ",
+      "authorityScore": 62,
       "publishedDate": ""
     },
     {
@@ -68,53 +59,49 @@
       "organization": "facebook.com",
       "url": "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780/",
       "type": "Web research",
-      "supports": "RAG, multimodal models, LLMOps, and workflow automation are merging into one AI fabric that spans context, action, and memory. From automation",
-      "authorityScore": 95,
+      "supports": "We're seeing AI move fast in logistics, & it's not just about automation anymore. It's about orchestration: connecting systems, data, and",
+      "authorityScore": 52,
       "publishedDate": ""
     },
     {
-      "title": "OpenAI Platform Documentation",
-      "organization": "OpenAI",
-      "url": "https://platform.openai.com/docs/",
-      "type": "Official documentation",
-      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
-      "tags": [
-        "ai",
-        "llm",
-        "agents",
-        "automation",
-        "workflow",
-        "prompt"
-      ],
-      "authorityScore": 83
+      "title": "Pallet: An AI-native product for logistics, not just a wrapper | Brittain Ladd posted on the topic | LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/brittainladd_pallet-ai-logistics-workforce-activity-7386388759405191169-IK5k",
+      "type": "Web research",
+      "supports": "❌❌❌ More commentary from Pallet CEO Sushanth Raman: \"In the next three years, repetitive knowledge work will be fully automated. In logistics, that means everything outside of physical operations, str",
+      "authorityScore": 65,
+      "publishedDate": ""
     },
     {
-      "title": "GitHub Docs: GitHub Actions",
-      "organization": "GitHub",
-      "url": "https://docs.github.com/en/actions",
-      "type": "Official documentation",
-      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
-      "tags": [
-        "github",
-        "automation",
-        "workflow",
-        "ci",
-        "deployment"
-      ],
-      "authorityScore": 83
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
+      "type": "Web research",
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
+      "publishedDate": ""
+    },
+    {
+      "title": "Top 15 Logistics AI Use Cases & Examples - AIMultiple",
+      "organization": "aimultiple.com",
+      "url": "https://aimultiple.com/logistics-ai",
+      "type": "Web research",
+      "supports": "## The future of logistics AI operations\n\nAccording to DHL Freight’s Logistics Trends report,12 AI will be at the core of future logistics operations. It will move beyond basic automation to enable dy",
+      "authorityScore": 54,
+      "publishedDate": ""
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
-    "https://innovecs.com/blog/ai-supply-chain-planning/",
-    "https://www.instagram.com/p/DUl2CdNgYc4/",
+    "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th/",
     "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780/",
-    "https://platform.openai.com/docs/",
-    "https://docs.github.com/en/actions"
+    "https://www.linkedin.com/posts/brittainladd_pallet-ai-logistics-workforce-activity-7386388759405191169-IK5k",
+    "https://innovecs.com/blog/ai-supply-chain-planning/",
+    "https://aimultiple.com/logistics-ai"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "4 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -137,7 +124,7 @@
     "realtimeSignals": [
       {
         "source": "Google News",
-        "title": "Why Enterprise AI Systems Fail: It’s Not RAG – It’s Context Control - Logistics Viewpoints"
+        "title": "Why Enterprise AI Systems Fail: It's Not RAG – It's Context Control - Logistics Viewpoints"
       },
       {
         "source": "Google News",
@@ -198,26 +185,17 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation/",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
+      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th/",
       "type": "Web research",
-      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI in Logistics: What Worked in 2025 & What Will Scale in 2026 For ...",
-      "organization": "instagram.com",
-      "url": "https://www.instagram.com/p/DUl2CdNgYc4/",
-      "type": "Web research",
-      "supports": "Smarter routing & planning. AI-driven route optimization helped reduce shipping costs by up to 15% and improved on-time delivery through real-",
-      "authorityScore": 95,
+      "supports": "Guest Commentary | By Chris Cunnane • 06/03/2025\n\nOrder fulfillment is the complete process from when an order is placed until the shipment is delivered. Accurately fulfilling thousands of orders for ",
+      "authorityScore": 62,
       "publishedDate": ""
     },
     {
@@ -225,23 +203,36 @@
       "organization": "facebook.com",
       "url": "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780/",
       "type": "Web research",
-      "supports": "RAG, multimodal models, LLMOps, and workflow automation are merging into one AI fabric that spans context, action, and memory. From automation",
-      "authorityScore": 95,
+      "supports": "We're seeing AI move fast in logistics, & it's not just about automation anymore. It's about orchestration: connecting systems, data, and",
+      "authorityScore": 52,
       "publishedDate": ""
-    }
-  ],
-  "examples": [
-    {
-      "title": "Slack Intake Workflow",
-      "description": "Automate the process of receiving and categorizing customer inquiries through Slack using AI to tag, assign, and prioritize messages based on urgency and topic."
     },
     {
-      "title": "CRM Follow-Up Workflow",
-      "description": "Use AI to automatically log customer interactions and schedule follow-ups in CRM systems, reducing manual data entry and improving response times."
+      "title": "Pallet: An AI-native product for logistics, not just a wrapper | Brittain Ladd posted on the topic | LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/brittainladd_pallet-ai-logistics-workforce-activity-7386388759405191169-IK5k",
+      "type": "Web research",
+      "supports": "❌❌❌ More commentary from Pallet CEO Sushanth Raman: \"In the next three years, repetitive knowledge work will be fully automated. In logistics, that means everything outside of physical operations, str",
+      "authorityScore": 65,
+      "publishedDate": ""
     },
     {
-      "title": "Support Triage Workflow",
-      "description": "Implement AI-based ticket routing that analyzes incoming support requests and assigns them to the correct department or agent based on content and priority."
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning/",
+      "type": "Web research",
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
+      "publishedDate": ""
+    },
+    {
+      "title": "Top 15 Logistics AI Use Cases & Examples - AIMultiple",
+      "organization": "aimultiple.com",
+      "url": "https://aimultiple.com/logistics-ai",
+      "type": "Web research",
+      "supports": "## The future of logistics AI operations\n\nAccording to DHL Freight’s Logistics Trends report,12 AI will be at the core of future logistics operations. It will move beyond basic automation to enable dy",
+      "authorityScore": 54,
+      "publishedDate": ""
     }
   ]
 }
