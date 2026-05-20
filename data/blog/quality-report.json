@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 77,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,37 +94,29 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 629
+      "wordCount": 634
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "MEDIUM",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides specific, actionable workflow guidance for logistics companies using memory-based AI",
-      "Content includes clear implementation steps with tools like Slack, Notion, and Make.com",
-      "Case study with metrics (resolution time, satisfaction scores) adds credibility",
-      "Addresses a specific logistics use case with 50+ daily support requests",
-      "Content balances technical implementation with business impact",
-      "Includes structured approach: tools, workflow steps, KPIs, and failure handling",
-      "Mentions human-in-the-loop validation as key part of the process",
-      "Provides implementation checklist and troubleshooting steps",
-      "Connects to logistics industry trends and use cases"
+      "The article provides a good overview of implementing AI automation with memory for business workflows.",
+      "Content demonstrates practical implementation of AI with specific, measurable business outcomes.",
+      "The article includes a clear step-by-step guide for implementation.",
+      "It has a practical bent with strong workflow focus and real business examples.",
+      "The content is well-structured for a specialized audience and ties technical implementation to real business impact."
     ],
     "recommendedFixes": [
-      "Add more specific examples of memory-storage patterns in Notion/Airtable for logistics use cases",
-      "Include a visual diagram of the AI triage workflow to improve user understanding",
-      "Add a short section on 'How It Works' with technical details for the workflow",
-      "Include 1-2 more logistics-specific AI response examples (e.g., handling shipment delays, customer type classification)",
-      "Add a sentence connecting the logistics use case to broader supply chain AI trends",
-      "Include 1-2 more external research links for terms like 'memory-based AI' or 'context retention in logistics'",
-      "Add a brief comparison table: memory-based AI vs. traditional automation",
-      "Clarify how memory improves logistics triage in 1-2 sentences"
+      "Add a sentence-based summary of the business impact (e.g., reduced lead times, higher conversion)",
+      "Add a sentence-based summary of the technical implementation",
+      "Include a checklist for memory-based AI implementation",
+      "Add a sentence-based summary of the technical implementation with real business impact"
     ]
   }
 }
