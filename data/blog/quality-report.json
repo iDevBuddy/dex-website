@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "trendScore": 66,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 66/100, sentiment positive."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,38 +85,40 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 74,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 634
+      "wordCount": 616
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": 85,
     "notes": [
-      "The article provides a good overview of implementing AI automation with memory for business workflows.",
-      "Content demonstrates practical implementation of AI with specific, measurable business outcomes.",
-      "The article includes a clear step-by-step guide for implementation.",
-      "It has a practical bent with strong workflow focus and real business examples.",
-      "The content is well-structured for a specialized audience and ties technical implementation to real business impact."
+      "The article provides a practical, in-depth guide to implementing Launchpad Build AI's MLM for industrial automation design, which aligns well with the target intent of an informational blog post.",
+      "Content is generally high-quality and focused on business outcomes, with clear steps, use cases, and implementation guidance.",
+      "The article includes specific KPIs, tools, and workflows that support the practical application of the MLM in real business environments.",
+      "Potential risks include overpromising on time savings (60% reduction) without sufficient disclaimers or data variability.",
+      "Some sections may benefit from more detailed technical examples or disclaimers about real-world variability in results."
     ],
     "recommendedFixes": [
-      "Add a sentence-based summary of the business impact (e.g., reduced lead times, higher conversion)",
-      "Add a sentence-based summary of the technical implementation",
-      "Include a checklist for memory-based AI implementation",
-      "Add a sentence-based summary of the technical implementation with real business impact"
+      "Add a disclaimer that time savings may vary based on use case complexity and team familiarity with the tool.",
+      "Include a brief example or case study with specific metrics to substantiate the 60% time reduction claim.",
+      "Clarify that the 60% time reduction is based on initial results and should be validated in the reader's own environment.",
+      "Consider adding a short summary table or visual diagram of the workflow for improved skimming and clarity.",
+      "Add alt text to all images for accessibility and improved SEO.",
+      "Ensure all outbound or third-party resource links open in a new tab to improve user experience."
     ]
   }
 }
