@@ -1,7 +1,7 @@
 {
   "score": 88,
-  "strictPassed": true,
-  "passed": true,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -20,13 +20,13 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 56,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
     "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,41 +85,37 @@
     }
   ],
   "authenticity": {
-    "score": 73,
-    "passed": true,
+    "score": 51,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
-      "businessRelevance": 93,
+      "specificity": 96,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 56,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 556
+      "wordCount": 672
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
     "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides practical, actionable content for implementing memory-enabled AI in logistics workflows, which aligns with the target audience's needs.",
-      "Content includes specific metrics (e.g., 40% reduction in response time) and concrete implementation steps, which improve its value for practitioners.",
-      "The article references external sources but does not directly over-quote or rely on long passages from them. The sources are used contextually to support key points.",
-      "Some sections could benefit from more detailed implementation guidance, especially around tool integration and error handling.",
-      "The article avoids generic AI advice and focuses on logistics use cases, which matches the intent to provide practical, non-speculative content.",
-      "The tone and structure are consistent with expert-level guidance, matching the 'Business Automation Expert' persona."
+      "The article provides a good foundation in logistics AI concepts and includes practical workflow guidance, but has some areas for improvement in content depth and source integration.",
+      "The content makes strong use of technical logistics and AI/ML concepts but could better integrate supporting sources and data.",
+      "The article would benefit from more detailed implementation examples and use cases.",
+      "Some key takeaways and practical steps are covered, but expansion of these concepts with real examples would improve reader engagement and understanding."
     ],
     "recommendedFixes": [
-      "Add a brief diagram or workflow visualization to illustrate the Slack-to-CRM process with memory checks (as suggested by mediaRecommendations).",
-      "Clarify the difference between 'automation' and 'planning AI with memory' with a short comparison table or definition box.",
-      "Include a short video or embeddable walkthrough (if platform supports) to show the setup process in Make.com or Zapier.",
-      "Add 1-2 customer testimonial snippets or case study links to increase trust and real-world applicability.",
-      "Break down the 'AI Memory Check' step into sub-bullets or a short process flow to better explain how vector databases are queried.",
-      "Include a short FAQ section addressing common setup errors (e.g., API timeout, confidence thresholds) with example fixes."
+      "Enhance the practical implementation section with specific tools and step-by-step examples",
+      "Add more specific metrics and implementation details for better clarity",
+      "Include more detailed information on memory layer architecture and use case examples",
+      "Expand on the visual examples in the logistics workflow to better demonstrate AI memory concepts"
     ]
   }
 }
