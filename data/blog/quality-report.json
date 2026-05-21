@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 52,
+    "trendScore": 62,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 52/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,26 +85,35 @@
     }
   ],
   "authenticity": {
-    "score": 81,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 89,
+      "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 731
+      "wordCount": 583
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
+    "helpfulContentRisk": "Low to medium. While the content is highly informative and practical, it has some issues that could impact its helpfulness score. The content provides a clear, step-by-step implementation but lacks comprehensive detail on specific technical implementation steps, and some content appears to be duplicated or semantically similar to existing content, which poses a moderate risk for a helpful content penalty. The article needs to better establish clear practical value and original insights to avoid this penalty.",
+    "notes": [
+      "Content provides a use case and step-by-step guide but may be at risk for a helpful content penalty due to similarity with existing content.",
+      "The content does not provide sufficient unique, practical value to be considered substantially different from a helpful content perspective.",
+      "The content lacks depth in explaining how to build the 'memory layer' and other technical steps, which risks the content being flagged as unoriginal."
+    ],
+    "recommendedFixes": [
+      "Expand on specific implementation steps for building memory layers using LangChain or similar frameworks.",
+      "Include specific technical setup instructions for the memory-aware AI workflow.",
+      "Add more original insights and practical learnings to reduce the risk of being flagged for unoriginal content."
+    ]
   }
 }
