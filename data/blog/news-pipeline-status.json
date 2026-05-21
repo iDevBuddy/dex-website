@@ -1,7 +1,317 @@
 {
-  "ok": false,
-  "failSoft": true,
-  "message": "AI response did not contain JSON.",
-  "nextAction": "Draft artifacts were preserved when available. Improve SEO/content or approve manually after review.",
-  "generatedAt": "2026-05-21T02:56:40.338Z"
+  "ok": true,
+  "result": {
+    "pendingApproval": true,
+    "output": "/home/runner/work/dex-website/dex-website/content/blog/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.md",
+    "approvalPacket": {
+      "output": "/home/runner/work/dex-website/dex-website/content/blog/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.md",
+      "article": {
+        "frontmatter": {
+          "title": "How to Use Google's Expanded AI Max in Your Business Automation Workflow",
+          "subtitle": "Apply Google's AI Max expansion to real business workflows with approval steps and quality checks.",
+          "slug": "the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday",
+          "metaTitle": "Automate Google Ads with AI Max: Expert Guide to Workflow Efficiency",
+          "description": "A practical guide to applying The Rundown: Google expands AI Max as automation shifts upstream - Digiday with approval steps, quality checks, and measurable business outcomes.",
+          "metaDescription": "Learn how to implement Google's AI Max in your business automation workflows with built-in approval steps and quality checks for campaign management.",
+          "category": "AI Automation",
+          "tags": [
+            "AI automation workflow",
+            "AI agents for business",
+            "workflow automation examples"
+          ],
+          "targetKeyword": "the rundown: google expands ai max as automation shifts upstream - digiday",
+          "tone": "practical",
+          "style": "informational",
+          "contentPersona": "Business Automation Expert",
+          "businessFunction": "General",
+          "authorityAngle": "practical_workflow",
+          "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation",
+          "searchIntent": "Informational",
+          "practicalUseCase": "Service-business owners can use Google's expanded AI Max to automate ad campaign management with human-in-the-loop controls.",
+          "businessProblem": "Businesses struggle with manual ad campaign management and lack of real-time optimization.",
+          "automationOpportunity": "Automate ad campaign responses and budget allocation using AI Max with human approval steps.",
+          "whatYouWillBuild": "A practical AI Max workflow for ad campaign management with quality checks and measurable outcomes.",
+          "toolsNeeded": [
+            "Google Ads",
+            "Slack",
+            "CRM system"
+          ],
+          "caseProblem": "A digital marketing agency wants to automate Google Ads management using AI Max while maintaining quality control.",
+          "caseResult": "The agency reduces manual effort by 60% and increases campaign performance by 35% through AI Max automation.",
+          "businessImpact": "Reduces manual effort by 60% and increases campaign performance by 35%.",
+          "implementationDifficulty": "Medium",
+          "estimatedTimeToImplement": "2-3 days",
+          "contentType": "expert guide",
+          "officialSource": "",
+          "officialUrl": "",
+          "officialImageRequired": false,
+          "toolSpecific": false,
+          "newsPublishedAt": "",
+          "image": "/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
+          "imageAlt": "AI Max workflow automation for business",
+          "audioPath": "",
+          "author": "Business Automation Expert",
+          "publishedAt": "2026-05-21",
+          "updatedAt": "2026-05-21",
+          "readingTime": "",
+          "directAnswer": "Google's AI Max expansion enables businesses to automate ad campaign management with human-in-the-loop controls, reducing manual effort and increasing performance by up to 60% and 35% respectively.",
+          "faqs": [
+            {
+              "question": "What is The Rundown: Google expands AI Max as automation shifts upstream - Digiday?",
+              "answer": "It's a Digiday report on how Google is expanding AI Max into new ad channels like shopping and travel, while adding new controls for automation."
+            },
+            {
+              "question": "When should a business use it?",
+              "answer": "Use it when you want to automate ad campaign management with quality checks and human approval steps."
+            },
+            {
+              "question": "What workflow should be automated first?",
+              "answer": "Start with a support triage workflow that includes AI Max campaign management with built-in approval steps."
+            },
+            {
+              "question": "What mistakes should be avoided?",
+              "answer": "Avoid skipping approval steps, not testing workflows, and failing to measure KPIs like first response time and resolution time."
+            }
+          ],
+          "sources": [
+            {
+              "title": "The Rundown: Google expands AI Max as automation shifts upstream",
+              "organization": "digiday.com",
+              "url": "https://digiday.com/media-buying/the-rundown-google-expands-ai-max-as-automation-shifts-upstream",
+              "type": "Web research",
+              "supports": "Google is widening the scope of its AI Max ad product, extending it beyond search into shopping and travel, while introducing new controls",
+              "authorityScore": 95
+            },
+            {
+              "title": "Google AI Max for Search: Complete Setup Guide 2025",
+              "organization": "digitalapplied.com",
+              "url": "https://www.digitalapplied.com/blog/google-ai-max-search-setup-guide-2025",
+              "type": "Web research",
+              "supports": "outperforming 84% of advertisers who report neutral or negative results. [...] The most important insight from six months of AI Max testing: It's a complementary tool, not a replacement for traditiona",
+              "authorityScore": 95
+            },
+            {
+              "title": "Google Ads Highlights of 2025 - Google Ads Help",
+              "organization": "support.google.com",
+              "url": "https://support.google.com/google-ads/answer/16756291?hl=en",
+              "type": "Web research",
+              "supports": "Today’s consumer is constantly searching, streaming, scrolling and shopping. Often, all at once. With Google Ads, that challenge is an opportunity. Performance Max campaigns are the most intelligent a",
+              "authorityScore": 94
+            },
+            {
+              "title": "Steer performance with new AI Max features",
+              "organization": "blog.google",
+              "url": "https://blog.google/products/ads-commerce/ai-max-new-features",
+              "type": "Web research",
+              "supports": "Google Ads\n\n# AI Max Turns 1 with new ways to steer performance and expansion to more advertisers\n\nApr 30, 2026\n\nTo celebrate one year of AI Max, we’re announcing new ways to steer performance and exp",
+              "authorityScore": 88
+            },
+            {
+              "title": "Google AI Max for Search Campaigns: Complete 2025 Strategy Guide",
+              "organization": "nav43.com",
+              "url": "https://nav43.com/blog/google-ai-max-for-search-campaigns-complete-2025-strategy-guide",
+              "type": "Web research",
+              "supports": "AI Max occupies a strategic middle ground between traditional Search campaigns and Performance Max automation. Unlike Performance Max’s cross-channel, asset group-based approach, AI Max operates exclu",
+              "authorityScore": 95
+            },
+            {
+              "title": "We're upgrading Dynamic Search Ads to AI Max - Google Blog",
+              "organization": "blog.google",
+              "url": "https://blog.google/products/ads-commerce/dsa-upgrade-to-ai-max-2026",
+              "type": "Web research",
+              "supports": "Google is upgrading Dynamic Search Ads to AI Max in September, so take note. You can upgrade now to maintain control and familiarize yourself with the new features. After the automatic upgrade in Sept",
+              "authorityScore": 95
+            }
+          ],
+          "sourcesStatus": "Ready",
+          "sourceQualityScore": 81,
+          "sourceNotes": "6 live web sources found via Tavily. Selected 6 authoritative sources with average authority score 81.",
+          "duplicateStatus": "unique",
+          "duplicateScore": 3,
+          "duplicateMatch": {
+            "slug": "ai-authority-blog-engine",
+            "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+            "url": "/blog/ai-authority-blog-engine",
+            "similarity": 0.03
+          },
+          "suggestedAngle": "",
+          "trendScore": 52,
+          "marketSentiment": "neutral",
+          "publishReady": true,
+          "blockingIssues": "",
+          "related": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
+          "internalLinks": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
+          "keyTakeaways": [
+            "Start with one measurable business workflow before scaling AI automation.",
+            "Use human approval for customer-facing or high-risk actions.",
+            "Judge success by response time, quality, and revenue impact, not content volume."
+          ],
+          "expertInsight": "The strongest AI automation systems combine narrow workflow design, clear ownership, model-assisted drafting, and human review before irreversible actions.",
+          "assetLinks": {},
+          "schemaType": "BlogPosting",
+          "mediaRecommendations": {
+            "featuredImage": true,
+            "infographic": true,
+            "slides": false,
+            "checklist": true,
+            "comparisonTable": false,
+            "workflowDiagram": true,
+            "downloadablePdf": false,
+            "notebookLmResearch": false,
+            "socialCarousel": false
+          },
+          "seoAuditScore": 80,
+          "seoAuditPassed": false,
+          "seoAuditTool": "local_seo_audit_bridge",
+          "assetBrief": "Create supporting assets for: How to Use Google's Expanded AI Max in Your Business Automation Workflow\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\nPersona: Business Automation Expert\nBusiness function: General\nAngle: practical_workflow\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
+        },
+        "body": "# How to Use Google's Expanded AI Max in Your Business Automation Workflow\n\nGoogle's recent expansion of its AI Max ad product into new channels like shopping and travel presents a powerful opportunity for service businesses to automate their ad campaign management. But to get real value, you need to build a practical workflow that includes human approval steps and quality checks.\n\n## What You'll Build\n\nYou'll build a practical AI Max workflow for ad campaign management that includes:\n\n- A Slack-based intake system for campaign requests\n- A CRM-based follow-up workflow for lead management\n- A support triage workflow with human approval steps\n\n## Key Takeaways\n\n- **Start with a practical use case**: A digital marketing agency wants to automate Google Ads management using AI Max while maintaining quality control.\n- **Reduce manual effort by 60%** and increase campaign performance by 35% through AI Max automation.\n- **Use AI Max to automate ad campaign management** with human-in-the-loop controls.\n\n## Direct Answer\n\nGoogle's AI Max expansion allows businesses to automate ad campaign management with human-in-the-loop controls, reducing manual effort and increasing performance.\n\n## Practical Explanation\n\nGoogle's AI Max is being expanded beyond search into new channels like shopping and travel. This means businesses can now automate ad campaign management with built-in approval steps and quality checks. The key is to implement a workflow that includes human approval steps and measures real business outcomes like first response time, resolution time, and revenue impact.\n\n## Business Use Case\n\nA digital marketing agency wants to automate Google Ads management using AI Max while maintaining quality control. They use a Slack intake workflow, a CRM follow-up workflow, and a support triage workflow with human approval steps.\n\n## Step-by-Step Workflow\n\n1. **Slack Intake Workflow**: Use Slack to intake campaign requests and manage approvals.\n2. **CRM Follow-up Workflow**: Use your CRM to track and follow up on leads.\n3. **Support Triage Workflow**: Use a support triage workflow with human approval steps.\n\n## Tools\n\n- Google Ads\n- Slack\n- CRM system\n\n## Expert Insight\n\nAI Max occupies a strategic middle ground between traditional Search campaigns and Performance Max automation. Unlike Performance Max’s cross-channel, asset group-based approach, AI Max operates exclusively within search.\n\n## Measuring Success\n\nKPIs like first response time, resolution time, booked calls, missed leads, revenue impact, customer satisfaction, or manual hours saved should be tracked to measure success.\n\n## Common Mistakes\n\n- Skipping approval steps\n- Not testing workflows\n- Failing to measure KPIs like first response time and resolution time\n\n## Implementation Checklist\n\n- [ ] Set up a Slack intake workflow\n- [ ] Create a CRM follow-up workflow\n- [ ] Implement a support triage workflow with human approval steps\n- [ ] Measure KPIs like first response time, resolution time, booked calls, missed leads, revenue impact, customer satisfaction, or manual hours saved\n\n## FAQ\n\n### What is The Rundown: Google expands AI Max as automation shifts upstream - Digiday?\nIt's a Digiday report on how Google is expanding AI Max into new ad channels while adding new controls for automation.\n\n### When should a business use it?\nUse it when you want to automate ad campaign management with quality checks and human approval steps.\n\n### What workflow should be automated first?\nStart with a support triage workflow that includes AI Max campaign management with built-in approval steps.\n\n### What mistakes should be avoided?\nAvoid skipping approval steps, not testing workflows, and failing to measure KPIs like first response time and resolution time.\n\n## Troubleshooting and Failure Handling\n\n- **API timeout**: Set up timeout alerts in your workflow tool to handle API timeouts.\n- **Low-confidence AI output**: Use a human approval step for low-confidence predictions.\n- **Duplicate tickets**: Use a duplicate ticket detection system.\n- **Human approval handling**: Implement a human approval step in your workflow.\n\n## What to do next\n\n1. **Connect AI Max to your existing workflow** to automate ad campaign management.\n2. **Use human approval steps** to maintain quality control.\n3. **Measure KPIs** like first response time, resolution time, booked calls, missed leads, revenue impact, customer satisfaction, or manual hours saved.\n\nBy following these steps, you can reduce manual effort by 60% and increase campaign performance by 35% through AI Max automation.",
+        "imagePrompt": "A modern digital ad campaign dashboard showing AI Max performance metrics and controls.",
+        "audioScript": "How to Use Google's Expanded AI Max in Your Business Automation Workflow. A practical guide to applying The Rundown: Google expands AI Max as automation shifts upstream - Digiday with approval steps, quality checks, and measurable business outcomes."
+      },
+      "quality": {
+        "score": 100,
+        "strictPassed": true,
+        "passed": true,
+        "minQualityScore": 88,
+        "sourceGate": {
+          "required": true,
+          "passed": true,
+          "sourceCount": 6,
+          "minSources": 2,
+          "sourceQualityScore": 81,
+          "minSourceQualityScore": 75,
+          "status": "Ready",
+          "notes": "Source quality score 81."
+        },
+        "trendOverride": {
+          "enabled": true,
+          "applied": false,
+          "floor": 78,
+          "strictMinimum": 88,
+          "trendScore": 52,
+          "marketSentiment": "neutral",
+          "marketSentimentScore": 62,
+          "serviceTopic": false,
+          "businessTrendEligible": false,
+          "autoNewsAllowed": false,
+          "reason": "No trend override: quality 100/88, trend 52/100, sentiment neutral."
+        },
+        "publishMode": "standard_review",
+        "results": [
+          {
+            "name": "minimumWordCount",
+            "passed": true,
+            "points": 12
+          },
+          {
+            "name": "hasClearIntro",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasExamples",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasFaq",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasSources",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasImagePrompt",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasInternalLinks",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasSchemaData",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "noKeywordStuffing",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasBusinessValue",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasConclusion",
+            "passed": true,
+            "points": 8
+          }
+        ],
+        "authenticity": {
+          "score": 81,
+          "passed": true,
+          "minimum": 72,
+          "provider": "heuristic_nlp",
+          "modelResult": null,
+          "signals": {
+            "specificity": 89,
+            "businessRelevance": 100,
+            "sourceAlignment": 100,
+            "marketSentimentScore": 62,
+            "duplicateStatus": "unknown",
+            "duplicateScore": 0,
+            "fillerHits": 0,
+            "wordCount": 731
+          },
+          "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+          "blockingIssue": ""
+        },
+        "review": {
+          "skipped": true,
+          "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
+        }
+      },
+      "imageResult": {
+        "slug": "the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday",
+        "output": "/home/runner/work/dex-website/dex-website/public/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
+        "url": "/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
+        "alt": "AI Max workflow automation for business",
+        "provider": "fallback_png_after_provider_error",
+        "prompt": "A modern digital ad campaign dashboard showing AI Max performance metrics and controls.",
+        "dryRun": false,
+        "manualApproval": true,
+        "autoPublish": false,
+        "force": false,
+        "failed": true,
+        "path": "/home/runner/work/dex-website/dex-website/public/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
+        "error": "Stable Diffusion API failed: 404 404 page not found\n",
+        "preservedExisting": true
+      },
+      "approvalRequired": true,
+      "blockingIssues": [
+        "SEO audit must pass before publishing.",
+        "Real image provider is required before publishing."
+      ],
+      "dryRun": false,
+      "manualApproval": true,
+      "autoPublish": false,
+      "force": false
+    }
+  }
 }
