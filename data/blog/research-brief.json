@@ -46,20 +46,20 @@
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Worked in 2025 & What Scales in 2026 - LogiNext",
-      "organization": "loginextsolutions.com",
-      "url": "https://www.loginextsolutions.com/blog/ai-in-logistics-what-worked-in-2025-what-will-scale-in-2026",
-      "type": "Web research",
-      "supports": "One of the most consistent themes in 2025 was efficiency. AI-driven tracking, route optimization, and predictive planning helped cut costs and streamline",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
       "title": "AI in Logistics: What Worked in 2025 & What Will Scale in 2026 For ...",
       "organization": "instagram.com",
       "url": "https://www.instagram.com/p/DUl2CdNgYc4",
       "type": "Web research",
       "supports": "Smarter routing & planning. AI-driven route optimization helped reduce shipping costs by up to 15% and improved on-time delivery through real-",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI in the workplace: A report for 2025 - McKinsey",
+      "organization": "mckinsey.com",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work",
+      "type": "Web research",
+      "supports": "Almost all companies invest in AI, but just 1% believe they are at maturity. Our new report looks at how AI is being used in the workplace",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -73,42 +73,35 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
+      "title": "Why LLMs need more memory, not parameters | Matt Asay posted on the topic | LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Matt Asay Great post, Matt. You’re absolutely right — AI needs memory, and databases are the unsung heroes in that transformation. But the real unlock isn’t just having memory — it’s designing the rig",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "OpenAI Platform Documentation",
-      "organization": "OpenAI",
-      "url": "https://platform.openai.com/docs/",
-      "type": "Official documentation",
-      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
-      "tags": [
-        "ai",
-        "llm",
-        "agents",
-        "automation",
-        "workflow",
-        "prompt"
-      ],
-      "authorityScore": 83
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
+      "type": "Web research",
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
+      "publishedDate": ""
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-    "https://www.loginextsolutions.com/blog/ai-in-logistics-what-worked-in-2025-what-will-scale-in-2026",
     "https://www.instagram.com/p/DUl2CdNgYc4",
+    "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work",
     "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780",
-    "https://innovecs.com/blog/ai-supply-chain-planning",
-    "https://platform.openai.com/docs/"
+    "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
+    "https://innovecs.com/blog/ai-supply-chain-planning"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -122,7 +115,7 @@
   "trendAnalysis": {
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 59,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -136,10 +129,6 @@
       {
         "source": "Google News",
         "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start - Yale Insights"
-      },
-      {
-        "source": "Google News",
-        "title": "Architecting the AI Supply Chain: A 10-Part Downloadable Executive Guide - ARC Advisory Group"
       },
       {
         "source": "Google News",
@@ -160,6 +149,10 @@
       {
         "source": "Google News",
         "title": "Why Enterprise AI Systems Fail: It’s Not RAG – It’s Context Control - Logistics Viewpoints"
+      },
+      {
+        "source": "Google News",
+        "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
       }
     ],
     "realtimeSources": [
@@ -197,20 +190,20 @@
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Worked in 2025 & What Scales in 2026 - LogiNext",
-      "organization": "loginextsolutions.com",
-      "url": "https://www.loginextsolutions.com/blog/ai-in-logistics-what-worked-in-2025-what-will-scale-in-2026",
-      "type": "Web research",
-      "supports": "One of the most consistent themes in 2025 was efficiency. AI-driven tracking, route optimization, and predictive planning helped cut costs and streamline",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
       "title": "AI in Logistics: What Worked in 2025 & What Will Scale in 2026 For ...",
       "organization": "instagram.com",
       "url": "https://www.instagram.com/p/DUl2CdNgYc4",
       "type": "Web research",
       "supports": "Smarter routing & planning. AI-driven route optimization helped reduce shipping costs by up to 15% and improved on-time delivery through real-",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI in the workplace: A report for 2025 - McKinsey",
+      "organization": "mckinsey.com",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work",
+      "type": "Web research",
+      "supports": "Almost all companies invest in AI, but just 1% believe they are at maturity. Our new report looks at how AI is being used in the workplace",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -224,12 +217,21 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
+      "title": "Why LLMs need more memory, not parameters | Matt Asay posted on the topic | LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
+      "type": "Web research",
+      "supports": "Matt Asay Great post, Matt. You’re absolutely right — AI needs memory, and databases are the unsung heroes in that transformation. But the real unlock isn’t just having memory — it’s designing the rig",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Supply Chain Planning: A Complete Guide",
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
       "publishedDate": ""
     }
   ]

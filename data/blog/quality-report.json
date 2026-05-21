@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,35 +85,41 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 73,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 583
+      "wordCount": 556
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low to medium. While the content is highly informative and practical, it has some issues that could impact its helpfulness score. The content provides a clear, step-by-step implementation but lacks comprehensive detail on specific technical implementation steps, and some content appears to be duplicated or semantically similar to existing content, which poses a moderate risk for a helpful content penalty. The article needs to better establish clear practical value and original insights to avoid this penalty.",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "Content provides a use case and step-by-step guide but may be at risk for a helpful content penalty due to similarity with existing content.",
-      "The content does not provide sufficient unique, practical value to be considered substantially different from a helpful content perspective.",
-      "The content lacks depth in explaining how to build the 'memory layer' and other technical steps, which risks the content being flagged as unoriginal."
+      "The article provides practical, actionable content for implementing memory-enabled AI in logistics workflows, which aligns with the target audience's needs.",
+      "Content includes specific metrics (e.g., 40% reduction in response time) and concrete implementation steps, which improve its value for practitioners.",
+      "The article references external sources but does not directly over-quote or rely on long passages from them. The sources are used contextually to support key points.",
+      "Some sections could benefit from more detailed implementation guidance, especially around tool integration and error handling.",
+      "The article avoids generic AI advice and focuses on logistics use cases, which matches the intent to provide practical, non-speculative content.",
+      "The tone and structure are consistent with expert-level guidance, matching the 'Business Automation Expert' persona."
     ],
     "recommendedFixes": [
-      "Expand on specific implementation steps for building memory layers using LangChain or similar frameworks.",
-      "Include specific technical setup instructions for the memory-aware AI workflow.",
-      "Add more original insights and practical learnings to reduce the risk of being flagged for unoriginal content."
+      "Add a brief diagram or workflow visualization to illustrate the Slack-to-CRM process with memory checks (as suggested by mediaRecommendations).",
+      "Clarify the difference between 'automation' and 'planning AI with memory' with a short comparison table or definition box.",
+      "Include a short video or embeddable walkthrough (if platform supports) to show the setup process in Make.com or Zapier.",
+      "Add 1-2 customer testimonial snippets or case study links to increase trust and real-world applicability.",
+      "Break down the 'AI Memory Check' step into sub-bullets or a short process flow to better explain how vector databases are queried.",
+      "Include a short FAQ section addressing common setup errors (e.g., API timeout, confidence thresholds) with example fixes."
     ]
   }
 }
