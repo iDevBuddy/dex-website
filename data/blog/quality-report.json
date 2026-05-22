@@ -91,37 +91,20 @@
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
+      "specificity": 95,
       "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 479
+      "wordCount": 589
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
-    "notes": [
-      "The article provides practical, actionable guidance for implementing AI automation workflows with memory, which aligns well with the informational search intent.",
-      "Content includes specific tools (Slack, CRM, Pallet/Workato), making it more actionable and relevant to the target audience of business operators/owners.",
-      "The inclusion of KPIs, troubleshooting steps, and failure handling adds significant value and demonstrates expertise.",
-      "Content avoids generic AI advice and focuses on structured workflows with measurable outcomes, addressing the business problem noted in frontmatter.",
-      "Use of authoritative sources (e.g., logisticsviewpoints.com, LinkedIn, Innovecs) supports the expert guide tone and practical workflow angle.",
-      "The article could benefit from clearer subheadings and expanded examples to improve scannability and reader engagement.",
-      "SEO audit score is currently below passing threshold (64/100); recommended fixes should help improve this."
-    ],
-    "recommendedFixes": [
-      "Add more detailed subheadings within sections to improve readability (e.g., break 'Step-by-Step Workflow' into distinct phases like 'Intake,' 'Processing,' and 'Follow-Up').",
-      "Include a short real-world example or case study (1-2 paragraphs) to illustrate the impact of memory-enabled AI agents in a business context.",
-      "Add a visual workflow diagram or reference to the included diagram asset to support the 'workflowDiagram' recommendation in media.",
-      "Clarify the distinction between 'automation' and 'AI with memory' using a comparison table or bullet points for better user comprehension.",
-      "Add internal links to related guides or tools (e.g., linking to a setup guide for Pallet or Workato) to improve SEO and user navigation.",
-      "Include a downloadable checklist or workflow template to support the 'checklist' media recommendation and increase conversion potential.",
-      "Expand the 'Common Mistakes' section with brief explanations or examples for each pitfall to add depth and authority."
-    ]
+    "skipped": true,
+    "reason": "nvidia-qwen response did not contain JSON."
   }
 }

@@ -37,38 +37,20 @@
   ],
   "sources": [
     {
-      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025",
-      "type": "Web research",
-      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
       "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
       "publishedDate": ""
     },
     {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com?p=34886",
+      "title": "Why LLMs need more memory, not parameters | Matt Asay posted on the topic | LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "Logistics Viewpoints Weekly News: From Reactive to Real-Time – Supply Chains Rewrite the Rules - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/07/17/logistics-weekly-from-reactive-to-real-time-supply-chains-rewrite-the-rules",
-      "type": "Web research",
-      "supports": "AI is moving beyond isolated copilots and technical architecture into coordinated operational decision systems. This ARC Advisory Group white paper explains how supply chain AI is shifting from capabi",
+      "supports": "Matt Asay Great post, Matt. You’re absolutely right — AI needs memory, and databases are the unsung heroes in that transformation. But the real unlock isn’t just having memory — it’s designing the rig",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -82,26 +64,51 @@
       "publishedDate": ""
     },
     {
-      "title": "Pallet: An AI-native product for logistics, not just a wrapper | Brittain Ladd posted on the topic | LinkedIn",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/posts/brittainladd_pallet-ai-logistics-workforce-activity-7386388759405191169-IK5k",
+      "title": "AI and Automation: Comprehensive Best Practices and Guide | WorkDone.AI",
+      "organization": "workdone.ai",
+      "url": "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide",
       "type": "Web research",
-      "supports": "that’s lived in the heads of dispatchers, operators, and billing clerks for decades. Rules like: “ACME’s LTL shipments are always Class 65.” “P&G’s pickup address with 122 M\\\\\\\\\\ St, Indianap\\\\\\\\ actu",
+      "supports": "### Defining AI and Automation\n\nArtificial Intelligence (AI) refers to technologies that enhance machine capabilities, allowing them to handle complex tasks like problem-solving. Automation, meanwhile",
       "authorityScore": 95,
       "publishedDate": ""
+    },
+    {
+      "title": "AI automation insights and guides | Kognitos Blog",
+      "organization": "kognitos.com",
+      "url": "https://www.kognitos.com/blog",
+      "type": "Web research",
+      "supports": "Why CIOs Must Harness AI-Powered Automation for Operational Excellence\nWhy Finance Teams Can Be the Heroes of Manufacturers and How Automation Helps Them Do It\nWhy Grandma Was the Smartest Programmer ",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "OpenAI Platform Documentation",
+      "organization": "OpenAI",
+      "url": "https://platform.openai.com/docs/",
+      "type": "Official documentation",
+      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "automation",
+        "workflow",
+        "prompt"
+      ],
+      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
-    "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025",
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-    "https://logisticsviewpoints.com?p=34886",
-    "https://logisticsviewpoints.com/2025/07/17/logistics-weekly-from-reactive-to-real-time-supply-chains-rewrite-the-rules",
+    "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
     "https://innovecs.com/blog/ai-supply-chain-planning",
-    "https://www.linkedin.com/posts/brittainladd_pallet-ai-logistics-workforce-activity-7386388759405191169-IK5k"
+    "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide",
+    "https://www.kognitos.com/blog",
+    "https://platform.openai.com/docs/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -115,7 +122,7 @@
   "trendAnalysis": {
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 56,
+    "marketSentimentScore": 59,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -140,6 +147,10 @@
       },
       {
         "source": "Google News",
+        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
+      },
+      {
+        "source": "Google News",
         "title": "Seizing the agentic AI advantage - McKinsey & Company"
       },
       {
@@ -149,10 +160,6 @@
       {
         "source": "Google News",
         "title": "The Infinite AI Compute Loop: HBM Big Three + TSMC × NVIDIA × OpenAI Shaping the Next-Generation Industry Chain - semivision"
-      },
-      {
-        "source": "Google News",
-        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
       }
     ],
     "realtimeSources": [
@@ -181,45 +188,30 @@
   "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
   "webResearchSources": [
     {
-      "title": "The Logistics Viewpoints Articles That Defined 2025 - Logistics Viewpoints",
+      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/01/15/the-logistics-viewpoints-articles-that-defined-2025",
+      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
       "type": "Web research",
-      "supports": "This article resonated because it moved past the idea of Walmart as simply a scale story. Readers were interested in how Walmart is using AI and automation as operating discipline, not experimentation",
-      "authorityScore": 95,
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
       "publishedDate": ""
     },
     {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com?p=34886",
+      "title": "AI and Automation: Comprehensive Best Practices and Guide | WorkDone.AI",
+      "organization": "workdone.ai",
+      "url": "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide",
       "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "supports": "### Defining AI and Automation\n\nArtificial Intelligence (AI) refers to technologies that enhance machine capabilities, allowing them to handle complex tasks like problem-solving. Automation, meanwhile",
       "authorityScore": 95
     },
     {
-      "title": "Logistics Viewpoints Weekly News: From Reactive to Real-Time – Supply Chains Rewrite the Rules - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/07/17/logistics-weekly-from-reactive-to-real-time-supply-chains-rewrite-the-rules",
+      "title": "AI automation insights and guides | Kognitos Blog",
+      "organization": "kognitos.com",
+      "url": "https://www.kognitos.com/blog",
       "type": "Web research",
-      "supports": "AI is moving beyond isolated copilots and technical architecture into coordinated operational decision systems. This ARC Advisory Group white paper explains how supply chain AI is shifting from capabi",
-      "authorityScore": 95
-    },
-    {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
-      "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
-      "authorityScore": 95
-    },
-    {
-      "title": "Pallet: An AI-native product for logistics, not just a wrapper | Brittain Ladd posted on the topic | LinkedIn",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/posts/brittainladd_pallet-ai-logistics-workforce-activity-7386388759405191169-ik5k",
-      "type": "Web research",
-      "supports": "that’s lived in the heads of dispatchers, operators, and billing clerks for decades. Rules like: “ACME’s LTL shipments are always Class 65.” “P&G’s pickup address with 122 M\\\\\\\\\\ St, Indianap\\\\\\\\ actu",
-      "authorityScore": 95
+      "supports": "Why CIOs Must Harness AI-Powered Automation for Operational Excellence\nWhy Finance Teams Can Be the Heroes of Manufacturers and How Automation Helps Them Do It\nWhy Grandma Was the Smartest Programmer ",
+      "authorityScore": 95,
+      "publishedDate": ""
     }
   ]
 }
