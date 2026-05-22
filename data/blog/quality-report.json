@@ -1,7 +1,7 @@
 {
-  "score": 88,
-  "strictPassed": true,
-  "passed": true,
+  "score": 80,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -24,9 +24,9 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 80/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
@@ -35,7 +35,7 @@
     },
     {
       "name": "hasClearIntro",
-      "passed": true,
+      "passed": false,
       "points": 8
     },
     {
@@ -98,13 +98,25 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 568
+      "wordCount": 536
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
+    " helpfulContentRisk": "Medium",
+    "notes": [
+      "The content is generally helpful but has some issues that could affect helpfulness:",
+      "1. The article discusses implementing memory-aware AI workflows, particularly for support triage, which is a relevant and practical use case",
+      "2. The topic is complex and technical, which may be difficult for some readers to follow",
+      "3. Some sections could be better optimized for search engines by including more specific keywords and clearer subheadings"
+    ],
+    "recommendedFixes": [
+      "Add more specific subheadings to improve content structure and readability",
+      "Include keywords related to 'memory-aware AI' and 'support automation' in the meta description and H2 headings",
+      "Improve the first section that's before 'Real-World Use Case' with a subheading that explains the value of the context, like 'Achieve smart and efficient customer support with memory-aware AI' or similar",
+      "Add a summary of the main body content in the meta description to improve findability",
+      "Include a clear call to action for setting up the like 'how to implement' or 'apply' the solution in the order of the RACI framework - Responsibility, Accountable, Consulted, and Informed. "
+    ]
   }
 }
