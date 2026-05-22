@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 52,
+    "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 66,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 52/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 91,
+    "score": 80,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,17 +94,31 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 66,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 892
+      "wordCount": 756
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 429 {\"status\":429,\"title\":\"Too Many Requests\"}"
+    "helpfulContentRisk": "low",
+    "notes": [
+      "The article provides specific, practical implementation guidance for a specialized AI automation tool, which aligns well with the search intent of 'Business owner or operator looking for practical implementation guidance.'",
+      "Content includes structured workflows, tools, steps, and measurable outcomes that demonstrate applied use of the technology rather than generic AI advice.",
+      "The article includes implementation checklists, error handling, and clear business impact metrics, reducing the risk of being considered 'unhelpful' by search engines.",
+      "Includes a direct workflow example, step-by-step instructions, and a practical use case that matches user intent.",
+      "The article provides a clear business use case with specific tools and steps, reducing the risk of being flagged for low-quality or SEO-generated content."
+    ],
+    "recommendedFixes": [
+      "Clarify the title and subtitle by shortening and simplifying the main topic. Consider: 'Streamline Industrial Automation Design with Launchpad Build AI's MLM'.",
+      "Add a meta-refresh tag or note to ensure content is indexable and to clarify content is unique and high quality.",
+      "Improve readability of the FAQ section by reorganizing Q&A format for better user engagement and search understanding.",
+      "Add internal links to related content on the site for better topical authority and content clustering.",
+      "Consider adding schema markup to the FAQ section for better structured data recognition.",
+      "Add visual assets (e.g., workflow diagrams, checklists) to improve engagement and time-on-page metrics."
+    ]
   }
 }
