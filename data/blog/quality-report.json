@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
+    "trendScore": 52,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 52/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,26 +85,26 @@
     }
   ],
   "authenticity": {
-    "score": 74,
+    "score": 91,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 95,
+      "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 589
+      "wordCount": 892
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
     "skipped": true,
-    "reason": "nvidia-qwen response did not contain JSON."
+    "reason": "nvidia-qwen failed: 429 {\"status\":429,\"title\":\"Too Many Requests\"}"
   }
 }
