@@ -1,7 +1,7 @@
 {
-  "score": 100,
-  "strictPassed": true,
-  "passed": true,
+  "score": 88,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,40 +85,40 @@
     }
   ],
   "authenticity": {
-    "score": 80,
-    "passed": true,
+    "score": 69,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
       "marketSentimentScore": 66,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 756
+      "wordCount": 664
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
     "helpfulContentRisk": "low",
     "notes": [
-      "The article provides specific, practical implementation guidance for a specialized AI automation tool, which aligns well with the search intent of 'Business owner or operator looking for practical implementation guidance.'",
-      "Content includes structured workflows, tools, steps, and measurable outcomes that demonstrate applied use of the technology rather than generic AI advice.",
-      "The article includes implementation checklists, error handling, and clear business impact metrics, reducing the risk of being considered 'unhelpful' by search engines.",
-      "Includes a direct workflow example, step-by-step instructions, and a practical use case that matches user intent.",
-      "The article provides a clear business use case with specific tools and steps, reducing the risk of being flagged for low-quality or SEO-generated content."
+      "The content provides a practical guide to implementing Launchpad Build AI's Manufacturing Language Model for industrial automation design.",
+      "Article includes structured workflow, business use case, and step-by-step implementation guide which aligns with the search intent of providing practical, actionable information.",
+      "The content is well-researched with authoritative sources cited, supporting the claims made about Launchpad Build AI's capabilities and impact.",
+      "Content includes a clear 'Direct Answer' and 'Key Takeaways' section for immediate value to the reader.",
+      "The article provides a specific business outcome (50% time and cost reduction) and outlines a practical workflow with tools and steps needed for implementation.",
+      "Content includes expert insight and real-world use case example (AutoTech Solutions) to illustrate the value of the tool.",
+      "The article provides a clear implementation checklist and common mistakes to avoid, enhancing the practical value for the reader."
     ],
     "recommendedFixes": [
-      "Clarify the title and subtitle by shortening and simplifying the main topic. Consider: 'Streamline Industrial Automation Design with Launchpad Build AI's MLM'.",
-      "Add a meta-refresh tag or note to ensure content is indexable and to clarify content is unique and high quality.",
-      "Improve readability of the FAQ section by reorganizing Q&A format for better user engagement and search understanding.",
-      "Add internal links to related content on the site for better topical authority and content clustering.",
-      "Consider adding schema markup to the FAQ section for better structured data recognition.",
-      "Add visual assets (e.g., workflow diagrams, checklists) to improve engagement and time-on-page metrics."
+      "Consider adding a brief explanation of how the 50% time/cost reduction is calculated to provide more transparency.",
+      "Include a visual (e.g., workflow diagram) to enhance understanding of the step-by-step process.",
+      "Clarify the difference between using the tool and manual design to emphasize the value proposition more clearly.",
+      "Add a sentence about the limitations or ideal use cases to set accurate expectations for the reader."
     ]
   }
 }
