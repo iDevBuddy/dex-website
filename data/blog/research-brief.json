@@ -46,24 +46,6 @@
       "publishedDate": ""
     },
     {
-      "title": "Industry Insights: AI in Logistics | Reshaping How Goods Move Globally | Association for Advancing Automation",
-      "organization": "automate.org",
-      "url": "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
-      "type": "Web research",
-      "supports": "This team provides value beyond investigating and planning solutions; it enables ongoing cross-functional evaluation of results and builds institutional knowledge to support future integrations. Plann",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
-      "type": "Web research",
-      "supports": "Guest Commentary | By Chris Cunnane • 06/03/2025\n\nOrder fulfillment is the complete process from when an order is placed until the shipment is delivered. Accurately fulfilling thousands of orders for ",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
       "title": "Leaders Build AI Agents that multiply output Discipline on execution ...",
       "organization": "facebook.com",
       "url": "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780",
@@ -73,31 +55,49 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
+      "title": "2025 Year in Review: AI Workforce Advances at Magna IQ - LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/ianbarkin_every-year-teaches-you-something-2025-activity-7405237499385708544-T5aQ",
+      "type": "Web research",
+      "supports": "AI is a Coordination Technology, Not Just an Automation Tool The most important reframe in the book is to see AI as a system reshaper. While",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI in Logistics: What Worked in 2025 & What Will Scale in 2026 For ...",
+      "organization": "instagram.com",
+      "url": "https://www.instagram.com/p/DUl2CdNgYc4",
+      "type": "Web research",
+      "supports": "Smarter routing & planning. AI-driven route optimization helped reduce shipping costs by up to 15% and improved on-time delivery through real-",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Why LLMs need more memory, not parameters | Matt Asay posted on the topic | LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
+      "type": "Web research",
+      "supports": "Matt Asay Great post, Matt. You’re absolutely right — AI needs memory, and databases are the unsung heroes in that transformation. But the real unlock isn’t just having memory — it’s designing the rig",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Supply Chain Planning: A Complete Guide",
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning",
       "type": "Web research",
       "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
       "authorityScore": 95,
       "publishedDate": ""
-    },
-    {
-      "title": "Pallet: An AI-native product for logistics, not just a wrapper | Brittain Ladd posted on the topic | LinkedIn",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/posts/brittainladd_pallet-ai-logistics-workforce-activity-7386388759405191169-IK5k",
-      "type": "Web research",
-      "supports": "that’s lived in the heads of dispatchers, operators, and billing clerks for decades. Rules like: “ACME’s LTL shipments are always Class 65.” “P&G’s pickup address with 122 M\\\\\\\\\\ St, Indianap\\\\\\\\ actu",
-      "authorityScore": 95,
-      "publishedDate": ""
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-    "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
-    "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
     "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780",
-    "https://innovecs.com/blog/ai-supply-chain-planning",
-    "https://www.linkedin.com/posts/brittainladd_pallet-ai-logistics-workforce-activity-7386388759405191169-IK5k"
+    "https://www.linkedin.com/posts/ianbarkin_every-year-teaches-you-something-2025-activity-7405237499385708544-T5aQ",
+    "https://www.instagram.com/p/DUl2CdNgYc4",
+    "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
+    "https://innovecs.com/blog/ai-supply-chain-planning"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
@@ -115,7 +115,7 @@
   "trendAnalysis": {
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 65,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -125,6 +125,14 @@
       {
         "source": "Google News",
         "title": "Why Context Is Becoming the Critical Requirement for Supply Chain AI - Logistics Viewpoints"
+      },
+      {
+        "source": "Google News",
+        "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start - Yale Insights"
+      },
+      {
+        "source": "Google News",
+        "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
       },
       {
         "source": "Google News",
@@ -145,14 +153,6 @@
       {
         "source": "Google News",
         "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
-      },
-      {
-        "source": "Google News",
-        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
-      },
-      {
-        "source": "Google News",
-        "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
       }
     ],
     "realtimeSources": [
@@ -178,7 +178,7 @@
   "businessFunction": "General",
   "authorityAngle": "practical_workflow",
   "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
-  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation with approval steps, quality checks, and measurable business outcomes.",
+  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
   "webResearchSources": [
     {
       "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
@@ -186,24 +186,6 @@
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
       "type": "Web research",
       "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "Industry Insights: AI in Logistics | Reshaping How Goods Move Globally | Association for Advancing Automation",
-      "organization": "automate.org",
-      "url": "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
-      "type": "Web research",
-      "supports": "This team provides value beyond investigating and planning solutions; it enables ongoing cross-functional evaluation of results and builds institutional knowledge to support future integrations. Plann",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
-      "type": "Web research",
-      "supports": "Guest Commentary | By Chris Cunnane • 06/03/2025\n\nOrder fulfillment is the complete process from when an order is placed until the shipment is delivered. Accurately fulfilling thousands of orders for ",
       "authorityScore": 95,
       "publishedDate": ""
     },
@@ -217,20 +199,38 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
+      "title": "2025 Year in Review: AI Workforce Advances at Magna IQ - LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/ianbarkin_every-year-teaches-you-something-2025-activity-7405237499385708544-T5aQ",
       "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "supports": "AI is a Coordination Technology, Not Just an Automation Tool The most important reframe in the book is to see AI as a system reshaper. While",
       "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Pallet: An AI-native product for logistics, not just a wrapper | Brittain Ladd posted on the topic | LinkedIn",
-      "organization": "linkedin.com",
-      "url": "https://www.linkedin.com/posts/brittainladd_pallet-ai-logistics-workforce-activity-7386388759405191169-IK5k",
+      "title": "AI in Logistics: What Worked in 2025 & What Will Scale in 2026 For ...",
+      "organization": "instagram.com",
+      "url": "https://www.instagram.com/p/DUl2CdNgYc4",
       "type": "Web research",
-      "supports": "that’s lived in the heads of dispatchers, operators, and billing clerks for decades. Rules like: “ACME’s LTL shipments are always Class 65.” “P&G’s pickup address with 122 M\\\\\\\\\\ St, Indianap\\\\\\\\ actu",
+      "supports": "Smarter routing & planning. AI-driven route optimization helped reduce shipping costs by up to 15% and improved on-time delivery through real-",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Why LLMs need more memory, not parameters | Matt Asay posted on the topic | LinkedIn",
+      "organization": "linkedin.com",
+      "url": "https://www.linkedin.com/posts/mjasay_the-importance-of-memory-for-ai-activity-7355637900169957376-PMZm",
+      "type": "Web research",
+      "supports": "Matt Asay Great post, Matt. You’re absolutely right — AI needs memory, and databases are the unsung heroes in that transformation. But the real unlock isn’t just having memory — it’s designing the rig",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
+      "type": "Web research",
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
       "authorityScore": 95,
       "publishedDate": ""
     }
