@@ -1,32 +1,32 @@
 {
-  "score": 88,
-  "strictPassed": true,
-  "passed": true,
+  "score": 80,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 52,
+    "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 52/100, sentiment neutral."
+    "reason": "No trend override: quality 80/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
@@ -80,43 +80,31 @@
     },
     {
       "name": "hasConclusion",
-      "passed": true,
+      "passed": false,
       "points": 8
     }
   ],
   "authenticity": {
-    "score": 74,
-    "passed": true,
+    "score": 71,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 95,
+      "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 547
+      "wordCount": 542
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "MEDIUM",
-    "notes": [
-      "The article content appears to be of generally high quality and provides practical value.",
-      "The article includes a 'practical' workflow with specific steps.",
-      "The article includes 4 data/technical sources with a median quality score.",
-      "The content demonstrates strong schema and content quality for SEO."
-    ],
-    "recommendedFixes": [
-      "Add a workflow diagram as a supporting asset",
-      "Add a checklist as a supporting asset",
-      "Add a featured image as a supporting asset",
-      "Add an introduction or overview section that explains the practical use case",
-      "Add a clear explanation of the business impact and setup"
-    ]
+    "skipped": true,
+    "reason": "nvidia-qwen failed: 429 {\"status\":429,\"title\":\"Too Many Requests\"}"
   }
 }
