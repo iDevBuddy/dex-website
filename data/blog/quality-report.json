@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
+    "trendScore": 52,
     "marketSentiment": "neutral",
     "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 52/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,49 +85,38 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 74,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 96,
+      "specificity": 95,
       "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 665
+      "wordCount": 547
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "MEDIUM",
     "notes": [
-      "The article provides practical value with a clear focus on logistics workflows and concrete implementation steps",
-      "Content addresses a genuine business need - improving AI automation with memory/context for better decision-making",
-      "Uses structured implementation checklist and defined workflows that align with search intent",
-      "Article includes relevant tools (Slack, CRM), KPIs, and practical examples that match the target audience's needs",
-      "Content is written from a business automation expert perspective, which adds credibility",
-      "Addresses common mistakes and includes a practical implementation checklist",
-      "Well-researched with authoritative sources and clear examples",
-      "Good internal linking to related content and defined use cases",
-      "ContentPersona and searchIntent are well aligned with the target keyword and topic",
-      "Some minor improvements could be made to better integrate the logistics viewpoint angle throughout the content"
+      "The article content appears to be of generally high quality and provides practical value.",
+      "The article includes a 'practical' workflow with specific steps.",
+      "The article includes 4 data/technical sources with a median quality score.",
+      "The content demonstrates strong schema and content quality for SEO."
     ],
     "recommendedFixes": [
-      "Add more specific logistics examples throughout the content to better integrate the 'logistics viewpoints' angle mentioned in the title",
-      "Include specific examples of memory/context challenges in logistics operations",
-      "Add more detail about how memory improves logistics-specific outcomes",
-      "Include data on how memory/context challenges impact supply chain operations",
-      "Expand on the logistics viewpoint in the introduction and implementation sections",
-      "Add specific examples of how context retention solves real logistics problems",
-      "Strengthen the connection between AI memory and supply chain use cases",
-      "Include case studies or specific examples of memory improving logistics outcomes",
-      "Add more logistics-specific workflow examples beyond the generic intake/follow-up",
-      "Better integrate the logistics viewpoint in the implementation section with concrete examples"
+      "Add a workflow diagram as a supporting asset",
+      "Add a checklist as a supporting asset",
+      "Add a featured image as a supporting asset",
+      "Add an introduction or overview section that explains the practical use case",
+      "Add a clear explanation of the business impact and setup"
     ]
   }
 }
