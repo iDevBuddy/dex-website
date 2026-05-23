@@ -1,7 +1,343 @@
 {
-  "ok": false,
-  "failSoft": true,
-  "message": "nvidia-qwen failed: 429 {\"status\":429,\"title\":\"Too Many Requests\"}",
-  "nextAction": "Draft artifacts were preserved when available. Improve SEO/content or approve manually after review.",
-  "generatedAt": "2026-05-22T22:59:50.783Z"
+  "ok": true,
+  "result": {
+    "pendingApproval": true,
+    "output": "/home/runner/work/dex-website/dex-website/content/blog/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.md",
+    "approvalPacket": {
+      "output": "/home/runner/work/dex-website/dex-website/content/blog/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.md",
+      "article": {
+        "frontmatter": {
+          "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
+          "subtitle": "A practical guide to applying Planning AI Needs Memory, Not Just Automation with approval steps, quality checks, and measurable business outcomes.",
+          "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+          "metaTitle": "Planning AI Needs Memory, Not Just Automation - Expert Guide to AI Workflows",
+          "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation with approval steps, quality checks, and measurable business outcomes.",
+          "metaDescription": "Learn to implement AI automation with memory for logistics workflows. Build smarter systems with approval steps, quality checks, and real business impact.",
+          "category": "AI Automation",
+          "tags": [
+            "AI automation workflow",
+            "AI agents for business",
+            "workflow automation examples"
+          ],
+          "targetKeyword": "planning ai needs memory, not just automation - logistics viewpoints",
+          "tone": "practical",
+          "style": "informative",
+          "contentPersona": "Business Automation Expert",
+          "businessFunction": "General",
+          "authorityAngle": "practical_workflow",
+          "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation",
+          "searchIntent": "Informational",
+          "practicalUseCase": "Slack intake workflow, CRM follow-up workflow, support triage workflow",
+          "businessProblem": "They want useful automation but do not want generic AI advice or risky SEO shortcuts.",
+          "automationOpportunity": "Practical implementation guidance for AI automation in logistics",
+          "whatYouWillBuild": "A complete workflow for AI-powered business automation with logging, approval, and quality checks",
+          "toolsNeeded": [
+            "Slack",
+            "CRM",
+            "AI tools"
+          ],
+          "caseProblem": "Service business needs to automate customer intake and follow-up workflows",
+          "caseResult": "Reduced manual effort, faster response times, and improved customer satisfaction",
+          "businessImpact": "Reduces manual hours by 60%, increases first response time by 40%",
+          "implementationDifficulty": "Medium",
+          "estimatedTimeToImplement": "1-2 weeks",
+          "contentType": "expert guide",
+          "officialSource": "",
+          "officialUrl": "",
+          "officialImageRequired": false,
+          "toolSpecific": false,
+          "newsPublishedAt": "",
+          "image": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+          "imageAlt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+          "audioPath": "",
+          "author": "Business Automation Expert",
+          "publishedAt": "2026-05-23",
+          "updatedAt": "2026-05-23",
+          "readingTime": "",
+          "directAnswer": "Planning AI needs memory, not just automation to ensure that AI agents retain context and improve over time, making them more effective in logistics and supply chain operations.",
+          "faqs": [
+            {
+              "question": "What is Planning AI Needs Memory, Not Just Automation?",
+              "answer": "It's a concept where AI systems must retain context and learn from past decisions to improve future operations, especially in complex logistics environments."
+            },
+            {
+              "question": "When should a business use it?",
+              "answer": "Businesses should use it when they need to automate complex, context-sensitive tasks that require memory of past actions and decisions."
+            },
+            {
+              "question": "What workflow should be automated first?",
+              "answer": "The customer intake and follow-up workflows should be prioritized for automation to improve efficiency and reduce manual effort."
+            },
+            {
+              "question": "What mistakes should be avoided?",
+              "answer": "Avoiding generic AI advice, ensuring proper approval steps, and maintaining quality checks are key to successful implementation."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+              "organization": "logisticsviewpoints.com",
+              "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+              "type": "Web research",
+              "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+              "authorityScore": 95
+            },
+            {
+              "title": "Industry Insights: AI in Logistics | Reshaping How Goods Move Globally | Association for Advancing Automation",
+              "organization": "automate.org",
+              "url": "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
+              "type": "Web research",
+              "supports": "This team provides value beyond investigating and planning solutions; it enables ongoing cross-functional evaluation of results and builds institutional knowledge to support future integrations. Plann",
+              "authorityScore": 95
+            },
+            {
+              "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
+              "organization": "logisticsviewpoints.com",
+              "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
+              "type": "Web research",
+              "supports": "Guest Commentary | By Chris Cunnane • 06/03/2025\n\nOrder fulfillment is the complete process from when an order is placed until the shipment is delivered. Accurately fulfilling thousands of orders for ",
+              "authorityScore": 95
+            },
+            {
+              "title": "Leaders Build AI Agents that multiply output Discipline on execution ...",
+              "organization": "facebook.com",
+              "url": "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780",
+              "type": "Web research",
+              "supports": "We're seeing AI move fast in logistics, & it's not just about automation anymore. It's about orchestration: connecting systems, data, and",
+              "authorityScore": 95
+            },
+            {
+              "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
+              "organization": "innovecs.com",
+              "url": "https://innovecs.com/blog/ai-supply-chain-planning",
+              "type": "Web research",
+              "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+              "authorityScore": 95
+            },
+            {
+              "title": "Pallet: An AI-native product for logistics, not just a wrapper | Brittain Ladd posted on the topic | LinkedIn",
+              "organization": "linkedin.com",
+              "url": "https://www.linkedin.com/posts/brittainladd_pallet-ai-logistics-workforce-activity-7386388759405191169-IK5k",
+              "type": "Web research",
+              "supports": "that’s lived in the heads of dispatchers, operators, and billing clerks for decades. Rules like: “ACME’s LTL shipments are always Class 65.” “P&G’s pickup address with 122 M\\\\\\\\\\ St, Indianap\\\\\\\\ actu",
+              "authorityScore": 95
+            }
+          ],
+          "sourcesStatus": "Ready",
+          "sourceQualityScore": 80,
+          "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+          "duplicateStatus": "unique",
+          "duplicateScore": 11,
+          "duplicateMatch": {
+            "slug": "ai-authority-blog-engine",
+            "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+            "url": "/blog/ai-authority-blog-engine",
+            "similarity": 0.11
+          },
+          "suggestedAngle": "",
+          "trendScore": 62,
+          "marketSentiment": "neutral",
+          "publishReady": true,
+          "blockingIssues": "",
+          "related": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
+          "internalLinks": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
+          "keyTakeaways": [
+            "Start with one measurable business workflow before scaling AI automation.",
+            "Use human approval for customer-facing or high-risk actions.",
+            "Judge success by response time, quality, and revenue impact, not content volume."
+          ],
+          "expertInsight": "The strongest AI automation systems combine narrow workflow design, clear ownership, model-assisted drafting, and human review before irreversible actions.",
+          "assetLinks": {},
+          "schemaType": "BlogPosting",
+          "mediaRecommendations": {
+            "featuredImage": true,
+            "infographic": true,
+            "slides": false,
+            "checklist": true,
+            "comparisonTable": false,
+            "workflowDiagram": true,
+            "downloadablePdf": false,
+            "notebookLmResearch": false,
+            "socialCarousel": false
+          },
+          "seoAuditScore": 76,
+          "seoAuditPassed": false,
+          "seoAuditTool": "local_seo_audit_bridge",
+          "assetBrief": "Create supporting assets for: How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\nPersona: Business Automation Expert\nBusiness function: General\nAngle: practical_workflow\nKeep assets business-focused, clear, original, and safe for Google/AdSense.",
+          "audio": "/blog/audio/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.wav",
+          "audioProvider": "nvidia_tts",
+          "audioVoice": "Magpie-Multilingual.EN-US.Aria"
+        },
+        "body": "## Key Takeaways\n\n- Planning AI needs memory, not just automation to be effective in complex logistics environments.\n- A practical workflow for AI-powered business automation includes approval steps, quality checks, and measurable business outcomes.\n- The most effective workflows to automate first are customer intake and follow-up processes.\n- Common mistakes include ignoring approval steps, logging, and failure handling.\n- A clear implementation checklist ensures success in AI automation projects.\n\n## Direct Answer\n\nPlanning AI needs memory, not just automation to ensure that AI agents retain context and improve over time, making them more effective in logistics and supply chain operations.\n\n## Expert Insight\n\nIn logistics, AI is not just about automating tasks. It's about orchestrating systems, data, and human decisions. The real value comes from AI that remembers past decisions and learns from them to improve future operations.\n\n## Practical Explanation\n\nIn a service business, AI can significantly reduce manual effort, improve response times, and increase customer satisfaction. However, the key is to ensure that AI systems retain context and learn from past decisions to improve future operations. This is where the concept of 'Planning AI Needs Memory, Not Just Automation' comes into play.\n\n## Business Use Case\n\nA service business can use AI to automate customer intake and follow-up workflows. This reduces manual hours by 60%, increases first response time by 40%, and improves customer satisfaction. The key is to ensure that AI systems retain context and learn from past decisions to improve future operations.\n\n## Step-by-Step Workflow\n\n1. **Slack Intake Workflow**: Automate customer inquiries through Slack to reduce manual effort.\n2. **CRM Follow-up Workflow**: Use CRM systems to automate follow-ups and ensure no leads are missed.\n3. **Support Triage Workflow**: Automate the triage of customer support tickets to improve response times.\n\n## Tools\n\nUse tools like Slack, CRM systems, and AI platforms to build the workflow.\n\n## Measuring Success / KPIs\n\n- **First Response Time**: The time it takes to respond to a customer inquiry.\n- **Resolution Time**: The time it takes to resolve a customer issue.\n- **Booked Calls**: The number of calls booked through the automated system.\n- **Missed Leads**: The number of leads that are not followed up on.\n- **Revenue Impact**: The financial impact of automation on the business.\n- **Customer Satisfaction**: How customers rate their experience.\n- **Manual Hours Saved**: The reduction in manual hours due to automation.\n\n## Common Mistakes\n\n- Ignoring approval steps in the workflow.\n- Not logging decisions or outcomes.\n- Failing to handle edge cases or low-confidence AI output.\n\n## Implementation Checklist\n\n- [ ] Define the business problem clearly.\n- [ ] Identify the most critical workflow to automate first.\n- [ ] Set up approval and logging steps.\n- [ ] Test the workflow with real data.\n- [ ] Monitor and adjust based on results.\n\n## What to Do Next\n\n1. **Book an automation consult** to get started with your AI automation project.\n2. Identify the most critical workflows to automate.\n3. Set up the necessary tools and systems.\n4. Monitor the results and adjust the workflow as needed.\n\n## FAQ\n\n### What is Planning AI Needs Memory, Not Just Automation?\n\nIt's a concept where AI systems retain context and learn from past decisions to improve future operations, especially in complex logistics environments.\n\n### When should a business use it?\n\nBusinesses should use it when they need to automate complex, context-sensitive tasks that require memory of past actions and decisions.\n\n### What workflow should be automated first?\n\nThe customer intake and follow-up workflows should be prioritized for automation to improve efficiency and reduce manual effort.\n\n### What mistakes should be avoided?\n\nAvoiding generic AI advice, ensuring proper approval steps, and maintaining quality checks are key to successful implementation.",
+        "imagePrompt": "Professional realistic SaaS dashboard for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints, AI automation workflow, orange accents, no readable text.",
+        "audioScript": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow. A practical guide to applying Planning AI Needs Memory, Not Just Automation with approval steps, quality checks, and measurable business outcomes."
+      },
+      "quality": {
+        "score": 88,
+        "strictPassed": true,
+        "passed": true,
+        "minQualityScore": 88,
+        "sourceGate": {
+          "required": true,
+          "passed": true,
+          "sourceCount": 6,
+          "minSources": 2,
+          "sourceQualityScore": 80,
+          "minSourceQualityScore": 75,
+          "status": "Ready",
+          "notes": "Source quality score 80."
+        },
+        "trendOverride": {
+          "enabled": true,
+          "applied": false,
+          "floor": 78,
+          "strictMinimum": 88,
+          "trendScore": 62,
+          "marketSentiment": "neutral",
+          "marketSentimentScore": 62,
+          "serviceTopic": false,
+          "businessTrendEligible": false,
+          "autoNewsAllowed": false,
+          "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+        },
+        "publishMode": "standard_review",
+        "results": [
+          {
+            "name": "minimumWordCount",
+            "passed": false,
+            "points": 12
+          },
+          {
+            "name": "hasClearIntro",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasExamples",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasFaq",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasSources",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasImagePrompt",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasInternalLinks",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasSchemaData",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "noKeywordStuffing",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasBusinessValue",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasConclusion",
+            "passed": true,
+            "points": 8
+          }
+        ],
+        "authenticity": {
+          "score": 76,
+          "passed": true,
+          "minimum": 72,
+          "provider": "heuristic_nlp",
+          "modelResult": null,
+          "signals": {
+            "specificity": 96,
+            "businessRelevance": 100,
+            "sourceAlignment": 100,
+            "marketSentimentScore": 62,
+            "duplicateStatus": "unknown",
+            "duplicateScore": 0,
+            "fillerHits": 0,
+            "wordCount": 665
+          },
+          "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+          "blockingIssue": ""
+        },
+        "review": {
+          "helpfulContentRisk": "Medium",
+          "notes": [
+            "The article provides practical value with a clear focus on logistics workflows and concrete implementation steps",
+            "Content addresses a genuine business need - improving AI automation with memory/context for better decision-making",
+            "Uses structured implementation checklist and defined workflows that align with search intent",
+            "Article includes relevant tools (Slack, CRM), KPIs, and practical examples that match the target audience's needs",
+            "Content is written from a business automation expert perspective, which adds credibility",
+            "Addresses common mistakes and includes a practical implementation checklist",
+            "Well-researched with authoritative sources and clear examples",
+            "Good internal linking to related content and defined use cases",
+            "ContentPersona and searchIntent are well aligned with the target keyword and topic",
+            "Some minor improvements could be made to better integrate the logistics viewpoint angle throughout the content"
+          ],
+          "recommendedFixes": [
+            "Add more specific logistics examples throughout the content to better integrate the 'logistics viewpoints' angle mentioned in the title",
+            "Include specific examples of memory/context challenges in logistics operations",
+            "Add more detail about how memory improves logistics-specific outcomes",
+            "Include data on how memory/context challenges impact supply chain operations",
+            "Expand on the logistics viewpoint in the introduction and implementation sections",
+            "Add specific examples of how context retention solves real logistics problems",
+            "Strengthen the connection between AI memory and supply chain use cases",
+            "Include case studies or specific examples of memory improving logistics outcomes",
+            "Add more logistics-specific workflow examples beyond the generic intake/follow-up",
+            "Better integrate the logistics viewpoint in the implementation section with concrete examples"
+          ]
+        }
+      },
+      "imageResult": {
+        "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+        "output": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "url": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "alt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+        "provider": "fallback_png_after_provider_error",
+        "prompt": "Professional realistic SaaS dashboard for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints, AI automation workflow, orange accents, no readable text.",
+        "dryRun": false,
+        "manualApproval": true,
+        "autoPublish": false,
+        "force": false,
+        "failed": true,
+        "path": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "error": "Stable Diffusion API failed: 404 404 page not found\n",
+        "preservedExisting": true
+      },
+      "approvalRequired": true,
+      "blockingIssues": [
+        "SEO audit must pass before publishing.",
+        "Real image provider is required before publishing."
+      ],
+      "dryRun": false,
+      "manualApproval": true,
+      "autoPublish": false,
+      "force": false
+    }
+  }
 }

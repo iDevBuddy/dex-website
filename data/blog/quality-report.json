@@ -1,17 +1,17 @@
 {
   "score": 88,
-  "strictPassed": false,
-  "passed": false,
+  "strictPassed": true,
+  "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
@@ -20,13 +20,13 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 66,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
     "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "rewrite_required",
+  "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,40 +85,49 @@
     }
   ],
   "authenticity": {
-    "score": 69,
-    "passed": false,
+    "score": 76,
+    "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
-      "businessRelevance": 86,
+      "specificity": 96,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 66,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 664
+      "wordCount": 665
     },
-    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
-    "blockingIssue": "Authenticity score below publishing threshold."
+    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+    "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The content provides a practical guide to implementing Launchpad Build AI's Manufacturing Language Model for industrial automation design.",
-      "Article includes structured workflow, business use case, and step-by-step implementation guide which aligns with the search intent of providing practical, actionable information.",
-      "The content is well-researched with authoritative sources cited, supporting the claims made about Launchpad Build AI's capabilities and impact.",
-      "Content includes a clear 'Direct Answer' and 'Key Takeaways' section for immediate value to the reader.",
-      "The article provides a specific business outcome (50% time and cost reduction) and outlines a practical workflow with tools and steps needed for implementation.",
-      "Content includes expert insight and real-world use case example (AutoTech Solutions) to illustrate the value of the tool.",
-      "The article provides a clear implementation checklist and common mistakes to avoid, enhancing the practical value for the reader."
+      "The article provides practical value with a clear focus on logistics workflows and concrete implementation steps",
+      "Content addresses a genuine business need - improving AI automation with memory/context for better decision-making",
+      "Uses structured implementation checklist and defined workflows that align with search intent",
+      "Article includes relevant tools (Slack, CRM), KPIs, and practical examples that match the target audience's needs",
+      "Content is written from a business automation expert perspective, which adds credibility",
+      "Addresses common mistakes and includes a practical implementation checklist",
+      "Well-researched with authoritative sources and clear examples",
+      "Good internal linking to related content and defined use cases",
+      "ContentPersona and searchIntent are well aligned with the target keyword and topic",
+      "Some minor improvements could be made to better integrate the logistics viewpoint angle throughout the content"
     ],
     "recommendedFixes": [
-      "Consider adding a brief explanation of how the 50% time/cost reduction is calculated to provide more transparency.",
-      "Include a visual (e.g., workflow diagram) to enhance understanding of the step-by-step process.",
-      "Clarify the difference between using the tool and manual design to emphasize the value proposition more clearly.",
-      "Add a sentence about the limitations or ideal use cases to set accurate expectations for the reader."
+      "Add more specific logistics examples throughout the content to better integrate the 'logistics viewpoints' angle mentioned in the title",
+      "Include specific examples of memory/context challenges in logistics operations",
+      "Add more detail about how memory improves logistics-specific outcomes",
+      "Include data on how memory/context challenges impact supply chain operations",
+      "Expand on the logistics viewpoint in the introduction and implementation sections",
+      "Add specific examples of how context retention solves real logistics problems",
+      "Strengthen the connection between AI memory and supply chain use cases",
+      "Include case studies or specific examples of memory improving logistics outcomes",
+      "Add more logistics-specific workflow examples beyond the generic intake/follow-up",
+      "Better integrate the logistics viewpoint in the implementation section with concrete examples"
     ]
   }
 }
