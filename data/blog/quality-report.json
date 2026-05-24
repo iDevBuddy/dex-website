@@ -1,36 +1,36 @@
 {
-  "score": 88,
-  "strictPassed": false,
-  "passed": false,
+  "score": 100,
+  "strictPassed": true,
+  "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 6,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 60,
+    "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 66,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 60/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "rewrite_required",
+  "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,37 +85,44 @@
     }
   ],
   "authenticity": {
-    "score": 51,
-    "passed": false,
+    "score": 85,
+    "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 78,
-      "businessRelevance": 65,
+      "specificity": 100,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 66,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 453
+      "wordCount": 777
     },
-    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
-    "blockingIssue": "Authenticity score below publishing threshold."
+    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+    "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "MEDIUM",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The content lacks specific technical details about how to implement the actual workflows with Launchpad Build AI's MLM, which may leave readers wanting more depth.",
-      "There's significant repetition in key points throughout the article, particularly in the 'Expert Insight' and 'Business Use Case' sections which both appear to use placeholder or template-based language rather than unique, value-driven content.",
-      "The article structure is present but feels generic and could benefit from more specific examples or case studies to demonstrate real-world usage."
+      "The content demonstrates strong expertise and authoritativeness in the AI automation space",
+      "Article follows a clear structure: problem identification, practical solution, and implementation steps",
+      "Content is highly relevant for the target audience: founders, operators, marketers and service business owners",
+      "Article includes a practical use case with implementation details, tools, and outcomes",
+      "Content includes implementation difficulty and time estimates for transparency",
+      "Addresses a key business problem (context loss in AI workflows) with specific logistics viewpoints",
+      "Uses a clear business impact section to show value",
+      "Includes troubleshooting section with specific error conditions and human-in-the-loop design",
+      "Content is focused on workflow automation and business outcomes, matching the 'practical_workflow' angle"
     ],
     "recommendedFixes": [
-      "Add specific implementation examples for using Launchpad Build AI's MLM in industrial automation design, including actual use cases or customer stories to increase credibility and practical value.",
-      "Reduce content repetition by consolidating similar points and expanding on unique insights or practical steps in using the tool.",
-      "Enhance the 'Step-by-Step Workflow' section with more detailed procedural guidance, including potential challenges and how to overcome them.",
-      "Include data or results from actual implementations to demonstrate ROI and practical benefits of the tool in real-world scenarios.",
-      "Clarify the integration process with tools like Slack and CRM with specific setup steps or configuration examples."
+      "Consider adding a specific example of a memory-aware AI prompt template for logistics use cases",
+      "Add a section on 'why traditional automation fails' to strengthen the problem framing",
+      "Include a workflow diagram in the supporting assets for better visualization of the memory-aware workflow",
+      "Add specific examples of memory-aware AI in logistics operations for different business functions",
+      "Include a section on 'memory-aware AI design patterns' for complex logistics operations",
+      "Add a comparison of traditional vs. memory-aware AI in logistics for better framing"
     ]
   }
 }

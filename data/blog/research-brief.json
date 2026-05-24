@@ -1,7 +1,7 @@
 {
-  "topic": "The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
-  "slug": "the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday",
-  "targetKeyword": "the rundown: google expands ai max as automation shifts upstream - digiday",
+  "topic": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+  "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+  "targetKeyword": "planning ai needs memory, not just automation - logistics viewpoints",
   "secondaryKeywords": [
     "AI automation workflow",
     "AI agents for business",
@@ -16,7 +16,7 @@
     "Few connect AI automation to business outcomes."
   ],
   "questionsToAnswer": [
-    "What is The Rundown: Google expands AI Max as automation shifts upstream - Digiday?",
+    "What is Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints?",
     "When should a business use it?",
     "What workflow should be automated first?",
     "What mistakes should be avoided?"
@@ -37,51 +37,6 @@
   ],
   "sources": [
     {
-      "title": "Google Ads AI Max For Search Campaigns Coming To All In Q3 2025",
-      "organization": "seroundtable.com",
-      "url": "https://www.seroundtable.com/google-ads-ai-max-q3-2025-39557.html",
-      "type": "Web research",
-      "supports": "## The Pulse of the search community\n\n## Browse By\n\n## Light / Dark Mode Settings\n\n# Google Ads AI Max Coming To All In Q3 2025\n\n## Barry Schwartz / Executive Editor\n\nGoogle Ads Max\n\nGoogle Ads Max\n\nG",
-      "authorityScore": 62,
-      "publishedDate": ""
-    },
-    {
-      "title": "The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
-      "organization": "digiday.com",
-      "url": "https://digiday.com/media-buying/the-rundown-google-expands-ai-max-as-automation-shifts-upstream",
-      "type": "Web research",
-      "supports": "That reflects a broader shift: search is no longer a keyword-matching exercise, but a probabilistic interpretation of user intent.\n\nAnd with the latest AI Max update, Google hopes to operationalize th",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "Google's AI Max has pushed up search budgets – and costs - Digiday",
-      "organization": "digiday.com",
-      "url": "https://digiday.com/media-buying/cpc-pain-is-real-one-year-on-googles-ai-max-has-pushed-up-search-budgets-and-costs",
-      "type": "Web research",
-      "supports": "Google began adding AI creative features to its search ads with the introduction of Dynamic Search Ads (DSAs), which are due to be sunset in September. It’s accelerated the rollout of those features w",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "Business Process Automation: The Complete Guide | Workday UK",
-      "organization": "blog.workday.com",
-      "url": "https://blog.workday.com/en-gb/business-process-automation-the-complete-guide.html",
-      "type": "Web research",
-      "supports": "Scalability across enterprise systems: AI agents integrate with bots, APIs, microservices, and orchestration platforms to expand automation capabilities across the organization. [...] AI agents don’t ",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "Redefining Search: How Google’s AI Max is Revolutionizing Search Campaigns - 1SEO Digital Agency",
-      "organization": "1seo.com",
-      "url": "https://1seo.com/blog/redefining-search-how-googles-ai-max-is-revolutionizing-search-campaigns",
-      "type": "Web research",
-      "supports": "## What Is AI Max for Search Campaigns?\n\nAI Max is not a standalone campaign type like Performance Max, but rather an enhancement integrated into existing Google Search campaigns. It enriches your Goo",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
       "title": "OpenAI Platform Documentation",
       "organization": "OpenAI",
       "url": "https://platform.openai.com/docs/",
@@ -96,46 +51,127 @@
         "prompt"
       ],
       "authorityScore": 83
+    },
+    {
+      "title": "GitHub Docs: GitHub Actions",
+      "organization": "GitHub",
+      "url": "https://docs.github.com/en/actions",
+      "type": "Official documentation",
+      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
+      "tags": [
+        "github",
+        "automation",
+        "workflow",
+        "ci",
+        "deployment"
+      ],
+      "authorityScore": 83
+    },
+    {
+      "title": "The State of AI",
+      "organization": "McKinsey & Company",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "type": "Industry report",
+      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
+      "tags": [
+        "ai",
+        "business",
+        "trend",
+        "strategy"
+      ],
+      "authorityScore": 80
+    },
+    {
+      "title": "Microsoft Learn: Azure AI Services",
+      "organization": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
+      "type": "Official documentation",
+      "supports": "Supports claims about practical AI service patterns, responsible deployment, and AI workflow building blocks.",
+      "tags": [
+        "ai",
+        "automation",
+        "workflow",
+        "business",
+        "agents"
+      ],
+      "authorityScore": 79
+    },
+    {
+      "title": "IBM: What Is Workflow Automation?",
+      "organization": "IBM",
+      "url": "https://www.ibm.com/topics/workflow-automation",
+      "type": "Industry explainer",
+      "supports": "Defines workflow automation and provides business context for improving repeatable operational processes.",
+      "tags": [
+        "workflow",
+        "automation",
+        "business",
+        "operations"
+      ],
+      "authorityScore": 76
     }
   ],
   "sourcesToCite": [
-    "https://www.seroundtable.com/google-ads-ai-max-q3-2025-39557.html",
-    "https://digiday.com/media-buying/the-rundown-google-expands-ai-max-as-automation-shifts-upstream",
-    "https://digiday.com/media-buying/cpc-pain-is-real-one-year-on-googles-ai-max-has-pushed-up-search-budgets-and-costs",
-    "https://blog.workday.com/en-gb/business-process-automation-the-complete-guide.html",
-    "https://1seo.com/blog/redefining-search-how-googles-ai-max-is-revolutionizing-search-campaigns",
-    "https://platform.openai.com/docs/"
+    "https://platform.openai.com/docs/",
+    "https://docs.github.com/en/actions",
+    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+    "https://learn.microsoft.com/en-us/azure/ai-services/",
+    "https://www.ibm.com/topics/workflow-automation"
   ],
   "sourceStatus": "Ready",
-  "sourceQualityScore": 81,
-  "sourceNotes": "5 live web sources found via Tavily. Selected 6 authoritative sources with average authority score 81.",
+  "sourceQualityScore": 80,
+  "sourceNotes": "Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
-  "duplicateScore": 3,
+  "duplicateScore": 11,
   "duplicateMatch": {
     "slug": "ai-authority-blog-engine",
     "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
     "url": "/blog/ai-authority-blog-engine",
-    "similarity": 0.03
+    "similarity": 0.11
   },
   "suggestedAngle": "",
   "suggestedTopic": "",
   "trendAnalysis": {
-    "trendScore": 50,
+    "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 65,
     "matchedTrendTerms": [
       "automation"
     ],
     "trendOverrideEligible": false,
-    "trendOverrideReason": "Real-time trend validation found 2 signal(s) from 1 source(s). Sentiment: neutral.",
+    "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
     "realtimeSignals": [
       {
         "source": "Google News",
-        "title": "The Rundown: Google expands AI Max as automation shifts upstream - Digiday"
+        "title": "Why Context Is Becoming the Critical Requirement for Supply Chain AI - Logistics Viewpoints"
       },
       {
         "source": "Google News",
-        "title": "‘CPC pain is real’: One year on, Google’s AI Max has pushed up search budgets – and costs - Digiday"
+        "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
+      },
+      {
+        "source": "Google News",
+        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
+      },
+      {
+        "source": "Google News",
+        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
+      },
+      {
+        "source": "Google News",
+        "title": "Why Enterprise AI Systems Fail: It’s Not RAG – It’s Context Control - Logistics Viewpoints"
+      },
+      {
+        "source": "Google News",
+        "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
+      },
+      {
+        "source": "Google News",
+        "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
+      },
+      {
+        "source": "Google News",
+        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
       }
     ],
     "realtimeSources": [
@@ -152,61 +188,14 @@
   ],
   "suggestedInternalLinks": [
     "/blog/ai-authority-blog-engine",
-    "/#services",
-    "/#contact"
+    "#services",
+    "#contact"
   ],
   "suggestedCTA": "Book an automation consult",
   "contentFormat": "expert guide",
   "contentPersona": "Business Automation Expert",
   "businessFunction": "General",
   "authorityAngle": "practical_workflow",
-  "title": "How to Use The Rundown: Google expands AI Max as automation shifts upstream - Digiday in a Practical Business Automation Workflow",
-  "description": "A practical guide to applying The Rundown: Google expands AI Max as automation shifts upstream - Digiday with approval steps, quality checks, and measurable business outcomes.",
-  "webResearchSources": [
-    {
-      "title": "Google Ads AI Max For Search Campaigns Coming To All In Q3 2025",
-      "organization": "seroundtable.com",
-      "url": "https://www.seroundtable.com/google-ads-ai-max-q3-2025-39557.html",
-      "type": "Web research",
-      "supports": "## The Pulse of the search community\n\n## Browse By\n\n## Light / Dark Mode Settings\n\n# Google Ads AI Max Coming To All In Q3 2025\n\n## Barry Schwartz / Executive Editor\n\nGoogle Ads Max\n\nGoogle Ads Max\n\nG",
-      "authorityScore": 62,
-      "publishedDate": ""
-    },
-    {
-      "title": "The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
-      "organization": "digiday.com",
-      "url": "https://digiday.com/media-buying/the-rundown-google-expands-ai-max-as-automation-shifts-upstream",
-      "type": "Web research",
-      "supports": "That reflects a broader shift: search is no longer a keyword-matching exercise, but a probabilistic interpretation of user intent.\n\nAnd with the latest AI Max update, Google hopes to operationalize th",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "Google's AI Max has pushed up search budgets – and costs - Digiday",
-      "organization": "digiday.com",
-      "url": "https://digiday.com/media-buying/cpc-pain-is-real-one-year-on-googles-ai-max-has-pushed-up-search-budgets-and-costs",
-      "type": "Web research",
-      "supports": "Google began adding AI creative features to its search ads with the introduction of Dynamic Search Ads (DSAs), which are due to be sunset in September. It’s accelerated the rollout of those features w",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "Business Process Automation: The Complete Guide | Workday UK",
-      "organization": "blog.workday.com",
-      "url": "https://blog.workday.com/en-gb/business-process-automation-the-complete-guide.html",
-      "type": "Web research",
-      "supports": "Scalability across enterprise systems: AI agents integrate with bots, APIs, microservices, and orchestration platforms to expand automation capabilities across the organization. [...] AI agents don’t ",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "Redefining Search: How Google’s AI Max is Revolutionizing Search Campaigns - 1SEO Digital Agency",
-      "organization": "1seo.com",
-      "url": "https://1seo.com/blog/redefining-search-how-googles-ai-max-is-revolutionizing-search-campaigns",
-      "type": "Web research",
-      "supports": "## What Is AI Max for Search Campaigns?\n\nAI Max is not a standalone campaign type like Performance Max, but rather an enhancement integrated into existing Google Search campaigns. It enriches your Goo",
-      "authorityScore": 95,
-      "publishedDate": ""
-    }
-  ]
+  "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
+  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
 }
