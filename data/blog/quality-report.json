@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,44 +85,26 @@
     }
   ],
   "authenticity": {
-    "score": 85,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 777
+      "wordCount": 578
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
-    "notes": [
-      "The content demonstrates strong expertise and authoritativeness in the AI automation space",
-      "Article follows a clear structure: problem identification, practical solution, and implementation steps",
-      "Content is highly relevant for the target audience: founders, operators, marketers and service business owners",
-      "Article includes a practical use case with implementation details, tools, and outcomes",
-      "Content includes implementation difficulty and time estimates for transparency",
-      "Addresses a key business problem (context loss in AI workflows) with specific logistics viewpoints",
-      "Uses a clear business impact section to show value",
-      "Includes troubleshooting section with specific error conditions and human-in-the-loop design",
-      "Content is focused on workflow automation and business outcomes, matching the 'practical_workflow' angle"
-    ],
-    "recommendedFixes": [
-      "Consider adding a specific example of a memory-aware AI prompt template for logistics use cases",
-      "Add a section on 'why traditional automation fails' to strengthen the problem framing",
-      "Include a workflow diagram in the supporting assets for better visualization of the memory-aware workflow",
-      "Add specific examples of memory-aware AI in logistics operations for different business functions",
-      "Include a section on 'memory-aware AI design patterns' for complex logistics operations",
-      "Add a comparison of traditional vs. memory-aware AI in logistics for better framing"
-    ]
+    "skipped": true,
+    "reason": "Bad control character in string literal in JSON at position 30781"
   }
 }
