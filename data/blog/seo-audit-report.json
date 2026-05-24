@@ -5,7 +5,7 @@
   "checks": [
     {
       "name": "metaTitleLength",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -50,7 +50,7 @@
     },
     {
       "name": "notThinContent",
-      "passed": false,
+      "passed": true,
       "points": 12
     }
   ],

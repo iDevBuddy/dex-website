@@ -42,39 +42,83 @@
         @apply py-20 lg:py-28;
     }
 
+    /* Apple-grade Obsidian Glassmorphic Panel */
     .dex-panel {
-        background: rgba(17, 17, 17, 0.92);
-        border: 1px solid rgba(224, 81, 50, 0.18);
+        background: rgba(15, 23, 42, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         box-shadow:
-            0 32px 80px rgba(0, 0, 0, 0.58),
+            0 24px 64px rgba(0, 0, 0, 0.65),
             0 0 0 1px rgba(255, 255, 255, 0.02) inset,
-            0 12px 40px rgba(224, 81, 50, 0.08);
-        backdrop-filter: blur(18px);
+            0 12px 40px rgba(37, 99, 235, 0.05); /* subtle cobalt glow */
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    /* Premium frosted glass utility */
+    .dex-glass {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        box-shadow: 
+            0 8px 32px 0 rgba(0, 0, 0, 0.37),
+            0 0 0 1px rgba(255, 255, 255, 0.01) inset;
     }
 
     .dex-field {
-        @apply w-full rounded-2xl px-4 py-3 text-sm text-white outline-none transition;
-        background: rgba(10, 10, 10, 0.88);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        @apply w-full rounded-2xl px-4 py-3 text-sm text-white outline-none transition-all duration-300;
+        background: rgba(2, 4, 10, 0.82);
+        border: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     .dex-field:focus {
-        border-color: rgba(224, 81, 50, 0.55);
-        box-shadow: 0 0 0 4px rgba(224, 81, 50, 0.12);
+        border-color: rgba(37, 99, 235, 0.5); /* cobalt focus */
+        box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
     }
 
     .dex-field-error {
-        border-color: rgba(248, 113, 113, 0.58);
+        border-color: rgba(239, 68, 68, 0.58);
     }
 
     .dex-widget-button {
         background:
-            radial-gradient(circle at top left, rgba(224, 81, 50, 0.26), transparent 44%),
-            linear-gradient(135deg, rgba(26, 26, 26, 0.96), rgba(10, 10, 10, 0.98));
+            radial-gradient(circle at top left, rgba(37, 99, 235, 0.2), transparent 44%),
+            linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(3, 7, 18, 0.98));
         border: 1px solid rgba(255, 255, 255, 0.08);
         box-shadow:
             0 16px 48px rgba(0, 0, 0, 0.42),
-            0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+            0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+    }
+
+    /* Tactile grid spot highlight system */
+    .dex-spotlight-card {
+        position: relative;
+        overflow: hidden;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .dex-spotlight-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255, 255, 255, 0.04), transparent 40%);
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .dex-spotlight-card:hover::before {
+        opacity: 1;
+    }
+
+    /* Analog Grain overlay for visual texture */
+    .dex-grain-overlay {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.015'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 2;
     }
 
     .blog-prose {
@@ -118,6 +162,7 @@
     }
 }
 
+/* Hide default Hume voice elements in favor of our custom glowing orb widget */
 button[aria-label="Start voice consultation"],
 button[aria-label="End call"] {
     display: none !important;

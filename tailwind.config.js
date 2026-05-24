@@ -5,23 +5,29 @@ export default {
         extend: {
             colors: {
                 dark: {
-                    DEFAULT: '#111111',
-                    deeper: '#0a0a0a',
-                    card: '#1a1a1a',
-                    hover: '#222222',
+                    DEFAULT: '#030712', // Midnight Deep
+                    deeper: '#02040a',  // Deep Obsidian Space
+                    card: 'rgba(255, 255, 255, 0.02)', // Liquid Glass base
+                    hover: 'rgba(255, 255, 255, 0.05)',
                 },
                 accent: {
-                    DEFAULT: '#e05132',
-                    dim: 'rgba(224, 81, 50, 0.15)',
+                    DEFAULT: '#e05132', // Glowing Flame Orange
+                    dim: 'rgba(224, 81, 50, 0.12)',
                     hover: '#c9432a',
                 },
+                cobalt: {
+                    DEFAULT: '#2563eb', // Electric Cobalt Blue
+                    dim: 'rgba(37, 99, 235, 0.12)',
+                    hover: '#1d4ed8',
+                },
                 border: {
-                    DEFAULT: '#2a2a2a',
-                    hover: '#3a3a3a',
+                    DEFAULT: 'rgba(255, 255, 255, 0.08)', // Frosted Border
+                    hover: 'rgba(255, 255, 255, 0.14)',
                 },
             },
             fontFamily: {
-                sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                sans: ['Inter', 'system-ui', 'sans-serif'],
+                display: ['Outfit', 'sans-serif'], // Premium Headings
                 mono: ['IBM Plex Mono', 'monospace'],
             },
         },

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { CalendarDays, CheckCircle2, Clock, Download, FileText, Presentation, RefreshCcw } from 'lucide-react'
+import { CalendarDays, CheckCircle, Clock, Download, FileText, Presentation, RefreshCcw } from 'lucide-react'
 import { buildBlogPostingSchema, buildFaqSchema, formatDate, getPostBySlug, getRelatedPosts } from '../../lib/blog'
 import { setSeo } from '../../lib/seo'
 import ArticleAudioPlayer from './ArticleAudioPlayer'
@@ -27,7 +27,7 @@ function KeyTakeaways({ items = [], compact = false }) {
             <div className="grid gap-3">
                 {items.map((item) => (
                     <div key={item} className="grid grid-cols-[22px_1fr] gap-3 rounded-md border border-border/70 bg-dark-deeper/70 p-4">
-                        <CheckCircle2 size={18} className="mt-0.5 text-accent" aria-hidden="true" />
+                        <CheckCircle size={18} className="mt-0.5 text-accent" aria-hidden="true" />
                         <p className="text-gray-300 leading-7">{item}</p>
                     </div>
                 ))}

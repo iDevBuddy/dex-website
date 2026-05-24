@@ -613,94 +613,99 @@ export default function VoiceChatbot() {
                         </motion.button>
                     ) : null}
                 </AnimatePresence>
-
-                {/* Main button */}
-                <div className="relative" style={{ minWidth: '210px' }}>
-                    {/* Glow layer */}
+                {/* Main floating orb button */}
+                <div className="relative" style={{ minWidth: '220px' }}>
+                    {/* Multi-layered cobalt & orange glow aura */}
                     <motion.div
-                        className="absolute inset-0 rounded-[22px] pointer-events-none"
+                        className="absolute inset-0 rounded-[24px] pointer-events-none"
                         animate={{
                             boxShadow: [
-                                '0 0 12px 2px rgba(224,81,50,0.25), 0 0 0px 0px rgba(224,81,50,0)',
-                                '0 0 28px 8px rgba(224,81,50,0.50), 0 0 48px 16px rgba(224,81,50,0.18)',
-                                '0 0 12px 2px rgba(224,81,50,0.25), 0 0 0px 0px rgba(224,81,50,0)',
+                                '0 0 16px 2px rgba(37,99,235,0.15), 0 0 0px 0px rgba(224,81,50,0)',
+                                '0 0 32px 6px rgba(37,99,235,0.35), 0 0 40px 12px rgba(224,81,50,0.12)',
+                                '0 0 16px 2px rgba(37,99,235,0.15), 0 0 0px 0px rgba(224,81,50,0)',
                             ],
                         }}
-                        transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
+                        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
                     />
-                <motion.button
-                    onClick={handleButtonClick}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.97 }}
-                    className="relative flex items-center gap-3 rounded-[22px] border border-white/[0.07] bg-[#1a1a1a] pl-4 pr-3 py-3 shadow-xl shadow-black/40 backdrop-blur-xl w-full"
-                >
-                    {/* Text */}
-                    <div className="flex-1 text-left select-none">
-                        {phase === 'idle' || phase === 'error' ? (
-                            <>
-                                <p className="text-white font-semibold text-[0.9rem] leading-tight tracking-tight">Talk with Sarah</p>
-                                <p className="text-white/50 font-medium text-[0.75rem] leading-tight mt-0.5">DEX AI Consultant</p>
-                            </>
-                        ) : phase === 'connecting' ? (
-                            <>
-                                <p className="text-white font-semibold text-[0.9rem] leading-tight tracking-tight">Connecting...</p>
-                                <p className="text-white/50 font-medium text-[0.75rem] leading-tight mt-0.5">
-                                    Connect in {countdown}s
-                                </p>
-                            </>
-                        ) : phase === 'active' ? (
-                            <>
-                                <p className="text-white font-semibold text-[0.9rem] leading-tight tracking-tight">
-                                    {isPlaying ? 'Speaking' : 'Listening'}
-                                </p>
-                                <p className="text-white/50 font-medium text-[0.75rem] leading-tight mt-0.5">Sarah · DEX AI Consultant</p>
-                            </>
-                        ) : phase === 'ending' ? (
-                            <p className="text-white font-semibold text-[0.9rem] leading-tight">Ending call...</p>
-                        ) : null}
-                    </div>
+                    <motion.button
+                        onClick={handleButtonClick}
+                        whileHover={{ scale: 1.03, y: -1 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="relative flex items-center gap-3 rounded-[24px] border border-white/10 bg-slate-950/80 pl-5 pr-4 py-3.5 shadow-2xl backdrop-blur-2xl w-full cursor-pointer focus:outline-none"
+                    >
+                        {/* Status text */}
+                        <div className="flex-1 text-left select-none">
+                            {phase === 'idle' || phase === 'error' ? (
+                                <>
+                                    <p className="text-white font-bold text-[0.88rem] leading-tight tracking-tight font-display">Talk with Sarah</p>
+                                    <p className="text-gray-500 font-medium text-[0.7rem] leading-tight mt-0.5 uppercase tracking-wider font-mono">DEX AI Partner</p>
+                                </>
+                            ) : phase === 'connecting' ? (
+                                <>
+                                    <p className="text-white font-bold text-[0.88rem] leading-tight tracking-tight font-display animate-pulse">Connecting...</p>
+                                    <p className="text-gray-500 font-medium text-[0.7rem] leading-tight mt-0.5 uppercase tracking-wider font-mono">
+                                        Wait {countdown}s
+                                    </p>
+                                </>
+                            ) : phase === 'active' ? (
+                                <>
+                                    <p className="text-white font-bold text-[0.88rem] leading-tight tracking-tight font-display">
+                                        {isPlaying ? 'Speaking' : 'Listening'}
+                                    </p>
+                                    <p className="text-accent font-medium text-[0.7rem] leading-tight mt-0.5 uppercase tracking-wider font-mono">SARAH IN CALL</p>
+                                </>
+                            ) : phase === 'ending' ? (
+                                <p className="text-white font-bold text-[0.88rem] leading-tight font-display">Wrapping up...</p>
+                            ) : null}
+                        </div>
 
-                    {/* Wave bars */}
-                    <div className="flex items-center gap-[3px] h-[22px]">
-                        {[0, 1, 2, 3].map((i) => (
-                            <motion.div
-                                key={i}
-                                className="w-[3px] rounded-full bg-[#e05132]"
-                                animate={
-                                    phase === 'active'
-                                        ? { height: isPlaying
-                                            ? ['6px', '18px', '10px', '16px', '6px']
-                                            : ['4px', '12px', '6px', '10px', '4px'] }
-                                        : phase === 'connecting'
-                                        ? { height: ['4px', '10px', '4px'] }
-                                        : { height: '4px' }
-                                }
-                                transition={{
-                                    duration: phase === 'active' ? 0.6 : 1.2,
-                                    repeat: Infinity,
-                                    delay: i * 0.12,
-                                    ease: 'easeInOut',
-                                }}
-                            />
-                        ))}
-                    </div>
-                </motion.button>
-            </div>
+                        {/* Adaptive sound wave canvas bars */}
+                        <div className="flex items-center gap-[3px] h-5">
+                            {[0, 1, 2, 3].map((i) => (
+                                <motion.div
+                                    key={i}
+                                    className="w-[3px] rounded-full"
+                                    style={{
+                                        background: phase === 'active' && isPlaying ? '#e05132' : '#2563eb',
+                                    }}
+                                    animate={
+                                        phase === 'active'
+                                            ? {
+                                                  height: isPlaying
+                                                      ? ['6px', '18px', '10px', '16px', '6px']
+                                                      : ['4px', '10px', '6px', '8px', '4px'],
+                                              }
+                                            : phase === 'connecting'
+                                            ? { height: ['4px', '10px', '4px'] }
+                                            : { height: '4px' }
+                                    }
+                                    transition={{
+                                        duration: phase === 'active' ? 0.5 : 1.2,
+                                        repeat: Infinity,
+                                        delay: i * 0.1,
+                                        ease: 'easeInOut',
+                                    }}
+                                />
+                            ))}
+                        </div>
+                    </motion.button>
+                </div>
             </motion.div>
 
-            {/* Smart in-call email panel */}
+            {/* Smart in-call lead recapturing panel */}
             <AnimatePresence>
                 {showEmailPanel && phase === 'active' ? (
                     <motion.div
-                        initial={{ opacity: 0, y: 16, scale: 0.97 }}
+                        initial={{ opacity: 0, y: 16, scale: 0.96 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.97 }}
-                        transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                        className="fixed bottom-24 right-6 z-[9999] w-[290px] rounded-2xl border border-white/10 bg-[#111] p-4 shadow-2xl"
+                        exit={{ opacity: 0, y: 10, scale: 0.96 }}
+                        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                        className="fixed bottom-24 right-6 z-[9999] w-[300px] rounded-3xl border border-white/10 bg-slate-950/95 p-5 shadow-2xl backdrop-blur-2xl"
                     >
+                        <div className="dex-grain-overlay" />
                         <button
                             onClick={() => setShowEmailPanel(false)}
-                            className="absolute right-3 top-3 text-gray-600 hover:text-gray-400"
+                            className="absolute right-3.5 top-3.5 text-gray-500 hover:text-white transition-colors cursor-pointer"
                             type="button"
                             aria-label="Close"
                         >
@@ -708,9 +713,9 @@ export default function VoiceChatbot() {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
-                        <p className="mb-1 pr-6 text-xs font-semibold text-white">Send consultation summary</p>
-                        <p className="mb-3 text-[11px] text-gray-500">
-                            You'll get a copy and our expert team will follow up shortly.
+                        <p className="mb-1 pr-6 text-xs font-bold text-white font-display">Send consultation summary</p>
+                        <p className="mb-4 text-[10px] text-gray-500 leading-normal">
+                            You'll instantly receive a customized PDF recap, and Akif's strategy team will follow up.
                         </p>
                         <div className="flex gap-2">
                             <input
@@ -719,20 +724,20 @@ export default function VoiceChatbot() {
                                 value={inCallEmail}
                                 onChange={(e) => { setInCallEmail(e.target.value); setInCallEmailError('') }}
                                 onKeyDown={(e) => { if (e.key === 'Enter') void sendEmailDuringCall() }}
-                                placeholder="your@email.com"
+                                placeholder="you@company.com"
                                 className={`flex-1 rounded-xl border bg-white/5 px-3 py-2 text-xs text-white placeholder-gray-600 outline-none focus:ring-1 focus:ring-accent/50 ${inCallEmailError ? 'border-red-500/50' : 'border-white/10'}`}
                             />
                             <button
                                 onClick={() => void sendEmailDuringCall()}
                                 disabled={inCallSending}
                                 type="button"
-                                className="rounded-xl bg-accent px-3 py-2 text-xs font-semibold text-white transition hover:opacity-90 disabled:opacity-60"
+                                className="rounded-xl bg-accent px-4 py-2 text-xs font-semibold text-white transition hover:opacity-90 disabled:opacity-60 cursor-pointer"
                             >
                                 {inCallSending ? '...' : 'Send'}
                             </button>
                         </div>
                         {inCallEmailError ? (
-                            <p className="mt-1.5 text-[11px] text-red-400">{inCallEmailError}</p>
+                            <p className="mt-2 text-[10px] text-red-400 font-mono">{inCallEmailError}</p>
                         ) : null}
                     </motion.div>
                 ) : null}
@@ -740,12 +745,9 @@ export default function VoiceChatbot() {
 
             <div
                 aria-hidden="true"
-                className="pointer-events-none fixed bottom-4 right-4 z-[9998] h-32 w-32 rounded-full bg-accent/10 blur-3xl"
+                className="pointer-events-none fixed bottom-4 right-4 z-[9998] h-32 w-32 rounded-full bg-cobalt/10 blur-3xl"
             />
 
-            <div className="sr-only">
-                {readyState} {status.value}
-            </div>
         </>
     )
 }

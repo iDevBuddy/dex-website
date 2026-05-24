@@ -1,8 +1,11 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
+import ProjectPipeline from './components/ProjectPipeline'
 import AgentTypes from './components/AgentTypes'
 import Services from './components/Services'
+import IndustryStudies from './components/IndustryStudies'
+import Testimonials from './components/Testimonials'
 import Industries from './components/Industries'
 import Demo from './components/Demo'
 import Process from './components/Process'
@@ -19,8 +22,10 @@ function HomePage() {
         <main id="main-content">
             <Hero />
             <Stats />
-            <AgentTypes />
+            <ProjectPipeline />
             <Services />
+            <IndustryStudies />
+            <Testimonials />
             <Industries />
             <Demo />
             <Process />
