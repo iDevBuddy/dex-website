@@ -1,32 +1,32 @@
 {
-  "score": 88,
-  "strictPassed": true,
-  "passed": true,
+  "score": 72,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 4,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "trendScore": 64,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 72/88, trend 64/100, sentiment positive."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
@@ -35,7 +35,7 @@
     },
     {
       "name": "hasClearIntro",
-      "passed": true,
+      "passed": false,
       "points": 8
     },
     {
@@ -80,31 +80,44 @@
     },
     {
       "name": "hasConclusion",
-      "passed": true,
+      "passed": false,
       "points": 8
     }
   ],
   "authenticity": {
-    "score": 72,
-    "passed": true,
+    "score": 48,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
-      "businessRelevance": 100,
+      "specificity": 59,
+      "businessRelevance": 44,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 669
+      "wordCount": 94
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
+    "helpfulContentRisk": "medium",
+    "notes": [
+      "The title and subtitle of the article are excessively long and repetitive, which may hurt readability and SEO. Consider shortening for clarity.",
+      "The article's focus on 'Launchpad Build AI offers MLM for industrial automation design' is very narrow and may not provide broad value to users looking for general guidance on industrial AI or MLM tools.",
+      "The content does not appear to feature the primary keyword in a natural context throughout the body, which could impact SEO and topical authority.",
+      "The article's frontmatter indicates a 'practical use case' and 'business problem' focus, but the body does not expand on these in a meaningful way to the reader.",
+      "The 'Informational' search intent is targeted, but the article does not provide sufficient depth or explanation of implementation steps for a typical user."
+    ],
+    "recommendedFixes": [
+      "Shorten and clarify the title and subtitle to improve user readability and search engine parsing.",
+      "Include a detailed implementation of how to set up workflows using Launchpad Build AI in a business context.",
+      "Add a section on 'common pitfalls' and how to avoid them when automating industrial design workflows.",
+      "Provide a real-world example or case study of a business using the workflow described.",
+      "Include clear steps and prerequisites for using the AI model, with examples."
+    ]
   }
 }
