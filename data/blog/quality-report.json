@@ -1,7 +1,7 @@
 {
-  "score": 80,
-  "strictPassed": false,
-  "passed": false,
+  "score": 88,
+  "strictPassed": true,
+  "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -20,13 +20,13 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 80/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
-  "publishMode": "rewrite_required",
+  "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
@@ -80,31 +80,49 @@
     },
     {
       "name": "hasConclusion",
-      "passed": false,
+      "passed": true,
       "points": 8
     }
   ],
   "authenticity": {
-    "score": 71,
-    "passed": false,
+    "score": 74,
+    "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 542
+      "wordCount": 544
     },
-    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
-    "blockingIssue": "Authenticity score below publishing threshold."
+    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+    "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 429 {\"status\":429,\"title\":\"Too Many Requests\"}"
+    "helpfulContentRisk": "Low",
+    "notes": [
+      "The article provides a clear, practical guide to implementing AI with memory layers in business workflows.",
+      "The content aligns well with the target audience: founders, operators, and service-business owners.",
+      "The tone is professional and the style is practical, matching the intent of the piece.",
+      "The article includes structured takeaways, a step-by-step workflow, and an implementation checklist.",
+      "It references real tools (Slack, CRM, support triage) and provides a clear use case for customer support triage and follow-up.",
+      "The content includes an expert insight section and addresses common implementation mistakes.",
+      "The article also provides a direct answer and practical explanation, making it useful for the reader.",
+      "It includes a 'what to do next' call to action, which helps with conversion.",
+      "The content does not appear to have any dangerous or thin attributes and follows a clear structure for a how-to guide.",
+      "The article is focused on practical outcomes and avoids generic AI advice, which aligns with the target need."
+    ],
+    "recommendedFixes": [
+      "Consider adding a section on measuring success or key metrics to track the impact of the AI implementation.",
+      "Include a visual representation of the workflow to increase user engagement and understanding.",
+      "Add a section for 'Key Metrics' or 'KPIs to Measure Success' to guide the readers on tracking performance.",
+      "Consider adding related internal links to other relevant content pieces to improve site navigation and user retention.",
+      "The article could benefit from a clearer connection between the problem and the solution, especially emphasizing the business impact."
+    ]
   }
 }
