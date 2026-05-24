@@ -36,7 +36,7 @@ export default function Navbar() {
             <div
                 className={`transition-all duration-500 flex items-center justify-between ${
                     scrolled
-                        ? 'max-w-5xl w-full bg-slate-900/40 backdrop-blur-xl border border-white/10 px-8 py-3 rounded-full shadow-[0_24px_50px_-12px_rgba(0,0,0,0.5)]'
+                        ? 'max-w-5xl w-full bg-black/90 backdrop-blur-xl border border-white/10 px-8 py-3 rounded-full shadow-[0_24px_64px_rgba(0,0,0,0.85)]'
                         : 'max-w-7xl w-full mx-auto'
                 }`}
             >
@@ -66,7 +66,7 @@ export default function Navbar() {
                     </button>
                     <a
                         href="/#contact"
-                        className="ml-2 px-5 py-2.5 bg-cobalt text-white text-[0.8rem] font-semibold rounded-full hover:bg-cobalt-hover transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_12px_24px_rgba(37,99,235,0.25)] focus:outline-none"
+                        className="ml-2 px-5 py-2.5 bg-accent text-white text-[0.8rem] font-semibold rounded-full hover:bg-accent-hover transition-all duration-300 hover:scale-[1.02] focus:outline-none"
                     >
                         Get Started
                     </a>
@@ -91,7 +91,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -10, scale: 0.98 }}
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        className="lg:hidden absolute top-full left-6 right-6 mt-2 bg-slate-950/96 backdrop-blur-2xl border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl"
+                        className="lg:hidden absolute top-full left-6 right-6 mt-2 bg-black/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl"
                     >
                         {links.map(l => (
                             <a

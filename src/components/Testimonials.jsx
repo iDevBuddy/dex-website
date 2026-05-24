@@ -30,9 +30,7 @@ const feedback = [
 
 export default function Testimonials() {
     return (
-        <section className="relative py-24 bg-dark overflow-hidden">
-            {/* Ambient cobalt glow */}
-            <div className="absolute top-1/2 right-1/4 w-[350px] h-[350px] bg-cobalt/5 rounded-full blur-3xl pointer-events-none" />
+        <section className="relative py-24 bg-dark border-t border-white/5 overflow-hidden">
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">

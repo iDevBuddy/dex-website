@@ -32,13 +32,6 @@ export default function CTA() {
 
     return (
         <section id="contact" className="relative py-24 bg-dark border-t border-white/5 overflow-hidden">
-            {/* Ambient cobalt gradient */}
-            <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                    background: 'radial-gradient(ellipse 60% 50% at 50% 100%, rgba(37,99,235,0.08) 0%, transparent 70%)',
-                }}
-            />
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
                 <div className="max-w-2xl mx-auto mb-12">

@@ -615,18 +615,6 @@ export default function VoiceChatbot() {
                 </AnimatePresence>
                 {/* Main floating orb button */}
                 <div className="relative" style={{ minWidth: '220px' }}>
-                    {/* Multi-layered cobalt & orange glow aura */}
-                    <motion.div
-                        className="absolute inset-0 rounded-[24px] pointer-events-none"
-                        animate={{
-                            boxShadow: [
-                                '0 0 16px 2px rgba(37,99,235,0.15), 0 0 0px 0px rgba(224,81,50,0)',
-                                '0 0 32px 6px rgba(37,99,235,0.35), 0 0 40px 12px rgba(224,81,50,0.12)',
-                                '0 0 16px 2px rgba(37,99,235,0.15), 0 0 0px 0px rgba(224,81,50,0)',
-                            ],
-                        }}
-                        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                    />
                     <motion.button
                         onClick={handleButtonClick}
                         whileHover={{ scale: 1.03, y: -1 }}
@@ -666,7 +654,7 @@ export default function VoiceChatbot() {
                                     key={i}
                                     className="w-[3px] rounded-full"
                                     style={{
-                                        background: phase === 'active' && isPlaying ? '#e05132' : '#2563eb',
+                                        background: phase === 'active' && isPlaying ? '#ffffff' : '#0052FF',
                                     }}
                                     animate={
                                         phase === 'active'

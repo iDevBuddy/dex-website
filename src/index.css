@@ -18,7 +18,7 @@
     }
 
     ::selection {
-        background: rgba(224, 81, 50, 0.3);
+        background: rgba(0, 82, 255, 0.25);
         color: #fff;
     }
 
@@ -42,38 +42,28 @@
         @apply py-20 lg:py-28;
     }
 
-    /* Apple-grade Obsidian Glassmorphic Panel */
+    /* Apple-grade Obsidian Hairline Panel */
     .dex-panel {
-        background: rgba(15, 23, 42, 0.45);
+        background: #09090B;
         border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow:
-            0 24px 64px rgba(0, 0, 0, 0.65),
-            0 0 0 1px rgba(255, 255, 255, 0.02) inset,
-            0 12px 40px rgba(37, 99, 235, 0.05); /* subtle cobalt glow */
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
     }
 
     /* Premium frosted glass utility */
     .dex-glass {
-        background: rgba(255, 255, 255, 0.02);
+        background: rgba(255, 255, 255, 0.01);
         border: 1px solid rgba(255, 255, 255, 0.06);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        box-shadow: 
-            0 8px 32px 0 rgba(0, 0, 0, 0.37),
-            0 0 0 1px rgba(255, 255, 255, 0.01) inset;
     }
 
     .dex-field {
-        @apply w-full rounded-2xl px-4 py-3 text-sm text-white outline-none transition-all duration-300;
-        background: rgba(2, 4, 10, 0.82);
+        @apply w-full rounded-xl px-4 py-3 text-sm text-white outline-none transition-all duration-300;
+        background: #02040a;
         border: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     .dex-field:focus {
-        border-color: rgba(37, 99, 235, 0.5); /* cobalt focus */
-        box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+        border-color: rgba(0, 82, 255, 0.5); /* cobalt focus */
+        box-shadow: 0 0 0 4px rgba(0, 82, 255, 0.1);
     }
 
     .dex-field-error {
@@ -81,13 +71,9 @@
     }
 
     .dex-widget-button {
-        background:
-            radial-gradient(circle at top left, rgba(37, 99, 235, 0.2), transparent 44%),
-            linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(3, 7, 18, 0.98));
+        background: #0F0F11;
         border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow:
-            0 16px 48px rgba(0, 0, 0, 0.42),
-            0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
     }
 
     /* Tactile grid spot highlight system */

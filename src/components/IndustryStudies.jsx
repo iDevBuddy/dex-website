@@ -30,13 +30,11 @@ const studies = [
 
 export default function IndustryStudies() {
     return (
-        <section id="impact" className="relative py-24 bg-[#02050f] overflow-hidden">
-            {/* Top divider light */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+        <section id="impact" className="relative py-24 bg-dark border-t border-white/5 overflow-hidden">
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <p className="font-mono text-xs font-bold tracking-[0.25em] uppercase text-cobalt mb-4">
+                    <p className="font-mono text-xs font-bold tracking-[0.25em] uppercase text-accent mb-4">
                         Authority & Data
                     </p>
                     <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-display">

@@ -63,8 +63,6 @@ export default function ProjectPipeline() {
 
     return (
         <section id="pipeline" className="relative py-24 bg-dark overflow-hidden">
-            {/* Soft cobalt spotlights */}
-            <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-cobalt/5 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
@@ -90,7 +88,7 @@ export default function ProjectPipeline() {
                                     onClick={() => setSelectedProject(p)}
                                     className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 relative overflow-hidden ${
                                         isSelected
-                                            ? 'bg-slate-900/40 border-white/10 shadow-lg'
+                                            ? 'bg-[#0F0F11]/80 border-white/10'
                                             : 'bg-white/[0.01] border-white/5 hover:border-white/10'
                                     }`}
                                 >
@@ -159,10 +157,10 @@ export default function ProjectPipeline() {
                                                 key={step}
                                                 className={`p-4 rounded-xl border flex flex-col gap-2 relative transition-all duration-300 ${
                                                     isActive
-                                                        ? 'bg-slate-900/50 border-white/20 shadow-md'
+                                                        ? 'bg-[#0F0F11]/80 border-white/15'
                                                         : isCompleted
                                                         ? 'bg-white/[0.02] border-white/5 opacity-80'
-                                                        : 'bg-white/[0.01] border-white/5 opacity-40'
+                                                        : 'bg-white/[0.01] border-white/5 opacity-30'
                                                 }`}
                                             >
                                                 {/* Connecting arrow - hidden on mobile / last element */}
