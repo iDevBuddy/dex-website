@@ -134,7 +134,7 @@
   "trendAnalysis": {
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 56,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -143,11 +143,11 @@
     "realtimeSignals": [
       {
         "source": "Google News",
-        "title": "Why Context Is Becoming the Critical Requirement for Supply Chain AI - Logistics Viewpoints"
+        "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start - Yale Insights"
       },
       {
         "source": "Google News",
-        "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start - Yale Insights"
+        "title": "Why Enterprise AI Systems Fail: It’s Not RAG – It’s Context Control - Logistics Viewpoints"
       },
       {
         "source": "Google News",
@@ -155,23 +155,23 @@
       },
       {
         "source": "Google News",
-        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
-      },
-      {
-        "source": "Google News",
-        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
-      },
-      {
-        "source": "Google News",
-        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
-      },
-      {
-        "source": "Google News",
         "title": "Seizing the agentic AI advantage - McKinsey & Company"
       },
       {
         "source": "Google News",
-        "title": "Why Enterprise AI Systems Fail: It’s Not RAG – It’s Context Control - Logistics Viewpoints"
+        "title": "The 2026 AI predictions bonanza - Frontier Enterprise"
+      },
+      {
+        "source": "Google News",
+        "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
+      },
+      {
+        "source": "Google News",
+        "title": "The Infinite AI Compute Loop: HBM Big Three + TSMC × NVIDIA × OpenAI Shaping the Next-Generation Industry Chain - semivision"
+      },
+      {
+        "source": "Google News",
+        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
       }
     ],
     "realtimeSources": [
@@ -197,5 +197,10 @@
   "businessFunction": "General",
   "authorityAngle": "practical_workflow",
   "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
-  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
+  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
+  "examples": [
+    "Slack intake workflow",
+    "CRM follow-up workflow",
+    "support triage workflow"
+  ]
 }
