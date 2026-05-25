@@ -1,32 +1,32 @@
 {
   "score": 88,
-  "strictPassed": false,
-  "passed": false,
+  "strictPassed": true,
+  "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 4,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 56,
+    "trendScore": 64,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 64/100, sentiment positive."
   },
-  "publishMode": "rewrite_required",
+  "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,38 +85,26 @@
     }
   ],
   "authenticity": {
-    "score": 66,
-    "passed": false,
+    "score": 77,
+    "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 56,
+      "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 581
+      "wordCount": 534
     },
-    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
-    "blockingIssue": "Authenticity score below publishing threshold."
+    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+    "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
-    "notes": [
-      "The content is clear, practical, and aligns well with the stated goal of creating a context-aware AI automation workflow.",
-      "The article provides a step-by-step implementation guide with clear, measurable outcomes.",
-      "The inclusion of an implementation checklist and specific KPIs makes this a low-risk, high-value piece of content.",
-      "The content is well-researched and draws from authoritative sources, aligning with search intent and providing practical value."
-    ],
-    "recommendedFixes": [
-      "Consider adding a brief explanation of how to set up each tool (Slack, Notion, OpenAI, GitHub Actions) in the workflow to improve the practical utility of the guide. This would include setup instructions and expected outcomes to help users implement the workflow.",
-      "Include a section on 'how to' implement the solution, with a focus on local environment setup and error handling.",
-      "Add a short section connecting the business impact to the implementation steps, with a focus on the most important part of the implementation: the human approval step.",
-      "Add a section on how to set up the local development environment for the automation workflow.",
-      "Add a section on how to test the workflow with KPIs and outcomes."
-    ]
+    "skipped": true,
+    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
   }
 }
