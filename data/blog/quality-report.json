@@ -85,45 +85,40 @@
     }
   ],
   "authenticity": {
-    "score": 85,
+    "score": 74,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
+      "specificity": 95,
       "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 732
+      "wordCount": 505
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides practical insights into implementing AI with memory for business automation, specifically in logistics. It includes actionable workflows, tools, and an implementation checklist.",
-      "Content demonstrates expertise through structured workflows, specific use cases (Slack intake, CRM follow-up, support triage), and expert insights.",
-      "Some sections like 'Practical Explanation' and 'Expert Insight' are repetitive and could be consolidated for better flow.",
-      "The article lacks concrete examples or screenshots of actual implementations, which would increase its practical value.",
-      "FAQ section duplicates content from the beginning of the article without adding new depth or detail.",
-      "The 'What to do next' section feels generic and could be more specific to the logistics context.",
-      "While the article mentions KPIs, it doesn't provide specific metrics or benchmarks for measuring success.",
-      "The content could benefit from more specific AI tool recommendations rather than generic references."
+      "The content is highly relevant for the target audience of service-business owners evaluating AI automation.",
+      "The article provides a clear, practical guide to implementing memory-aware AI workflows with defined tools and step-by-step guidance.",
+      "Content includes strong SEO elements including a focused keyword in the title and throughout the piece.",
+      "The article emphasizes practical use cases and business outcomes, aligning with user intent.",
+      "Implementation checklists and troubleshooting steps add to the article's utility and reduce the risk of misinterpretation or misuse of AI.",
+      "The article provides a direct, structured path for implementation, reducing ambiguity and increasing practical value."
     ],
     "recommendedFixes": [
-      "Consolidate repetitive sections ('Practical Explanation' and 'Expert Insight') into a single, more comprehensive expert analysis with specific logistics examples.",
-      "Add visual elements like workflow diagrams or screenshots to illustrate the automation processes described.",
-      "Enhance the FAQ section with more detailed, nuanced answers that go beyond basic definitions.",
-      "Include specific metrics and benchmarks for measuring success in logistics automation (e.g., percentage improvement in response time, reduction in escalations).",
-      "Provide more detailed tool recommendations with specific AI platforms suited for logistics memory-based automation.",
-      "Add a case study or example scenario with before/after metrics to demonstrate real-world impact.",
-      "Make the 'What to do next' section more specific by including actionable steps tailored to logistics operations.",
-      "Include potential pitfalls or challenges specific to logistics when implementing memory-based AI systems."
+      "Consider adding a brief explanation of how memory-aware AI differs from traditional automation for reader clarity.",
+      "Include a short case study or example scenario to illustrate the benefits of memory-aware AI in a business context.",
+      "Add a summary or infographic to improve skimmability and reinforce the workflow steps visually.",
+      "Expand on the 'why' behind memory-aware AI to help readers understand the importance of context in AI decision-making.",
+      "Clarify how memory-aware AI avoids the pitfalls of generic AI advice and aligns with practical business outcomes."
     ]
   }
 }
