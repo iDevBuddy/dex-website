@@ -9,17 +9,17 @@
     }
 
     html {
-        color-scheme: dark;
+        color-scheme: light;
         scroll-behavior: smooth;
     }
 
     body {
-        @apply bg-dark text-gray-300;
+        @apply bg-dark text-slate-800;
     }
 
     ::selection {
-        background: rgba(0, 82, 255, 0.25);
-        color: #fff;
+        background: rgba(0, 82, 255, 0.12);
+        color: #0052FF;
     }
 
     /* Skip link for keyboard users */
@@ -42,23 +42,24 @@
         @apply py-20 lg:py-28;
     }
 
-    /* Apple-grade Obsidian Hairline Panel */
+    /* Apple-grade Light Hairline Panel */
     .dex-panel {
-        background: #09090B;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+        background: #FFFFFF;
+        border: 1px solid #E5E5E7;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
     }
 
     /* Premium frosted glass utility */
     .dex-glass {
-        background: rgba(255, 255, 255, 0.01);
-        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .dex-field {
-        @apply w-full rounded-xl px-4 py-3 text-sm text-white outline-none transition-all duration-300;
-        background: #02040a;
-        border: 1px solid rgba(255, 255, 255, 0.07);
+        @apply w-full rounded-xl px-4 py-3 text-sm text-slate-800 outline-none transition-all duration-300;
+        background: #FFFFFF;
+        border: 1px solid #D1D1D6;
     }
 
     .dex-field:focus {
@@ -71,9 +72,9 @@
     }
 
     .dex-widget-button {
-        background: #0F0F11;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        background: #FFFFFF;
+        border: 1px solid #E5E5E7;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
     }
 
     /* Tactile grid spot highlight system */
@@ -87,7 +88,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255, 255, 255, 0.04), transparent 40%);
+        background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(0, 82, 255, 0.03), transparent 45%);
         z-index: 1;
         pointer-events: none;
         opacity: 0;
@@ -102,25 +103,25 @@
     .dex-grain-overlay {
         position: absolute;
         inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.015'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.008'/%3E%3C/svg%3E");
         pointer-events: none;
         z-index: 2;
     }
 
     .blog-prose {
-        @apply text-gray-300;
+        @apply text-slate-600;
     }
 
     .blog-prose h2 {
-        @apply text-3xl font-black text-white tracking-tight mt-12 mb-5 scroll-mt-28;
+        @apply text-3xl font-black text-slate-900 tracking-tight mt-12 mb-5 scroll-mt-28;
     }
 
     .blog-prose h3 {
-        @apply text-2xl font-bold text-white mt-9 mb-4 scroll-mt-28;
+        @apply text-2xl font-bold text-slate-900 mt-9 mb-4 scroll-mt-28;
     }
 
     .blog-prose p {
-        @apply text-[1.04rem] leading-8 text-gray-300 mb-6;
+        @apply text-[1.04rem] leading-8 text-slate-700 mb-6;
     }
 
     .blog-prose ul {
@@ -128,23 +129,23 @@
     }
 
     .blog-prose li {
-        @apply text-[1.02rem] leading-8 text-gray-300 list-disc;
+        @apply text-[1.02rem] leading-8 text-slate-700 list-disc;
     }
 
     .blog-prose a {
-        @apply text-accent hover:text-white underline underline-offset-4;
+        @apply text-accent hover:text-accent-hover underline underline-offset-4;
     }
 
     .blog-prose strong {
-        @apply text-white font-semibold;
+        @apply text-slate-900 font-semibold;
     }
 
     .blog-prose code {
-        @apply rounded bg-dark-card border border-border px-1.5 py-0.5 text-sm text-white;
+        @apply rounded bg-slate-50 border border-border px-1.5 py-0.5 text-sm text-slate-800;
     }
 
     .blog-prose blockquote {
-        @apply border-l-2 border-accent pl-5 text-lg leading-8 text-white bg-accent-dim p-5 rounded-r-lg mb-7;
+        @apply border-l-2 border-accent pl-5 text-lg leading-8 text-slate-800 bg-accent-dim p-5 rounded-r-lg mb-7;
     }
 }
 

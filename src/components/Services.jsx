@@ -34,7 +34,7 @@ export default function Services() {
     const [active, setActive] = useState(0)
 
     return (
-        <section id="services" className="relative py-24 bg-dark border-t border-b border-white/5 overflow-hidden">
+        <section id="services" className="relative py-24 bg-dark border-t border-b border-[#E5E5E7] overflow-hidden">
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <div className="grid lg:grid-cols-12 gap-12 items-start">
                     
@@ -43,23 +43,23 @@ export default function Services() {
                         <p className="font-mono text-[0.62rem] font-bold tracking-[0.25em] uppercase text-accent mb-4">
                             Capabilities
                         </p>
-                        <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tighter leading-[0.95] font-display mb-6">
+                        <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tighter leading-[0.95] font-display mb-6">
                             End-to-end AI Agent Services.
                         </h2>
-                        <p className="text-xs sm:text-sm text-gray-400 leading-relaxed max-w-sm">
+                        <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-sm">
                             From strategic pipeline audit to massive multi-agent enterprise deployment—comprehensive AI agent engineering built for measurable commercial impact.
                         </p>
                     </div>
 
-                    {/* Right: The Micro-thin Hairline Grid Accordin */}
-                    <div className="lg:col-span-7 flex flex-col border-t border-white/8">
+                    {/* Right: The Micro-thin Hairline Grid Accordion */}
+                    <div className="lg:col-span-7 flex flex-col border-t border-slate-200">
                         {services.map((s, i) => {
                             const isOpen = active === i
                             return (
                                 <div
                                     key={i}
                                     onClick={() => setActive(isOpen ? -1 : i)}
-                                    className={`py-6 border-b border-white/8 cursor-pointer group transition-all duration-300 relative overflow-hidden`}
+                                    className={`py-6 border-b border-slate-200 cursor-pointer group transition-all duration-300 relative overflow-hidden`}
                                     role="button"
                                     aria-expanded={isOpen}
                                 >
@@ -67,18 +67,18 @@ export default function Services() {
                                         <div className="flex items-center gap-6">
                                             {/* Large light monospace index number */}
                                             <span className={`font-mono text-xl sm:text-2xl transition-colors duration-300 font-light ${
-                                                isOpen ? 'text-[#0052FF]' : 'text-gray-700 group-hover:text-gray-500'
+                                                isOpen ? 'text-[#0052FF]' : 'text-slate-300 group-hover:text-slate-400'
                                             }`}>
                                                 {s.num}
                                             </span>
-                                            <h3 className="text-white font-bold text-sm sm:text-base font-display tracking-tight transition-transform duration-300 group-hover:translate-x-1">
+                                            <h3 className="text-slate-900 font-bold text-sm sm:text-base font-display tracking-tight transition-transform duration-300 group-hover:translate-x-1">
                                                 {s.title}
                                             </h3>
                                         </div>
                                         <span className={`w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-xl transition-all duration-300 ${
                                             isOpen
                                                 ? 'bg-[#0052FF] text-white'
-                                                : 'text-gray-500 bg-white/[0.02] border border-white/8 group-hover:border-white/15'
+                                                : 'text-slate-500 bg-slate-50 border border-slate-200 group-hover:border-slate-350 group-hover:bg-slate-100'
                                         }`}>
                                             {isOpen ? <Minus size={12} /> : <Plus size={12} />}
                                         </span>
@@ -92,7 +92,7 @@ export default function Services() {
                                                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                                                 className="overflow-hidden relative z-10"
                                             >
-                                                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed pl-12 pt-4 max-w-xl">
+                                                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed pl-12 pt-4 max-w-xl">
                                                     {s.desc}
                                                 </p>
                                             </motion.div>

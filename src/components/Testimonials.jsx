@@ -30,17 +30,17 @@ const feedback = [
 
 export default function Testimonials() {
     return (
-        <section className="relative py-24 bg-dark border-t border-white/5 overflow-hidden">
+        <section className="relative py-24 bg-dark border-t border-[#E5E5E7] overflow-hidden">
 
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <p className="font-mono text-xs font-bold tracking-[0.25em] uppercase text-accent mb-4">
                         Client Results
                     </p>
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-display">
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display">
                         Client ROI & Direct Feedback
                     </h2>
-                    <p className="text-sm text-gray-500 mt-4 leading-relaxed">
+                    <p className="text-sm text-slate-500 mt-4 leading-relaxed">
                         We measure success in tangible outcomes, not theories. Here is how our active AI deployments have impacted actual business operations.
                     </p>
                 </div>
@@ -69,26 +69,26 @@ export default function Testimonials() {
                                     >
                                         {f.roiBadge}
                                     </span>
-                                    <Quote size={18} className="text-gray-700" />
+                                    <Quote size={18} className="text-slate-300" />
                                 </div>
 
-                                <p className="text-sm text-gray-300 leading-relaxed italic mb-8">
+                                <p className="text-sm text-slate-700 leading-relaxed italic mb-8">
                                     "{f.quote}"
                                 </p>
                             </div>
 
-                            <div className="flex items-center gap-3 pt-4 border-t border-white/5">
+                            <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
                                 <div
-                                    className="w-10 h-10 rounded-full flex items-center justify-center font-display font-bold text-sm text-white"
+                                    className="w-10 h-10 rounded-full flex items-center justify-center font-display font-bold text-sm text-slate-800"
                                     style={{
-                                        background: `linear-gradient(135deg, ${f.metricColor}, #02040a)`,
+                                        background: `linear-gradient(135deg, ${f.metricColor}20, #F5F5F7)`,
                                     }}
                                 >
                                     {f.name.split(' ').map(n => n[0]).join('')}
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="text-white font-bold text-xs font-display">{f.name}</h4>
-                                    <p className="text-[0.68rem] text-gray-500 mt-0.5">{f.role} · {f.company}</p>
+                                    <h4 className="text-slate-900 font-bold text-xs font-display">{f.name}</h4>
+                                    <p className="text-[0.68rem] text-slate-500 mt-0.5">{f.role} · {f.company}</p>
                                 </div>
                             </div>
                         </motion.div>

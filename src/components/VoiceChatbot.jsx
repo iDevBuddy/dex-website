@@ -619,31 +619,31 @@ export default function VoiceChatbot() {
                         onClick={handleButtonClick}
                         whileHover={{ scale: 1.03, y: -1 }}
                         whileTap={{ scale: 0.98 }}
-                        className="relative flex items-center gap-3 rounded-[24px] border border-white/10 bg-slate-950/80 pl-5 pr-4 py-3.5 shadow-2xl backdrop-blur-2xl w-full cursor-pointer focus:outline-none"
+                        className="relative flex items-center gap-3 rounded-[24px] border border-black/5 bg-white/90 pl-5 pr-4 py-3.5 shadow-2xl backdrop-blur-2xl w-full cursor-pointer focus:outline-none"
                     >
                         {/* Status text */}
                         <div className="flex-1 text-left select-none">
                             {phase === 'idle' || phase === 'error' ? (
                                 <>
-                                    <p className="text-white font-bold text-[0.88rem] leading-tight tracking-tight font-display">Talk with Sarah</p>
-                                    <p className="text-gray-500 font-medium text-[0.7rem] leading-tight mt-0.5 uppercase tracking-wider font-mono">DEX AI Partner</p>
+                                    <p className="text-slate-900 font-bold text-[0.88rem] leading-tight tracking-tight font-display">Talk with Sarah</p>
+                                    <p className="text-slate-400 font-medium text-[0.7rem] leading-tight mt-0.5 uppercase tracking-wider font-mono">DEX AI Partner</p>
                                 </>
                             ) : phase === 'connecting' ? (
                                 <>
-                                    <p className="text-white font-bold text-[0.88rem] leading-tight tracking-tight font-display animate-pulse">Connecting...</p>
-                                    <p className="text-gray-500 font-medium text-[0.7rem] leading-tight mt-0.5 uppercase tracking-wider font-mono">
+                                    <p className="text-slate-900 font-bold text-[0.88rem] leading-tight tracking-tight font-display animate-pulse">Connecting...</p>
+                                    <p className="text-slate-400 font-medium text-[0.7rem] leading-tight mt-0.5 uppercase tracking-wider font-mono">
                                         Wait {countdown}s
                                     </p>
                                 </>
                             ) : phase === 'active' ? (
                                 <>
-                                    <p className="text-white font-bold text-[0.88rem] leading-tight tracking-tight font-display">
+                                    <p className="text-slate-900 font-bold text-[0.88rem] leading-tight tracking-tight font-display">
                                         {isPlaying ? 'Speaking' : 'Listening'}
                                     </p>
-                                    <p className="text-accent font-medium text-[0.7rem] leading-tight mt-0.5 uppercase tracking-wider font-mono">SARAH IN CALL</p>
+                                    <p className="text-accent font-medium text-[0.7rem] leading-tight mt-0.5 uppercase tracking-wider font-mono font-bold">SARAH IN CALL</p>
                                 </>
                             ) : phase === 'ending' ? (
-                                <p className="text-white font-bold text-[0.88rem] leading-tight font-display">Wrapping up...</p>
+                                <p className="text-slate-900 font-bold text-[0.88rem] leading-tight font-display">Wrapping up...</p>
                             ) : null}
                         </div>
 
@@ -654,7 +654,7 @@ export default function VoiceChatbot() {
                                     key={i}
                                     className="w-[3px] rounded-full"
                                     style={{
-                                        background: phase === 'active' && isPlaying ? '#ffffff' : '#0052FF',
+                                        background: '#0052FF',
                                     }}
                                     animate={
                                         phase === 'active'
@@ -688,12 +688,12 @@ export default function VoiceChatbot() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.96 }}
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        className="fixed bottom-24 right-6 z-[9999] w-[300px] rounded-3xl border border-white/10 bg-slate-950/95 p-5 shadow-2xl backdrop-blur-2xl"
+                        className="fixed bottom-24 right-6 z-[9999] w-[300px] rounded-3xl border border-black/5 bg-white/95 p-5 shadow-2xl backdrop-blur-2xl"
                     >
                         <div className="dex-grain-overlay" />
                         <button
                             onClick={() => setShowEmailPanel(false)}
-                            className="absolute right-3.5 top-3.5 text-gray-500 hover:text-white transition-colors cursor-pointer"
+                            className="absolute right-3.5 top-3.5 text-slate-400 hover:text-slate-700 transition-colors cursor-pointer"
                             type="button"
                             aria-label="Close"
                         >
@@ -701,8 +701,8 @@ export default function VoiceChatbot() {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
-                        <p className="mb-1 pr-6 text-xs font-bold text-white font-display">Send consultation summary</p>
-                        <p className="mb-4 text-[10px] text-gray-500 leading-normal">
+                        <p className="mb-1 pr-6 text-xs font-bold text-slate-900 font-display">Send consultation summary</p>
+                        <p className="mb-4 text-[10px] text-slate-500 leading-normal">
                             You'll instantly receive a customized PDF recap, and Akif's strategy team will follow up.
                         </p>
                         <div className="flex gap-2">
@@ -713,7 +713,7 @@ export default function VoiceChatbot() {
                                 onChange={(e) => { setInCallEmail(e.target.value); setInCallEmailError('') }}
                                 onKeyDown={(e) => { if (e.key === 'Enter') void sendEmailDuringCall() }}
                                 placeholder="you@company.com"
-                                className={`flex-1 rounded-xl border bg-white/5 px-3 py-2 text-xs text-white placeholder-gray-600 outline-none focus:ring-1 focus:ring-accent/50 ${inCallEmailError ? 'border-red-500/50' : 'border-white/10'}`}
+                                className={`flex-1 rounded-xl border bg-slate-50 px-3 py-2 text-xs text-slate-800 placeholder-slate-400 outline-none focus:ring-1 focus:ring-accent/30 ${inCallEmailError ? 'border-red-500/50' : 'border-black/10'}`}
                             />
                             <button
                                 onClick={() => void sendEmailDuringCall()}
@@ -733,7 +733,7 @@ export default function VoiceChatbot() {
 
             <div
                 aria-hidden="true"
-                className="pointer-events-none fixed bottom-4 right-4 z-[9998] h-32 w-32 rounded-full bg-cobalt/10 blur-3xl"
+                className="pointer-events-none fixed bottom-4 right-4 z-[9998] h-32 w-32 rounded-full bg-cobalt/5 blur-3xl"
             />
 
         </>

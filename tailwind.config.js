@@ -5,24 +5,24 @@ export default {
         extend: {
             colors: {
                 dark: {
-                    DEFAULT: '#000000', // Absolute Pitch Black
-                    deeper: '#080808',  // Deep Obsidian Slate
-                    card: '#0F0F11',    // Muted Titanium Gray Card
-                    hover: '#1E1E22',   // Brushed Titanium Hover
+                    DEFAULT: '#FFFFFF', // Clean White Paper background
+                    deeper: '#F5F5F7',  // Apple Premium Light-gray surface
+                    card: '#FFFFFF',    // Crisp Solid White Card sheet
+                    hover: '#E8E8ED',   // Subtle Grey Hover state
                 },
                 accent: {
-                    DEFAULT: '#0052FF', // Electric/Cobalt Blue (Apple Link/Active)
-                    dim: 'rgba(0, 82, 255, 0.08)',
-                    hover: '#0046DB',
+                    DEFAULT: '#0052FF', // Unified Corporate Cobalt Blue (Apple/Vercel standard)
+                    dim: 'rgba(0, 82, 255, 0.04)',
+                    hover: '#0040C7',
                 },
                 cobalt: {
                     DEFAULT: '#0052FF', // Unified Cobalt Blue
-                    dim: 'rgba(0, 82, 255, 0.08)',
-                    hover: '#0046DB',
+                    dim: 'rgba(0, 82, 255, 0.04)',
+                    hover: '#0040C7',
                 },
                 border: {
-                    DEFAULT: 'rgba(255, 255, 255, 0.08)', // Apple Micro-thin hairline border
-                    hover: 'rgba(255, 255, 255, 0.16)',
+                    DEFAULT: '#E5E5E7', // Fine cool-grey hairline border
+                    hover: '#D1D1D6',
                 },
             },
             fontFamily: {

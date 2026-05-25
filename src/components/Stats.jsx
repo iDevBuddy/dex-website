@@ -41,20 +41,20 @@ const stats = [
 
 export default function Stats() {
     return (
-        <section className="py-20 bg-dark border-y border-border">
+        <section className="py-20 bg-dark border-y border-[#E5E5E7]">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid md:grid-cols-3 gap-6">
                     {stats.map((stat, i) => (
                         <FadeIn key={i} delay={i * 0.1}>
-                            <div className="group relative text-center p-10 rounded-xl border border-border bg-dark-card hover:border-accent/30 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                            <div className="group relative text-center p-10 rounded-2xl border border-[#E5E5E7] bg-white hover:border-accent/30 hover:shadow-[0_12px_32px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                                 {/* Subtle top accent line */}
                                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-accent/40 rounded-full" />
                                 <div className="font-mono text-5xl font-bold text-accent mb-3">
                                     <Counter target={stat.number} suffix={stat.suffix} />
                                 </div>
-                                <p className="text-[0.92rem] text-gray-400 leading-relaxed">{stat.text}</p>
-                                <p className="font-mono text-[0.72rem] text-gray-500 mt-3">
-                                    <a href={stat.url} target="_blank" rel="noopener noreferrer" className="border-b border-border hover:text-accent hover:border-accent/40 transition-colors">
+                                <p className="text-[0.92rem] text-slate-600 leading-relaxed">{stat.text}</p>
+                                <p className="font-mono text-[0.72rem] text-slate-400 mt-3">
+                                    <a href={stat.url} target="_blank" rel="noopener noreferrer" className="border-b border-slate-200 hover:text-accent hover:border-accent/40 transition-colors">
                                         Source: {stat.source}
                                     </a>
                                 </p>

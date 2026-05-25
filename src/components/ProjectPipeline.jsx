@@ -69,10 +69,10 @@ export default function ProjectPipeline() {
                     <p className="font-mono text-xs font-bold tracking-[0.25em] uppercase text-accent mb-4">
                         Active Operations
                     </p>
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-display">
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display">
                         Live Project Workflow Pipeline
                     </h2>
-                    <p className="text-sm text-gray-500 mt-4 leading-relaxed">
+                    <p className="text-sm text-slate-500 mt-4 leading-relaxed">
                         We don't work in secret. Track our active development, active workflow phases, and strategic roadmaps for current client projects.
                     </p>
                 </div>
@@ -88,8 +88,8 @@ export default function ProjectPipeline() {
                                     onClick={() => setSelectedProject(p)}
                                     className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 relative overflow-hidden ${
                                         isSelected
-                                            ? 'bg-[#0F0F11]/80 border-white/10'
-                                            : 'bg-white/[0.01] border-white/5 hover:border-white/10'
+                                            ? 'bg-white border-[#E5E5E7] shadow-[0_4px_20px_rgba(0,0,0,0.03)]'
+                                            : 'bg-transparent border-transparent hover:border-black/5'
                                     }`}
                                 >
                                     {/* Accent strip */}
@@ -98,7 +98,7 @@ export default function ProjectPipeline() {
                                         style={{ background: p.color }}
                                     />
                                     <div className="flex justify-between items-center mb-2">
-                                        <p className="font-mono text-[0.62rem] text-gray-500 uppercase tracking-wider">
+                                        <p className="font-mono text-[0.62rem] text-slate-400 uppercase tracking-wider">
                                             {p.clientName}
                                         </p>
                                         <span
@@ -106,10 +106,10 @@ export default function ProjectPipeline() {
                                             style={{ background: p.color }}
                                         />
                                     </div>
-                                    <h3 className="text-white font-bold text-sm font-display mb-1">
+                                    <h3 className="text-slate-900 font-bold text-sm font-display mb-1">
                                         {p.id === 'clinic-scheduler' ? 'APEX Voice Scheduler' : p.id === 'sales-recruiter' ? 'Sales Multi-Agent Pipeline' : 'Valuation WhatsApp Agent'}
                                     </h3>
-                                    <p className="text-[0.72rem] text-gray-500 line-clamp-1">
+                                    <p className="text-[0.72rem] text-slate-500 line-clamp-1">
                                         {p.purpose}
                                     </p>
                                 </button>
@@ -122,7 +122,7 @@ export default function ProjectPipeline() {
                         <div className="dex-panel rounded-3xl p-6 md:p-8 relative overflow-hidden">
                             <div className="dex-grain-overlay" />
 
-                            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/5">
+                            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-100">
                                 <div>
                                     <span
                                         className="text-[0.65rem] font-mono font-bold px-3 py-1 rounded-full border"
@@ -135,16 +135,16 @@ export default function ProjectPipeline() {
                                         {selectedProject.phase}
                                     </span>
                                 </div>
-                                <span className="font-mono text-[0.62rem] text-emerald-400 flex items-center gap-1.5">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                                <span className="font-mono text-[0.62rem] text-emerald-600 flex items-center gap-1.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
                                     ACTIVE BUILD
                                 </span>
                             </div>
 
                             <div className="py-8">
-                                <h3 className="font-display text-lg font-bold text-white mb-2 flex items-center gap-2">
+                                <h3 className="font-display text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
                                     <span>Workflow Map</span>
-                                    <Activity size={14} className="text-gray-600 animate-pulse" />
+                                    <Activity size={14} className="text-slate-400 animate-pulse" />
                                 </h3>
 
                                 {/* Flow Pipeline Row */}
@@ -157,25 +157,25 @@ export default function ProjectPipeline() {
                                                 key={step}
                                                 className={`p-4 rounded-xl border flex flex-col gap-2 relative transition-all duration-300 ${
                                                     isActive
-                                                        ? 'bg-[#0F0F11]/80 border-white/15'
+                                                        ? 'bg-white border-[#0052FF]/30 shadow-[0_4px_16px_rgba(0,82,255,0.03)]'
                                                         : isCompleted
-                                                        ? 'bg-white/[0.02] border-white/5 opacity-80'
-                                                        : 'bg-white/[0.01] border-white/5 opacity-30'
+                                                        ? 'bg-slate-50/50 border-black/5 opacity-90'
+                                                        : 'bg-transparent border-black/5 opacity-30'
                                                 }`}
                                             >
                                                 {/* Connecting arrow - hidden on mobile / last element */}
                                                 {idx < 3 && (
-                                                    <div className="hidden md:flex absolute top-1/2 -right-3 -translate-y-1/2 z-10 text-gray-700">
+                                                    <div className="hidden md:flex absolute top-1/2 -right-3 -translate-y-1/2 z-10 text-slate-300">
                                                         <ChevronRight size={16} />
                                                     </div>
                                                 )}
                                                 <div className="flex items-center justify-between">
-                                                    <span className="font-mono text-[0.6rem] text-gray-500">Node 0{idx+1}</span>
+                                                    <span className="font-mono text-[0.6rem] text-slate-400">Node 0{idx+1}</span>
                                                     {isCompleted && (
-                                                        <Check size={12} className="text-emerald-500" />
+                                                        <Check size={12} className="text-emerald-600" />
                                                     )}
                                                 </div>
-                                                <p className={`text-[0.78rem] font-bold ${isCompleted ? 'text-white' : 'text-gray-600'}`}>{step}</p>
+                                                <p className={`text-[0.78rem] font-bold ${isCompleted ? 'text-slate-900' : 'text-slate-400'}`}>{step}</p>
                                             </div>
                                         )
                                     })}
@@ -183,13 +183,13 @@ export default function ProjectPipeline() {
                             </div>
 
                             {/* Done & Next breakdown */}
-                            <div className="grid md:grid-cols-2 gap-8 pt-6 border-t border-white/5">
+                            <div className="grid md:grid-cols-2 gap-8 pt-6 border-t border-slate-100">
                                 {/* Done */}
                                 <div>
-                                    <p className="font-mono text-[0.62rem] uppercase tracking-wider text-gray-500 mb-3">Completed Milestones</p>
+                                    <p className="font-mono text-[0.62rem] uppercase tracking-wider text-slate-500 mb-3">Completed Milestones</p>
                                     <ul className="flex flex-col gap-2">
                                         {selectedProject.done.map((item, idx) => (
-                                            <li key={idx} className="flex gap-2.5 text-xs text-gray-300 leading-relaxed items-start">
+                                            <li key={idx} className="flex gap-2.5 text-xs text-slate-600 leading-relaxed items-start">
                                                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
                                                 <span>{item}</span>
                                             </li>
@@ -202,7 +202,7 @@ export default function ProjectPipeline() {
                                     <p className="font-mono text-[0.62rem] uppercase tracking-wider text-accent mb-3">Immediate Next Steps</p>
                                     <ul className="flex flex-col gap-2">
                                         {selectedProject.next.map((item, idx) => (
-                                            <li key={idx} className="flex gap-2.5 text-xs text-gray-300 leading-relaxed items-start">
+                                            <li key={idx} className="flex gap-2.5 text-xs text-slate-600 leading-relaxed items-start">
                                                 <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-1.5" />
                                                 <span>{item}</span>
                                             </li>

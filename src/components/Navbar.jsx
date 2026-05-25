@@ -36,14 +36,14 @@ export default function Navbar() {
             <div
                 className={`transition-all duration-500 flex items-center justify-between ${
                     scrolled
-                        ? 'max-w-5xl w-full bg-black/90 backdrop-blur-xl border border-white/10 px-8 py-3 rounded-full shadow-[0_24px_64px_rgba(0,0,0,0.85)]'
+                        ? 'max-w-5xl w-full bg-white/80 backdrop-blur-xl border border-black/5 px-8 py-3 rounded-full shadow-[0_12px_40px_rgba(0,0,0,0.06)]'
                         : 'max-w-7xl w-full mx-auto'
                 }`}
             >
-                <a href="/" className="font-display text-lg font-bold text-white tracking-tight flex items-center gap-2">
+                <a href="/" className="font-display text-lg font-bold text-slate-900 tracking-tight flex items-center gap-2">
                     <span className="h-2.5 w-2.5 rounded-full bg-accent animate-pulse" />
                     <span>DEX</span>
-                    <span className="text-gray-500 font-normal text-xs uppercase tracking-[0.2em] ml-1.5 hidden sm:inline">by Akif Saeed</span>
+                    <span className="text-slate-500 font-normal text-xs uppercase tracking-[0.2em] ml-1.5 hidden sm:inline">by Akif Saeed</span>
                 </a>
 
                 {/* Desktop menu */}
@@ -52,7 +52,7 @@ export default function Navbar() {
                         <a
                             key={l.href}
                             href={l.href}
-                            className="relative text-[0.82rem] font-medium text-gray-400 hover:text-white transition-colors duration-300 group py-1"
+                            className="relative text-[0.82rem] font-medium text-slate-600 hover:text-slate-900 transition-colors duration-300 group py-1"
                         >
                             {l.label}
                             <span className="absolute bottom-0 left-0 w-full h-[1px] bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -60,7 +60,7 @@ export default function Navbar() {
                     ))}
                     <button
                         onClick={openChatbot}
-                        className="text-[0.82rem] font-medium text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer"
+                        className="text-[0.82rem] font-medium text-slate-600 hover:text-slate-900 transition-colors duration-300 cursor-pointer"
                     >
                         Live Demo
                     </button>
@@ -75,7 +75,7 @@ export default function Navbar() {
                 {/* Mobile toggle */}
                 <button
                     onClick={() => setMobileOpen(!mobileOpen)}
-                    className="lg:hidden text-gray-300 hover:text-white transition-colors cursor-pointer p-1 rounded-full focus:outline-none"
+                    className="lg:hidden text-slate-600 hover:text-slate-900 transition-colors cursor-pointer p-1 rounded-full focus:outline-none"
                     aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
                     aria-expanded={mobileOpen}
                 >
@@ -91,21 +91,21 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -10, scale: 0.98 }}
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        className="lg:hidden absolute top-full left-6 right-6 mt-2 bg-black/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl"
+                        className="lg:hidden absolute top-full left-6 right-6 mt-2 bg-white/95 backdrop-blur-2xl border border-black/5 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl"
                     >
                         {links.map(l => (
                             <a
                                 key={l.href}
                                 href={l.href}
                                 onClick={() => setMobileOpen(false)}
-                                className="text-sm font-medium text-gray-400 hover:text-white transition-colors py-1"
+                                className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors py-1"
                             >
                                 {l.label}
                             </a>
                         ))}
                         <button
                             onClick={() => { openChatbot(); setMobileOpen(false) }}
-                            className="text-sm font-medium text-gray-400 hover:text-white transition-colors text-left py-1 cursor-pointer"
+                            className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors text-left py-1 cursor-pointer"
                         >
                             Live Demo
                         </button>
