@@ -1,17 +1,17 @@
 {
-  "score": 80,
+  "score": 88,
   "strictPassed": false,
   "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 4,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
@@ -20,11 +20,11 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 66,
+    "marketSentimentScore": 56,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 80/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "rewrite_required",
   "results": [
@@ -80,46 +80,43 @@
     },
     {
       "name": "hasConclusion",
-      "passed": false,
+      "passed": true,
       "points": 8
     }
   ],
   "authenticity": {
-    "score": 48,
+    "score": 66,
     "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 59,
-      "businessRelevance": 44,
+      "specificity": 100,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
-      "marketSentimentScore": 66,
+      "marketSentimentScore": 56,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 107
+      "wordCount": 581
     },
     "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
     "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The title and several section headers are too verbose and contain awkward phrasing like 'Launchpad Build AI offers MLM for industrial automation design - The Robot Report' which may confuse users and search engines.",
-      "The content lacks substantial implementation details or structured guidance, making it seem shallow for an 'expert guide'.",
-      "FAQ answers are repetitive and mostly refer back to the same placeholder content instead of providing real value or explanation.",
-      "The article mentions 'Launchpad Build AI offers MLM' but does not clearly define what 'MLM' refers to, potentially causing user confusion.",
-      "The content does not provide clear value or actionable steps for the user, reducing its helpfulness."
+      "The content is clear, practical, and aligns well with the stated goal of creating a context-aware AI automation workflow.",
+      "The article provides a step-by-step implementation guide with clear, measurable outcomes.",
+      "The inclusion of an implementation checklist and specific KPIs makes this a low-risk, high-value piece of content.",
+      "The content is well-researched and draws from authoritative sources, aligning with search intent and providing practical value."
     ],
     "recommendedFixes": [
-      "Revise the title to be more concise and user-focused, e.g., 'How to Implement AI Automation in Industrial Design Using Launchpad Build' and ensure it reflects the actual value proposition.",
-      "Clarify what 'MLM' stands for (e.g., Multi-Layer Modeling, Machine Learning Models) to avoid ambiguity and improve content clarity.",
-      "Expand the Direct Answer section with clear, actionable implementation steps and explanations, not just repeated questions.",
-      "Rewrite the FAQ answers with specific, unique responses instead of repeating the same general statement about 'useful automation but not generic AI advice'.",
-      "Improve the content with a step-by-step guide or workflow example to align with the 'practical' and 'business outcome' focus stated in the frontmatter.",
-      "Ensure all headings and subheadings are descriptive and provide value-driven content for business readers.",
-      "Add a brief explanation of 'Launchpad Build AI' and its application to industrial automation to improve content depth and relevance."
+      "Consider adding a brief explanation of how to set up each tool (Slack, Notion, OpenAI, GitHub Actions) in the workflow to improve the practical utility of the guide. This would include setup instructions and expected outcomes to help users implement the workflow.",
+      "Include a section on 'how to' implement the solution, with a focus on local environment setup and error handling.",
+      "Add a short section connecting the business impact to the implementation steps, with a focus on the most important part of the implementation: the human approval step.",
+      "Add a section on how to set up the local development environment for the automation workflow.",
+      "Add a section on how to test the workflow with KPIs and outcomes."
     ]
   }
 }
