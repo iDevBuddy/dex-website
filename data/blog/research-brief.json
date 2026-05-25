@@ -1,7 +1,7 @@
 {
-  "topic": "Launchpad Build AI offers MLM for industrial automation design - The Robot Report",
-  "slug": "launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report",
-  "targetKeyword": "launchpad build ai offers mlm for industrial automation design - the robot report",
+  "topic": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+  "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+  "targetKeyword": "planning ai needs memory, not just automation - logistics viewpoints",
   "secondaryKeywords": [
     "AI automation workflow",
     "AI agents for business",
@@ -16,7 +16,7 @@
     "Few connect AI automation to business outcomes."
   ],
   "questionsToAnswer": [
-    "What is Launchpad Build AI offers MLM for industrial automation design - The Robot Report?",
+    "What is Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints?",
     "When should a business use it?",
     "What workflow should be automated first?",
     "What mistakes should be avoided?"
@@ -50,7 +50,7 @@
         "workflow",
         "prompt"
       ],
-      "authorityScore": 82
+      "authorityScore": 83
     },
     {
       "title": "GitHub Docs: GitHub Actions",
@@ -65,7 +65,21 @@
         "ci",
         "deployment"
       ],
-      "authorityScore": 82
+      "authorityScore": 83
+    },
+    {
+      "title": "The State of AI",
+      "organization": "McKinsey & Company",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "type": "Industry report",
+      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
+      "tags": [
+        "ai",
+        "business",
+        "trend",
+        "strategy"
+      ],
+      "authorityScore": 80
     },
     {
       "title": "Microsoft Learn: Azure AI Services",
@@ -80,83 +94,84 @@
         "business",
         "agents"
       ],
-      "authorityScore": 81
+      "authorityScore": 79
     },
     {
-      "title": "The State of AI",
-      "organization": "McKinsey & Company",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "type": "Industry report",
-      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
+      "title": "IBM: What Is Workflow Automation?",
+      "organization": "IBM",
+      "url": "https://www.ibm.com/topics/workflow-automation",
+      "type": "Industry explainer",
+      "supports": "Defines workflow automation and provides business context for improving repeatable operational processes.",
       "tags": [
-        "ai",
+        "workflow",
+        "automation",
         "business",
-        "trend",
-        "strategy"
+        "operations"
       ],
-      "authorityScore": 81
+      "authorityScore": 76
     }
   ],
   "sourcesToCite": [
     "https://platform.openai.com/docs/",
     "https://docs.github.com/en/actions",
+    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
     "https://learn.microsoft.com/en-us/azure/ai-services/",
-    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
+    "https://www.ibm.com/topics/workflow-automation"
   ],
   "sourceStatus": "Ready",
-  "sourceQualityScore": 82,
-  "sourceNotes": "Selected 4 authoritative sources with average authority score 82.",
+  "sourceQualityScore": 80,
+  "sourceNotes": "Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
-  "duplicateScore": 6,
+  "duplicateScore": 11,
   "duplicateMatch": {
-    "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
-    "title": "AI Customer Support Automation Playbook for Small Service Businesses",
-    "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
-    "similarity": 0.06
+    "slug": "ai-authority-blog-engine",
+    "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+    "url": "/blog/ai-authority-blog-engine",
+    "similarity": 0.11
   },
   "suggestedAngle": "",
   "suggestedTopic": "",
   "trendAnalysis": {
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 66,
+    "marketSentimentScore": 62,
     "matchedTrendTerms": [
       "automation"
     ],
     "trendOverrideEligible": false,
-    "trendOverrideReason": "Real-time trend validation found 8 signal(s) from 1 source(s). Sentiment: neutral.",
+    "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
     "realtimeSignals": [
       {
         "source": "Google News",
-        "title": "Launchpad Build AI offers MLM to speed industrial automation design - The Robot Report"
+        "title": "Why Context Is Becoming the Critical Requirement for Supply Chain AI - Logistics Viewpoints"
       },
       {
         "source": "Google News",
-        "title": "Beyond the assembly line — swarm robotics emerge - The Robot Report"
+        "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start - Yale Insights"
       },
       {
         "source": "Google News",
-        "title": "Delta Electronics demonstrates digital twin, power systems at GTC - The Robot Report"
+        "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
       },
       {
         "source": "Google News",
-        "title": "Swarm robotics could spell the end of the assembly line - The Robot Report"
+        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
       },
       {
         "source": "Google News",
-        "title": "AWS offers accelerated robotics simulation with NVIDIA - The Robot Report"
+        "title": "Seizing the agentic AI advantage - McKinsey & Company"
       },
       {
         "source": "Google News",
-        "title": "Yaskawa Compass intended as an intuitive interface for advanced manufacturing - The Robot Report"
+        "title": "Why Enterprise AI Systems Fail: It’s Not RAG – It’s Context Control - Logistics Viewpoints"
       },
       {
         "source": "Google News",
-        "title": "VT6L, IntelliFlex, LS robots reflect Epson Robots' focus on ease of use - The Robot Report"
+        "title": "The Infinite AI Compute Loop: HBM Big Three + TSMC × NVIDIA × OpenAI Shaping the Next-Generation Industry Chain - semivision"
       },
       {
         "source": "Google News",
-        "title": "FANUC marks production of 500,000th robot - The Robot Report"
+        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
       }
     ],
     "realtimeSources": [
@@ -178,9 +193,9 @@
   ],
   "suggestedCTA": "Book an automation consult",
   "contentFormat": "expert guide",
-  "contentPersona": "Hybrid",
-  "businessFunction": "Analytics",
-  "authorityAngle": "tool_tutorial",
-  "title": "How to Use Launchpad Build AI offers MLM for industrial automation design - The Robot Report in a Practical Business Automation Workflow",
-  "description": "A practical guide to applying Launchpad Build AI offers MLM for industrial automation design - The Robot Report with approval steps, quality checks, and measurable business outcomes."
+  "contentPersona": "Business Automation Expert",
+  "businessFunction": "General",
+  "authorityAngle": "practical_workflow",
+  "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
+  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
 }
