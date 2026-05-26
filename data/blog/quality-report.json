@@ -1,17 +1,17 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 4,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
@@ -19,18 +19,18 @@
     "floor": 78,
     "strictMinimum": 88,
     "trendScore": 62,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 56,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 62/100, sentiment positive."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,41 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 88,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 58,
       "sourceAlignment": 100,
-      "marketSentimentScore": 56,
+      "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 706
+      "wordCount": 751
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The article provides practical, actionable guidance on implementing AI agents with memory in business workflows, which is valuable for the target audience.",
-      "Content is well-structured with clear steps, tools, and implementation advice that aligns with the informational search intent.",
-      "Some sections could benefit from more specific technical details or examples to enhance credibility and practical applicability.",
-      "The inclusion of metrics (e.g., 'reduced missed leads by 75%') adds authority but could be strengthened with more context or benchmarks.",
-      "FAQs are relevant but could be expanded to address more nuanced questions about AI memory implementation challenges.",
-      "The article references several authoritative sources, which supports the content's credibility and SEO value."
+      "The article's title and some subheadings are very long and may hurt readability and SEO. For example, the H1 'What You'll Build' is redundant with content and could be removed or reworded.",
+      "The article's target keyword 'launchpad build ai offers mlm for industrial automation design - the robot report' is unusually long and contains a keyword concatenation that appears to be keyword-stuffed. This could raise a search quality risk.",
+      "The article's meta title and H1 both exceed 60 characters and should be shortened for better SEO and user engagement.",
+      "The article's content includes repetitive examples and next steps. These should be generalized or made more dynamic to avoid low-quality or auto-generated content patterns."
     ],
     "recommendedFixes": [
-      "Add more specific technical examples or code snippets for implementing AI memory in workflows (e.g., prompt chaining, session management).",
-      "Include a brief comparison of AI models or services that excel at context retention versus those that don't.",
-      "Expand the FAQ section to include questions like 'How do you maintain AI memory across sessions?' or 'What are the costs of implementing memory-enabled AI agents?'",
-      "Provide a simple diagram or flowchart showing how memory is maintained across the triage → CRM → escalation workflow.",
-      "Clarify how 'memory' is implemented technically (e.g., vector databases, conversation IDs, context windows) to better serve the expert persona.",
-      "Add a short section on potential pitfalls of AI memory (e.g., privacy concerns, data retention policies) to balance the optimistic tone."
+      "Shorten the title to remove the long tail keyword and focus on clear, searchable terms (e.g. 'How to Automate Industrial Design with AI' or 'AI Automation for Industrial Design Workflows').",
+      "Replace the 'What You'll Build' H1 with a concise summary of the project (e.g. 'What You'll Build' → 'Automating Industrial Design Specs with AI').",
+      "Break up the repetitive 'Key Takeaways' and 'Direct Answer' sections with more specific subheadings and unique content.",
+      "Generalize repetitive content like 'Common Mistakes' and 'Implementation Checklist' with specific examples or alternative content formats (e.g. expand with a 'How-To' or 'Best Practices' section).",
+      "Improve the 'Measuring Success' section with specific KPI examples or implementation suggestions.",
+      "Remove or reword the 'What to Do Next' section to avoid a generic or keyword-stuffed heading."
     ]
   }
 }
