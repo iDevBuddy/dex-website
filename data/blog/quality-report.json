@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,37 +85,26 @@
     }
   ],
   "authenticity": {
-    "score": 77,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 763
+      "wordCount": 840
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "medium",
-    "notes": [
-      "The article provides a good overview of building memory-enabled AI planning workflows with practical implementation steps",
-      "Content is well-structured with clear implementation steps and considerations",
-      "The tone and practical examples make this a useful resource for business automation practitioners"
-    ],
-    "recommendedFixes": [
-      "Add a section comparing memory-enabled vs traditional AI workflows to highlight the importance of memory in AI planning",
-      "Include a specific example of a logistics planning workflow with memory components highlighted",
-      "Add real-world examples of AI planning failures/successes",
-      "Include specific implementation details for error handling and monitoring",
-      "Add diagrams or visual guides showing the flow of a memory-enabled planning process"
-    ]
+    "skipped": true,
+    "reason": "nvidia-qwen failed: 502 <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n"
   }
 }
