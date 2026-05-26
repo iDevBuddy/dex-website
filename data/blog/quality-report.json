@@ -1,17 +1,17 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 4,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
@@ -19,18 +19,18 @@
     "floor": 78,
     "strictMinimum": 88,
     "trendScore": 62,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 72,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,39 +85,40 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 58,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 72,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 751
+      "wordCount": 505
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article's title and some subheadings are very long and may hurt readability and SEO. For example, the H1 'What You'll Build' is redundant with content and could be removed or reworded.",
-      "The article's target keyword 'launchpad build ai offers mlm for industrial automation design - the robot report' is unusually long and contains a keyword concatenation that appears to be keyword-stuffed. This could raise a search quality risk.",
-      "The article's meta title and H1 both exceed 60 characters and should be shortened for better SEO and user engagement.",
-      "The article's content includes repetitive examples and next steps. These should be generalized or made more dynamic to avoid low-quality or auto-generated content patterns."
+      "The article provides a practical, actionable guide to implementing memory-aware AI workflows, which is highly relevant to the target audience (founders, operators, marketers) in service businesses.",
+      "Content is well-structured with clear steps, business context, and technical integration points using tools like Notion, Slack, and CRM systems.",
+      "Addresses a real business problem: loss of context in automation, and proposes a solution that balances AI capabilities with human oversight.",
+      "The inclusion of KPIs, implementation checklists, and common mistakes helps readers understand both the 'how' and 'why' of memory-aware AI.",
+      "Use of expert insight and authoritative sources strengthens credibility and search positioning.",
+      "Minor improvements could include more visual examples (e.g., workflow diagrams), expanded use cases, or templates for readers to replicate workflows."
     ],
     "recommendedFixes": [
-      "Shorten the title to remove the long tail keyword and focus on clear, searchable terms (e.g. 'How to Automate Industrial Design with AI' or 'AI Automation for Industrial Design Workflows').",
-      "Replace the 'What You'll Build' H1 with a concise summary of the project (e.g. 'What You'll Build' → 'Automating Industrial Design Specs with AI').",
-      "Break up the repetitive 'Key Takeaways' and 'Direct Answer' sections with more specific subheadings and unique content.",
-      "Generalize repetitive content like 'Common Mistakes' and 'Implementation Checklist' with specific examples or alternative content formats (e.g. expand with a 'How-To' or 'Best Practices' section).",
-      "Improve the 'Measuring Success' section with specific KPI examples or implementation suggestions.",
-      "Remove or reword the 'What to Do Next' section to avoid a generic or keyword-stuffed heading."
+      "Add a workflow diagram as a visual asset to support the step-by-step instructions.",
+      "Include a downloadable checklist or template (e.g., Notion template or Make.com blueprint) to increase practical utility.",
+      "Consider adding a comparison table of memory-aware vs. traditional automation to highlight key differentiators.",
+      "Add internal links to related articles or tools for deeper exploration (e.g., link to AI automation ROI guides or Notion + Make.com setup tutorials).",
+      "Clarify how memory-aware AI differs from traditional automation in the intro or direct answer section to improve accessibility for newcomers to the topic."
     ]
   }
 }
