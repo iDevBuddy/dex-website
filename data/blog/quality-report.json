@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -20,17 +20,17 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,40 +85,37 @@
     }
   ],
   "authenticity": {
-    "score": 75,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 505
+      "wordCount": 763
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "medium",
     "notes": [
-      "The article provides a practical, actionable guide to implementing memory-aware AI workflows, which is highly relevant to the target audience (founders, operators, marketers) in service businesses.",
-      "Content is well-structured with clear steps, business context, and technical integration points using tools like Notion, Slack, and CRM systems.",
-      "Addresses a real business problem: loss of context in automation, and proposes a solution that balances AI capabilities with human oversight.",
-      "The inclusion of KPIs, implementation checklists, and common mistakes helps readers understand both the 'how' and 'why' of memory-aware AI.",
-      "Use of expert insight and authoritative sources strengthens credibility and search positioning.",
-      "Minor improvements could include more visual examples (e.g., workflow diagrams), expanded use cases, or templates for readers to replicate workflows."
+      "The article provides a good overview of building memory-enabled AI planning workflows with practical implementation steps",
+      "Content is well-structured with clear implementation steps and considerations",
+      "The tone and practical examples make this a useful resource for business automation practitioners"
     ],
     "recommendedFixes": [
-      "Add a workflow diagram as a visual asset to support the step-by-step instructions.",
-      "Include a downloadable checklist or template (e.g., Notion template or Make.com blueprint) to increase practical utility.",
-      "Consider adding a comparison table of memory-aware vs. traditional automation to highlight key differentiators.",
-      "Add internal links to related articles or tools for deeper exploration (e.g., link to AI automation ROI guides or Notion + Make.com setup tutorials).",
-      "Clarify how memory-aware AI differs from traditional automation in the intro or direct answer section to improve accessibility for newcomers to the topic."
+      "Add a section comparing memory-enabled vs traditional AI workflows to highlight the importance of memory in AI planning",
+      "Include a specific example of a logistics planning workflow with memory components highlighted",
+      "Add real-world examples of AI planning failures/successes",
+      "Include specific implementation details for error handling and monitoring",
+      "Add diagrams or visual guides showing the flow of a memory-enabled planning process"
     ]
   }
 }
