@@ -1,36 +1,36 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 4,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 56,
+    "trendScore": 60,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 60/100, sentiment positive."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,41 +85,38 @@
     }
   ],
   "authenticity": {
-    "score": 88,
+    "score": 85,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 72,
       "sourceAlignment": 100,
-      "marketSentimentScore": 56,
+      "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 733
+      "wordCount": 862
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": 4,
     "notes": [
-      "Content provides a practical guide to implementing memory-aware AI in logistics workflows, which aligns with user search intent",
-      "Addresses specific logistics use case and provides actionable steps",
-      "Covers approval steps, quality checks, and error handling as requested",
-      "Includes clear implementation guidance without generic AI advice",
-      "Covers business outcomes like reduced manual effort and improved decision accuracy"
+      "The article provides a clear, step-by-step implementation guide for using Launchpad Build AI's manufacturing language model in industrial automation design.",
+      "The content demonstrates practical application with specific workflows and KPIs.",
+      "The article includes implementation checklist and troubleshooting section, which adds practical value for readers.",
+      "Content shows strong optimization for 'launchpad build ai offers mlm for industrial automation design' search query.",
+      "The article provides structured guidance on tool implementation with defined workflows and success metrics."
     ],
     "recommendedFixes": [
-      "Add a section comparing traditional automation vs. memory-aware AI to highlight the value proposition",
-      "Include a real example or case study of a logistics workflow improvement",
-      "Add a visual diagram of the workflow for better understanding",
-      "Include specific error handling examples for common logistics scenarios",
-      "Add a section on data privacy and security handling for AI use in logistics",
-      "Include a cost-benefit analysis of using memory-aware AI in logistics",
-      "Add a troubleshooting flowchart for common implementation issues"
+      "Add specific examples of requirements structuring best practices",
+      "Include more detailed implementation timelines and team onboarding processes",
+      "Add information about potential integration challenges with existing project management systems",
+      "Include templates for defining human review and approval protocols"
     ]
   }
 }
