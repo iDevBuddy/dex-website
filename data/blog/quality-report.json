@@ -6,25 +6,25 @@
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 62,
+    "trendScore": 50,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 50/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 91,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,17 +94,30 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 840
+      "wordCount": 984
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 502 <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n"
+    "helpfulContentRisk": 6,
+    "notes": [
+      "The content demonstrates practical application of AI Max but lacks sufficient depth in some sections.",
+      "Some sections need more detailed implementation guidance for a comprehensive 'expert guide'.",
+      "The article references external sources but doesn't provide enough original, in-depth analysis to establish authority.",
+      "Content could benefit from more specific technical implementation details and business context."
+    ],
+    "recommendedFixes": [
+      "Add more detailed, step-by-step implementation examples with code snippets or specific configurations.",
+      "Include more comprehensive error handling and edge case scenarios for robustness.",
+      "Expand on business impact metrics with before/after data and implementation challenges.",
+      "Include more detailed technical descriptions of how to set up AI Max specifically within Google AI Studio.",
+      "Provide deeper context on when and why to use specific workflows based on business goals.",
+      "Enhance the authority angle with more specific use cases and outcomes data."
+    ]
   }
 }
