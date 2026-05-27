@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 60/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 60/100, sentiment positive."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,38 +85,37 @@
     }
   ],
   "authenticity": {
-    "score": 85,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
-      "businessRelevance": 72,
+      "specificity": 96,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
       "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 862
+      "wordCount": 675
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 4,
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a clear, step-by-step implementation guide for using Launchpad Build AI's manufacturing language model in industrial automation design.",
-      "The content demonstrates practical application with specific workflows and KPIs.",
-      "The article includes implementation checklist and troubleshooting section, which adds practical value for readers.",
-      "Content shows strong optimization for 'launchpad build ai offers mlm for industrial automation design' search query.",
-      "The article provides structured guidance on tool implementation with defined workflows and success metrics."
+      "The article provides a detailed, practical guide to implementing AI automation in industrial workflows, which aligns well with the 'expert guide' and 'tool_tutorial' angle. The content is well-structured for an expert audience and includes a real business use case.",
+      "However, the title and some parts of the content may be considered too technical or niche to rank well for the primary keyword in a search for general terms like 'AI automation in business workflows.' The content should focus more on clarity and broader search intent alignment.",
+      "The article has strong technical content but lacks keyword optimization for the primary term 'launchpad build ai offers mlm for industrial automation design', which could limit its visibility in search results for that specific term."
     ],
     "recommendedFixes": [
-      "Add specific examples of requirements structuring best practices",
-      "Include more detailed implementation timelines and team onboarding processes",
-      "Add information about potential integration challenges with existing project management systems",
-      "Include templates for defining human review and approval protocols"
+      "Optimize the title and H1/H2s for the primary keyword to improve search visibility.",
+      "Add a section on how the integration works in practice, with real examples or case studies for better content depth.",
+      "Include a summary of the process with visual examples for better clarity and user engagement.",
+      "Soften the technical language in the introduction to improve accessibility for a broader audience.",
+      "Add internal and output examples to support the detailed steps of the process."
     ]
   }
 }
