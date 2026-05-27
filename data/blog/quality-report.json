@@ -6,25 +6,25 @@
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 4,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 60,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 72,
+    "trendScore": 62,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 60/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,37 +85,33 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 88,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 96,
+      "specificity": 100,
       "businessRelevance": 93,
       "sourceAlignment": 100,
-      "marketSentimentScore": 72,
+      "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 675
+      "wordCount": 714
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
-    "notes": [
-      "The article provides a detailed, practical guide to implementing AI automation in industrial workflows, which aligns well with the 'expert guide' and 'tool_tutorial' angle. The content is well-structured for an expert audience and includes a real business use case.",
-      "However, the title and some parts of the content may be considered too technical or niche to rank well for the primary keyword in a search for general terms like 'AI automation in business workflows.' The content should focus more on clarity and broader search intent alignment.",
-      "The article has strong technical content but lacks keyword optimization for the primary term 'launchpad build ai offers mlm for industrial automation design', which could limit its visibility in search results for that specific term."
-    ],
+    "helpfulContentRisk": "MEDIUM",
+    "notes": "The article provides practical, logistics-focused guidance on implementing memory-aware AI workflows. Content demonstrates subject matter expertise with specific workflow recommendations and implementation steps. However, the content lacks technical depth in key areas. The article doesn't fully address the 'needs' aspect of memory in AI systems, missing implementation details for the 'logistics viewpoints' it claims to cover.",
     "recommendedFixes": [
-      "Optimize the title and H1/H2s for the primary keyword to improve search visibility.",
-      "Add a section on how the integration works in practice, with real examples or case studies for better content depth.",
-      "Include a summary of the process with visual examples for better clarity and user engagement.",
-      "Soften the technical language in the introduction to improve accessibility for a broader audience.",
-      "Add internal and output examples to support the detailed steps of the process."
+      "Add more technical implementation details for the memory-aware workflow components",
+      "Include specific metrics or examples of 'planning AI needs memory, not just automation' in logistics contexts",
+      "Expand on workflow validation steps and memory retention strategies",
+      "Include specific examples of context-aware system design",
+      "Add AI implementation code examples for common tools (Slack, Notion, etc.)"
     ]
   }
 }
