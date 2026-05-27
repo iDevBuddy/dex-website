@@ -1,36 +1,36 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 6,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 50,
+    "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 56,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 50/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 91,
+    "score": 88,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,30 +94,32 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 56,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 984
+      "wordCount": 733
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 6,
+    "helpfulContentRisk": "low",
     "notes": [
-      "The content demonstrates practical application of AI Max but lacks sufficient depth in some sections.",
-      "Some sections need more detailed implementation guidance for a comprehensive 'expert guide'.",
-      "The article references external sources but doesn't provide enough original, in-depth analysis to establish authority.",
-      "Content could benefit from more specific technical implementation details and business context."
+      "Content provides a practical guide to implementing memory-aware AI in logistics workflows, which aligns with user search intent",
+      "Addresses specific logistics use case and provides actionable steps",
+      "Covers approval steps, quality checks, and error handling as requested",
+      "Includes clear implementation guidance without generic AI advice",
+      "Covers business outcomes like reduced manual effort and improved decision accuracy"
     ],
     "recommendedFixes": [
-      "Add more detailed, step-by-step implementation examples with code snippets or specific configurations.",
-      "Include more comprehensive error handling and edge case scenarios for robustness.",
-      "Expand on business impact metrics with before/after data and implementation challenges.",
-      "Include more detailed technical descriptions of how to set up AI Max specifically within Google AI Studio.",
-      "Provide deeper context on when and why to use specific workflows based on business goals.",
-      "Enhance the authority angle with more specific use cases and outcomes data."
+      "Add a section comparing traditional automation vs. memory-aware AI to highlight the value proposition",
+      "Include a real example or case study of a logistics workflow improvement",
+      "Add a visual diagram of the workflow for better understanding",
+      "Include specific error handling examples for common logistics scenarios",
+      "Add a section on data privacy and security handling for AI use in logistics",
+      "Include a cost-benefit analysis of using memory-aware AI in logistics",
+      "Add a troubleshooting flowchart for common implementation issues"
     ]
   }
 }
