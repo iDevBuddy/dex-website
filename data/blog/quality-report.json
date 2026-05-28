@@ -6,25 +6,25 @@
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 4,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 58,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 72,
+    "trendScore": 68,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 58/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 72,
+    "score": 78,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 79,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 72,
+      "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 564
+      "wordCount": 670
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,17 +106,23 @@
   "review": {
     "helpfulContentRisk": "low",
     "notes": [
-      "The content is highly relevant to the target keyword and search intent, focusing on practical application of Launchpad Build AI's MLM in industrial automation design.",
-      "The article includes a clear, step-by-step workflow and implementation guidance, aligning with the 'informational' search intent and 'tool_tutorial' authority angle.",
-      "Content includes relevant internal citations and external sources to support claims, enhancing credibility and depth.",
-      "The article provides specific KPIs, implementation steps, and role assignments, making it actionable for the target audience (founder, operator, marketer, or service-business owner)."
+      "The article provides a well-structured, practical guide to implementing AI workflows with memory for logistics support triage.",
+      "Content is focused on business outcomes and includes specific implementation steps, which adds credibility.",
+      "The case study example (logistics company) effectively demonstrates real-world application and measurable results.",
+      "Article includes clear implementation checklist, troubleshooting steps, and addresses common failure scenarios.",
+      "Covers important considerations like human approval steps, error handling, and logging for compliance/audit purposes.",
+      "Addresses the targetKeyword directly in the title and throughout, with solid semantic SEO value.",
+      "Content follows logical flow from problem identification to solution implementation to business results.",
+      "Includes specific tools (Slack, OpenAI, CRM, Zapier/Make) and technical implementation details.",
+      "Provides specific metrics (response time reduction, manual hours saved, customer satisfaction increase) that support the informational intent."
     ],
     "recommendedFixes": [
-      "Add a meta description field in the frontmatter to ensure proper SEO metadata for social sharing and search indexing.",
-      "Include a content brief or visual asset descriptions (e.g., workflow diagram alt text or filename) to support the 'workflowDiagram' media recommendation.",
-      "Clarify the 'business use case' section with a client-focused example or ROI metric to better support the 'businessProblem' and 'practicalUseCase' fields.",
-      "Consider adding a 'related posts' or 'case study' link to a live implementation for a stronger backlinking and internal linking strategy.",
-      "Include a 'comparisonTable' or 'checklist' media recommendation in the asset brief to support diverse content consumption."
+      "Consider adding a brief section on 'Why This Approach Works' to better explain the value proposition of memory-enhanced AI workflows.",
+      "Add a 'Key Takeaways' summary section at the end to reinforce main points and outcomes.",
+      "Include a 'Next Steps' section that guides readers to implementation resources or expert consultation.",
+      "Consider adding a workflow diagram or visual aid to illustrate the multi-step process described.",
+      "Add a comparison table of before/after workflow to show the impact of memory-enabled automation.",
+      "Include a downloadable PDF checklist or implementation guide for readers to use as a reference."
     ]
   }
 }
