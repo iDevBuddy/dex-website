@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 79,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,30 +94,32 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 751
+      "wordCount": 745
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "medium",
     "notes": [
-      "The article provides a practical framework for implementing AI-powered workflows in business automation, with a focus on support triage using memory and human-in-the-loop processes. The content is highly relevant to the target audience of founders, operators, and service-business owners evaluating AI automation.",
-      "The article includes a clear, actionable structure with defined steps, tools, and considerations for implementation, which supports the 'practical_workflow' authority angle. It includes a tangible use case (Slack-based support triage) and specific tools (Slack, Notion, OpenAI API, Zapier/Make.com).",
-      "The content is well-structured with a direct answer, key takeaways, expert insights, and a detailed step-by-step workflow. It also includes an implementation checklist, common mistakes, and troubleshooting tips, which improves its practical value.",
-      "The article aligns with search intent by addressing a real business problem (support triage inefficiency) and offers a solution with measurable business outcomes.",
-      "The content is supported by authoritative sources related to AI and workflow automation, which increases its credibility and helps it align with industry best practices."
+      "The article provides strong, actionable content focused on a specific business use case",
+      "Content demonstrates a clear understanding of practical AI workflow implementation",
+      "The piece provides specific value by connecting technical implementation to business outcomes",
+      "Good emphasis on measurable business metrics (first response time, lead conversion) that demonstrate value",
+      "Implementation includes error handling and human-in-the-loop requirements which shows practical understanding of real-world AI deployment"
     ],
     "recommendedFixes": [
-      "Add specific examples of prompts or templates that can be used with the OpenAI API to assist users in customizing their AI implementation.",
-      "Include more detailed descriptions of error handling for each of the outlined failure cases (e.g. API timeout, low-confidence AI output) to provide better guidance for users.",
-      "Clarify how the memory component is implemented in the workflow, especially in relation to Notion or the knowledge base, to help users understand how to use past interactions for improved AI decision-making.",
-      "Add a section on how to measure the success of the KPIs mentioned, with guidance on setting up tracking and reporting for business impact.",
-      "Provide a more detailed cost-benefit analysis or business impact section to help readers understand the value of the proposed workflow in terms of time and cost savings."
+      "Emphasize the specific business value of automation by including KPIs that show impact on actual business metrics",
+      "Include the customer inquiry triage use case as a practical example of 'Planning AI needs memory' implementation",
+      "Add specific numbers and timeline improvements to the key takeaways section",
+      "Add implementation details for error handling and build a stronger internal case for the value of the memory approach",
+      "Include a 'what you'll build' section to clarify the deliverables",
+      "Add a 'what you'll build' section that describes the specific deliverable",
+      "Include an implementation checklist for failure modes, human review, and error handling"
     ]
   }
 }
