@@ -1,32 +1,32 @@
 {
   "score": 88,
-  "strictPassed": true,
-  "passed": true,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 4,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "trendScore": 60,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 60/100, sentiment positive."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,44 +85,42 @@
     }
   ],
   "authenticity": {
-    "score": 78,
-    "passed": true,
+    "score": 70,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 72,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 670
+      "wordCount": 560
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a well-structured, practical guide to implementing AI workflows with memory for logistics support triage.",
-      "Content is focused on business outcomes and includes specific implementation steps, which adds credibility.",
-      "The case study example (logistics company) effectively demonstrates real-world application and measurable results.",
-      "Article includes clear implementation checklist, troubleshooting steps, and addresses common failure scenarios.",
-      "Covers important considerations like human approval steps, error handling, and logging for compliance/audit purposes.",
-      "Addresses the targetKeyword directly in the title and throughout, with solid semantic SEO value.",
-      "Content follows logical flow from problem identification to solution implementation to business results.",
-      "Includes specific tools (Slack, OpenAI, CRM, Zapier/Make) and technical implementation details.",
-      "Provides specific metrics (response time reduction, manual hours saved, customer satisfaction increase) that support the informational intent."
+      "The article provides a structured guide on using Launchpad Build AI's MLM for industrial automation design, which aligns well with the target keyword and search intent.",
+      "Content includes practical steps, implementation checklists, and business outcomes, which supports the 'expert guide' style and 'tool_tutorial' angle.",
+      "Some sections like 'Key Takeaways' and 'What is Launchpad Build AI?' are informative but could benefit from more specific data or examples to enhance credibility.",
+      "The inclusion of sources like McKinsey & Company adds authority, but the link in 'Expert Insight' appears to have a typo (quantainnblack instead of quantumblack).",
+      "The article mentions a 40% faster design cycle and 30% fewer rework hours but lacks detailed case studies or specific examples to substantiate these claims.",
+      "SEO elements like meta description and target keyword usage are present, but the SEO audit score is only 64, indicating room for improvement in optimization.",
+      "The content could be enhanced with more visual assets like workflow diagrams or comparison tables as suggested in the media recommendations."
     ],
     "recommendedFixes": [
-      "Consider adding a brief section on 'Why This Approach Works' to better explain the value proposition of memory-enhanced AI workflows.",
-      "Add a 'Key Takeaways' summary section at the end to reinforce main points and outcomes.",
-      "Include a 'Next Steps' section that guides readers to implementation resources or expert consultation.",
-      "Consider adding a workflow diagram or visual aid to illustrate the multi-step process described.",
-      "Add a comparison table of before/after workflow to show the impact of memory-enabled automation.",
-      "Include a downloadable PDF checklist or implementation guide for readers to use as a reference."
+      "Correct the typo in the McKinsey & Company link in the 'Expert Insight' section to ensure the source is properly cited.",
+      "Add specific case studies or examples to support the claimed business outcomes (40% faster design cycles, 30% fewer rework hours).",
+      "Include more detailed implementation examples or screenshots of the Launchpad Build AI interface to provide practical guidance.",
+      "Optimize the content further for SEO by improving keyword density and ensuring all headings are properly structured with target keywords.",
+      "Develop and incorporate the suggested visual assets (workflow diagrams, comparison tables) to enhance user engagement and understanding.",
+      "Expand on the 'Common Mistakes to Avoid' section with more detailed explanations or real-world scenarios to increase practical value."
     ]
   }
 }
