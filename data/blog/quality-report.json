@@ -1,36 +1,36 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 6,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 50,
+    "trendScore": 62,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 50/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 62/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 75,
+    "score": 79,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,33 +94,30 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 602
+      "wordCount": 751
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The article provides practical, actionable guidance for implementing Google AI Max in a business context, which aligns well with user search intent.",
-      "Content includes specific workflows, tools, KPIs, and troubleshooting advice that add significant value.",
-      "Some sections could benefit from more detailed technical implementation steps to further reduce ambiguity.",
-      "The article references 'Google AI Max' as if it's a real product, but there is no public evidence that Google has released an 'AI Max' API or service as described. This could mislead readers and poses a factual accuracy risk.",
-      "Uses a case study format effectively to demonstrate real-world application and business impact.",
-      "Includes SEO-friendly elements like clear headings, structured data (frontmatter), and relevant keywords.",
-      "Could improve by linking directly to official Google AI documentation instead of using placeholder or non-existent product names."
+      "The article provides a practical framework for implementing AI-powered workflows in business automation, with a focus on support triage using memory and human-in-the-loop processes. The content is highly relevant to the target audience of founders, operators, and service-business owners evaluating AI automation.",
+      "The article includes a clear, actionable structure with defined steps, tools, and considerations for implementation, which supports the 'practical_workflow' authority angle. It includes a tangible use case (Slack-based support triage) and specific tools (Slack, Notion, OpenAI API, Zapier/Make.com).",
+      "The content is well-structured with a direct answer, key takeaways, expert insights, and a detailed step-by-step workflow. It also includes an implementation checklist, common mistakes, and troubleshooting tips, which improves its practical value.",
+      "The article aligns with search intent by addressing a real business problem (support triage inefficiency) and offers a solution with measurable business outcomes.",
+      "The content is supported by authoritative sources related to AI and workflow automation, which increases its credibility and helps it align with industry best practices."
     ],
     "recommendedFixes": [
-      "Verify and correct any references to 'Google AI Max' with accurate, existing Google AI services (e.g., Google AI Platform, Dialogflow, Vertex AI) or clearly state this is a hypothetical or fictional product.",
-      "Add more granular technical steps for connecting tools like Zapier/Make.com to the AI classification process.",
-      "Include code snippets or API call examples where relevant to improve implementability.",
-      "Replace or supplement current sources with actual Google AI documentation to increase credibility and relevance.",
-      "Clarify the distinction between real and illustrative content to avoid misleading readers about Google's current AI offerings.",
-      "Consider adding a brief section on cost implications or resource requirements for implementing the workflow at scale."
+      "Add specific examples of prompts or templates that can be used with the OpenAI API to assist users in customizing their AI implementation.",
+      "Include more detailed descriptions of error handling for each of the outlined failure cases (e.g. API timeout, low-confidence AI output) to provide better guidance for users.",
+      "Clarify how the memory component is implemented in the workflow, especially in relation to Notion or the knowledge base, to help users understand how to use past interactions for improved AI decision-making.",
+      "Add a section on how to measure the success of the KPIs mentioned, with guidance on setting up tracking and reporting for business impact.",
+      "Provide a more detailed cost-benefit analysis or business impact section to help readers understand the value of the proposed workflow in terms of time and cost savings."
     ]
   }
 }
