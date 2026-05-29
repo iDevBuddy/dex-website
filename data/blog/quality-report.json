@@ -6,25 +6,25 @@
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 4,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 58,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 66,
+    "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 58/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 86,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 66,
+      "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 704
+      "wordCount": 641
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,21 +106,18 @@
   "review": {
     "helpfulContentRisk": "low",
     "notes": [
-      "The article provides a comprehensive guide to implementing Launchpad Build AI's MLM in industrial automation design.",
-      "The content is well-structured and provides actionable steps for implementation.",
-      "The article includes a practical workflow example, which enhances its credibility and usefulness.",
-      "Includes a business use case which adds practical context.",
-      "Covers key aspects like error handling, human review processes, and integration steps clearly.",
-      "Well-researched with authoritative sources and clear implementation guidelines.",
-      "The article effectively uses key takeaways and checklists to guide readers through the implementation process."
+      "The article provides a practical, step-by-step guide to implementing memory-aware AI workflows in service businesses.",
+      "Content is well-structured and includes clear implementation steps, tools, and KPIs for measuring success.",
+      "The article emphasizes real business outcomes like lead conversion, response time, and customer satisfaction improvements.",
+      "It provides a complete automation stack using Notion, Make.com, Zapier, and OpenAI for building contextual workflows.",
+      "The article includes a checklist for implementation, common mistakes, and troubleshooting steps which is very practical for readers."
     ],
     "recommendedFixes": [
-      "Consider adding a summary of the implementation steps at the beginning for better clarity on the process.",
-      "Include a section that explains how to customize workflows based on business-specific needs.",
-      "Add more visual examples or diagrams to enhance understanding of the implementation process.",
-      "Expand on real-world outcomes and business impact to provide a more detailed view of the results.",
-      "Consider including code snippets or API examples for the tools mentioned for better implementation understanding.",
-      "Add a troubleshooting section with common issues and their resolutions for practical guidance."
+      "Add a section comparing memory-aware vs. traditional automation to highlight the unique value proposition.",
+      "Include a visual workflow diagram in the article assets to improve reader comprehension of the setup.",
+      "Add a downloadable checklist or Notion template to help readers implement the system directly.",
+      "Clarify the distinction between memory-aware AI and stateless automation in the introduction for better keyword alignment.",
+      "Consider adding a short case study or example scenario to further ground the framework in real business impact."
     ]
   }
 }
