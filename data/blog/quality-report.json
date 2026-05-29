@@ -1,41 +1,41 @@
 {
-  "score": 100,
-  "strictPassed": true,
-  "passed": true,
+  "score": 80,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 4,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 58,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 66,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 80/88, trend 58/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
       "name": "hasClearIntro",
-      "passed": true,
+      "passed": false,
       "points": 8
     },
     {
@@ -85,42 +85,41 @@
     }
   ],
   "authenticity": {
-    "score": 85,
-    "passed": true,
+    "score": 49,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
-      "businessRelevance": 100,
+      "specificity": 60,
+      "businessRelevance": 44,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 66,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 767
+      "wordCount": 181
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "MEDIUM",
     "notes": [
-      "The article provides a detailed, practical workflow implementation for AI automation in logistics with a clear business use case (Slack-based support triage).",
-      "Content demonstrates strong subject-matter expertise and includes specific implementation steps, tools, and KPIs.",
-      "The content includes failure handling, troubleshooting tips, and a clear implementation checklist, making it highly actionable.",
-      "The article aligns technical steps with business outcomes, reducing ambiguity for readers.",
-      "Content avoids generic AI hype and focuses on real business problems (e.g., missed tickets, delayed responses) and solutions.",
-      "The article includes clear, step-by-step instructions, making it suitable for practitioners to replicate the workflow.",
-      "Tone and structure match the target audience (founders, operators, service business owners) and search intent (informational)."
+      "Content is repetitive and lacks depth in key areas",
+      "Missing specific examples or use cases",
+      "Lacks clear structure or actionable steps for readers",
+      "Does not provide sufficient technical or practical detail for implementation",
+      "Some content appears to be duplicated or restated without elaboration"
     ],
     "recommendedFixes": [
-      "Add a sentence or two to the introduction explaining the value of 'memory' in AI planning for non-AI specialists.",
-      "Clarify how 'memory' is implemented technically (e.g., session state, vector DB, or CRM context).",
-      "Include a brief explanation of how to handle rate limits or API errors with the OpenAI API in production.",
-      "Add a short section comparing Slack + AI workflows to traditional automation (e.g., Zapier-only approaches) for context.",
-      "Consider adding a short visual diagram of the workflow for better content structure and scannability.",
-      "Clarify how 'memory' is preserved across API calls (e.g., function calling, context window, or database logging)."
+      "Expand on specific implementation steps with examples",
+      "Include diagrams or visual aids to support workflow explanation",
+      "Add technical details or code samples for practical use",
+      "Clarify the business value and impact with metrics or outcomes",
+      "Improve content structure and section organization",
+      "Add related content on integration with other tools or platforms",
+      "Provide before/after scenarios or case studies for context"
     ]
   }
 }
