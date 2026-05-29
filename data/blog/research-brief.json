@@ -1,7 +1,7 @@
 {
-  "topic": "The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
-  "slug": "the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday",
-  "targetKeyword": "the rundown: google expands ai max as automation shifts upstream - digiday",
+  "topic": "Launchpad Build AI offers MLM for industrial automation design - The Robot Report",
+  "slug": "launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report",
+  "targetKeyword": "launchpad build ai offers mlm for industrial automation design - the robot report",
   "secondaryKeywords": [
     "AI automation workflow",
     "AI agents for business",
@@ -16,7 +16,7 @@
     "Few connect AI automation to business outcomes."
   ],
   "questionsToAnswer": [
-    "What is The Rundown: Google expands AI Max as automation shifts upstream - Digiday?",
+    "What is Launchpad Build AI offers MLM for industrial automation design - The Robot Report?",
     "When should a business use it?",
     "What workflow should be automated first?",
     "What mistakes should be avoided?"
@@ -50,7 +50,7 @@
         "workflow",
         "prompt"
       ],
-      "authorityScore": 83
+      "authorityScore": 82
     },
     {
       "title": "GitHub Docs: GitHub Actions",
@@ -65,33 +65,20 @@
         "ci",
         "deployment"
       ],
-      "authorityScore": 83
+      "authorityScore": 82
     },
     {
-      "title": "Google Search Central: Creating Helpful Content",
-      "organization": "Google Search Central",
-      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "title": "Microsoft Learn: Azure AI Services",
+      "organization": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
       "type": "Official documentation",
-      "supports": "Use only for articles specifically discussing SEO, search quality, helpful content, or Google policy.",
+      "supports": "Supports claims about practical AI service patterns, responsible deployment, and AI workflow building blocks.",
       "tags": [
-        "seo",
-        "google",
-        "content",
-        "search"
-      ],
-      "authorityScore": 81
-    },
-    {
-      "title": "Google Search Central: SEO Starter Guide",
-      "organization": "Google Search Central",
-      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
-      "type": "Official documentation",
-      "supports": "Use only for SEO-specific articles that explain crawlability, metadata, search snippets, or indexing basics.",
-      "tags": [
-        "seo",
-        "google",
-        "content",
-        "search"
+        "ai",
+        "automation",
+        "workflow",
+        "business",
+        "agents"
       ],
       "authorityScore": 81
     },
@@ -107,62 +94,61 @@
         "trend",
         "strategy"
       ],
-      "authorityScore": 80
-    },
-    {
-      "title": "Microsoft Learn: Azure AI Services",
-      "organization": "Microsoft",
-      "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
-      "type": "Official documentation",
-      "supports": "Supports claims about practical AI service patterns, responsible deployment, and AI workflow building blocks.",
-      "tags": [
-        "ai",
-        "automation",
-        "workflow",
-        "business",
-        "agents"
-      ],
-      "authorityScore": 79
+      "authorityScore": 81
     }
   ],
   "sourcesToCite": [
     "https://platform.openai.com/docs/",
     "https://docs.github.com/en/actions",
-    "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
-    "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
-    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-    "https://learn.microsoft.com/en-us/azure/ai-services/"
+    "https://learn.microsoft.com/en-us/azure/ai-services/",
+    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
   ],
   "sourceStatus": "Ready",
-  "sourceQualityScore": 81,
-  "sourceNotes": "Selected 6 authoritative sources with average authority score 81.",
+  "sourceQualityScore": 82,
+  "sourceNotes": "Selected 4 authoritative sources with average authority score 82.",
   "duplicateStatus": "unique",
-  "duplicateScore": 3,
+  "duplicateScore": 6,
   "duplicateMatch": {
-    "slug": "ai-authority-blog-engine",
-    "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-    "url": "/blog/ai-authority-blog-engine",
-    "similarity": 0.03
+    "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+    "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+    "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+    "similarity": 0.06
   },
   "suggestedAngle": "",
   "suggestedTopic": "",
   "trendAnalysis": {
-    "trendScore": 50,
+    "trendScore": 58,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 66,
     "matchedTrendTerms": [
       "automation"
     ],
     "trendOverrideEligible": false,
-    "trendOverrideReason": "Real-time trend validation found 2 signal(s) from 1 source(s). Sentiment: neutral.",
+    "trendOverrideReason": "Real-time trend validation found 6 signal(s) from 1 source(s). Sentiment: neutral.",
     "realtimeSignals": [
       {
         "source": "Google News",
-        "title": "The Rundown: Google expands AI Max as automation shifts upstream - Digiday"
+        "title": "Launchpad Build AI offers MLM to speed industrial automation design - The Robot Report"
       },
       {
         "source": "Google News",
-        "title": "‘CPC pain is real’: One year on, Google’s AI Max has pushed up search budgets – and costs - Digiday"
+        "title": "Beyond the assembly line — swarm robotics emerge - The Robot Report"
+      },
+      {
+        "source": "Google News",
+        "title": "Delta Electronics demonstrates digital twin, power systems at GTC - The Robot Report"
+      },
+      {
+        "source": "Google News",
+        "title": "Swarm robotics could spell the end of the assembly line - The Robot Report"
+      },
+      {
+        "source": "Google News",
+        "title": "VT6L, IntelliFlex, LS robots reflect Epson Robots' focus on ease of use - The Robot Report"
+      },
+      {
+        "source": "Google News",
+        "title": "FANUC marks production of 500,000th robot - The Robot Report"
       }
     ],
     "realtimeSources": [
@@ -184,9 +170,9 @@
   ],
   "suggestedCTA": "Book an automation consult",
   "contentFormat": "expert guide",
-  "contentPersona": "Business Automation Expert",
-  "businessFunction": "General",
-  "authorityAngle": "practical_workflow",
-  "title": "How to Use The Rundown: Google expands AI Max as automation shifts upstream - Digiday in a Practical Business Automation Workflow",
-  "description": "A practical guide to applying The Rundown: Google expands AI Max as automation shifts upstream - Digiday with approval steps, quality checks, and measurable business outcomes."
+  "contentPersona": "Hybrid",
+  "businessFunction": "Analytics",
+  "authorityAngle": "tool_tutorial",
+  "title": "How to Use Launchpad Build AI offers MLM for industrial automation design - The Robot Report in a Practical Business Automation Workflow",
+  "description": "A practical guide to applying Launchpad Build AI offers MLM for industrial automation design - The Robot Report with approval steps, quality checks, and measurable business outcomes."
 }

@@ -1,7 +1,7 @@
 {
-  "score": 80,
-  "strictPassed": false,
-  "passed": false,
+  "score": 88,
+  "strictPassed": true,
+  "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -24,9 +24,9 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 80/88, trend 58/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 58/100, sentiment neutral."
   },
-  "publishMode": "rewrite_required",
+  "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
@@ -35,7 +35,7 @@
     },
     {
       "name": "hasClearIntro",
-      "passed": false,
+      "passed": true,
       "points": 8
     },
     {
@@ -85,41 +85,42 @@
     }
   ],
   "authenticity": {
-    "score": 49,
-    "passed": false,
+    "score": 86,
+    "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 60,
-      "businessRelevance": 44,
+      "specificity": 100,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
       "marketSentimentScore": 66,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 181
+      "wordCount": 704
     },
-    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
-    "blockingIssue": "Authenticity score below publishing threshold."
+    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+    "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "MEDIUM",
+    "helpfulContentRisk": "low",
     "notes": [
-      "Content is repetitive and lacks depth in key areas",
-      "Missing specific examples or use cases",
-      "Lacks clear structure or actionable steps for readers",
-      "Does not provide sufficient technical or practical detail for implementation",
-      "Some content appears to be duplicated or restated without elaboration"
+      "The article provides a comprehensive guide to implementing Launchpad Build AI's MLM in industrial automation design.",
+      "The content is well-structured and provides actionable steps for implementation.",
+      "The article includes a practical workflow example, which enhances its credibility and usefulness.",
+      "Includes a business use case which adds practical context.",
+      "Covers key aspects like error handling, human review processes, and integration steps clearly.",
+      "Well-researched with authoritative sources and clear implementation guidelines.",
+      "The article effectively uses key takeaways and checklists to guide readers through the implementation process."
     ],
     "recommendedFixes": [
-      "Expand on specific implementation steps with examples",
-      "Include diagrams or visual aids to support workflow explanation",
-      "Add technical details or code samples for practical use",
-      "Clarify the business value and impact with metrics or outcomes",
-      "Improve content structure and section organization",
-      "Add related content on integration with other tools or platforms",
-      "Provide before/after scenarios or case studies for context"
+      "Consider adding a summary of the implementation steps at the beginning for better clarity on the process.",
+      "Include a section that explains how to customize workflows based on business-specific needs.",
+      "Add more visual examples or diagrams to enhance understanding of the implementation process.",
+      "Expand on real-world outcomes and business impact to provide a more detailed view of the results.",
+      "Consider including code snippets or API examples for the tools mentioned for better implementation understanding.",
+      "Add a troubleshooting section with common issues and their resolutions for practical guidance."
     ]
   }
 }
