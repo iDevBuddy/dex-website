@@ -1,7 +1,7 @@
 {
   "score": 88,
-  "strictPassed": true,
-  "passed": true,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -20,13 +20,13 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
     "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,41 +85,47 @@
     }
   ],
   "authenticity": {
-    "score": 77,
-    "passed": true,
+    "score": 55,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
+      "specificity": 95,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 606
+      "wordCount": 598
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a clear, practical guide to implementing memory-aware AI in logistics workflows.",
-      "Content is well-structured with step-by-step implementation details and specific tools.",
-      "Includes measurable outcomes and business impact metrics which adds credibility.",
-      "Addresses a clear business problem (context loss in customer support) with a practical solution.",
-      "Content demonstrates expertise with technical implementation details and specific metrics.",
-      "Good use of structured data (FAQs, KPIs, implementation checklist) to improve user experience and SEO.",
-      "Content is optimized for the target keyword and includes internal and external links for authority."
+      "The article provides a clear, practical guide to implementing AI automation with memory for logistics and support workflows.",
+      "Content is well-structured with key takeaways, step-by-step instructions, and implementation checklists.",
+      "The article effectively addresses the target keyword and includes relevant tools and platforms.",
+      "Some sections are repetitive (e.g., 'Key Takeaways', 'Direct Answer', 'Expert Insight' and 'Conclusion' contain similar content).",
+      "The article lacks detailed technical implementation guidance, which could be valuable for the target audience.",
+      "While the business case is mentioned, more specific examples or case studies would strengthen the content.",
+      "The content could benefit from more detailed explanations of how memory/context is implemented in AI systems.",
+      "SEO elements are present but could be strengthened with more diverse keyword usage and better content flow."
     ],
     "recommendedFixes": [
-      "Consider adding a comparison table of memory-aware vs traditional AI to highlight benefits.",
-      "Add a workflow diagram as recommended in media recommendations for better content engagement.",
-      "Include a checklist download link for the implementation steps mentioned.",
-      "Add social carousel or visual content to increase engagement and content completion.",
-      "Consider adding a case study or customer testimonial for social proof and trust."
+      "Consolidate repetitive sections to improve content flow and reduce redundancy.",
+      "Add more detailed technical implementation steps, especially for AI integration with memory.",
+      "Include specific examples or case studies to illustrate successful implementations.",
+      "Expand on how memory/context is technically implemented in AI systems for better practical value.",
+      "Diversify keyword usage throughout the content to improve SEO while maintaining natural language.",
+      "Add subheadings to break up longer sections and improve readability.",
+      "Include more specific metrics or benchmarks for success beyond the mentioned 40% and 35% improvements.",
+      "Add a section on potential challenges or limitations of implementing AI with memory in logistics workflows.",
+      "Consider adding visual elements like workflow diagrams or screenshots to enhance understanding.",
+      "Include more information about different AI platforms and their specific capabilities for memory-based automation."
     ]
   }
 }
