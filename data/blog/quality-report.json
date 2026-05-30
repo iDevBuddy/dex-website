@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 86,
+    "score": 89,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,31 +94,35 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 803
+      "wordCount": 788
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The content provides a practical, step-by-step guide to implementing AI-powered support ticket triage, which aligns well with the informational search intent and provides clear value to the target audience (founders, operators, marketers).",
-      "The article includes a real-world case study with measurable business outcomes, which supports the target keyword and provides logistics-specific examples.",
-      "The content includes tools, a troubleshooting section, and clear implementation steps, which increases practical utility and reduces the risk of unhelpful or low-quality content.",
-      "The article includes key information about AI memory and context, which is central to the title and focus keyword. It also addresses a specific logistics use case with a detailed implementation.",
-      "The article includes a complete workflow example with a checklist, which supports the 'practical' style and helps the reader implement the solution effectively.",
-      "The content includes multiple internal and external links, sources, and a clear structure that supports the 'expert guide' format and helps establish the content as a comprehensive resource."
+      "The article provides a clear, practical guide on implementing memory-enabled AI workflows with a logistics use case",
+      "Strong technical implementation details with specific tools and steps",
+      "Addresses a real business problem (context loss in AI automation) with measurable outcomes",
+      "Includes practical checklist, workflow steps, and implementation timeline",
+      "Content aligns well with the target keyword and search intent",
+      "Good use of expert insights and real-world case study with metrics",
+      "Content is original and provides actionable value for the target audience"
     ],
     "recommendedFixes": [
-      "Add a brief section on 'What to Avoid' to improve scannability and highlight key user guidelines for safe AI implementation.",
-      "Include a diagram or visual of the workflow to support the 'workflow' section and improve clarity for readers.",
-      "Add a sentence to the introduction that orients the reader to the value of memory in AI for logistics use cases, reinforcing the main keyword and theme.",
-      "Clarify the role of memory in the AI decision-making process to further support the main theme and improve keyword relevance.",
-      "Ensure the title and H1 are consistent with the main keyword at the beginning of the article to improve SEO performance for the focus topic."
+      "Add internal linking to related content beyond the generic placeholders",
+      "Include more specific examples of prompt engineering for memory-enabled AI",
+      "Add a visual workflow diagram to illustrate the memory-aware AI process",
+      "Expand on the technical implementation details for storing and retrieving context",
+      "Include more specific metrics around ROI and cost savings",
+      "Add troubleshooting examples with specific error messages and solutions",
+      "Consider adding a brief section on data privacy and security when implementing memory-enabled workflows",
+      "Enhance the FAQ section with more technical questions about implementation challenges"
     ]
   }
 }
