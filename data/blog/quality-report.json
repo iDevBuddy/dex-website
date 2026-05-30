@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 81,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,32 +98,27 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 778
+      "wordCount": 639
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": 85,
     "notes": [
-      "The article provides a clear, practical framework for implementing AI automation with proper safeguards",
-      "Content is well-structured with actionable steps, specific tools, and measurable outcomes",
-      "Addresses a genuine business need: structured, auditable AI workflows with human oversight",
-      "Includes specific examples (Slack intake, CRM follow-up, support triage) that service businesses can relate to",
-      "Provides implementation checklist and troubleshooting guidance",
-      "Content aligns well with target audience (founders, operators, marketers) and their needs",
-      "Uses authoritative sources and maintains professional tone throughout",
-      "Addresses common mistakes and provides clear success metrics"
+      "The article provides a clear, step-by-step guide with practical examples.",
+      "Content is well-structured around a real-world logistics use case that demonstrates AI workflow implementation.",
+      "The article effectively uses expert insights and includes a strong focus on practical business applications.",
+      "Covers implementation details like tools, steps, and common mistakes.",
+      "Addresses key concerns like memory retention, approval steps, and failure handling which are crucial for readers."
     ],
     "recommendedFixes": [
-      "Add more specific implementation details for each tool (Slack, CRM, Notion, Zapier, Make) with concrete examples",
-      "Include a visual workflow diagram to illustrate the logging and approval process",
-      "Add a case study or before/after example showing actual business impact",
-      "Provide more specific guidance on setting up the approval thresholds (e.g., confidence scores)",
-      "Include more detailed troubleshooting examples with specific error messages",
-      "Add implementation timeline breakdown (e.g., 2-4 hours split across setup, testing, deployment)",
-      "Provide specific examples of what logs should contain and how to review them",
-      "Include a section on scaling the workflow to other business processes"
+      "Consider adding a brief summary of the technical setup for less technical readers.",
+      "Include a visual diagram of the workflow to improve understanding.",
+      "Add a section on how to measure the ROI or business impact with specific metrics.",
+      "Clarify how memory is implemented technically in the workflow for better understanding.",
+      "Include a short case study or testimonial for social proof and relatability.",
+      "Add a glossary or brief explanation of technical terms for beginner-friendly understanding."
     ]
   }
 }
