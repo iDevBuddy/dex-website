@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 89,
+    "score": 84,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,31 +98,13 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 788
+      "wordCount": 735
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
-    "notes": [
-      "The article provides a clear, practical guide on implementing memory-enabled AI workflows with a logistics use case",
-      "Strong technical implementation details with specific tools and steps",
-      "Addresses a real business problem (context loss in AI automation) with measurable outcomes",
-      "Includes practical checklist, workflow steps, and implementation timeline",
-      "Content aligns well with the target keyword and search intent",
-      "Good use of expert insights and real-world case study with metrics",
-      "Content is original and provides actionable value for the target audience"
-    ],
-    "recommendedFixes": [
-      "Add internal linking to related content beyond the generic placeholders",
-      "Include more specific examples of prompt engineering for memory-enabled AI",
-      "Add a visual workflow diagram to illustrate the memory-aware AI process",
-      "Expand on the technical implementation details for storing and retrieving context",
-      "Include more specific metrics around ROI and cost savings",
-      "Add troubleshooting examples with specific error messages and solutions",
-      "Consider adding a brief section on data privacy and security when implementing memory-enabled workflows",
-      "Enhance the FAQ section with more technical questions about implementation challenges"
-    ]
+    "skipped": true,
+    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
   }
 }
