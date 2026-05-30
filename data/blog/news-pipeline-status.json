@@ -1,7 +1,332 @@
 {
-  "ok": false,
-  "failSoft": true,
-  "message": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}",
-  "nextAction": "Draft artifacts were preserved when available. Improve SEO/content or approve manually after review.",
-  "generatedAt": "2026-05-30T13:19:57.760Z"
+  "ok": true,
+  "result": {
+    "pendingApproval": true,
+    "output": "/home/runner/work/dex-website/dex-website/content/blog/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.md",
+    "approvalPacket": {
+      "output": "/home/runner/work/dex-website/dex-website/content/blog/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.md",
+      "article": {
+        "frontmatter": {
+          "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
+          "subtitle": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
+          "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+          "metaTitle": "Plan AI Needs Memory: A Practical Logistics Guide",
+          "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
+          "metaDescription": "Learn how to build structured, auditable AI automation workflows with approval steps, logging, and failure handling for measurable business outcomes.",
+          "category": "AI Automation",
+          "tags": [
+            "AI automation workflow",
+            "AI agents for business",
+            "workflow automation examples"
+          ],
+          "targetKeyword": "planning ai needs memory, not just automation - logistics viewpoints",
+          "tone": "practical",
+          "style": "informational",
+          "contentPersona": "Business Automation Expert",
+          "businessFunction": "General",
+          "authorityAngle": "practical_workflow",
+          "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation",
+          "searchIntent": "Informational",
+          "practicalUseCase": "Slack intake workflow, CRM follow-up workflow, support triage workflow",
+          "businessProblem": "They want useful automation but do not want generic AI advice or risky SEO shortcuts.",
+          "automationOpportunity": "Practical AI automation workflow with approval steps, quality checks, and measurable business outcomes.",
+          "whatYouWillBuild": "A practical business automation workflow that includes logging, approval steps, and failure handling.",
+          "toolsNeeded": [
+            "Slack",
+            "CRM",
+            "Notion",
+            "Zapier",
+            "Make"
+          ],
+          "caseProblem": "Businesses want to automate workflows but often miss key steps like approval, logging, and failure handling.",
+          "caseResult": "A structured, auditable workflow that includes logging, approval steps, and failure handling.",
+          "businessImpact": "Reduces manual effort, improves response time, and increases customer satisfaction through AI-assisted automation.",
+          "implementationDifficulty": "Medium",
+          "estimatedTimeToImplement": "2-4 hours",
+          "contentType": "expert guide",
+          "officialSource": "",
+          "officialUrl": "",
+          "officialImageRequired": false,
+          "toolSpecific": false,
+          "newsPublishedAt": "",
+          "image": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+          "imageAlt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+          "audioPath": "",
+          "author": "Business Automation Expert",
+          "publishedAt": "2026-05-30",
+          "updatedAt": "2026-05-30",
+          "readingTime": "",
+          "directAnswer": "Yes, 'Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints' is a framework for building structured, auditable workflows that include logging, approval steps, and failure handling.",
+          "faqs": [
+            {
+              "question": "What is Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints?",
+              "answer": "It's a framework for building structured, auditable workflows that include logging, approval steps, and failure handling."
+            },
+            {
+              "question": "When should a business use it?",
+              "answer": "When you want to build a structured, auditable workflow that includes logging, approval steps, and failure handling."
+            },
+            {
+              "question": "What workflow should be automated first?",
+              "answer": "Start with a simple workflow like a Slack intake or CRM follow-up workflow."
+            },
+            {
+              "question": "What mistakes should be avoided?",
+              "answer": "Avoid skipping approval steps, logging, and failure handling."
+            }
+          ],
+          "sources": [
+            {
+              "title": "OpenAI Platform Documentation",
+              "organization": "OpenAI",
+              "url": "https://platform.openai.com/docs/",
+              "type": "Official documentation",
+              "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+              "authorityScore": 83
+            },
+            {
+              "title": "GitHub Docs: GitHub Actions",
+              "organization": "GitHub",
+              "url": "https://docs.github.com/en/actions",
+              "type": "Official documentation",
+              "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
+              "authorityScore": 83
+            },
+            {
+              "title": "The State of AI",
+              "organization": "McKinsey & Company",
+              "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+              "type": "Industry report",
+              "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
+              "authorityScore": 80
+            },
+            {
+              "title": "Microsoft Learn: Azure AI Services",
+              "organization": "Microsoft",
+              "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
+              "type": "Official documentation",
+              "supports": "Supports claims about practical AI service patterns, responsible deployment, and AI workflow building blocks.",
+              "authorityScore": 79
+            },
+            {
+              "title": "IBM: What Is Workflow Automation?",
+              "organization": "IBM",
+              "url": "https://www.ibm.com/topics/workflow-automation",
+              "type": "Industry explainer",
+              "supports": "Defines workflow automation and provides business context for improving repeatable operational processes.",
+              "authorityScore": 76
+            }
+          ],
+          "sourcesStatus": "Ready",
+          "sourceQualityScore": 80,
+          "sourceNotes": "Selected 5 authoritative sources with average authority score 80.",
+          "duplicateStatus": "unique",
+          "duplicateScore": 11,
+          "duplicateMatch": {
+            "slug": "ai-authority-blog-engine",
+            "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+            "url": "/blog/ai-authority-blog-engine",
+            "similarity": 0.11
+          },
+          "suggestedAngle": "",
+          "trendScore": 68,
+          "marketSentiment": "neutral",
+          "publishReady": true,
+          "blockingIssues": "",
+          "related": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
+          "internalLinks": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
+          "keyTakeaways": [
+            "Start with one measurable business workflow before scaling AI automation.",
+            "Use human approval for customer-facing or high-risk actions.",
+            "Judge success by response time, quality, and revenue impact, not content volume."
+          ],
+          "expertInsight": "The strongest AI automation systems combine narrow workflow design, clear ownership, model-assisted drafting, and human review before irreversible actions.",
+          "assetLinks": {},
+          "schemaType": "BlogPosting",
+          "mediaRecommendations": {
+            "featuredImage": true,
+            "infographic": true,
+            "slides": false,
+            "checklist": true,
+            "comparisonTable": false,
+            "workflowDiagram": true,
+            "downloadablePdf": false,
+            "notebookLmResearch": false,
+            "socialCarousel": false
+          },
+          "seoAuditScore": 100,
+          "seoAuditPassed": true,
+          "seoAuditTool": "local_seo_audit_bridge",
+          "assetBrief": "Create supporting assets for: How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\nPersona: Business Automation Expert\nBusiness function: General\nAngle: practical_workflow\nKeep assets business-focused, clear, original, and safe for Google/AdSense.",
+          "audio": "/blog/audio/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.wav",
+          "audioProvider": "nvidia_tts",
+          "audioVoice": "Magpie-Multilingual.EN-US.Aria"
+        },
+        "body": "## Key Takeaways\n\n- **Structured Workflows**: Build a structured, auditable workflow that includes logging, approval steps, and failure handling.\n- **Practical Examples**: Use real service-business scenarios like Slack intake, CRM follow-up, and support triage.\n- **Measurable Outcomes**: Reduce manual effort, improve response time, and increase customer satisfaction through AI-assisted automation.\n\n## Direct Answer\n\nYes, Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints is a framework for building structured, auditable workflows that include logging, approval steps, and failure handling.\n\n## Expert Insight\n\n\"Planning AI needs memory, not just automation\" is a concept that emphasizes the importance of structured, auditable workflows in AI-assisted business processes. It's not just about automating tasks but doing so with memory, logging, and approval steps to ensure accountability and quality.\n\n## Practical Explanation\n\nIn a service business, this means building workflows that include:\n\n- **Logging**: Every action is recorded for audit purposes.\n- **Approval Steps**: Key decisions are reviewed and approved by humans.\n- **Failure Handling**: Errors are caught and corrected before they become issues.\n\n## Business Use Case: Support Triage Workflow\n\nLet's say you're a customer support team. You receive hundreds of tickets daily. A simple AI agent can triage these tickets, but without memory, it's a black box. With memory, you can track:\n\n- Which tickets were handled by AI\n- Which required human approval\n- How long each step took\n\nThis creates a structured, auditable workflow that includes logging, approval steps, and failure handling.\n\n## Step-by-Step Workflow\n\n1. **Slack Intake Workflow**\n   - AI reads incoming messages\n   - Flags urgent tickets for human review\n   - Logs every interaction\n\n2. **CRM Follow-up Workflow**\n   - AI sends follow-up messages\n   - Tracks response time\n   - Logs customer satisfaction\n\n3. **Support Triage Workflow**\n   - AI triages tickets\n   - Logs every action\n   - Flags for human approval\n\n## Tools\n\n- Slack: for intake workflow\n- CRM: for follow-up workflow\n- Notion: for logging\n- Zapier: for workflow automation\n- Make: for workflow automation\n\n## Expert Insight\n\n\"Planning AI needs memory, not just automation\" means building workflows that include memory, logging, and approval steps. This ensures accountability and quality in AI-assisted business processes.\n\n## Common Mistakes\n\n- Skipping approval steps\n- Not logging actions\n- Not handling failures\n\n## Implementation Checklist\n\n- [ ] Define the workflow steps\n- [ ] Assign owner roles\n- [ ] Set up logging\n- [ ] Include approval steps\n- [ ] Plan for failure handling\n\n## Measuring Success / KPIs\n\n- **First Response Time**: How long it takes to respond to a ticket\n- **Resolution Time**: How long it takes to resolve a ticket\n- **Booked Calls**: How many calls were booked\n- **Missed Leads**: How many leads were missed\n- **Revenue Impact**: How much revenue was generated\n- **Customer Satisfaction**: How satisfied are customers\n- **Manual Hours Saved**: How many hours were saved\n\n## Troubleshooting / Failure Handling\n\n- **API Timeout**: If the AI agent doesn't respond within a set time, flag for human review\n- **Low-Confidence AI Output**: If the AI agent is unsure, flag for human approval\n- **Duplicate Tickets**: If a ticket is a duplicate, flag for human review\n- **Human Approval Handling**: If a human needs to approve, flag for human approval\n\n## What to do next\n\n1. Start with a simple workflow like a Slack intake workflow, CRM follow-up workflow, or support triage workflow.\n2. Include logging, approval steps, and failure handling.\n3. Measure the success of the workflow with KPIs like first response time, resolution time, booked calls, missed leads, revenue impact, customer satisfaction, and manual hours saved.\n4. Plan for failure handling with API timeout, low-confidence AI output, duplicate tickets, and human approval handling.\n\n## Frequently Asked Questions\n\n### What is Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints?\nIt's a framework for building structured, auditable workflows that include logging, approval steps, and failure handling.\n\n### When should a business use it?\nWhen you want to build a structured, auditable workflow that includes logging, approval steps, and failure handling.\n\n### What workflow should be automated first?\nStart with a simple workflow like a Slack intake workflow, CRM follow-up workflow, or support triage workflow.\n\n### What mistakes should be avoided?\nAvoid skipping approval steps, logging, and failure handling.\n\n## Conclusion\n\nPlanning AI needs memory, not just automation. This means building workflows that include memory, logging, and approval steps. This ensures accountability and quality in AI-assisted business processes.",
+        "imagePrompt": "A workflow diagram showing AI triage, human approval, and logging steps in a service business context.",
+        "audioScript": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow. A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
+      },
+      "quality": {
+        "score": 100,
+        "strictPassed": true,
+        "passed": true,
+        "minQualityScore": 88,
+        "sourceGate": {
+          "required": true,
+          "passed": true,
+          "sourceCount": 5,
+          "minSources": 2,
+          "sourceQualityScore": 80,
+          "minSourceQualityScore": 75,
+          "status": "Ready",
+          "notes": "Source quality score 80."
+        },
+        "trendOverride": {
+          "enabled": true,
+          "applied": false,
+          "floor": 78,
+          "strictMinimum": 88,
+          "trendScore": 68,
+          "marketSentiment": "neutral",
+          "marketSentimentScore": 68,
+          "serviceTopic": false,
+          "businessTrendEligible": false,
+          "autoNewsAllowed": false,
+          "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+        },
+        "publishMode": "standard_review",
+        "results": [
+          {
+            "name": "minimumWordCount",
+            "passed": true,
+            "points": 12
+          },
+          {
+            "name": "hasClearIntro",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasExamples",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasFaq",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasSources",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasImagePrompt",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasInternalLinks",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasSchemaData",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "noKeywordStuffing",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasBusinessValue",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasConclusion",
+            "passed": true,
+            "points": 8
+          }
+        ],
+        "authenticity": {
+          "score": 81,
+          "passed": true,
+          "minimum": 72,
+          "provider": "heuristic_nlp",
+          "modelResult": null,
+          "signals": {
+            "specificity": 100,
+            "businessRelevance": 100,
+            "sourceAlignment": 100,
+            "marketSentimentScore": 68,
+            "duplicateStatus": "unknown",
+            "duplicateScore": 0,
+            "fillerHits": 0,
+            "wordCount": 778
+          },
+          "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+          "blockingIssue": ""
+        },
+        "review": {
+          "helpfulContentRisk": "Low",
+          "notes": [
+            "The article provides a clear, practical framework for implementing AI automation with proper safeguards",
+            "Content is well-structured with actionable steps, specific tools, and measurable outcomes",
+            "Addresses a genuine business need: structured, auditable AI workflows with human oversight",
+            "Includes specific examples (Slack intake, CRM follow-up, support triage) that service businesses can relate to",
+            "Provides implementation checklist and troubleshooting guidance",
+            "Content aligns well with target audience (founders, operators, marketers) and their needs",
+            "Uses authoritative sources and maintains professional tone throughout",
+            "Addresses common mistakes and provides clear success metrics"
+          ],
+          "recommendedFixes": [
+            "Add more specific implementation details for each tool (Slack, CRM, Notion, Zapier, Make) with concrete examples",
+            "Include a visual workflow diagram to illustrate the logging and approval process",
+            "Add a case study or before/after example showing actual business impact",
+            "Provide more specific guidance on setting up the approval thresholds (e.g., confidence scores)",
+            "Include more detailed troubleshooting examples with specific error messages",
+            "Add implementation timeline breakdown (e.g., 2-4 hours split across setup, testing, deployment)",
+            "Provide specific examples of what logs should contain and how to review them",
+            "Include a section on scaling the workflow to other business processes"
+          ]
+        }
+      },
+      "imageResult": {
+        "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+        "output": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "url": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "alt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+        "provider": "fallback_png_after_provider_error",
+        "prompt": "A workflow diagram showing AI triage, human approval, and logging steps in a service business context.",
+        "dryRun": false,
+        "manualApproval": true,
+        "autoPublish": false,
+        "force": false,
+        "failed": true,
+        "path": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "error": "Stable Diffusion API failed: 404 404 page not found\n",
+        "preservedExisting": true
+      },
+      "approvalRequired": true,
+      "blockingIssues": [
+        "Real image provider is required before publishing."
+      ],
+      "dryRun": false,
+      "manualApproval": true,
+      "autoPublish": false,
+      "force": false
+    }
+  }
 }
