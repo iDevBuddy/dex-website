@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 86,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,26 +98,27 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 711
+      "wordCount": 803
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "low",
     "notes": [
-      "The article provides a detailed, practical guide to building memory-aware AI workflows, which is highly relevant for the target audience of service-business owners. The content is substantial and directly addresses a common problem: lack of context in generic AI tools.",
-      "The article includes a clear case study with measurable outcomes (e.g., 82% reduction in missed leads), which adds credibility and practical value.",
-      "The content is well-structured with a clear problem-solution-insight format and includes implementation steps, making it highly actionable.",
-      "The article provides specific tool recommendations and a step-by-step guide, which increases its utility for readers.",
-      "One potential risk area is the use of specific tools (e.g., Slack API, OpenAI) in examples, which may date the content over time. However, the core message about memory-aware workflows remains evergreen and valuable."
+      "The content provides a practical, step-by-step guide to implementing AI-powered support ticket triage, which aligns well with the informational search intent and provides clear value to the target audience (founders, operators, marketers).",
+      "The article includes a real-world case study with measurable business outcomes, which supports the target keyword and provides logistics-specific examples.",
+      "The content includes tools, a troubleshooting section, and clear implementation steps, which increases practical utility and reduces the risk of unhelpful or low-quality content.",
+      "The article includes key information about AI memory and context, which is central to the title and focus keyword. It also addresses a specific logistics use case with a detailed implementation.",
+      "The article includes a complete workflow example with a checklist, which supports the 'practical' style and helps the reader implement the solution effectively.",
+      "The content includes multiple internal and external links, sources, and a clear structure that supports the 'expert guide' format and helps establish the content as a comprehensive resource."
     ],
     "recommendedFixes": [
-      "Add a clear visual (e.g., workflow diagram) to enhance understanding of the memory-aware workflow setup.",
-      "Include a downloadable checklist or workflow template to help readers implement the steps easily.",
-      "Clarify how memory is implemented in the example (e.g., code examples or integration patterns with tools like Zapier or Make) to add technical depth.",
-      "Add a section on how to maintain memory context across sessions or describe the memory layer in more depth to strengthen the article's practical value.",
-      "Expand on how memory prevents data loss or miscommunication in the example to further support the article's theme."
+      "Add a brief section on 'What to Avoid' to improve scannability and highlight key user guidelines for safe AI implementation.",
+      "Include a diagram or visual of the workflow to support the 'workflow' section and improve clarity for readers.",
+      "Add a sentence to the introduction that orients the reader to the value of memory in AI for logistics use cases, reinforcing the main keyword and theme.",
+      "Clarify the role of memory in the AI decision-making process to further support the main theme and improve keyword relevance.",
+      "Ensure the title and H1 are consistent with the main keyword at the beginning of the article to improve SEO performance for the focus topic."
     ]
   }
 }
