@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 72,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 79,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 588
+      "wordCount": 711
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,19 +106,18 @@
   "review": {
     "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a practical, step-by-step guide to building memory-aware AI workflows, which aligns with the informational search intent and the target use case of a Slack-based support triage system.",
-      "The content includes clear implementation steps, required tools, and a real-world case study that demonstrates measurable business impact.",
-      "The article emphasizes the importance of memory in AI workflows, which is a relevant and valuable concept in the context of AI automation.",
-      "The content includes an implementation checklist and troubleshooting section, which enhances its practical utility.",
-      "The article references a real-world example (logistics support triage) with specific metrics (60% reduction in response time, 40% reduction in redundant tickets), adding credibility and context.",
-      "The content does not appear to have any significant risks related to harmful or misleading information, as it is focused on a technical and practical use case with clear disclaimers and references to human-in-the-loop processes."
+      "The article provides a detailed, practical guide to building memory-aware AI workflows, which is highly relevant for the target audience of service-business owners. The content is substantial and directly addresses a common problem: lack of context in generic AI tools.",
+      "The article includes a clear case study with measurable outcomes (e.g., 82% reduction in missed leads), which adds credibility and practical value.",
+      "The content is well-structured with a clear problem-solution-insight format and includes implementation steps, making it highly actionable.",
+      "The article provides specific tool recommendations and a step-by-step guide, which increases its utility for readers.",
+      "One potential risk area is the use of specific tools (e.g., Slack API, OpenAI) in examples, which may date the content over time. However, the core message about memory-aware workflows remains evergreen and valuable."
     ],
     "recommendedFixes": [
-      "Ensure all AI-generated content is clearly labeled and disclaimed, particularly if used for professional or commercial purposes.",
-      "Include a statement about the importance of human review in AI-assisted processes to maintain accuracy and compliance with Google's guidelines.",
-      "Consider adding a section on data privacy and security best practices when using AI systems, especially regarding customer data.",
-      "Provide more specific examples or templates for prompts that can be used across different stages of the workflow.",
-      "Clarify the distinction between automated and human-reviewed actions to ensure readers understand where AI supports vs. replaces human decisions."
+      "Add a clear visual (e.g., workflow diagram) to enhance understanding of the memory-aware workflow setup.",
+      "Include a downloadable checklist or workflow template to help readers implement the steps easily.",
+      "Clarify how memory is implemented in the example (e.g., code examples or integration patterns with tools like Zapier or Make) to add technical depth.",
+      "Add a section on how to maintain memory context across sessions or describe the memory layer in more depth to strengthen the article's practical value.",
+      "Expand on how memory prevents data loss or miscommunication in the example to further support the article's theme."
     ]
   }
 }
