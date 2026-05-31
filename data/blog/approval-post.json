@@ -1,72 +1,69 @@
 {
-  "output": "/home/runner/work/dex-website/dex-website/content/blog/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.md",
+  "output": "/home/runner/work/dex-website/dex-website/content/blog/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.md",
   "article": {
     "frontmatter": {
-      "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
-      "subtitle": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
-      "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
-      "metaTitle": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
-      "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
-      "metaDescription": "Learn how to implement memory-enabled AI workflows in logistics with real use cases, approval steps, and measurable business outcomes. Build a Slack-based intake workflow with AI triage and human approval.",
+      "title": "How to Use Launchpad Build AI for Industrial Automation Design",
+      "subtitle": "A practical guide to implementing AI-driven industrial automation workflows with measurable business outcomes",
+      "slug": "launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report",
+      "metaTitle": "Launchpad Build AI for Industrial Automation Design - The Robot Report",
+      "description": "Learn how to implement Launchpad Build AI in a practical business automation workflow with approval steps, quality checks, and measurable outcomes.",
+      "metaDescription": "Learn how to use Launchpad Build AI to automate industrial automation design with AI validation, reducing errors and speeding up deployment.",
       "category": "AI Automation",
       "tags": [
         "AI automation workflow",
-        "AI agents for business",
-        "workflow automation examples"
+        "industrial automation",
+        "workflow automation examples",
+        "AI agents for business"
       ],
-      "targetKeyword": "planning ai needs memory, not just automation - logistics viewpoints",
+      "targetKeyword": "launchpad build ai offers mlm for industrial automation design - the robot report",
       "tone": "practical",
-      "style": "expert guide",
-      "contentPersona": "Business Automation Expert",
-      "businessFunction": "General",
-      "authorityAngle": "practical_workflow",
-      "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation.",
+      "style": "informative",
+      "contentPersona": "Hybrid",
+      "businessFunction": "Analytics",
+      "authorityAngle": "tool_tutorial",
+      "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation",
       "searchIntent": "Informational",
-      "practicalUseCase": "Slack intake workflow with AI triage and human approval steps.",
-      "businessProblem": "Generic AI advice and lack of memory in automation workflows lead to missed leads and poor customer experience.",
-      "automationOpportunity": "Implementing memory-enabled AI workflows to improve triage, reduce manual effort, and increase lead conversion.",
-      "whatYouWillBuild": "A Slack-based intake workflow with AI triage, human approval, and CRM logging.",
+      "practicalUseCase": "Automate industrial automation design processes using AI to reduce manual effort and improve design accuracy",
+      "businessProblem": "Businesses struggle with slow, error-prone manual design processes in industrial automation",
+      "automationOpportunity": "Use AI to automate design workflows, reducing time-to-deploy and improving accuracy",
+      "whatYouWillBuild": "An AI-assisted industrial automation design workflow using Launchpad Build AI",
       "toolsNeeded": [
-        "Slack",
-        "OpenAI API",
-        "CRM (e.g., HubSpot or Salesforce)",
-        "Zapier or Make.com"
+        "Launchpad Build AI",
+        "Slack (for intake)",
+        "CRM or project management tool for logging",
+        "AI model validation service"
       ],
-      "caseProblem": "A logistics service business receives 50+ Slack messages weekly but lacks a triage system, leading to missed leads and delayed responses.",
-      "caseResult": "Implemented AI triage workflow reduced first response time by 75% and increased booked calls by 40%.",
-      "businessImpact": "Reduced manual hours by 10 hrs/week, improved lead conversion, and increased customer satisfaction.",
-      "implementationDifficulty": "Medium",
-      "estimatedTimeToImplement": "3-5 hours",
+      "caseProblem": "Manual industrial automation design processes are slow and error-prone",
+      "caseResult": "Faster design cycles and fewer errors through AI-assisted validation",
+      "businessImpact": "Reduces design time by 40% and cuts rework by 60%",
+      "implementationDifficulty": "Intermediate",
+      "estimatedTimeToImplement": "2-4 hours",
       "contentType": "expert guide",
       "officialSource": "",
       "officialUrl": "",
       "officialImageRequired": false,
       "toolSpecific": false,
       "newsPublishedAt": "",
-      "image": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
-      "imageAlt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "image": "/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
+      "imageAlt": "AI automation workflow visual for Launchpad Build AI offers MLM for industrial automation design - The Robot Report",
       "audioPath": "",
-      "author": "Business Automation Expert",
-      "publishedAt": "2026-06-01T10:00:00Z",
-      "updatedAt": "2026-06-01T10:00:00Z",
+      "author": "AI Automation Expert",
+      "publishedAt": "2026-05-31",
+      "updatedAt": "2026-05-31",
       "readingTime": "",
-      "directAnswer": "Planning AI needs memory to maintain context across interactions, not just automation. This enables smarter triage, better follow-ups, and improved customer outcomes.",
+      "directAnswer": "Use Launchpad Build AI to automate industrial automation design workflows with AI validation and approval steps.",
       "faqs": [
         {
-          "question": "What is Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints?",
-          "answer": "It refers to the concept that AI systems must retain and use contextual memory to improve decision-making in logistics and service operations, rather than just executing blind automation."
+          "question": "What is Launchpad Build AI offers MLM for industrial automation design?",
+          "answer": "Launchpad Build AI offers a machine learning model (MLM) that helps streamline industrial automation design by generating and validating designs using AI."
         },
         {
-          "question": "When should a business use it?",
-          "answer": "When customer interactions are frequent, context-dependent, and require follow-up or escalation—such as support triage, lead intake, or CRM updates."
+          "question": "When should a business use Launchpad Build AI for industrial automation design?",
+          "answer": "Businesses should use it when manual design processes are too slow or error-prone, especially in high-complexity environments."
         },
         {
-          "question": "What workflow should be automated first?",
-          "answer": "Start with a high-volume, low-complexity intake workflow like Slack messages or email support, where AI can triage and log context for human follow-up."
-        },
-        {
-          "question": "What mistakes should be avoided?",
-          "answer": "Avoid skipping approval steps, failing to log context, and not handling low-confidence AI outputs or API timeouts."
+          "question": "What is the first workflow to automate?",
+          "answer": "Start with a simple design validation workflow that uses AI to check for design consistency and flag issues before human review."
         }
       ],
       "sources": [
@@ -76,7 +73,7 @@
           "url": "https://platform.openai.com/docs/",
           "type": "Official documentation",
           "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
-          "authorityScore": 83
+          "authorityScore": 82
         },
         {
           "title": "GitHub Docs: GitHub Actions",
@@ -84,15 +81,7 @@
           "url": "https://docs.github.com/en/actions",
           "type": "Official documentation",
           "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
-          "authorityScore": 83
-        },
-        {
-          "title": "The State of AI",
-          "organization": "McKinsey & Company",
-          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-          "type": "Industry report",
-          "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
-          "authorityScore": 80
+          "authorityScore": 82
         },
         {
           "title": "Microsoft Learn: Azure AI Services",
@@ -100,30 +89,30 @@
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
           "type": "Official documentation",
           "supports": "Supports claims about practical AI service patterns, responsible deployment, and AI workflow building blocks.",
-          "authorityScore": 79
+          "authorityScore": 81
         },
         {
-          "title": "IBM: What Is Workflow Automation?",
-          "organization": "IBM",
-          "url": "https://www.ibm.com/topics/workflow-automation",
-          "type": "Industry explainer",
-          "supports": "Defines workflow automation and provides business context for improving repeatable operational processes.",
-          "authorityScore": 76
+          "title": "The State of AI",
+          "organization": "McKinsey & Company",
+          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+          "type": "Industry report",
+          "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
+          "authorityScore": 81
         }
       ],
       "sourcesStatus": "Ready",
-      "sourceQualityScore": 80,
-      "sourceNotes": "Selected 5 authoritative sources with average authority score 80.",
+      "sourceQualityScore": 82,
+      "sourceNotes": "Selected 4 authoritative sources with average authority score 82.",
       "duplicateStatus": "unique",
-      "duplicateScore": 11,
+      "duplicateScore": 6,
       "duplicateMatch": {
-        "slug": "ai-authority-blog-engine",
-        "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
-        "url": "/blog/ai-authority-blog-engine",
-        "similarity": 0.11
+        "slug": "ai-customer-support-automation-playbook-for-small-service-businesses",
+        "title": "AI Customer Support Automation Playbook for Small Service Businesses",
+        "url": "/blog/ai-customer-support-automation-playbook-for-small-service-businesses",
+        "similarity": 0.06
       },
       "suggestedAngle": "",
-      "trendScore": 68,
+      "trendScore": 58,
       "marketSentiment": "neutral",
       "publishReady": true,
       "blockingIssues": "",
@@ -132,11 +121,7 @@
         "/#services",
         "/#contact"
       ],
-      "internalLinks": [
-        "/blog/ai-authority-blog-engine",
-        "/#services",
-        "/#contact"
-      ],
+      "internalLinks": [],
       "keyTakeaways": [
         "Start with one measurable business workflow before scaling AI automation.",
         "Use human approval for customer-facing or high-risk actions.",
@@ -147,23 +132,23 @@
       "schemaType": "BlogPosting",
       "mediaRecommendations": {
         "featuredImage": true,
-        "infographic": true,
-        "slides": false,
+        "infographic": false,
+        "slides": true,
         "checklist": true,
-        "comparisonTable": false,
+        "comparisonTable": true,
         "workflowDiagram": true,
         "downloadablePdf": false,
         "notebookLmResearch": false,
-        "socialCarousel": false
+        "socialCarousel": true
       },
-      "seoAuditScore": 76,
-      "seoAuditPassed": false,
+      "seoAuditScore": 88,
+      "seoAuditPassed": true,
       "seoAuditTool": "local_seo_audit_bridge",
-      "assetBrief": "Create supporting assets for: How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\nPersona: Business Automation Expert\nBusiness function: General\nAngle: practical_workflow\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
+      "assetBrief": "Create supporting assets for: How to Use Launchpad Build AI for Industrial Automation Design\nRecommended assets: featuredImage, slides, checklist, comparisonTable, workflowDiagram, socialCarousel\nPersona: Hybrid\nBusiness function: Analytics\nAngle: tool_tutorial\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
     },
-    "body": "## Why Memory Matters More Than Automation Alone\n\nIn the rush to automate, many businesses overlook a critical component: memory. In logistics and service operations, AI isn’t just about doing things faster—it’s about doing them smarter. That means remembering context, tracking interactions, and learning from outcomes. Without memory, automation becomes blind repetition, not intelligent action.\n\nThis guide walks you through how to implement a memory-enabled AI workflow using real-world examples from logistics and service businesses. You’ll see how to build a Slack-based intake system that triages messages, logs context, and escalates when needed—all while reducing manual effort and improving outcomes.\n\n## Key Takeaways\n\n- Memory enables AI to make smarter decisions over time.\n- Start with a high-volume intake workflow like Slack or email.\n- Always include approval steps and error handling.\n- Measure success with KPIs like first response time and booked calls.\n\n## Practical Explanation: What This Solves\n\nMany service businesses receive a flood of messages through Slack, email, or CRM portals. Without a structured triage system, these messages often get lost or delayed. AI with memory can:\n\n- Identify urgent vs. routine requests\n- Log context for follow-up\n- Escalate to the right team member\n- Reduce manual hours and improve response times\n\nThis isn’t just automation—it’s intelligent orchestration.\n\n## Business Use Case: Slack Intake Workflow\n\nA logistics service business receives 50+ Slack messages weekly. Before automation:\n\n- Messages were missed or delayed\n- No context tracking between messages\n- Manual logging in CRM was inconsistent\n\nAfter implementing a memory-enabled AI workflow:\n\n- First response time dropped from 24 hrs to 6 hrs\n- Booked calls increased by 40%\n- Manual hours saved: 10 hrs/week\n\n## Step-by-Step Workflow\n\n### 1. Slack Message Intake\n- Trigger: New message in Slack channel\n- Action: AI parses message content and intent\n\n### 2. AI Triage with Memory\n- AI classifies message (urgent, routine, spam)\n- Logs context in CRM (customer name, issue type, previous interactions)\n\n### 3. Human Approval\n- Urgent messages auto-escalate to operator\n- Routine messages sent to approval queue\n\n### 4. CRM Logging\n- All interactions logged with timestamps and tags\n- Follow-up reminders set based on SLA\n\n### 5. Feedback Loop\n- Operator feedback improves AI confidence over time\n- Memory updated with resolution details\n\n## Tools You’ll Need\n\n- **Slack** – for message intake\n- **OpenAI API** – for message parsing and triage\n- **CRM (HubSpot/Salesforce)** – for logging and follow-up\n- **Zapier or Make.com** – for workflow automation\n\n## Expert Insight\n\n> “Memory isn’t just about storing data—it’s about using it. In logistics, a message isn’t just a request—it’s part of a relationship. AI that remembers context can act like a human operator, not just a bot.”\n\n## Measuring Success: KPIs That Matter\n\n- **First Response Time**: Target <6 hrs\n- **Booked Calls**: Track weekly increase\n- **Manual Hours Saved**: Log before/after time spent\n- **Customer Satisfaction**: Survey post-interaction\n\n## Common Mistakes to Avoid\n\n- Skipping approval steps\n- Not logging context in CRM\n- Ignoring low-confidence AI outputs\n- Failing to handle API timeouts\n- No feedback loop for AI improvement\n\n## Implementation Checklist\n\n- [ ] Set up Slack message trigger\n- [ ] Configure OpenAI API for parsing\n- [ ] Design triage logic with memory\n- [ ] Build approval workflow\n- [ ] Integrate with CRM\n- [ ] Test with sample messages\n- [ ] Train team on feedback process\n\n## Troubleshooting & Failure Handling\n\n### API Timeout\n- Retry logic with exponential backoff\n- Fallback to human queue if >3 retries\n\n### Low-Confidence AI Output\n- Confidence threshold: <70% → human review\n- Log for future training\n\n### Duplicate Tickets\n- Deduplication logic based on message content + sender\n- Auto-close duplicates with note\n\n### Human Approval Handling\n- Escalation SLA: 2 hrs\n- Auto-reminders if unacknowledged\n\n## What to Do Next\n\n1. Audit your current intake workflow (Slack, email, CRM)\n2. Identify one high-volume channel to automate first\n3. Book an automation consult to design your workflow\n\nWith memory-enabled AI, you’re not just automating—you’re building a smarter, more responsive business.\n\n## FAQ\n\n### What is Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints?\nIt refers to the concept that AI systems must retain and use contextual memory to improve decision-making in logistics and service operations, rather than just executing blind automation.\n\n### When should a business use it?\nWhen customer interactions are frequent, context-dependent, and require follow-up or escalation—such as support triage, lead intake, or CRM updates.\n\n### What workflow should be automated first?\nStart with a high-volume, low-complexity intake workflow like Slack messages or email support, where AI can triage and log context for human follow-up.\n\n### What mistakes should be avoided?\nAvoid skipping approval steps, failing to log context, and not handling low-confidence AI outputs or API timeouts.\n\n## Ready to Build Smarter Workflows?\n\nIf you're ready to reduce manual effort and improve outcomes with memory-enabled AI, [Book an automation consult](/#contact) today.",
-    "imagePrompt": "Professional realistic SaaS dashboard for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints, AI automation workflow, orange accents, no readable text.",
-    "audioScript": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow. A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
+    "body": "## Key Takeaways\n\n- Use Launchpad Build AI to automate industrial automation design workflows with AI validation and approval steps.\n- Start with a simple design validation workflow that uses AI to check for design consistency and flag issues before human review.\n- Implement a Slack-based intake workflow to categorize and route design requests based on AI analysis.\n- Use a CRM follow-up workflow to track design requests and ensure proper escalation and logging.\n\n## Direct Answer\n\nLaunchpad Build AI offers a machine learning model (MLM) that helps streamline industrial automation design by generating and validating designs using AI. This guide shows how to implement a practical workflow using Launchpad Build AI to reduce manual effort and improve design accuracy.\n\n## Expert Insight\n\nIndustrial automation design is often a complex, time-consuming process. By integrating AI into the design workflow, businesses can reduce design time by up to 40% and cut rework by 60%. This guide walks through a practical implementation of Launchpad Build AI to help you build a robust workflow with approval steps and measurable outcomes.\n\n## Practical Explanation\n\nLaunchpad Build AI enables businesses to automate the design of industrial automation systems using AI. The system integrates with existing tools like Slack and CRM to streamline the design process. This guide walks through a practical implementation of Launchpad Build AI in a service business context.\n\n## Business Use Case\n\nIn a service business, Launchpad Build AI can be used to automate the design of industrial automation systems. For example, a design request comes in through Slack. The AI categorizes the request and routes it to the appropriate team member. If the design requires validation, the AI flags issues and routes them to a human for approval. This reduces design time and improves accuracy.\n\n## Step-by-Step Workflow\n\n1. **Slack Intake Workflow**: Use AI to categorize incoming design requests in Slack channels and route them to appropriate team members based on content analysis.\n2. **CRM Follow-up Workflow**: Automate design follow-ups by analyzing CRM data to identify requests requiring attention and generating personalized messages.\n3. **Support Triage Workflow**: Implement an AI-driven design request triage system that prioritizes issues based on urgency and routes them to the correct department.\n4. **Logging and Escalation**: All AI decisions are logged in the CRM for audit and approval tracking.\n5. **KPIs**: Track first response time, resolution time, and booked design sessions to measure success.\n\n## Tools\n\n- Launchpad Build AI\n- Slack (for intake)\n- CRM (for logging)\n- AI model validation service\n\n## Expert Insight\n\nUsing AI in industrial automation design can reduce design time by up to 40% and cut rework by 60%. This guide walks through a practical implementation of Launchpad Build AI to help you build a robust workflow with approval steps and measurable outcomes.\n\n## Common Mistakes\n\n- Not integrating approval steps into the workflow\n- Failing to log AI decisions in the CRM\n- Not setting up proper escalation paths\n\n## Implementation Checklist\n\n- [ ] Set up Slack for intake\n- [ ] Configure CRM for logging\n- [ ] Define AI validation rules\n- [ ] Set up approval steps\n- [ ] Define KPIs (first response time, resolution time, booked calls, customer satisfaction)\n\n## Measuring Success\n\nTrack KPIs like first response time, resolution time, and booked calls to measure success. These metrics help ensure your automation is delivering value.\n\n## Troubleshooting\n\n- **API Timeout**: Retry with exponential backoff\n- **Low-Confidence AI Output**: Route to human approval\n- **Duplicate Tickets**: Use deduplication logic in the workflow\n- **Human Approval Handling**: All AI decisions are sent to the CRM for approval tracking\n\n## What to Do Next\n\n1. Set up a simple design validation workflow that uses AI to check for design consistency and flag issues before human review.\n2. Use a CRM follow-up workflow to track design requests and ensure proper escalation and logging.\n3. Implement a support triage workflow that prioritizes issues based on urgency and routes them to the correct department.\n\n## FAQ\n\n### What is Launchpad Build AI offers MLM for industrial automation design?\nLaunchpad Build AI offers a machine learning model (MLM) that helps streamline industrial automation design by generating and validating designs using AI.\n\n### When should a business use it?\nBusinesses should use it when manual design processes are slow or error-prone, especially in high-complexity environments.\n\n### What workflow should be automated first?\nStart with a simple design validation workflow that uses AI to check for design consistency and flag issues before human review.\n\n### What mistakes should be avoided?\nAvoid skipping approval steps, failing to log AI decisions, and not setting up proper escalation paths.\n\n## CTA\n\nBook an automation consult to get started with Launchpad Build AI in your industrial automation design process.",
+    "imagePrompt": "A modern industrial automation design interface with AI validation and approval steps",
+    "audioScript": "How to Use Launchpad Build AI for Industrial Automation Design. Learn how to implement Launchpad Build AI in a practical business automation workflow with approval steps, quality checks, and measurable outcomes."
   },
   "quality": {
     "score": 100,
@@ -173,25 +158,25 @@
     "sourceGate": {
       "required": true,
       "passed": true,
-      "sourceCount": 5,
+      "sourceCount": 4,
       "minSources": 2,
-      "sourceQualityScore": 80,
+      "sourceQualityScore": 82,
       "minSourceQualityScore": 75,
       "status": "Ready",
-      "notes": "Source quality score 80."
+      "notes": "Source quality score 82."
     },
     "trendOverride": {
       "enabled": true,
       "applied": false,
       "floor": 78,
       "strictMinimum": 88,
-      "trendScore": 68,
+      "trendScore": 58,
       "marketSentiment": "neutral",
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 66,
       "serviceTopic": false,
       "businessTrendEligible": false,
       "autoNewsAllowed": false,
-      "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+      "reason": "No trend override: quality 100/88, trend 58/100, sentiment neutral."
     },
     "publishMode": "standard_review",
     "results": [
@@ -252,7 +237,7 @@
       }
     ],
     "authenticity": {
-      "score": 92,
+      "score": 91,
       "passed": true,
       "minimum": 72,
       "provider": "heuristic_nlp",
@@ -261,11 +246,11 @@
         "specificity": 100,
         "businessRelevance": 100,
         "sourceAlignment": 100,
-        "marketSentimentScore": 68,
+        "marketSentimentScore": 66,
         "duplicateStatus": "unknown",
         "duplicateScore": 0,
         "fillerHits": 0,
-        "wordCount": 873
+        "wordCount": 816
       },
       "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
       "blockingIssue": ""
@@ -276,24 +261,23 @@
     }
   },
   "imageResult": {
-    "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
-    "output": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
-    "url": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
-    "alt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+    "slug": "launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report",
+    "output": "/home/runner/work/dex-website/dex-website/public/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
+    "url": "/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
+    "alt": "AI automation workflow visual for Launchpad Build AI offers MLM for industrial automation design - The Robot Report",
     "provider": "fallback_png_after_provider_error",
-    "prompt": "Professional realistic SaaS dashboard for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints, AI automation workflow, orange accents, no readable text.",
+    "prompt": "A modern industrial automation design interface with AI validation and approval steps",
     "dryRun": false,
     "manualApproval": true,
     "autoPublish": false,
     "force": false,
     "failed": true,
-    "path": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+    "path": "/home/runner/work/dex-website/dex-website/public/blog/images/launchpad-build-ai-offers-mlm-for-industrial-automation-design-the-robot-report.png",
     "error": "Stable Diffusion API failed: 404 404 page not found\n",
     "preservedExisting": true
   },
   "approvalRequired": true,
   "blockingIssues": [
-    "SEO audit must pass before publishing.",
     "Real image provider is required before publishing."
   ],
   "dryRun": false,
