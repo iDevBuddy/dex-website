@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 77,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,17 +94,28 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 619
+      "wordCount": 742
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
+    "helpfulContentRisk": "low",
+    "notes": [
+      "The article provides a clear, practical guide to implementing AI workflows with memory for business automation, using a real-world logistics example.",
+      "Content is well-structured with a strong use case (Slack support triage) and includes actionable implementation steps.",
+      "Addresses key concerns like context retention, approval steps, and error handling effectively.",
+      "Minor improvements could include more specific examples of prompt engineering and error handling in workflows."
+    ],
+    "recommendedFixes": [
+      "Add a brief example of a classification prompt structure for better clarity on implementation.",
+      "Include a short code snippet or pseudocode for the memory system (e.g., how message context is stored and retrieved).",
+      "Clarify how the 'memory store' is implemented—JSON/DB option, e.g., using Google Sheets or a database.",
+      "Add a section on how to handle retries and error logging for low-confidence AI outputs."
+    ]
   }
 }
