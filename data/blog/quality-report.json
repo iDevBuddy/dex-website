@@ -1,36 +1,36 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 4,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 58,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 66,
+    "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 58/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 91,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,17 +94,31 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 66,
+      "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 816
+      "wordCount": 567
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
+    "helpfulContentRisk": "low",
+    "notes": [
+      "The content provides a practical, well-structured guide to implementing AI with memory capabilities in logistics support workflows.",
+      "The article includes clear implementation steps, tools required, and business outcomes, making it actionable for the target audience.",
+      "Content is well-researched and cites authoritative sources, supporting the informational and educational intent.",
+      "The tone and style align with the target persona (founder, operator, marketer, or service-business owner), offering a business-focused, practical workflow guide.",
+      "Potential helpful content issues: minimal. The article uses clear subheaders and maintains a how-to guide structure, which is appropriate for search intent and user needs.",
+      "The content is unique, and the search intent (informational) is well-matched with the step-by-step implementation guide."
+    ],
+    "recommendedFixes": [
+      "Clarify the distinction between 'planning AI' and 'memory-enabled AI' in the introduction to help readers understand the core value proposition.",
+      "Add a short section or callout explaining how memory-enabled AI improves outcomes over traditional automation to strengthen the educational aspect.",
+      "Consider adding a visual workflow diagram or automation architecture image to improve content engagement and illustrate the triage process.",
+      "Ensure all headers are descriptive and include specific keywords like 'logistics support triage', 'AI automation', and 'memory-enabled AI' for better SEO alignment.",
+      "Add internal links to related content (e.g., linking to other AI automation guides or case studies) to improve content authority and site structure."
+    ]
   }
 }
