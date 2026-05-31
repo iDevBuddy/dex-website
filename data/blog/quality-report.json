@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,26 +98,13 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 808
+      "wordCount": 619
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 8,
-    "notes": [
-      "The article provides a comprehensive guide to implementing memory-based AI planning in business workflows, which aligns well with the informational search intent.",
-      "Content is well-structured with clear steps, tools, and implementation details that match the practical business automation angle.",
-      "The article includes specific examples, a detailed workflow, and addresses common mistakes, making it a valuable resource for the target audience.",
-      "Content is supported by authoritative sources with an average score of 80, indicating strong expertise backing.",
-      "Implementation difficulty is rated as 'Medium' with estimated time to implement listed as 2-4 hours, providing realistic expectations for readers."
-    ],
-    "recommendedFixes": [
-      "Consider adding a section on A/B testing workflows to validate improvements before full deployment.",
-      "Include a brief comparison of different AI platforms (e.g., OpenAI vs. Azure AI) for better tool selection guidance.",
-      "Add troubleshooting steps for common integration issues when connecting AI systems with workflow automation tools.",
-      "Expand on security and compliance considerations for handling customer data in AI-assisted workflows.",
-      "Provide template examples for the checklist and workflow diagram to help users implement the system more easily."
-    ]
+    "skipped": true,
+    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
   }
 }
