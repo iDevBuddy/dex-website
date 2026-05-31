@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -20,17 +20,17 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 77,
+    "score": 90,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,31 +94,30 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 567
+      "wordCount": 808
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": 8,
     "notes": [
-      "The content provides a practical, well-structured guide to implementing AI with memory capabilities in logistics support workflows.",
-      "The article includes clear implementation steps, tools required, and business outcomes, making it actionable for the target audience.",
-      "Content is well-researched and cites authoritative sources, supporting the informational and educational intent.",
-      "The tone and style align with the target persona (founder, operator, marketer, or service-business owner), offering a business-focused, practical workflow guide.",
-      "Potential helpful content issues: minimal. The article uses clear subheaders and maintains a how-to guide structure, which is appropriate for search intent and user needs.",
-      "The content is unique, and the search intent (informational) is well-matched with the step-by-step implementation guide."
+      "The article provides a comprehensive guide to implementing memory-based AI planning in business workflows, which aligns well with the informational search intent.",
+      "Content is well-structured with clear steps, tools, and implementation details that match the practical business automation angle.",
+      "The article includes specific examples, a detailed workflow, and addresses common mistakes, making it a valuable resource for the target audience.",
+      "Content is supported by authoritative sources with an average score of 80, indicating strong expertise backing.",
+      "Implementation difficulty is rated as 'Medium' with estimated time to implement listed as 2-4 hours, providing realistic expectations for readers."
     ],
     "recommendedFixes": [
-      "Clarify the distinction between 'planning AI' and 'memory-enabled AI' in the introduction to help readers understand the core value proposition.",
-      "Add a short section or callout explaining how memory-enabled AI improves outcomes over traditional automation to strengthen the educational aspect.",
-      "Consider adding a visual workflow diagram or automation architecture image to improve content engagement and illustrate the triage process.",
-      "Ensure all headers are descriptive and include specific keywords like 'logistics support triage', 'AI automation', and 'memory-enabled AI' for better SEO alignment.",
-      "Add internal links to related content (e.g., linking to other AI automation guides or case studies) to improve content authority and site structure."
+      "Consider adding a section on A/B testing workflows to validate improvements before full deployment.",
+      "Include a brief comparison of different AI platforms (e.g., OpenAI vs. Azure AI) for better tool selection guidance.",
+      "Add troubleshooting steps for common integration issues when connecting AI systems with workflow automation tools.",
+      "Expand on security and compliance considerations for handling customer data in AI-assisted workflows.",
+      "Provide template examples for the checklist and workflow diagram to help users implement the system more easily."
     ]
   }
 }
