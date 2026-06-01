@@ -1,5 +1,5 @@
 {
-  "score": 80,
+  "score": 54,
   "minScore": 82,
   "passed": false,
   "checks": [
@@ -10,7 +10,7 @@
     },
     {
       "name": "metaDescriptionLength",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -20,12 +20,12 @@
     },
     {
       "name": "singleH1HandledByTemplate",
-      "passed": false,
+      "passed": true,
       "points": 8
     },
     {
       "name": "semanticHeadings",
-      "passed": true,
+      "passed": false,
       "points": 10
     },
     {
@@ -50,7 +50,7 @@
     },
     {
       "name": "notThinContent",
-      "passed": true,
+      "passed": false,
       "points": 12
     }
   ],

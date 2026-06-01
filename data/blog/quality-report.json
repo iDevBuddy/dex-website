@@ -1,41 +1,41 @@
 {
-  "score": 100,
-  "strictPassed": true,
-  "passed": true,
+  "score": 80,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 58,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 66,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 80/88, trend 58/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
       "name": "hasClearIntro",
-      "passed": true,
+      "passed": false,
       "points": 8
     },
     {
@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 84,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 66,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 818
+      "wordCount": 603
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,18 +106,20 @@
   "review": {
     "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a practical, step-by-step guide to implementing memory-enhanced AI workflows in logistics, with a clear use case and measurable outcomes.",
-      "It includes a real-world example (Slack-based intake), implementation checklist, and troubleshooting tips, making it highly actionable.",
-      "The content emphasizes structured memory layers, approval steps, and logging, which aligns with best practices for enterprise AI automation.",
-      "The article covers key technical and operational aspects of AI memory integration, including tools, workflows, and failure handling.",
-      "Potential improvements: Add more technical implementation details for the memory layer (e.g., database schema, API examples) to increase depth.",
-      "Including specific KPI tracking methods or memory layer architecture would enhance practical utility for technical readers."
+      "The article provides a detailed, practical guide for implementing Launchpad Build AI's MLM in industrial automation design workflows.",
+      "Content is well-structured with clear steps, use cases, and implementation checklists.",
+      "Some sections like 'Troubleshooting & Failure Handling' and 'Common Mistakes to Avoid' could benefit from more specific examples or scenarios.",
+      "The article references external sources appropriately to support claims about the tool's capabilities and market context.",
+      "SEO elements are present but could be strengthened with better integration of the target keyword throughout the content body.",
+      "The business impact and KPIs section is strong and provides measurable outcomes that resonate with the target audience."
     ],
     "recommendedFixes": [
-      "Add a short implementation guide or code example for setting up a memory layer (e.g., using Python scripts or no-code tools).",
-      "Include a workflow diagram or visual guide showing memory-augmented AI in logistics (available as downloadable asset).",
-      "Expand on failure handling examples (e.g., timeout scripts, confidence thresholds) with sample code or platform settings.",
-      "Clarify the difference between 'memory' and 'chat history' in AI workflows with a brief example (e.g., CRM integration)."
+      "Integrate the target keyword 'launchpad build ai offers mlm for industrial automation design - the robot report' more naturally into subheadings and body content.",
+      "Add specific examples or brief case study snippets in the 'Troubleshooting' and 'Mistakes to Avoid' sections to increase practical value.",
+      "Include a visual workflow diagram or flowchart to complement the 'Step-by-Step Workflow Implementation' section for better engagement and clarity.",
+      "Enhance the FAQ section by incorporating long-tail variations of the target keyword in questions and answers.",
+      "Consider adding a comparison table showing before/after metrics or traditional methods vs. using Launchpad Build AI MLM.",
+      "Ensure internal links are descriptive anchor text (e.g., 'AI Authority Blog Engine') rather than generic phrases like 'Book an automation consult'."
     ]
   }
 }
