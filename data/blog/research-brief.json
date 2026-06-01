@@ -37,6 +37,51 @@
   ],
   "sources": [
     {
+      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+      "type": "Web research",
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
+      "type": "Web research",
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
+      "publishedDate": ""
+    },
+    {
+      "title": "Five Requirements for Operational AI in Supply Chain Management - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/05/09/five-requirements-for-operational-ai-in-supply-chain-management",
+      "type": "Web research",
+      "supports": "Explore Our Domains  \nPlanning, Execution & Visibility | Transportation & Logistics Operations | Warehousing, Fulfillment & Automation | Global Trade & Compliance | AI & Advanced Analytics | Data, Int",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
+      "type": "Web research",
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Enterprise AI Automation Guide: GenAI, AI Agents & Workflows",
+      "organization": "ciklum.com",
+      "url": "https://www.ciklum.com/enterprise-ai-automation-guide",
+      "type": "Web research",
+      "supports": "Enterprise AI automation combines artificial intelligence, including LLMs and machine learning, with traditional execution tools to manage end-to-end business processes. Unlike traditional automation,",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
       "title": "OpenAI Platform Documentation",
       "organization": "OpenAI",
       "url": "https://platform.openai.com/docs/",
@@ -51,76 +96,19 @@
         "prompt"
       ],
       "authorityScore": 83
-    },
-    {
-      "title": "GitHub Docs: GitHub Actions",
-      "organization": "GitHub",
-      "url": "https://docs.github.com/en/actions",
-      "type": "Official documentation",
-      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
-      "tags": [
-        "github",
-        "automation",
-        "workflow",
-        "ci",
-        "deployment"
-      ],
-      "authorityScore": 83
-    },
-    {
-      "title": "The State of AI",
-      "organization": "McKinsey & Company",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "type": "Industry report",
-      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
-      "tags": [
-        "ai",
-        "business",
-        "trend",
-        "strategy"
-      ],
-      "authorityScore": 80
-    },
-    {
-      "title": "Microsoft Learn: Azure AI Services",
-      "organization": "Microsoft",
-      "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
-      "type": "Official documentation",
-      "supports": "Supports claims about practical AI service patterns, responsible deployment, and AI workflow building blocks.",
-      "tags": [
-        "ai",
-        "automation",
-        "workflow",
-        "business",
-        "agents"
-      ],
-      "authorityScore": 79
-    },
-    {
-      "title": "IBM: What Is Workflow Automation?",
-      "organization": "IBM",
-      "url": "https://www.ibm.com/topics/workflow-automation",
-      "type": "Industry explainer",
-      "supports": "Defines workflow automation and provides business context for improving repeatable operational processes.",
-      "tags": [
-        "workflow",
-        "automation",
-        "business",
-        "operations"
-      ],
-      "authorityScore": 76
     }
   ],
   "sourcesToCite": [
-    "https://platform.openai.com/docs/",
-    "https://docs.github.com/en/actions",
-    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-    "https://learn.microsoft.com/en-us/azure/ai-services/",
-    "https://www.ibm.com/topics/workflow-automation"
+    "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
+    "https://logisticsviewpoints.com/2026/05/09/five-requirements-for-operational-ai-in-supply-chain-management",
+    "https://innovecs.com/blog/ai-supply-chain-planning",
+    "https://www.ciklum.com/enterprise-ai-automation-guide",
+    "https://platform.openai.com/docs/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -134,7 +122,7 @@
   "trendAnalysis": {
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -155,22 +143,19 @@
       },
       {
         "source": "Google News",
-        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
-      },
-      {
-        "source": "Google News",
-        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
+        "title": "The 2026 AI predictions bonanza - Frontier Enterprise"
       },
       {
         "source": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
       },
       {
-        "source": "Google News",
-        "title": "Why Context Is Becoming the Critical Requirement for Supply Chain AI - Logistics Viewpoints"
+        "source": "Why Context Is Becoming the Critical Requirement for Supply Chain AI - Logistics Viewpoints"
       },
       {
-        "source": "Google News",
-        "title": "AI Agents Changing Every Industry: Reshaping the Global Economy in Agentic Revolution - Klover.ai"
+        "source": "The Infinite AI Compute Loop: HBM Big Three + TSMC × NVIDIA × OpenAI Shaping the Next-Generation Industry Chain - semivision"
+      },
+      {
+        "source": "Agentic AI: The future of autonomous intelligence - KPMG"
       }
     ],
     "realtimeSources": [
@@ -196,5 +181,52 @@
   "businessFunction": "General",
   "authorityAngle": "practical_workflow",
   "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
-  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
+  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
+  "webResearchSources": [
+    {
+      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+      "type": "Web research",
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
+      "type": "Web research",
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
+      "publishedDate": ""
+    },
+    {
+      "title": "Five Requirements for Operational AI in Supply Chain Management - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/05/09/five-requirements-for-operational-ai-in-supply-chain-management",
+      "type": "Web research",
+      "supports": "Explore Our Domains  \nPlanning, Execution & Visibility | Transportation & Logistics Operations | Warehousing, Fulfillment & Automation | Global Trade & Compliance | AI & Advanced Analytics | Data, Int",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
+      "type": "Web research",
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Enterprise AI Automation Guide: GenAI, AI Agents & Workflows",
+      "organization": "ciklum.com",
+      "url": "https://www.ciklum.com/enterprise-ai-automation-guide",
+      "type": "Web research",
+      "supports": "Enterprise AI automation combines artificial intelligence, including LLMs and machine learning, with traditional execution tools to manage end-to-end business processes. Unlike traditional automation,",
+      "authorityScore": 95,
+      "publishedDate": ""
+    }
+  ]
 }
