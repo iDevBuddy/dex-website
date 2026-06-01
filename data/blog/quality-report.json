@@ -1,12 +1,12 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 6,
     "minSources": 2,
     "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
@@ -20,17 +20,17 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 65,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,37 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 90,
+    "score": 84,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 65,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 742
+      "wordCount": 818
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a clear, practical guide to implementing AI workflows with memory for business automation, using a real-world logistics example.",
-      "Content is well-structured with a strong use case (Slack support triage) and includes actionable implementation steps.",
-      "Addresses key concerns like context retention, approval steps, and error handling effectively.",
-      "Minor improvements could include more specific examples of prompt engineering and error handling in workflows."
+      "The article provides a practical, step-by-step guide to implementing memory-enhanced AI workflows in logistics, with a clear use case and measurable outcomes.",
+      "It includes a real-world example (Slack-based intake), implementation checklist, and troubleshooting tips, making it highly actionable.",
+      "The content emphasizes structured memory layers, approval steps, and logging, which aligns with best practices for enterprise AI automation.",
+      "The article covers key technical and operational aspects of AI memory integration, including tools, workflows, and failure handling.",
+      "Potential improvements: Add more technical implementation details for the memory layer (e.g., database schema, API examples) to increase depth.",
+      "Including specific KPI tracking methods or memory layer architecture would enhance practical utility for technical readers."
     ],
     "recommendedFixes": [
-      "Add a brief example of a classification prompt structure for better clarity on implementation.",
-      "Include a short code snippet or pseudocode for the memory system (e.g., how message context is stored and retrieved).",
-      "Clarify how the 'memory store' is implemented—JSON/DB option, e.g., using Google Sheets or a database.",
-      "Add a section on how to handle retries and error logging for low-confidence AI outputs."
+      "Add a short implementation guide or code example for setting up a memory layer (e.g., using Python scripts or no-code tools).",
+      "Include a workflow diagram or visual guide showing memory-augmented AI in logistics (available as downloadable asset).",
+      "Expand on failure handling examples (e.g., timeout scripts, confidence thresholds) with sample code or platform settings.",
+      "Clarify the difference between 'memory' and 'chat history' in AI workflows with a brief example (e.g., CRM integration)."
     ]
   }
 }
