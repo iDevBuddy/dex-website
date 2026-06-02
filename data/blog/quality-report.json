@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 72,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 545
+      "wordCount": 553
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,22 +106,24 @@
   "review": {
     "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides practical, actionable guidance for implementing AI with memory layers in logistics workflows",
-      "Content is well-structured with clear steps, tools, and implementation details",
-      "Includes specific business metrics and KPIs which adds credibility and practical value",
-      "Uses authoritative sources appropriately and cites them properly",
-      "Addresses search intent effectively with informational content focused on practical implementation",
-      "Content aligns well with target audience (founders, operators, marketers) and their business problems",
-      "Provides concrete examples and avoids generic AI advice as promised in the business problem section"
+      "The article provides practical, actionable guidance on implementing memory-enabled AI workflows in logistics",
+      "Content is well-structured with clear steps, tools, and implementation guidelines",
+      "Addresses real business problems (coordination, manual hours, errors) with measurable outcomes",
+      "Includes specific metrics (KPIs) and concrete examples that enhance credibility",
+      "Content focuses on business impact rather than just technical features",
+      "Well-researched with authoritative sources and practical use cases",
+      "Addresses common mistakes and troubleshooting scenarios",
+      "Target audience (founders, operators, marketers) is well-defined and matched to content tone"
     ],
     "recommendedFixes": [
-      "Improve the meta title to be more concise and compelling - current version is too long and repetitive",
-      "Add internal linking to other relevant blog posts or resources where appropriate",
-      "Consider adding more specific technical implementation details for the memory layer setup",
-      "Include more detailed troubleshooting examples for common implementation challenges",
-      "Add a brief conclusion section to summarize key points and next steps",
-      "Consider adding a visual workflow diagram to complement the text-based steps described",
-      "Expand on the GitHub Actions implementation with specific code examples or configuration details"
+      "Add a workflow diagram as suggested in media recommendations to visually illustrate the memory-enabled AI process",
+      "Include an infographic summarizing the key components (intake, memory layer, AI agent, approval, logging, KPIs)",
+      "Create a downloadable checklist asset for implementation steps",
+      "Expand on the technical implementation details for the memory layer with specific examples",
+      "Add more specific examples of memory storage patterns in Notion/Airtable",
+      "Include a comparison table showing traditional automation vs memory-enabled AI outcomes",
+      "Add more detailed case study metrics beyond the high-level percentages",
+      "Include specific API integration examples for the mentioned tools (Slack, CRM, Make.com, etc.)"
     ]
   }
 }
