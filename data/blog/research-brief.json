@@ -37,21 +37,21 @@
   ],
   "sources": [
     {
+      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+      "type": "Web research",
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
       "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
       "type": "Web research",
-      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
-      "authorityScore": 73,
-      "publishedDate": ""
-    },
-    {
-      "title": "Planning AI Needs Memory, Not Just Automation",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-      "type": "Web research",
-      "supports": "Memory-enabled AI does not eliminate the planner. It changes the planner's role. Planners spend less time searching for context, repeating prior",
-      "authorityScore": 71,
+      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -59,17 +59,26 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Top 15 Logistics AI Use Cases & Examples - AIMultiple",
-      "organization": "aimultiple.com",
-      "url": "https://aimultiple.com/logistics-ai",
+      "title": "Generative AI in Logistics Market Size & Share | Forecasts 2034",
+      "organization": "gminsights.com",
+      "url": "https://www.gminsights.com/industry-analysis/generative-ai-in-logistics-market",
       "type": "Web research",
-      "supports": "## The future of logistics AI operations\n\nAccording to DHL Freight’s Logistics Trends report,12 AI will be at the core of future logistics operations. It will move beyond basic automation to enable dy",
-      "authorityScore": 54,
+      "supports": "Generative AI steers every step of the logistics journey, from the first pickup to the final drop-off, and in the process, it is bending once-stiff networks into agile, self-tuning constellations. By ",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Memory Breakthrough Opens New Possibilities for Supply Chain",
+      "organization": "traxtech.com",
+      "url": "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
+      "type": "Web research",
+      "supports": "## How Faster AI Memory Changes What's Possible in Supply Chain Operations\n\nHere's what supply chain leaders need to understand: memory speed has been the invisible bottleneck holding back more sophis",
+      "authorityScore": 57,
       "publishedDate": ""
     },
     {
@@ -87,34 +96,19 @@
         "prompt"
       ],
       "authorityScore": 83
-    },
-    {
-      "title": "GitHub Docs: GitHub Actions",
-      "organization": "GitHub",
-      "url": "https://docs.github.com/en/actions",
-      "type": "Official documentation",
-      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
-      "tags": [
-        "github",
-        "automation",
-        "workflow",
-        "ci",
-        "deployment"
-      ],
-      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
-    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
     "https://innovecs.com/blog/ai-supply-chain-planning",
-    "https://aimultiple.com/logistics-ai",
-    "https://platform.openai.com/docs/",
-    "https://docs.github.com/en/actions"
+    "https://www.gminsights.com/industry-analysis/generative-ai-in-logistics-market",
+    "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
+    "https://platform.openai.com/docs/"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "4 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -194,21 +188,21 @@
   "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
   "webResearchSources": [
     {
+      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+      "type": "Web research",
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
       "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
       "type": "Web research",
-      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
-      "authorityScore": 73,
-      "publishedDate": ""
-    },
-    {
-      "title": "Planning AI Needs Memory, Not Just Automation",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-      "type": "Web research",
-      "supports": "Memory-enabled AI does not eliminate the planner. It changes the planner's role. Planners spend less time searching for context, repeating prior",
-      "authorityScore": 71,
+      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -216,17 +210,26 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning",
       "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
+      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "Top 15 Logistics AI Use Cases & Examples - AIMultiple",
-      "organization": "aimultiple.com",
-      "url": "https://aimultiple.com/logistics-ai",
+      "title": "Generative AI in Logistics Market Size & Share | Forecasts 2034",
+      "organization": "gminsights.com",
+      "url": "https://www.gminsights.com/industry-analysis/generative-ai-in-logistics-market",
       "type": "Web research",
-      "supports": "## The future of logistics AI operations\n\nAccording to DHL Freight’s Logistics Trends report,12 AI will be at the core of future logistics operations. It will move beyond basic automation to enable dy",
-      "authorityScore": 54,
+      "supports": "Generative AI steers every step of the logistics journey, from the first pickup to the final drop-off, and in the process, it is bending once-stiff networks into agile, self-tuning constellations. By ",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Memory Breakthrough Opens New Possibilities for Supply Chain",
+      "organization": "traxtech.com",
+      "url": "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
+      "type": "Web research",
+      "supports": "## How Faster AI Memory Changes What's Possible in Supply Chain Operations\n\nHere's what supply chain leaders need to understand: memory speed has been the invisible bottleneck holding back more sophis",
+      "authorityScore": 57,
       "publishedDate": ""
     }
   ]
