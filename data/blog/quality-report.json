@@ -1,36 +1,36 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 6,
+    "sourceCount": 4,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
-    "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "trendScore": 58,
+    "marketSentiment": "positive",
+    "marketSentimentScore": 72,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 58/100, sentiment positive."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,43 +85,44 @@
     }
   ],
   "authenticity": {
-    "score": 91,
+    "score": 72,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 72,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 822
+      "wordCount": 403
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The content demonstrates strong expertise and provides practical, actionable guidance for implementing memory-aware AI in logistics",
-      "Well-structured with clear implementation steps, tools, and real business metrics",
-      "Addresses a genuine business problem (lack of context in AI systems) with concrete solutions",
-      "Includes specific KPIs and measurable outcomes (35% reduction in missed leads, 40% improvement in response time)",
-      "Content is well-researched with authoritative sources and demonstrates deep understanding of logistics AI challenges",
-      "Provides specific technical implementation details without being overly complex",
-      "Addresses potential pitfalls and troubleshooting scenarios",
-      "Content aligns well with target audience (founders, operators, service business owners) and search intent (informational)"
+      "The article provides a clear, practical guide to implementing AI automation in industrial design workflows using Launchpad Build AI MLM.",
+      "Content is well-structured with defined steps, tools, and measurable outcomes which aligns with the target intent of an informational expert guide.",
+      "Use of specific metrics (e.g., '65% faster documentation') adds credibility but should be substantiated with case study data or disclaimers if not.",
+      "Integration of authoritative sources supports claims made, though more direct citations or data from Launchpad Build AI's actual usage could strengthen trust.",
+      "Some sections like 'Troubleshooting' and 'Common Mistakes' are brief and could benefit from expanded explanations or examples.",
+      "The tone and style match the intended audience (founders, operators, marketers), but technical depth may vary depending on reader’s familiarity with AI/MLM tools.",
+      "SEO elements such as meta description, title, and keyword usage appear aligned with content, though the SEO audit score indicates room for improvement."
     ],
     "recommendedFixes": [
-      "Consider adding a brief section on cost implications/budget planning for implementation to better serve founder/decision-maker audience",
-      "Add specific examples of integration challenges between different tool types (CRM + AI engines)",
-      "Include a short troubleshooting flowchart for common implementation issues",
-      "Consider adding specific API integration examples for the mentioned tools (Zapier/Make integration patterns)",
-      "Add a brief comparison table of different AI workflow platforms for quick reference",
-      "Include estimated resource requirements (time, personnel, technical requirements) for the 2-4 week implementation timeline"
+      "Add real-world examples or anonymized client results to support performance claims (e.g., 65% time reduction).",
+      "Expand the 'Troubleshooting' section with actionable code snippets or configuration tips where applicable.",
+      "Include visual assets like workflow diagrams or checklists to improve engagement and clarify complex processes.",
+      "Clarify how Launchpad Build AI MLM integrates with CRMs or GitHub Actions with sample configurations or API patterns.",
+      "Improve internal linking strategy by connecting to other relevant guides or service pages with contextual anchor text.",
+      "Address potential concerns around data privacy, model accuracy, or compliance when using AI-generated outputs in regulated industries.",
+      "Optimize for featured snippets by rephrasing key takeaways or FAQs in direct question/answer formats where possible.",
+      "Ensure all external source links are current and relevant; consider adding inline citations for stronger E-E-A-T alignment."
     ]
   }
 }
