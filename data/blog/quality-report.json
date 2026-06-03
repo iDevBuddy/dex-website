@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,26 +85,47 @@
     }
   ],
   "authenticity": {
-    "score": 74,
+    "score": 77,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 452
+      "wordCount": 693
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
+    "helpfulContentRisk": "LOW",
+    "notes": [
+      "The article provides a clear, practical guide to implementing memory-enabled AI in logistics operations, with concrete examples and workflows.",
+      "Strong technical implementation details including tools (Slack, OpenAI API, Notion/Airtable, Zapier/Make) and step-by-step workflows.",
+      "Addresses key concerns like approval steps, quality checks, and measurable business outcomes which adds credibility and practical value.",
+      "Content is well-structured with key takeaways, direct answer, practical explanation, use case, workflow steps, and expert insights.",
+      "Includes important elements like common mistakes, troubleshooting tips, and implementation checklist that enhance usability.",
+      "SEO elements are present but could be improved - meta description is repetitive, target keyword usage could be optimized, and internal linking is minimal.",
+      "Content focuses on a specific logistics use case but maintains broad applicability to other business automation scenarios.",
+      "Sources are authoritative and relevant, supporting claims with data from logisticsviewpoints.com, OpenAI, and GitHub."
+    ],
+    "recommendedFixes": [
+      "Optimize meta description to be more compelling and less repetitive - current version repeats the title twice",
+      "Add more internal links to related content beyond just the three mentioned",
+      "Include more specific keyword variations in headers and content (e.g., 'AI memory retention', 'contextual AI workflows')",
+      "Add a brief conclusion section to reinforce main points and improve dwell time",
+      "Consider adding a comparison table of tools (Slack vs alternatives, Notion vs Airtable) for better engagement",
+      "Include a visual workflow diagram to improve comprehension and time on page",
+      "Add a downloadable checklist or resource as suggested in media recommendations",
+      "Include more specific metrics and timeframes in the success measurement section",
+      "Add a section on cost-benefit analysis or ROI calculation for implementing memory-enabled AI",
+      "Include mobile-responsive formatting considerations for better user experience"
+    ]
   }
 }
