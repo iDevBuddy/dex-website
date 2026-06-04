@@ -1,12 +1,12 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 5,
+    "sourceCount": 6,
     "minSources": 2,
     "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
@@ -20,17 +20,17 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 77,
+    "score": 84,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,32 +94,31 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 684
+      "wordCount": 755
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": 0.85,
     "notes": [
-      "The article provides a detailed, practical guide to building memory-aware AI workflows in logistics, which is highly relevant and valuable for the target audience.",
-      "Content demonstrates strong expertise in AI automation and workflow design, aligning well with the 'practical_workflow' authority angle.",
-      "The article includes a real-world case study with specific metrics (85% reduction in missed leads, 87.5% improvement in response time), which adds credibility.",
-      "The content is well-structured with clear steps, tools, and implementation advice, making it actionable for the target reader.",
-      "Some sections like 'Practical Explanation' and 'Expert Insight' could be expanded to provide more depth and context to reduce the risk of being flagged for 'AI-generated' content.",
-      "The article could benefit from more varied sentence structure and deeper explanation in key sections to improve human-written content quality signals."
+      "The article provides a comprehensive guide on implementing AI with memory for logistics viewpoints, which is highly relevant and practical",
+      "Content demonstrates clear expertise with structured workflows, tools, and implementation checklists",
+      "Addresses business problems directly with specific solutions like support triage workflow with measurable KPIs",
+      "Good use of authoritative sources and proper internal linking to related content",
+      "Content is information-dense but well-structured with clear implementation steps and troubleshooting advice",
+      "Addresses common mistakes and includes a failure handling section which adds practical value",
+      "Could improve by adding more specific examples or case studies of the memory layer in action"
     ],
     "recommendedFixes": [
-      "Expand the 'Practical Explanation' section with more detailed examples of how memory-aware AI solves specific logistics problems.",
-      "Add more context to the 'Expert Insight' section, such as specific challenges faced in logistics operations and how memory-aware AI addresses them.",
-      "Include more varied sentence structures and transitional phrases to improve the natural flow of the content.",
-      "Add a brief conclusion that ties the technical steps to real business impact, helping readers understand the 'why' behind the implementation.",
-      "Consider adding a short section on potential pitfalls or lessons learned to provide additional value and demonstrate practical experience.",
-      "Enhance the 'Common Mistakes' section with specific examples from real implementations to provide more context and practical insights."
+      "Add a brief case study or example of the memory layer improving outcomes in a real-world scenario",
+      "Include a visual diagram of the workflow to improve clarity and engagement",
+      "Add a downloadable checklist or implementation template as a supporting asset",
+      "Consider adding a comparison of before/after metrics to highlight business impact"
     ]
   }
 }

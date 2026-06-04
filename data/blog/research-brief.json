@@ -37,90 +37,71 @@
   ],
   "sources": [
     {
-      "title": "OpenAI Platform Documentation",
-      "organization": "OpenAI",
-      "url": "https://platform.openai.com/docs/",
-      "type": "Official documentation",
-      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
-      "tags": [
-        "ai",
-        "llm",
-        "agents",
-        "automation",
-        "workflow",
-        "prompt"
-      ],
-      "authorityScore": 83
+      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+      "type": "Web research",
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
+      "publishedDate": ""
     },
     {
-      "title": "GitHub Docs: GitHub Actions",
-      "organization": "GitHub",
-      "url": "https://docs.github.com/en/actions",
-      "type": "Official documentation",
-      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
-      "tags": [
-        "github",
-        "automation",
-        "workflow",
-        "ci",
-        "deployment"
-      ],
-      "authorityScore": 83
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
+      "type": "Web research",
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
+      "publishedDate": ""
     },
     {
-      "title": "The State of AI",
-      "organization": "McKinsey & Company",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "type": "Industry report",
-      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
-      "tags": [
-        "ai",
-        "business",
-        "trend",
-        "strategy"
-      ],
-      "authorityScore": 80
+      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
+      "type": "Web research",
+      "supports": "Artificial Intelligence | By Steve Ross • 06/12/2025\n\nThe complexity of running the warehouse only continues to increase. Supply chain leaders face macro-challenges such as the pressure for sustainabi",
+      "authorityScore": 66,
+      "publishedDate": ""
     },
     {
-      "title": "Microsoft Learn: Azure AI Services",
-      "organization": "Microsoft",
-      "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
-      "type": "Official documentation",
-      "supports": "Supports claims about practical AI service patterns, responsible deployment, and AI workflow building blocks.",
-      "tags": [
-        "ai",
-        "automation",
-        "workflow",
-        "business",
-        "agents"
-      ],
-      "authorityScore": 79
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
+      "type": "Web research",
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
+      "publishedDate": ""
     },
     {
-      "title": "IBM: What Is Workflow Automation?",
-      "organization": "IBM",
-      "url": "https://www.ibm.com/topics/workflow-automation",
-      "type": "Industry explainer",
-      "supports": "Defines workflow automation and provides business context for improving repeatable operational processes.",
-      "tags": [
-        "workflow",
-        "automation",
-        "business",
-        "operations"
-      ],
-      "authorityScore": 76
+      "title": "AI Memory Breakthrough Opens New Possibilities for Supply Chain",
+      "organization": "traxtech.com",
+      "url": "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
+      "type": "Web research",
+      "supports": "## How Faster AI Memory Changes What's Possible in Supply Chain Operations\n\nHere's what supply chain leaders need to understand: memory speed has been the invisible bottleneck holding back more sophis",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI and Automation: Comprehensive Best Practices and Guide | WorkDone.AI",
+      "organization": "workdone.ai",
+      "url": "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide",
+      "type": "Web research",
+      "supports": "### Defining AI and Automation\n\nArtificial Intelligence (AI) refers to technologies that enhance machine capabilities, allowing them to handle complex tasks like problem-solving. Automation, meanwhile",
+      "authorityScore": 95,
+      "publishedDate": ""
     }
   ],
   "sourcesToCite": [
-    "https://platform.openai.com/docs/",
-    "https://docs.github.com/en/actions",
-    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-    "https://learn.microsoft.com/en-us/azure/ai-services/",
-    "https://www.ibm.com/topics/workflow-automation"
+    "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
+    "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
+    "https://innovecs.com/blog/ai-supply-chain-planning",
+    "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
+    "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -134,7 +115,7 @@
   "trendAnalysis": {
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 59,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -143,11 +124,11 @@
     "realtimeSignals": [
       {
         "source": "Google News",
-        "title": "The Autonomous Supply Chain Is Emerging: Insights from BlueYonder ICON 2026 - Logistics Viewpoints"
+        "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints"
       },
       {
         "source": "Google News",
-        "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints"
+        "title": "The Autonomous Supply Chain Is Emerging: Insights from BlueYonder ICON 2026 - Logistics Viewpoints"
       },
       {
         "source": "Google News",
@@ -163,15 +144,15 @@
       },
       {
         "source": "Google News",
-        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
+        "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
+        "title": "The Infinite AI Compute Loop: HBM Big Three + TSMC × NVIDIA × OpenAI Shaping the Next-Generation Industry Chain - semivision"
       },
       {
         "source": "Google News",
-        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
+        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
       }
     ],
     "realtimeSources": [
@@ -197,5 +178,61 @@
   "businessFunction": "General",
   "authorityAngle": "practical_workflow",
   "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
-  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
+  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
+  "webResearchSources": [
+    {
+      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
+      "type": "Web research",
+      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+      "authorityScore": 81,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
+      "type": "Web research",
+      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
+      "authorityScore": 73,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
+      "organization": "logisticsviewpoints.com",
+      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
+      "type": "Web research",
+      "supports": "Artificial Intelligence | By Steve Ross • 06/12/2025\n\nThe complexity of running the warehouse only continues to increase. Supply chain leaders face macro-challenges such as the pressure for sustainabi",
+      "authorityScore": 66,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
+      "type": "Web research",
+      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Memory Breakthrough Opens New Possibilities for Supply Chain",
+      "organization": "traxtech.com",
+      "url": "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
+      "type": "Web research",
+      "supports": "## How Faster AI Memory Changes What's Possible in Supply Chain Operations\n\nHere's what supply chain leaders need to understand: memory speed has been the invisible bottleneck holding back more sophis",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI and Automation: Comprehensive Best Practices and Guide | WorkDone.AI",
+      "organization": "workdone.ai",
+      "url": "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide",
+      "type": "Web research",
+      "supports": "### Defining AI and Automation\n\nArtificial Intelligence (AI) refers to technologies that enhance machine capabilities, allowing them to handle complex tasks like problem-solving. Automation, meanwhile",
+      "authorityScore": 95,
+      "publishedDate": ""
+    }
+  ]
 }
