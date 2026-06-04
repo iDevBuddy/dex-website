@@ -37,71 +37,90 @@
   ],
   "sources": [
     {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-      "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
-      "publishedDate": ""
+      "title": "OpenAI Platform Documentation",
+      "organization": "OpenAI",
+      "url": "https://platform.openai.com/docs/",
+      "type": "Official documentation",
+      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "automation",
+        "workflow",
+        "prompt"
+      ],
+      "authorityScore": 83
     },
     {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
-      "type": "Web research",
-      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
-      "authorityScore": 95,
-      "publishedDate": ""
+      "title": "GitHub Docs: GitHub Actions",
+      "organization": "GitHub",
+      "url": "https://docs.github.com/en/actions",
+      "type": "Official documentation",
+      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
+      "tags": [
+        "github",
+        "automation",
+        "workflow",
+        "ci",
+        "deployment"
+      ],
+      "authorityScore": 83
     },
     {
-      "title": "AI Needs Memory - Here's How It Works - YouTube",
-      "organization": "youtube.com",
-      "url": "https://www.youtube.com/watch?v=IfNhL71jqYs",
-      "type": "Web research",
-      "supports": "Abstract // I'll explore the foundational decisions that determine whether AI agents deliver lasting value or become expensive technical",
-      "authorityScore": 95,
-      "publishedDate": ""
+      "title": "The State of AI",
+      "organization": "McKinsey & Company",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "type": "Industry report",
+      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
+      "tags": [
+        "ai",
+        "business",
+        "trend",
+        "strategy"
+      ],
+      "authorityScore": 80
     },
     {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
-      "type": "Web research",
-      "supports": "This week's news roundup highlights the transformative impact of AI integration, autonomous robotics, and strategic visions on the future of supply chains.",
-      "authorityScore": 95,
-      "publishedDate": ""
+      "title": "Microsoft Learn: Azure AI Services",
+      "organization": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
+      "type": "Official documentation",
+      "supports": "Supports claims about practical AI service patterns, responsible deployment, and AI workflow building blocks.",
+      "tags": [
+        "ai",
+        "automation",
+        "workflow",
+        "business",
+        "agents"
+      ],
+      "authorityScore": 79
     },
     {
-      "title": "AI Logistics Automation Strategies for Business Growth | LogiNext",
-      "organization": "loginextsolutions.com",
-      "url": "https://www.loginextsolutions.com/blog/ai-logistics-software-for-business-growth-automation-strategies-that-work",
-      "type": "Web research",
-      "supports": "– Customization: Can it adapt to your specific workflows?\n\n– Integration Capabilities: Does it connect with your existing software stack?\n\n– Scalability: Will it grow with your business?\n\n– Support an",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
-      "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
-      "authorityScore": 95,
-      "publishedDate": ""
+      "title": "IBM: What Is Workflow Automation?",
+      "organization": "IBM",
+      "url": "https://www.ibm.com/topics/workflow-automation",
+      "type": "Industry explainer",
+      "supports": "Defines workflow automation and provides business context for improving repeatable operational processes.",
+      "tags": [
+        "workflow",
+        "automation",
+        "business",
+        "operations"
+      ],
+      "authorityScore": 76
     }
   ],
   "sourcesToCite": [
-    "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
-    "https://www.youtube.com/watch?v=IfNhL71jqYs",
-    "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
-    "https://www.loginextsolutions.com/blog/ai-logistics-software-for-business-growth-automation-strategies-that-work",
-    "https://innovecs.com/blog/ai-supply-chain-planning"
+    "https://platform.openai.com/docs/",
+    "https://docs.github.com/en/actions",
+    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+    "https://learn.microsoft.com/en-us/azure/ai-services/",
+    "https://www.ibm.com/topics/workflow-automation"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -115,7 +134,7 @@
   "trendAnalysis": {
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 62,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -144,15 +163,15 @@
       },
       {
         "source": "Google News",
-        "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
+        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
       },
       {
         "source": "Google News",
-        "title": "The Infinite AI Compute Loop: HBM Big Three + TSMC × NVIDIA × OpenAI Shaping the Next-Generation Industry Chain - semivision"
+        "title": "Agentic AI: Greater Capabilities and Enhanced Risks - Reuters"
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
+        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
       }
     ],
     "realtimeSources": [
@@ -178,61 +197,5 @@
   "businessFunction": "General",
   "authorityAngle": "practical_workflow",
   "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
-  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
-  "webResearchSources": [
-    {
-      "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-      "type": "Web research",
-      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
-      "type": "Web research",
-      "supports": "### AI-Assisted Routing and Load Matching\n\nTransportation teams used AI to identify alternates during disruptions rather than manually rebuilding plans. AI proved especially effective in situations in",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Needs Memory - Here's How It Works - YouTube",
-      "organization": "youtube.com",
-      "url": "https://www.youtube.com/watch?v=IfNhL71jqYs",
-      "type": "Web research",
-      "supports": "Abstract // I'll explore the foundational decisions that determine whether AI agents deliver lasting value or become expensive technical",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
-      "type": "Web research",
-      "supports": "This week's news roundup highlights the transformative impact of AI integration, autonomous robotics, and strategic visions on the future of supply chains.",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Logistics Automation Strategies for Business Growth | LogiNext",
-      "organization": "loginextsolutions.com",
-      "url": "https://www.loginextsolutions.com/blog/ai-logistics-software-for-business-growth-automation-strategies-that-work",
-      "type": "Web research",
-      "supports": "– Customization: Can it adapt to your specific workflows?\n\n– Integration Capabilities: Does it connect with your existing software stack?\n\n– Scalability: Will it grow with your business?\n\n– Support an",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
-      "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
-      "authorityScore": 95,
-      "publishedDate": ""
-    }
-  ]
+  "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
 }
