@@ -73,12 +73,12 @@
       "publishedDate": ""
     },
     {
-      "title": "Industry Insights: AI in Logistics | Reshaping How Goods Move ...",
+      "title": "AI in Logistics: Reshaping How Goods Move Globally",
       "organization": "automate.org",
       "url": "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
       "type": "Web research",
       "supports": "“Logistics operations need more than just automation; they require solutions that embrace the industry's dynamic nature — from shifting workflows and peak seasons to evolving customer demands,” Amel A",
-      "authorityScore": 67,
+      "authorityScore": 68,
       "publishedDate": ""
     },
     {
@@ -152,7 +152,7 @@
       },
       {
         "source": "Google News",
-        "title": "What Supply Chain Leaders Need to Understand About MCP, A2A, and Graph-Enhanced AI - Logistics Viewpoints"
+        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
       }
     ],
     "realtimeSources": [
@@ -217,12 +217,12 @@
       "publishedDate": ""
     },
     {
-      "title": "Industry Insights: AI in Logistics | Reshaping How Goods Move ...",
+      "title": "AI in Logistics: Reshaping How Goods Move Globally",
       "organization": "automate.org",
       "url": "https://www.automate.org/ai/industry-insights/ai-in-logistics-and-supply-chain",
       "type": "Web research",
       "supports": "“Logistics operations need more than just automation; they require solutions that embrace the industry's dynamic nature — from shifting workflows and peak seasons to evolving customer demands,” Amel A",
-      "authorityScore": 67,
+      "authorityScore": 68,
       "publishedDate": ""
     },
     {
@@ -233,50 +233,6 @@
       "supports": "## How Faster AI Memory Changes What's Possible in Supply Chain Operations\n\nHere's what supply chain leaders need to understand: memory speed has been the invisible bottleneck holding back more sophis",
       "authorityScore": 57,
       "publishedDate": ""
-    }
-  ],
-  "practicalExamples": [
-    {
-      "title": "Slack Intake Workflow",
-      "description": "Automate ticket creation from Slack messages using AI to categorize and assign priority levels before routing to the appropriate team member.",
-      "tools": [
-        "Slack API",
-        "OpenAI GPT models",
-        "Zapier or Make.com for integration"
-      ],
-      "benefits": [
-        "Reduces manual triage time",
-        "Improves response accuracy",
-        "Maintains audit trail"
-      ]
-    },
-    {
-      "title": "CRM Follow-up Workflow",
-      "description": "Use AI to analyze customer interactions and automatically draft personalized follow-up emails based on conversation history and deal stage.",
-      "tools": [
-        "Salesforce or HubSpot APIs",
-        "OpenAI Completions API",
-        "GitHub Actions for scheduling"
-      ],
-      "benefits": [
-        "Increases engagement rates",
-        "Saves sales rep time",
-        "Ensures consistent messaging"
-      ]
-    },
-    {
-      "title": "Support Triage Workflow",
-      "description": "Implement an AI agent that reads incoming support tickets, assigns severity tags, and routes them to the correct department with suggested responses.",
-      "tools": [
-        "Zendesk or Freshdesk API",
-        "Azure AI Services",
-        "Custom Python scripts"
-      ],
-      "benefits": [
-        "Reduces resolution time",
-        "Improves customer satisfaction",
-        "Maintains quality control"
-      ]
     }
   ]
 }
