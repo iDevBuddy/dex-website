@@ -1,7 +1,7 @@
 {
   "score": 88,
-  "strictPassed": true,
-  "passed": true,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -26,7 +26,7 @@
     "autoNewsAllowed": false,
     "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,49 +85,45 @@
     }
   ],
   "authenticity": {
-    "score": 76,
-    "passed": true,
+    "score": 60,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 79,
       "sourceAlignment": 100,
       "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 652
+      "wordCount": 569
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "MEDIUM",
     "notes": [
-      "The article provides a clear, practical workflow for implementing AI automation with memory layers, which is highly relevant and valuable for the target audience.",
-      "Content demonstrates strong expertise with detailed steps, tools, and implementation advice.",
-      "Use of structured subheadings and actionable content improves readability and user engagement.",
-      "Some sections like 'Practical Explanation' and 'Business Use Case' are strong, but could be enhanced with more specific examples or data.",
-      "The article aligns well with the target keyword and search intent, providing informational content that addresses a specific logistics and business automation problem.",
-      "Use of quotes and expert insights adds authority, but could be expanded for stronger credibility.",
-      "The content could benefit from more specific, real-world examples or case studies to reduce genericness and increase helpfulness.",
-      "The inclusion of implementation checklists and troubleshooting steps provides practical value.",
-      "Mentions of tools like Slack, Notion, Zapier, and Make.com offer clear implementation paths for users.",
-      "Could improve by adding more specific logistics use cases or failure stories to increase relevance and depth."
+      "The article provides a practical, structured approach to implementing AI memory in logistics workflows, which aligns well with the informational search intent.",
+      "Content demonstrates clear expertise with specific tools (Slack, Make.com/Zapier, CRM) and a detailed step-by-step implementation guide.",
+      "Addresses a genuine business problem (lack of context in generic AI tools) with a concrete solution (structured operational context with memory layer).",
+      "Content includes structured data like key takeaways, direct answer, implementation checklists, and troubleshooting tips which improves user experience.",
+      "Use of footnotes and authoritative sources adds credibility, though some citations ([^1], [^2]) lack proper attribution in the body content.",
+      "The article could improve by expanding on specific technical implementation details for the AI memory layer and providing more depth on how the memory system maintains structured operational context.",
+      "Some sections like 'Practical Explanation' and 'Expert Insight' are very brief and could be expanded for better reader value.",
+      "The 'Tools' section lists the required tools but doesn't explain their specific roles in the memory layer implementation, which could add clarity for readers."
     ],
     "recommendedFixes": [
-      "Add specific, real-world examples or mini-case studies to illustrate the implementation of memory layers in logistics or service businesses.",
-      "Include more data or statistics to support claims about business impact and outcomes.",
-      "Expand on the expert insight with additional quotes or references to authoritative sources for stronger credibility.",
-      "Clarify the logistics viewpoint with specific examples from the industry to reduce genericness.",
-      "Add a section on common pitfalls in logistics automation and how memory layers specifically address them.",
-      "Enhance the 'Business Use Case' section with more detailed steps or results to show clear value.",
-      "Consider adding a short summary or visual (like an info-graphic or workflow diagram) to improve skimmability and reinforce key points.",
-      "Link back to the logistics angle more explicitly throughout the article to strengthen the connection to the target keyword and theme.",
-      "Add more specific examples of memory layers in action to illustrate the concept concretely.",
-      "Include a stronger call to action or next steps for readers to implement the workflow in their own businesses."
+      "Expand the 'Practical Explanation' section with more detailed examples of how AI memory maintains structured operational context in logistics scenarios.",
+      "Clarify the technical implementation of the memory layer with specific examples or code snippets where relevant.",
+      "Add more detailed explanations in the 'Expert Insight' section to justify the citations and provide more value to readers.",
+      "Include a workflow diagram as a visual asset to illustrate the AI memory implementation process.",
+      "Add an infographic summarizing the key takeaways and implementation steps for better content engagement.",
+      "Ensure all citations have proper attributions in the body text and consider adding inline citations for better credibility.",
+      "Expand on how specific tools like Slack, Make.com/Zapier, and CRM integrate with the AI memory layer.",
+      "Include a downloadable checklist as a content asset for readers to implement the workflow in their own businesses."
     ]
   }
 }
