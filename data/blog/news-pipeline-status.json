@@ -1,7 +1,7 @@
 {
   "ok": false,
   "failSoft": true,
-  "message": "fetch failed",
+  "message": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}",
   "nextAction": "Draft artifacts were preserved when available. Improve SEO/content or approve manually after review.",
-  "generatedAt": "2026-06-04T23:21:02.759Z"
+  "generatedAt": "2026-06-05T02:58:32.332Z"
 }
