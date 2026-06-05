@@ -1,32 +1,32 @@
 {
   "score": 88,
-  "strictPassed": false,
-  "passed": false,
+  "strictPassed": true,
+  "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 54,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 72,
+    "trendScore": 52,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 54/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 52/100, sentiment neutral."
   },
-  "publishMode": "rewrite_required",
+  "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,42 +85,39 @@
     }
   ],
   "authenticity": {
-    "score": 42,
-    "passed": false,
+    "score": 76,
+    "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 96,
-      "businessRelevance": 79,
+      "specificity": 100,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 72,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
-      "fillerHits": 1,
-      "wordCount": 643
+      "fillerHits": 0,
+      "wordCount": 617
     },
-    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
-    "blockingIssue": "Authenticity score below publishing threshold."
+    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+    "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 8,
+    "helpfulContentRisk": "High - The article provides specific, actionable guidance for implementing Google AI Max in business workflows. However, there are some concerns about the accuracy of claims and potential for misleading readers.",
     "notes": [
-      "The article provides a detailed guide on implementing Launchpad Build AI's MLM for industrial automation design workflows",
-      "Content is well-structured with clear step-by-step instructions and practical business use cases",
-      "Addresses common mistakes and troubleshooting scenarios which adds value for readers",
-      "Includes expert insights and key takeaways that enhance credibility",
-      "Provides specific tools, KPIs, and implementation checklists that increase practical utility",
-      "Good balance between technical implementation and business outcomes"
+      "The article makes several specific claims about Google AI Max expanding beyond search into shopping and travel, but the provided sources do not clearly support this expansion. The official Google announcement (blog.google source) only discusses AI Max for Search campaigns, not expansion into shopping/travel.",
+      "The title and slug reference a 'Digiday' article about AI Max expanding upstream, but this framing appears to conflate Google's AI Max search product with a separate Digiday report about ad automation trends. This could mislead readers about the product's capabilities.",
+      "The workflow described is practical and well-structured, but the foundational premise about AI Max's expanded capabilities may be overstated.",
+      "The article uses a high-authority 'Business Automation Expert' voice and includes implementation details that feel credible, which may lead readers to trust the (potentially inaccurate) claims about the product's features.",
+      "The sources cited are real and authoritative, but they don't support the claims about AI Max's expanded capabilities. The article should clarify what AI Max can actually do today (search automation) versus future roadmap items."
     ],
     "recommendedFixes": [
-      "Add more specific examples or case studies to demonstrate real-world applications",
-      "Include more detailed technical specifications about how Launchpad Build AI's MLM integrates with existing systems",
-      "Expand on the approval workflow with concrete examples of what constitutes a 'quality check'",
-      "Provide more context on how to measure 'error reduction' and 'design time saved' with baseline metrics",
-      "Add a visual workflow diagram to complement the textual step-by-step guide",
-      "Include a comparison table showing traditional vs. AI-enhanced workflows to highlight business impact",
-      "Add a troubleshooting section with more detailed failure handling procedures"
+      "Clarify in the introduction that AI Max is currently only available for search automation, not expanded into shopping/travel as implied. The official Google source only discusses AI Max for Search campaigns.",
+      "Adjust the title and slug to be more precise: 'How to Use Google AI Max for Search Automation Workflows' to avoid implying the tool can work in other contexts (shopping, travel) that are not supported by the current product.",
+      "Reframe the 'shift upstream' language to reflect that this is a report about where the industry is heading, not a current capability of AI Max.",
+      "Add a disclaimer that Google AI Max is currently only available for search use cases, with new applications in shopping and travel being speculative or future roadmap items not yet available.",
+      "Verify each capability mentioned against the official Google documentation (which only mentions Search campaigns) and adjust the article's scope accordingly."
     ]
   }
 }
