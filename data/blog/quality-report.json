@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 52,
+    "trendScore": 68,
     "marketSentiment": "neutral",
     "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 52/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -98,26 +98,36 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 617
+      "wordCount": 652
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "High - The article provides specific, actionable guidance for implementing Google AI Max in business workflows. However, there are some concerns about the accuracy of claims and potential for misleading readers.",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article makes several specific claims about Google AI Max expanding beyond search into shopping and travel, but the provided sources do not clearly support this expansion. The official Google announcement (blog.google source) only discusses AI Max for Search campaigns, not expansion into shopping/travel.",
-      "The title and slug reference a 'Digiday' article about AI Max expanding upstream, but this framing appears to conflate Google's AI Max search product with a separate Digiday report about ad automation trends. This could mislead readers about the product's capabilities.",
-      "The workflow described is practical and well-structured, but the foundational premise about AI Max's expanded capabilities may be overstated.",
-      "The article uses a high-authority 'Business Automation Expert' voice and includes implementation details that feel credible, which may lead readers to trust the (potentially inaccurate) claims about the product's features.",
-      "The sources cited are real and authoritative, but they don't support the claims about AI Max's expanded capabilities. The article should clarify what AI Max can actually do today (search automation) versus future roadmap items."
+      "The article provides a clear, practical workflow for implementing AI automation with memory layers, which is highly relevant and valuable for the target audience.",
+      "Content demonstrates strong expertise with detailed steps, tools, and implementation advice.",
+      "Use of structured subheadings and actionable content improves readability and user engagement.",
+      "Some sections like 'Practical Explanation' and 'Business Use Case' are strong, but could be enhanced with more specific examples or data.",
+      "The article aligns well with the target keyword and search intent, providing informational content that addresses a specific logistics and business automation problem.",
+      "Use of quotes and expert insights adds authority, but could be expanded for stronger credibility.",
+      "The content could benefit from more specific, real-world examples or case studies to reduce genericness and increase helpfulness.",
+      "The inclusion of implementation checklists and troubleshooting steps provides practical value.",
+      "Mentions of tools like Slack, Notion, Zapier, and Make.com offer clear implementation paths for users.",
+      "Could improve by adding more specific logistics use cases or failure stories to increase relevance and depth."
     ],
     "recommendedFixes": [
-      "Clarify in the introduction that AI Max is currently only available for search automation, not expanded into shopping/travel as implied. The official Google source only discusses AI Max for Search campaigns.",
-      "Adjust the title and slug to be more precise: 'How to Use Google AI Max for Search Automation Workflows' to avoid implying the tool can work in other contexts (shopping, travel) that are not supported by the current product.",
-      "Reframe the 'shift upstream' language to reflect that this is a report about where the industry is heading, not a current capability of AI Max.",
-      "Add a disclaimer that Google AI Max is currently only available for search use cases, with new applications in shopping and travel being speculative or future roadmap items not yet available.",
-      "Verify each capability mentioned against the official Google documentation (which only mentions Search campaigns) and adjust the article's scope accordingly."
+      "Add specific, real-world examples or mini-case studies to illustrate the implementation of memory layers in logistics or service businesses.",
+      "Include more data or statistics to support claims about business impact and outcomes.",
+      "Expand on the expert insight with additional quotes or references to authoritative sources for stronger credibility.",
+      "Clarify the logistics viewpoint with specific examples from the industry to reduce genericness.",
+      "Add a section on common pitfalls in logistics automation and how memory layers specifically address them.",
+      "Enhance the 'Business Use Case' section with more detailed steps or results to show clear value.",
+      "Consider adding a short summary or visual (like an info-graphic or workflow diagram) to improve skimmability and reinforce key points.",
+      "Link back to the logistics angle more explicitly throughout the article to strengthen the connection to the target keyword and theme.",
+      "Add more specific examples of memory layers in action to illustrate the concept concretely.",
+      "Include a stronger call to action or next steps for readers to implement the workflow in their own businesses."
     ]
   }
 }

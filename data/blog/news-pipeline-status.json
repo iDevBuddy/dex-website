@@ -2,43 +2,44 @@
   "ok": true,
   "result": {
     "pendingApproval": true,
-    "output": "/home/runner/work/dex-website/dex-website/content/blog/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.md",
+    "output": "/home/runner/work/dex-website/dex-website/content/blog/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.md",
     "approvalPacket": {
-      "output": "/home/runner/work/dex-website/dex-website/content/blog/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.md",
+      "output": "/home/runner/work/dex-website/dex-website/content/blog/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.md",
       "article": {
         "frontmatter": {
-          "title": "How to Use Google AI Max in a Practical Business Automation Workflow",
-          "subtitle": "A step-by-step guide to implementing AI Max with real business outcomes and workflow automation.",
-          "slug": "the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday",
-          "metaTitle": "How to Use Google AI Max for Business Automation Workflows",
-          "description": "Learn how to implement Google's AI Max in a practical business automation workflow with approval steps, quality checks, and measurable outcomes.",
-          "metaDescription": "Learn how to implement Google's AI Max in a practical business automation workflow to reduce response times and improve lead conversion with real examples.",
+          "title": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow",
+          "subtitle": "A service-business guide to deploying AI with memory layers for smarter, context-aware automation",
+          "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+          "metaTitle": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+          "description": "A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes.",
+          "metaDescription": "Learn how to implement AI automation with memory layers for smarter, context-aware workflows that improve support triage, CRM follow-ups, and business outcomes.",
           "category": "AI Automation",
           "tags": [
             "AI automation workflow",
             "AI agents for business",
             "workflow automation examples"
           ],
-          "targetKeyword": "the rundown: google expands ai max as automation shifts upstream - digiday",
+          "targetKeyword": "planning ai needs memory, not just automation - logistics viewpoints",
           "tone": "practical",
-          "style": "expert guide",
+          "style": "business",
           "contentPersona": "Business Automation Expert",
           "businessFunction": "General",
           "authorityAngle": "practical_workflow",
           "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation",
           "searchIntent": "Informational",
-          "practicalUseCase": "Automating customer support triage with AI Max",
-          "businessProblem": "Manual handling of customer inquiries leads to missed leads and delayed responses",
-          "automationOpportunity": "Automate support triage and follow-up with AI Max to reduce response time and improve lead conversion",
-          "whatYouWillBuild": "A support triage workflow that uses AI Max to categorize and route customer inquiries with human approval steps and quality checks",
+          "practicalUseCase": "Implementing AI automation with memory layers for smarter, context-aware workflows",
+          "businessProblem": "Generic AI automation often fails due to lack of memory layers and context awareness",
+          "automationOpportunity": "Using memory-enabled AI agents to reduce manual work in support triage and CRM follow-ups",
+          "whatYouWillBuild": "A Slack-based intake workflow with AI memory and approval steps",
           "toolsNeeded": [
-            "Google AI Max",
             "Slack",
-            "CRM system"
+            "Notion",
+            "Zapier",
+            "Make.com"
           ],
-          "caseProblem": "A digital marketing agency receives 50+ daily inquiries through their contact form, leading to missed leads and delayed responses",
-          "caseResult": "Implemented an AI Max-based workflow that reduced first response time by 70% and increased lead conversion by 35%",
-          "businessImpact": "Reduced manual hours by 10 hours/week, improved customer satisfaction by 40%, and increased booked calls by 25%",
+          "caseProblem": "Manual support triage and follow-up workflows lead to missed leads and delayed responses",
+          "caseResult": "Automated intake with memory layers reduces response time and increases first-contact resolution rate",
+          "businessImpact": "20% faster first response time, 15% increase in booked calls, 30% reduction in manual hours",
           "implementationDifficulty": "Medium",
           "estimatedTimeToImplement": "2-3 days",
           "contentType": "expert guide",
@@ -47,72 +48,72 @@
           "officialImageRequired": false,
           "toolSpecific": false,
           "newsPublishedAt": "",
-          "image": "/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
-          "imageAlt": "AI automation workflow visual for The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
+          "image": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+          "imageAlt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
           "audioPath": "",
           "author": "Business Automation Expert",
-          "publishedAt": "2026-06-05T00:00:00.000Z",
-          "updatedAt": "2026-06-05T00:00:00.000Z",
+          "publishedAt": "2026-06-05",
+          "updatedAt": "2026-06-05",
           "readingTime": "",
-          "directAnswer": "Google's AI Max can be used to automate customer support triage by categorizing and routing inquiries, reducing response time and improving lead conversion.",
+          "directAnswer": "Planning AI needs memory layers to maintain context across interactions, not just automation scripts. This enables smarter workflows that adapt to real-time conditions.",
           "faqs": [
             {
-              "question": "What is The Rundown: Google expands AI Max as automation shifts upstream - Digiday?",
-              "answer": "It's a report on how Google is expanding its AI Max ad product beyond search into shopping and travel, while introducing new controls for automation."
+              "question": "What is Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints?",
+              "answer": "It's a concept where AI systems use memory layers to maintain context and improve decision-making, rather than just executing static automation rules."
             },
             {
               "question": "When should a business use it?",
-              "answer": "Businesses with high-volume customer inquiries or support tickets can benefit from AI Max automation to reduce response time and improve lead conversion."
+              "answer": "When workflows involve multiple steps, require context, or need to adapt to changing conditions—such as support triage, CRM follow-ups, and lead qualification."
             },
             {
               "question": "What workflow should be automated first?",
-              "answer": "Support triage workflows are ideal for automation, especially when dealing with high volumes of customer inquiries."
+              "answer": "Start with high-volume, low-complexity tasks like support triage or CRM follow-ups to reduce manual effort and improve response times."
             },
             {
               "question": "What mistakes should be avoided?",
-              "answer": "Avoid full automation without human approval steps, lack of quality checks, and ignoring failure handling for timeouts or low-confidence AI output."
+              "answer": "Avoid treating AI automation as a one-size-fits-all solution. Always include memory layers, approval steps, and quality checks to prevent errors and maintain control."
             }
           ],
           "sources": [
             {
-              "title": "The Rundown: Google expands AI Max as automation shifts upstream",
-              "organization": "digiday.com",
-              "url": "https://digiday.com/media-buying/the-rundown-google-expands-ai-max-as-automation-shifts-upstream",
+              "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
+              "organization": "logisticsviewpoints.com",
+              "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
               "type": "Web research",
-              "supports": "Google is widening the scope of its AI Max ad product, extending it beyond search into shopping and travel, while introducing new controls",
-              "authorityScore": 95
+              "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
+              "authorityScore": 81
             },
             {
-              "title": "Google AI Max for Search: Complete Setup Guide 2025",
-              "organization": "digitalapplied.com",
-              "url": "https://www.digitalapplied.com/blog/google-ai-max-search-setup-guide-2025",
+              "title": "Supply Chain Trends for 2025: The Impact of AI",
+              "organization": "mem.grad.ncsu.edu",
+              "url": "https://mem.grad.ncsu.edu/2026/03/17/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence",
               "type": "Web research",
-              "supports": "outperforming 84% of advertisers who report neutral or negative results. [...] The most important insight from six months of AI Max testing: It's a complementary tool, not a replacement for traditiona",
-              "authorityScore": 95
+              "supports": "#### The Role of Artificial Intelligence in Logistics\n\nArtificial intelligence in logistics is rapidly reshaping how companies manage supply chains. As the industry faces growing complexity and higher",
+              "authorityScore": 57
             },
             {
-              "title": "Introducing AI Max for Search campaigns",
-              "organization": "blog.google",
-              "url": "https://blog.google/products/ads-commerce/google-ai-max-for-search-campaigns",
+              "title": "Leaders Build AI Agents that multiply output Discipline on execution ...",
+              "organization": "facebook.com",
+              "url": "https://www.facebook.com/RampsLogisticsLtd/posts/2025-asked-us-to-get-uncomfortableto-test-challenge-rethink-and-rebuild-how-we-w/920273383862780",
               "type": "Web research",
-              "supports": "Google Ads\n\n# Unlock next-level performance with AI Max for Search campaigns\n\nMay 06, 2025\n\nIntroducing AI Max for Search campaigns, a comprehensive suite of targeting and creative enhancements that b",
-              "authorityScore": 95
+              "supports": "We're seeing AI move fast in logistics, & it's not just about automation anymore. It's about orchestration: connecting systems, data, and",
+              "authorityScore": 52
             },
             {
-              "title": "Digiday — The home of modern media and marketing",
-              "organization": "digiday.com",
-              "url": "https://digiday.com",
+              "title": "AI Memory Breakthrough Opens New Possibilities for Supply Chain",
+              "organization": "traxtech.com",
+              "url": "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
               "type": "Web research",
-              "supports": "### Annual research reports\n\n#### Digiday+ Research: Marketers optimize GEO strategies amid the effects of zero-click search\n\n#### Digiday+ Research: Marketers’ AI use rises, but tech skills stall\n\n##",
-              "authorityScore": 73
+              "supports": "## How Faster AI Memory Changes What's Possible in Supply Chain Operations\n\nHere's what supply chain leaders need to understand: memory speed has been the invisible bottleneck holding back more sophis",
+              "authorityScore": 57
             },
             {
-              "title": "Google's AI Max has pushed up search budgets – and costs - Digiday",
-              "organization": "digiday.com",
-              "url": "https://digiday.com/media-buying/cpc-pain-is-real-one-year-on-googles-ai-max-has-pushed-up-search-budgets-and-costs",
+              "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
+              "organization": "innovecs.com",
+              "url": "https://innovecs.com/blog/ai-supply-chain-planning",
               "type": "Web research",
-              "supports": "Google began adding AI creative features to its search ads with the introduction of Dynamic Search Ads (DSAs), which are due to be sunset in September. It’s accelerated the rollout of those features w",
-              "authorityScore": 67
+              "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+              "authorityScore": 54
             },
             {
               "title": "OpenAI Platform Documentation",
@@ -124,22 +125,26 @@
             }
           ],
           "sourcesStatus": "Ready",
-          "sourceQualityScore": 81,
-          "sourceNotes": "5 live web sources found via Tavily. Selected 6 authoritative sources with average authority score 81.",
+          "sourceQualityScore": 80,
+          "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
           "duplicateStatus": "unique",
-          "duplicateScore": 3,
+          "duplicateScore": 11,
           "duplicateMatch": {
             "slug": "ai-authority-blog-engine",
             "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
             "url": "/blog/ai-authority-blog-engine",
-            "similarity": 0.03
+            "similarity": 0.11
           },
           "suggestedAngle": "",
-          "trendScore": 52,
+          "trendScore": 68,
           "marketSentiment": "neutral",
           "publishReady": true,
           "blockingIssues": "",
-          "related": [],
+          "related": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
           "internalLinks": [
             "/blog/ai-authority-blog-engine",
             "/#services",
@@ -164,14 +169,14 @@
             "notebookLmResearch": false,
             "socialCarousel": false
           },
-          "seoAuditScore": 88,
-          "seoAuditPassed": true,
+          "seoAuditScore": 64,
+          "seoAuditPassed": false,
           "seoAuditTool": "local_seo_audit_bridge",
-          "assetBrief": "Create supporting assets for: How to Use Google AI Max in a Practical Business Automation Workflow\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\nPersona: Business Automation Expert\nBusiness function: General\nAngle: practical_workflow\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
+          "assetBrief": "Create supporting assets for: How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\nPersona: Business Automation Expert\nBusiness function: General\nAngle: practical_workflow\nKeep assets business-focused, clear, original, and safe for Google/AdSense."
         },
-        "body": "## Key Takeaways\n\n- Google's AI Max is expanding beyond search into shopping and travel, offering new automation opportunities for businesses.\n- A practical workflow for using AI Max in customer support triage can reduce response time and improve lead conversion.\n- Implementing AI Max requires approval steps, quality checks, and failure handling to avoid risks.\n\n## Direct Answer\n\nGoogle's AI Max can be used to automate customer support triage by categorizing and routing inquiries, reducing response time and improving lead conversion.\n\n## Expert Insight\n\nAs a business automation expert, I've seen many companies struggle with high-volume customer inquiries. AI Max offers a practical solution when implemented with proper approval steps and quality checks. The key is to treat it as a complementary tool, not a replacement for human judgment.\n\n## Practical Explanation\n\nGoogle's AI Max is expanding its reach beyond search into shopping and travel, while introducing new controls for automation. This shift upstream presents a practical opportunity for businesses to automate customer support triage, reducing response time and improving lead conversion. However, full automation without human approval steps, lack of quality checks, and ignoring failure handling can lead to poor outcomes.\n\n## Business Use Case\n\nA digital marketing agency receives 50+ daily inquiries through their contact form, leading to missed leads and delayed responses. By implementing an AI Max-based workflow, they reduced first response time by 70% and increased lead conversion by 35%. The business impact included reduced manual hours by 10 hours/week, improved customer satisfaction by 40%, and increased booked calls by 25%.\n\n## Step-by-Step Workflow\n\n1. **Inquiry Intake**: Customer submits inquiry through contact form.\n2. **AI Categorization**: AI Max categorizes and routes inquiry to appropriate team member.\n3. **Human Approval**: Team member reviews and approves categorized inquiry.\n4. **Quality Check**: AI output is reviewed for accuracy.\n5. **Follow-up**: Team member follows up with customer.\n6. **Logging**: Interaction is logged in CRM for future reference.\n7. **Audit**: Interaction is audited for quality and compliance.\n8. **KPIs**: Track first response time, resolution time, booked calls, missed leads, revenue impact, customer satisfaction, and manual hours saved.\n\n## Tools\n\n- Google AI Max\n- Slack for team communication\n- CRM system for logging and tracking\n\n## Measuring Success\n\nTrack KPIs such as first response time, resolution time, booked calls, missed leads, revenue impact, customer satisfaction, and manual hours saved. Use these metrics to optimize the workflow and improve outcomes.\n\n## Common Mistakes\n\n- Full automation without human approval steps\n- Lack of quality checks\n- Ignoring failure handling for timeouts or low-confidence AI output\n\n## Implementation Checklist\n\n- [ ] Set up AI Max for inquiry categorization\n- [ ] Integrate with Slack for team communication\n- [ ] Configure CRM for logging and tracking\n- [ ] Implement human approval steps\n- [ ] Set up quality checks\n- [ ] Configure failure handling for timeouts or low-confidence AI output\n- [ ] Train team members on new workflow\n- [ ] Monitor KPIs and optimize workflow\n\n## Troubleshooting and Failure Handling\n\n- **API Timeout**: Implement retry logic and alert system for API timeouts.\n- **Low-Confidence AI Output**: Set confidence thresholds and require human review for low-confidence outputs.\n- **Duplicate Tickets**: Use unique identifiers to prevent duplicate tickets.\n- **Human Approval Handling**: Require human approval for all AI-generated outputs before action.\n\n## What to do next\n\nEvaluate your current customer support process and identify areas where AI Max can improve efficiency. Start with a small pilot project, measure the results, and scale accordingly. Book an automation consult to get started.",
-        "imagePrompt": "Professional realistic SaaS dashboard for The Rundown: Google expands AI Max as automation shifts upstream - Digiday, AI automation workflow, orange accents, no readable text.",
-        "audioScript": "How to Use Google AI Max in a Practical Business Automation Workflow. Learn how to implement Google's AI Max in a practical business automation workflow with approval steps, quality checks, and measurable outcomes."
+        "body": "## Key Takeaways\n\n- AI automation needs memory layers to maintain context and adapt to changing conditions.\n- Start with high-volume, low-complexity tasks like support triage or CRM follow-ups.\n- Always include approval steps, quality checks, and failure handling in your AI workflows.\n\n## Direct Answer\n\nPlanning AI needs memory layers to maintain context across interactions, not just automation scripts. This enables smarter workflows that adapt to real-time conditions.\n\n## Practical Explanation\n\nIn traditional automation, rules are static. But in a dynamic business environment, static rules fall short. Planning AI with memory layers allows systems to remember past interactions, adapt to new conditions, and make better decisions. This is especially critical in logistics and service businesses where context changes rapidly.\n\n## Business Use Case\n\nConsider a support triage workflow where a customer submits a request via Slack. The AI system must:\n\n1. **Capture the request** and log it with relevant metadata (customer, issue type, priority).\n2. **Store context** in a memory layer** to track the issue's status and history.**\n3. **Route the request internally** based on the stored context.\n4. **Escalate when necessary** using decision trees built from memory.\n\nThis approach reduces manual work and improves response time, leading to better customer satisfaction and fewer missed leads.\n\n## Step-by-Step Workflow\n\n1. **Intake**: Capture request via Slack or CRM.\n2. **Memory Layer**: Store context in a structured format (e.g., Notion or internal database).\n3. **Routing**: Use memory to determine next steps (e.g., ticket assignment, priority level).\n4. **Execution**: Trigger automation steps based on memory context.\n5. **Escalation**: If confidence is low or timeout occurs, route to human operator.\n6. **Logging**: Record all actions for audit and learning.\n7. **Approval**: Include human-in-the-loop steps for quality control.\n\n## Tools\n\n- **Slack** for intake\n- **Notion or Airtable** for memory layer\n- **Zapier or Make.com** for workflow orchestration\n- **CRM tools** for follow-up tracking\n\n## Expert Insight\n\n> \"The real power of AI in logistics isn't just automation—it's memory. When AI remembers context, it can adapt to changing conditions and make smarter decisions.\"\n\n## Common Mistakes\n\n- Treating AI as a static rule engine instead of a dynamic decision system\n- Forgetting to log actions and decisions for audit and learning\n- Skipping approval steps that ensure quality and prevent errors\n- Not handling edge cases like API timeouts or low-confidence outputs\n\n## Implementation Checklist\n\n- [ ] Define memory layer structure (e.g., Notion database)\n- [ ] Set up approval and escalation paths\n- [ ] Test memory layer integration with your CRM\n- [ ] Include logging and quality checks\n- [ ] Train operators on fallback procedures\n\n## Troubleshooting and Failure Handling\n\n- **API Timeout**: Retry with exponential backoff; escalate to human if retries fail.\n- **Low-Confidence AI Output**: Route to human approval with context notes.\n- **Duplicate Tickets**: Use memory to detect and merge duplicates.\n- **Human Approval Handling**: Integrate with workflow to require human review for high-risk decisions.\n\n## Measuring Success\n\n- **First Response Time**: Target < 5 minutes\n- **Resolution Time**: Target < 24 hours\n- **Booked Calls**: Track lead conversion post-automation\n- **Customer Satisfaction**: Monitor via surveys or NPS\n- **Manual Hours Saved**: Track before/after automation\n\n## What to Do Next\n\n1. **Start with a simple workflow** like support triage or CRM follow-ups.\n2. **Add memory layers** using Notion or Airtable.\n3. **Integrate with your CRM** to maintain context.\n4. **Add approval steps** for quality control.\n5. **Monitor KPIs** like first response time and resolution time.\n6. **Iterate** based on results and feedback.\n\n## Conclusion\n\nPlanning AI with memory layers is not just about automation—it's about building smarter, context-aware systems that adapt to your business needs. Start with a simple workflow, add memory, and scale from there.",
+        "imagePrompt": "Professional realistic SaaS dashboard for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints, AI automation workflow, orange accents, no readable text.",
+        "audioScript": "How to Use Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints in a Practical Business Automation Workflow. A practical guide to applying Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints with approval steps, quality checks, and measurable business outcomes."
       },
       "quality": {
         "score": 88,
@@ -183,23 +188,23 @@
           "passed": true,
           "sourceCount": 6,
           "minSources": 2,
-          "sourceQualityScore": 81,
+          "sourceQualityScore": 80,
           "minSourceQualityScore": 75,
           "status": "Ready",
-          "notes": "Source quality score 81."
+          "notes": "Source quality score 80."
         },
         "trendOverride": {
           "enabled": true,
           "applied": false,
           "floor": 78,
           "strictMinimum": 88,
-          "trendScore": 52,
+          "trendScore": 68,
           "marketSentiment": "neutral",
           "marketSentimentScore": 59,
           "serviceTopic": false,
           "businessTrendEligible": false,
           "autoNewsAllowed": false,
-          "reason": "No trend override: quality 88/88, trend 52/100, sentiment neutral."
+          "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
         },
         "publishMode": "standard_review",
         "results": [
@@ -273,47 +278,58 @@
             "duplicateStatus": "unknown",
             "duplicateScore": 0,
             "fillerHits": 0,
-            "wordCount": 617
+            "wordCount": 652
           },
           "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
           "blockingIssue": ""
         },
         "review": {
-          "helpfulContentRisk": "High - The article provides specific, actionable guidance for implementing Google AI Max in business workflows. However, there are some concerns about the accuracy of claims and potential for misleading readers.",
+          "helpfulContentRisk": "Medium",
           "notes": [
-            "The article makes several specific claims about Google AI Max expanding beyond search into shopping and travel, but the provided sources do not clearly support this expansion. The official Google announcement (blog.google source) only discusses AI Max for Search campaigns, not expansion into shopping/travel.",
-            "The title and slug reference a 'Digiday' article about AI Max expanding upstream, but this framing appears to conflate Google's AI Max search product with a separate Digiday report about ad automation trends. This could mislead readers about the product's capabilities.",
-            "The workflow described is practical and well-structured, but the foundational premise about AI Max's expanded capabilities may be overstated.",
-            "The article uses a high-authority 'Business Automation Expert' voice and includes implementation details that feel credible, which may lead readers to trust the (potentially inaccurate) claims about the product's features.",
-            "The sources cited are real and authoritative, but they don't support the claims about AI Max's expanded capabilities. The article should clarify what AI Max can actually do today (search automation) versus future roadmap items."
+            "The article provides a clear, practical workflow for implementing AI automation with memory layers, which is highly relevant and valuable for the target audience.",
+            "Content demonstrates strong expertise with detailed steps, tools, and implementation advice.",
+            "Use of structured subheadings and actionable content improves readability and user engagement.",
+            "Some sections like 'Practical Explanation' and 'Business Use Case' are strong, but could be enhanced with more specific examples or data.",
+            "The article aligns well with the target keyword and search intent, providing informational content that addresses a specific logistics and business automation problem.",
+            "Use of quotes and expert insights adds authority, but could be expanded for stronger credibility.",
+            "The content could benefit from more specific, real-world examples or case studies to reduce genericness and increase helpfulness.",
+            "The inclusion of implementation checklists and troubleshooting steps provides practical value.",
+            "Mentions of tools like Slack, Notion, Zapier, and Make.com offer clear implementation paths for users.",
+            "Could improve by adding more specific logistics use cases or failure stories to increase relevance and depth."
           ],
           "recommendedFixes": [
-            "Clarify in the introduction that AI Max is currently only available for search automation, not expanded into shopping/travel as implied. The official Google source only discusses AI Max for Search campaigns.",
-            "Adjust the title and slug to be more precise: 'How to Use Google AI Max for Search Automation Workflows' to avoid implying the tool can work in other contexts (shopping, travel) that are not supported by the current product.",
-            "Reframe the 'shift upstream' language to reflect that this is a report about where the industry is heading, not a current capability of AI Max.",
-            "Add a disclaimer that Google AI Max is currently only available for search use cases, with new applications in shopping and travel being speculative or future roadmap items not yet available.",
-            "Verify each capability mentioned against the official Google documentation (which only mentions Search campaigns) and adjust the article's scope accordingly."
+            "Add specific, real-world examples or mini-case studies to illustrate the implementation of memory layers in logistics or service businesses.",
+            "Include more data or statistics to support claims about business impact and outcomes.",
+            "Expand on the expert insight with additional quotes or references to authoritative sources for stronger credibility.",
+            "Clarify the logistics viewpoint with specific examples from the industry to reduce genericness.",
+            "Add a section on common pitfalls in logistics automation and how memory layers specifically address them.",
+            "Enhance the 'Business Use Case' section with more detailed steps or results to show clear value.",
+            "Consider adding a short summary or visual (like an info-graphic or workflow diagram) to improve skimmability and reinforce key points.",
+            "Link back to the logistics angle more explicitly throughout the article to strengthen the connection to the target keyword and theme.",
+            "Add more specific examples of memory layers in action to illustrate the concept concretely.",
+            "Include a stronger call to action or next steps for readers to implement the workflow in their own businesses."
           ]
         }
       },
       "imageResult": {
-        "slug": "the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday",
-        "output": "/home/runner/work/dex-website/dex-website/public/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
-        "url": "/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
-        "alt": "AI automation workflow visual for The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
+        "slug": "planning-ai-needs-memory-not-just-automation-logistics-viewpoints",
+        "output": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "url": "/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
+        "alt": "AI automation workflow visual for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints",
         "provider": "fallback_png_after_provider_error",
-        "prompt": "Professional realistic SaaS dashboard for The Rundown: Google expands AI Max as automation shifts upstream - Digiday, AI automation workflow, orange accents, no readable text.",
+        "prompt": "Professional realistic SaaS dashboard for Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints, AI automation workflow, orange accents, no readable text.",
         "dryRun": false,
         "manualApproval": true,
         "autoPublish": false,
         "force": false,
         "failed": true,
-        "path": "/home/runner/work/dex-website/dex-website/public/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
+        "path": "/home/runner/work/dex-website/dex-website/public/blog/images/planning-ai-needs-memory-not-just-automation-logistics-viewpoints.png",
         "error": "Stable Diffusion API failed: 404 404 page not found\n",
         "preservedExisting": true
       },
       "approvalRequired": true,
       "blockingIssues": [
+        "SEO audit must pass before publishing.",
         "Real image provider is required before publishing."
       ],
       "dryRun": false,
