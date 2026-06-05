@@ -1,5 +1,5 @@
 {
-  "score": 80,
+  "score": 88,
   "strictPassed": false,
   "passed": false,
   "minQualityScore": 88,
@@ -20,11 +20,11 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 80/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "rewrite_required",
   "results": [
@@ -35,7 +35,7 @@
     },
     {
       "name": "hasClearIntro",
-      "passed": false,
+      "passed": true,
       "points": 8
     },
     {
@@ -85,40 +85,40 @@
     }
   ],
   "authenticity": {
-    "score": 66,
+    "score": 70,
     "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
-      "businessRelevance": 93,
+      "specificity": 96,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
-      "fillerHits": 1,
-      "wordCount": 557
+      "fillerHits": 0,
+      "wordCount": 629
     },
     "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
     "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": 0.9,
     "notes": [
-      "The article provides a practical, workflow-focused guide to implementing memory-enabled AI in logistics, which aligns well with the informational search intent.",
-      "Content includes structured takeaways, step-by-step implementation, tools needed, and a real-world case study, enhancing its utility.",
-      "The use of a support triage workflow as a primary example is appropriate and relevant to the target audience of logistics professionals and business decision-makers.",
-      "Some sections like 'Troubleshooting and Failure Handling' and 'What to Do Next' could be expanded for greater depth and clarity.",
-      "The article effectively uses internal linking and CTAs, supporting conversion goals.",
-      "SEO elements like title, meta description, and target keyword usage are present but could be optimized further for competitive positioning."
+      "The article provides substantial practical value with a clear use case and implementation guide",
+      "Content focuses on measurable business outcomes rather than generic AI advice",
+      "Addresses workflow automation with appropriate emphasis on memory, approval steps, and quality checks",
+      "Content aligns well with search intent for practical implementation guidance",
+      "Uses structured, original content that avoids typical AI automation fluff",
+      "Includes specific examples, tools, and a clear business case that demonstrates ROI"
     ],
     "recommendedFixes": [
-      "Enhance the 'Troubleshooting and Failure Handling' section with specific tool recommendations or code-level examples for retry logic and confidence threshold management.",
-      "Add a brief comparison or mention of tools that support AI memory layers (e.g., Mem0, LlamaIndex, LangChain) to improve tool-specific guidance.",
-      "Include a short visual summary or workflow diagram to illustrate the support triage process for better reader comprehension.",
-      "Strengthen SEO by including the primary keyword earlier in the content and ensuring semantic variations are naturally used throughout.",
-      "Consider adding a sentence or two on how to evaluate the ROI of implementing memory-enabled AI, which would appeal to the business-focused reader."
+      "Consider adding a short section on how memory specifically helps with entity tracking in logistics workflows to better connect the concept to the logistics use case",
+      "Add 1-2 sentences to clarify why memory is different from traditional chat history, especially for readers new to AI agents",
+      "Include a brief example of memory in action (e.g., tracking a customer issue from intake to resolution) to make the concept tangible",
+      "Add a sentence linking the logistics use case to the broader concept in the title, to better align with the 'logistics viewpoints' angle",
+      "Consider adding a short summary of how memory-aware AI handles context differently than traditional automation"
     ]
   }
 }
