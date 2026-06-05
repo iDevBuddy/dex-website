@@ -1,7 +1,7 @@
 {
   "ok": false,
   "failSoft": true,
-  "message": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}",
+  "message": "nvidia-qwen failed: 429 {\"status\":429,\"title\":\"Too Many Requests\"}",
   "nextAction": "Draft artifacts were preserved when available. Improve SEO/content or approve manually after review.",
-  "generatedAt": "2026-06-05T16:35:12.564Z"
+  "generatedAt": "2026-06-05T19:51:09.139Z"
 }
