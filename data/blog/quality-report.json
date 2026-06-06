@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 68,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 85,
+    "score": 84,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -94,34 +94,31 @@
       "specificity": 100,
       "businessRelevance": 79,
       "sourceAlignment": 100,
-      "marketSentimentScore": 68,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 706
+      "wordCount": 712
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 6,
+    "helpfulContentRisk": "MEDIUM",
     "notes": [
-      "The article provides a practical guide to implementing Planning AI with memory layers in logistics, which addresses a real gap in generic AI advice.",
-      "Content includes structured workflow steps, tools, and measurable outcomes which aligns with the target audience's needs.",
-      "Uses authoritative sources to support claims about AI memory layers in logistics operations.",
-      "Addresses common mistakes and includes troubleshooting steps for implementation.",
-      "Content is written from a business automation expert perspective, matching the intended persona.",
-      "Addresses search intent as informational with a practical use case implementation.",
-      "Good use of structured subheadings and clear action items like checklists and implementation steps."
+      "The article provides valuable practical insights about implementing memory-enabled AI planning systems, which aligns well with the target audience's needs for actionable automation advice.",
+      "Content demonstrates expertise through structured workflow recommendations, specific tools, and implementation checklists.",
+      "Some sections could be more detailed, particularly the technical implementation steps which are currently at a high level.",
+      "The article avoids generic AI advice but could strengthen its case with more specific examples or data from actual implementations.",
+      "The content addresses a clear business problem (fragmented AI workflows) with a proposed solution (memory layer implementation)."
     ],
     "recommendedFixes": [
-      "Consider adding a visual workflow diagram to illustrate the Slack-based logistics planning process with AI memory layers.",
-      "Include specific prompt examples for the AI memory layer implementation to provide more concrete guidance.",
-      "Add a case study or specific metrics from a real implementation to increase trust and concreteness.",
-      "Clarify how the memory layer specifically improves logistics planning with structured context, perhaps with before/after examples.",
-      "Add internal links to other relevant guides or definitions to improve site linkage and user journey.",
-      "Include a brief section on how to avoid the implementation mistakes based on real examples.",
-      "Provide more details on how to measure the business impact with specific KPIs or case result metrics."
+      "Expand the 'Step-by-Step Workflow Implementation' section with more technical details, including specific API examples or code snippets for integrating memory layers.",
+      "Add a real-world case study or example with measurable outcomes to increase credibility and practical value.",
+      "Include more specific examples of how the memory layer functions in practice, perhaps with before/after scenarios.",
+      "Clarify the data storage and retrieval mechanisms for the memory layer with specific tool configurations (e.g., Notion/Airtable setup).",
+      "Add a section on measuring the effectiveness of the memory layer with KPIs or metrics.",
+      "Provide more detailed troubleshooting examples with specific error handling code or configurations."
     ]
   }
 }
