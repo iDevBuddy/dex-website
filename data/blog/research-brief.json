@@ -41,26 +41,35 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
       "type": "Web research",
-      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
-      "authorityScore": 81,
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
-      "type": "Web research",
-      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
-      "authorityScore": 73,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI in Logistics: What Worked in 2025 & What Scales in 2026 - LogiNext",
+      "title": "AI in Logistics: What Worked in 2025 & What Scales in 2026",
       "organization": "loginextsolutions.com",
       "url": "https://www.loginextsolutions.com/blog/ai-in-logistics-what-worked-in-2025-what-will-scale-in-2026",
       "type": "Web research",
       "supports": "One of the most consistent themes in 2025 was efficiency. AI-driven tracking, route optimization, and predictive planning helped cut costs and streamline",
-      "authorityScore": 55,
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
+      "type": "Web research",
+      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Supply Chain Trends for 2025: The Impact of AI",
+      "organization": "mem.grad.ncsu.edu",
+      "url": "https://mem.grad.ncsu.edu/2026/03/17/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence",
+      "type": "Web research",
+      "supports": "# Supply Chain Trends for 2025: The Impact of Artificial Intelligence\n\nArtificial intelligence is transforming logistics with predictive analytics, real-time tracking, automation and autonomous trucki",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -70,15 +79,6 @@
       "type": "Web research",
       "supports": "## How Faster AI Memory Changes What's Possible in Supply Chain Operations\n\nHere's what supply chain leaders need to understand: memory speed has been the invisible bottleneck holding back more sophis",
       "authorityScore": 57,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
-      "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
       "publishedDate": ""
     },
     {
@@ -100,10 +100,10 @@
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
     "https://www.loginextsolutions.com/blog/ai-in-logistics-what-worked-in-2025-what-will-scale-in-2026",
-    "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
     "https://innovecs.com/blog/ai-supply-chain-planning",
+    "https://mem.grad.ncsu.edu/2026/03/17/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence",
+    "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
     "https://platform.openai.com/docs/"
   ],
   "sourceStatus": "Ready",
@@ -122,7 +122,7 @@
   "trendAnalysis": {
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 68,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -135,23 +135,19 @@
       },
       {
         "source": "Google News",
-        "title": "The Autonomous Supply Chain Is Emerging: Insights from BlueYonder ICON 2026 - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start - Yale Insights"
-      },
-      {
-        "source": "Google News",
-        "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
-      },
-      {
-        "source": "Google News",
         "title": "Why Context Engineering May Become More Important Than Model Size - Logistics Viewpoints"
       },
       {
         "source": "Google News",
-        "title": "The 2026 AI predictions bonanza - Frontier Enterprise"
+        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
+      },
+      {
+        "source": "Google News",
+        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
+      },
+      {
+        "source": "Google News",
+        "title": "Why Context Is Becoming the Critical Requirement for Supply Chain AI - Logistics Viewpoints"
       },
       {
         "source": "Google News",
@@ -159,7 +155,11 @@
       },
       {
         "source": "Google News",
-        "title": "The Infinite AI Compute Loop: HBM Big Three + TSMC × NVIDIA × OpenAI Shaping the Next-Generation Industry Chain - semivision"
+        "title": "Why Agentic AI is finally working in supply chains - Supply Chain Management Review"
+      },
+      {
+        "source": "Google News",
+        "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start - Yale Insights"
       }
     ],
     "realtimeSources": [
@@ -192,26 +192,35 @@
       "organization": "logisticsviewpoints.com",
       "url": "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
       "type": "Web research",
-      "supports": "Planning memory needs to be more than a chat history.\n\nA useful memory layer should capture structured operational context. It should associate events with the entities that matter in supply chain pla",
-      "authorityScore": 81,
+      "supports": "Kinaxis describes Maestro Agents as task-specific, context-aware support embedded inside Maestro to help users explore options, act quickly, and stay aligned. Its launch materials position the offerin",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
-      "type": "Web research",
-      "supports": "recall supplier performance patterns\n\nstore configuration preferences\n\ntrack customer expectations\n\nmaintain continuity across sessions\n\nThis transforms AI from a one-off tool to a persistent planning",
-      "authorityScore": 73,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI in Logistics: What Worked in 2025 & What Scales in 2026 - LogiNext",
+      "title": "AI in Logistics: What Worked in 2025 & What Scales in 2026",
       "organization": "loginextsolutions.com",
       "url": "https://www.loginextsolutions.com/blog/ai-in-logistics-what-worked-in-2025-what-will-scale-in-2026",
       "type": "Web research",
       "supports": "One of the most consistent themes in 2025 was efficiency. AI-driven tracking, route optimization, and predictive planning helped cut costs and streamline",
-      "authorityScore": 55,
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "AI Supply Chain Planning: A Complete Guide",
+      "organization": "innovecs.com",
+      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
+      "type": "Web research",
+      "supports": "### Planning Under Constraint\n\nThen there is the less obvious use case: planning under component pressure. Jabil’s 2026 discussion of the AI memory crunch frames HBM shortages as a planning problem as",
+      "authorityScore": 95,
+      "publishedDate": ""
+    },
+    {
+      "title": "Supply Chain Trends for 2025: The Impact of AI",
+      "organization": "mem.grad.ncsu.edu",
+      "url": "https://mem.grad.ncsu.edu/2026/03/17/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence",
+      "type": "Web research",
+      "supports": "# Supply Chain Trends for 2025: The Impact of Artificial Intelligence\n\nArtificial intelligence is transforming logistics with predictive analytics, real-time tracking, automation and autonomous trucki",
+      "authorityScore": 95,
       "publishedDate": ""
     },
     {
@@ -221,15 +230,6 @@
       "type": "Web research",
       "supports": "## How Faster AI Memory Changes What's Possible in Supply Chain Operations\n\nHere's what supply chain leaders need to understand: memory speed has been the invisible bottleneck holding back more sophis",
       "authorityScore": 57,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Supply Chain Planning: A Complete Guide",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
-      "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
       "publishedDate": ""
     }
   ]
