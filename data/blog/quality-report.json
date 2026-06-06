@@ -20,7 +20,7 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 68,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
@@ -85,39 +85,43 @@
     }
   ],
   "authenticity": {
-    "score": 74,
+    "score": 85,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 79,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 617
+      "wordCount": 706
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": 6,
     "notes": [
-      "The content provides a clear, practical workflow for implementing memory-aware AI in supply chain planning, which aligns with the target use case.",
-      "The article includes structured steps, tools, and a clear business outcome, reducing the risk of generic AI advice.",
-      "It references authoritative sources and includes data-backed KPIs, which supports the informational search intent.",
-      "The content avoids risky SEO shortcuts by focusing on structured, practical implementation rather than vague AI advice.",
-      "The article includes a checklist, troubleshooting steps, and expert insight which supports practical application."
+      "The article provides a practical guide to implementing Planning AI with memory layers in logistics, which addresses a real gap in generic AI advice.",
+      "Content includes structured workflow steps, tools, and measurable outcomes which aligns with the target audience's needs.",
+      "Uses authoritative sources to support claims about AI memory layers in logistics operations.",
+      "Addresses common mistakes and includes troubleshooting steps for implementation.",
+      "Content is written from a business automation expert perspective, matching the intended persona.",
+      "Addresses search intent as informational with a practical use case implementation.",
+      "Good use of structured subheadings and clear action items like checklists and implementation steps."
     ],
     "recommendedFixes": [
-      "Add a visual workflow diagram to complement the step-by-step process and improve clarity for readers.",
-      "Include a downloadable checklist or workflow template as a supporting asset to increase engagement and reduce bounce rate.",
-      "Consider adding an infographic summarizing the KPIs and benefits to make the content more skimmable.",
-      "Add internal links to related articles or resources to improve content cohesion and reader retention.",
-      "Include a short conclusion summarizing how memory enables AI to be effective in logistics planning, to reinforce the core message."
+      "Consider adding a visual workflow diagram to illustrate the Slack-based logistics planning process with AI memory layers.",
+      "Include specific prompt examples for the AI memory layer implementation to provide more concrete guidance.",
+      "Add a case study or specific metrics from a real implementation to increase trust and concreteness.",
+      "Clarify how the memory layer specifically improves logistics planning with structured context, perhaps with before/after examples.",
+      "Add internal links to other relevant guides or definitions to improve site linkage and user journey.",
+      "Include a brief section on how to avoid the implementation mistakes based on real examples.",
+      "Provide more details on how to measure the business impact with specific KPIs or case result metrics."
     ]
   }
 }
