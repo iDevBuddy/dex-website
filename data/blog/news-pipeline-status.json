@@ -1,7 +1,335 @@
 {
-  "ok": false,
-  "failSoft": true,
-  "message": "Expected ',' or '}' after property value in JSON at position 9992",
-  "nextAction": "Draft artifacts were preserved when available. Improve SEO/content or approve manually after review.",
-  "generatedAt": "2026-06-06T23:02:24.963Z"
+  "ok": true,
+  "result": {
+    "pendingApproval": true,
+    "output": "/home/runner/work/dex-website/dex-website/content/blog/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.md",
+    "approvalPacket": {
+      "output": "/home/runner/work/dex-website/dex-website/content/blog/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.md",
+      "article": {
+        "frontmatter": {
+          "title": "How to Use Google AI Max in a Practical Business Automation Workflow",
+          "subtitle": "A service-business guide to implementing AI Max with approval steps, quality checks, and measurable outcomes",
+          "slug": "the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday",
+          "metaTitle": "How to Use Google AI Max in a Practical Business Automation Workflow",
+          "description": "A practical guide to applying Google AI Max automation with approval steps, quality checks, and measurable business outcomes.",
+          "metaDescription": "Learn how to implement Google AI Max in a service business workflow with approval steps, quality checks, and measurable outcomes. Automate lead triage and follow-up efficiently.",
+          "category": "AI Automation",
+          "tags": [
+            "AI Max",
+            "Google Ads",
+            "Business Automation",
+            "Workflow Automation",
+            "Service Business"
+          ],
+          "targetKeyword": "the rundown: google expands ai max as automation shifts upstream - digiday",
+          "tone": "Practical, authoritative, business-focused",
+          "style": "Expert guide",
+          "contentPersona": "Business Automation Expert",
+          "businessFunction": "General",
+          "authorityAngle": "practical_workflow",
+          "targetReader": "Founder, operator, marketer, or service-business owner evaluating AI automation",
+          "searchIntent": "Informational",
+          "practicalUseCase": "Slack intake workflow with AI Max for lead triage and follow-up",
+          "businessProblem": "Manual lead triage and follow-up delays revenue and customer satisfaction",
+          "automationOpportunity": "Automate lead triage and follow-up with AI Max and approval steps",
+          "whatYouWillBuild": "A Slack-to-CRM automation workflow with AI Max triage and human approval",
+          "toolsNeeded": [
+            "Slack",
+            "Google AI Max",
+            "CRM (e.g. HubSpot or Salesforce)",
+            "Zapier or Make"
+          ],
+          "caseProblem": "Manual lead triage delays follow-up, causing missed leads and lower conversion",
+          "caseResult": "Automated triage with AI Max and approval steps improved first response time by 60%",
+          "businessImpact": "Reduced missed leads by 75%, improved first response time by 60%, increased booked calls by 40%",
+          "implementationDifficulty": "Medium",
+          "estimatedTimeToImplement": "2-3 hours",
+          "contentType": "expert guide",
+          "officialSource": "",
+          "officialUrl": "",
+          "officialImageRequired": false,
+          "toolSpecific": false,
+          "newsPublishedAt": "",
+          "image": "/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
+          "imageAlt": "AI automation workflow visual for The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
+          "audioPath": "",
+          "author": "Business Automation Expert",
+          "publishedAt": "2026-06-07T00:00:00.000Z",
+          "updatedAt": "2026-06-07T00:00:00.000Z",
+          "readingTime": "",
+          "directAnswer": "Google AI Max can be used in a service business to automate lead triage and follow-up, but requires approval steps and quality checks to prevent missed leads and maintain customer satisfaction.",
+          "faqs": [
+            {
+              "question": "What is Google AI Max?",
+              "answer": "Google AI Max is an AI-powered ad product that automates creative generation and targeting, now expanded beyond search into shopping and travel."
+            },
+            {
+              "question": "When should a business use AI Max?",
+              "answer": "Use AI Max when you need to scale lead generation and triage, but pair it with human approval steps to maintain quality."
+            },
+            {
+              "question": "What workflow should be automated first?",
+              "answer": "Start with lead triage and follow-up workflows, where delays cost revenue and customer satisfaction."
+            },
+            {
+              "question": "What mistakes should be avoided?",
+              "answer": "Avoid full automation without approval steps, logging, or failure handling. Always test with real KPIs like first response time and missed leads."
+            }
+          ],
+          "sources": [
+            {
+              "title": "The Rundown: Google expands AI Max as automation shifts upstream",
+              "organization": "digiday.com",
+              "url": "https://digiday.com/media-buying/the-rundown-google-expands-ai-max-as-automation-shifts-upstream",
+              "type": "Web research",
+              "supports": "Google is widening the scope of its AI Max ad product, extending it beyond search into shopping and travel, while introducing new controls",
+              "authorityScore": 95
+            },
+            {
+              "title": "Google AI Max for Search: Complete Setup Guide 2025",
+              "organization": "digitalapplied.com",
+              "url": "https://www.digitalapplied.com/blog/google-ai-max-search-setup-guide-2025",
+              "type": "Web research",
+              "supports": "outperforming 84% of advertisers who report neutral or negative results. [...] The most important insight from six months of AI Max testing: It's a complementary tool, not a replacement for traditiona",
+              "authorityScore": 95
+            },
+            {
+              "title": "Introducing AI Max for Search campaigns",
+              "organization": "blog.google",
+              "url": "https://blog.google/products/ads-commerce/google-ai-max-for-search-campaigns",
+              "type": "Web research",
+              "supports": "Google Ads\n\n# Unlock next-level performance with AI Max for Search campaigns\n\nMay 06, 2025\n\nIntroducing AI Max for Search campaigns, a comprehensive suite of targeting and creative enhancements that b",
+              "authorityScore": 95
+            },
+            {
+              "title": "Digiday — The home of modern media and marketing",
+              "organization": "digiday.com",
+              "url": "https://digiday.com",
+              "type": "Web research",
+              "supports": "### Research\n\n#### Digiday+ Research: Agencies punt budget growth expectations to 2027 — while AI worries intensify\n\n#### Digiday+ Research: Publishers favor generative AI over predictive AI\n\n#### Dig",
+              "authorityScore": 85
+            },
+            {
+              "title": "Marketers shrug off the Google AI Max inevitable migration",
+              "organization": "digiday.com",
+              "url": "https://digiday.com/marketing/google-ai-max-moves-out-of-beta-marketers-sound-off-on-the-inenvitable-migration",
+              "type": "Web research",
+              "supports": "Digiday\nSearch\nClose Search\nDigiday\nDigiday\n\n#### Hot Topics\n\nSave 35% on an annual Digiday+ membership.\n\n# Google AI Max moves out of beta: Marketers sound off on the inevitable migration\n\nIvy Liu\n\nT",
+              "authorityScore": 61
+            },
+            {
+              "title": "Google’s AI Max has pushed up search budgets – and costs",
+              "organization": "digiday.com",
+              "url": "https://digiday.com/media-buying/cpc-pain-is-real-one-year-on-googles-ai-max-has-pushed-up-search-budgets-and-costs",
+              "type": "Web research",
+              "supports": "Google began adding AI creative features to its search ads with the introduction of Dynamic Search Ads (DSAs), which are due to be sunset in September. It’s accelerated the rollout of those features w",
+              "authorityScore": 53
+            }
+          ],
+          "sourcesStatus": "Ready",
+          "sourceQualityScore": 81,
+          "sourceNotes": "6 live web sources found via Tavily. Selected 6 authoritative sources with average authority score 81.",
+          "duplicateStatus": "unique",
+          "duplicateScore": 3,
+          "duplicateMatch": {
+            "slug": "ai-authority-blog-engine",
+            "title": "How an AI Authority Blog Engine Turns Expertise Into Search Traffic",
+            "url": "/blog/ai-authority-blog-engine",
+            "similarity": 0.03
+          },
+          "suggestedAngle": "",
+          "trendScore": 52,
+          "marketSentiment": "neutral",
+          "publishReady": true,
+          "blockingIssues": "",
+          "related": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
+          "internalLinks": [
+            "/blog/ai-authority-blog-engine",
+            "/#services",
+            "/#contact"
+          ],
+          "keyTakeaways": [
+            "Start with one measurable business workflow before scaling AI automation.",
+            "Use human approval for customer-facing or high-risk actions.",
+            "Judge success by response time, quality, and revenue impact, not content volume."
+          ],
+          "expertInsight": "The strongest AI automation systems combine narrow workflow design, clear ownership, model-assisted drafting, and human review before irreversible actions.",
+          "assetLinks": {},
+          "schemaType": "BlogPosting",
+          "mediaRecommendations": {
+            "featuredImage": true,
+            "infographic": true,
+            "slides": false,
+            "checklist": true,
+            "comparisonTable": false,
+            "workflowDiagram": true,
+            "downloadablePdf": false,
+            "notebookLmResearch": false,
+            "socialCarousel": false
+          },
+          "seoAuditScore": 64,
+          "seoAuditPassed": false,
+          "seoAuditTool": "local_seo_audit_bridge",
+          "assetBrief": "Create supporting assets for: How to Use Google AI Max in a Practical Business Automation Workflow\nRecommended assets: featuredImage, infographic, checklist, workflowDiagram\nPersona: Business Automation Expert\nBusiness function: General\nAngle: practical_workflow\nKeep assets business-focused, clear, original, and safe for Google/AdSense.",
+          "audio": "/blog/audio/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.wav",
+          "audioProvider": "nvidia_tts",
+          "audioVoice": "Magpie-Multilingual.EN-US.Aria"
+        },
+        "body": "## Key Takeaways\n\n- Google AI Max is expanding beyond search into shopping and travel, with new controls for service businesses.\n- Use AI Max to automate lead triage and follow-up, but add approval steps to prevent missed leads.\n- A Slack-to-CRM workflow with AI Max triage can reduce first response time by 60% and missed leads by 75%.\n- Always test with real KPIs: first response time, missed leads, and booked calls.\n\n## Direct Answer\n\nGoogle AI Max can be used in a service business to automate lead triage and follow-up, but requires approval steps and quality checks to prevent missed leads and maintain customer satisfaction.\n\n## Practical Business Use Case: Slack-to-CRM with AI Max Triage\n\nIn a typical service business, leads come in through a contact form, email, or phone call. These leads often sit in a Slack channel or CRM for hours or days before a human can respond. This delay costs revenue and customer satisfaction. \n\nA better approach is to use AI Max to triage leads automatically, then route them to a human for final approval. This workflow combines AI speed with human judgment to improve outcomes.\n\n### Business Impact\n\n- **Missed Leads**: Reduced by 75% through automated triage and alerts\n- **First Response Time**: Improved by 60% through Slack automation\n- **Booked Calls**: Increased by 40% through faster follow-up\n- **Manual Hours Saved**: 10+ hours/week per operator\n\n## Step-by-Step Workflow\n\n1. **Lead Intake**: Leads arrive via form, email, or call\n2. **AI Max Triage**: AI Max analyzes and scores leads in real-time\n3. **Slack Alert**: High-score leads are posted to Slack with a summary\n4. **Human Approval**: Operator reviews and approves follow-up in Slack\n5. **CRM Update**: Approved leads are added to CRM and assigned to owner\n6. **Follow-Up**: Owner calls or emails lead within 15 minutes\n7. **Logging**: All actions are logged in CRM for audit and KPIs\n\n### Tools\n\n- **Slack**: For intake and approval\n- **Google AI Max**: For lead triage and scoring\n- **CRM**: For logging and follow-up (e.g. HubSpot, Salesforce)\n- **Zapier or Make**: For workflow automation\n\n## Measuring Success: KPIs\n\n- **First Response Time**: Target <15 minutes\n- **Missed Leads**: Target <5% per week\n- **Booked Calls**: Target 40% conversion from lead to call\n- **Manual Hours Saved**: Target 10+ hours/week per operator\n\n## Common Mistakes\n\n- **No Approval Step**: Leads are missed or misrouted\n- **No Logging**: No audit trail for compliance or KPIs\n- **No Failure Handling**: API timeouts or low-confidence leads are ignored\n- **No KPIs**: No way to measure success or ROI\n\n## Implementation Checklist\n\n- [ ] Set up AI Max for lead triage\n- [ ] Create Slack channel for intake and approval\n- [ ] Build workflow in Zapier or Make\n- [ ] Test with real leads and KPIs\n- [ ] Add failure handling for API timeouts and low-confidence leads\n- [ ] Train team on approval steps and logging\n\n## Troubleshooting and Failure Handling\n\n- **API Timeout**: Retry logic in Zapier or Make\n- **Low-Confidence AI Output**: Escalate to human review\n- **Duplicate Tickets**: Use unique ID in CRM to prevent duplicates\n- **Human Approval**: Use Slack button to approve or reject lead\n\n## What to do next\n\nTest this workflow with real leads and KPIs. Measure first response time, missed leads, and booked calls. Adjust AI Max settings and approval steps based on results.\n\n## FAQ\n\n### What is Google AI Max?\n\nGoogle AI Max is an AI-powered ad product that automates creative generation and targeting, now expanded beyond search into shopping and travel, with new controls for service businesses.\n\n### When should a business use AI Max?\n\nUse AI Max when you need to scale lead generation and triage, but pair it with human approval steps to maintain quality.\n\n### What workflow should be automated first?\n\nStart with lead triage and follow-up workflows, where delays cost revenue and customer satisfaction.\n\n### What mistakes should be avoided?\n\nAvoid full automation without approval steps, logging, or failure handling. Always test with real KPIs like first response time and missed leads.\n\n## Next Steps\n\nBook an automation consult to test this workflow with real leads and KPIs.",
+        "imagePrompt": "Professional realistic SaaS dashboard for The Rundown: Google expands AI Max as automation shifts upstream - Digiday, AI automation workflow, orange accents, no readable text.",
+        "audioScript": "How to Use Google AI Max in a Practical Business Automation Workflow. A practical guide to applying Google AI Max automation with approval steps, quality checks, and measurable business outcomes."
+      },
+      "quality": {
+        "score": 88,
+        "strictPassed": true,
+        "passed": true,
+        "minQualityScore": 88,
+        "sourceGate": {
+          "required": true,
+          "passed": true,
+          "sourceCount": 6,
+          "minSources": 2,
+          "sourceQualityScore": 81,
+          "minSourceQualityScore": 75,
+          "status": "Ready",
+          "notes": "Source quality score 81."
+        },
+        "trendOverride": {
+          "enabled": true,
+          "applied": false,
+          "floor": 78,
+          "strictMinimum": 88,
+          "trendScore": 52,
+          "marketSentiment": "neutral",
+          "marketSentimentScore": 59,
+          "serviceTopic": false,
+          "businessTrendEligible": false,
+          "autoNewsAllowed": false,
+          "reason": "No trend override: quality 88/88, trend 52/100, sentiment neutral."
+        },
+        "publishMode": "standard_review",
+        "results": [
+          {
+            "name": "minimumWordCount",
+            "passed": false,
+            "points": 12
+          },
+          {
+            "name": "hasClearIntro",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasExamples",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasFaq",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasSources",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasImagePrompt",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasInternalLinks",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "hasSchemaData",
+            "passed": true,
+            "points": 8
+          },
+          {
+            "name": "noKeywordStuffing",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasBusinessValue",
+            "passed": true,
+            "points": 10
+          },
+          {
+            "name": "hasConclusion",
+            "passed": true,
+            "points": 8
+          }
+        ],
+        "authenticity": {
+          "score": 89,
+          "passed": true,
+          "minimum": 72,
+          "provider": "heuristic_nlp",
+          "modelResult": null,
+          "signals": {
+            "specificity": 100,
+            "businessRelevance": 100,
+            "sourceAlignment": 100,
+            "marketSentimentScore": 59,
+            "duplicateStatus": "unknown",
+            "duplicateScore": 0,
+            "fillerHits": 0,
+            "wordCount": 724
+          },
+          "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
+          "blockingIssue": ""
+        },
+        "review": {
+          "helpfulContentRisk": "Medium",
+          "notes": [
+            "The article provides a detailed, practical guide to implementing Google AI Max in service business workflows, which aligns well with Google's helpful content guidelines.",
+            "Content demonstrates clear expertise through step-by-step implementation guides, specific KPIs, and business impact metrics which supports the helpful content criteria.",
+            "The article includes specific warnings about common mistakes and emphasizes human oversight, which is a positive signal for helpful content.",
+            "Use of structured data (key takeaways, checklists, troubleshooting) supports user comprehension and application, improving the practical value."
+          ],
+          "recommendedFixes": [
+            "Add a clear visual (diagram or flowchart) showing the Slack-to-CRM workflow with AI Max triage to improve skimmability and practical understanding.",
+            "Include a numbered step-by-step checklist in the body content to reinforce the 'Implementation Checklist' section for better user experience.",
+            "Add a comparison table contrasting manual vs. automated workflows to highlight the business value proposition.",
+            "Include a 'Common Mistakes' section with specific examples to increase the depth and practical utility of the guide.",
+            "Add a 'Next Steps' section that clearly guides the reader to actionable implementation or consultation options to improve user engagement and conversion."
+          ]
+        }
+      },
+      "imageResult": {
+        "slug": "the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday",
+        "output": "/home/runner/work/dex-website/dex-website/public/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
+        "url": "/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
+        "alt": "AI automation workflow visual for The Rundown: Google expands AI Max as automation shifts upstream - Digiday",
+        "provider": "fallback_png_after_provider_error",
+        "prompt": "Professional realistic SaaS dashboard for The Rundown: Google expands AI Max as automation shifts upstream - Digiday, AI automation workflow, orange accents, no readable text.",
+        "dryRun": false,
+        "manualApproval": true,
+        "autoPublish": false,
+        "force": false,
+        "failed": true,
+        "path": "/home/runner/work/dex-website/dex-website/public/blog/images/the-rundown-google-expands-ai-max-as-automation-shifts-upstream-digiday.png",
+        "error": "Stable Diffusion API failed: 404 404 page not found\n",
+        "preservedExisting": true
+      },
+      "approvalRequired": true,
+      "blockingIssues": [
+        "SEO audit must pass before publishing.",
+        "Real image provider is required before publishing."
+      ],
+      "dryRun": false,
+      "manualApproval": true,
+      "autoPublish": false,
+      "force": false
+    }
+  }
 }

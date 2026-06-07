@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 52,
     "marketSentiment": "neutral",
     "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 52/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 86,
+    "score": 89,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 747
+      "wordCount": 724
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,20 +106,17 @@
   "review": {
     "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a practical, step-by-step guide to implementing AI-powered logistics planning with memory capabilities, which aligns well with the target audience of business automation experts and operators.",
-      "Content is well-structured with clear key takeaways, expert insights, and implementation checklists that add value for the target audience.",
-      "The article effectively addresses the search intent by providing actionable information on how to implement memory-aware AI in logistics workflows.",
-      "Some sections could benefit from more specific technical details or examples to further reduce abstraction and increase practical utility.",
-      "The inclusion of multiple authoritative sources strengthens the content's credibility and relevance to current industry trends.",
-      "The article avoids generic AI advice and focuses on a specific, measurable use case, which aligns with the stated business problem of wanting useful automation without risky shortcuts."
+      "The article provides a detailed, practical guide to implementing Google AI Max in service business workflows, which aligns well with Google's helpful content guidelines.",
+      "Content demonstrates clear expertise through step-by-step implementation guides, specific KPIs, and business impact metrics which supports the helpful content criteria.",
+      "The article includes specific warnings about common mistakes and emphasizes human oversight, which is a positive signal for helpful content.",
+      "Use of structured data (key takeaways, checklists, troubleshooting) supports user comprehension and application, improving the practical value."
     ],
     "recommendedFixes": [
-      "Add a visual workflow diagram to illustrate the Slack-based logistics planning workflow, which would significantly improve comprehension and practical implementation for readers.",
-      "Include a downloadable checklist or Notion template for the implementation steps to increase engagement and provide tangible value.",
-      "Add specific prompt examples for the AI decision-making process to make the technical implementation more concrete and actionable.",
-      "Provide more detailed examples of how memory is used in context checking to illustrate the core concept of 'memory-aware' AI.",
-      "Include a troubleshooting table or flowchart for common implementation issues to enhance the practical utility of the guide.",
-      "Add specific metrics or benchmarks for the KPIs section to help readers set realistic expectations for measuring success."
+      "Add a clear visual (diagram or flowchart) showing the Slack-to-CRM workflow with AI Max triage to improve skimmability and practical understanding.",
+      "Include a numbered step-by-step checklist in the body content to reinforce the 'Implementation Checklist' section for better user experience.",
+      "Add a comparison table contrasting manual vs. automated workflows to highlight the business value proposition.",
+      "Include a 'Common Mistakes' section with specific examples to increase the depth and practical utility of the guide.",
+      "Add a 'Next Steps' section that clearly guides the reader to actionable implementation or consultation options to improve user engagement and conversion."
     ]
   }
 }
