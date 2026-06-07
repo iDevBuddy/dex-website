@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,7 +85,7 @@
     }
   ],
   "authenticity": {
-    "score": 78,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
@@ -98,31 +98,33 @@
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 817
+      "wordCount": 698
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 3,
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides practical, actionable guidance on implementing AI automation with memory integration for logistics workflows",
-      "Content is well-structured with clear steps, tools, and implementation guidelines",
-      "Strong focus on measurable business outcomes rather than generic AI advice",
-      "Includes specific workflows (Slack intake, CRM follow-up, support triage) that readers can directly implement",
-      "Uses authoritative sources and includes proper citations",
-      "Content is original and provides genuine value to target audience (founders, operators, marketers)",
-      "Avoids keyword stuffing while maintaining good keyword density for the target phrase",
-      "Includes practical elements like checklists, troubleshooting tips, and implementation difficulty assessment"
+      "The article provides a strong practical framework for implementing AI with memory in logistics planning workflows.",
+      "Content is well-structured with clear steps, use cases, and implementation checklists which aligns well with the 'expert guide' style.",
+      "The article effectively uses authoritative sources and includes citations, which supports the credibility of the content.",
+      "Key concepts like intake, AI processing with memory, approval steps, and error handling are clearly defined and logically sequenced.",
+      "The content addresses a real business problem (lack of context in AI) and offers a specific solution (AI with memory).",
+      "The article includes relevant KPIs and implementation guidance, which adds practical value for the target audience.",
+      "One potential issue is the use of a future date (June 2026) in the frontmatter, which may raise questions about the content's freshness or relevance if not clearly explained as a placeholder or future-dated publication.",
+      "Some sections could benefit from more detailed technical implementation guidance, especially around AI memory tools.",
+      "The article could be enhanced with diagrams or visual examples of workflows to improve understanding."
     ],
     "recommendedFixes": [
-      "Add specific examples of AI platforms that support memory integration to make the guide more actionable",
-      "Include a workflow diagram as suggested in media recommendations to visually illustrate the process",
-      "Add more specific metrics or benchmarks for measuring success (e.g., percentage reduction in response time)",
-      "Provide more detailed implementation steps for integrating memory with AI agents",
-      "Include a case study or specific example with before/after metrics to demonstrate real-world impact",
-      "Add more detailed troubleshooting steps with specific solutions for common implementation challenges",
-      "Expand on the 'memory integration' concept with technical details or architecture patterns"
+      "Consider revising the publication date to a current or recent date to avoid confusion about the article's relevance.",
+      "Add visual assets like workflow diagrams, checklists, and infographics to improve user engagement and understanding.",
+      "Include a brief explanation of how to evaluate AI memory tools to guide readers in tool selection.",
+      "Expand on the 'AI Memory Layer' concept with examples or a short implementation guide for common tools like Maestro Agents.",
+      "Add a section comparing traditional automation vs. AI with memory to highlight the value proposition more clearly.",
+      "Clarify the integration process of AI memory tools with common business platforms like Slack or CRMs.",
+      "Include a short case study or example of how a logistics company might implement the AI memory layer in practice.",
+      "Provide links or references to tools that support AI memory, especially for readers who are evaluating different platforms."
     ]
   }
 }
