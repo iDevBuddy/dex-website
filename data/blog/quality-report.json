@@ -85,46 +85,40 @@
     }
   ],
   "authenticity": {
-    "score": 75,
+    "score": 89,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 698
+      "wordCount": 713
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": "medium",
     "notes": [
-      "The article provides a strong practical framework for implementing AI with memory in logistics planning workflows.",
-      "Content is well-structured with clear steps, use cases, and implementation checklists which aligns well with the 'expert guide' style.",
-      "The article effectively uses authoritative sources and includes citations, which supports the credibility of the content.",
-      "Key concepts like intake, AI processing with memory, approval steps, and error handling are clearly defined and logically sequenced.",
-      "The content addresses a real business problem (lack of context in AI) and offers a specific solution (AI with memory).",
-      "The article includes relevant KPIs and implementation guidance, which adds practical value for the target audience.",
-      "One potential issue is the use of a future date (June 2026) in the frontmatter, which may raise questions about the content's freshness or relevance if not clearly explained as a placeholder or future-dated publication.",
-      "Some sections could benefit from more detailed technical implementation guidance, especially around AI memory tools.",
-      "The article could be enhanced with diagrams or visual examples of workflows to improve understanding."
+      "The article provides a practical guide to implementing AI memory layers in logistics operations, which is a timely and relevant topic given the current focus on AI augmentation in business processes.",
+      "Content includes specific, actionable workflows and implementation steps that add practical value for the target audience of founders, operators, and business owners.",
+      "The piece effectively uses structured data (frontmatter) to organize information, enhancing both user experience and SEO value.",
+      "There's a clear business angle with defined use cases, tools, and outcomes, which supports the informational search intent.",
+      "The article could improve by providing more detailed technical implementation guidance and addressing potential scalability issues.",
+      "Some sections like 'Troubleshooting' and 'Tools' could be expanded with more specific examples or configurations to increase practical utility."
     ],
     "recommendedFixes": [
-      "Consider revising the publication date to a current or recent date to avoid confusion about the article's relevance.",
-      "Add visual assets like workflow diagrams, checklists, and infographics to improve user engagement and understanding.",
-      "Include a brief explanation of how to evaluate AI memory tools to guide readers in tool selection.",
-      "Expand on the 'AI Memory Layer' concept with examples or a short implementation guide for common tools like Maestro Agents.",
-      "Add a section comparing traditional automation vs. AI with memory to highlight the value proposition more clearly.",
-      "Clarify the integration process of AI memory tools with common business platforms like Slack or CRMs.",
-      "Include a short case study or example of how a logistics company might implement the AI memory layer in practice.",
-      "Provide links or references to tools that support AI memory, especially for readers who are evaluating different platforms."
+      "Expand the 'Tools' section to include specific setup instructions or configuration examples for tools like Slack, CRM, Make.com, and Zapier to make the implementation guidance more actionable.",
+      "Add more detailed step-by-step implementation guides, especially in the 'Troubleshooting' section, to provide specific solutions for common implementation pitfalls.",
+      "Include additional diagrams or visual aids (e.g., workflow diagrams) to illustrate the memory layer implementation and automation setup.",
+      "Clarify the connection between memory layers and decision-making improvements with before/after examples or case studies.",
+      "Add a section on scaling the workflow from a pilot to full deployment, including potential challenges and mitigation strategies."
     ]
   }
 }
