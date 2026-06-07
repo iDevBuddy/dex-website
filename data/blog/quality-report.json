@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 81,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 81."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 52,
+    "trendScore": 68,
     "marketSentiment": "neutral",
     "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 52/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,38 +85,44 @@
     }
   ],
   "authenticity": {
-    "score": 89,
+    "score": 78,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
       "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 724
+      "wordCount": 817
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
+    "helpfulContentRisk": 3,
     "notes": [
-      "The article provides a detailed, practical guide to implementing Google AI Max in service business workflows, which aligns well with Google's helpful content guidelines.",
-      "Content demonstrates clear expertise through step-by-step implementation guides, specific KPIs, and business impact metrics which supports the helpful content criteria.",
-      "The article includes specific warnings about common mistakes and emphasizes human oversight, which is a positive signal for helpful content.",
-      "Use of structured data (key takeaways, checklists, troubleshooting) supports user comprehension and application, improving the practical value."
+      "The article provides practical, actionable guidance on implementing AI automation with memory integration for logistics workflows",
+      "Content is well-structured with clear steps, tools, and implementation guidelines",
+      "Strong focus on measurable business outcomes rather than generic AI advice",
+      "Includes specific workflows (Slack intake, CRM follow-up, support triage) that readers can directly implement",
+      "Uses authoritative sources and includes proper citations",
+      "Content is original and provides genuine value to target audience (founders, operators, marketers)",
+      "Avoids keyword stuffing while maintaining good keyword density for the target phrase",
+      "Includes practical elements like checklists, troubleshooting tips, and implementation difficulty assessment"
     ],
     "recommendedFixes": [
-      "Add a clear visual (diagram or flowchart) showing the Slack-to-CRM workflow with AI Max triage to improve skimmability and practical understanding.",
-      "Include a numbered step-by-step checklist in the body content to reinforce the 'Implementation Checklist' section for better user experience.",
-      "Add a comparison table contrasting manual vs. automated workflows to highlight the business value proposition.",
-      "Include a 'Common Mistakes' section with specific examples to increase the depth and practical utility of the guide.",
-      "Add a 'Next Steps' section that clearly guides the reader to actionable implementation or consultation options to improve user engagement and conversion."
+      "Add specific examples of AI platforms that support memory integration to make the guide more actionable",
+      "Include a workflow diagram as suggested in media recommendations to visually illustrate the process",
+      "Add more specific metrics or benchmarks for measuring success (e.g., percentage reduction in response time)",
+      "Provide more detailed implementation steps for integrating memory with AI agents",
+      "Include a case study or specific example with before/after metrics to demonstrate real-world impact",
+      "Add more detailed troubleshooting steps with specific solutions for common implementation challenges",
+      "Expand on the 'memory integration' concept with technical details or architecture patterns"
     ]
   }
 }
