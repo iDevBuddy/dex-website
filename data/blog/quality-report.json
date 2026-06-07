@@ -1,32 +1,32 @@
 {
   "score": 88,
-  "strictPassed": true,
-  "passed": true,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 52,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 66,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 52/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
@@ -85,40 +85,41 @@
     }
   ],
   "authenticity": {
-    "score": 89,
-    "passed": true,
+    "score": 69,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 65,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 66,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 713
+      "wordCount": 654
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": "medium",
+    "helpfulContentRisk": "Medium",
     "notes": [
-      "The article provides a practical guide to implementing AI memory layers in logistics operations, which is a timely and relevant topic given the current focus on AI augmentation in business processes.",
-      "Content includes specific, actionable workflows and implementation steps that add practical value for the target audience of founders, operators, and business owners.",
-      "The piece effectively uses structured data (frontmatter) to organize information, enhancing both user experience and SEO value.",
-      "There's a clear business angle with defined use cases, tools, and outcomes, which supports the informational search intent.",
-      "The article could improve by providing more detailed technical implementation guidance and addressing potential scalability issues.",
-      "Some sections like 'Troubleshooting' and 'Tools' could be expanded with more specific examples or configurations to increase practical utility."
+      "The article provides a detailed, practical guide to implementing Launchpad Build AI's Manufacturing Language Model, which aligns well with the informational search intent and target audience of business decision-makers.",
+      "Content demonstrates strong expertise with structured workflow, tools needed, and implementation checklists that match the 'Hybrid' persona and 'tool_tutorial' angle.",
+      "The article includes specific business outcomes (60% design time reduction, 40% first-pass success rate improvement) which adds credibility and practical value.",
+      "Some sections like 'Troubleshooting and Failure Handling' feel generic and could benefit from more specific examples or data related to Launchpad Build AI's actual performance.",
+      "The sources are authoritative and relevant, supporting the claims made about the tool.",
+      "FAEs are well-integrated and directly support the article's main points.",
+      "The article could improve by adding more specific technical details about how the MLM integrates with CAD systems or handles production data, especially for the 'Analytics' business function audience."
     ],
     "recommendedFixes": [
-      "Expand the 'Tools' section to include specific setup instructions or configuration examples for tools like Slack, CRM, Make.com, and Zapier to make the implementation guidance more actionable.",
-      "Add more detailed step-by-step implementation guides, especially in the 'Troubleshooting' section, to provide specific solutions for common implementation pitfalls.",
-      "Include additional diagrams or visual aids (e.g., workflow diagrams) to illustrate the memory layer implementation and automation setup.",
-      "Clarify the connection between memory layers and decision-making improvements with before/after examples or case studies.",
-      "Add a section on scaling the workflow from a pilot to full deployment, including potential challenges and mitigation strategies."
+      "Add specific examples of how the MLM interacts with CAD software and production data to strengthen the 'tool_tutorial' angle.",
+      "Include a brief visual workflow diagram or step-by-step illustration to enhance understanding of the AI-human approval loop.",
+      "Expand the troubleshooting section with real-world examples or error rates from the case study to make it more actionable.",
+      "Clarify the exact role of human review in the process with a concrete example (e.g., what constitutes a 'low-confidence AI output' and how it's flagged).",
+      "Add a short section on how to evaluate the MLM's output quality before approval, especially for readers from an 'Analytics' background."
     ]
   }
 }

@@ -1,11 +1,11 @@
 {
-  "score": 76,
+  "score": 80,
   "minScore": 82,
   "passed": false,
   "checks": [
     {
       "name": "metaTitleLength",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -20,7 +20,7 @@
     },
     {
       "name": "singleH1HandledByTemplate",
-      "passed": true,
+      "passed": false,
       "points": 8
     },
     {
