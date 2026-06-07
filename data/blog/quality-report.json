@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 81,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 81."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 52,
     "marketSentiment": "neutral",
     "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 52/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,41 +85,42 @@
     }
   ],
   "authenticity": {
-    "score": 82,
+    "score": 73,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
-      "specificity": 100,
-      "businessRelevance": 86,
+      "specificity": 95,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 844
+      "wordCount": 522
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 8.5,
+    "helpfulContentRisk": "low",
     "notes": [
-      "The article provides a comprehensive practical guide to implementing Planning AI with memory layers in logistics workflows.",
-      "Content is well-structured with clear implementation steps, tools needed, and measurement strategies.",
-      "Addresses a real business problem (AI memory in logistics planning) with actionable solutions.",
-      "Uses expert insights and authoritative sources to support claims about AI memory importance.",
-      "Content aligns well with the target keyword and search intent (informational).",
-      "Good balance of technical depth and practical business application."
+      "The article provides a practical, step-by-step guide to implementing Google's AI Max in business automation workflows, which aligns with the informational search intent and target audience needs.",
+      "Content is well-structured with clear sections covering implementation, tools needed, common mistakes, and troubleshooting steps.",
+      "The article avoids generic AI advice and emphasizes practical workflow design with human approval steps and quality checks, addressing a key concern mentioned in the metadata.",
+      "Uses authoritative sources and includes expert insights, implementation checklists, and measurable KPIs to evaluate success.",
+      "Content is business-focused and avoids risky SEO shortcuts, aligning with the 'no generic AI advice' requirement."
     ],
     "recommendedFixes": [
-      "Add a short section on 'How to choose an AI agent platform' to improve practical utility.",
-      "Include a brief comparison of memory-based AI planning vs. traditional automation to highlight the key differences.",
-      "Add 1-2 more specific examples of logistics businesses using memory layers successfully.",
-      "Consider adding a short workflow diagram or visual aid to enhance understanding of the memory layer concept.",
-      "Add a sentence or two on how to measure memory layer effectiveness in practice.",
-      "Consider adding a brief note on change management when implementing memory layers in existing logistics operations."
+      "Add more specific examples of AI Max configurations for different service business types (e.g., customer support, sales outreach)",
+      "Include visual diagrams showing the workflow automation process with AI Max",
+      "Add code snippets or configuration examples for implementing logging and audit trails",
+      "Expand on integration examples between AI Max and tools like Slack/CRM/GitHub Actions",
+      "Include sample prompts or configurations for setting up approval steps in AI Max workflows",
+      "Add a case study or example implementation with before/after metrics",
+      "Provide specific troubleshooting steps for API timeout issues with code examples",
+      "Add implementation difficulty breakdown for each step to help readers assess complexity"
     ]
   }
 }
