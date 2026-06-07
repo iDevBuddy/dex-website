@@ -1,5 +1,5 @@
 {
-  "score": 88,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -24,13 +24,13 @@
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
@@ -85,26 +85,41 @@
     }
   ],
   "authenticity": {
-    "score": 74,
+    "score": 82,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 86,
       "sourceAlignment": 100,
       "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 642
+      "wordCount": 844
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "fetch failed"
+    "helpfulContentRisk": 8.5,
+    "notes": [
+      "The article provides a comprehensive practical guide to implementing Planning AI with memory layers in logistics workflows.",
+      "Content is well-structured with clear implementation steps, tools needed, and measurement strategies.",
+      "Addresses a real business problem (AI memory in logistics planning) with actionable solutions.",
+      "Uses expert insights and authoritative sources to support claims about AI memory importance.",
+      "Content aligns well with the target keyword and search intent (informational).",
+      "Good balance of technical depth and practical business application."
+    ],
+    "recommendedFixes": [
+      "Add a short section on 'How to choose an AI agent platform' to improve practical utility.",
+      "Include a brief comparison of memory-based AI planning vs. traditional automation to highlight the key differences.",
+      "Add 1-2 more specific examples of logistics businesses using memory layers successfully.",
+      "Consider adding a short workflow diagram or visual aid to enhance understanding of the memory layer concept.",
+      "Add a sentence or two on how to measure memory layer effectiveness in practice.",
+      "Consider adding a brief note on change management when implementing memory layers in existing logistics operations."
+    ]
   }
 }
