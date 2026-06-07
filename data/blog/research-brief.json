@@ -68,27 +68,40 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning",
       "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
-      "authorityScore": 95,
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
       "publishedDate": ""
     },
     {
-      "title": "AI Memory Breakthrough Opens New Possibilities for Supply Chain",
-      "organization": "traxtech.com",
-      "url": "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
-      "type": "Web research",
-      "supports": "## How Faster AI Memory Changes What's Possible in Supply Chain Operations\n\nHere's what supply chain leaders need to understand: memory speed has been the invisible bottleneck holding back more sophis",
-      "authorityScore": 95,
-      "publishedDate": ""
+      "title": "OpenAI Platform Documentation",
+      "organization": "OpenAI",
+      "url": "https://platform.openai.com/docs/",
+      "type": "Official documentation",
+      "supports": "Useful for articles explaining LLM-assisted workflows, model integration, prompts, and AI automation architecture.",
+      "tags": [
+        "ai",
+        "llm",
+        "agents",
+        "automation",
+        "workflow",
+        "prompt"
+      ],
+      "authorityScore": 83
     },
     {
-      "title": "AI and Automation: Comprehensive Best Practices and Guide",
-      "organization": "workdone.ai",
-      "url": "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide",
-      "type": "Web research",
-      "supports": "### Defining AI and Automation\n\nArtificial Intelligence (AI) refers to technologies that enhance machine capabilities, allowing them to handle complex tasks like problem-solving. Automation, meanwhile",
-      "authorityScore": 95,
-      "publishedDate": ""
+      "title": "GitHub Docs: GitHub Actions",
+      "organization": "GitHub",
+      "url": "https://docs.github.com/en/actions",
+      "type": "Official documentation",
+      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
+      "tags": [
+        "github",
+        "automation",
+        "workflow",
+        "ci",
+        "deployment"
+      ],
+      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
@@ -96,12 +109,12 @@
     "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
     "https://mem.grad.ncsu.edu/2026/03/17/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence",
     "https://innovecs.com/blog/ai-supply-chain-planning",
-    "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
-    "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide"
+    "https://platform.openai.com/docs/",
+    "https://docs.github.com/en/actions"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "6 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "4 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -212,26 +225,8 @@
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning",
       "type": "Web research",
-      "supports": "Generative AI plays a different role. It is less useful for raw statistical lift on its own and more useful when teams need scenario planning, faster summaries, or structured responses around messy tr",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Memory Breakthrough Opens New Possibilities for Supply Chain",
-      "organization": "traxtech.com",
-      "url": "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
-      "type": "Web research",
-      "supports": "## How Faster AI Memory Changes What's Possible in Supply Chain Operations\n\nHere's what supply chain leaders need to understand: memory speed has been the invisible bottleneck holding back more sophis",
-      "authorityScore": 95,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI and Automation: Comprehensive Best Practices and Guide",
-      "organization": "workdone.ai",
-      "url": "https://workdone.ai/ai-and-automation-comprehensive-best-practices-and-guide",
-      "type": "Web research",
-      "supports": "### Defining AI and Automation\n\nArtificial Intelligence (AI) refers to technologies that enhance machine capabilities, allowing them to handle complex tasks like problem-solving. Automation, meanwhile",
-      "authorityScore": 95,
+      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
+      "authorityScore": 54,
       "publishedDate": ""
     }
   ]
