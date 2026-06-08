@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 75,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 65,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
       "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 736
+      "wordCount": 684
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,21 +106,20 @@
   "review": {
     "helpfulContentRisk": "low",
     "notes": [
-      "The content demonstrates strong expertise with detailed technical implementation steps",
-      "Addresses a genuine business problem (repeated decisions in logistics planning)",
-      "Provides specific, measurable outcomes (60% reduction in duplicates, 40% faster response)",
-      "Content is highly specific to logistics workflows with AI memory implementation",
-      "Includes practical step-by-step implementation guide with tools and workflows",
-      "Addresses common mistakes and troubleshooting scenarios",
-      "Provides implementation checklist and key takeaways"
+      "The article provides a comprehensive, practical guide to implementing AI memory in logistics workflows, with a clear business focus.",
+      "Content is well-structured around a specific use case (support triage) with measurable outcomes and implementation steps.",
+      "Addresses a clear business problem: manual effort and poor context retention in logistics AI systems.",
+      "Content includes implementation checklist, which increases its practical value for readers.",
+      "Covers failure handling and common mistakes, which adds depth and risk management to the guide.",
+      "Good internal linking to related content and clear key takeaways enhance the article's value.",
+      "The article could improve its search and practical utility by expanding on how the memory layer is specifically built or integrated."
     ],
     "recommendedFixes": [
-      "Add more specific technical details about AI memory implementation (e.g., database schemas for tracking entities)",
-      "Include more concrete examples of entity tracking in Notion database structure",
-      "Add specific prompts or API configurations for OpenAI implementation",
-      "Include more detailed KPI tracking examples with baseline measurements",
-      "Expand on error handling with specific examples of confidence thresholds",
-      "Add implementation timeline with specific tool configurations"
+      "Include a brief explanation of how to technically implement the 'structured memory layer' with examples of how entities and decisions are tracked.",
+      "Add a section on how to integrate the memory layer with existing tools or custom systems.",
+      "Expand on the memory layer architecture with a diagram or example memory structure for practitioners.",
+      "Clarify how the AI decision engine with memory is set up, including specific examples from the tools mentioned (Slack, CRM, etc.)",
+      "Add a short case study or example of prompt design for the triage step to increase practical value for complex logistics cases."
     ]
   }
 }
