@@ -1,7 +1,7 @@
 {
-  "score": 100,
-  "strictPassed": true,
-  "passed": true,
+  "score": 88,
+  "strictPassed": false,
+  "passed": false,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
@@ -20,17 +20,17 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
-  "publishMode": "standard_review",
+  "publishMode": "rewrite_required",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,8 +85,8 @@
     }
   ],
   "authenticity": {
-    "score": 84,
-    "passed": true,
+    "score": 71,
+    "passed": false,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
@@ -94,31 +94,17 @@
       "specificity": 100,
       "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 59,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 765
+      "wordCount": 604
     },
-    "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
-    "blockingIssue": ""
+    "notes": "Authenticity check needs review: improve specificity, add real examples, strengthen sources, or choose a more distinct market angle.",
+    "blockingIssue": "Authenticity score below publishing threshold."
   },
   "review": {
-    "helpfulContentRisk": 8,
-    "notes": [
-      "The article provides a practical, structured approach to implementing memory-aware AI in logistics workflows, which aligns with the target audience's needs.",
-      "Content demonstrates expertise with step-by-step implementation, tools, and business impact metrics.",
-      "The article includes structured takeaways, a clear workflow, and addresses common pitfalls like lack of memory layers and approval steps.",
-      "It references authoritative sources and includes expert insights, which supports the 'expert guide' style.",
-      "The content avoids generic AI advice and focuses on structured, practical workflows, addressing the business problem effectively.",
-      "Potential risk areas include moderate complexity of implementation and some technical references that may need clarification for non-technical readers."
-    ],
-    "recommendedFixes": [
-      "Add a workflow diagram and checklist as recommended by mediaRecommendations to improve usability.",
-      "Clarify how the memory layer integrates with AI agent platforms and memory stores with examples or templates.",
-      "Include a real-world example or case study to increase relatability and demonstrate actual business impact.",
-      "Add a brief explanation of each tool's role in the workflow (e.g., Slack, CRM, AI Agent Platform) for better reader understanding.",
-      "Consider simplifying technical references or adding footnotes for clarity, especially for readers less familiar with AI architecture."
-    ]
+    "skipped": true,
+    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
   }
 }
