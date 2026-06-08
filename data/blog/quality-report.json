@@ -85,49 +85,26 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
       "marketSentimentScore": 68,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 522
+      "wordCount": 544
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Medium",
-    "notes": [
-      "The article provides a practical guide to AI workflow automation, focusing on the implementation of 'Planning AI Needs Memory' with a strong emphasis on business use cases.",
-      "The content is well-structured and includes step-by-step implementation guides, which aligns with the 'practical' tone and 'expert' style specified in the frontmatter.",
-      "The article includes a clear business problem (AI automation without memory/context) and proposes a structured solution with memory, approval steps, and quality checks.",
-      "The content is aligned with the target audience of business professionals evaluating AI automation, avoiding generic advice and focusing on measurable outcomes.",
-      "The article includes a clear implementation checklist, tools needed, and common mistakes to avoid, which supports the practical nature of the guide.",
-      "The content includes expert insights and case studies, which adds authority and supports the 'expert guide' style.",
-      "The article provides a good balance of technical implementation details and business impact, which is suitable for the target audience of founders, operators, and marketers.",
-      "The content includes a clear call to action and next steps, which helps guide the reader towards implementation.",
-      "The article includes a good mix of text, lists, and quotes, which enhances readability and engagement.",
-      "The content includes a good balance of theory and practice, with a focus on real-world application and measurable outcomes."
-    ],
-    "recommendedFixes": [
-      "Consider adding more specific examples of AI agent platforms and tools to provide clearer guidance to the reader.",
-      "Include more detailed explanations of how memory and context are implemented in AI workflows to provide deeper technical insights.",
-      "Add more visuals such as workflow diagrams or infographics to illustrate the concepts and steps more clearly.",
-      "Consider adding a section on potential challenges and how to overcome them, which would provide additional value to the reader.",
-      "Include more specific metrics and KPIs to help readers measure the success of their AI workflows more effectively.",
-      "Provide more detailed troubleshooting steps for common issues such as API timeouts and low-confidence AI outputs.",
-      "Consider adding a glossary of terms to help readers better understand the technical concepts discussed in the article.",
-      "Include more case studies or real-world examples to demonstrate the effectiveness of the proposed approach.",
-      "Add a section on scaling AI workflows beyond the initial implementation to help readers plan for growth.",
-      "Consider including a brief FAQ or Q&A section to address common questions and concerns about AI workflow implementation."
-    ]
+    "skipped": true,
+    "reason": "nvidia-qwen failed: 503 {\"message\":\"ResourceExhausted: All workers are busy, please retry later\",\"type\":\"Service Unavailable\",\"code\":503}"
   }
 }
