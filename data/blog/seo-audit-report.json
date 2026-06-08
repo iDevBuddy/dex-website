@@ -5,12 +5,12 @@
   "checks": [
     {
       "name": "metaTitleLength",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
       "name": "metaDescriptionLength",
-      "passed": false,
+      "passed": true,
       "points": 12
     },
     {
