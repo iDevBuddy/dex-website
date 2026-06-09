@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 50,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 66,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 50/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 76,
+    "score": 80,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 66,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
-      "fillerHits": 1,
-      "wordCount": 786
+      "fillerHits": 0,
+      "wordCount": 770
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,22 +106,23 @@
   "review": {
     "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a clear, structured guide on implementing Launchpad Build AI's MLM in industrial automation workflows.",
-      "Content is highly relevant to the target keywords and search intent (Informational) and covers practical implementation steps.",
-      "The article includes a strong business case example with quantified results, which supports the content quality.",
-      "Use of citations and sources is appropriate and adds credibility to the technical claims.",
-      "The tone and style (expert guide) are consistently maintained throughout the article.",
-      "Implementation details like tools, workflow steps, and KPIs are clearly outlined to support the 'practical guide' subtitle.",
-      "The article could benefit from more explicit internal linking to related content or services for better SEO and user engagement.",
-      "The content structure aligns well with the target search intent and keyword focus."
+      "The article provides highly specific, practical advice for implementing Planning AI with memory layers in logistics workflows.",
+      "Content demonstrates strong expertise with structured workflow examples, implementation checklists, and clear business outcomes.",
+      "Avoids generic AI advice and focuses on structured memory layers for logistics planning, aligning with the article's goal.",
+      "Addresses a genuine business problem: improving logistics planning accuracy through memory-aware AI.",
+      "Content is action-oriented with step-by-step implementation guides, minimizing theoretical or speculative content.",
+      "Explicitly lists tools (Slack, CRM, AI model with memory layer) and includes a practical implementation checklist.",
+      "Content is well-researched with authoritative sources and addresses a real business problem without overpromising results."
     ],
     "recommendedFixes": [
-      "Consider adding a comparison table between traditional methods and using Launchpad Build AI's MLM to highlight the value proposition.",
-      "Include a visual workflow diagram to increase user engagement and understanding of the implementation process.",
-      "Add a downloadable checklist for setting up the workflow to improve user onboarding.",
-      "Incorporate a social carousel or infographic for better content marketing and social sharing.",
-      "Enhance internal linking by connecting to related service pages or detailed tool tutorials.",
-      "Add a downloadable PDF or detailed case study for deeper engagement and lead capture."
+      "Add a visual (e.g., workflow diagram) to enhance understanding of the structured memory layer implementation.",
+      "Include a short summary or infographic of the implementation checklist for quick reference.",
+      "Add a section on 'Measuring Success' with before/after KPIs to emphasize business impact.",
+      "Clarify the difference between chat history and structured memory layers with a concrete example.",
+      "Consider adding a comparison table: AI with memory vs. traditional automation to highlight the value of memory layers.",
+      "Include a real-world example of memory layer benefits in a supply chain context.",
+      "Add a troubleshooting section for common implementation issues like API timeouts and low-confidence output.",
+      "Include a direct CTA to a consult or tool for easier access to the solution."
     ]
   }
 }
