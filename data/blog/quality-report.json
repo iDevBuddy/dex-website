@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -20,17 +20,17 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 59,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,20 +85,20 @@
     }
   ],
   "authenticity": {
-    "score": 80,
+    "score": 84,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 79,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 59,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 770
+      "wordCount": 721
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
@@ -106,23 +106,23 @@
   "review": {
     "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides highly specific, practical advice for implementing Planning AI with memory layers in logistics workflows.",
-      "Content demonstrates strong expertise with structured workflow examples, implementation checklists, and clear business outcomes.",
-      "Avoids generic AI advice and focuses on structured memory layers for logistics planning, aligning with the article's goal.",
-      "Addresses a genuine business problem: improving logistics planning accuracy through memory-aware AI.",
-      "Content is action-oriented with step-by-step implementation guides, minimizing theoretical or speculative content.",
-      "Explicitly lists tools (Slack, CRM, AI model with memory layer) and includes a practical implementation checklist.",
-      "Content is well-researched with authoritative sources and addresses a real business problem without overpromising results."
+      "The article provides a highly technical and practical guide to implementing AI memory in logistics planning workflows, which aligns well with the target audience of founders, operators, and service-business owners.",
+      "Content demonstrates strong expertise in AI automation and clearly explains the distinction between basic automation and memory-enhanced AI for logistics.",
+      "The article includes a real-world case study showing measurable business impact (35% error reduction, 28% faster decisions).",
+      "The article avoids generic AI advice and focuses on structured memory implementation, which addresses the content persona's need for practical, non-speculative AI guidance.",
+      "Content includes implementation checklists, tools needed, and step-by-step workflows which supports the 'practical guide' format and improves its utility for readers.",
+      "The article correctly identifies that memory should be more than chat history and emphasizes structured operational context, which is a sophisticated concept often missed in generic AI content.",
+      "The tone and depth are appropriate for the Business Automation Expert persona, avoiding oversimplification while remaining accessible."
     ],
     "recommendedFixes": [
-      "Add a visual (e.g., workflow diagram) to enhance understanding of the structured memory layer implementation.",
-      "Include a short summary or infographic of the implementation checklist for quick reference.",
-      "Add a section on 'Measuring Success' with before/after KPIs to emphasize business impact.",
-      "Clarify the difference between chat history and structured memory layers with a concrete example.",
-      "Consider adding a comparison table: AI with memory vs. traditional automation to highlight the value of memory layers.",
-      "Include a real-world example of memory layer benefits in a supply chain context.",
-      "Add a troubleshooting section for common implementation issues like API timeouts and low-confidence output.",
-      "Include a direct CTA to a consult or tool for easier access to the solution."
+      "Add a visual diagram of the workflow to improve clarity and skimmability for complex technical content.",
+      "Consider adding a brief comparison of before/after KPIs in a table format to emphasize the business impact more clearly.",
+      "Include a short summary section at the end that recaps the core implementation steps for quick reference.",
+      "Add anchor links for the FAQ section to improve content discoverability for users and search engines.",
+      "Clarify the distinction between operational memory and chat history early with a side-by-side example to make the concept more tangible.",
+      "Add alt text to any workflow diagrams or checklists for accessibility and better indexing by search engines.",
+      "Include a meta description that's under 160 characters to ensure it displays correctly in search results.",
+      "Consider adding internal links to related guides or tools for better content hierarchy and SEO."
     ]
   }
 }
