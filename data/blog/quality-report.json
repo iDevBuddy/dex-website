@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 92,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 50,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 66,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 50/100, sentiment neutral."
+    "reason": "No trend override: quality 92/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -35,7 +35,7 @@
     },
     {
       "name": "hasClearIntro",
-      "passed": true,
+      "passed": false,
       "points": 8
     },
     {
@@ -85,41 +85,41 @@
     }
   ],
   "authenticity": {
-    "score": 87,
+    "score": 78,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 100,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
-      "marketSentimentScore": 66,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 933
+      "wordCount": 744
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "Low",
+    "helpfulContentRisk": "LOW",
     "notes": [
-      "The article provides a clear, practical guide to implementing Launchpad Build AI's Manufacturing Language Model in industrial automation workflows.",
-      "The content demonstrates strong expertise and is written in a structured, informative style that aligns with the informational search intent.",
-      "The article includes a variety of supporting content elements like a step-by-step implementation, tools list, and KPIs that help fulfill the 'practical' and 'informational' value propositions.",
-      "The article includes internal links to related content and a contact form, which supports the 'tool_tutorial' and 'business outcome' focus.",
-      "The content contains several authoritative sources with high authority scores, enhancing credibility.",
-      "The article includes an implementation checklist, common mistakes, and troubleshooting sections, which are helpful for readers."
+      "The article provides practical, workflow-focused guidance on implementing AI automation with memory capabilities",
+      "Content is well-structured around a specific business use case (support triage) with concrete implementation steps",
+      "Addresses key concerns like approval steps, quality checks, and measurable outcomes that demonstrate business value",
+      "Uses authoritative sources and avoids generic AI advice, focusing on structured operational context rather than just automation",
+      "Content aligns well with search intent for informational queries about practical AI implementation",
+      "Provides specific tools, workflows, and KPIs that are relevant to logistics and supply chain planning"
     ],
     "recommendedFixes": [
-      "Consider adding a comparison table between traditional methods and the new AI-driven workflow to highlight the value proposition.",
-      "Include a workflow diagram to visually represent the step-by-step process for better clarity.",
-      "Add a downloadable PDF version of the implementation checklist for business users to easily reference and implement the workflow.",
-      "Add a social carousel or infographic to highlight key takeaways and visually reinforce the benefits of the Launchpad Build AI MLM for stakeholder presentations.",
-      "Inclusion of a real-world case study or example would enhance the practical value and provide social proof of the system's effectiveness.",
-      "Consider adding a section on how to handle edge cases or exceptions in the workflow for robust implementation guidance."
+      "Add more specific examples of structured operational context for different logistics scenarios beyond support triage",
+      "Include more detailed implementation steps for the memory layer setup with specific AI platform integration examples",
+      "Expand on the approval workflow mechanics with concrete examples of when and how human review is triggered",
+      "Add troubleshooting steps for common memory-related issues in AI workflows",
+      "Include more specific KPI tracking examples and measurement methodologies",
+      "Provide additional workflow templates for different business functions (beyond support triage) to increase applicability"
     ]
   }
 }
