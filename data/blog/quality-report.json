@@ -1,36 +1,36 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
   "sourceGate": {
     "required": true,
     "passed": true,
-    "sourceCount": 6,
+    "sourceCount": 5,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 52,
-    "marketSentiment": "positive",
-    "marketSentimentScore": 72,
+    "trendScore": 68,
+    "marketSentiment": "neutral",
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 52/100, sentiment positive."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,37 +85,43 @@
     }
   ],
   "authenticity": {
-    "score": 87,
+    "score": 75,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 93,
       "sourceAlignment": 100,
-      "marketSentimentScore": 72,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 732
+      "wordCount": 663
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "low",
+    "helpfulContentRisk": "Low",
     "notes": [
-      "Content is highly specific and technical, targeting a niche audience",
-      "Strong practical implementation focus reduces generic AI advice risk",
-      "Addresses business problems with concrete solutions",
-      "Includes specific tools, workflows, and KPIs"
+      "The article provides a clear, practical guide to implementing AI planning with memory in logistics workflows.",
+      "Content is well-structured with actionable steps, tools, and a real-world case study.",
+      "Addresses both implementation and measurement, including common pitfalls and troubleshooting advice.",
+      "The article aligns well with the target audience (founders, operators, marketers) and their search intent (informational).",
+      "Includes expert insights, structured takeaways, and supporting data to improve credibility and usefulness.",
+      "SEO elements like meta description, title, and target keyword are well-aligned with the content."
     ],
     "recommendedFixes": [
-      "Add more detailed technical implementation steps for the MLM integration",
-      "Include specific code snippets or API examples for Slack/CRM integration",
-      "Add troubleshooting examples with actual error messages or scenarios",
-      "Include more detailed metrics on design time reduction percentages"
+      "Add a visual workflow diagram to illustrate the step-by-step process for better clarity (as suggested in media recommendations).",
+      "Include a downloadable checklist or PDF summarizing the implementation steps and checklist items.",
+      "Consider adding a comparison table between traditional automation and AI planning with memory to highlight the value proposition.",
+      "Expand on failure handling examples with specific prompt engineering or error-recovery techniques.",
+      "Add a section on cost-benefit analysis or ROI estimation to support business decision-making.",
+      "Ensure all internal links are working and contextually relevant to the reader's journey.",
+      "Improve the FAQ section by adding more technical or edge-case questions based on real user queries.",
+      "Add alt text to images and ensure accessibility compliance for featured image and other media assets."
     ]
   }
 }
