@@ -1,5 +1,5 @@
 {
-  "score": 92,
+  "score": 100,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,23 +8,23 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 80,
+    "sourceQualityScore": 82,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 80."
+    "notes": "Source quality score 82."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 68,
+    "trendScore": 50,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 62,
+    "marketSentimentScore": 66,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 92/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 100/88, trend 50/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
@@ -35,7 +35,7 @@
     },
     {
       "name": "hasClearIntro",
-      "passed": false,
+      "passed": true,
       "points": 8
     },
     {
@@ -85,41 +85,26 @@
     }
   ],
   "authenticity": {
-    "score": 78,
+    "score": 72,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 93,
+      "businessRelevance": 58,
       "sourceAlignment": 100,
-      "marketSentimentScore": 62,
+      "marketSentimentScore": 66,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
-      "fillerHits": 0,
-      "wordCount": 744
+      "fillerHits": 1,
+      "wordCount": 759
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": "LOW",
-    "notes": [
-      "The article provides practical, workflow-focused guidance on implementing AI automation with memory capabilities",
-      "Content is well-structured around a specific business use case (support triage) with concrete implementation steps",
-      "Addresses key concerns like approval steps, quality checks, and measurable outcomes that demonstrate business value",
-      "Uses authoritative sources and avoids generic AI advice, focusing on structured operational context rather than just automation",
-      "Content aligns well with search intent for informational queries about practical AI implementation",
-      "Provides specific tools, workflows, and KPIs that are relevant to logistics and supply chain planning"
-    ],
-    "recommendedFixes": [
-      "Add more specific examples of structured operational context for different logistics scenarios beyond support triage",
-      "Include more detailed implementation steps for the memory layer setup with specific AI platform integration examples",
-      "Expand on the approval workflow mechanics with concrete examples of when and how human review is triggered",
-      "Add troubleshooting steps for common memory-related issues in AI workflows",
-      "Include more specific KPI tracking examples and measurement methodologies",
-      "Provide additional workflow templates for different business functions (beyond support triage) to increase applicability"
-    ]
+    "skipped": true,
+    "reason": "fetch failed"
   }
 }
