@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -8,29 +8,29 @@
     "passed": true,
     "sourceCount": 6,
     "minSources": 2,
-    "sourceQualityScore": 82,
+    "sourceQualityScore": 80,
     "minSourceQualityScore": 75,
     "status": "Ready",
-    "notes": "Source quality score 82."
+    "notes": "Source quality score 80."
   },
   "trendOverride": {
     "enabled": true,
     "applied": false,
     "floor": 78,
     "strictMinimum": 88,
-    "trendScore": 50,
+    "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 66,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 50/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,26 +85,45 @@
     }
   ],
   "authenticity": {
-    "score": 72,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 58,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 66,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
-      "fillerHits": 1,
-      "wordCount": 759
+      "fillerHits": 0,
+      "wordCount": 599
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "skipped": true,
-    "reason": "fetch failed"
+    "helpfulContentRisk": "low",
+    "notes": [
+      "The article provides a well-structured, practical guide on implementing AI memory layers in logistics automation workflows.",
+      "Content demonstrates strong expertise in business automation with clear implementation steps and use cases.",
+      "The article includes a good balance of technical implementation details and business impact metrics.",
+      "Content is written in a clear, actionable tone suitable for the target audience of business owners and operators.",
+      "The article provides specific tools (Slack, CRM, AI tools) and a practical implementation checklist.",
+      "Content includes structured data like key takeaways, implementation steps, and failure handling, which improves SEO and user experience.",
+      "The article references authoritative sources and includes citations, supporting the credibility of the content.",
+      "The content avoids generic AI advice and focuses on structured, context-aware memory layers for practical business outcomes."
+    ],
+    "recommendedFixes": [
+      "Improve the meta title and description to better align with search intent and include primary keywords earlier.",
+      "Add more specific examples of AI tools and their integration steps for better clarity and practical use.",
+      "Include a comparison table or workflow diagram to visually represent the steps for better understanding.",
+      "Add a section on how to measure the success of the AI memory layer implementation with KPIs.",
+      "Expand on the troubleshooting section with more specific, real-world examples of failure handling.",
+      "Include a brief case study or testimonial for social proof and improved credibility.",
+      "Add internal links to related articles or resources for better site structure and SEO.",
+      "Optimize headers for featured snippets by making them more question-oriented to capture informational search traffic."
+    ]
   }
 }
