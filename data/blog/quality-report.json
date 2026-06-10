@@ -1,5 +1,5 @@
 {
-  "score": 100,
+  "score": 88,
   "strictPassed": true,
   "passed": true,
   "minQualityScore": 88,
@@ -20,17 +20,17 @@
     "strictMinimum": 88,
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 62,
     "serviceTopic": false,
     "businessTrendEligible": false,
     "autoNewsAllowed": false,
-    "reason": "No trend override: quality 100/88, trend 68/100, sentiment neutral."
+    "reason": "No trend override: quality 88/88, trend 68/100, sentiment neutral."
   },
   "publishMode": "standard_review",
   "results": [
     {
       "name": "minimumWordCount",
-      "passed": true,
+      "passed": false,
       "points": 12
     },
     {
@@ -85,45 +85,45 @@
     }
   ],
   "authenticity": {
-    "score": 74,
+    "score": 76,
     "passed": true,
     "minimum": 72,
     "provider": "heuristic_nlp",
     "modelResult": null,
     "signals": {
       "specificity": 100,
-      "businessRelevance": 86,
+      "businessRelevance": 100,
       "sourceAlignment": 100,
-      "marketSentimentScore": 65,
+      "marketSentimentScore": 62,
       "duplicateStatus": "unknown",
       "duplicateScore": 0,
       "fillerHits": 0,
-      "wordCount": 1000
+      "wordCount": 634
     },
     "notes": "Authenticity check passed: article has enough specificity, business relevance, source alignment, and trend support.",
     "blockingIssue": ""
   },
   "review": {
-    "helpfulContentRisk": 8,
+    "helpfulContentRisk": "Low",
     "notes": [
-      "The article provides a strong practical framework for implementing memory-based AI in logistics workflows, which aligns well with the target audience's needs.",
-      "Content demonstrates expertise through structured workflow steps, tool recommendations, and clear implementation guidance.",
-      "The article avoids generic AI advice and focuses on specific logistics use cases, which matches the stated business problem.",
-      "Some sections like 'Troubleshooting and Failure Handling' and 'Measuring Success and KPIs' could be more detailed with specific examples or metrics.",
-      "The FAQ section addresses key concerns but could include more depth on implementation challenges.",
-      "Content includes strong SEO elements with appropriate keyword usage and meta descriptions.",
-      "The article could benefit from more specific examples of memory implementation in logistics scenarios.",
-      "Good balance of technical depth and practical application for the target audience (founders, operators, marketers)."
+      "The article provides a well-structured, practical guide that aligns with search intent.",
+      "Content effectively targets logistics professionals interested in AI automation.",
+      "Implementation examples are clear and include concrete KPIs and business outcomes.",
+      "Addresses a genuine business problem with a specific use case (Slack intake workflow).",
+      "The article includes sources, which adds credibility, though all sources are from 2026, which may raise timeliness concerns.",
+      "Content is focused and actionable, matching the reader's need for practical, not generic, AI advice.",
+      "The article avoids risky SEO tactics and provides a clear, value-driven approach."
     ],
     "recommendedFixes": [
-      "Add specific examples of memory implementation in logistics, such as how past delivery data influences future route optimization decisions.",
-      "Include more detailed metrics for measuring success, such as specific KPI targets (e.g., 'Reduce first response time to under 2 hours' or 'Achieve 95% customer satisfaction').",
-      "Expand the troubleshooting section with concrete examples of how to handle API timeouts and low-confidence outputs in logistics contexts.",
-      "Add a brief case study or example workflow showing before/after implementation results.",
-      "Include more specific guidance on tool integration (Slack, Notion, Zapier, etc.) for logistics use cases.",
-      "Clarify the difference between simple automation and memory-based planning with concrete logistics examples.",
-      "Add implementation timeline expectations for each step of the workflow.",
-      "Strengthen the FAQ section with more nuanced questions about challenges in logistics-specific memory implementation."
+      "Update source dates to ensure credibility if 2026 dates are placeholders or in error.",
+      "Clarify or confirm the publication date of sources to ensure content credibility.",
+      "Consider adding a brief summary of how the memory-aware planning improves over generic AI approaches in logistics.",
+      "Add internal links to related content or services to improve site structure and SEO.",
+      "Ensure all sources are correctly dated and from authoritative sources.",
+      "Add alt text to images for accessibility and SEO.",
+      "Consider updating the automation opportunity section with more specific KPIs or outcomes.",
+      "Add a meta description and reading time to improve SEO metadata.",
+      "Add schema markup for better search engine understanding."
     ]
   }
 }
