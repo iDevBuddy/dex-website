@@ -46,24 +46,6 @@
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
-      "type": "Web research",
-      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
-      "authorityScore": 69,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
-      "type": "Web research",
-      "supports": "### Amazon’s $10 Billion Move: North Carolina to Host Next AI Powerhouse\n\nArtificial Intelligence | By Logistics Viewpoints Editorial Team • 06/09/2025\n\nAmazon announced it will invest $10 billion to ",
-      "authorityScore": 65,
-      "publishedDate": ""
-    },
-    {
       "title": "Supply Chain Trends for 2025: The Impact of AI",
       "organization": "mem.grad.ncsu.edu",
       "url": "https://mem.grad.ncsu.edu/2026/03/17/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence",
@@ -73,7 +55,7 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide",
+      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning",
       "type": "Web research",
@@ -96,19 +78,48 @@
         "prompt"
       ],
       "authorityScore": 83
+    },
+    {
+      "title": "GitHub Docs: GitHub Actions",
+      "organization": "GitHub",
+      "url": "https://docs.github.com/en/actions",
+      "type": "Official documentation",
+      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
+      "tags": [
+        "github",
+        "automation",
+        "workflow",
+        "ci",
+        "deployment"
+      ],
+      "authorityScore": 83
+    },
+    {
+      "title": "The State of AI",
+      "organization": "McKinsey & Company",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "type": "Industry report",
+      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
+      "tags": [
+        "ai",
+        "business",
+        "trend",
+        "strategy"
+      ],
+      "authorityScore": 80
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
-    "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
     "https://mem.grad.ncsu.edu/2026/03/17/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence",
     "https://innovecs.com/blog/ai-supply-chain-planning",
-    "https://platform.openai.com/docs/"
+    "https://platform.openai.com/docs/",
+    "https://docs.github.com/en/actions",
+    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "3 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -122,7 +133,7 @@
   "trendAnalysis": {
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 65,
+    "marketSentimentScore": 71,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -143,6 +154,14 @@
       },
       {
         "source": "Google News",
+        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
+      },
+      {
+        "source": "Google News",
+        "title": "I tried 70+ best AI tools in 2026 - TechRadar"
+      },
+      {
+        "source": "Google News",
         "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
       },
       {
@@ -151,15 +170,7 @@
       },
       {
         "source": "Google News",
-        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
-      },
-      {
-        "source": "Google News",
-        "title": "AI and Enterprise Software: Is the “SaaSpocalypse” Narrative Overstated? - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "The Rise of AI Agents: Anticipating Cybersecurity Opportunities, Risks, and the Next Frontier - R Street Institute"
+        "title": "Why Context Is Becoming the Critical Requirement for Supply Chain AI - Logistics Viewpoints"
       }
     ],
     "realtimeSources": [
@@ -197,24 +208,6 @@
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
-      "type": "Web research",
-      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
-      "authorityScore": 69,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
-      "type": "Web research",
-      "supports": "### Amazon’s $10 Billion Move: North Carolina to Host Next AI Powerhouse\n\nArtificial Intelligence | By Logistics Viewpoints Editorial Team • 06/09/2025\n\nAmazon announced it will invest $10 billion to ",
-      "authorityScore": 65,
-      "publishedDate": ""
-    },
-    {
       "title": "Supply Chain Trends for 2025: The Impact of AI",
       "organization": "mem.grad.ncsu.edu",
       "url": "https://mem.grad.ncsu.edu/2026/03/17/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence",
@@ -224,7 +217,7 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide",
+      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
       "organization": "innovecs.com",
       "url": "https://innovecs.com/blog/ai-supply-chain-planning",
       "type": "Web research",
