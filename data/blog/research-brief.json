@@ -64,15 +64,6 @@
       "publishedDate": ""
     },
     {
-      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
-      "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
-      "publishedDate": ""
-    },
-    {
       "title": "OpenAI Platform Documentation",
       "organization": "OpenAI",
       "url": "https://platform.openai.com/docs/",
@@ -102,19 +93,33 @@
         "deployment"
       ],
       "authorityScore": 83
+    },
+    {
+      "title": "The State of AI",
+      "organization": "McKinsey & Company",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "type": "Industry report",
+      "supports": "Useful for business-level AI adoption context and executive framing around AI value creation.",
+      "tags": [
+        "ai",
+        "business",
+        "trend",
+        "strategy"
+      ],
+      "authorityScore": 80
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
     "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
     "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
-    "https://innovecs.com/blog/ai-supply-chain-planning",
     "https://platform.openai.com/docs/",
-    "https://docs.github.com/en/actions"
+    "https://docs.github.com/en/actions",
+    "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "4 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "3 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -218,15 +223,6 @@
       "type": "Web research",
       "supports": "### Amazon’s $10 Billion Move: North Carolina to Host Next AI Powerhouse\n\nArtificial Intelligence | By Logistics Viewpoints Editorial Team • 06/09/2025\n\nAmazon announced it will invest $10 billion to ",
       "authorityScore": 65,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Supply Chain Planning: A Complete Guide - Innovecs",
-      "organization": "innovecs.com",
-      "url": "https://innovecs.com/blog/ai-supply-chain-planning",
-      "type": "Web research",
-      "supports": "The harder part is not naming the model. It is implementing AI without turning the planning stack into a patchwork mess. In Supply Chain Brain’s report on AI moving into core supply chain decisions, o",
-      "authorityScore": 54,
       "publishedDate": ""
     }
   ]
