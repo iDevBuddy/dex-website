@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -16,14 +17,14 @@ export default function Hero() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // ── Entrance: words rise from translateY(100%) + fade ──────────
-            gsap.set(wordRefs.current, { yPercent: 110, opacity: 0 })
+            // ── Entrance: words rise from translateY(50px) + fade in ───────
+            gsap.set(wordRefs.current, { y: 50, opacity: 0 })
             gsap.to(wordRefs.current, {
-                yPercent: 0,
+                y: 0,
                 opacity: 1,
-                duration: 1.1,
-                stagger: 0.07,
-                ease: 'expo.out', // premium cubic-bezier feel
+                duration: 1,
+                stagger: 0.08,
+                ease: 'power3.out', // premium cubic-bezier feel
                 delay: 0.15,
             })
 
@@ -168,13 +169,12 @@ export default function Hero() {
 
                     <h1 className="font-display font-bold text-ghost text-4xl sm:text-6xl lg:text-[4.4rem] leading-[0.98] tracking-tightest mb-8">
                         {HEADLINE.map((word, i) => (
-                            <span key={i} className="inline-block overflow-hidden align-bottom pb-[0.08em] mr-[0.22em]">
-                                <span
-                                    ref={(el) => (wordRefs.current[i] = el)}
-                                    className={`inline-block ${word === 'business.' ? 'text-accent' : ''}`}
-                                >
-                                    {word}
-                                </span>
+                            <span
+                                key={i}
+                                ref={(el) => (wordRefs.current[i] = el)}
+                                className="inline-block mr-[0.22em] will-change-transform"
+                            >
+                                {word}
                             </span>
                         ))}
                     </h1>
@@ -187,7 +187,7 @@ export default function Hero() {
                     <div data-hero-fade className="flex flex-wrap gap-3.5 items-center">
                         <button
                             onClick={openChatbot}
-                            className="px-7 py-3.5 bg-accent text-white font-semibold text-[0.82rem] rounded-xl transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_28px_-4px_rgba(255,79,100,0.7)] cursor-pointer"
+                            className="px-7 py-3.5 bg-[#111111] border border-accent text-ghost font-semibold text-[0.82rem] rounded-xl transition-all duration-300 hover:bg-accent/[0.08] hover:shadow-[0_0_28px_-4px_rgba(255,79,100,0.7)] cursor-pointer"
                         >
                             Start Consultation
                         </button>
