@@ -131,51 +131,16 @@
   "suggestedAngle": "",
   "suggestedTopic": "",
   "trendAnalysis": {
-    "trendScore": 68,
+    "trendScore": 20,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 56,
     "matchedTrendTerms": [
       "automation"
     ],
     "trendOverrideEligible": false,
-    "trendOverrideReason": "Real-time trend validation found 12 signal(s) from 1 source(s). Sentiment: neutral.",
-    "realtimeSignals": [
-      {
-        "source": "Google News",
-        "title": "AI Infrastructure Boom Creates Skyrocketing Demand for Automation, Robotics Solutions Across Industries - The Globe and Mail"
-      },
-      {
-        "source": "Google News",
-        "title": "Planning AI Needs Memory, Not Just Automation - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start - Yale Insights"
-      },
-      {
-        "source": "Google News",
-        "title": "Why Context Is Becoming the Critical Requirement for Supply Chain AI - Logistics Viewpoints"
-      },
-      {
-        "source": "Google News",
-        "title": "IDC Point of View: First Look at the War in the Middle East and Its Impact on IT Spending in the Region and Globally - International Data Corporation"
-      },
-      {
-        "source": "Google News",
-        "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
-      },
-      {
-        "source": "Google News",
-        "title": "The Infinite AI Compute Loop: HBM Big Three + TSMC × NVIDIA × OpenAI Shaping the Next-Generation Industry Chain - semivision"
-      },
-      {
-        "source": "Google News",
-        "title": "Agentic AI: The future of autonomous intelligence - KPMG"
-      }
-    ],
-    "realtimeSources": [
-      "Google News"
-    ],
+    "trendOverrideReason": "Trending signal matched: automation. Sentiment: neutral.",
+    "realtimeSignals": [],
+    "realtimeSources": [],
     "realtimeUnavailableSources": [
       "Reddit: 403"
     ]
