@@ -1,65 +1,92 @@
-import { FadeIn } from './Animations'
+'use client'
 import { useRef, useEffect, useState } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-function Counter({ target, suffix = '' }) {
+gsap.registerPlugin(ScrollTrigger)
+
+function Counter({ target, start }) {
     const [count, setCount] = useState(0)
-    const ref = useRef(null)
-    const started = useRef(false)
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting && !started.current) {
-                    started.current = true
-                    let current = 0
-                    const increment = target / 40
-                    const timer = setInterval(() => {
-                        current += increment
-                        if (current >= target) {
-                            setCount(target)
-                            clearInterval(timer)
-                        } else {
-                            setCount(Math.floor(current))
-                        }
-                    }, 30)
-                }
-            },
-            { threshold: 0.3 }
-        )
-        if (ref.current) observer.observe(ref.current)
-        return () => observer.disconnect()
-    }, [target])
+        if (!start) return
+        let current = 0
+        const increment = Math.max(1, target / 45)
+        const timer = setInterval(() => {
+            current += increment
+            if (current >= target) {
+                setCount(target)
+                clearInterval(timer)
+            } else {
+                setCount(Math.floor(current))
+            }
+        }, 24)
+        return () => clearInterval(timer)
+    }, [start, target])
 
-    return <span ref={ref}>{count}{suffix}</span>
+    return <span className="text-ghost">{count}</span>
 }
 
 const stats = [
-    { number: 50, suffix: '%', text: 'of business decisions will be augmented or automated by AI Agents by 2027.', source: 'Gartner', url: 'https://www.gartner.com' },
-    { number: 86, suffix: '%', text: 'of executives say AI agents will make workflow automation more effective by 2027.', source: 'IBM', url: 'https://www.ibm.com' },
-    { number: 66, suffix: '%', text: 'of businesses using AI agents report higher productivity, 57% see cost savings, and 54% improve customer experience.', source: 'PwC', url: 'https://www.pwc.com' },
+    { number: 50, text: 'of business decisions will be augmented or automated by AI Agents by 2027.', source: 'Gartner', url: 'https://www.gartner.com' },
+    { number: 86, text: 'of executives say AI agents will make workflow automation more effective by 2027.', source: 'IBM', url: 'https://www.ibm.com' },
+    { number: 66, text: 'of businesses using AI agents report higher productivity, 57% see cost savings, and 54% improve customer experience.', source: 'PwC', url: 'https://www.pwc.com' },
 ]
 
 export default function Stats() {
+    const sectionRef = useRef(null)
+    const cardsRef = useRef([])
+    const [counting, setCounting] = useState(false)
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.from(cardsRef.current, {
+                y: 40,
+                opacity: 0,
+                duration: 0.9,
+                stagger: 0.12,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: 'top 75%',
+                    onEnter: () => setCounting(true),
+                },
+            })
+        }, sectionRef)
+        return () => ctx.revert()
+    }, [])
+
+    // Cursor-following spotlight
+    const handleMove = (e) => {
+        const r = e.currentTarget.getBoundingClientRect()
+        e.currentTarget.style.setProperty('--mouse-x', `${e.clientX - r.left}px`)
+        e.currentTarget.style.setProperty('--mouse-y', `${e.clientY - r.top}px`)
+    }
+
     return (
-        <section className="py-20 bg-dark border-y border-[#E5E5E7]">
+        <section ref={sectionRef} className="py-20 bg-dark border-y border-white/[0.06]">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid md:grid-cols-3 gap-6">
                     {stats.map((stat, i) => (
-                        <FadeIn key={i} delay={i * 0.1}>
-                            <div className="group relative text-center p-10 rounded-2xl border border-[#E5E5E7] bg-white hover:border-accent/30 hover:shadow-[0_12px_32px_rgba(0,0,0,0.04)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                                {/* Subtle top accent line */}
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-accent/40 rounded-full" />
-                                <div className="font-mono text-5xl font-bold text-accent mb-3">
-                                    <Counter target={stat.number} suffix={stat.suffix} />
-                                </div>
-                                <p className="text-[0.92rem] text-slate-600 leading-relaxed">{stat.text}</p>
-                                <p className="font-mono text-[0.72rem] text-slate-400 mt-3">
-                                    <a href={stat.url} target="_blank" rel="noopener noreferrer" className="border-b border-slate-200 hover:text-accent hover:border-accent/40 transition-colors">
-                                        Source: {stat.source}
-                                    </a>
-                                </p>
+                        <div
+                            key={i}
+                            ref={(el) => (cardsRef.current[i] = el)}
+                            onMouseMove={handleMove}
+                            className="dex-spotlight-card group relative text-center p-10 rounded-2xl border border-white/[0.06] bg-[#0A0B0E] hover:border-white/[0.12] hover:-translate-y-1 transition-[transform,border-color] duration-300"
+                        >
+                            {/* Subtle top accent line */}
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-accent/40 rounded-full" />
+                            <div className="relative z-[2] font-mono text-5xl font-bold mb-3">
+                                <Counter target={stat.number} start={counting} />
+                                <span className="text-accent">%</span>
                             </div>
-                        </FadeIn>
+                            <p className="relative z-[2] text-[0.92rem] text-ghost-dim leading-relaxed">{stat.text}</p>
+                            <p className="relative z-[2] font-mono text-[0.72rem] text-ghost-faint mt-3">
+                                <a href={stat.url} target="_blank" rel="noopener noreferrer" className="border-b border-white/10 hover:text-accent hover:border-accent/40 transition-colors">
+                                    Source: {stat.source}
+                                </a>
+                            </p>
+                        </div>
                     ))}
                 </div>
             </div>
