@@ -64,15 +64,24 @@ export default function Stats() {
     }
 
     return (
-        <section ref={sectionRef} className="py-20 bg-dark border-y border-white/[0.06]">
-            <div className="max-w-7xl mx-auto px-6">
+        <section ref={sectionRef} className="relative py-20 bg-dark border-y border-white/[0.06] overflow-hidden">
+            {/* Blueprint / matrix grid — the blur target behind the smoked glass */}
+            <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                    backgroundImage:
+                        'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+                    backgroundSize: '42px 42px',
+                }}
+            />
+            <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <div className="grid md:grid-cols-3 gap-6">
                     {stats.map((stat, i) => (
                         <div
                             key={i}
                             ref={(el) => (cardsRef.current[i] = el)}
                             onMouseMove={handleMove}
-                            className="dex-spotlight-card group relative text-center p-10 rounded-2xl border border-white/[0.06] bg-[#0A0B0E] hover:border-white/[0.12] hover:-translate-y-1 transition-[transform,border-color] duration-300"
+                            className="dex-spotlight-card group relative text-center p-10 rounded-2xl border border-white/[0.08] bg-[rgba(10,11,14,0.4)] backdrop-blur-[16px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.15)] hover:border-white/[0.14] hover:-translate-y-1 transition-[transform,border-color] duration-300"
                         >
                             {/* Subtle top accent line */}
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-accent/40 rounded-full" />
