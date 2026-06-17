@@ -9,17 +9,17 @@
     }
 
     html {
-        color-scheme: light;
+        color-scheme: dark;
         scroll-behavior: smooth;
     }
 
     body {
-        @apply bg-dark text-slate-800;
+        @apply bg-dark text-ghost;
     }
 
     ::selection {
-        background: rgba(0, 82, 255, 0.12);
-        color: #0052FF;
+        background: rgba(255, 79, 100, 0.22);
+        color: #F8F9FA;
     }
 
     /* Skip link for keyboard users */
@@ -42,29 +42,30 @@
         @apply py-20 lg:py-28;
     }
 
-    /* Apple-grade Light Hairline Panel */
+    /* Void hairline panel */
     .dex-panel {
-        background: #FFFFFF;
-        border: 1px solid #E5E5E7;
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+        background: #0D0D0F;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.03);
     }
 
-    /* Premium frosted glass utility */
+    /* Stealth frosted glass — the floating nav uses this language */
     .dex-glass {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(16px);
-        border: 1px solid rgba(0, 0, 0, 0.05);
+        background: rgba(5, 5, 5, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .dex-field {
-        @apply w-full rounded-xl px-4 py-3 text-sm text-slate-800 outline-none transition-all duration-300;
-        background: #FFFFFF;
-        border: 1px solid #D1D1D6;
+        @apply w-full rounded-xl px-4 py-3 text-sm text-ghost outline-none transition-all duration-300;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .dex-field:focus {
-        border-color: rgba(0, 82, 255, 0.5); /* cobalt focus */
-        box-shadow: 0 0 0 4px rgba(0, 82, 255, 0.1);
+        border-color: rgba(255, 79, 100, 0.5);
+        box-shadow: 0 0 0 4px rgba(255, 79, 100, 0.12);
     }
 
     .dex-field-error {
@@ -72,9 +73,9 @@
     }
 
     .dex-widget-button {
-        background: #FFFFFF;
-        border: 1px solid #E5E5E7;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        background: #0D0D0F;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
     }
 
     /* Tactile grid spot highlight system */
@@ -88,7 +89,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(0, 82, 255, 0.03), transparent 45%);
+        background: radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255, 79, 100, 0.06), transparent 45%);
         z-index: 1;
         pointer-events: none;
         opacity: 0;
@@ -99,29 +100,60 @@
         opacity: 1;
     }
 
-    /* Analog Grain overlay for visual texture */
+    /* Analog grain overlay for visual texture */
     .dex-grain-overlay {
         position: absolute;
         inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.008'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
         pointer-events: none;
         z-index: 2;
     }
 
+    /* Faint isometric blueprint grid for the void backdrop */
+    .dex-void-grid {
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        background-size: 64px 64px;
+        mask-image: radial-gradient(ellipse 80% 60% at 70% 40%, black 20%, transparent 75%);
+        -webkit-mask-image: radial-gradient(ellipse 80% 60% at 70% 40%, black 20%, transparent 75%);
+    }
+
+    /* Floating nav active-link dot */
+    .nav-dot {
+        position: absolute;
+        bottom: -9px;
+        left: 50%;
+        width: 4px;
+        height: 4px;
+        border-radius: 9999px;
+        background: #FF4F64;
+        box-shadow: 0 0 8px rgba(255, 79, 100, 0.9);
+        opacity: 0;
+        transform: translateX(-50%) scale(0.4);
+        transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-link:hover .nav-dot,
+    .nav-link.is-active .nav-dot {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+
     .blog-prose {
-        @apply text-slate-600;
+        @apply text-ghost-dim;
     }
 
     .blog-prose h2 {
-        @apply text-3xl font-black text-slate-900 tracking-tight mt-12 mb-5 scroll-mt-28;
+        @apply text-3xl font-bold text-ghost tracking-tight mt-12 mb-5 scroll-mt-28 font-display;
     }
 
     .blog-prose h3 {
-        @apply text-2xl font-bold text-slate-900 mt-9 mb-4 scroll-mt-28;
+        @apply text-2xl font-bold text-ghost mt-9 mb-4 scroll-mt-28 font-display;
     }
 
     .blog-prose p {
-        @apply text-[1.04rem] leading-8 text-slate-700 mb-6;
+        @apply text-[1.04rem] leading-8 text-ghost-dim mb-6;
     }
 
     .blog-prose ul {
@@ -129,7 +161,7 @@
     }
 
     .blog-prose li {
-        @apply text-[1.02rem] leading-8 text-slate-700 list-disc;
+        @apply text-[1.02rem] leading-8 text-ghost-dim list-disc;
     }
 
     .blog-prose a {
@@ -137,15 +169,15 @@
     }
 
     .blog-prose strong {
-        @apply text-slate-900 font-semibold;
+        @apply text-ghost font-semibold;
     }
 
     .blog-prose code {
-        @apply rounded bg-slate-50 border border-border px-1.5 py-0.5 text-sm text-slate-800;
+        @apply rounded bg-white/5 border border-white/10 px-1.5 py-0.5 text-sm text-ghost;
     }
 
     .blog-prose blockquote {
-        @apply border-l-2 border-accent pl-5 text-lg leading-8 text-slate-800 bg-accent-dim p-5 rounded-r-lg mb-7;
+        @apply border-l-2 border-accent pl-5 text-lg leading-8 text-ghost bg-accent-dim p-5 rounded-r-lg mb-7;
     }
 }
 
