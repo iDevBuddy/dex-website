@@ -3,118 +3,133 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
-    const [scrolled, setScrolled] = useState(false)
     const [mobileOpen, setMobileOpen] = useState(false)
+    const [active, setActive] = useState('')
 
+    // Track which section is in view to light its dot
     useEffect(() => {
-        const handler = () => setScrolled(window.scrollY > 40)
-        window.addEventListener('scroll', handler)
-        return () => window.removeEventListener('scroll', handler)
+        const ids = ['pipeline', 'services', 'impact', 'process']
+        const obs = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((e) => {
+                    if (e.isIntersecting) setActive(e.target.id)
+                })
+            },
+            { rootMargin: '-45% 0px -50% 0px' }
+        )
+        ids.forEach((id) => {
+            const el = document.getElementById(id)
+            if (el) obs.observe(el)
+        })
+        return () => obs.disconnect()
     }, [])
 
     const openChatbot = () => window.dispatchEvent(new CustomEvent('open-dex-chatbot'))
 
     const links = [
-        { label: 'Pipeline', href: '/#pipeline' },
-        { label: 'Services', href: '/#services' },
-        { label: 'Proven Impact', href: '/#impact' },
-        { label: 'Process', href: '/#process' },
-        { label: 'Blog', href: '/blog' },
+        { label: 'Pipeline', href: '/#pipeline', id: 'pipeline' },
+        { label: 'Services', href: '/#services', id: 'services' },
+        { label: 'Impact', href: '/#impact', id: 'impact' },
+        { label: 'Process', href: '/#process', id: 'process' },
+        { label: 'Blog', href: '/blog', id: 'blog' },
     ]
 
     return (
         <motion.nav
-            initial={{ y: -30, opacity: 0 }}
+            initial={{ y: -24, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-                scrolled
-                    ? 'py-4 px-6 md:px-12 flex justify-center'
-                    : 'py-6 px-6'
-            }`}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed top-4 sm:top-5 left-0 right-0 z-50 flex justify-center px-4"
         >
-            <div
-                className={`transition-all duration-500 flex items-center justify-between ${
-                    scrolled
-                        ? 'max-w-5xl w-full bg-white/80 backdrop-blur-xl border border-black/5 px-8 py-3 rounded-full shadow-[0_12px_40px_rgba(0,0,0,0.06)]'
-                        : 'max-w-7xl w-full mx-auto'
-                }`}
-            >
-                <a href="/" className="font-display text-lg font-bold text-slate-900 tracking-tight flex items-center gap-2">
-                    <span className="h-2.5 w-2.5 rounded-full bg-accent animate-pulse" />
-                    <span>DEX</span>
-                    <span className="text-slate-500 font-normal text-xs uppercase tracking-[0.2em] ml-1.5 hidden sm:inline">by Akif Saeed</span>
+            {/* The Floating Pill */}
+            <div className="dex-glass w-full max-w-[800px] rounded-full pl-5 pr-2.5 py-2.5 flex items-center justify-between shadow-[0_18px_50px_-12px_rgba(0,0,0,0.7)]">
+                {/* Wordmark */}
+                <a
+                    href="/"
+                    className="font-display text-[0.95rem] font-bold text-ghost tracking-tight flex items-center gap-2 shrink-0"
+                >
+                    <span className="relative flex h-2 w-2">
+                        <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-60 animate-ping" />
+                        <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+                    </span>
+                    DEX
                 </a>
 
-                {/* Desktop menu */}
-                <div className="hidden lg:flex items-center gap-8">
-                    {links.map(l => (
+                {/* Desktop links — hover slides a red dot under the label */}
+                <div className="hidden md:flex items-center gap-7">
+                    {links.map((l) => (
                         <a
                             key={l.href}
                             href={l.href}
-                            className="relative text-[0.82rem] font-medium text-slate-600 hover:text-slate-900 transition-colors duration-300 group py-1"
+                            className={`nav-link relative text-[0.8rem] font-medium text-ghost-dim transition-colors duration-300 py-1 ${
+                                active === l.id ? 'is-active text-ghost' : ''
+                            }`}
                         >
                             {l.label}
-                            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                            <span className="nav-dot" aria-hidden="true" />
                         </a>
                     ))}
+                </div>
+
+                {/* Ghost CTA — border turns red + glows on hover */}
+                <div className="hidden md:flex items-center gap-2 shrink-0">
                     <button
                         onClick={openChatbot}
-                        className="text-[0.82rem] font-medium text-slate-600 hover:text-slate-900 transition-colors duration-300 cursor-pointer"
+                        className="text-[0.8rem] font-medium text-ghost-dim hover:text-ghost transition-colors duration-300 cursor-pointer px-2"
                     >
                         Live Demo
                     </button>
                     <a
                         href="/#contact"
-                        className="ml-2 px-5 py-2.5 bg-accent text-white text-[0.8rem] font-semibold rounded-full hover:bg-accent-hover transition-all duration-300 hover:scale-[1.02] focus:outline-none"
+                        className="group relative px-5 py-2.5 rounded-full text-[0.8rem] font-semibold text-ghost border border-white/15 transition-all duration-300 hover:border-accent hover:shadow-[0_0_24px_-3px_rgba(255,79,100,0.65)]"
                     >
-                        Get Started
+                        Book a Call
                     </a>
                 </div>
 
                 {/* Mobile toggle */}
                 <button
                     onClick={() => setMobileOpen(!mobileOpen)}
-                    className="lg:hidden text-slate-600 hover:text-slate-900 transition-colors cursor-pointer p-1 rounded-full focus:outline-none"
+                    className="md:hidden text-ghost-dim hover:text-ghost transition-colors cursor-pointer p-1.5 rounded-full"
                     aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
                     aria-expanded={mobileOpen}
                 >
-                    {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+                    {mobileOpen ? <X size={18} /> : <Menu size={18} />}
                 </button>
             </div>
 
-            {/* Mobile menu panel */}
+            {/* Mobile panel */}
             <AnimatePresence>
                 {mobileOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: -10, scale: 0.98 }}
+                        initial={{ opacity: 0, y: -8, scale: 0.98 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -10, scale: 0.98 }}
-                        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        className="lg:hidden absolute top-full left-6 right-6 mt-2 bg-white/95 backdrop-blur-2xl border border-black/5 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl"
+                        exit={{ opacity: 0, y: -8, scale: 0.98 }}
+                        transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+                        className="md:hidden absolute top-full left-4 right-4 mt-2 dex-glass rounded-3xl p-6 flex flex-col gap-4 shadow-2xl"
                     >
-                        {links.map(l => (
+                        {links.map((l) => (
                             <a
                                 key={l.href}
                                 href={l.href}
                                 onClick={() => setMobileOpen(false)}
-                                className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors py-1"
+                                className="text-sm font-medium text-ghost-dim hover:text-ghost transition-colors py-1"
                             >
                                 {l.label}
                             </a>
                         ))}
                         <button
                             onClick={() => { openChatbot(); setMobileOpen(false) }}
-                            className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors text-left py-1 cursor-pointer"
+                            className="text-sm font-medium text-ghost-dim hover:text-ghost transition-colors text-left py-1 cursor-pointer"
                         >
                             Live Demo
                         </button>
                         <a
                             href="/#contact"
                             onClick={() => setMobileOpen(false)}
-                            className="mt-2 px-5 py-3 bg-cobalt text-white text-sm font-semibold rounded-full text-center hover:bg-cobalt-hover transition-colors shadow-lg"
+                            className="mt-1 px-5 py-3 rounded-full text-sm font-semibold text-ghost border border-white/15 text-center hover:border-accent transition-colors"
                         >
-                            Get Started
+                            Book a Call
                         </a>
                     </motion.div>
                 )}
