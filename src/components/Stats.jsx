@@ -1,5 +1,6 @@
 'use client'
 import { useRef, useEffect, useState } from 'react'
+import { ArrowUpRight } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -56,16 +57,9 @@ export default function Stats() {
         return () => ctx.revert()
     }, [])
 
-    // Cursor-following spotlight
-    const handleMove = (e) => {
-        const r = e.currentTarget.getBoundingClientRect()
-        e.currentTarget.style.setProperty('--mouse-x', `${e.clientX - r.left}px`)
-        e.currentTarget.style.setProperty('--mouse-y', `${e.clientY - r.top}px`)
-    }
-
     return (
-        <section ref={sectionRef} className="relative py-20 bg-dark border-y border-white/[0.06] overflow-hidden">
-            {/* Blueprint / matrix grid — the blur target behind the smoked glass */}
+        <section ref={sectionRef} className="relative py-24 bg-dark border-y border-white/[0.06] overflow-hidden">
+            {/* Blueprint / matrix grid — backdrop for the smoked glass */}
             <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
@@ -75,26 +69,40 @@ export default function Stats() {
                 }}
             />
             <div className="relative z-10 max-w-7xl mx-auto px-6">
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-6 items-start">
                     {stats.map((stat, i) => (
                         <div
                             key={i}
                             ref={(el) => (cardsRef.current[i] = el)}
-                            onMouseMove={handleMove}
-                            className="dex-spotlight-card group relative text-center p-10 rounded-2xl border border-white/[0.08] bg-[rgba(10,11,14,0.4)] backdrop-blur-[16px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.15)] hover:border-white/[0.14] hover:-translate-y-1 transition-[transform,border-color] duration-300"
+                            className={`group relative flex flex-col rounded-b-2xl border-x border-b border-white/[0.05] border-t-2 border-t-accent bg-[rgba(10,11,14,0.55)] backdrop-blur-[16px] shadow-[0_-4px_16px_-2px_rgba(255,79,100,0.15)] transition-transform duration-300 hover:-translate-y-1 ${
+                                i === 1 ? 'md:-translate-y-8 md:hover:-translate-y-9' : ''
+                            }`}
                         >
-                            {/* Subtle top accent line */}
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-accent/40 rounded-full" />
-                            <div className="relative z-[2] font-mono text-5xl font-bold mb-3">
-                                <Counter target={stat.number} start={counting} />
-                                <span className="text-accent">%</span>
+                            <div className="flex-1 p-9 text-center">
+                                <div className="font-mono text-5xl font-bold mb-4 tracking-tight">
+                                    <Counter target={stat.number} start={counting} />
+                                    <span className="text-accent">%</span>
+                                </div>
+                                <p className="text-[0.92rem] text-ghost-dim leading-snug max-w-[24ch] mx-auto">
+                                    {stat.text}
+                                </p>
                             </div>
-                            <p className="relative z-[2] text-[0.92rem] text-ghost-dim leading-relaxed">{stat.text}</p>
-                            <p className="relative z-[2] font-mono text-[0.72rem] text-ghost-faint mt-3">
-                                <a href={stat.url} target="_blank" rel="noopener noreferrer" className="border-b border-white/10 hover:text-accent hover:border-accent/40 transition-colors">
-                                    Source: {stat.source}
-                                </a>
-                            </p>
+
+                            {/* Source verification footer */}
+                            <a
+                                href={stat.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-between px-9 py-4 border-t border-white/[0.05] group/src"
+                            >
+                                <span className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-ghost-dim group-hover/src:text-ghost transition-colors">
+                                    {stat.source}
+                                </span>
+                                <ArrowUpRight
+                                    size={15}
+                                    className="text-ghost-faint group-hover/src:text-accent group-hover/src:-translate-y-0.5 group-hover/src:translate-x-0.5 transition-all duration-300"
+                                />
+                            </a>
                         </div>
                     ))}
                 </div>
