@@ -26,6 +26,12 @@ const cases = [
     },
 ]
 
+// percentage metrics fill to their value; ratio/always-on metrics are a complete result
+const barPct = (metric) => {
+    const m = /^(\d+)%$/.exec(metric)
+    return m ? Number(m[1]) : 100
+}
+
 function Metric({ value }) {
     const m = /^(\d+)(.*)$/.exec(value)
     const target = m ? parseInt(m[1], 10) : null
@@ -102,7 +108,7 @@ export default function IndustryStudies() {
                                             <span className="text-white/55 text-[0.8rem] font-medium pb-1">{sel.metricLabel}</span>
                                         </div>
                                         <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
-                                            <div key={sel.client + 'bar'} className="grow-bar h-full rounded-full" style={{ '--w': `${sel.bar}%`, background: 'linear-gradient(90deg, #FF1E3C, #DD0426)' }} />
+                                            <div key={sel.client + 'bar'} className="grow-bar h-full rounded-full" style={{ '--w': `${barPct(sel.metric)}%`, background: 'linear-gradient(90deg, #FF1E3C, #DD0426)' }} />
                                         </div>
                                     </div>
 
