@@ -4,49 +4,50 @@ export default {
     theme: {
         extend: {
             colors: {
-                // ── Void Black surface system ─────────────────────────────
+                // ── Light agency base (White dominant) ────────────────────
+                // `dark` key kept so existing `bg-dark` references flip to white
                 dark: {
-                    DEFAULT: '#050505', // The Void Black — all primary backgrounds
-                    deeper: '#0A0A0B',  // Slightly lifted panel base
-                    card: '#0D0D0F',    // Card / surface sheet
-                    hover: '#141417',   // Hover surface
+                    DEFAULT: '#FFFFFF', // White — primary background
+                    deeper: '#FAFAFA',  // Subtle off-white surface
+                    card: '#FFFFFF',    // Card sheet
+                    hover: '#F2F2F2',   // Hover surface
                 },
+                // Full-black sections (hero, services)
+                night: {
+                    DEFAULT: '#121212', // Night
+                    soft: '#1A1A1A',    // Lifted night surface
+                    line: 'rgba(255,255,255,0.08)',
+                },
+                // Text — `ghost` key kept; now near-black on white
                 ghost: {
-                    DEFAULT: '#F8F9FA', // Ghost White — primary type (never pure #fff)
-                    dim: '#A1A1AA',     // Muted secondary text
-                    faint: '#6B6B72',   // Tertiary / captions
+                    DEFAULT: '#141414', // Primary text
+                    dim: '#6B6B6B',     // Muted secondary
+                    faint: '#9B9B9B',   // Tertiary / captions
                 },
-                // ── Soft Tech Red accent (micro-interactions only) ────────
+                // ── Candy Apple Red accent ────────────────────────────────
                 accent: {
-                    DEFAULT: '#FF4F64', // Soft Tech Red — active states, glowing nodes
-                    dim: 'rgba(255, 79, 100, 0.08)',
-                    hover: '#FF3B52',
-                    glow: 'rgba(255, 79, 100, 0.45)',
+                    DEFAULT: '#DD0426', // Candy Apple Red
+                    dim: 'rgba(221, 4, 38, 0.06)',
+                    hover: '#B80320',
+                    glow: 'rgba(221, 4, 38, 0.35)',
                 },
-                // Legacy alias kept so old components don't break — remapped to red
                 cobalt: {
-                    DEFAULT: '#FF4F64',
-                    dim: 'rgba(255, 79, 100, 0.08)',
-                    hover: '#FF3B52',
+                    DEFAULT: '#DD0426',
+                    dim: 'rgba(221, 4, 38, 0.06)',
+                    hover: '#B80320',
                 },
                 border: {
-                    DEFAULT: 'rgba(255, 255, 255, 0.06)', // hairline on void
-                    hover: 'rgba(255, 255, 255, 0.12)',
+                    DEFAULT: '#E5E5E5', // Light hairline
+                    hover: '#D4D4D4',
                 },
             },
             fontFamily: {
-                sans: ['Manrope', 'system-ui', 'sans-serif'],
-                display: ['Sora', 'system-ui', 'sans-serif'], // Geometric headings
+                sans: ['Hanken Grotesk', 'system-ui', 'sans-serif'],
+                display: ['Schibsted Grotesk', 'Hanken Grotesk', 'sans-serif'],
                 mono: ['IBM Plex Mono', 'monospace'],
             },
             letterSpacing: {
                 tightest: '-0.03em',
-            },
-            keyframes: {
-                'dot-travel': {
-                    '0%': { offsetDistance: '0%' },
-                    '100%': { offsetDistance: '100%' },
-                },
             },
         },
     },
