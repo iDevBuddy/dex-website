@@ -1,108 +1,87 @@
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Plus, Minus } from 'lucide-react'
+'use client'
+import { useRef } from 'react'
+import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
 
 const services = [
     {
         num: '01',
-        title: 'Custom AI Agent Engineering',
-        desc: 'We build autonomous agent systems from the ground up, custom-engineered for your business workflow. Whether it is an automated voice assistant, an automated chat channel, or multi-agent networks—we plan, build, integrate, and deploy agents that scale seamlessly.',
+        title: 'Custom AI agent development',
+        desc: 'We architect autonomous agent systems from the ground up — voice assistants, chat agents, and multi-agent networks planned, built, integrated, and deployed to scale with your workflow.',
     },
     {
         num: '02',
-        title: 'Voice Call Automation',
-        desc: 'Elevate your phone lines with intelligent conversational AI that runs 24/7. Our custom-engineered voice agents handle inquiries, pre-screen leads, schedule appointments, and coordinate SMS/email recap confirmations in real-time.',
+        title: 'Voice call automation',
+        desc: 'Intelligent conversational AI on your phone lines, 24/7. Handles inquiries, pre-screens leads, books appointments, and fires SMS/email recap confirmations in real time.',
     },
     {
         num: '03',
-        title: 'WhatsApp Conversational Support',
-        desc: 'Engage and qualify prospects directly on the channels they use. We construct intelligent chat agents for WhatsApp, web portals, and Slack that resolve customer support tickets and sync pipelines instantly.',
+        title: 'Conversational support agents',
+        desc: 'Engage and qualify prospects on the channels they use. Chat agents for WhatsApp, web, and Slack that resolve support tickets and sync your pipeline instantly.',
     },
     {
         num: '04',
-        title: 'Workflow & CRM API Integration',
-        desc: 'Connect your active AI agents directly to your backend systems—HubSpot, Salesforce, Notion, Supabase, Twilio, and more. We automate data flows, eradicate manual entry, and keep your business databases perfectly synchronized.',
+        title: 'Workflow & CRM integration',
+        desc: 'Wire agents directly into HubSpot, Salesforce, Notion, Supabase, Twilio, and more. We automate data flows, kill manual entry, and keep every system in sync.',
     },
     {
         num: '05',
-        title: 'AI Audits & Strategy Workshops',
-        desc: 'Not sure where to begin? We conduct focused workshops to audit your active business pipelines and identify processes ripe for AI automation. From POC planning to ROI models, we build a clear, risk-free execution roadmap.',
+        title: 'AI audits & strategy workshops',
+        desc: 'Focused workshops that audit your pipelines and surface processes ripe for automation — from POC planning to ROI models and a risk-free execution roadmap.',
     },
 ]
 
 export default function Services() {
-    const [active, setActive] = useState(0)
+    const track = useRef(null)
+    const scroll = (dir) => track.current?.scrollBy({ left: dir * 380, behavior: 'smooth' })
 
     return (
-        <section id="services" className="relative py-24 bg-dark border-t border-b border-[#E5E5E7] overflow-hidden">
-            <div className="relative z-10 max-w-7xl mx-auto px-6">
-                <div className="grid lg:grid-cols-12 gap-12 items-start">
-                    
-                    {/* Left: Asymmetric Typographic Intro */}
-                    <div className="lg:col-span-5 text-left lg:sticky lg:top-28">
-                        <p className="font-mono text-[0.62rem] font-bold tracking-[0.25em] uppercase text-accent mb-4">
-                            Capabilities
-                        </p>
-                        <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tighter leading-[0.95] font-display mb-6">
-                            End-to-end AI Agent Services.
+        <section id="services" className="bg-dark py-20 lg:py-28 overflow-hidden">
+            <div className="max-w-[1320px] mx-auto px-6">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                    <div>
+                        <span className="eyebrow mb-5">Capabilities</span>
+                        <h2 className="font-display text-3xl sm:text-[2.8rem] font-extrabold text-ghost tracking-tightest leading-[1.0] max-w-xl">
+                            Our agentic AI services
                         </h2>
-                        <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-sm">
-                            From strategic pipeline audit to massive multi-agent enterprise deployment—comprehensive AI agent engineering built for measurable commercial impact.
-                        </p>
                     </div>
-
-                    {/* Right: The Micro-thin Hairline Grid Accordion */}
-                    <div className="lg:col-span-7 flex flex-col border-t border-slate-200">
-                        {services.map((s, i) => {
-                            const isOpen = active === i
-                            return (
-                                <div
-                                    key={i}
-                                    onClick={() => setActive(isOpen ? -1 : i)}
-                                    className={`py-6 border-b border-slate-200 cursor-pointer group transition-all duration-300 relative overflow-hidden`}
-                                    role="button"
-                                    aria-expanded={isOpen}
-                                >
-                                    <div className="flex items-center justify-between gap-6 relative z-10">
-                                        <div className="flex items-center gap-6">
-                                            {/* Large light monospace index number */}
-                                            <span className={`font-mono text-xl sm:text-2xl transition-colors duration-300 font-light ${
-                                                isOpen ? 'text-[#0052FF]' : 'text-slate-300 group-hover:text-slate-400'
-                                            }`}>
-                                                {s.num}
-                                            </span>
-                                            <h3 className="text-slate-900 font-bold text-sm sm:text-base font-display tracking-tight transition-transform duration-300 group-hover:translate-x-1">
-                                                {s.title}
-                                            </h3>
-                                        </div>
-                                        <span className={`w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-xl transition-all duration-300 ${
-                                            isOpen
-                                                ? 'bg-[#0052FF] text-white'
-                                                : 'text-slate-500 bg-slate-50 border border-slate-200 group-hover:border-slate-350 group-hover:bg-slate-100'
-                                        }`}>
-                                            {isOpen ? <Minus size={12} /> : <Plus size={12} />}
-                                        </span>
-                                    </div>
-                                    <AnimatePresence>
-                                        {isOpen && (
-                                            <motion.div
-                                                initial={{ height: 0, opacity: 0 }}
-                                                animate={{ height: 'auto', opacity: 1 }}
-                                                exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                                                className="overflow-hidden relative z-10"
-                                            >
-                                                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed pl-12 pt-4 max-w-xl">
-                                                    {s.desc}
-                                                </p>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                </div>
-                            )
-                        })}
+                    <div className="flex items-center gap-3">
+                        <button onClick={() => scroll(-1)} aria-label="Previous" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-ghost hover:border-accent hover:text-accent transition-colors">
+                            <ArrowLeft size={16} />
+                        </button>
+                        <button onClick={() => scroll(1)} aria-label="Next" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-ghost hover:border-accent hover:text-accent transition-colors">
+                            <ArrowRight size={16} />
+                        </button>
                     </div>
                 </div>
+            </div>
+
+            <div ref={track} className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 pl-6 pr-6 max-w-[1320px] mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                {services.map((s, i) => (
+                    <article
+                        key={i}
+                        className="group snap-start shrink-0 w-[290px] sm:w-[340px] h-[380px] rounded-2xl border border-border bg-dark-card p-7 flex flex-col justify-between relative overflow-hidden transition-colors duration-400 hover:bg-accent hover:border-accent cursor-pointer"
+                    >
+                        <div className="flex items-center justify-between">
+                            <span className="font-mono text-[0.62rem] uppercase tracking-[0.22em] text-ghost-faint group-hover:text-white/70 transition-colors">AI Agents</span>
+                            <span className="font-mono text-[0.62rem] text-ghost-faint group-hover:text-white/60 transition-colors">{s.num}</span>
+                        </div>
+
+                        {/* content block — anchored bottom; reveals upward on hover */}
+                        <div>
+                            <h3 className="font-display text-[1.45rem] font-bold text-ghost group-hover:text-white tracking-tight leading-[1.1] transition-colors duration-300">
+                                {s.title}
+                            </h3>
+                            <p className="text-[0.85rem] text-white/85 leading-relaxed max-h-0 opacity-0 group-hover:max-h-44 group-hover:opacity-100 group-hover:mt-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden">
+                                {s.desc}
+                            </p>
+                        </div>
+
+                        {/* corner arrow — rotates down on hover */}
+                        <span className="absolute bottom-6 right-6 w-9 h-9 flex items-center justify-center rounded-lg border border-border bg-white text-accent group-hover:bg-white group-hover:text-accent transition-all duration-300">
+                            <ArrowUpRight size={16} className="group-hover:rotate-90 transition-transform duration-400" />
+                        </span>
+                    </article>
+                ))}
             </div>
         </section>
     )
