@@ -133,6 +133,28 @@
     .blog-prose blockquote { @apply border-l-2 border-accent pl-5 text-lg leading-8 text-ghost bg-accent-dim p-5 rounded-r-lg mb-7; }
 }
 
+/* ── Live pipeline animations ───────────────────────────────────────── */
+@keyframes railPacket {
+    0%   { left: 0%;   opacity: 0; }
+    8%   { opacity: 1; }
+    92%  { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+.rail-packet { animation: railPacket 3.4s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
+
+@keyframes nodePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(221, 4, 38, 0.5); }
+    50%      { box-shadow: 0 0 0 6px rgba(221, 4, 38, 0); }
+}
+.node-pulse { animation: nodePulse 1.8s ease-out infinite; }
+
+@keyframes termBlink { 50% { opacity: 0; } }
+.term-cursor { animation: termBlink 1s step-end infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+    .rail-packet, .node-pulse, .term-cursor { animation: none !important; }
+}
+
 /* Hide default Hume voice elements in favor of our custom widget */
 button[aria-label="Start voice consultation"],
 button[aria-label="End call"] {
