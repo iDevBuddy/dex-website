@@ -9,7 +9,7 @@ export default function Navbar() {
     const [hovered, setHovered] = useState(null)
 
     useEffect(() => {
-        const ids = ['pipeline', 'services', 'impact', 'process']
+        const ids = ['pipeline', 'services', 'benefits', 'process']
         const obs = new IntersectionObserver(
             (entries) => entries.forEach((e) => e.isIntersecting && setActive(e.target.id)),
             { rootMargin: '-45% 0px -50% 0px' }
@@ -26,7 +26,7 @@ export default function Navbar() {
     const links = [
         { label: 'Pipeline', href: '/#pipeline', id: 'pipeline', icon: Network },
         { label: 'Services', href: '/#services', id: 'services', icon: Wrench },
-        { label: 'Impact', href: '/#impact', id: 'impact', icon: BarChart2 },
+        { label: 'Impact', href: '/#benefits', id: 'benefits', icon: BarChart2 },
         { label: 'Process', href: '/#process', id: 'process', icon: Activity },
         { label: 'Blog', href: '/blog', id: 'blog', icon: MessageSquare },
     ]
