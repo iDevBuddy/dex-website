@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Stats from './components/Stats'
 import ProjectPipeline from './components/ProjectPipeline'
 import AgentTypes from './components/AgentTypes'
+import Benefits from './components/Benefits'
 import Services from './components/Services'
 import IndustryStudies from './components/IndustryStudies'
 import Testimonials from './components/Testimonials'
@@ -24,6 +25,7 @@ function HomePage() {
             <Stats />
             <ProjectPipeline />
             <AgentTypes />
+            <Benefits />
             <Services />
             <IndustryStudies />
             <Testimonials />
