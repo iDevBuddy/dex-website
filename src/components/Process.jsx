@@ -29,38 +29,34 @@ const steps = [
 ]
 
 function IsoStack({ active }) {
-    const cx = 180, hw = 98, hh = 42, depth = 16, spacing = 58, top = 62
+    const cx = 180, hw = 116, hh = 44, spacing = 42, top = 66
     const layers = [0, 1, 2, 3].map((i) => ({ i, cy: top + i * spacing }))
-    // tone per state: done (already built, above active) > pending (below)
-    const tone = (i) => {
-        if (i === active) return { top: '#DD0426', left: '#A30320', right: '#F0223D', stroke: 'rgba(255,255,255,0.3)' }
-        if (i < active) return { top: 'rgba(221,4,38,0.30)', left: 'rgba(163,3,32,0.28)', right: 'rgba(240,34,61,0.32)', stroke: 'rgba(221,4,38,0.35)' }
-        return { top: 'rgba(221,4,38,0.07)', left: 'rgba(163,3,32,0.06)', right: 'rgba(240,34,61,0.09)', stroke: 'rgba(221,4,38,0.16)' }
-    }
+    // flat diamonds; progress tint: done (above) > pending (below)
+    const fill = (i) => (i === active ? 'url(#layerGrad)' : i < active ? 'rgba(221,4,38,0.26)' : 'rgba(221,4,38,0.11)')
     return (
-        <svg viewBox="0 0 360 300" className="w-full max-w-[340px] overflow-visible">
+        <svg viewBox="0 0 360 280" className="w-full max-w-[340px] overflow-visible">
             <defs>
+                <linearGradient id="layerGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stopColor="#FF1E3C" />
+                    <stop offset="1" stopColor="#A80320" />
+                </linearGradient>
                 <filter id="isoGlow" x="-60%" y="-60%" width="220%" height="220%">
-                    <feDropShadow dx="0" dy="6" stdDeviation="11" floodColor="#DD0426" floodOpacity="0.6" />
+                    <feDropShadow dx="0" dy="7" stdDeviation="13" floodColor="#DD0426" floodOpacity="0.55" />
                 </filter>
             </defs>
-            {/* paint bottom -> top so upper layers sit in front */}
+            {/* paint bottom -> top so upper diamonds overlap */}
             {layers.slice().reverse().map(({ i, cy }) => {
                 const on = i === active
-                const t = tone(i)
-                const topPts = `${cx},${cy - hh} ${cx + hw},${cy} ${cx},${cy + hh} ${cx - hw},${cy}`
-                const leftPts = `${cx - hw},${cy} ${cx},${cy + hh} ${cx},${cy + hh + depth} ${cx - hw},${cy + depth}`
-                const rightPts = `${cx},${cy + hh} ${cx + hw},${cy} ${cx + hw},${cy + depth} ${cx},${cy + hh + depth}`
+                const pts = `${cx},${cy - hh} ${cx + hw},${cy} ${cx},${cy + hh} ${cx - hw},${cy}`
                 return (
-                    <g key={i} className={on ? 'layer-float' : ''} filter={on ? 'url(#isoGlow)' : undefined} style={{ transition: 'transform .55s cubic-bezier(.16,1,.3,1)' }}>
-                        <polygon points={leftPts} fill={t.left} style={{ transition: 'fill .5s' }} />
-                        <polygon points={rightPts} fill={t.right} style={{ transition: 'fill .5s' }} />
-                        <polygon points={topPts} fill={t.top} stroke={t.stroke} strokeWidth="1" style={{ transition: 'fill .5s' }} />
-                        {/* top specular edge on the active slab */}
-                        {on && <polyline points={`${cx - hw},${cy} ${cx},${cy - hh} ${cx + hw},${cy}`} fill="none" stroke="rgba(255,255,255,0.55)" strokeWidth="1.4" />}
-                        {/* current-layer marker */}
-                        {on && <circle cx={cx} cy={cy} r="4" fill="#fff" />}
-                    </g>
+                    <polygon
+                        key={i}
+                        className={on ? 'layer-float' : ''}
+                        filter={on ? 'url(#isoGlow)' : undefined}
+                        points={pts}
+                        fill={fill(i)}
+                        style={{ transition: 'fill .5s ease' }}
+                    />
                 )
             })}
         </svg>
@@ -97,12 +93,11 @@ export default function Process() {
                             const on = active === i
                             return (
                                 <div key={i} className="border-b border-border">
-                                    <button onClick={() => setActive(i)} className="w-full flex items-center gap-4 py-5 text-left group">
-                                        <span className={`font-mono text-xs transition-colors ${on ? 'text-accent' : 'text-ghost-faint'}`}>{s.num}</span>
+                                    <button onClick={() => setActive(i)} className="w-full flex items-center py-5 text-left group">
                                         <h3 className={`font-display text-xl font-bold tracking-tight transition-colors ${on ? 'text-accent' : 'text-ghost group-hover:text-accent'}`}>{s.title}</h3>
                                     </button>
                                     <div className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${on ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                        <div className="pb-6 pl-9 max-w-lg">
+                                        <div className="pb-6 max-w-lg">
                                             <p className="text-[0.9rem] text-ghost-dim leading-relaxed mb-4">{s.desc}</p>
                                             <p className="text-[0.85rem] text-ghost-dim mb-1.5"><span className="font-semibold text-ghost">Deliverables: </span>{s.deliverables}</p>
                                             <p className="text-[0.85rem] text-ghost-dim"><span className="font-semibold text-ghost">Duration: </span>{s.duration}</p>
