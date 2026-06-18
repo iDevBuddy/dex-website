@@ -36,7 +36,7 @@ export default function Services() {
 
     return (
         <section id="services" className="bg-dark py-20 lg:py-28 overflow-hidden">
-            <div className="max-w-[1320px] mx-auto px-6 sm:px-10 lg:px-16">
+            <div className="max-w-[1320px] mx-auto px-6 sm:px-14 lg:px-28">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
                     <div>
                         <span className="eyebrow mb-5">Capabilities</span>
@@ -55,7 +55,7 @@ export default function Services() {
                 </div>
             </div>
 
-            <div ref={track} className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 pt-2 pl-6 sm:pl-10 lg:pl-16 pr-6 max-w-[1320px] mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div ref={track} className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 pt-2 pl-6 sm:pl-14 lg:pl-28 pr-6 max-w-[1320px] mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {services.map((s, i) => (
                     <article
                         key={i}
