@@ -36,8 +36,8 @@ export default function Services() {
 
     return (
         <section id="services" className="bg-dark py-20 lg:py-28 overflow-hidden">
-            <div className="max-w-[1320px] mx-auto px-6">
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div className="max-w-[1320px] mx-auto px-6 sm:px-10 lg:px-16">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
                     <div>
                         <span className="eyebrow mb-5">Capabilities</span>
                         <h2 className="font-display text-3xl sm:text-[2.8rem] font-extrabold text-ghost tracking-tightest leading-[1.0] max-w-xl">
@@ -55,20 +55,18 @@ export default function Services() {
                 </div>
             </div>
 
-            <div ref={track} className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 pl-6 pr-6 max-w-[1320px] mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div ref={track} className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 pt-2 pl-6 sm:pl-10 lg:pl-16 pr-6 max-w-[1320px] mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {services.map((s, i) => (
                     <article
                         key={i}
-                        className="group snap-start shrink-0 w-[290px] sm:w-[340px] h-[380px] rounded-2xl border border-border bg-dark-card relative overflow-hidden cursor-pointer transition-all duration-400 hover:border-accent shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_55px_-20px_rgba(221,4,38,0.45)]"
+                        className="group snap-start shrink-0 w-[290px] sm:w-[340px] h-[380px] rounded-2xl border border-border bg-dark-card relative overflow-hidden cursor-pointer transition-all duration-400 hover:border-accent shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_14px_30px_-20px_rgba(120,2,18,0.55)]"
                     >
                         {/* glassy red material — fades in on hover */}
                         <div
                             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
                             style={{
-                                background: 'linear-gradient(150deg, rgba(232,17,46,0.9) 0%, rgba(196,3,34,0.88) 55%, rgba(150,2,24,0.94) 100%)',
-                                backdropFilter: 'blur(10px) saturate(1.3)',
-                                WebkitBackdropFilter: 'blur(10px) saturate(1.3)',
-                                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -1px 1px rgba(255,255,255,0.08), inset 0 0 70px rgba(255,255,255,0.05)',
+                                background: 'linear-gradient(150deg, #FF1E3C 0%, #DD0426 50%, #B00320 100%)',
+                                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -1px 1px rgba(255,255,255,0.08), inset 0 0 80px rgba(255,255,255,0.06)',
                             }}
                         />
                         {/* specular glass reflection */}
