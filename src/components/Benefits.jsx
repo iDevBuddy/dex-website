@@ -10,19 +10,40 @@ const glass = {
 
 /* ── bespoke micro-visualizations ───────────────────────────────────── */
 function AreaTrend() {
+    // realistic cost-over-time series, trending down with believable variance
+    const pts = [[6, 30], [60, 44], [114, 38], [168, 58], [222, 66], [276, 92]]
+    const labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN']
+    const line = pts.map((p, i) => `${i ? 'L' : 'M'}${p[0]},${p[1]}`).join(' ')
+    const area = `${line} L276,112 L6,112 Z`
+    const end = pts[pts.length - 1]
     return (
-        <svg viewBox="0 0 240 90" preserveAspectRatio="none" className="w-full h-24">
+        <svg viewBox="0 0 282 132" className="w-full h-28">
             <defs>
                 <linearGradient id="bn-area" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stopColor="rgba(255,255,255,0.3)" />
+                    <stop offset="0" stopColor="rgba(255,255,255,0.26)" />
                     <stop offset="1" stopColor="rgba(255,255,255,0)" />
                 </linearGradient>
             </defs>
-            <path d="M0,28 C50,34 80,44 120,52 C160,60 200,66 240,74 L240,90 L0,90 Z" fill="url(#bn-area)" />
-            <path id="bn-trend" d="M0,28 C50,34 80,44 120,52 C160,60 200,66 240,74" stroke="#fff" strokeWidth="2" fill="none" strokeOpacity="0.9" vectorEffect="non-scaling-stroke" />
-            <circle r="3.5" fill="#fff">
-                <animateMotion dur="4.5s" repeatCount="indefinite" rotate="auto"><mpath href="#bn-trend" /></animateMotion>
+            {/* faint baseline grid */}
+            {[34, 60, 86].map((y) => (
+                <line key={y} x1="6" y1={y} x2="276" y2={y} stroke="rgba(255,255,255,0.08)" strokeWidth="1" strokeDasharray="2 4" />
+            ))}
+            <path d={area} fill="url(#bn-area)" />
+            <path d={line} stroke="#fff" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.92" />
+            {/* data points */}
+            {pts.map((p, i) => (
+                <circle key={i} cx={p[0]} cy={p[1]} r="2.4" fill="#5C0212" stroke="#fff" strokeWidth="1.4" />
+            ))}
+            {/* pulsing current value */}
+            <circle cx={end[0]} cy={end[1]} r="3.5" fill="#fff">
+                <animate attributeName="r" values="3.5;6;3.5" dur="2.2s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1;0.55;1" dur="2.2s" repeatCount="indefinite" />
             </circle>
+            <circle cx={end[0]} cy={end[1]} r="3" fill="#fff" />
+            {/* axis labels */}
+            {labels.map((t, i) => (
+                <text key={t} x={pts[i][0]} y="126" textAnchor="middle" className="font-mono" fontSize="6.5" fill="rgba(255,255,255,0.4)" letterSpacing="0.5">{t}</text>
+            ))}
         </svg>
     )
 }
@@ -40,12 +61,28 @@ function Bars() {
 
 function Radar() {
     return (
-        <div className="relative w-[4.5rem] h-[4.5rem]">
-            <svg viewBox="0 0 80 80" className="slow-spin absolute inset-0 w-full h-full">
-                <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(255,255,255,0.16)" strokeWidth="1" />
-                <path d="M40 6 A34 34 0 0 1 74 40" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+        <div className="relative w-[4.75rem] h-[4.75rem]">
+            {/* rotating sweep beam */}
+            <div
+                className="absolute inset-0 rounded-full"
+                style={{
+                    background: 'conic-gradient(from 0deg, rgba(255,255,255,0.45), rgba(255,255,255,0.06) 55deg, transparent 90deg)',
+                    animation: 'slowSpin 4.5s linear infinite',
+                    WebkitMaskImage: 'radial-gradient(circle, #000 70%, transparent 71%)',
+                    maskImage: 'radial-gradient(circle, #000 70%, transparent 71%)',
+                }}
+            />
+            {/* static grid: rings + crosshair + ticks + blips */}
+            <svg viewBox="0 0 80 80" className="absolute inset-0 w-full h-full">
+                <circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.22)" strokeWidth="1" />
+                <circle cx="40" cy="40" r="24" fill="none" stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
+                <circle cx="40" cy="40" r="12" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+                <line x1="40" y1="4" x2="40" y2="76" stroke="rgba(255,255,255,0.08)" strokeWidth="1" />
+                <line x1="4" y1="40" x2="76" y2="40" stroke="rgba(255,255,255,0.08)" strokeWidth="1" />
+                <circle cx="56" cy="28" r="1.8" fill="#fff" opacity="0.9" />
+                <circle cx="30" cy="52" r="1.4" fill="#fff" opacity="0.6" />
             </svg>
-            <span className="absolute inset-0 flex items-center justify-center font-display text-sm font-extrabold text-white">24/7</span>
+            <span className="absolute inset-0 flex items-center justify-center font-display text-[0.92rem] font-extrabold text-white">24/7</span>
         </div>
     )
 }
@@ -108,12 +145,17 @@ export default function Benefits() {
                         </div>
                         <button
                             onClick={openChatbot}
-                            className="group relative overflow-hidden inline-flex items-center gap-3 px-6 py-3.5 rounded-full font-semibold text-[0.84rem] text-white transition-all duration-300 hover:shadow-[0_0_34px_-4px_rgba(255,255,255,0.55)] cursor-pointer shrink-0"
-                            style={{ background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(14px) saturate(1.5)', WebkitBackdropFilter: 'blur(14px) saturate(1.5)', boxShadow: 'inset 0 1px 0.5px rgba(255,255,255,0.7), inset 0 -1px 1px rgba(255,255,255,0.12), 0 10px 26px -8px rgba(0,0,0,0.5)' }}
+                            className="group relative overflow-hidden inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-[0.8rem] text-white transition-all duration-300 hover:shadow-[0_0_26px_-6px_rgba(255,255,255,0.6)] cursor-pointer shrink-0"
+                            style={{
+                                background: 'linear-gradient(135deg, rgba(255,255,255,0.28) 0%, rgba(255,150,165,0.18) 100%)',
+                                backdropFilter: 'blur(14px) saturate(1.6)',
+                                WebkitBackdropFilter: 'blur(14px) saturate(1.6)',
+                                boxShadow: 'inset 0 1px 0.5px rgba(255,255,255,0.8), inset 0 -1px 1px rgba(255,255,255,0.15), 0 8px 20px -8px rgba(0,0,0,0.45)',
+                            }}
                         >
-                            <span className="absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+                            <span className="absolute inset-x-4 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent" />
                             Book free consultation
-                            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                            <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
                         </button>
                     </div>
 
