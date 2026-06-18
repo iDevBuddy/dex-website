@@ -175,6 +175,11 @@
 .slow-spin { animation: slowSpin 70s linear infinite; }
 .slow-spin-rev { animation: slowSpin 90s linear infinite reverse; }
 
+@keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+.breathe { animation: breathe 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+@keyframes nodeBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+.node-blink { animation: nodeBlink 2.6s ease-in-out infinite; }
+
 @media (prefers-reduced-motion: reduce) {
     .rail-packet, .node-pulse, .term-cursor, .motif-line, .motif-node-live, .float-orb, .reveal-up, .slow-spin, .slow-spin-rev { animation: none !important; }
 }
