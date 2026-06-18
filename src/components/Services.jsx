@@ -59,27 +59,47 @@ export default function Services() {
                 {services.map((s, i) => (
                     <article
                         key={i}
-                        className="group snap-start shrink-0 w-[290px] sm:w-[340px] h-[380px] rounded-2xl border border-border bg-dark-card p-7 flex flex-col justify-between relative overflow-hidden transition-colors duration-400 hover:bg-accent hover:border-accent cursor-pointer"
+                        className="group snap-start shrink-0 w-[290px] sm:w-[340px] h-[380px] rounded-2xl border border-border bg-dark-card relative overflow-hidden cursor-pointer transition-all duration-400 hover:border-accent shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_55px_-20px_rgba(221,4,38,0.45)]"
                     >
-                        <div className="flex items-center justify-between">
-                            <span className="font-mono text-[0.62rem] uppercase tracking-[0.22em] text-ghost-faint group-hover:text-white/70 transition-colors">AI Agents</span>
-                            <span className="font-mono text-[0.62rem] text-ghost-faint group-hover:text-white/60 transition-colors">{s.num}</span>
-                        </div>
+                        {/* glassy red material — fades in on hover */}
+                        <div
+                            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
+                            style={{
+                                background: 'linear-gradient(150deg, rgba(232,17,46,0.9) 0%, rgba(196,3,34,0.88) 55%, rgba(150,2,24,0.94) 100%)',
+                                backdropFilter: 'blur(10px) saturate(1.3)',
+                                WebkitBackdropFilter: 'blur(10px) saturate(1.3)',
+                                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -1px 1px rgba(255,255,255,0.08), inset 0 0 70px rgba(255,255,255,0.05)',
+                            }}
+                        />
+                        {/* specular glass reflection */}
+                        <div className="absolute -top-12 -left-8 w-52 h-52 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.28), transparent 65%)' }} />
+                        <div className="dex-grain-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-400" />
+                        {/* top specular sheen */}
+                        <span className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-black/[0.06] to-transparent group-hover:via-white/50 transition-colors duration-400" />
+                        {/* ghosted index watermark fills the void */}
+                        <span className="absolute -bottom-8 right-1 font-display font-extrabold text-[9rem] leading-none text-ghost/[0.035] group-hover:text-white/10 transition-colors duration-400 select-none pointer-events-none">{s.num}</span>
 
-                        {/* content block — anchored bottom; reveals upward on hover */}
-                        <div>
-                            <h3 className="font-display text-[1.45rem] font-bold text-ghost group-hover:text-white tracking-tight leading-[1.1] transition-colors duration-300">
-                                {s.title}
-                            </h3>
-                            <p className="text-[0.85rem] text-white/85 leading-relaxed max-h-0 opacity-0 group-hover:max-h-44 group-hover:opacity-100 group-hover:mt-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden">
-                                {s.desc}
-                            </p>
-                        </div>
+                        <div className="relative z-10 h-full p-7 flex flex-col justify-between">
+                            <div className="flex items-center justify-between">
+                                <span className="font-mono text-[0.62rem] uppercase tracking-[0.22em] text-ghost-faint group-hover:text-white/70 transition-colors">AI Automation</span>
+                                <span className="font-mono text-[0.62rem] text-ghost-faint group-hover:text-white/60 transition-colors">{s.num}</span>
+                            </div>
 
-                        {/* corner arrow — rotates down on hover */}
-                        <span className="absolute bottom-6 right-6 w-9 h-9 flex items-center justify-center rounded-lg border border-border bg-white text-accent group-hover:bg-white group-hover:text-accent transition-all duration-300">
-                            <ArrowUpRight size={16} className="group-hover:rotate-90 transition-transform duration-400" />
-                        </span>
+                            {/* bottom block — title+arrow row, desc reveals below (no overlap) */}
+                            <div>
+                                <div className="flex items-end justify-between gap-3">
+                                    <h3 className="font-display text-[1.4rem] font-bold text-ghost group-hover:text-white tracking-tight leading-[1.1] transition-colors duration-300">
+                                        {s.title}
+                                    </h3>
+                                    <span className="shrink-0 w-9 h-9 flex items-center justify-center rounded-lg bg-white text-accent shadow-sm transition-transform duration-300 group-hover:rotate-[0deg]">
+                                        <ArrowUpRight size={16} className="transition-transform duration-400 group-hover:rotate-90" />
+                                    </span>
+                                </div>
+                                <p className="text-[0.84rem] text-white/85 leading-relaxed max-h-0 opacity-0 group-hover:max-h-44 group-hover:opacity-100 group-hover:mt-4 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden">
+                                    {s.desc}
+                                </p>
+                            </div>
+                        </div>
                     </article>
                 ))}
             </div>
