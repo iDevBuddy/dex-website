@@ -55,7 +55,7 @@ export default function Services() {
                 </div>
             </div>
 
-            <div ref={track} className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 pt-2 pl-6 sm:pl-14 lg:pl-28 pr-6 max-w-[1320px] mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div ref={track} className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-pl-6 sm:scroll-pl-14 lg:scroll-pl-28 pb-8 pt-2 pl-6 sm:pl-14 lg:pl-28 pr-6 max-w-[1320px] mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {services.map((s, i) => (
                     <article
                         key={i}
