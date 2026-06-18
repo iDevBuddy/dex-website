@@ -1,36 +1,52 @@
 'use client'
-import { useRef } from 'react'
-import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { ArrowUpRight, Quote } from 'lucide-react'
 
-const studies = [
+const cases = [
     {
-        industry: 'Healthcare',
-        title: '100% of patient booking calls automated with a HIPAA-safe voice agent',
         client: 'Apex Health Group',
-        quote: 'Our front desk stopped drowning in calls. The agent books, confirms, and triages 24/7 — and patients actually prefer it.',
+        industry: 'Healthcare',
+        metric: '100%',
+        metricLabel: 'of booking calls automated',
+        headline: 'A HIPAA-safe voice agent that runs the front desk, 24/7.',
+        before: { label: 'Receptionist phone lag', tag: 'manual' },
+        after: { label: 'Instant booking & triage', tag: 'autonomous' },
+        quote: 'Our front desk stopped drowning in calls. The agent books, confirms, and triages around the clock — patients actually prefer it.',
         name: 'Dr. Lena Ortiz',
         role: 'Director of Operations',
     },
     {
-        industry: 'SaaS & Technology',
-        title: 'A multi-agent sales pipeline that 10× verified outbound',
         client: 'Elite Tech Consulting',
-        quote: 'It finds prospects, qualifies authority, and only sends SMTP-verified mail. Our reply rate doubled in a quarter.',
+        industry: 'SaaS & Technology',
+        metric: '10×',
+        metricLabel: 'verified outbound volume',
+        headline: 'A multi-agent pipeline that only sends SMTP-verified mail.',
+        before: { label: '6% reply rate', tag: 'manual lists' },
+        after: { label: '12% reply rate', tag: 'auto-qualified' },
+        quote: 'It finds prospects, qualifies authority, and only sends verified mail. Our reply rate doubled in a single quarter.',
         name: 'Marcus Vale',
         role: 'Head of Growth',
     },
     {
-        industry: 'Real Estate',
-        title: 'Instant WhatsApp property valuations, around the clock',
         client: 'Kallos Real Estate',
+        industry: 'Real Estate',
+        metric: '24/7',
+        metricLabel: 'instant valuations',
+        headline: 'WhatsApp property valuations, at any hour of the day.',
+        before: { label: 'Next-day quotes', tag: 'agent time' },
+        after: { label: 'Seconds', tag: 'self-serve' },
         quote: 'Leads get an accurate valuation in seconds, any hour. Our agents now only touch deals that are ready to close.',
         name: 'Sara Demir',
         role: 'Managing Partner',
     },
     {
-        industry: 'E-commerce',
-        title: 'Support response time cut by 68% with an AI knowledge agent',
         client: 'Northbeam Retail',
+        industry: 'E-commerce',
+        metric: '68%',
+        metricLabel: 'faster support response',
+        headline: 'An AI knowledge agent that resolves tickets in minutes.',
+        before: { label: '4h avg response', tag: 'overloaded' },
+        after: { label: '12m avg response', tag: 'deflected' },
         quote: 'Tickets that used to take hours resolve in minutes. Same team, far happier customers, measurable retention lift.',
         name: 'Owen Fisk',
         role: 'VP Customer Success',
@@ -39,71 +55,126 @@ const studies = [
 
 const initials = (name) => name.split(' ').map((w) => w[0]).slice(-2).join('')
 
+function Metric({ value }) {
+    const m = /^(\d+)(.*)$/.exec(value)
+    const target = m ? parseInt(m[1], 10) : null
+    const suffix = m ? m[2] : ''
+    const [n, setN] = useState(target ?? 0)
+
+    useEffect(() => {
+        if (target == null) return
+        let cur = 0
+        const inc = Math.max(1, target / 28)
+        const id = setInterval(() => {
+            cur += inc
+            if (cur >= target) { setN(target); clearInterval(id) }
+            else setN(Math.floor(cur))
+        }, 26)
+        return () => clearInterval(id)
+    }, [target])
+
+    if (target == null) return <span>{value}</span>
+    return <span>{n}{suffix}</span>
+}
+
 export default function IndustryStudies() {
-    const track = useRef(null)
-    const scroll = (dir) => track.current?.scrollBy({ left: dir * 400, behavior: 'smooth' })
+    const [sel, setSel] = useState(cases[0])
 
     return (
-        <section id="impact" className="bg-dark py-20 lg:py-28 overflow-hidden">
-            <div className="max-w-[1320px] mx-auto px-6">
-                {/* header + controls */}
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-                    <div>
-                        <span className="eyebrow mb-5">Proven Impact</span>
-                        <h2 className="font-display text-3xl sm:text-[2.8rem] font-extrabold text-ghost tracking-tightest leading-[1.0] max-w-xl">
-                            Real-world impact of AI agents
-                        </h2>
-                    </div>
-                    <div className="flex items-center gap-3">
-                        <a href="/blog" className="px-4 py-2.5 rounded-full border border-border text-[0.8rem] font-semibold text-ghost hover:border-ghost transition-colors">
+        <section id="impact" className="bg-dark px-4 sm:px-6 py-6">
+            <div className="max-w-[1320px] mx-auto">
+                <div className="relative rounded-[26px] bg-night overflow-hidden p-7 sm:p-10 lg:p-14">
+                    <div className="dex-grain-overlay opacity-50" />
+                    <div className="absolute -top-32 -right-32 w-[34rem] h-[34rem] rounded-full pointer-events-none float-orb" style={{ background: 'radial-gradient(circle, rgba(221,4,38,0.16), transparent 68%)' }} />
+
+                    {/* header */}
+                    <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+                        <div>
+                            <span className="eyebrow eyebrow-light mb-5">Proven Impact</span>
+                            <h2 className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-white tracking-tightest leading-[1.02] max-w-xl">
+                                Real-world impact of AI agents
+                            </h2>
+                        </div>
+                        <a href="/blog" className="group inline-flex items-center gap-2 text-[0.8rem] font-semibold text-white/70 hover:text-white transition-colors">
                             All case studies
+                            <ArrowUpRight size={15} className="text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </a>
-                        <button onClick={() => scroll(-1)} aria-label="Previous" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-ghost hover:border-accent hover:text-accent transition-colors">
-                            <ArrowLeft size={16} />
-                        </button>
-                        <button onClick={() => scroll(1)} aria-label="Next" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-ghost hover:border-accent hover:text-accent transition-colors">
-                            <ArrowRight size={16} />
-                        </button>
+                    </div>
+
+                    <div className="relative z-10 grid lg:grid-cols-12 gap-6 items-stretch">
+                        {/* selector */}
+                        <div className="lg:col-span-4 flex flex-col gap-2.5">
+                            {cases.map((c) => {
+                                const on = sel.client === c.client
+                                return (
+                                    <button
+                                        key={c.client}
+                                        onClick={() => setSel(c)}
+                                        className={`relative w-full text-left p-5 rounded-2xl border overflow-hidden transition-all duration-300 ${
+                                            on ? 'bg-white/[0.06] border-white/10' : 'border-transparent hover:bg-white/[0.03]'
+                                        }`}
+                                    >
+                                        <span className="absolute left-0 top-0 bottom-0 w-[3px] transition-colors" style={{ background: on ? '#DD0426' : 'transparent' }} />
+                                        <div className="flex justify-between items-center mb-1.5">
+                                            <span className="font-mono text-[0.58rem] uppercase tracking-wider text-white/40">{c.industry}</span>
+                                            <span className={`font-display text-sm font-extrabold ${on ? 'text-accent' : 'text-white/40'}`}>{c.metric}</span>
+                                        </div>
+                                        <p className={`font-display text-[0.95rem] font-bold ${on ? 'text-white' : 'text-white/65'}`}>{c.client}</p>
+                                    </button>
+                                )
+                            })}
+                        </div>
+
+                        {/* featured panel */}
+                        <div className="lg:col-span-8">
+                            <div key={sel.client} className="reveal-up h-full rounded-3xl bg-white/[0.03] border border-white/[0.07] p-7 sm:p-9 flex flex-col">
+                                <div className="flex flex-wrap items-center gap-2 mb-7">
+                                    <span className="px-3 py-1 rounded-full border border-white/15 text-[0.7rem] font-medium text-white/65">{sel.industry}</span>
+                                    <span className="px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-[0.7rem] font-medium text-accent">AI Agents</span>
+                                </div>
+
+                                <div className="flex flex-col sm:flex-row sm:items-end gap-x-6 gap-y-3 mb-7">
+                                    <span className="font-display text-7xl lg:text-8xl font-extrabold text-white tracking-tightest leading-[0.85]">
+                                        <Metric value={sel.metric} />
+                                    </span>
+                                    <span className="text-white/55 text-sm font-medium pb-2">{sel.metricLabel}</span>
+                                </div>
+
+                                <h3 className="font-display text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug mb-7 max-w-lg">
+                                    {sel.headline}
+                                </h3>
+
+                                {/* before -> after transformation */}
+                                <div className="flex items-stretch gap-3 mb-8">
+                                    <div className="flex-1 rounded-xl border border-white/[0.07] bg-white/[0.02] p-4">
+                                        <p className="font-mono text-[0.56rem] uppercase tracking-[0.18em] text-white/35 mb-2">Before · {sel.before.tag}</p>
+                                        <p className="text-sm font-semibold text-white/55 line-through decoration-white/25">{sel.before.label}</p>
+                                    </div>
+                                    <div className="flex items-center text-accent shrink-0"><ArrowUpRight size={18} /></div>
+                                    <div className="flex-1 rounded-xl border border-accent/25 bg-accent/[0.06] p-4">
+                                        <p className="font-mono text-[0.56rem] uppercase tracking-[0.18em] text-accent/80 mb-2">After · {sel.after.tag}</p>
+                                        <p className="text-sm font-semibold text-white">{sel.after.label}</p>
+                                    </div>
+                                </div>
+
+                                {/* quote */}
+                                <div className="mt-auto pt-7 border-t border-white/[0.07]">
+                                    <Quote size={18} className="text-accent mb-3" />
+                                    <p className="text-[0.95rem] text-white/75 leading-relaxed mb-5 max-w-xl">{sel.quote}</p>
+                                    <div className="flex items-center gap-3">
+                                        <span className="flex items-center justify-center w-10 h-10 rounded-full bg-accent/15 border border-accent/25 font-mono text-[0.72rem] font-bold text-accent shrink-0">
+                                            {initials(sel.name)}
+                                        </span>
+                                        <div>
+                                            <p className="text-[0.85rem] font-semibold text-white leading-tight">{sel.name}</p>
+                                            <p className="text-[0.72rem] text-white/45 mt-0.5">{sel.role}, {sel.client}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            {/* carousel track (bleeds to right edge) */}
-            <div ref={track} className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 pl-6 pr-6 max-w-[1320px] mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                {studies.map((s, i) => (
-                    <article
-                        key={i}
-                        className="reveal-up group snap-start shrink-0 w-[330px] sm:w-[380px] rounded-2xl border border-border bg-dark-card overflow-hidden relative transition-transform duration-300 hover:-translate-y-1"
-                        style={{ animationDelay: `${i * 0.08}s` }}
-                    >
-                        <span className="absolute top-0 left-0 right-0 h-[2px] bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
-
-                        <div className="p-7">
-                            <h3 className="font-display text-[1.15rem] font-bold text-ghost tracking-tight leading-snug mb-5 min-h-[3.5em]">
-                                {s.title}
-                            </h3>
-                            <div className="flex flex-wrap gap-2 mb-7">
-                                <span className="px-3 py-1 rounded-full border border-border text-[0.7rem] font-medium text-ghost-dim">{s.industry}</span>
-                                <span className="px-3 py-1 rounded-full bg-accent/[0.07] border border-accent/20 text-[0.7rem] font-medium text-accent">AI Agents</span>
-                            </div>
-                            <p className="font-display text-lg font-extrabold text-ghost tracking-tight">{s.client}</p>
-                        </div>
-
-                        <div className="border-t border-border p-7 bg-dark-deeper">
-                            <p className="text-[0.9rem] text-ghost-dim leading-relaxed mb-5">"{s.quote}"</p>
-                            <div className="flex items-center gap-3">
-                                <span className="flex items-center justify-center w-10 h-10 rounded-full bg-accent/[0.08] border border-accent/15 font-mono text-[0.72rem] font-bold text-accent shrink-0">
-                                    {initials(s.name)}
-                                </span>
-                                <div>
-                                    <p className="text-[0.82rem] font-semibold text-ghost leading-tight">{s.name}</p>
-                                    <p className="text-[0.72rem] text-ghost-faint mt-0.5">{s.role}</p>
-                                </div>
-                                <ArrowUpRight size={16} className="ml-auto text-ghost-faint group-hover:text-accent transition-colors" />
-                            </div>
-                        </div>
-                    </article>
-                ))}
             </div>
         </section>
     )
