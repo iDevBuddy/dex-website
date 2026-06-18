@@ -1,10 +1,11 @@
+'use client'
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Check, ChevronRight, Activity, ArrowUpRight } from 'lucide-react'
 
 const projects = [
     {
         id: 'clinic-scheduler',
+        title: 'APEX Voice Scheduler',
         clientName: 'Apex Health Group',
         purpose: 'Automate 100% of patient voice booking calls and lead pre-qualification, eliminating receptionist phone lag.',
         done: [
@@ -16,15 +17,15 @@ const projects = [
             'Integrate live Google Calendar booking slots API.',
             'Deploy outbound SMS automated appointment confirmation checks.',
         ],
-        phase: 'Phase 3: Outbound Twilio Routing & Live QA Audits',
-        color: '#e05132', // Brand Orange
+        phase: 'Phase 3 · Outbound Twilio Routing & Live QA Audits',
         pipeline: ['Inbound Phone Call', 'Hume AI Agent', 'HIPAA Shield DB', 'Symptom Router'],
         activeStep: 2,
     },
     {
         id: 'sales-recruiter',
+        title: 'Sales Multi-Agent Pipeline',
         clientName: 'Elite Tech Consulting',
-        purpose: 'Build a multi-agent sales pipeline that automatically extracts prospects, qualifies authority, and firesSMTP verified email campaigns.',
+        purpose: 'A multi-agent sales pipeline that extracts prospects, qualifies authority, and fires SMTP-verified email campaigns.',
         done: [
             'Constructed territory-rotation crawler spanning 27 cities.',
             'Fine-tuned LLaMA-based pain signal classification models.',
@@ -34,13 +35,13 @@ const projects = [
             'Integrate automated LinkedIn DM connection API pipeline.',
             'Fine-tune personal email synthesis generator.',
         ],
-        phase: 'Phase 2: SMTP Verification & API Integration',
-        color: '#2563eb', // Cobalt Blue
-        pipeline: ['Serper search', 'Pain Detector', 'SMTP Verifier', 'CRM Dispatcher'],
+        phase: 'Phase 2 · SMTP Verification & API Integration',
+        pipeline: ['Serper Search', 'Pain Detector', 'SMTP Verifier', 'CRM Dispatcher'],
         activeStep: 1,
     },
     {
         id: 'whatsapp-consultant',
+        title: 'Valuation WhatsApp Agent',
         clientName: 'Kallos Real Estate',
         purpose: 'Automate customer support and property valuation routing over WhatsApp Business channels.',
         done: [
@@ -51,163 +52,135 @@ const projects = [
             'Connect live MLS property databases.',
             'Deploy dynamic geographic agent handover rules.',
         ],
-        phase: 'Phase 1: Knowledge-Graph Fine-Tuning',
-        color: '#10b981', // Emerald
+        phase: 'Phase 1 · Knowledge-Graph Fine-Tuning',
         pipeline: ['WhatsApp Text', 'Vector Store', 'LLaMA Reasoning', 'MLS DB Sync'],
         activeStep: 0,
     },
 ]
 
 export default function ProjectPipeline() {
-    const [selectedProject, setSelectedProject] = useState(projects[0])
+    const [selected, setSelected] = useState(projects[0])
 
     return (
-        <section id="pipeline" className="relative py-24 bg-dark overflow-hidden">
+        <section id="pipeline" className="bg-dark px-4 sm:px-6 py-6">
+            <div className="max-w-[1320px] mx-auto">
+                <div className="relative rounded-[26px] bg-night overflow-hidden p-7 sm:p-10 lg:p-14">
+                    <div className="dex-grain-overlay opacity-50" />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-6">
-                <div className="text-center max-w-2xl mx-auto mb-16">
-                    <p className="font-mono text-xs font-bold tracking-[0.25em] uppercase text-accent mb-4">
-                        Active Operations
-                    </p>
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display">
-                        Live Project Workflow Pipeline
-                    </h2>
-                    <p className="text-sm text-slate-500 mt-4 leading-relaxed">
-                        We don't work in secret. Track our active development, active workflow phases, and strategic roadmaps for current client projects.
-                    </p>
-                </div>
-
-                <div className="grid lg:grid-cols-12 gap-8 items-start">
-                    {/* Left: Project Selector Tabs */}
-                    <div className="lg:col-span-4 flex flex-col gap-4">
-                        {projects.map((p) => {
-                            const isSelected = selectedProject.id === p.id
-                            return (
-                                <button
-                                    key={p.id}
-                                    onClick={() => setSelectedProject(p)}
-                                    className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 relative overflow-hidden ${
-                                        isSelected
-                                            ? 'bg-white border-[#E5E5E7] shadow-[0_4px_20px_rgba(0,0,0,0.03)]'
-                                            : 'bg-transparent border-transparent hover:border-black/5'
-                                    }`}
-                                >
-                                    {/* Accent strip */}
-                                    <div
-                                        className="absolute left-0 top-0 bottom-0 w-[4px]"
-                                        style={{ background: p.color }}
-                                    />
-                                    <div className="flex justify-between items-center mb-2">
-                                        <p className="font-mono text-[0.62rem] text-slate-400 uppercase tracking-wider">
-                                            {p.clientName}
-                                        </p>
-                                        <span
-                                            className="h-1.5 w-1.5 rounded-full animate-pulse"
-                                            style={{ background: p.color }}
-                                        />
-                                    </div>
-                                    <h3 className="text-slate-900 font-bold text-sm font-display mb-1">
-                                        {p.id === 'clinic-scheduler' ? 'APEX Voice Scheduler' : p.id === 'sales-recruiter' ? 'Sales Multi-Agent Pipeline' : 'Valuation WhatsApp Agent'}
-                                    </h3>
-                                    <p className="text-[0.72rem] text-slate-500 line-clamp-1">
-                                        {p.purpose}
-                                    </p>
-                                </button>
-                            )
-                        })}
+                    {/* editorial header */}
+                    <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+                        <div>
+                            <span className="eyebrow eyebrow-light mb-5">Active Operations</span>
+                            <h2 className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-white tracking-tightest leading-[1.02] max-w-xl">
+                                Live project workflow pipeline
+                            </h2>
+                        </div>
+                        <p className="text-sm text-white/45 max-w-sm leading-relaxed lg:text-right">
+                            We don't work in secret — track active development, workflow phases, and roadmaps for real client projects.
+                        </p>
                     </div>
 
-                    {/* Right: Selected Project Workflow Pipeline Display */}
-                    <div className="lg:col-span-8">
-                        <div className="dex-panel rounded-3xl p-6 md:p-8 relative overflow-hidden">
-                            <div className="dex-grain-overlay" />
-
-                            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-100">
-                                <div>
-                                    <span
-                                        className="text-[0.65rem] font-mono font-bold px-3 py-1 rounded-full border"
-                                        style={{
-                                            color: selectedProject.color,
-                                            borderColor: `${selectedProject.color}30`,
-                                            background: `${selectedProject.color}10`,
-                                        }}
+                    <div className="relative z-10 grid lg:grid-cols-12 gap-6 items-start">
+                        {/* selector */}
+                        <div className="lg:col-span-4 flex flex-col gap-3">
+                            {projects.map((p) => {
+                                const on = selected.id === p.id
+                                return (
+                                    <button
+                                        key={p.id}
+                                        onClick={() => setSelected(p)}
+                                        className={`relative w-full text-left p-5 rounded-2xl border overflow-hidden transition-all duration-300 ${
+                                            on ? 'bg-white/[0.06] border-white/10' : 'border-transparent hover:bg-white/[0.03]'
+                                        }`}
                                     >
-                                        {selectedProject.phase}
+                                        <span
+                                            className="absolute left-0 top-0 bottom-0 w-[3px] transition-colors"
+                                            style={{ background: on ? '#DD0426' : 'transparent' }}
+                                        />
+                                        <div className="flex justify-between items-center mb-2">
+                                            <span className="font-mono text-[0.6rem] uppercase tracking-wider text-white/40">{p.clientName}</span>
+                                            <span className={`h-1.5 w-1.5 rounded-full ${on ? 'bg-accent animate-pulse' : 'bg-white/25'}`} />
+                                        </div>
+                                        <h3 className={`font-display text-sm font-bold mb-1 ${on ? 'text-white' : 'text-white/70'}`}>{p.title}</h3>
+                                        <p className="text-[0.72rem] text-white/40 line-clamp-1">{p.purpose}</p>
+                                    </button>
+                                )
+                            })}
+                        </div>
+
+                        {/* panel */}
+                        <div className="lg:col-span-8">
+                            <div className="rounded-3xl bg-night-soft border border-white/[0.06] p-6 md:p-8">
+                                <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.07]">
+                                    <span className="text-[0.65rem] font-mono font-semibold px-3 py-1 rounded-full text-accent border border-accent/30 bg-accent/10">
+                                        {selected.phase}
+                                    </span>
+                                    <span className="font-mono text-[0.62rem] text-accent flex items-center gap-1.5 uppercase tracking-wider">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-accent animate-ping" />
+                                        Active Build
                                     </span>
                                 </div>
-                                <span className="font-mono text-[0.62rem] text-emerald-600 flex items-center gap-1.5">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
-                                    ACTIVE BUILD
-                                </span>
-                            </div>
 
-                            <div className="py-8">
-                                <h3 className="font-display text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
-                                    <span>Workflow Map</span>
-                                    <Activity size={14} className="text-slate-400 animate-pulse" />
-                                </h3>
+                                <div className="py-8">
+                                    <h3 className="font-display text-base font-bold text-white mb-6 flex items-center gap-2">
+                                        Workflow Map
+                                        <Activity size={14} className="text-accent animate-pulse" />
+                                    </h3>
 
-                                {/* Flow Pipeline Row */}
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                                    {selectedProject.pipeline.map((step, idx) => {
-                                        const isCompleted = idx <= selectedProject.activeStep
-                                        const isActive = idx === selectedProject.activeStep
-                                        return (
-                                            <div
-                                                key={step}
-                                                className={`p-4 rounded-xl border flex flex-col gap-2 relative transition-all duration-300 ${
-                                                    isActive
-                                                        ? 'bg-white border-[#0052FF]/30 shadow-[0_4px_16px_rgba(0,82,255,0.03)]'
-                                                        : isCompleted
-                                                        ? 'bg-slate-50/50 border-black/5 opacity-90'
-                                                        : 'bg-transparent border-black/5 opacity-30'
-                                                }`}
-                                            >
-                                                {/* Connecting arrow - hidden on mobile / last element */}
-                                                {idx < 3 && (
-                                                    <div className="hidden md:flex absolute top-1/2 -right-3 -translate-y-1/2 z-10 text-slate-300">
-                                                        <ChevronRight size={16} />
-                                                    </div>
-                                                )}
-                                                <div className="flex items-center justify-between">
-                                                    <span className="font-mono text-[0.6rem] text-slate-400">Node 0{idx+1}</span>
-                                                    {isCompleted && (
-                                                        <Check size={12} className="text-emerald-600" />
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                        {selected.pipeline.map((step, idx) => {
+                                            const completed = idx <= selected.activeStep
+                                            const active = idx === selected.activeStep
+                                            return (
+                                                <div
+                                                    key={step}
+                                                    className={`relative p-4 rounded-xl border flex flex-col gap-2 transition-all duration-300 ${
+                                                        active
+                                                            ? 'bg-white/[0.05] border-accent/45'
+                                                            : completed
+                                                            ? 'bg-white/[0.03] border-white/10'
+                                                            : 'border-white/[0.06] opacity-35'
+                                                    }`}
+                                                >
+                                                    {idx < 3 && (
+                                                        <div className="hidden md:flex absolute top-1/2 -right-2.5 -translate-y-1/2 z-10 text-white/20">
+                                                            <ChevronRight size={15} />
+                                                        </div>
                                                     )}
+                                                    <div className="flex items-center justify-between">
+                                                        <span className="font-mono text-[0.58rem] text-white/35">Node 0{idx + 1}</span>
+                                                        {completed && <Check size={12} className="text-accent" />}
+                                                    </div>
+                                                    <p className={`text-[0.76rem] font-semibold ${completed ? 'text-white' : 'text-white/40'}`}>{step}</p>
                                                 </div>
-                                                <p className={`text-[0.78rem] font-bold ${isCompleted ? 'text-slate-900' : 'text-slate-400'}`}>{step}</p>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-
-                            {/* Done & Next breakdown */}
-                            <div className="grid md:grid-cols-2 gap-8 pt-6 border-t border-slate-100">
-                                {/* Done */}
-                                <div>
-                                    <p className="font-mono text-[0.62rem] uppercase tracking-wider text-slate-500 mb-3">Completed Milestones</p>
-                                    <ul className="flex flex-col gap-2">
-                                        {selectedProject.done.map((item, idx) => (
-                                            <li key={idx} className="flex gap-2.5 text-xs text-slate-600 leading-relaxed items-start">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
-                                                <span>{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                            )
+                                        })}
+                                    </div>
                                 </div>
 
-                                {/* Next */}
-                                <div>
-                                    <p className="font-mono text-[0.62rem] uppercase tracking-wider text-accent mb-3">Immediate Next Steps</p>
-                                    <ul className="flex flex-col gap-2">
-                                        {selectedProject.next.map((item, idx) => (
-                                            <li key={idx} className="flex gap-2.5 text-xs text-slate-600 leading-relaxed items-start">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-1.5" />
-                                                <span>{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                <div className="grid md:grid-cols-2 gap-8 pt-6 border-t border-white/[0.07]">
+                                    <div>
+                                        <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-white/40 mb-3">Completed Milestones</p>
+                                        <ul className="flex flex-col gap-2.5">
+                                            {selected.done.map((item, idx) => (
+                                                <li key={idx} className="flex gap-2.5 text-xs text-white/55 leading-relaxed items-start">
+                                                    <Check size={13} className="text-white/30 shrink-0 mt-0.5" />
+                                                    <span>{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p className="eyebrow eyebrow-light !text-accent mb-3">Immediate Next Steps</p>
+                                        <ul className="flex flex-col gap-2.5">
+                                            {selected.next.map((item, idx) => (
+                                                <li key={idx} className="flex gap-2.5 text-xs text-white/55 leading-relaxed items-start">
+                                                    <ArrowUpRight size={13} className="text-accent shrink-0 mt-0.5" />
+                                                    <span>{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
