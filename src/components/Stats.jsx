@@ -31,7 +31,7 @@ function Counter({ target, start }) {
 const stats = [
     { number: 50, text: 'of business decisions will be augmented or automated by AI Agents by 2027.', source: 'Gartner', url: 'https://www.gartner.com' },
     { number: 86, text: 'of executives say AI agents will make workflow automation more effective by 2027.', source: 'IBM', url: 'https://www.ibm.com' },
-    { number: 66, text: 'of businesses using AI agents report higher productivity, 57% see cost savings, and 54% improve customer experience.', source: 'PwC', url: 'https://www.pwc.com' },
+    { number: 66, text: 'of businesses report higher productivity, 57% see cost savings, and 54% improve CX using AI agents.', source: 'PwC', url: 'https://www.pwc.com' },
 ]
 
 export default function Stats() {
@@ -42,7 +42,7 @@ export default function Stats() {
     useEffect(() => {
         const ctx = gsap.context(() => {
             gsap.from(cardsRef.current, {
-                y: 40,
+                y: 36,
                 opacity: 0,
                 duration: 0.9,
                 stagger: 0.12,
@@ -58,14 +58,14 @@ export default function Stats() {
     }, [])
 
     return (
-        <section ref={sectionRef} className="relative py-24 bg-dark border-y border-white/[0.06] overflow-hidden">
-            {/* Blueprint / matrix grid — backdrop for the smoked glass */}
+        <section ref={sectionRef} className="relative py-24 bg-dark border-y border-white/[0.05] overflow-hidden">
+            {/* Barely-there blueprint grid — only felt, not seen */}
             <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
                     backgroundImage:
-                        'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-                    backgroundSize: '42px 42px',
+                        'linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px)',
+                    backgroundSize: '48px 48px',
                 }}
             />
             <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -74,26 +74,40 @@ export default function Stats() {
                         <div
                             key={i}
                             ref={(el) => (cardsRef.current[i] = el)}
-                            className={`group relative flex flex-col rounded-b-2xl border-x border-b border-white/[0.05] border-t-2 border-t-accent bg-[rgba(10,11,14,0.55)] backdrop-blur-[16px] shadow-[0_-4px_16px_-2px_rgba(255,79,100,0.15)] transition-transform duration-300 hover:-translate-y-1 ${
-                                i === 1 ? 'md:-translate-y-8 md:hover:-translate-y-9' : ''
-                            }`}
+                            className="relative w-full max-w-sm mx-auto flex flex-col rounded-2xl overflow-hidden transition-transform duration-300 hover:-translate-y-1"
+                            style={{
+                                background: 'rgba(10,11,14,0.4)',
+                                backdropFilter: 'blur(24px)',
+                                WebkitBackdropFilter: 'blur(24px)',
+                                boxShadow:
+                                    'inset 0 1px 0 0 rgba(255,255,255,0.1), 0 4px 24px -8px rgba(0,0,0,0.8)',
+                            }}
                         >
-                            <div className="flex-1 p-9 text-center">
-                                <div className="font-mono text-5xl font-bold mb-4 tracking-tight">
+                            {/* Vercel edge glow — soft elliptical bloom inside the top */}
+                            <div
+                                className="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none"
+                                style={{ width: 100, height: 20, background: '#FF4F64', filter: 'blur(24px)', opacity: 0.15 }}
+                            />
+                            {/* hairline gradient edge */}
+                            <div
+                                className="absolute top-0 inset-x-0 h-px pointer-events-none"
+                                style={{ background: 'linear-gradient(90deg, transparent, #FF4F64, transparent)' }}
+                            />
+
+                            <div className="p-8 text-left">
+                                <div className="font-display font-bold text-6xl tracking-tightest leading-none mb-5 flex items-baseline">
                                     <Counter target={stat.number} start={counting} />
-                                    <span className="text-accent">%</span>
+                                    <span className="text-accent ml-0.5">%</span>
                                 </div>
-                                <p className="text-[0.92rem] text-ghost-dim leading-snug max-w-[24ch] mx-auto">
-                                    {stat.text}
-                                </p>
+                                <p className="text-[0.92rem] text-ghost-dim leading-relaxed">{stat.text}</p>
                             </div>
 
-                            {/* Source verification footer */}
+                            {/* Source footer — left label, arrow far right */}
                             <a
                                 href={stat.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-between px-9 py-4 border-t border-white/[0.05] group/src"
+                                className="mt-auto flex items-center justify-between px-8 py-4 border-t border-white/[0.05] group/src"
                             >
                                 <span className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-ghost-dim group-hover/src:text-ghost transition-colors">
                                     {stat.source}
