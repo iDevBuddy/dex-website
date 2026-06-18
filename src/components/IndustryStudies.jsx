@@ -83,12 +83,12 @@ export default function IndustryStudies() {
     return (
         <section id="impact" className="bg-dark px-4 sm:px-6 py-6">
             <div className="max-w-[1320px] mx-auto">
-                <div className="relative rounded-[26px] bg-night overflow-hidden p-7 sm:p-10 lg:p-14">
+                <div className="relative rounded-[26px] bg-night overflow-hidden p-6 sm:p-8 lg:p-10">
                     <div className="dex-grain-overlay opacity-50" />
-                    <div className="absolute -top-32 -right-32 w-[34rem] h-[34rem] rounded-full pointer-events-none float-orb" style={{ background: 'radial-gradient(circle, rgba(221,4,38,0.16), transparent 68%)' }} />
+                    <div className="absolute -top-32 -right-32 w-[30rem] h-[30rem] rounded-full pointer-events-none float-orb" style={{ background: 'radial-gradient(circle, rgba(221,4,38,0.16), transparent 68%)' }} />
 
                     {/* header */}
-                    <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+                    <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-8">
                         <div>
                             <span className="eyebrow eyebrow-light mb-5">Proven Impact</span>
                             <h2 className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-white tracking-tightest leading-[1.02] max-w-xl">
@@ -127,40 +127,42 @@ export default function IndustryStudies() {
 
                         {/* featured panel */}
                         <div className="lg:col-span-8">
-                            <div key={sel.client} className="reveal-up h-full rounded-3xl bg-white/[0.03] border border-white/[0.07] p-7 sm:p-9 flex flex-col">
-                                <div className="flex flex-wrap items-center gap-2 mb-7">
-                                    <span className="px-3 py-1 rounded-full border border-white/15 text-[0.7rem] font-medium text-white/65">{sel.industry}</span>
-                                    <span className="px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-[0.7rem] font-medium text-accent">AI Agents</span>
+                            <div key={sel.client} className="reveal-up h-full rounded-3xl bg-white/[0.03] border border-white/[0.07] p-6 sm:p-7 flex flex-col">
+                                <div className="flex flex-wrap items-center gap-2 mb-5">
+                                    <span className="px-3 py-1 rounded-full border border-white/15 text-[0.68rem] font-medium text-white/65">{sel.industry}</span>
+                                    <span className="px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-[0.68rem] font-medium text-accent">AI Agents</span>
                                 </div>
 
-                                <div className="flex flex-col sm:flex-row sm:items-end gap-x-6 gap-y-3 mb-7">
-                                    <span className="font-display text-7xl lg:text-8xl font-extrabold text-white tracking-tightest leading-[0.85]">
+                                <div className="flex flex-col sm:flex-row sm:items-end gap-x-5 gap-y-2 mb-4">
+                                    <span className="font-display text-6xl lg:text-7xl font-extrabold text-white tracking-tightest leading-[0.85]">
                                         <Metric value={sel.metric} />
                                     </span>
-                                    <span className="text-white/55 text-sm font-medium pb-2">{sel.metricLabel}</span>
+                                    <span className="text-white/55 text-[0.82rem] font-medium pb-1.5">{sel.metricLabel}</span>
                                 </div>
 
-                                <h3 className="font-display text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug mb-7 max-w-lg">
+                                <h3 className="font-display text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-5 max-w-lg">
                                     {sel.headline}
                                 </h3>
 
                                 {/* before -> after transformation */}
-                                <div className="flex items-stretch gap-3 mb-8">
-                                    <div className="flex-1 rounded-xl border border-white/[0.07] bg-white/[0.02] p-4">
-                                        <p className="font-mono text-[0.56rem] uppercase tracking-[0.18em] text-white/35 mb-2">Before · {sel.before.tag}</p>
-                                        <p className="text-sm font-semibold text-white/55 line-through decoration-white/25">{sel.before.label}</p>
+                                <div className="flex items-stretch gap-2.5 mb-6">
+                                    <div className="flex-1 rounded-xl border border-white/[0.07] bg-white/[0.02] p-3.5">
+                                        <p className="font-mono text-[0.54rem] uppercase tracking-[0.18em] text-white/35 mb-1.5">Before · {sel.before.tag}</p>
+                                        <p className="text-[0.82rem] font-semibold text-white/55 line-through decoration-white/25">{sel.before.label}</p>
                                     </div>
-                                    <div className="flex items-center text-accent shrink-0"><ArrowUpRight size={18} /></div>
-                                    <div className="flex-1 rounded-xl border border-accent/25 bg-accent/[0.06] p-4">
-                                        <p className="font-mono text-[0.56rem] uppercase tracking-[0.18em] text-accent/80 mb-2">After · {sel.after.tag}</p>
-                                        <p className="text-sm font-semibold text-white">{sel.after.label}</p>
+                                    <div className="flex items-center text-accent shrink-0"><ArrowUpRight size={17} /></div>
+                                    <div className="flex-1 rounded-xl border border-accent/25 bg-accent/[0.06] p-3.5">
+                                        <p className="font-mono text-[0.54rem] uppercase tracking-[0.18em] text-accent/80 mb-1.5">After · {sel.after.tag}</p>
+                                        <p className="text-[0.82rem] font-semibold text-white">{sel.after.label}</p>
                                     </div>
                                 </div>
 
                                 {/* quote */}
-                                <div className="mt-auto pt-7 border-t border-white/[0.07]">
-                                    <Quote size={18} className="text-accent mb-3" />
-                                    <p className="text-[0.95rem] text-white/75 leading-relaxed mb-5 max-w-xl">{sel.quote}</p>
+                                <div className="mt-auto pt-5 border-t border-white/[0.07]">
+                                    <p className="text-[0.9rem] text-white/75 leading-relaxed mb-4 max-w-xl">
+                                        <Quote size={15} className="text-accent inline mr-1.5 -mt-1" />
+                                        {sel.quote}
+                                    </p>
                                     <div className="flex items-center gap-3">
                                         <span className="flex items-center justify-center w-10 h-10 rounded-full bg-accent/15 border border-accent/25 font-mono text-[0.72rem] font-bold text-accent shrink-0">
                                             {initials(sel.name)}
