@@ -59,8 +59,18 @@ function NetworkVisual({ industry }) {
             ))}
 
             {/* center hero (primary) */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="breathe relative w-[88px] h-[88px] rounded-full bg-white border border-border shadow-[0_12px_30px_-10px_rgba(0,0,0,0.4)] flex items-center justify-center">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                {/* radar ping rings */}
+                <span className="ping-ring absolute w-[88px] h-[88px] rounded-full border border-accent/45" />
+                <span className="ping-ring absolute w-[88px] h-[88px] rounded-full border border-accent/30" style={{ animationDelay: '1.6s' }} />
+                {/* rotating dashed orbit */}
+                <svg viewBox="0 0 120 120" className="slow-spin absolute w-[118px] h-[118px]">
+                    <circle cx="60" cy="60" r="56" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="1" strokeDasharray="2 7" />
+                    <circle cx="60" cy="4" r="2.5" fill="#DD0426" />
+                </svg>
+                {/* glass disc + icon */}
+                <div className="breathe relative w-[84px] h-[84px] rounded-full flex items-center justify-center"
+                    style={{ background: 'radial-gradient(circle at 35% 30%, rgba(255,255,255,0.12), rgba(255,255,255,0.03))', backdropFilter: 'blur(6px)', border: '1px solid rgba(255,255,255,0.14)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.35), 0 0 36px -6px rgba(221,4,38,0.5)' }}>
                     <IndustryIcon variant={industry.id} />
                 </div>
             </div>
