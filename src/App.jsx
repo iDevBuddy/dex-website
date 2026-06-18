@@ -23,6 +23,7 @@ function HomePage() {
             <Hero />
             <Stats />
             <ProjectPipeline />
+            <AgentTypes />
             <Services />
             <IndustryStudies />
             <Testimonials />
