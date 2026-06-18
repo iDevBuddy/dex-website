@@ -181,6 +181,8 @@
 .node-blink { animation: nodeBlink 2.6s ease-in-out infinite; }
 @keyframes pingRing { 0% { transform: scale(0.55); opacity: 0.55; } 80% { opacity: 0; } 100% { transform: scale(1.9); opacity: 0; } }
 .ping-ring { animation: pingRing 3.2s cubic-bezier(0, 0, 0.2, 1) infinite; }
+@keyframes growBar { from { width: 0; } to { width: var(--w, 100%); } }
+.grow-bar { width: var(--w, 100%); animation: growBar 1.1s cubic-bezier(0.16, 1, 0.3, 1) both; }
 
 @media (prefers-reduced-motion: reduce) {
     .rail-packet, .node-pulse, .term-cursor, .motif-line, .motif-node-live, .float-orb, .reveal-up, .slow-spin, .slow-spin-rev, .breathe, .node-blink, .ping-ring { animation: none !important; }

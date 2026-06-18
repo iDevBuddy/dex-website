@@ -5,7 +5,7 @@ import ProjectPipeline from './components/ProjectPipeline'
 import AgentTypes from './components/AgentTypes'
 import Benefits from './components/Benefits'
 import Services from './components/Services'
-import Testimonials from './components/Testimonials'
+import IndustryStudies from './components/IndustryStudies'
 import Industries from './components/Industries'
 import Demo from './components/Demo'
 import Process from './components/Process'
@@ -26,7 +26,7 @@ function HomePage() {
             <AgentTypes />
             <Benefits />
             <Services />
-            <Testimonials />
+            <IndustryStudies />
             <Industries />
             <Demo />
             <Process />
