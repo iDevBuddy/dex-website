@@ -183,9 +183,11 @@
 .ping-ring { animation: pingRing 3.2s cubic-bezier(0, 0, 0.2, 1) infinite; }
 @keyframes growBar { from { width: 0; } to { width: var(--w, 100%); } }
 .grow-bar { width: var(--w, 100%); animation: growBar 1.1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes layerFloat { 0%, 100% { transform: translateY(-6px); } 50% { transform: translateY(-11px); } }
+.layer-float { animation: layerFloat 3.4s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
-    .rail-packet, .node-pulse, .term-cursor, .motif-line, .motif-node-live, .float-orb, .reveal-up, .slow-spin, .slow-spin-rev, .breathe, .node-blink, .ping-ring { animation: none !important; }
+    .rail-packet, .node-pulse, .term-cursor, .motif-line, .motif-node-live, .float-orb, .reveal-up, .slow-spin, .slow-spin-rev, .breathe, .node-blink, .ping-ring, .layer-float { animation: none !important; }
 }
 
 /* Hide default Hume voice elements in favor of our custom widget */

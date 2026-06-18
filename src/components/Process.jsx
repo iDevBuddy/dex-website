@@ -29,26 +29,37 @@ const steps = [
 ]
 
 function IsoStack({ active }) {
-    const cx = 180, hw = 104, hh = 50, depth = 13, spacing = 46, top = 96
+    const cx = 180, hw = 98, hh = 42, depth = 16, spacing = 58, top = 62
     const layers = [0, 1, 2, 3].map((i) => ({ i, cy: top + i * spacing }))
+    // tone per state: done (already built, above active) > pending (below)
+    const tone = (i) => {
+        if (i === active) return { top: '#DD0426', left: '#A30320', right: '#F0223D', stroke: 'rgba(255,255,255,0.3)' }
+        if (i < active) return { top: 'rgba(221,4,38,0.30)', left: 'rgba(163,3,32,0.28)', right: 'rgba(240,34,61,0.32)', stroke: 'rgba(221,4,38,0.35)' }
+        return { top: 'rgba(221,4,38,0.07)', left: 'rgba(163,3,32,0.06)', right: 'rgba(240,34,61,0.09)', stroke: 'rgba(221,4,38,0.16)' }
+    }
     return (
-        <svg viewBox="0 0 360 296" className="w-full max-w-[340px]">
+        <svg viewBox="0 0 360 300" className="w-full max-w-[340px] overflow-visible">
             <defs>
-                <filter id="isoGlow" x="-40%" y="-40%" width="180%" height="180%">
-                    <feDropShadow dx="0" dy="5" stdDeviation="9" floodColor="#DD0426" floodOpacity="0.55" />
+                <filter id="isoGlow" x="-60%" y="-60%" width="220%" height="220%">
+                    <feDropShadow dx="0" dy="6" stdDeviation="11" floodColor="#DD0426" floodOpacity="0.6" />
                 </filter>
             </defs>
-            {/* paint bottom -> top so upper layers overlap */}
+            {/* paint bottom -> top so upper layers sit in front */}
             {layers.slice().reverse().map(({ i, cy }) => {
                 const on = i === active
+                const t = tone(i)
                 const topPts = `${cx},${cy - hh} ${cx + hw},${cy} ${cx},${cy + hh} ${cx - hw},${cy}`
                 const leftPts = `${cx - hw},${cy} ${cx},${cy + hh} ${cx},${cy + hh + depth} ${cx - hw},${cy + depth}`
                 const rightPts = `${cx},${cy + hh} ${cx + hw},${cy} ${cx + hw},${cy + depth} ${cx},${cy + hh + depth}`
                 return (
-                    <g key={i} filter={on ? 'url(#isoGlow)' : undefined} style={{ transition: 'transform .55s cubic-bezier(.16,1,.3,1)', transform: on ? 'translateY(-6px)' : 'none' }}>
-                        <polygon points={leftPts} fill={on ? '#A80320' : 'rgba(221,4,38,0.05)'} style={{ transition: 'fill .5s' }} />
-                        <polygon points={rightPts} fill={on ? '#EE2440' : 'rgba(221,4,38,0.09)'} style={{ transition: 'fill .5s' }} />
-                        <polygon points={topPts} fill={on ? '#DD0426' : 'rgba(221,4,38,0.10)'} stroke={on ? 'rgba(255,255,255,0.25)' : 'rgba(221,4,38,0.20)'} strokeWidth="1" style={{ transition: 'fill .5s' }} />
+                    <g key={i} className={on ? 'layer-float' : ''} filter={on ? 'url(#isoGlow)' : undefined} style={{ transition: 'transform .55s cubic-bezier(.16,1,.3,1)' }}>
+                        <polygon points={leftPts} fill={t.left} style={{ transition: 'fill .5s' }} />
+                        <polygon points={rightPts} fill={t.right} style={{ transition: 'fill .5s' }} />
+                        <polygon points={topPts} fill={t.top} stroke={t.stroke} strokeWidth="1" style={{ transition: 'fill .5s' }} />
+                        {/* top specular edge on the active slab */}
+                        {on && <polyline points={`${cx - hw},${cy} ${cx},${cy - hh} ${cx + hw},${cy}`} fill="none" stroke="rgba(255,255,255,0.55)" strokeWidth="1.4" />}
+                        {/* current-layer marker */}
+                        {on && <circle cx={cx} cy={cy} r="4" fill="#fff" />}
                     </g>
                 )
             })}
