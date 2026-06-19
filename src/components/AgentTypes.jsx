@@ -2,6 +2,7 @@
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import DotNum from './DotNum'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -127,8 +128,8 @@ export default function AgentTypes() {
                                 <div className="transition-transform duration-300 group-hover:-translate-y-1">
                                     <NodeMotif variant={a.variant} />
                                 </div>
-                                <span className="font-mono text-[0.62rem] tracking-[0.2em] text-ghost-faint group-hover:text-accent transition-colors">
-                                    {String(i + 1).padStart(2, '0')}
+                                <span className="text-ghost-faint group-hover:text-accent transition-colors">
+                                    <DotNum value={String(i + 1).padStart(2, '0')} cell={4} />
                                 </span>
                             </div>
                             <h3 className="font-display text-[1.15rem] font-bold text-ghost mb-4 tracking-tight">{a.title}</h3>

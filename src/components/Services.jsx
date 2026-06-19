@@ -1,6 +1,7 @@
 'use client'
 import { useRef } from 'react'
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
+import DotNum from './DotNum'
 
 const services = [
     {
@@ -80,7 +81,7 @@ export default function Services() {
                         <div className="relative z-10 h-full p-7 flex flex-col justify-between">
                             <div className="flex items-center justify-between">
                                 <span className="font-mono text-[0.62rem] uppercase tracking-[0.22em] text-ghost-faint group-hover:text-white/70 transition-colors">AI Automation</span>
-                                <span className="font-mono text-[0.62rem] text-ghost-faint group-hover:text-white/60 transition-colors">{s.num}</span>
+                                <span className="text-ghost-faint group-hover:text-white/70 transition-colors"><DotNum value={s.num} cell={4} /></span>
                             </div>
 
                             {/* bottom block — title+arrow row, desc reveals below (no overlap) */}
