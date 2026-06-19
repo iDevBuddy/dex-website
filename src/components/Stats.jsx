@@ -1,11 +1,26 @@
 'use client'
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import DotNum from './DotNum'
 
 gsap.registerPlugin(ScrollTrigger)
+
+function Counter({ target, start }) {
+    const [count, setCount] = useState(0)
+    useEffect(() => {
+        if (!start) return
+        let current = 0
+        const increment = Math.max(1, target / 45)
+        const timer = setInterval(() => {
+            current += increment
+            if (current >= target) { setCount(target); clearInterval(timer) }
+            else setCount(Math.floor(current))
+        }, 24)
+        return () => clearInterval(timer)
+    }, [start, target])
+    return <span>{count}</span>
+}
 
 const stats = [
     { number: 50, text: 'of business decisions will be augmented or automated by AI agents by 2027.', source: 'Gartner', url: 'https://www.gartner.com' },
@@ -16,6 +31,7 @@ const stats = [
 export default function Stats() {
     const sectionRef = useRef(null)
     const itemsRef = useRef([])
+    const [counting, setCounting] = useState(false)
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -25,7 +41,11 @@ export default function Stats() {
                 duration: 0.9,
                 stagger: 0.12,
                 ease: 'power3.out',
-                scrollTrigger: { trigger: sectionRef.current, start: 'top 72%' },
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: 'top 72%',
+                    onEnter: () => setCounting(true),
+                },
             })
         }, sectionRef)
         return () => ctx.revert()
@@ -55,9 +75,9 @@ export default function Stats() {
                             ref={(el) => (itemsRef.current[i] = el)}
                             className={`flex flex-col ${i > 0 ? 'md:pl-8 md:border-l md:border-border' : ''}`}
                         >
-                            <div className="flex items-start gap-2.5 text-ghost mb-1">
-                                <DotNum value={String(stat.number)} cell={10} />
-                                <span className="text-accent"><DotNum value="%" cell={10} /></span>
+                            <div className="font-display text-6xl lg:text-7xl font-extrabold text-ghost tracking-tightest leading-none flex items-baseline">
+                                <Counter target={stat.number} start={counting} />
+                                <span className="text-accent">%</span>
                             </div>
                             <div className="dotted-rule w-full text-border my-6" />
                             <p className="text-[0.95rem] text-ghost-dim leading-relaxed mb-5 max-w-[34ch]">{stat.text}</p>
