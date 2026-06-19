@@ -67,6 +67,41 @@ function IsoStack({ active }) {
     )
 }
 
+// 5x7 dot-matrix glyphs (Nothing-style)
+const DIGITS = {
+    '0': ['01110', '10001', '10011', '10101', '11001', '10001', '01110'],
+    '1': ['00100', '01100', '00100', '00100', '00100', '00100', '01110'],
+    '2': ['01110', '10001', '00001', '00010', '00100', '01000', '11111'],
+    '3': ['11111', '00010', '00100', '00010', '00001', '10001', '01110'],
+    '4': ['00010', '00110', '01010', '10010', '11111', '00010', '00010'],
+}
+function DotDigit({ d, base }) {
+    const rows = DIGITS[d] || DIGITS['0']
+    const dots = []
+    rows.forEach((row, r) => {
+        row.split('').forEach((c, col) => {
+            const on = c === '1'
+            dots.push(
+                <circle
+                    key={`${r}-${col}`}
+                    cx={col * 13 + 6.5} cy={r * 13 + 6.5} r="4.4"
+                    className={on ? 'dot-pop' : ''}
+                    style={on ? { animationDelay: `${base + (r + col) * 0.028}s` } : undefined}
+                    fill={on ? '#DD0426' : 'rgba(20,20,20,0.07)'}
+                />
+            )
+        })
+    })
+    return <svg viewBox="0 0 65 91" className="w-[58px] sm:w-[66px]">{dots}</svg>
+}
+function DotNumber({ value }) {
+    return (
+        <div key={value} className="flex items-start gap-3.5">
+            {value.split('').map((d, i) => <DotDigit key={i} d={d} base={i * 0.18} />)}
+        </div>
+    )
+}
+
 export default function Process() {
     const [active, setActive] = useState(0)
 
@@ -75,7 +110,7 @@ export default function Process() {
             <div className="max-w-[1320px] mx-auto px-6">
                 <div className="mb-10">
                     <span className="eyebrow mb-5">Our Process</span>
-                    <h2 className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-ghost tracking-tightest leading-[1.0] max-w-xl">
+                    <h2 className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-grad-dark tracking-tightest leading-[1.0] max-w-xl">
                         Our process for building AI agents
                     </h2>
                 </div>
@@ -83,9 +118,9 @@ export default function Process() {
                 <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center border-t border-border pt-10">
                     {/* left: big number + iso stack */}
                     <div className="relative flex flex-col">
-                        <span key={active} className="reveal-up font-display text-7xl lg:text-8xl font-extrabold text-ghost tracking-tightest leading-none mb-2">
-                            {steps[active].num}
-                        </span>
+                        <div className="mb-4">
+                            <DotNumber value={steps[active].num} />
+                        </div>
                         <div className="flex justify-center">
                             <IsoStack active={active} />
                         </div>
@@ -97,11 +132,12 @@ export default function Process() {
                             const on = active === i
                             return (
                                 <div key={i} className="border-b border-border">
-                                    <button onClick={() => setActive(i)} className="w-full flex items-center py-5 text-left group">
-                                        <h3 className={`font-display text-xl font-bold tracking-tight transition-colors ${on ? 'text-accent' : 'text-ghost group-hover:text-accent'}`}>{s.title}</h3>
+                                    <button onClick={() => setActive(i)} className="relative w-full flex items-center py-5 text-left group">
+                                        <span className={`absolute left-0 top-1/2 -translate-y-1/2 w-[3px] rounded-full bg-accent transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${on ? 'h-8' : 'h-0'}`} />
+                                        <h3 className={`font-display text-xl font-bold tracking-tight transition-all duration-400 ${on ? 'text-grad-red translate-x-5' : 'text-grad-dark group-hover:translate-x-1'}`}>{s.title}</h3>
                                     </button>
                                     <div className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${on ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                        <div className="pb-6 max-w-lg">
+                                        <div className="pb-6 pl-5 max-w-lg">
                                             <p className="text-[0.9rem] text-ghost-dim leading-relaxed mb-4">{s.desc}</p>
                                             <p className="text-[0.85rem] text-ghost-dim mb-1.5"><span className="font-semibold text-ghost">Deliverables: </span>{s.deliverables}</p>
                                             <p className="text-[0.85rem] text-ghost-dim"><span className="font-semibold text-ghost">Duration: </span>{s.duration}</p>
