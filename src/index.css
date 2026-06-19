@@ -201,9 +201,11 @@
 .layer-float { animation: layerFloat 3.4s ease-in-out infinite; }
 @keyframes dotFade { from { opacity: 0; } to { opacity: 1; } }
 .dot-pop { animation: dotFade 0.45s ease-out both; }
+@keyframes wave { 0%, 100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
+.wave-bar { transform-origin: center; animation: wave 1s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
-    .rail-packet, .node-pulse, .term-cursor, .motif-line, .motif-node-live, .float-orb, .reveal-up, .slow-spin, .slow-spin-rev, .breathe, .node-blink, .ping-ring, .layer-float, .dot-pop { animation: none !important; }
+    .rail-packet, .node-pulse, .term-cursor, .motif-line, .motif-node-live, .float-orb, .reveal-up, .slow-spin, .slow-spin-rev, .breathe, .node-blink, .ping-ring, .layer-float, .dot-pop, .wave-bar { animation: none !important; }
 }
 
 /* Hide default Hume voice elements in favor of our custom widget */
