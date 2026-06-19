@@ -160,7 +160,7 @@ export default function CTA() {
                                             </div>
                                             <button
                                                 type="submit"
-                                                className="w-full py-3.5 bg-accent text-white font-semibold text-xs rounded-xl hover:bg-accent-hover transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                                                className="w-full py-3.5 btn-grad-red text-white font-semibold text-xs rounded-xl flex items-center justify-center gap-2 cursor-pointer"
                                             >
                                                 <Mail size={14} />
                                                 Generate Strategy Score
@@ -176,7 +176,7 @@ export default function CTA() {
                             animate={{ opacity: 1, scale: 1 }}
                             className="text-center py-6"
                         >
-                            <CheckCircle size={44} className="text-emerald-500 mx-auto mb-4 animate-bounce" />
+                            <CheckCircle size={44} className="text-emerald-500 mx-auto mb-4" />
                             <h3 className="font-display text-lg font-bold text-slate-900 mb-2">Strategy Map Generated</h3>
                             <p className="text-xs text-slate-500 max-w-sm mx-auto mb-6">
                                 Thanks, {leadName}! A custom automation report is heading to <span className="text-accent">{leadEmail}</span>.

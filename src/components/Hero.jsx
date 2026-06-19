@@ -106,7 +106,7 @@ export default function Hero() {
                                 <div className="flex gap-3">
                                     <button
                                         onClick={openChatbot}
-                                        className="group flex items-center gap-2 px-6 py-3 rounded-full bg-accent text-white font-semibold text-[0.82rem] transition-colors hover:bg-accent-hover cursor-pointer"
+                                        className="group flex items-center gap-2 px-6 py-3 rounded-full btn-grad-red text-white font-semibold text-[0.82rem] cursor-pointer"
                                     >
                                         Start Consultation
                                         <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

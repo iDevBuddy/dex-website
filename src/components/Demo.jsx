@@ -183,7 +183,7 @@ export default function Demo() {
                             <button
                                 onClick={handleCta}
                                 disabled={status === 'connecting' && agent.cta === 'voice'}
-                                className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent text-white font-semibold text-[0.84rem] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_26px_-6px_rgba(221,4,38,0.7)] cursor-pointer disabled:opacity-60"
+                                className="group inline-flex items-center gap-2 px-6 py-3 rounded-full btn-grad-red text-white font-semibold text-[0.84rem] cursor-pointer disabled:opacity-60"
                             >
                                 {agent.cta === 'voice' ? (status === 'connected' ? <PhoneOff size={15} /> : <Mic size={15} />) : null}
                                 {ctaLabel}

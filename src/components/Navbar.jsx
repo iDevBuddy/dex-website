@@ -85,7 +85,7 @@ export default function Navbar() {
                     </button>
                     <a
                         href="/#contact"
-                        className="group flex items-center gap-1.5 px-4 py-2.5 rounded-full text-[0.8rem] font-semibold text-white bg-accent hover:bg-accent-hover transition-colors duration-300"
+                        className="group flex items-center gap-1.5 px-4 py-2.5 rounded-full text-[0.8rem] font-semibold text-white btn-grad-red"
                     >
                         Book a Call
                         <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -136,7 +136,7 @@ export default function Navbar() {
                         <a
                             href="/#contact"
                             onClick={() => setMobileOpen(false)}
-                            className="mt-1 flex items-center justify-center gap-1.5 px-5 py-3 rounded-full text-sm font-semibold text-white bg-accent text-center hover:bg-accent-hover transition-colors"
+                            className="mt-1 flex items-center justify-center gap-1.5 px-5 py-3 rounded-full text-sm font-semibold text-white text-center btn-grad-red"
                         >
                             Book a Call
                             <ArrowUpRight size={15} />
