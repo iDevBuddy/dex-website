@@ -132,7 +132,7 @@ export default function Process() {
                             const on = active === i
                             return (
                                 <div key={i} className="border-b border-border">
-                                    <button onClick={() => setActive(i)} className="relative w-full flex items-center py-5 text-left group">
+                                    <button onClick={() => setActive(i)} onMouseEnter={() => setActive(i)} className="relative w-full flex items-center py-5 text-left group">
                                         <span className={`absolute left-0 top-1/2 -translate-y-1/2 w-[3px] rounded-full bg-accent transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${on ? 'h-8' : 'h-0'}`} />
                                         <h3 className={`font-display text-xl font-bold tracking-tight transition-all duration-400 ${on ? 'text-grad-red translate-x-5' : 'text-grad-dark group-hover:translate-x-1'}`}>{s.title}</h3>
                                     </button>
