@@ -9,7 +9,7 @@ import IndustryStudies from './components/IndustryStudies'
 import Industries from './components/Industries'
 import Demo from './components/Demo'
 import Process from './components/Process'
-import CTA from './components/CTA'
+import Tools from './components/Tools'
 import Footer from './components/Footer'
 import VoiceChatbot from './components/VoiceChatbot'
 import BlogIndex from './components/blog/BlogIndex'
@@ -30,7 +30,7 @@ function HomePage() {
             <Industries />
             <Demo />
             <Process />
-            <CTA />
+            <Tools />
         </main>
     )
 }
