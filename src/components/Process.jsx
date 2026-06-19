@@ -29,12 +29,16 @@ const steps = [
 ]
 
 function IsoStack({ active }) {
-    const cx = 180, hw = 122, hh = 40, spacing = 62, top = 50
+    const cx = 180, hw = 122, hh = 40, depth = 8, spacing = 62, top = 48
     const layers = [0, 1, 2, 3].map((i) => ({ i, cy: top + i * spacing }))
-    // flat diamonds; progress tint: done (above) > pending (below)
-    const fill = (i) => (i === active ? 'url(#layerGrad)' : i < active ? 'rgba(221,4,38,0.26)' : 'rgba(221,4,38,0.12)')
+    // subtle slab: top face + two shaded side faces; progress tint done > pending
+    const tone = (i) => {
+        if (i === active) return { top: 'url(#layerGrad)', left: '#8E0119', right: '#C40322' }
+        if (i < active) return { top: 'rgba(221,4,38,0.26)', left: 'rgba(140,1,25,0.34)', right: 'rgba(196,3,34,0.30)' }
+        return { top: 'rgba(221,4,38,0.12)', left: 'rgba(140,1,25,0.16)', right: 'rgba(196,3,34,0.14)' }
+    }
     return (
-        <svg viewBox="0 0 360 310" className="w-full max-w-[340px] overflow-visible">
+        <svg viewBox="0 0 360 320" className="w-full max-w-[340px] overflow-visible">
             <defs>
                 <linearGradient id="layerGrad" x1="0" y1="0" x2="1" y2="1">
                     <stop offset="0" stopColor="#FF1E3C" />
@@ -44,19 +48,19 @@ function IsoStack({ active }) {
                     <feDropShadow dx="0" dy="7" stdDeviation="13" floodColor="#DD0426" floodOpacity="0.55" />
                 </filter>
             </defs>
-            {/* paint bottom -> top so upper diamonds overlap */}
+            {/* paint bottom -> top so upper slabs overlap */}
             {layers.slice().reverse().map(({ i, cy }) => {
                 const on = i === active
-                const pts = `${cx},${cy - hh} ${cx + hw},${cy} ${cx},${cy + hh} ${cx - hw},${cy}`
+                const t = tone(i)
+                const topPts = `${cx},${cy - hh} ${cx + hw},${cy} ${cx},${cy + hh} ${cx - hw},${cy}`
+                const leftPts = `${cx - hw},${cy} ${cx},${cy + hh} ${cx},${cy + hh + depth} ${cx - hw},${cy + depth}`
+                const rightPts = `${cx},${cy + hh} ${cx + hw},${cy} ${cx + hw},${cy + depth} ${cx},${cy + hh + depth}`
                 return (
-                    <polygon
-                        key={i}
-                        className={on ? 'layer-float' : ''}
-                        filter={on ? 'url(#isoGlow)' : undefined}
-                        points={pts}
-                        fill={fill(i)}
-                        style={{ transition: 'fill .5s ease' }}
-                    />
+                    <g key={i} className={on ? 'layer-float' : ''} filter={on ? 'url(#isoGlow)' : undefined}>
+                        <polygon points={leftPts} fill={t.left} style={{ transition: 'fill .5s ease' }} />
+                        <polygon points={rightPts} fill={t.right} style={{ transition: 'fill .5s ease' }} />
+                        <polygon points={topPts} fill={t.top} style={{ transition: 'fill .5s ease' }} />
+                    </g>
                 )
             })}
         </svg>
