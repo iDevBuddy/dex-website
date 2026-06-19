@@ -29,38 +29,38 @@ const steps = [
 ]
 
 function IsoStack({ active }) {
-    const cx = 180, hw = 122, hh = 40, depth = 8, spacing = 62, top = 48
+    const cx = 180, hw = 122, hh = 40, spacing = 62, top = 50
     const layers = [0, 1, 2, 3].map((i) => ({ i, cy: top + i * spacing }))
-    // subtle slab: top face + two shaded side faces; progress tint done > pending
-    const tone = (i) => {
-        if (i === active) return { top: 'url(#layerGrad)', left: '#8E0119', right: '#C40322' }
-        if (i < active) return { top: 'rgba(221,4,38,0.26)', left: 'rgba(140,1,25,0.34)', right: 'rgba(196,3,34,0.30)' }
-        return { top: 'rgba(221,4,38,0.12)', left: 'rgba(140,1,25,0.16)', right: 'rgba(196,3,34,0.14)' }
-    }
+    // flat diamonds; progress tint: done (above) > pending (below)
+    const fill = (i) => (i === active ? 'url(#layerGrad)' : i < active ? 'rgba(221,4,38,0.26)' : 'rgba(221,4,38,0.12)')
     return (
-        <svg viewBox="0 0 360 320" className="w-full max-w-[340px] overflow-visible">
+        <svg viewBox="0 0 360 310" className="w-full max-w-[340px] overflow-visible">
             <defs>
                 <linearGradient id="layerGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stopColor="#FF1E3C" />
+                    <stop offset="0" stopColor="#FF2A46" />
                     <stop offset="1" stopColor="#A80320" />
                 </linearGradient>
+                {/* subtle floating shadow on every diamond — depth without a box */}
+                <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feDropShadow dx="0" dy="5" stdDeviation="7" floodColor="#7A0014" floodOpacity="0.18" />
+                </filter>
                 <filter id="isoGlow" x="-60%" y="-60%" width="220%" height="220%">
-                    <feDropShadow dx="0" dy="7" stdDeviation="13" floodColor="#DD0426" floodOpacity="0.55" />
+                    <feDropShadow dx="0" dy="7" stdDeviation="14" floodColor="#DD0426" floodOpacity="0.6" />
                 </filter>
             </defs>
-            {/* paint bottom -> top so upper slabs overlap */}
+            {/* paint bottom -> top so upper diamonds overlap slightly */}
             {layers.slice().reverse().map(({ i, cy }) => {
                 const on = i === active
-                const t = tone(i)
-                const topPts = `${cx},${cy - hh} ${cx + hw},${cy} ${cx},${cy + hh} ${cx - hw},${cy}`
-                const leftPts = `${cx - hw},${cy} ${cx},${cy + hh} ${cx},${cy + hh + depth} ${cx - hw},${cy + depth}`
-                const rightPts = `${cx},${cy + hh} ${cx + hw},${cy} ${cx + hw},${cy + depth} ${cx},${cy + hh + depth}`
+                const pts = `${cx},${cy - hh} ${cx + hw},${cy} ${cx},${cy + hh} ${cx - hw},${cy}`
                 return (
-                    <g key={i} className={on ? 'layer-float' : ''} filter={on ? 'url(#isoGlow)' : undefined}>
-                        <polygon points={leftPts} fill={t.left} style={{ transition: 'fill .5s ease' }} />
-                        <polygon points={rightPts} fill={t.right} style={{ transition: 'fill .5s ease' }} />
-                        <polygon points={topPts} fill={t.top} style={{ transition: 'fill .5s ease' }} />
-                    </g>
+                    <polygon
+                        key={i}
+                        className={on ? 'layer-float' : ''}
+                        filter={on ? 'url(#isoGlow)' : 'url(#softShadow)'}
+                        points={pts}
+                        fill={fill(i)}
+                        style={{ transition: 'fill .5s ease' }}
+                    />
                 )
             })}
         </svg>
