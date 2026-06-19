@@ -29,12 +29,12 @@ const steps = [
 ]
 
 function IsoStack({ active }) {
-    const cx = 180, hw = 116, hh = 44, spacing = 42, top = 66
+    const cx = 180, hw = 122, hh = 40, spacing = 62, top = 50
     const layers = [0, 1, 2, 3].map((i) => ({ i, cy: top + i * spacing }))
     // flat diamonds; progress tint: done (above) > pending (below)
-    const fill = (i) => (i === active ? 'url(#layerGrad)' : i < active ? 'rgba(221,4,38,0.26)' : 'rgba(221,4,38,0.11)')
+    const fill = (i) => (i === active ? 'url(#layerGrad)' : i < active ? 'rgba(221,4,38,0.26)' : 'rgba(221,4,38,0.12)')
     return (
-        <svg viewBox="0 0 360 280" className="w-full max-w-[340px] overflow-visible">
+        <svg viewBox="0 0 360 310" className="w-full max-w-[340px] overflow-visible">
             <defs>
                 <linearGradient id="layerGrad" x1="0" y1="0" x2="1" y2="1">
                     <stop offset="0" stopColor="#FF1E3C" />
