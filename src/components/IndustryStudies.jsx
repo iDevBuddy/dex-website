@@ -62,7 +62,7 @@ export default function IndustryStudies() {
                     <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-7">
                         <div>
                             <span className="eyebrow eyebrow-light mb-4">Proven Impact</span>
-                            <h2 className="font-display text-3xl sm:text-[2.4rem] font-extrabold text-white tracking-tightest leading-[1.02] max-w-xl">
+                            <h2 data-reveal className="font-display text-3xl sm:text-[2.4rem] font-extrabold text-white tracking-tightest leading-[1.02] max-w-xl">
                                 Real-world impact of AI agents
                             </h2>
                         </div>

@@ -41,7 +41,7 @@ export default function Services() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
                     <div>
                         <span className="eyebrow mb-5">Capabilities</span>
-                        <h2 className="font-display text-3xl sm:text-[2.8rem] font-extrabold text-ghost tracking-tightest leading-[1.0] max-w-xl">
+                        <h2 data-reveal className="font-display text-3xl sm:text-[2.8rem] font-extrabold text-ghost tracking-tightest leading-[1.0] max-w-xl">
                             Our agentic AI services
                         </h2>
                     </div>

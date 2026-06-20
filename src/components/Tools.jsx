@@ -55,7 +55,7 @@ export default function Tools() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8">
                     <div>
                         <span className="eyebrow mb-5">Tech Stack</span>
-                        <h2 className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-grad-dark tracking-tightest leading-[1.0] max-w-xl">
+                        <h2 data-reveal className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-grad-dark tracking-tightest leading-[1.0] max-w-xl">
                             Tools &amp; technologies
                         </h2>
                     </div>

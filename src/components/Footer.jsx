@@ -3,7 +3,7 @@ export default function Footer() {
         <footer className="pt-14 pb-8 bg-dark-deeper border-t border-border">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                    <div>
+                    <div data-reveal>
                         <a href="/" className="font-mono text-lg font-bold text-slate-900 tracking-tight mb-4 block">
                             DEX <span className="text-accent">by Akif Saeed</span>
                         </a>
@@ -12,7 +12,7 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div>
+                    <div data-reveal style={{ '--rd': '0.06s' }}>
                         <h4 className="font-mono text-[0.78rem] text-slate-800 uppercase tracking-[2px] mb-5">Services</h4>
                         <div className="flex flex-col gap-2.5">
                             <a href="/#agents" className="text-[0.85rem] text-slate-500 hover:text-accent transition-colors duration-200">Voice Agents</a>
@@ -22,7 +22,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div>
+                    <div data-reveal style={{ '--rd': '0.12s' }}>
                         <h4 className="font-mono text-[0.78rem] text-slate-800 uppercase tracking-[2px] mb-5">Industries</h4>
                         <div className="flex flex-col gap-2.5">
                             <a href="/#industries" className="text-[0.85rem] text-slate-500 hover:text-accent transition-colors duration-200">Medical Clinics</a>
@@ -32,7 +32,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div>
+                    <div data-reveal style={{ '--rd': '0.18s' }}>
                         <h4 className="font-mono text-[0.78rem] text-slate-800 uppercase tracking-[2px] mb-5">Company</h4>
                         <div className="flex flex-col gap-2.5">
                             <a href="/blog" className="text-[0.85rem] text-slate-500 hover:text-accent transition-colors duration-200">Blog</a>

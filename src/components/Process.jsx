@@ -110,7 +110,7 @@ export default function Process() {
             <div className="max-w-[1320px] mx-auto px-6">
                 <div className="mb-10">
                     <span className="eyebrow mb-5">Our Process</span>
-                    <h2 className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-grad-dark tracking-tightest leading-[1.0] max-w-xl">
+                    <h2 data-reveal className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-grad-dark tracking-tightest leading-[1.0] max-w-xl">
                         Our process for building AI agents
                     </h2>
                 </div>

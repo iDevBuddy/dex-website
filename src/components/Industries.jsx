@@ -87,7 +87,7 @@ export default function Industries() {
             <div className="max-w-[1320px] mx-auto px-6">
                 <div className="mb-8">
                     <span className="eyebrow mb-5">Industries</span>
-                    <h2 className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-ghost tracking-tightest leading-[1.0] max-w-xl">
+                    <h2 data-reveal className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-ghost tracking-tightest leading-[1.0] max-w-xl">
                         AI agent use cases across industries
                     </h2>
                 </div>

@@ -104,7 +104,7 @@ export default function AgentTypes() {
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
                     <div>
                         <span className="eyebrow mb-5">What We Build</span>
-                        <h2 className="font-display text-3xl sm:text-[2.8rem] font-extrabold text-ghost tracking-tightest leading-[1.0] max-w-lg">
+                        <h2 data-reveal className="font-display text-3xl sm:text-[2.8rem] font-extrabold text-ghost tracking-tightest leading-[1.0] max-w-lg">
                             Types of AI agents we build
                         </h2>
                     </div>

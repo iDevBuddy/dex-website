@@ -130,7 +130,7 @@ export default function ProjectPipeline() {
                     <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
                         <div>
                             <span className="eyebrow eyebrow-light mb-5">Active Operations</span>
-                            <h2 className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-white tracking-tightest leading-[1.02] max-w-xl">
+                            <h2 data-reveal className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-white tracking-tightest leading-[1.02] max-w-xl">
                                 Watch our agents run, live.
                             </h2>
                         </div>

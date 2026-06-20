@@ -139,7 +139,7 @@ export default function Benefits() {
                             <span className="flex items-center gap-2.5 font-mono text-[0.66rem] font-semibold uppercase tracking-[0.22em] text-white/80 mb-6">
                                 <span className="w-2.5 h-2.5 bg-white" /> Why Automate
                             </span>
-                            <h2 className="font-display text-3xl sm:text-5xl lg:text-[3.2rem] font-extrabold text-white tracking-tightest leading-[1.0]">
+                            <h2 data-reveal className="font-display text-3xl sm:text-5xl lg:text-[3.2rem] font-extrabold text-white tracking-tightest leading-[1.0]">
                                 What AI agents can do <span className="text-white/55">for your business</span>
                             </h2>
                         </div>

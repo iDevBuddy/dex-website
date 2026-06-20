@@ -57,7 +57,7 @@ export default function Stats() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
                     <div>
                         <span className="eyebrow mb-5">By the Numbers</span>
-                        <h2 className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-ghost tracking-tightest leading-[1.04] max-w-xl">
+                        <h2 data-reveal className="font-display text-3xl sm:text-[2.6rem] font-extrabold text-ghost tracking-tightest leading-[1.04] max-w-xl">
                             The shift to autonomous AI is already happening.
                         </h2>
                     </div>
