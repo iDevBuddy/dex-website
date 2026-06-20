@@ -231,6 +231,28 @@
     .rail-packet, .node-pulse, .term-cursor, .motif-line, .motif-node-live, .float-orb, .reveal-up, .slow-spin, .slow-spin-rev, .breathe, .node-blink, .ping-ring, .layer-float, .dot-pop, .wave-bar { animation: none !important; }
 }
 
+/* ── Lenis smooth scroll ────────────────────────────────────────────── */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* ── Fail-safe scroll reveal (opt-in via [data-reveal]) ─────────────────
+   Hidden state applies only when JS is active, so a JS failure never hides
+   content. An IntersectionObserver adds .reveal-in on enter. */
+.has-js [data-reveal] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--rd, 0s);
+    will-change: opacity, transform;
+}
+[data-reveal].reveal-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+    .has-js [data-reveal] { opacity: 1 !important; transform: none !important; transition: none; }
+}
+
 /* Hide default Hume voice elements in favor of our custom widget */
 button[aria-label="Start voice consultation"],
 button[aria-label="End call"] {

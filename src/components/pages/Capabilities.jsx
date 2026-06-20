@@ -41,11 +41,11 @@ export default function Capabilities() {
                     <a href="/" className="flex w-fit items-center gap-2 text-[0.8rem] font-semibold text-ghost-dim hover:text-accent transition-colors mb-8">
                         <ArrowLeft size={15} /> Back to home
                     </a>
-                    <span className="eyebrow mb-5">Capabilities</span>
-                    <h1 className="font-display text-4xl sm:text-6xl font-extrabold text-grad-dark tracking-tightest leading-[0.98] max-w-3xl mb-6">
+                    <span className="eyebrow mb-5" data-reveal>Capabilities</span>
+                    <h1 data-reveal style={{ '--rd': '0.05s' }} className="font-display text-4xl sm:text-6xl font-extrabold text-grad-dark tracking-tightest leading-[0.98] max-w-3xl mb-6">
                         How we build AI agents
                     </h1>
-                    <p className="text-base text-ghost-dim leading-relaxed max-w-2xl">
+                    <p data-reveal style={{ '--rd': '0.12s' }} className="text-base text-ghost-dim leading-relaxed max-w-2xl">
                         The full picture — the technologies we engineer with, the industries we build for, and the exact process we follow to ship production-grade agents.
                     </p>
                 </div>
@@ -54,11 +54,11 @@ export default function Capabilities() {
             {/* TECH STACK */}
             <section className="px-4 sm:px-6 py-12">
                 <div className="max-w-[1320px] mx-auto px-2">
-                    <span className="eyebrow mb-4">Tech Stack</span>
-                    <h2 className="font-display text-3xl sm:text-[2.4rem] font-extrabold text-grad-dark tracking-tightest leading-[1.0] mb-10 max-w-xl">Our AI agent development stack</h2>
+                    <span className="eyebrow mb-4" data-reveal>Tech Stack</span>
+                    <h2 data-reveal style={{ '--rd': '0.05s' }} className="font-display text-3xl sm:text-[2.4rem] font-extrabold text-grad-dark tracking-tightest leading-[1.0] mb-10 max-w-xl">Our AI agent development stack</h2>
                     <div className="border-t border-border">
-                        {TECH.map(([cat, tools]) => (
-                            <div key={cat} className="grid md:grid-cols-[260px_1fr] gap-4 md:gap-8 py-6 border-b border-border">
+                        {TECH.map(([cat, tools], i) => (
+                            <div key={cat} data-reveal style={{ '--rd': `${i * 0.05}s` }} className="grid md:grid-cols-[260px_1fr] gap-4 md:gap-8 py-6 border-b border-border">
                                 <h3 className="font-display text-base font-bold text-ghost tracking-tight">{cat}</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {tools.map((t) => (
@@ -75,11 +75,11 @@ export default function Capabilities() {
             <section className="px-4 sm:px-6 py-6">
                 <div className="max-w-[1320px] mx-auto">
                     <div className="rounded-[26px] bg-night p-7 sm:p-10 lg:p-14">
-                        <span className="eyebrow eyebrow-light mb-4">Process</span>
-                        <h2 className="font-display text-3xl sm:text-[2.4rem] font-extrabold text-white tracking-tightest leading-[1.0] mb-12 max-w-xl">Our development process</h2>
+                        <span className="eyebrow eyebrow-light mb-4" data-reveal>Process</span>
+                        <h2 data-reveal style={{ '--rd': '0.05s' }} className="font-display text-3xl sm:text-[2.4rem] font-extrabold text-white tracking-tightest leading-[1.0] mb-12 max-w-xl">Our development process</h2>
                         <div className="grid sm:grid-cols-2 gap-x-10 gap-y-10">
                             {PROCESS.map(([title, desc], i) => (
-                                <div key={title} className="flex gap-5">
+                                <div key={title} data-reveal style={{ '--rd': `${(i % 2) * 0.08}s` }} className="flex gap-5">
                                     <span className="text-accent shrink-0 pt-1"><DotNum value={String(i + 1).padStart(2, '0')} cell={5} /></span>
                                     <div>
                                         <h3 className="font-display text-lg font-bold text-white tracking-tight mb-2">{title}</h3>
@@ -95,11 +95,11 @@ export default function Capabilities() {
             {/* INDUSTRIES */}
             <section className="px-4 sm:px-6 py-12">
                 <div className="max-w-[1320px] mx-auto px-2">
-                    <span className="eyebrow mb-4">Industries</span>
-                    <h2 className="font-display text-3xl sm:text-[2.4rem] font-extrabold text-grad-dark tracking-tightest leading-[1.0] mb-10 max-w-xl">AI agents built for your industry</h2>
+                    <span className="eyebrow mb-4" data-reveal>Industries</span>
+                    <h2 data-reveal style={{ '--rd': '0.05s' }} className="font-display text-3xl sm:text-[2.4rem] font-extrabold text-grad-dark tracking-tightest leading-[1.0] mb-10 max-w-xl">AI agents built for your industry</h2>
                     <div className="grid md:grid-cols-2 border-t border-l border-border">
-                        {INDUSTRIES.map(([title, desc]) => (
-                            <div key={title} className="group border-r border-b border-border p-7 transition-colors hover:bg-dark-deeper">
+                        {INDUSTRIES.map(([title, desc], i) => (
+                            <div key={title} data-reveal style={{ '--rd': `${(i % 2) * 0.06}s` }} className="group border-r border-b border-border p-7 transition-colors hover:bg-dark-deeper">
                                 <div className="flex items-center gap-2.5 mb-3">
                                     <span className="w-1.5 h-1.5 bg-accent" />
                                     <h3 className="font-display text-[1.15rem] font-bold text-ghost tracking-tight">{title}</h3>
