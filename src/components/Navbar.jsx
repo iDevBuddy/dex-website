@@ -7,6 +7,14 @@ export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false)
     const [active, setActive] = useState('pipeline')
     const [hovered, setHovered] = useState(null)
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 12)
+        onScroll()
+        window.addEventListener('scroll', onScroll, { passive: true })
+        return () => window.removeEventListener('scroll', onScroll)
+    }, [])
 
     useEffect(() => {
         const ids = ['pipeline', 'services', 'impact', 'process']
@@ -40,7 +48,7 @@ export default function Navbar() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="fixed top-4 sm:top-5 left-0 right-0 z-50 flex justify-center px-4"
         >
-            <div className="w-full max-w-[860px] rounded-full bg-white border border-black/[0.07] pl-5 pr-2 py-2 flex items-center justify-between shadow-[0_10px_30px_-10px_rgba(0,0,0,0.18)]">
+            <div className={`w-full max-w-[860px] rounded-full pl-5 pr-2 py-2 flex items-center justify-between nav-glass ${scrolled ? 'nav-glass--scrolled' : ''}`}>
                 {/* wordmark with red square */}
                 <a href="/" className="font-display text-[0.95rem] font-extrabold text-ghost tracking-tight flex items-center gap-2 shrink-0">
                     <span className="w-2.5 h-2.5 bg-accent" />
@@ -59,13 +67,13 @@ export default function Navbar() {
                                 onMouseEnter={() => setHovered(l.id)}
                                 onClick={() => setActive(l.id)}
                                 className={`relative flex items-center gap-1.5 px-3.5 py-2 rounded-full text-[0.8rem] font-medium transition-colors duration-300 ${
-                                    lit ? 'text-accent' : 'text-ghost-dim'
+                                    lit ? 'text-accent' : 'text-[#3f3f46]'
                                 }`}
                             >
                                 {lit && (
                                     <motion.span
                                         layoutId="nav-pill"
-                                        className="absolute inset-0 rounded-full -z-0 bg-accent/[0.07] border border-accent/15"
+                                        className="absolute inset-0 rounded-full -z-0 bg-white/70 border border-accent/25 shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_4px_12px_-4px_rgba(221,4,38,0.28)]"
                                         transition={{ type: 'spring', stiffness: 420, damping: 34, mass: 0.7 }}
                                     />
                                 )}
@@ -79,7 +87,7 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center gap-1.5 shrink-0">
                     <button
                         onClick={openChatbot}
-                        className="text-[0.8rem] font-medium text-ghost-dim hover:text-ghost transition-colors duration-300 cursor-pointer px-3"
+                        className="text-[0.8rem] font-medium text-[#3f3f46] hover:text-ghost transition-colors duration-300 cursor-pointer px-3"
                     >
                         Live Demo
                     </button>
@@ -109,7 +117,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -8, scale: 0.98 }}
                         transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-                        className="md:hidden absolute top-full left-4 right-4 mt-2 bg-white border border-black/[0.07] rounded-3xl p-5 flex flex-col gap-1 shadow-xl"
+                        className="md:hidden absolute top-full left-4 right-4 mt-2 bg-white/85 backdrop-blur-2xl border border-black/[0.07] rounded-3xl p-5 flex flex-col gap-1 shadow-[0_20px_50px_-20px_rgba(17,17,17,0.30)]"
                     >
                         {links.map((l) => {
                             const Icon = l.icon
