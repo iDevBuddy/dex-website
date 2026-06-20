@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { ArrowUpRight } from 'lucide-react'
 import {
     siAnthropic, siGooglegemini, siMeta, siMistralai, siDeepseek,
     siCrewai, siLangchain, siLanggraph, siN8n, siStreamlit,
@@ -88,6 +89,17 @@ export default function Tools() {
                             </span>
                         </div>
                     ))}
+                </div>
+
+                {/* teaser footer → full capabilities page */}
+                <div className="mt-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-border pt-7">
+                    <p className="text-sm text-ghost-dim max-w-xl leading-relaxed">
+                        See the full picture — every technology we engineer with, the industries we build for, and exactly how we ship production-grade agents.
+                    </p>
+                    <a href="/capabilities" className="group inline-flex items-center gap-2 px-6 py-3 rounded-full border border-ghost/20 text-[0.82rem] font-semibold text-ghost hover:border-accent hover:text-accent transition-colors shrink-0">
+                        Learn more
+                        <ArrowUpRight size={15} className="text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </a>
                 </div>
             </div>
         </section>

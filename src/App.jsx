@@ -15,6 +15,7 @@ import VoiceChatbot from './components/VoiceChatbot'
 import BlogIndex from './components/blog/BlogIndex'
 import BlogPost from './components/blog/BlogPost'
 import TrustPage from './components/pages/TrustPage'
+import Capabilities from './components/pages/Capabilities'
 import { trustPages } from './lib/trustPages'
 
 function HomePage() {
@@ -37,6 +38,8 @@ function HomePage() {
 
 function Router() {
     const path = window.location.pathname.replace(/\/$/, '') || '/'
+
+    if (path === '/capabilities') return <Capabilities />
 
     if (path === '/blog') return <BlogIndex />
 
