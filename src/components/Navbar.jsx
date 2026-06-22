@@ -76,6 +76,10 @@ export default function Navbar() {
     const highlight = hovered ?? active
     const idleText = overDark ? 'text-white/80' : 'text-[#3f3f46]'
     const hoverText = overDark ? 'hover:text-white' : 'hover:text-ghost'
+    // active-link glass key adapts: red-tinted Night key over dark, white key over light
+    const pillCls = overDark
+        ? 'bg-accent/[0.16] backdrop-blur-md border border-accent/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.10),0_5px_18px_-5px_rgba(221,4,38,0.55)]'
+        : 'bg-gradient-to-b from-white/85 to-white/55 backdrop-blur-md border border-white/50 shadow-[inset_0_1px_0.5px_rgba(255,255,255,0.95),inset_0_-2px_4px_-2px_rgba(0,0,0,0.07),0_6px_18px_-5px_rgba(221,4,38,0.30)]'
 
     return (
         <>
@@ -119,13 +123,13 @@ export default function Navbar() {
                                         onMouseEnter={() => setHovered(l.id)}
                                         onClick={() => setActive(l.id)}
                                         className={`relative flex items-center gap-1.5 px-3.5 py-2 rounded-full text-[0.8rem] font-medium transition-[color,transform] duration-300 hover:-translate-y-px active:scale-[0.97] ${
-                                            lit ? 'text-accent' : idleText
+                                            lit ? (overDark ? 'text-white' : 'text-accent') : idleText
                                         }`}
                                     >
                                         {lit && (
                                             <motion.span
                                                 layoutId="nav-pill"
-                                                className="absolute inset-0 rounded-full -z-0 bg-gradient-to-b from-white/85 to-white/55 backdrop-blur-md border border-white/50 shadow-[inset_0_1px_0.5px_rgba(255,255,255,0.95),inset_0_-2px_4px_-2px_rgba(0,0,0,0.07),0_6px_18px_-5px_rgba(221,4,38,0.30)]"
+                                                className={`absolute inset-0 rounded-full -z-0 ${pillCls}`}
                                                 transition={{ type: 'spring', stiffness: 380, damping: 30, mass: 0.8 }}
                                             />
                                         )}
