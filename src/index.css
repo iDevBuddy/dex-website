@@ -264,19 +264,6 @@
 .motif-node-live { animation: motifPulse 2.4s ease-in-out infinite; }
 .group:hover .motif-line { animation-duration: 0.7s; }
 
-/* Navbar dropdown icons: on hover the lucide strokes come alive with the
-   same marching-signal flow as the "What We Build" node-motif cards. */
-.nav-ico { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
-.nav-dd-item:hover .nav-ico { transform: translateY(-1px); }
-.nav-dd-item:hover .nav-ico > * {
-    stroke-dasharray: 3 3;
-    animation: motifFlow 0.85s linear infinite;
-}
-@media (prefers-reduced-motion: reduce) {
-    .nav-dd-item:hover .nav-ico { transform: none; }
-    .nav-dd-item:hover .nav-ico > * { animation: none; stroke-dasharray: none; }
-}
-
 @keyframes floatOrb {
     0%, 100% { transform: translate(0, 0) scale(1); }
     50%      { transform: translate(-3%, 4%) scale(1.06); }
