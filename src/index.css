@@ -100,56 +100,84 @@
         border: 1px solid rgba(0, 0, 0, 0.06);
     }
 
-    /* ── Apple-style liquid glass navbar surface ───────────────────────
-       A floating frosted bar: content scrolling underneath is blurred +
-       saturation-boosted (the "liquid" life), framed by a specular lens
-       rim that catches light on the top-left edge like real curved glass.
-       Stays light enough that dark text remains legible even when the bar
-       floats over the full-Night hero. */
+    /* ── Apple Liquid Glass navbar ─────────────────────────────────────
+       Real refraction: an SVG turbulence + displacement filter warps the
+       backdrop (content visibly bends through the glass at the edges), not
+       a flat frost. Adaptive: over the Night hero the bar becomes a
+       transparent dark glass with light text so the hero shows through;
+       over white sections it's a light frost with dark text. A layered
+       specular sheen + lens rim give the thick floating-puck depth. */
     .nav-glass {
         position: relative;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.60) 100%);
-        backdrop-filter: blur(20px) saturate(185%);
-        -webkit-backdrop-filter: blur(20px) saturate(185%);
-        border: 1px solid transparent;
-        box-shadow:
-            inset 0 1px 0.5px rgba(255, 255, 255, 0.85),   /* top specular sheen */
-            inset 0 -8px 16px -12px rgba(17, 17, 17, 0.08), /* faint inner thickness */
-            0 0 0 1px rgba(17, 17, 17, 0.045),              /* hairline against white */
-            0 14px 36px -14px rgba(17, 17, 17, 0.22),       /* float shadow */
-            0 4px 12px -6px rgba(17, 17, 17, 0.10);
-        transition: background 0.45s ease, box-shadow 0.45s ease;
+        isolation: isolate;
+        /* displacement (lens) → blur (frost) → saturate (liquid colour) */
+        backdrop-filter: url(#liquidGlass) blur(6px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        transition: background 0.5s cubic-bezier(0.16,1,0.3,1),
+                    box-shadow 0.5s cubic-bezier(0.16,1,0.3,1);
     }
-    .nav-glass--scrolled {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.76) 100%);
+
+    /* light — floating over white sections */
+    .nav-glass--light {
+        background: linear-gradient(180deg, rgba(255,255,255,0.58) 0%, rgba(255,255,255,0.44) 100%);
         box-shadow:
-            inset 0 1px 0.5px rgba(255, 255, 255, 0.9),
-            0 0 0 1px rgba(17, 17, 17, 0.055),
-            0 16px 40px -16px rgba(17, 17, 17, 0.26),
-            0 5px 14px -7px rgba(17, 17, 17, 0.12);
+            inset 0 1px 1px rgba(255,255,255,0.9),
+            inset 0 -10px 22px -16px rgba(17,17,17,0.16),
+            0 0 0 1px rgba(17,17,17,0.05),
+            0 18px 44px -16px rgba(17,17,17,0.24),
+            0 6px 16px -9px rgba(17,17,17,0.12);
     }
-    /* specular lens rim — bright on the top-left lip, fading around the edge */
-    .nav-glass::after {
+    .nav-glass--light.is-scrolled {
+        background: linear-gradient(180deg, rgba(255,255,255,0.74) 0%, rgba(255,255,255,0.62) 100%);
+    }
+
+    /* dark — floating over the Night hero; transparent so it shows through */
+    .nav-glass--dark {
+        background: linear-gradient(180deg, rgba(24,24,27,0.42) 0%, rgba(24,24,27,0.26) 100%);
+        box-shadow:
+            inset 0 1px 1px rgba(255,255,255,0.32),
+            inset 0 -12px 26px -16px rgba(0,0,0,0.55),
+            0 0 0 1px rgba(255,255,255,0.10),
+            0 20px 48px -16px rgba(0,0,0,0.55),
+            0 7px 18px -9px rgba(0,0,0,0.42);
+    }
+
+    /* specular sheen + top-left glint — the curved-glass highlight */
+    .nav-glass__shine {
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        z-index: 1;
+        background:
+            radial-gradient(115% 140% at 15% -25%, rgba(255,255,255,0.55), rgba(255,255,255,0) 40%),
+            linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 24%);
+        mix-blend-mode: screen;
+        opacity: 0.9;
+    }
+    /* hairline lens rim — bright top-left lip fading round the edge */
+    .nav-glass__shine::after {
         content: "";
         position: absolute;
         inset: 0;
         border-radius: inherit;
-        padding: 1px;
-        background: linear-gradient(145deg,
-            rgba(255, 255, 255, 0.95) 0%,
-            rgba(255, 255, 255, 0.25) 28%,
-            rgba(255, 255, 255, 0) 52%,
-            rgba(255, 255, 255, 0.18) 78%,
-            rgba(255, 255, 255, 0.65) 100%);
+        padding: 1.25px;
+        background: linear-gradient(140deg,
+            rgba(255,255,255,0.95) 0%,
+            rgba(255,255,255,0.2) 30%,
+            rgba(255,255,255,0) 50%,
+            rgba(255,255,255,0.15) 72%,
+            rgba(255,255,255,0.7) 100%);
         -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
         -webkit-mask-composite: xor;
                 mask-composite: exclude;
-        pointer-events: none;
     }
-    /* graceful fallback where backdrop-filter is unsupported — stay legible */
-    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-        .nav-glass { background: rgba(255, 255, 255, 0.96); }
-        .nav-glass--scrolled { background: rgba(255, 255, 255, 0.98); }
+
+    /* fallback where SVG-in-backdrop is unsupported (Safari/FF) → richer
+       frost so the bar still reads as quality glass, not flat */
+    @supports not (backdrop-filter: url(#liquidGlass)) {
+        .nav-glass--light { background: linear-gradient(180deg, rgba(255,255,255,0.74), rgba(255,255,255,0.62)); }
+        .nav-glass--dark  { background: linear-gradient(180deg, rgba(24,24,27,0.58), rgba(24,24,27,0.44)); }
     }
 
     .dex-field {
