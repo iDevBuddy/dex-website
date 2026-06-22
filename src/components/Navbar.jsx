@@ -118,15 +118,15 @@ export default function Navbar() {
                                         href={l.href}
                                         onMouseEnter={() => setHovered(l.id)}
                                         onClick={() => setActive(l.id)}
-                                        className={`relative flex items-center gap-1.5 px-3.5 py-2 rounded-full text-[0.8rem] font-medium transition-colors duration-300 ${
+                                        className={`relative flex items-center gap-1.5 px-3.5 py-2 rounded-full text-[0.8rem] font-medium transition-[color,transform] duration-300 hover:-translate-y-px active:scale-[0.97] ${
                                             lit ? 'text-accent' : idleText
                                         }`}
                                     >
                                         {lit && (
                                             <motion.span
                                                 layoutId="nav-pill"
-                                                className="absolute inset-0 rounded-full -z-0 bg-white/80 border border-accent/25 shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_4px_14px_-4px_rgba(221,4,38,0.30)]"
-                                                transition={{ type: 'spring', stiffness: 420, damping: 34, mass: 0.7 }}
+                                                className="absolute inset-0 rounded-full -z-0 bg-gradient-to-b from-white/85 to-white/55 backdrop-blur-md border border-white/50 shadow-[inset_0_1px_0.5px_rgba(255,255,255,0.95),inset_0_-2px_4px_-2px_rgba(0,0,0,0.07),0_6px_18px_-5px_rgba(221,4,38,0.30)]"
+                                                transition={{ type: 'spring', stiffness: 380, damping: 30, mass: 0.8 }}
                                             />
                                         )}
                                         <Icon size={14} strokeWidth={2.2} className="relative z-10" />
