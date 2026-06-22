@@ -1,0 +1,52 @@
+name: Content Radar
+
+# Cheap frequent scan of free feeds. Publishes ONLY if a major breaking story
+# appears between scheduled posts (Gemma-gated, so most runs cost ~nothing).
+on:
+  schedule:
+    - cron: '0 */6 * * *' # every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dex-content
+  cancel-in-progress: false
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      RESEARCH_MODEL: gpt-5.5
+      DRAFT_MODEL: gpt-5-mini
+      CRITIC_MODEL: gpt-5.5
+      GEMMA_MODEL: google/gemma-4-31b-it:free
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Scan for breaking stories (publish only if major)
+        run: node scripts/agent/run-auto.mjs --radar
+
+      - name: Build check
+        run: npm run build
+
+      - name: Commit if a breaking post was created
+        run: |
+          git config user.name "DEX Content Agent"
+          git config user.email "actions@github.com"
+          git add content/blog public/blog public/rss.xml public/sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No breaking story — nothing to commit."
+          else
+            git commit -m "content: breaking post $(date -u +%F)"
+            git pull --rebase --autostash origin main
+            git push
+          fi
