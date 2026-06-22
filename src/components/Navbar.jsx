@@ -150,10 +150,10 @@ export default function Navbar() {
                                                                 key={it.href}
                                                                 href={it.href}
                                                                 onClick={() => setOpenMenu(null)}
-                                                                className="group/item flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-[#f5f5f7] transition-colors duration-200"
+                                                                className="group/item nav-dd-item flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-[#f5f5f7] transition-colors duration-200"
                                                             >
-                                                                <span className="flex h-9 w-9 items-center justify-center rounded-[11px] bg-[#f2f2f4] text-ghost transition-colors duration-300 group-hover/item:bg-accent group-hover/item:text-white">
-                                                                    <it.icon size={17} strokeWidth={2} />
+                                                                <span className="flex h-9 w-9 items-center justify-center rounded-[11px] bg-[#f2f2f4] text-ghost transition duration-300 group-hover/item:bg-accent group-hover/item:text-white group-hover/item:-translate-y-0.5">
+                                                                    <it.icon size={17} strokeWidth={2} className="nav-ico" />
                                                                 </span>
                                                                 <span className="flex flex-col">
                                                                     <span className="text-[0.84rem] font-semibold text-ghost leading-tight">{it.label}</span>
@@ -215,10 +215,10 @@ export default function Navbar() {
                                             key={it.href}
                                             href={it.href}
                                             onClick={() => setMobileOpen(false)}
-                                            className="group flex items-center gap-3 py-2.5 px-3 rounded-xl text-sm font-medium text-ghost-dim hover:text-accent hover:bg-accent/[0.05] transition-colors"
+                                            className="group nav-dd-item flex items-center gap-3 py-2.5 px-3 rounded-xl text-sm font-medium text-ghost-dim hover:text-accent hover:bg-accent/[0.05] transition-colors"
                                         >
                                             <span className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-[#f2f2f4] text-ghost group-hover:bg-accent group-hover:text-white transition-colors">
-                                                <it.icon size={16} strokeWidth={2} />
+                                                <it.icon size={16} strokeWidth={2} className="nav-ico" />
                                             </span>
                                             {it.label}
                                         </a>
