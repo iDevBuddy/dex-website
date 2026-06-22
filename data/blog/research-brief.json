@@ -46,30 +46,21 @@
       "publishedDate": ""
     },
     {
-      "title": "Logistics Viewpoints | ARC Advisory Group",
-      "organization": "arcweb.com",
-      "url": "https://www.arcweb.com/aggregator/sources/2?page=4",
+      "title": "Supply Chain Trends for 2025: The Impact of AI",
+      "organization": "mem.grad.ncsu.edu",
+      "url": "https://mem.grad.ncsu.edu/2026/03/17/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence",
       "type": "Web research",
-      "supports": "### Nearshoring Is Creating New Infrastructure Bottlenecks\n\nNearshoring can reduce exposure to long global supply chains, but it also shifts pressure onto regional infrastructure, labor markets, energ",
-      "authorityScore": 77,
+      "supports": "#### The Role of Artificial Intelligence in Logistics\n\nArtificial intelligence in logistics is rapidly reshaping how companies manage supply chains. As the industry faces growing complexity and higher",
+      "authorityScore": 57,
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
+      "title": "5 AI Applications Transforming Logistics in 2025 - Nuvizz",
+      "organization": "nuvizz.com",
+      "url": "https://nuvizz.com/blog/5-ai-applications-transforming-logistics-in-2025",
       "type": "Web research",
-      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
-      "authorityScore": 69,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
-      "type": "Web research",
-      "supports": "### Amazon’s $10 Billion Move: North Carolina to Host Next AI Powerhouse\n\nArtificial Intelligence | By Logistics Viewpoints Editorial Team • 06/09/2025\n\nAmazon announced it will invest $10 billion to ",
-      "authorityScore": 65,
+      "supports": "Explore 5 ways AI is reshaping logistics with smart routing, forecasting, automation, and next-gen decision-making for competitive edge.",
+      "authorityScore": 50,
       "publishedDate": ""
     },
     {
@@ -96,19 +87,34 @@
         "prompt"
       ],
       "authorityScore": 83
+    },
+    {
+      "title": "GitHub Docs: GitHub Actions",
+      "organization": "GitHub",
+      "url": "https://docs.github.com/en/actions",
+      "type": "Official documentation",
+      "supports": "Supports workflow automation, CI/CD, scheduled jobs, and repository publishing automation examples.",
+      "tags": [
+        "github",
+        "automation",
+        "workflow",
+        "ci",
+        "deployment"
+      ],
+      "authorityScore": 83
     }
   ],
   "sourcesToCite": [
     "https://logisticsviewpoints.com/2026/04/30/planning-ai-needs-memory-not-just-automation",
-    "https://www.arcweb.com/aggregator/sources/2?page=4",
-    "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
-    "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
+    "https://mem.grad.ncsu.edu/2026/03/17/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence",
+    "https://nuvizz.com/blog/5-ai-applications-transforming-logistics-in-2025",
     "https://www.traxtech.com/ai-in-supply-chain/ai-memory-breakthrough-supply-chain-applications",
-    "https://platform.openai.com/docs/"
+    "https://platform.openai.com/docs/",
+    "https://docs.github.com/en/actions"
   ],
   "sourceStatus": "Ready",
   "sourceQualityScore": 80,
-  "sourceNotes": "5 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
+  "sourceNotes": "4 live web sources found via Tavily. Selected 5 authoritative sources with average authority score 80.",
   "duplicateStatus": "unique",
   "duplicateScore": 11,
   "duplicateMatch": {
@@ -122,7 +128,7 @@
   "trendAnalysis": {
     "trendScore": 68,
     "marketSentiment": "neutral",
-    "marketSentimentScore": 59,
+    "marketSentimentScore": 65,
     "matchedTrendTerms": [
       "automation"
     ],
@@ -147,19 +153,19 @@
       },
       {
         "source": "Google News",
+        "title": "Architecting the AI Supply Chain: A 10-Part Downloadable Executive Guide - ARC Advisory Group"
+      },
+      {
+        "source": "Google News",
+        "title": "2026 Global Semiconductor Industry Outlook - Deloitte"
+      },
+      {
+        "source": "Google News",
         "title": "Why Context Is Becoming the Critical Requirement for Supply Chain AI - Logistics Viewpoints"
       },
       {
         "source": "Google News",
         "title": "IDC Point of View: First Look at the War in the Middle East and Its Impact on IT Spending in the Region and Globally - International Data Corporation"
-      },
-      {
-        "source": "Google News",
-        "title": "McKinsey Technology Trends Outlook 2025 - McKinsey & Company"
-      },
-      {
-        "source": "Google News",
-        "title": "The Infinite AI Compute Loop: HBM Big Three + TSMC × NVIDIA × OpenAI Shaping the Next-Generation Industry Chain - semivision"
       }
     ],
     "realtimeSources": [
@@ -197,30 +203,21 @@
       "publishedDate": ""
     },
     {
-      "title": "Logistics Viewpoints | ARC Advisory Group",
-      "organization": "arcweb.com",
-      "url": "https://www.arcweb.com/aggregator/sources/2?page=4",
+      "title": "Supply Chain Trends for 2025: The Impact of AI",
+      "organization": "mem.grad.ncsu.edu",
+      "url": "https://mem.grad.ncsu.edu/2026/03/17/supply-chain-trends-for-2025-the-impact-of-artificial-intelligence",
       "type": "Web research",
-      "supports": "### Nearshoring Is Creating New Infrastructure Bottlenecks\n\nNearshoring can reduce exposure to long global supply chains, but it also shifts pressure onto regional infrastructure, labor markets, energ",
-      "authorityScore": 77,
+      "supports": "#### The Role of Artificial Intelligence in Logistics\n\nArtificial intelligence in logistics is rapidly reshaping how companies manage supply chains. As the industry faces growing complexity and higher",
+      "authorityScore": 57,
       "publishedDate": ""
     },
     {
-      "title": "AI in Logistics: What Actually Worked in 2025 and What Will Scale in 2026 - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/12/22/ai-in-logistics-what-actually-worked-in-2025-and-what-will-scale-in-2026",
+      "title": "5 AI Applications Transforming Logistics in 2025 - Nuvizz",
+      "organization": "nuvizz.com",
+      "url": "https://nuvizz.com/blog/5-ai-applications-transforming-logistics-in-2025",
       "type": "Web research",
-      "supports": "### Final Takeaway\n\nAI’s real impact in 2025 came from improving decision quality, reducing noise, and enabling planners to act faster with better information. In 2026, AI will transition from optiona",
-      "authorityScore": 69,
-      "publishedDate": ""
-    },
-    {
-      "title": "AI Integration, Autonomous Robotics, and Strategic Visions: The Future of Supply Chains - News for the Week of June 8th - Logistics Viewpoints",
-      "organization": "logisticsviewpoints.com",
-      "url": "https://logisticsviewpoints.com/2025/06/13/ai-integration-autonomous-robotics-and-strategic-visions-the-future-of-supply-chains-news-for-the-week-of-june-8th",
-      "type": "Web research",
-      "supports": "### Amazon’s $10 Billion Move: North Carolina to Host Next AI Powerhouse\n\nArtificial Intelligence | By Logistics Viewpoints Editorial Team • 06/09/2025\n\nAmazon announced it will invest $10 billion to ",
-      "authorityScore": 65,
+      "supports": "Explore 5 ways AI is reshaping logistics with smart routing, forecasting, automation, and next-gen decision-making for competitive edge.",
+      "authorityScore": 50,
       "publishedDate": ""
     },
     {
