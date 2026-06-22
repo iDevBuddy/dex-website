@@ -11,6 +11,7 @@ import Demo from './components/Demo'
 import Process from './components/Process'
 import Tools from './components/Tools'
 import FAQ from './components/FAQ'
+import BlogTeaser from './components/BlogTeaser'
 import Footer from './components/Footer'
 import VoiceChatbot from './components/VoiceChatbot'
 import BlogIndex from './components/blog/BlogIndex'
@@ -34,6 +35,7 @@ function HomePage() {
             <Process />
             <Tools />
             <FAQ />
+            <BlogTeaser />
         </main>
     )
 }

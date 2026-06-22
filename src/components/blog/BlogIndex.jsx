@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
-import { ArrowRight, Clock } from 'lucide-react'
+import { ArrowUpRight, Clock } from 'lucide-react'
 import { blogPosts, formatDate } from '../../lib/blog'
 import { setSeo } from '../../lib/seo'
+import ArticleCard from './ArticleCard'
 
 export default function BlogIndex() {
     const featured = blogPosts[0]
@@ -17,69 +18,67 @@ export default function BlogIndex() {
     }, [])
 
     return (
-        <main id="main-content" className="pt-28 pb-24">
-            <section className="max-w-7xl mx-auto px-6">
-                <div className="max-w-3xl mb-14">
-                    <p className="font-mono text-xs uppercase tracking-[0.22em] text-accent mb-4">AI Authority Blog</p>
-                    <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6">
-                        Practical AI automation playbooks for modern businesses.
+        <main id="main-content" className="bg-dark pt-32 pb-24">
+            <div className="max-w-[1320px] mx-auto px-6">
+                {/* editorial header */}
+                <div className="max-w-3xl mb-16">
+                    <span className="eyebrow mb-5">AI Authority Blog</span>
+                    <h1 className="font-display text-4xl md:text-[3.6rem] font-extrabold text-grad-dark tracking-tightest leading-[1.02] mb-6">
+                        Practical AI automation playbooks.
                     </h1>
-                    <p className="text-lg text-gray-400 leading-8">
-                        Expert guides, workflows, and implementation notes for AI agents, automation systems, and business growth.
+                    <p className="text-lg text-ghost-dim leading-8 max-w-2xl">
+                        Expert guides, workflows, and implementation notes for AI agents, automation systems, and scaling service businesses with AI.
                     </p>
                 </div>
 
+                {/* featured — latest post */}
                 {featured && (
-                    <article className="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-center border-y border-border py-10 mb-12">
-                        <a href={`/blog/${featured.slug}`} className="block overflow-hidden rounded-lg border border-border bg-dark-card">
+                    <a
+                        href={`/blog/${featured.slug}`}
+                        className="group grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-20 pb-16 border-b border-border"
+                    >
+                        <div className="relative overflow-hidden rounded-[22px] border border-border bg-dark-deeper aspect-[16/11]">
                             <img
                                 src={featured.image}
                                 alt={featured.imageAlt}
-                                className="aspect-[16/9] w-full object-cover"
                                 loading="eager"
                                 width="1280"
-                                height="720"
+                                height="880"
+                                className="h-full w-full object-cover transition-transform duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
                             />
-                        </a>
-                        <div>
-                            <p className="font-mono text-xs text-accent uppercase tracking-[0.2em] mb-4">{featured.category}</p>
-                            <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4">
-                                <a href={`/blog/${featured.slug}`} className="hover:text-accent transition-colors">{featured.title}</a>
-                            </h2>
-                            <p className="text-gray-400 leading-7 mb-6">{featured.description}</p>
-                            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-7">
-                                <span>{featured.author}</span>
-                                <span>{formatDate(featured.publishedAt)}</span>
-                                <span className="inline-flex items-center gap-1.5"><Clock size={15} /> {featured.readingTime}</span>
-                            </div>
-                            <a href={`/blog/${featured.slug}`} className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-accent transition-colors">
-                                Read article <ArrowRight size={16} />
-                            </a>
                         </div>
-                    </article>
+                        <div>
+                            <div className="flex items-center gap-2.5 mb-5">
+                                <span className="w-2 h-2 bg-accent" />
+                                <span className="font-mono text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-ghost-dim">{featured.category} · Featured</span>
+                            </div>
+                            <h2 className="font-display text-3xl lg:text-[2.6rem] font-extrabold text-ghost tracking-tight leading-[1.05] mb-5 transition-colors group-hover:text-accent">
+                                {featured.title}
+                            </h2>
+                            <p className="text-ghost-dim leading-7 mb-7 max-w-xl">{featured.description}</p>
+                            <div className="flex flex-wrap items-center gap-3 font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ghost-faint mb-7">
+                                <span>{featured.author}</span>
+                                <span className="w-1 h-1 rounded-full bg-ghost-faint/60" />
+                                <span>{formatDate(featured.publishedAt)}</span>
+                                <span className="inline-flex items-center gap-1.5"><Clock size={13} /> {featured.readingTime}</span>
+                            </div>
+                            <span className="inline-flex items-center gap-2 text-[0.86rem] font-semibold text-ghost transition-colors group-hover:text-accent">
+                                Read article
+                                <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                            </span>
+                        </div>
+                    </a>
                 )}
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {posts.map((post) => (
-                        <article key={post.slug} className="border border-border bg-dark-card rounded-lg overflow-hidden hover:border-border-hover transition-colors">
-                            <a href={`/blog/${post.slug}`}>
-                                <img src={post.image} alt={post.imageAlt} className="aspect-[16/9] w-full object-cover" loading="lazy" width="800" height="450" />
-                            </a>
-                            <div className="p-6">
-                                <p className="font-mono text-[0.7rem] text-accent uppercase tracking-[0.18em] mb-3">{post.category}</p>
-                                <h2 className="text-xl font-bold text-white mb-3">
-                                    <a href={`/blog/${post.slug}`} className="hover:text-accent transition-colors">{post.title}</a>
-                                </h2>
-                                <p className="text-sm text-gray-400 leading-6 mb-5">{post.description}</p>
-                                <div className="flex items-center justify-between text-xs text-gray-500">
-                                    <span>{formatDate(post.publishedAt)}</span>
-                                    <span>{post.readingTime}</span>
-                                </div>
-                            </div>
-                        </article>
-                    ))}
-                </div>
-            </section>
+                {/* the rest */}
+                {posts.length > 0 && (
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+                        {posts.map((post) => (
+                            <ArticleCard key={post.slug} post={post} />
+                        ))}
+                    </div>
+                )}
+            </div>
         </main>
     )
 }
