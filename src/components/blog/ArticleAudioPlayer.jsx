@@ -76,21 +76,21 @@ export default function ArticleAudioPlayer({ title, text, audioSrc }) {
     }
 
     return (
-        <section className="rounded-lg border border-accent/30 bg-gradient-to-br from-dark-card to-dark-deeper p-4 shadow-lg shadow-black/20" aria-label={`Listen to ${title}`}>
+        <section className="rounded-2xl border border-border bg-dark-deeper p-4" aria-label={`Listen to ${title}`}>
             {audioSrc && <audio ref={audioRef} src={audioSrc} onTimeUpdate={(event) => setProgress((event.currentTarget.currentTime / event.currentTarget.duration) * 100 || 0)} onEnded={() => setStatus('idle')} preload="none" />}
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
                 <div>
-                    <p className="font-semibold text-white">Listen to this article</p>
-                    <p className="text-sm text-gray-500">{estimatedListenTime} min listen | {audioSrc ? 'Humanized studio voice available' : 'Browser voice fallback'}</p>
+                    <p className="font-semibold text-ghost">Listen to this article</p>
+                    <p className="text-sm text-ghost-faint">{estimatedListenTime} min listen | {audioSrc ? 'Humanized studio voice available' : 'Browser voice fallback'}</p>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                     <button onClick={status === 'playing' ? pause : play} className="p-2.5 rounded-md bg-accent text-white hover:bg-accent-hover transition-colors" aria-label={status === 'playing' ? 'Pause audio' : 'Play audio'}>
                         {status === 'playing' ? <Pause size={18} /> : <Play size={18} />}
                     </button>
-                    <button onClick={replay} className="p-2.5 rounded-md border border-border text-gray-300 hover:text-white hover:border-border-hover transition-colors" aria-label="Replay audio">
+                    <button onClick={replay} className="p-2.5 rounded-md border border-border text-ghost-dim hover:text-ghost hover:border-border-hover transition-colors" aria-label="Replay audio">
                         <RotateCcw size={18} />
                     </button>
-                    <button onClick={stop} className="p-2.5 rounded-md border border-border text-gray-300 hover:text-white hover:border-border-hover transition-colors" aria-label="Stop audio">
+                    <button onClick={stop} className="p-2.5 rounded-md border border-border text-ghost-dim hover:text-ghost hover:border-border-hover transition-colors" aria-label="Stop audio">
                         <Square size={18} />
                     </button>
                     <label className="sr-only" htmlFor="audio-rate">Audio speed</label>
@@ -107,7 +107,7 @@ export default function ArticleAudioPlayer({ title, text, audioSrc }) {
                     </select>
                 </div>
             </div>
-            <div className="mt-4 h-1.5 rounded-full bg-white/10 overflow-hidden" aria-hidden="true">
+            <div className="mt-4 h-1.5 rounded-full bg-border overflow-hidden" aria-hidden="true">
                 <div className="h-full bg-accent transition-all" style={{ width: `${Math.min(100, Math.max(0, progress))}%` }} />
             </div>
         </section>
