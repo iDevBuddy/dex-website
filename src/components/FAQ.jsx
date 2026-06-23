@@ -1,6 +1,7 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Plus } from 'lucide-react'
+import { faqPageSchema } from '../lib/siteSchema'
 
 const faqs = [
     { q: 'What exactly are AI agents?', a: 'AI agents are autonomous software systems that perceive context, make decisions, and take real actions to complete business tasks — booking calls, qualifying leads, processing data — with little or no human input.' },
@@ -17,6 +18,18 @@ const faqs = [
 export default function FAQ() {
     const [open, setOpen] = useState(-1)
     const openChatbot = () => window.dispatchEvent(new CustomEvent('open-dex-chatbot'))
+
+    // FAQPage structured data — heavily used by Google AI Overviews & AI answers
+    useEffect(() => {
+        if (document.querySelector('script[data-faq-schema]')) return
+        const obj = faqPageSchema(faqs.map((f) => ({ question: f.q, answer: f.a })))
+        if (!obj) return
+        const s = document.createElement('script')
+        s.type = 'application/ld+json'
+        s.dataset.faqSchema = 'true'
+        s.textContent = JSON.stringify(obj)
+        document.head.appendChild(s)
+    }, [])
 
     return (
         <section id="faq" className="bg-dark py-20 lg:py-28">

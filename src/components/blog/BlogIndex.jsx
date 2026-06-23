@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { ArrowUpRight, Clock } from 'lucide-react'
 import { blogPosts, formatDate } from '../../lib/blog'
 import { setSeo } from '../../lib/seo'
+import { breadcrumbSchema } from '../../lib/siteSchema'
 import ArticleCard from './ArticleCard'
 
 export default function BlogIndex() {
@@ -14,6 +15,23 @@ export default function BlogIndex() {
             description: 'Practical guides on AI agents, business automation, Slack automation, workflow systems, and scaling service businesses with AI.',
             path: '/blog',
             type: 'blog',
+            schema: [
+                breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog' }]),
+                {
+                    '@context': 'https://schema.org',
+                    '@type': 'Blog',
+                    '@id': 'https://dexbyakif.com/blog#blog',
+                    name: 'DEX AI Automation Blog',
+                    description: 'Practical, source-grounded guides on AI agents, business automation, and using Claude/OpenAI for business.',
+                    publisher: { '@id': 'https://dexbyakif.com/#organization' },
+                    blogPost: blogPosts.slice(0, 10).map((p) => ({
+                        '@type': 'BlogPosting',
+                        headline: p.title,
+                        url: `https://dexbyakif.com/blog/${p.slug}`,
+                        datePublished: p.publishedAt,
+                    })),
+                },
+            ],
         })
     }, [])
 

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { ArrowLeft, ArrowUpRight, CalendarDays, CheckCircle, Clock, Download, FileText, Presentation, RefreshCcw } from 'lucide-react'
 import { buildBlogPostingSchema, buildFaqSchema, formatDate, getPostBySlug, getRelatedPosts } from '../../lib/blog'
 import { setSeo } from '../../lib/seo'
+import { breadcrumbSchema } from '../../lib/siteSchema'
 import ArticleAudioPlayer from './ArticleAudioPlayer'
 import ActiveTableOfContents from './ActiveTableOfContents'
 import MarkdownRenderer from './MarkdownRenderer'
@@ -136,7 +137,15 @@ export default function BlogPost({ slug }) {
             path: `/blog/${post.slug}`,
             image: post.image,
             type: 'article',
-            schema: [buildBlogPostingSchema(post), buildFaqSchema(post)],
+            schema: [
+                buildBlogPostingSchema(post),
+                buildFaqSchema(post),
+                breadcrumbSchema([
+                    { name: 'Home', url: '/' },
+                    { name: 'Blog', url: '/blog' },
+                    { name: post.title, url: `/blog/${post.slug}` },
+                ]),
+            ],
         })
     }, [post])
 
