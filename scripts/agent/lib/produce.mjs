@@ -19,7 +19,7 @@ const log = (...a) => console.log(...a)
 
 export async function produce(pick) {
     let spend = 0
-    const a = await analyze(pick, { reasoningEffort: 'high' })
+    const a = await analyze(pick, { reasoningEffort: 'medium' })
     if (!a.ok) { await notify(`⚠️ Research failed for "${pick.title}". No post.`); log(`analyst failed: ${a.error}`); return false }
     spend += estimateCost(a.model, a.usage || {}).usd
 

@@ -109,20 +109,21 @@ export async function chat(opts) {
  * plus the URLs it cited. Falls back to a lighter search model on failure.
  * @returns {{ ok:boolean, text?:string, citations?:string[], usage?:object, model?:string, error?:string }}
  */
-export async function research({ query, system, model = env('RESEARCH_MODEL', 'gpt-5.5'), reasoningEffort = 'high', timeoutMs = 180000 }) {
+export async function research({ query, system, model = env('RESEARCH_MODEL', 'gpt-5.5'), reasoningEffort = 'medium', timeoutMs = 240000 }) {
     const key = env('OPENAI_API_KEY')
     if (!key) return { ok: false, error: 'OPENAI_API_KEY not set' }
     const headers = { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` }
 
-    const run = async (mdl, useReasoning) => {
+    const run = async (mdl, useReasoning, tmo) => {
         const body = {
             model: mdl,
             tools: [{ type: 'web_search' }],
             input: system ? [{ role: 'system', content: system }, { role: 'user', content: query }] : query,
         }
         if (useReasoning) body.reasoning = { effort: reasoningEffort }
+        // retries: 0 — the ladder below IS the fallback, so timeouts can never stack/compound
         const res = await fetchResilient(`${OPENAI}/responses`, { method: 'POST', headers, body: JSON.stringify(body) },
-            { timeoutMs, retries: 2, label: `research:${mdl}` })
+            { timeoutMs: tmo, retries: 0, label: `research:${mdl}` })
         if (!res.ok) throw new Error(`research:${mdl} HTTP ${res.status}: ${(await res.text()).slice(0, 220)}`)
         const data = await res.json()
         let text = data.output_text || ''
@@ -139,11 +140,11 @@ export async function research({ query, system, model = env('RESEARCH_MODEL', 'g
         return { ok: true, text: text.trim(), citations: [...new Set(citations)], usage: data.usage, model: mdl }
     }
 
-    // primary (reasoning) → web_search-tool variant → proven gpt-4o-search-preview
+    // gpt-5.5 (medium reasoning, one generous timeout) → fast proven fallback.
+    // Two steps only, no per-step retries → total time is bounded (~5 min max).
     const ladder = [
-        () => run(model, true),
-        () => run(model, false),
-        () => run('gpt-4o-search-preview', false),
+        () => run(model, true, timeoutMs),
+        () => run('gpt-4o-search-preview', false, 60000),
     ]
     let error
     for (const step of ladder) {

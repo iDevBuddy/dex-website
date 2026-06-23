@@ -11,7 +11,7 @@ const STREAM_FOCUS = {
     'reddit-pain': 'A real business pain-point. Identify the underlying problem business owners face, then research the concrete AI/automation solution: tools, workflow, and realistic outcome.',
 }
 
-export async function analyze(idea, { reasoningEffort = 'high' } = {}) {
+export async function analyze(idea, { reasoningEffort = 'medium' } = {}) {
     if (!idea || !idea.title) return { ok: false, error: 'no idea provided' }
     const focus = STREAM_FOCUS[idea.stream] || STREAM_FOCUS['ai-tools']
 

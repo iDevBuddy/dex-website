@@ -17,6 +17,7 @@ export async function writeArticle(data, { model = process.env.DRAFT_MODEL || 'g
 
     const res = await chat({
         provider: 'openai', model,
+        timeoutMs: 120000, retries: 1,
         fallback: { provider: 'openai', model: 'gpt-4.1' },
         json: true, temperature: 0.6, maxTokens: 4000,
         system: 'You are a senior editorial writer. Return only valid JSON.',
