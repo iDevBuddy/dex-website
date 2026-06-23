@@ -30,6 +30,10 @@ export async function createTask(name, body = '', { status, slug } = {}) {
         const desc = slug ? `${body}\n\n[slug:${slug}]` : body
         const payload = { name: String(name).slice(0, 250), markdown_description: desc.slice(0, 6000) }
         if (status) payload.status = status
+        // assign to the token owner (id is the number in `pk_<id>_...`) so the
+        // ClickUp mobile app pushes a notification on every new task
+        const uid = (env('CLICKUP_TOKEN').match(/^pk_(\d+)_/) || [])[1]
+        if (uid) payload.assignees = [Number(uid)]
         const res = await api(`/list/${env('CLICKUP_LIST_ID')}/task`, { method: 'POST', body: JSON.stringify(payload) })
         if (!res.ok) { console.log('[clickup create]', res.status, (await res.text()).slice(0, 140)); return null }
         return (await res.json()).id || null
