@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { injectSiteSchema } from './lib/siteSchema'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
@@ -59,6 +61,7 @@ function Router() {
 }
 
 export default function App() {
+    useEffect(() => { injectSiteSchema() }, [])
     return (
         <div className="min-h-screen bg-dark font-sans">
             <a href="#main-content" className="skip-link">Skip to main content</a>
