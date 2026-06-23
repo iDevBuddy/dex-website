@@ -29,6 +29,7 @@ jobs:
       DRAFT_MODEL: gpt-5-mini
       CRITIC_MODEL: gpt-5.5
       GEMMA_MODEL: google/gemma-4-31b-it:free
+      NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
       CLICKUP_TOKEN: ${{ secrets.CLICKUP_TOKEN }}
       CLICKUP_LIST_ID: ${{ secrets.CLICKUP_LIST_ID }}
       WHATSAPP_TOKEN: ${{ secrets.WHATSAPP_TOKEN }}
