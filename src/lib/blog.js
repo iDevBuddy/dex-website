@@ -4,7 +4,7 @@ const postModules = import.meta.glob('../../content/blog/*.md', {
     eager: true,
 })
 
-const siteUrl = import.meta.env.VITE_SITE_URL || 'https://dexbyakif.com'
+const siteUrl = import.meta.env.VITE_SITE_URL || 'https://dexakif.com'
 const defaultAuthor = import.meta.env.VITE_AUTHOR_NAME || 'Akif Saeed'
 
 function parseValue(value) {

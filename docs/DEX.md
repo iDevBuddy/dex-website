@@ -5,7 +5,7 @@
 > how it works, and how to think about extending it. Nothing here lives only in a chat — it
 > all lives in this repo.
 
-- **Live site:** https://dexbyakif.com
+- **Live site:** https://dexakif.com
 - **Repo:** `iDevBuddy/dex-website` (PUBLIC — never commit secrets)
 - **Owner:** Akif Saeed
 - **Workflow:** push to `main` → auto-deploys live. Always `git pull --rebase` before pushing

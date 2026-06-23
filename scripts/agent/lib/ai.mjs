@@ -57,7 +57,7 @@ async function rawChat({ provider, model, system, user, temperature = 0.5, maxTo
     const key = isOR ? env('OPENROUTER_API_KEY') : env('OPENAI_API_KEY')
     if (!key) throw new Error(`${provider}: API key not set`)
     const headers = { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` }
-    if (isOR) { headers['HTTP-Referer'] = 'https://dexbyakif.com'; headers['X-Title'] = 'DEX Content Agent' }
+    if (isOR) { headers['HTTP-Referer'] = 'https://dexakif.com'; headers['X-Title'] = 'DEX Content Agent' }
 
     const body = { model, messages: [] }
     // gpt-5.x and o-series reasoning models only accept the default temperature

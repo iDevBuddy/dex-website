@@ -1,5 +1,5 @@
 export const config = {
-    siteUrl: process.env.SITE_URL || 'https://dexbyakif.com',
+    siteUrl: process.env.SITE_URL || 'https://dexakif.com',
     brandName: process.env.BRAND_NAME || 'DEX by Akif Saeed',
     authorName: process.env.AUTHOR_NAME || 'Akif Saeed',
     authorBio: 'AI automation engineer building practical agents, workflow systems, and business automation infrastructure for service companies.',

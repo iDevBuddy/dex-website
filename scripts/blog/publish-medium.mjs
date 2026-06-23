@@ -45,7 +45,7 @@ export async function publishToMedium(options = getPipelineOptions()) {
     if (!article?.frontmatter?.slug) throw new Error('No published article found for Medium cross-post.')
 
     const slug = article.frontmatter.slug
-    const siteUrl = process.env.SITE_URL || 'https://dexbyakif.com'
+    const siteUrl = process.env.SITE_URL || 'https://dexakif.com'
     const canonicalUrl = `${siteUrl}/blog/${slug}`
 
     const publishedPath = path.join(contentDir, `${slug}.md`)
