@@ -22,6 +22,7 @@ export function buildMarkdown(article, data, { image = '/blog/images/ai-authorit
         `description: "${esc(article.description)}"`,
         `publishedAt: "${today}"`,
         `category: "${esc(article.category || 'AI Automation')}"`,
+        `stream: "${esc(data?.idea?.stream || '')}"`,
         `author: "Akif Saeed"`,
         `image: "${image}"`,
         `imageAlt: "${esc(article.title)}"`,

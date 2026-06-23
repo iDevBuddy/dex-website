@@ -29,6 +29,10 @@ jobs:
       DRAFT_MODEL: gpt-5-mini
       CRITIC_MODEL: gpt-5.5
       GEMMA_MODEL: google/gemma-4-31b-it:free
+      WHATSAPP_TOKEN: ${{ secrets.WHATSAPP_TOKEN }}
+      WHATSAPP_PHONE_ID: ${{ secrets.WHATSAPP_PHONE_ID }}
+      WHATSAPP_TO: ${{ secrets.WHATSAPP_TO }}
+      WHATSAPP_TEMPLATE: ${{ secrets.WHATSAPP_TEMPLATE }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -38,6 +42,8 @@ jobs:
       - run: npm ci
 
       - name: Generate + publish one post
+        env:
+          TOPIC: ${{ github.event.inputs.topic }}
         run: node scripts/agent/run-auto.mjs --publish
 
       - name: Build check (validates the new post renders)
