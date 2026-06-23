@@ -36,6 +36,10 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install edge-tts
 
       - name: Reconcile approvals / requests / rejects
         run: node scripts/agent/run-approvals.mjs

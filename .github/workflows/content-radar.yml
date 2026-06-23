@@ -37,6 +37,10 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install edge-tts
 
       - name: Scan for breaking stories (publish only if major)
         run: node scripts/agent/run-auto.mjs --radar
