@@ -11,7 +11,7 @@ const FALLBACK_IMAGE = '/blog/images/ai-authority-blog-engine.png'
 
 function coverPrompt(article) {
     const subject = article?.title || 'AI automation for business'
-    return `Editorial 3D render for a premium technology blog cover. An abstract visual metaphor for "${subject}". Translucent frosted glass and brushed aluminium forms arranged as a clean minimal sculpture, soft studio lighting, off-white seamless background, gentle depth of field, one small candy-apple-red accent. Premium, minimalist, no text, no words, no letters, no logos.`
+    return `Premium editorial 3D render for a technology blog cover. Abstract GEOMETRIC, technological metaphor for "${subject}": interlocking crystalline glass panels and brushed-aluminium architectural forms with flowing data lines and connected nodes, clean white studio cyclorama, soft cinematic lighting, gentle depth of field, one subtle candy-apple-red accent, octane render, ultra detailed, minimalist. Strictly geometric and technical — no hearts, no faces, no animals, no organic shapes, no text, no words, no letters, no logos.`
 }
 
 export async function generateCover(article, { slug, outDir = 'public/blog/images', timeoutMs = 90000 } = {}) {
@@ -19,7 +19,8 @@ export async function generateCover(article, { slug, outDir = 'public/blog/image
     // deterministic seed from slug → same cover on re-runs
     let seed = 7
     for (const ch of slug) seed = (seed * 31 + ch.charCodeAt(0)) >>> 0
-    const url = `https://image.pollinations.ai/prompt/${encodeURIComponent(coverPrompt(article))}?width=1536&height=1024&nologo=true&model=flux&seed=${seed % 1000000}`
+    // enhance=true runs an LLM prompt-upgrade → markedly better, cleaner renders
+    const url = `https://image.pollinations.ai/prompt/${encodeURIComponent(coverPrompt(article))}?width=1536&height=1024&nologo=true&enhance=true&model=flux&seed=${seed % 1000000}`
     try {
         const res = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) })
         if (!res.ok) throw new Error(`pollinations HTTP ${res.status}`)
