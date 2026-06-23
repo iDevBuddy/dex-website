@@ -1,39 +1,46 @@
 /**
- * Channel-agnostic notifier. Sends a run summary / alert to WhatsApp (Meta
- * Cloud API) when configured; otherwise it is a no-op that just logs. Never
- * throws — a notification failure must never affect the content run.
+ * Channel-agnostic notifier. Routes a run summary / alert to whatever is
+ * configured — ClickUp (a task, easiest) and/or WhatsApp (Meta Cloud API).
+ * If neither is configured it just logs. Never throws — a notification
+ * failure must never affect the content run.
  *
- * Configure via env / GitHub Secrets:
- *   WHATSAPP_TOKEN     - Meta WhatsApp Cloud API access token
- *   WHATSAPP_PHONE_ID  - the sender phone-number ID
- *   WHATSAPP_TO        - recipient number in international format (e.g. 9234...)
- *   WHATSAPP_TEMPLATE  - (optional) approved template name for proactive sends
- *
- * Note: free-form text only delivers inside the 24h customer-service window
- * (i.e. after you message the bot). For always-on proactive alerts, set an
- * approved WHATSAPP_TEMPLATE.
+ * ClickUp (recommended, 2-min setup):
+ *   CLICKUP_TOKEN, CLICKUP_LIST_ID
+ * WhatsApp (optional):
+ *   WHATSAPP_TOKEN, WHATSAPP_PHONE_ID, WHATSAPP_TO, WHATSAPP_TEMPLATE
  */
+import { createTask, clickupConfigured } from './clickup.mjs'
+
 const env = (k) => (process.env[k] && String(process.env[k]).trim()) || ''
 
-export async function notify(text) {
-    const token = env('WHATSAPP_TOKEN')
-    const phoneId = env('WHATSAPP_PHONE_ID')
-    const to = env('WHATSAPP_TO')
-    if (!token || !phoneId || !to) { console.log('[notify]', text.replace(/\n/g, ' | ')); return false }
-
+async function sendWhatsApp(text) {
+    const token = env('WHATSAPP_TOKEN'); const phoneId = env('WHATSAPP_PHONE_ID'); const to = env('WHATSAPP_TO')
+    if (!token || !phoneId || !to) return false
     const template = env('WHATSAPP_TEMPLATE')
     const body = template
         ? { messaging_product: 'whatsapp', to, type: 'template', template: { name: template, language: { code: 'en' }, components: [{ type: 'body', parameters: [{ type: 'text', text: text.slice(0, 1000) }] }] } }
         : { messaging_product: 'whatsapp', to, type: 'text', text: { body: text.slice(0, 4000) } }
-
     try {
         const res = await fetch(`https://graph.facebook.com/v21.0/${phoneId}/messages`, {
-            method: 'POST',
-            headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-            body: JSON.stringify(body),
-            signal: AbortSignal.timeout(15000),
+            method: 'POST', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify(body), signal: AbortSignal.timeout(15000),
         })
-        if (!res.ok) { console.log('[notify failed]', res.status, (await res.text()).slice(0, 160)); return false }
+        if (!res.ok) { console.log('[whatsapp failed]', res.status, (await res.text()).slice(0, 160)); return false }
         return true
-    } catch (e) { console.log('[notify error]', e?.message || e); return false }
+    } catch (e) { console.log('[whatsapp error]', e?.message || e); return false }
+}
+
+/**
+ * Send an alert. `opts.status` sets the ClickUp task status (e.g. 'Published',
+ * 'Needs Review'). First line of `text` becomes the task title.
+ */
+export async function notify(text, opts = {}) {
+    let sent = false
+    if (clickupConfigured()) {
+        const [title, ...rest] = String(text).split('\n')
+        sent = (await createTask(title, rest.join('\n'), { status: opts.status })) || sent
+    }
+    sent = (await sendWhatsApp(text)) || sent
+    if (!sent) console.log('[notify]', String(text).replace(/\n/g, ' | '))
+    return sent
 }
