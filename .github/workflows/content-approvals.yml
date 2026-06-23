@@ -1,10 +1,10 @@
-name: Content Radar
+name: Content Approvals
 
-# Cheap frequent scan of free feeds. Publishes ONLY if a major breaking story
-# appears between scheduled posts (Gemma-gated, so most runs cost ~nothing).
+# Polls ClickUp: publishes approved drafts, runs on-demand "WRITE:" requests,
+# discards rejected drafts. Cheap unless there is something to act on.
 on:
   schedule:
-    - cron: '0 */6 * * *' # every 6 hours
+    - cron: '0 */2 * * *' # every 2 hours
   workflow_dispatch:
 
 permissions:
@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  radar:
+  approvals:
     runs-on: ubuntu-latest
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -29,7 +29,6 @@ jobs:
       WHATSAPP_TOKEN: ${{ secrets.WHATSAPP_TOKEN }}
       WHATSAPP_PHONE_ID: ${{ secrets.WHATSAPP_PHONE_ID }}
       WHATSAPP_TO: ${{ secrets.WHATSAPP_TO }}
-      WHATSAPP_TEMPLATE: ${{ secrets.WHATSAPP_TEMPLATE }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -38,21 +37,21 @@ jobs:
           cache: npm
       - run: npm ci
 
-      - name: Scan for breaking stories (publish only if major)
-        run: node scripts/agent/run-auto.mjs --radar
+      - name: Reconcile approvals / requests / rejects
+        run: node scripts/agent/run-approvals.mjs
 
       - name: Build check
         run: npm run build
 
-      - name: Commit if a breaking post was created
+      - name: Commit changes
         run: |
           git config user.name "DEX Content Agent"
           git config user.email "actions@github.com"
           git add content/blog public/blog data/blog/pending public/rss.xml public/sitemap.xml
           if git diff --cached --quiet; then
-            echo "No breaking story — nothing to commit."
+            echo "Nothing to reconcile."
           else
-            git commit -m "content: breaking post $(date -u +%F)"
+            git commit -m "content: reconcile approvals $(date -u +%F-%H%M)"
             git pull --rebase --autostash origin main
             git push
           fi
