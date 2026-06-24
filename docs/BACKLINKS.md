@@ -1,6 +1,6 @@
 # DEX — Backlink & Link-Building Playbook
 
-> Off-site SEO/authority plan for **dexakif.com**. Backlinks are the biggest remaining ranking
+> Off-site SEO/authority plan for **www.dexakif.com**. Backlinks are the biggest remaining ranking
 > factor for a new site. This is a do-once-then-execute-over-time checklist — none of it needs a live
 > session; tick items off as you go.
 
@@ -51,7 +51,7 @@ Real participation, not spam. Drop links only where genuinely useful.
       link your relevant blog post when it actually helps. (This also feeds the agent's Reddit
       pain-point stream.)
 - [ ] **IndieHackers** — share the build story (the autonomous blog agent is a great story).
-- [ ] **Dev.to / Hashnode** — republish select blog posts **with a canonical link back** to dexakif.com.
+- [ ] **Dev.to / Hashnode** — republish select blog posts **with a canonical link back** to www.dexakif.com.
 - [ ] **Medium** — the agent can cross-post (publish-medium.mjs exists) with canonical back-links.
 - [ ] **LinkedIn / X posts** — share each new blog post; earns shares + occasional links.
 
@@ -87,7 +87,7 @@ The blog **earns links over time** — this is why the agent runs. Strengthen it
 > Hi {name}, I'm Akif from DEX (we build production AI agents for businesses). I read {specific post}
 > and had a concrete angle your readers would find useful: {1-line idea grounded in real experience}.
 > Happy to write an original, no-fluff piece (with data), or contribute a quote. Either way — great
-> work on {their site}. — Akif, dexakif.com
+> work on {their site}. — Akif, www.dexakif.com
 
 ## What success looks like
 - Month 1: ~10-20 foundational/directory links (brand + naked anchors).

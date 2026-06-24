@@ -4,7 +4,7 @@
  * ChatGPT, Perplexity, Claude). Injected once on every page; persists across
  * client-side route changes (marked data-site-schema so setSeo doesn't strip it).
  */
-const SITE = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_SITE_URL) || 'https://dexakif.com'
+const SITE = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_SITE_URL) || 'https://www.dexakif.com'
 
 const organization = {
     '@context': 'https://schema.org',

@@ -20,14 +20,14 @@ export default function BlogIndex() {
                 {
                     '@context': 'https://schema.org',
                     '@type': 'Blog',
-                    '@id': 'https://dexakif.com/blog#blog',
+                    '@id': 'https://www.dexakif.com/blog#blog',
                     name: 'DEX AI Automation Blog',
                     description: 'Practical, source-grounded guides on AI agents, business automation, and using Claude/OpenAI for business.',
-                    publisher: { '@id': 'https://dexakif.com/#organization' },
+                    publisher: { '@id': 'https://www.dexakif.com/#organization' },
                     blogPost: blogPosts.slice(0, 10).map((p) => ({
                         '@type': 'BlogPosting',
                         headline: p.title,
-                        url: `https://dexakif.com/blog/${p.slug}`,
+                        url: `https://www.dexakif.com/blog/${p.slug}`,
                         datePublished: p.publishedAt,
                     })),
                 },

@@ -99,7 +99,7 @@ export async function syncBlogDraft(article, overrides = {}) {
 
 export async function syncPublishedPost(article, quality = {}) {
     const frontmatter = article.frontmatter || article
-    const url = `${process.env.SITE_URL || 'https://dexakif.com'}/blog/${frontmatter.slug}`
+    const url = `${process.env.SITE_URL || 'https://www.dexakif.com'}/blog/${frontmatter.slug}`
     return createNotionPage(process.env.NOTION_PUBLISHED_POSTS_DB_ID, {
         Title: titleProperty(frontmatter.title),
         URL: urlProperty(url),

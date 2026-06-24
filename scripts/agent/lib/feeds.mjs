@@ -3,7 +3,7 @@
  * Every fetch is isolated: a dead or slow feed returns [] and is skipped,
  * never breaking the run.
  */
-const UA = 'Mozilla/5.0 (compatible; DEX-ContentAgent/1.0; +https://dexakif.com)'
+const UA = 'Mozilla/5.0 (compatible; DEX-ContentAgent/1.0; +https://www.dexakif.com)'
 
 async function getText(url, timeoutMs = 15000) {
     try {
