@@ -1,5 +1,5 @@
-const defaultTitle = 'DEX by Akif Saeed - AI Agent Services for Smarter Business Automation'
-const defaultDescription = 'End-to-end AI agent development services. We build intelligent voice agents, chatbots, and workflow automation that run your business 24/7.'
+const defaultTitle = 'AI Automation Services & AI Agent Development | DEX by Akif Saeed'
+const defaultDescription = 'DEX provides AI automation services and AI agent development: voice agents, chatbots, and workflow automation that run your business 24/7.'
 const siteUrl = import.meta.env.VITE_SITE_URL || 'https://www.dexakif.com'
 
 function upsertMeta(selector, createTag, attributes) {
