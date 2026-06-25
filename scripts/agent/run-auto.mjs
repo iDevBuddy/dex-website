@@ -8,7 +8,7 @@
  * auto-publishes. Never throws; always exits 0.
  */
 import { scout } from './scout.mjs'
-import { chat } from './lib/ai.mjs'
+import { chat, NVIDIA_SMALL, GEMMA } from './lib/ai.mjs'
 import { notify } from './lib/notify.mjs'
 import { produce } from './lib/produce.mjs'
 import { publishedPosts, isDuplicate, recentStreams } from './lib/registry.mjs'
@@ -19,8 +19,8 @@ const topic = (() => { const i = process.argv.indexOf('--topic'); return (i >= 0
 
 async function isBreaking(idea) {
     const r = await chat({
-        provider: 'gemma', model: process.env.GEMMA_MODEL || 'google/gemma-4-31b-it:free',
-        fallback: { provider: 'openai', model: 'gpt-5-nano' }, json: true, maxTokens: 150,
+        provider: 'gemma', model: GEMMA,
+        fallback: { provider: 'nvidia', model: NVIDIA_SMALL }, json: true, maxTokens: 600,
         system: 'You judge whether a story is a MAJOR, time-sensitive launch worth an immediate post. Be strict — most are not.',
         user: `Story: "${idea.title}". Major breaking AI/tool/business-automation launch worth publishing right now? JSON {"breaking":true|false}`,
     })

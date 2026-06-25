@@ -22,8 +22,8 @@ async function main() {
     if (!pick) { console.log('  no idea to research'); return }
 
     h(`2 · ANALYST — deep research on: "${pick.title}"`)
-    console.log('  (gpt-5.5 agentic web search — may take 1–3 min)...')
-    const a = await analyze(pick, { reasoningEffort: 'high' })
+    console.log('  (gpt-oss-120b grounded research from source — ~20-60s)...')
+    const a = await analyze(pick, { reasoningEffort: 'medium' })
     if (!a.ok) { console.log(`  research failed: ${a.error}`); return }
 
     h('3 · CITED RESEARCH BRIEF')

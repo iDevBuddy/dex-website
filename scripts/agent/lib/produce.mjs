@@ -35,8 +35,8 @@ export async function produce(pick) {
 
     const slug = slugify(article.title)
     const [cover, voice] = await Promise.all([generateCover(article, { slug }), generateVoice(article, { slug })])
-    spend += 0.07
-    const costStr = `$${(spend + 0.67).toFixed(2)}`
+    // Free stack: gpt-oss (NVIDIA) text + Gemma fallback + FLUX/Pollinations cover + edge-tts voice.
+    const costStr = spend > 0.005 ? `$${spend.toFixed(2)}` : '$0 (free stack)'
 
     if (clickupConfigured()) {
         savePending(slug, { article, brief: a, image: cover.image, audio: voice.audio })

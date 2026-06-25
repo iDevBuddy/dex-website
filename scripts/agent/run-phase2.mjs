@@ -22,13 +22,13 @@ async function main() {
     console.log(`Loaded brief: "${data.idea?.title}"`)
     let spend = 0
 
-    h('1 · WRITER (gpt-5-mini)')
+    h('1 · WRITER (gpt-oss-120b)')
     const w = await writeArticle(data)
     if (!w.ok) { console.log(`  writer failed: ${w.error}`); return }
     spend += estimateCost(w.model, w.usage || {}).usd
     console.log(`  draft: "${w.article.title}" · ${wordCount(w.article)} words`)
 
-    h('2 · CRITIC (gpt-5.5, adversarial)')
+    h('2 · CRITIC (gpt-oss-120b, adversarial)')
     const c = await critique(w.article, data)
     spend += estimateCost(c.model || '', c.usage || {}).usd
     if (c.improved) {
@@ -37,7 +37,7 @@ async function main() {
     } else { console.log(`  ${c.note}`) }
     const finalArticle = c.article
 
-    h('3 · FACT-CHECK (gpt-5-mini vs brief)')
+    h('3 · FACT-CHECK (gpt-oss-20b vs brief)')
     const f = await factCheck(finalArticle, data)
     spend += estimateCost(f.model || '', f.usage || {}).usd
     console.log(`  grounded: ${f.grounded} · verdict: ${f.verdict} · supported claims: ${f.supportedCount ?? '—'}`)

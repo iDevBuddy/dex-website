@@ -1,56 +1,78 @@
 /**
- * Analyst — takes one chosen idea and runs agentic deep research (gpt-5.5 +
- * web_search) into a grounded, cited research brief. This is the "best data"
- * engine. Returns a structured brief; on any failure returns { ok:false }.
+ * Analyst — turns one chosen idea into a grounded, cited research brief.
+ *
+ * Strategy (free, no paid web-search API): pull real content from the idea's
+ * own source (the feed summary + the fetched source page), then have the
+ * reasoning model (NVIDIA gpt-oss-120b, free) distill it into a structured,
+ * source-grounded brief. The model is told to use ONLY the supplied material
+ * and to mark verified=false if it is too thin. For on-demand topics with no
+ * source URL, it falls back to a knowledge brief (flagged unverified).
+ *
+ * Fail-soft everywhere: on any failure returns { ok:false }.
  */
-import { research, chat, safeJson } from './lib/ai.mjs'
+import { chat, VERIFY_MODEL, NVIDIA_BIG } from './lib/ai.mjs'
+import { fetchPageText } from './lib/feeds.mjs'
 
 const STREAM_FOCUS = {
-    'ai-tools': 'A new AI tool for businesses. Verify it is real and current: who makes it, what it does, pricing/availability, who it is for, and the concrete business workflow it improves. Find at least 2 independent sources.',
-    'claude-mcp': 'A new Claude capability, skill, or MCP server. Verify from Anthropic or the official repo. Explain what specific task it unlocks and how a business would use Claude for it, step by step.',
-    'reddit-pain': 'A real business pain-point. Identify the underlying problem business owners face, then research the concrete AI/automation solution: tools, workflow, and realistic outcome.',
+    'ai-tools': 'A new AI tool for businesses. Capture who makes it, what it does, pricing/availability, who it is for, and the concrete business workflow it improves.',
+    'claude-mcp': 'A new Claude capability, skill, or MCP server. Explain what specific task it unlocks and how a business would use Claude for it, step by step.',
+    'reddit-pain': 'A real business pain-point. Identify the underlying problem business owners face, then the concrete AI/automation solution: tools, workflow, and realistic outcome.',
 }
 
 export async function analyze(idea, { reasoningEffort = 'medium' } = {}) {
     if (!idea || !idea.title) return { ok: false, error: 'no idea provided' }
     const focus = STREAM_FOCUS[idea.stream] || STREAM_FOCUS['ai-tools']
 
-    const query = [
+    // Gather real grounding material from the idea's own source.
+    const parts = []
+    if (idea.summary) parts.push(`Feed summary:\n${idea.summary}`)
+    if (idea.url) {
+        const page = await fetchPageText(idea.url)
+        if (page) parts.push(`Source page content (${idea.url}):\n${page}`)
+    }
+    const sourceText = parts.join('\n\n').trim()
+    const grounded = sourceText.length > 200
+
+    const system = grounded
+        ? 'You are a meticulous senior research analyst for a premium AI-automation agency. You NEVER invent facts. Every claim must be supported by the source material provided. You think adversarially about what is hype vs. genuinely useful for business owners.'
+        : 'You are a senior research analyst for a premium AI-automation agency. The user requested this specific topic but no source material was retrievable. Write a careful brief from established, well-known facts only; mark verified=false and keep claims general where you are not certain. Never fabricate specific numbers, prices, or dates.'
+
+    const user = [
         `Topic: ${idea.title}`,
-        idea.url ? `Lead source: ${idea.url}` : '',
         idea.angle ? `Editorial angle: ${idea.angle}` : '',
         '',
         `Task: ${focus}`,
         '',
-        'Do thorough web research. Use only verifiable, recent, reputable sources (prefer official vendor pages, established tech press, and primary repos). If the claim cannot be verified, say so clearly. Capture specific facts, numbers, quotes, dates, and source URLs. Note any contrarian or "what others miss" angle a sharp analyst would surface.',
+        grounded
+            ? 'Use ONLY the SOURCE MATERIAL below. If a detail is not in it, do not invent it. If the material cannot support a factual article, set verified=false. Capture specific facts, numbers, quotes, dates. Note any contrarian "what others miss" angle.'
+            : 'No source material is available. Produce a general, honest brief; set verified=false. Do not fabricate specifics.',
+        grounded ? `\nSOURCE MATERIAL:\n${sourceText}` : '',
+        '',
+        'Return ONLY JSON:',
+        '{"verified":true|false,"headline_finding":"","key_facts":["..."],"business_angle":"","contrarian_take":"","risks_or_caveats":["..."],"sources":["url",...]}',
     ].filter(Boolean).join('\n')
 
-    const r = await research({
-        query,
-        reasoningEffort,
-        system: 'You are a meticulous senior research analyst for a premium AI-automation agency. You never invent facts; every claim is grounded in a real source you found. You think adversarially about what is hype vs. genuinely useful for business owners.',
+    // Truth-critical step → real OpenAI gpt-4.1 (GitHub, free); falls back to
+    // the NVIDIA reasoning model if GitHub Models is rate-limited/down.
+    const res = await chat({
+        provider: 'github', model: VERIFY_MODEL,
+        fallback: { provider: 'nvidia', model: NVIDIA_BIG, reasoningEffort },
+        json: true, temperature: 0.3, maxTokens: 2800, timeoutMs: 120000, retries: 1,
+        system, user,
     })
-    if (!r.ok) return { ok: false, error: r.error }
+    if (!res.ok || !res.json) return { ok: false, error: res.error || 'analysis returned no brief' }
 
-    // structure the prose brief into JSON (cheap mid model), fail-soft to raw text
-    const structured = await chat({
-        provider: 'openai', model: 'gpt-5-mini',
-        fallback: { provider: 'openai', model: 'gpt-4.1-mini' },
-        json: true, temperature: 0.2, maxTokens: 1400,
-        system: 'You convert a research brief into clean JSON. Do not add facts not present in the brief.',
-        user: `From this research brief, return ONLY JSON:\n{"verified":true|false,"headline_finding":"","key_facts":["..."],"business_angle":"","contrarian_take":"","risks_or_caveats":["..."],"sources":["url",...]}\n\nBRIEF:\n${r.text}\n\nKnown source URLs: ${(r.citations || []).join(', ') || 'none'}`,
-    })
-
-    const brief = (structured.ok && structured.json) ? structured.json : { headline_finding: r.text.slice(0, 400), key_facts: [], sources: r.citations || [] }
-    if (!Array.isArray(brief.sources) || !brief.sources.length) brief.sources = r.citations || []
+    const brief = res.json
+    if (!Array.isArray(brief.sources) || !brief.sources.length) brief.sources = idea.url ? [idea.url] : []
+    if (!grounded) brief.verified = false
 
     return {
         ok: true,
         idea,
         brief,
-        rawBrief: r.text,
-        citations: r.citations || [],
-        model: r.model,
-        usage: r.usage,
+        rawBrief: typeof brief.headline_finding === 'string' ? brief.headline_finding : JSON.stringify(brief),
+        citations: brief.sources,
+        model: res.model,
+        usage: res.usage,
     }
 }

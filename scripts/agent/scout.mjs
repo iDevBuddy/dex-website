@@ -5,7 +5,7 @@
  * shortlist fails we fall back to a deterministic heuristic ranking.
  */
 import { fetchRss, fetchReddit, SOURCES } from './lib/feeds.mjs'
-import { chat } from './lib/ai.mjs'
+import { chat, NVIDIA_SMALL, GEMMA } from './lib/ai.mjs'
 
 export async function gatherCandidates({ perFeed = 8, redditLimit = 8 } = {}) {
     const jobs = []
@@ -42,8 +42,8 @@ export async function scout({ shortlist = 6 } = {}) {
     const compact = items.slice(0, 60).map((it, i) => `${i}. [${it.stream}] ${it.title}${it.score ? ` (score ${it.score}/${it.comments}c)` : ''}`).join('\n')
     const res = await chat({
         provider: 'gemma',
-        model: process.env.GEMMA_MODEL || 'google/gemma-4-31b-it:free',
-        fallback: { provider: 'openai', model: 'gpt-5-nano' },
+        model: GEMMA,
+        fallback: { provider: 'nvidia', model: NVIDIA_SMALL },
         json: true,
         temperature: 0.3,
         maxTokens: 900,

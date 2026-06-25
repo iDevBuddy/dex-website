@@ -29,6 +29,37 @@ const pickLink = (block) => {
     return pick(block, ['link'])
 }
 
+/**
+ * Fetch a source page and return readable plain text (scripts/styles stripped).
+ * Used by the analyst for grounded, free research — the article is built only
+ * from real source content, no paid web-search API needed. Fail-soft: null.
+ */
+export async function fetchPageText(url, { timeoutMs = 20000, max = 7000 } = {}) {
+    if (!url || !/^https?:\/\//i.test(url)) return null
+    // 1) Jina Reader — free, keyless; returns clean readable text and handles
+    //    JS-rendered pages far better than a regex strip. Fail-soft to (2).
+    try {
+        const res = await fetch(`https://r.jina.ai/${url}`, {
+            headers: { 'User-Agent': UA, Accept: 'text/plain', 'X-Return-Format': 'text' },
+            signal: AbortSignal.timeout(timeoutMs),
+        })
+        if (res.ok) {
+            const t = (await res.text() || '').replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim()
+            if (t.length > 200) return t.slice(0, max)
+        }
+    } catch { /* fall through to direct fetch */ }
+    // 2) Direct fetch + strip — no extra dependency, always available.
+    const html = await getText(url, timeoutMs)
+    if (!html) return null
+    let body = html
+        .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+        .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+        .replace(/<noscript[\s\S]*?<\/noscript>/gi, ' ')
+        .replace(/<head[\s\S]*?<\/head>/gi, ' ')
+    const text = stripTags(body)
+    return text ? text.slice(0, max) : null
+}
+
 /** Minimal, defensive RSS/Atom parser. Returns up to `limit` recent items. */
 export function parseFeed(xml, { source = '', limit = 12 } = {}) {
     if (!xml || typeof xml !== 'string') return []

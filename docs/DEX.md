@@ -81,27 +81,52 @@ a transient blip can never mark a CI run red.
 1. **Scout** (`scout.mjs`) — pulls free RSS/Reddit feeds (`lib/feeds.mjs`), then **Gemma 4 (free)**
    shortlists the best ideas across 4 streams: latest AI tools, Claude skills/MCPs, Reddit business
    pain-points, on-demand topics. Falls back to a heuristic if the LLM is rate-limited.
-2. **Analyst** (`analyst.mjs`) — **gpt-5.5 + web_search** (Responses API, reasoning `medium`) does
-   agentic deep research → a grounded, **cited** brief. This is the "best data" engine.
-3. **Writer** (`writer.mjs`) — **gpt-5-mini** drafts a GEO-structured article from the brief.
-4. **Critic** (`critic.mjs`) — **gpt-5.5** (adversarial, reasoning `medium`) rewrites it stronger and
-   cuts any claim not grounded in the brief (hallucination guard).
-5. **Fact-check** (`factcheck.mjs`) — **gpt-5-mini** verifies every claim against the brief.
+2. **Analyst** (`analyst.mjs`) — fetches the idea's **own source page** (`fetchPageText`) +
+   feed summary, then **gpt-4.1** (real OpenAI via GitHub Models, free) distills it into a
+   grounded, **source-cited** brief and judges authenticity. Told to use ONLY the fetched
+   material; marks `verified=false` if grounding is thin. Falls back to **gpt-oss-120b** (NVIDIA)
+   if GitHub Models is rate-limited. This is the free "best data + verify" engine — no paid API.
+3. **Writer** (`writer.mjs`) — **gpt-oss-120b** (NVIDIA, free) drafts a GEO-structured article.
+4. **Critic** (`critic.mjs`) — **gpt-oss-120b** (adversarial, reasoning `medium`) rewrites it stronger
+   and cuts any claim not grounded in the brief (hallucination guard).
+5. **Fact-check** (`factcheck.mjs`) — **gpt-4.1** (GitHub Models, free) verifies every claim against
+   the brief; falls back to gpt-oss-20b. The truth-critical gate.
 6. **Art director** (`artdirector.mjs`) — cover via **NVIDIA FLUX.1-dev** (free dev tier) →
    **Pollinations** (free, no key) fallback; voice via **edge-tts** (free Microsoft neural,
    `python -m edge_tts`).
 7. **Publisher** (`publisher.mjs`) — validates + writes the post to `content/blog/<slug>.md`.
 
-### Smart model routing (smallest capable model per task)
-Big model (gpt-5.5) only for **research + critic**; gpt-5-mini for draft/fact-check; Gemma 4 free for
-scout. gpt-5.x/o-series reject custom `temperature` — `lib/ai.mjs` omits it for those. Research/critic
-use single bounded timeouts + `retries:0` (the ladder/fallback is the only retry) so time never
-compounds. A full post finishes in ~4-7 min.
+### Smart model routing (right model per task — 3 free providers)
+- **Truth/verify (analyst + fact-check)** → **gpt-4.1** (real OpenAI via **GitHub Models**, free),
+  fallback gpt-oss. The strongest model on the truth-critical steps.
+- **Writing (writer + critic)** → **gpt-oss-120b** (NVIDIA, free), fallback Gemma.
+- **Scout + light judging** → **Gemma 4** (OpenRouter, free), fallback gpt-oss-20b.
+
+`lib/ai.mjs` gates params by model: `temperature` for all except gpt-5.x/o-series; `reasoning_effort`
+only for reasoning models (gpt-5.x, o-series, gpt-oss) — gpt-4.1/4o reject it. Every call has a single
+bounded timeout; the cross-provider fallback is the only retry path. A full post finishes in **~70-90s**.
+
+> **Three free providers = the system never stalls.** If GitHub Models is rate-limited, analyst/
+> fact-check fall to NVIDIA gpt-oss; if NVIDIA is down, writing falls to Gemma. No single point of
+> failure, no paid API. **Note:** GPT-5 is NOT free on GitHub Models (`custom` tier = paid); gpt-4.1
+> is the strongest free model there. No model on GitHub Models can browse the web — "authenticity"
+> means grounding + verifying against the **real fetched source**, not live search.
+
+> **Why gpt-oss / NVIDIA:** OpenAI's free data-sharing tokens (and any paid quota) hit
+> `insufficient_quota` 429 on June 2026 — text AND web_search both died. OpenAI's open-weight
+> reasoning models (`gpt-oss-120b` / `gpt-oss-20b`) are hosted **free on NVIDIA NIM**
+> (`integrate.api.nvidia.com`, OpenAI-compatible). One `NVIDIA_API_KEY` covers BOTH the gpt-oss
+> text models AND FLUX.1-dev image gen. No paid OpenAI dependency anywhere now.
+
+### Research without a paid search API
+gpt-oss has no built-in web_search, so the analyst grounds on **real fetched source content**: the
+scout always picks an idea with a live URL (HN/Reddit/RSS), and `fetchPageText` pulls that page's
+readable text. The model writes only from that material → factual, free, reliable. On-demand topics
+with no URL get a knowledge brief flagged `verified=false`, which routes to ClickUp REVIEW.
 
 ### Cost = **$0**
-Text on OpenAI's free **data-sharing tokens** (covers TEXT models only) / Gemma 4 free; image on
-NVIDIA FLUX + Pollinations (free); voice on edge-tts (free). Image/voice are NOT covered by the free
-text tokens — that is why we use the free image/voice providers instead of paid gpt-image/TTS.
+All text on **NVIDIA gpt-oss** (free) + **Gemma 4** (free); image on NVIDIA FLUX + Pollinations
+(free); voice on edge-tts (free). No paid API in the pipeline.
 
 ### Orchestration (GitHub Actions)
 - `content-publisher.yml` — schedule **Mon/Wed/Fri 09:00 UTC** (+ manual dispatch with a `topic`
@@ -154,10 +179,13 @@ automatically — no manual SEO per post.**
 ---
 
 ## 8. Secrets & configuration
-- **Local dev:** `.env.local` (gitignored). Keys: `OPENAI_API_KEY`, `OPENROUTER_API_KEY` (Gemma 4),
-  `NVIDIA_API_KEY`, `CLICKUP_TOKEN`, `CLICKUP_LIST_ID`, plus model routing vars.
+- **Local dev:** `.env.local` (gitignored). Keys: `OPENROUTER_API_KEY` (Gemma 4),
+  `NVIDIA_API_KEY` (gpt-oss text **and** FLUX image — one key, both), `GH_MODELS_TOKEN`
+  (GitHub PAT w/ `models:read` — gpt-4.1 verify brain), `CLICKUP_TOKEN`, `CLICKUP_LIST_ID`,
+  plus model routing vars. `OPENAI_API_KEY` is **no longer used** (kept optional, can be blank).
 - **CI:** the same as **GitHub repo Secrets** (Settings → Secrets and variables → Actions). Workflows
-  read them via `${{ secrets.* }}`.
+  read them via `${{ secrets.* }}`. ⚠️ The GitHub-models secret **must be named `GH_MODELS_TOKEN`** —
+  GitHub forbids secret names beginning with `GITHUB_`.
 - ⚠️ Several keys were pasted in chat during setup — **rotate them** and update the secrets. The repo
   is public; never commit a secret.
 
@@ -168,8 +196,9 @@ automatically — no manual SEO per post.**
 2. **Push-to-main is live.** Verify (build, screenshot) before pushing; `pull --rebase` first.
 3. **Fail-soft everywhere.** No agent line may hard-crash a run. Every external call: timeout + retry +
    fallback + guarded parse. Top level returns/exits 0.
-4. **Smallest capable model.** Don't use gpt-5.5 where gpt-5-mini or Gemma does the job.
-5. **$0 by default.** Prefer free providers (Gemma, NVIDIA FLUX, Pollinations, edge-tts, free RSS).
+4. **Smallest capable model.** gpt-oss-120b for heavy reasoning (analysis/critique), gpt-oss-20b or
+   Gemma for light tasks (scout/fact-check). Don't reach for the big model where a small one suffices.
+5. **$0 by default.** Prefer free providers (NVIDIA gpt-oss, Gemma, FLUX, Pollinations, edge-tts, RSS).
    Only spend where quality genuinely needs it, and say so.
 6. **Brand discipline.** Stay on the locked palette/fonts; editorial, not generic. Reuse the signature
    utilities. No AI-slop.
