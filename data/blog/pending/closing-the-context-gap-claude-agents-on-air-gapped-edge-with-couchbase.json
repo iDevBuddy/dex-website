@@ -1,0 +1,109 @@
+{
+  "article": {
+    "title": "Closing the Context Gap: Claude Agents on Air‑Gapped Edge with Couchbase",
+    "description": "How Couchbase’s AI Data Plane gives Claude agents persistent memory and on‑device vector search for regulated, disconnected deployments.",
+    "category": "AI Automation",
+    "tags": [
+      "Couchbase",
+      "AI agents",
+      "edge computing",
+      "context management",
+      "Claude"
+    ],
+    "directAnswer": "Couchbase’s AI Data Plane supplies Claude agents with a unified, persistent memory layer that works identically on cloud, on‑prem, or air‑gapped edge devices, delivering offline context retrieval and local vector search.",
+    "keyTakeaways": [
+      "The AI Data Plane bundles persistent agent memory, real‑time context retrieval, and an enterprise‑managed MCP server.",
+      "Couchbase Lite runs SQL, full‑text and vector search locally, syncing only when connectivity returns.",
+      "Built‑in guardrails—token caps, TTL limits, and compute metering—protect performance and governance.",
+      "Early pilots include hotel‑lobby kiosks, retail floor assistants, and field‑service bots that cannot rely on the cloud.",
+      "Competitors now add context layers, but only Couchbase guarantees identical operation from cloud to mobile."
+    ],
+    "body": "## The “context gap” in air‑gapped AI deployments\n\nWhen an AI agent cannot reach the cloud, it loses conversational memory and any ability to query structured data. The result is a stateless request that either repeats the prompt or returns stale answers.\n\n## Couchbase AI Data Plane (June 30 2026)\n\nCouchbase introduced an **AI Data Plane** that combines three tightly integrated components:\n\n1. **Unified persistence layer** – stores conversational context, JSON records, and vector embeddings in a single database.\n2. **Enterprise‑managed MCP server** – a Model‑Context‑Protocol gateway that lets Claude (or any supported model) fetch memory and run queries.\n3. **Agent catalog** – a discoverable set of tooling for building, deploying, and monitoring agents.\n\nThe platform runs **identically** on public cloud, on‑premises data centers, and fully disconnected edge devices, meaning the same API calls and data model are used everywhere.\n\n## Offline operation on edge devices\n\nCouchbase Lite provides a local engine with four capabilities:\n\n| Capability | What it does |\n|------------|--------------|\n| SQL | Relational queries on JSON tables |\n| Full‑text search | Keyword and fuzzy matching without external services |\n| Vector search | Approximate nearest‑neighbor lookup for embeddings |\n| Proprietary sync | Bidirectional replication to a central cluster when connectivity returns |\n\nWhen a Claude agent needs context, it sends an MCP request to the local server. The server retrieves the latest session memory, runs any required vector or full‑text query, and returns the result in milliseconds—entirely offline.\n\n## Guardrails for governance and cost\n\nCouchbase embeds three controls that must be tuned per workload:\n\n* **Token caps per session** – limits the number of tokens an agent can consume.\n* **TTL (time‑to‑live) limits** – automatically expires stored memories after a configurable period.\n* **Compute metering** – caps CPU usage per agent session.\n\nMis‑configuration can throttle responsiveness on low‑power hardware, so careful profiling is required.\n\n## Early use case: Hotel‑lobby kiosks\n\nA pilot with a major hotel chain deployed multiple Claude agents on on‑prem kiosks. Each kiosk stored:\n\n* Guest interaction history (session memory)\n* Room inventory as JSON\n* Embeddings of room‑type descriptions for vector search\n\nWhen a guest asked for a “quiet room with a city view,” the local agent performed a vector lookup, matched inventory, and completed the reservation without any cloud call. After the network restored, the kiosk synced the session log to the central Couchbase cluster for analytics and compliance.\n\n## Deploying the AI Data Plane\n\n1. **Install** the AI Data Plane (full server edition for racks, Couchbase Lite for edge).\n2. **Configure** the MCP server with your Claude endpoint and set token/TTL guardrails.\n3. **Load data** – import JSON tables, create vector indexes, and seed initial prompts.\n4. **Deploy agents** – point Claude clients to the local MCP endpoint.\n5. **Enable sync** – define replication policies so offline changes flow back when connectivity returns.\n\n## Business impact\n\n* **Regulated environments** – finance, health‑care, and defense can keep conversational data on‑device, satisfying data‑sovereignty rules.\n* **Instant context** – retail floor assistants and factory bots retrieve relevant information without WAN latency.\n* **Predictable spend** – token caps and metering make AI costs transparent even for 24/7 agents.\n* **Unified tooling** – the same SDKs and dashboards are used across cloud, data‑center, and edge, reducing training overhead.\n\n## Contrarian take: Reach, not speed, is the moat\n\nOracle, Redis, and Pinecone added context layers in 2025, but they remain cloud‑centric. Couchbase’s differentiator is **reach**: the identical binary and API run on a laptop, a Kubernetes cluster, or a hardened industrial controller. As IDC analyst Devin Pratt notes, *“Its real edge is reach, running the same platform from cloud to edge to mobile, which is how enterprises actually operate.”* The risk is that reach alone does not guarantee petabyte‑scale performance; large enterprises will still benchmark against established vendors.\n\n## Risks and caveats\n\n* **Scaling still unproven** – early adopters report smooth operation on a few hundred nodes; enterprise‑wide rollouts are pending.\n* **Guardrail tuning required** – overly strict caps can truncate prompts and degrade answer quality.\n* **Specialized workloads** – relationship‑heavy CRM scenarios may benefit from purpose‑built graph databases rather than a general‑purpose store.\n\n## Bottom line\n\nCouchbase’s AI Data Plane delivers a **memory‑first, edge‑ready platform** that closes the context gap for Claude agents where the cloud cannot follow. For regulated, latency‑sensitive, or disconnected use cases, it offers concrete low‑latency context retrieval with built‑in governance. The ultimate test will be scaling against entrenched players, but its reach‑first promise is already reshaping enterprise AI deployment strategies.\n\n---\n\n**Next steps**: Run a proof‑of‑concept on a single edge node, configure token limits to match your budget, and compare latency against a cloud‑only fallback. If results meet expectations, expand to a pilot fleet and let the built‑in sync keep central analytics up to date.",
+    "faqs": [
+      {
+        "question": "Can the AI Data Plane run on low‑power devices?",
+        "answer": "Yes. Couchbase Lite runs on devices as small as a Raspberry Pi, providing SQL, full‑text, and vector search without a network connection."
+      },
+      {
+        "question": "What happens to agent memory when the device reconnects?",
+        "answer": "Couchbase’s proprietary sync replicates session memory and new embeddings to the central cluster, preserving continuity and enabling centralized analytics."
+      },
+      {
+        "question": "Do I still need a cloud‑hosted Claude model?",
+        "answer": "Claude remains a hosted model, but the MCP server fetches context locally; only the inference call leaves the device, reducing data exposure."
+      }
+    ],
+    "businessProblem": "AI agents lose conversational memory and data access when deployed in air‑gapped or edge environments, forcing stateless prompts or stale answers.",
+    "directBusinessUse": "Deploy Claude‑powered agents on retail kiosks or field‑service tablets that retrieve product or asset data locally, syncing only summary data when the network returns."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "AI agents need context everywhere they run, even where the cloud can't follow",
+      "url": "https://venturebeat.com/data/ai-agents-need-context-everywhere-they-run-even-where-the-cloud-cant-follow",
+      "stream": "claude-mcp",
+      "source": "VentureBeat",
+      "angle": "Solving the 'Context Gap': Deploying AI Agents in Air-Gapped or Local Environments",
+      "why": "Addresses a critical security pain point for business owners who want agentic power but cannot upload sensitive proprietary data to the cloud."
+    },
+    "brief": {
+      "verified": true,
+      "headline_finding": "Couchbase's AI Data Plane unlocks persistent agent memory and real-time context retrieval for Claude AI agents in air-gapped and local environments, bridging the 'context gap' where the cloud can't follow.",
+      "key_facts": [
+        "Couchbase announced its AI Data Plane, combining persistent agent memory, real-time context retrieval, and an enterprise-managed MCP server in a single operational platform (June 30, 2026).",
+        "The AI Data Plane runs identically across cloud, on-premises, and disconnected edge environments, enabling agent memory and local vector search on devices with no network connection.",
+        "The platform includes: unified persistence layer for conversational context, structured operational data, and vector embeddings; enterprise MCP server for standardized model-context protocol integration; and an agent catalog of discoverable agent tooling.",
+        "Guardrails distinguish Couchbase's memory layer: token constraints per session, time-to-live limits on stored memories, and metering controls that cap compute consumption per agent session.",
+        "Couchbase Lite enables SQL, full-text search, and vector search locally without a network connection, with proprietary sync for bidirectional replication when connectivity returns.",
+        "Early use case: hotel reservations, where multiple agents serve customers concurrently, each pulling local context and running vector search on-device, with shared session memory synchronizing centrally.",
+        "Agora has run Couchbase in production since February 2024, initially for Signaling product (live call channel setup/state sync), now extending to context retrieval for conversational AI agents.",
+        "Agora's requirements: memory-first architecture, full JSON support, cross-datacenter replication, enterprise-grade vendor support; Couchbase was chosen for predictable lower latency and enterprise-grade RAG.",
+        "Competitive context: Oracle, Redis, and Pinecone have added context layers to their databases in 2025; Couchbase's edge is its ability to run the same platform across cloud, edge, and mobile.",
+        "IDC's Devin Pratt: 'Its real edge is reach, running the same platform from cloud to edge to mobile, which is how enterprises actually operate.'"
+      ],
+      "business_angle": "Businesses can use Claude AI agents powered by Couchbase's AI Data Plane to deploy in air-gapped, on-premises, or edge environments where cloud connectivity is unavailable or restricted. Step-by-step: 1) Deploy Couchbase AI Data Plane locally or on-device; 2) Claude agents use unified memory and context retrieval to access structured and conversational data; 3) Agents perform SQL, full-text, and vector search locally; 4) When connectivity returns, proprietary sync replicates session memory and context centrally; 5) Guardrails ensure token efficiency and governance. This enables use cases like retail floor operations, field service, industrial deployments, and regulated settings where agent data cannot leave the device.",
+      "contrarian_take": "While many vendors focus on cloud-first architectures, Couchbase's memory-first approach and ability to run identically across disconnected environments address the overlooked 'context gap' for enterprises needing local AI agent deployments. The real differentiator is not just speed or memory, but reach—delivering consistent agent context from cloud to edge to mobile, which most competitors lack.",
+      "risks_or_caveats": [
+        "Couchbase is following the trend of adding context layers, not setting it; its test will be scaling against larger, established vendors.",
+        "Choosing the right platform depends on organizational goals, timing, and governance; specialized engines may be preferable for relationship-heavy workloads.",
+        "Token constraints, time-to-live, and metering controls are essential guardrails but may require careful configuration to avoid performance bottlenecks."
+      ],
+      "sources": [
+        "https://venturebeat.com/data/ai-agents-need-context-everywhere-they-run-even-where-the-cloud-cant-follow"
+      ]
+    },
+    "rawBrief": "Couchbase's AI Data Plane unlocks persistent agent memory and real-time context retrieval for Claude AI agents in air-gapped and local environments, bridging the 'context gap' where the cloud can't follow.",
+    "citations": [
+      "https://venturebeat.com/data/ai-agents-need-context-everywhere-they-run-even-where-the-cloud-cant-follow"
+    ],
+    "model": "openai/gpt-4.1",
+    "usage": {
+      "completion_tokens": 799,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "latency_checkpoint": {
+        "engine_tbt_ms": 12,
+        "engine_ttft_ms": 82,
+        "engine_ttlt_ms": 9636,
+        "pre_inference_ms": 129,
+        "service_tbt_ms": 12,
+        "service_ttft_ms": 636,
+        "service_ttlt_ms": 10177,
+        "total_duration_ms": 10055,
+        "user_visible_ttft_ms": 508
+      },
+      "prompt_tokens": 1589,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0
+      },
+      "total_tokens": 2388
+    }
+  },
+  "image": "/blog/images/closing-the-context-gap-claude-agents-on-air-gapped-edge-with-couchbase.png",
+  "audio": "/blog/audio/closing-the-context-gap-claude-agents-on-air-gapped-edge-with-couchbase.mp3"
+}
