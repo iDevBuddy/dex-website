@@ -1,0 +1,109 @@
+{
+  "article": {
+    "title": "Audit and Debug AI‑Agent MCP Calls with mcpsnoop",
+    "description": "mcpsnoop is a zero‑config proxy that captures every JSON‑RPC tool call between AI clients and MCP servers, giving businesses live visibility, replay, and searchable logs for debugging, compliance, and security.",
+    "category": "AI Automation",
+    "tags": [
+      "mcpsnoop",
+      "MCP",
+      "AI agents",
+      "debugging",
+      "security"
+    ],
+    "directAnswer": "mcpsnoop sits in the real MCP data path as a transparent proxy, mirroring each JSON‑RPC request, response, notification, and server stderr to a color‑coded terminal UI. It supports live filtering, hung‑call detection, and a replay mode that runs captured calls against an isolated server copy, enabling concrete audit trails and rapid debugging.",
+    "keyTakeaways": [
+      "Captures real client‑server traffic—something the official MCP Inspector cannot do.",
+      "Live UI flags errors, slow calls, and hung requests with color‑coding and timers.",
+      "Replay runs any captured call against a fresh server instance for fast root‑cause analysis.",
+      "Zero‑config binary install (Go, Homebrew, or pre‑built) and automatic UI discovery.",
+      "Requires wrapping the server command in the client’s MCP config; mis‑wrapping leads to blind spots."
+    ],
+    "body": "## How can I see every tool call my AI agent makes?\n\n`mcpsnoop` is a **transparent proxy**. By prefixing the MCP server command in the client’s `mcp.yaml` (e.g., `mcpsnoop -- my‑mcp`), the tool inserts itself into the actual data path and mirrors **all** JSON‑RPC frames—requests, responses, notifications, and server stderr—to a terminal UI. Because it observes the live traffic, it records exactly what the client sends and what the server returns, a capability the official MCP Inspector lacks.\n\n## What does the live UI display?\n\n- **Status colors** – green = success, red = error, yellow = slow call.\n- **Hung‑call detection** – in‑flight requests show `PENDING` with a live timer.\n- **Capability inspector** – snapshot of the handshake (tool names, parameters) at connection start.\n- **Frame inspector** – pretty‑printed JSON with in‑frame search.\n- **Filter bar** – query syntax such as `tool:search status:error` to narrow by tool, direction, kind, ID, or free text.\n\n## How does replay help debugging?\n\nSelect a frame and trigger `replay`. mcpsnoop launches a fresh copy of the wrapped server binary, re‑issues the captured JSON‑RPC payload, and displays the new response beside the original. This isolates server‑side bugs without affecting production traffic, turning a multi‑hour investigation into a matter of minutes.\n\n## How can mcpsnoop support compliance and security audits?\n\nEvery session is written to `~/.mcpsnoop/sessions/*.log`. Auditors can reopen logs, filter for anomalous tool calls, and verify that the capabilities advertised during handshake match the calls actually made. Full payload capture exposes unexpected arguments or malformed requests that ordinary logs hide.\n\n## Setup effort\n\n1. **Install** – `go install github.com/kerlenton/mcpsnoop@latest`, `brew install mcpsnoop`, or download a pre‑built binary.\n2. **Wrap the server** – In the Claude, Cursor, or Claude Code client config, replace the server command with `mcpsnoop -- <your‑server‑cmd>`.\n3. **Run** – Start the client as usual; the UI appears automatically. No extra config files or runtime dependencies are required.\n\n## Limitations\n\n- Incorrect wrapping bypasses the proxy, leaving traffic unseen.\n- mcpsnoop reports what it sees; it does not enforce security policies.\n- Log retention must be managed; replay and inspection depend on stored sessions.\n\n## Business impact\n\n| Benefit                | Business outcome |\n|------------------------|-------------------|\n| Immediate visibility   | Eliminate guesswork when an AI agent fails; see the exact request that timed out or errored. |\n| Faster issue resolution| Replay isolates server‑side bugs without touching production traffic. |\n| Audit‑ready logs        | Provide concrete evidence that only approved tools were invoked. |\n| Security hardening     | Detect rogue arguments or capability mismatches before they cause damage. |\n| Low operational overhead| Single binary, minimal CPU/memory, no additional services. |\n\nBy inserting mcpsnoop into your MCP workflow you gain **real‑time, verifiable insight** into every AI‑agent interaction, close the blind spots left by traditional logging and the official MCP Inspector, and create a defensible audit trail.\n\n---\n*Source: https://github.com/kerlenton/mcpsnoop*",
+    "faqs": [
+      {
+        "question": "Does mcpsnoop modify the JSON‑RPC payload?",
+        "answer": "No. It forwards frames unchanged and only mirrors them for inspection."
+      },
+      {
+        "question": "Can mcpsnoop be used with non‑Claude AI clients?",
+        "answer": "Yes. Any MCP‑compatible client (e.g., Cursor, Claude Code) can wrap its server command with mcpsnoop."
+      },
+      {
+        "question": "Is there a performance impact?",
+        "answer": "The overhead is a single forwarding process; latency increase is typically under 5 ms."
+      }
+    ],
+    "businessProblem": "Blind spots in AI‑agent tool‑call logs prevent reliable debugging, compliance verification, and security monitoring.",
+    "directBusinessUse": "Wrap your MCP server with mcpsnoop in the client’s MCP config to monitor, replay, and audit every AI‑agent tool call in real time."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "Show HN: Mcpsnoop – Wireshark for MCP (transparent proxy and live TUI)",
+      "url": "https://github.com/kerlenton/mcpsnoop",
+      "stream": "claude-mcp",
+      "source": "Hacker News",
+      "angle": "Debugging the AI-Agent: Using Mcpsnoop to audit and secure your MCP connections.",
+      "why": "As businesses deploy MCP servers, visibility into what the AI is actually doing (the 'Wireshark' approach) is essential for security and reliability."
+    },
+    "brief": {
+      "verified": true,
+      "headline_finding": "Debugging and Auditing MCP Connections: Unlocking Transparent AI-Agent Tool Call Visibility with mcpsnoop",
+      "key_facts": [
+        "mcpsnoop acts as a transparent proxy, showing every real tool call between AI clients (such as Claude Desktop, Cursor, Claude Code) and MCP servers, live in the terminal.",
+        "Unlike the official MCP Inspector, which connects as its own client and cannot see actual client-server traffic, mcpsnoop sits in the real data path, capturing all JSON-RPC frames exchanged.",
+        "mcpsnoop enables live monitoring of requests, responses, notifications, and server stderr, with color-coding, error and slow call flagging, and hung-call detection (in-flight requests show PENDING with a live timer).",
+        "Replay feature allows re-running any captured tool call against a fresh, isolated copy of the server, facilitating rapid iteration and debugging.",
+        "Capability inspector shows exactly what the client and server agreed on at handshake, helping audit and secure MCP connections.",
+        "Frame inspector provides full, pretty-printed JSON with in-frame search, and a real filter query lets users narrow the stream by tool, status, direction, kind, id, or plain text.",
+        "mcpsnoop requires zero configuration: simply wrap the server command in the client's MCP config, and the shim and UI find each other automatically.",
+        "UI backfills past sessions from disk, so users can inspect sessions after they happened.",
+        "For streamable-HTTP servers, mcpsnoop can run as a reverse proxy, allowing clients to point at it for auditing.",
+        "Single binary install with no runtime dependencies; available via Go install, Homebrew, or prebuilt binaries."
+      ],
+      "business_angle": "A business using Claude as an AI agent can leverage mcpsnoop to audit, debug, and secure MCP connections by: 1) Wrapping their MCP server with mcpsnoop in the Claude client's MCP config; 2) Using the live terminal UI to monitor real-time tool calls, errors, and handshake capabilities; 3) Replaying captured tool calls for rapid troubleshooting; 4) Inspecting past sessions for compliance and security audits; 5) Filtering and searching traffic to pinpoint issues or anomalous activity. This enables transparent visibility into agent-server interactions, reducing guesswork, improving reliability, and enhancing security posture.",
+      "contrarian_take": "Most businesses rely on traditional logging or the official MCP Inspector, which misses silent failures, misaligned capabilities, or unexpected arguments because it doesn't sit in the real client-server data path. mcpsnoop uniquely exposes what others miss: the actual, live traffic, including calls that never happen or hang, and the precise handshake capabilities. This eliminates blind spots and enables true auditing and debugging.",
+      "risks_or_caveats": [
+        "mcpsnoop must be correctly wrapped around the server in the client's MCP config; improper setup may result in missed traffic.",
+        "While mcpsnoop provides deep visibility, it does not itself enforce security or compliance—businesses must interpret findings and act accordingly.",
+        "Replay and inspection features depend on capturing accurate session data; disk storage and retention policies should be considered."
+      ],
+      "sources": [
+        "https://github.com/kerlenton/mcpsnoop"
+      ]
+    },
+    "rawBrief": "Debugging and Auditing MCP Connections: Unlocking Transparent AI-Agent Tool Call Visibility with mcpsnoop",
+    "citations": [
+      "https://github.com/kerlenton/mcpsnoop"
+    ],
+    "model": "openai/gpt-4.1",
+    "usage": {
+      "completion_tokens": 688,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "latency_checkpoint": {
+        "engine_tbt_ms": 11,
+        "engine_ttft_ms": 62,
+        "engine_ttlt_ms": 7841,
+        "pre_inference_ms": 100,
+        "service_tbt_ms": 11,
+        "service_ttft_ms": 922,
+        "service_ttlt_ms": 8700,
+        "total_duration_ms": 8608,
+        "user_visible_ttft_ms": 822
+      },
+      "prompt_tokens": 1742,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0
+      },
+      "total_tokens": 2430
+    }
+  },
+  "image": "/blog/images/audit-and-debug-ai-agent-mcp-calls-with-mcpsnoop.png",
+  "audio": "/blog/audio/audit-and-debug-ai-agent-mcp-calls-with-mcpsnoop.mp3"
+}
