@@ -1,0 +1,109 @@
+{
+  "article": {
+    "title": "Claude Cowork Turns AI Into a Cross‑Device Business Operator",
+    "description": "Anthropic’s Claude Cowork now runs on mobile and web, letting knowledge workers automate reports, checklists and other connective tasks without any coding.",
+    "category": "AI Automation",
+    "tags": [
+      "Claude Cowork",
+      "Anthropic",
+      "Business Process Automation",
+      "Cross‑Device AI",
+      "Knowledge Workers"
+    ],
+    "directAnswer": "Claude Cowork now runs on mobile, web and desktop, letting businesses schedule autonomous tasks that sync across devices, execute in the background, and surface human‑review points to a phone for approval—all without writing code.",
+    "keyTakeaways": [
+      "July 7 2026 launch adds mobile and web clients with cloud‑based session sync and background execution.",
+      "33.4 % of 1.2 M sessions (May 11‑31 2026) were business‑process tasks; only 8.7 % involved software development.",
+      "Users can schedule jobs to run offline; Claude notifies the user’s phone when a decision is required.",
+      "Desktop remains the most feature‑rich client, but web access expands reach in IT‑controlled environments.",
+      "Risks: missing desktop‑only file access, possible context gaps in autonomous runs, and limited fit for highly regulated workflows."
+    ],
+    "body": "## What Claude Cowork does now?\nAnthropic released mobile and web clients for Claude Cowork on **July 7 2026**. The product now stores session state in the cloud, so a user can start a task on a laptop, pick it up on a phone, or let it run when no device is online.\n\n## How cross‑device sync changes workflow\nWhen a session is created, Claude mirrors its state to every logged‑in device. A manager can launch a data‑gathering job at 9 am on a desktop, walk away, and approve the output at 5 pm on a phone. If the job reaches a decision point—e.g., choosing a headline—Claude pushes a notification to the registered mobile for quick approval.\n\n## Which tasks are being automated?\nAnthropic’s usage data (1.2 M sessions, May 11‑31 2026) shows:\n| Task type | % of sessions |\n|-----------|---------------|\n| Business process & operations | 33.4 % |\n| Content creation | 16.4 % |\n| Software development | 8.7 % |\n| Other | 41.5 % |\nThe dominant “business process & operations” category includes pulling data into reports, building onboarding checklists, reconciling spreadsheets, drafting status updates and condensing research.\n\n## Example: automating a Monday client briefing\n1. **Schedule** – In Claude’s UI set a recurring task: *“Prepare Monday briefing for Acme Corp.”* for 7 am.\n2. **Gather** – Claude scans email, CRM notes, meeting transcripts and public news.\n3. **Synthesize** – It creates a one‑page briefing, highlights risks and drafts a follow‑up email.\n4. **Human review** – At 7 am the user’s phone buzzes; a tap approves or edits the draft.\n5. **Deliver** – Claude sends the email and saves the briefing to the designated SharePoint folder.\nNo code is required at any step.\n\n## Business impact\n- **Continuous operation** – Tasks run overnight or in the field, eliminating idle windows.\n- **Device‑agnostic continuity** – Work started on any device can be completed on any other.\n- **Low‑code automation** – Knowledge workers create flows themselves, freeing engineering capacity.\n- **Enterprise‑ready access** – The web client works inside corporate browsers, easing IT rollout.\n\n## Limitations to monitor\n- Mobile/web clients cannot read local files or use desktop‑only browser extensions.\n- Autonomous runs rely on the data Claude can reach; missing files or ambiguous context may produce incomplete outputs.\n- Human‑in‑the‑loop decisions must be managed carefully to avoid rushed approvals.\n- Highly regulated sectors may need audit trails or domain‑specific validation that Claude does not provide out‑of‑the‑box.\n\n## Contrarian take\nEnterprise coverage still spotlights coding assistants, yet only **8.7 %** of sessions involve development. The real productivity gain comes from automating the “glue” work that keeps projects moving. By positioning Claude Cowork as a continuous operator, Anthropic is betting that businesses will first adopt AI for coordination, not for replacing core expertise.\n\n## Getting started\n1. Create an Anthropic account and enable the web or mobile client.\n2. Identify a repetitive connective task (e.g., weekly sales pipeline update).\n3. Write a simple Claude prompt that pulls the required sources and formats the output.\n4. Schedule the task and designate a phone for decision‑point alerts.\n5. Review the first run, refine the prompt, and roll out to additional processes.\n\n---\n**Business Problem**: Knowledge workers waste hours each week on repetitive data‑gathering and report‑building tasks.\n**Direct Business Use**: Schedule Claude to compile and draft weekly performance briefs, then approve the final version from any device.",
+    "faqs": [
+      {
+        "question": "Can Claude Cowork access files stored on a local hard drive?",
+        "answer": "No. Mobile and web clients cannot read local files; that capability remains desktop‑only."
+      },
+      {
+        "question": "What happens if a scheduled task runs when no device is online?",
+        "answer": "Claude executes the task in the cloud and surfaces any human‑review points to the user’s registered phone when it reconnects."
+      },
+      {
+        "question": "Is there a limit on how many tasks I can schedule?",
+        "answer": "Anthropic has doubled usage limits through August 5 2026 to encourage adoption, but exact quota numbers are not disclosed in the brief."
+      }
+    ],
+    "businessProblem": "Knowledge workers lose hours each week to routine data‑gathering and report‑building tasks.",
+    "directBusinessUse": "Schedule Claude to automatically compile and draft weekly performance briefs, then approve the final version from any device."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "Anthropic brings Claude Cowork to mobile and web as usage data shows most users aren’t coding",
+      "url": "https://venturebeat.com/technology/anthropic-brings-claude-cowork-to-mobile-and-web-as-usage-data-shows-most-users-arent-coding",
+      "stream": "claude-mcp",
+      "source": "VentureBeat",
+      "angle": "Claude Cowork: Transitioning AI from a Coding Tool to a General Business Operator",
+      "why": "Directly addresses the non-technical business owner by highlighting Claude's evolution into a mobile-first operational assistant."
+    },
+    "brief": {
+      "verified": true,
+      "headline_finding": "Claude Cowork unlocks autonomous, cross-device business process automation for knowledge workers, shifting AI from a coding assistant to a general business operator.",
+      "key_facts": [
+        "Anthropic launched Claude Cowork on mobile and web on July 7, 2026, expanding from desktop-only to cross-device access.",
+        "Cowork sessions now sync across devices, allowing tasks to start on one device and be continued or reviewed on another.",
+        "Cowork can execute tasks autonomously in the background, even when no device is online; users can schedule work for specific times.",
+        "When a task requires human judgment, Claude surfaces the decision to the user's phone for review and approval.",
+        "Usage data from 1.2 million Cowork sessions (May 11–31, 2026) across 600,000+ organizations shows 33.4% of sessions were business process and operations tasks, 16.4% content creation, and only 8.7% software development.",
+        "Anthropic positions Cowork as handling 'the work around the work'—tasks that move projects forward but aren't core job functions.",
+        "Examples include pulling updates into reports, building onboarding checklists, reconciling spreadsheets, drafting status updates, and condensing research.",
+        "Desktop remains most fully featured, but web version expands access in IT-controlled environments.",
+        "Anthropic is extending doubled Cowork usage limits through August 5 to encourage adoption."
+      ],
+      "business_angle": "Claude Cowork enables businesses to automate and streamline the 'connective' tasks that underpin operations—such as synthesizing information, preparing reports, and coordinating communications—without requiring coding expertise. Step by step, a business could: 1) Schedule a task (e.g., Monday client prep) for autonomous execution; 2) Claude aggregates emails, transcripts, and news, builds a briefing document, and drafts a follow-up email; 3) The user reviews and approves outputs from any device; 4) Tasks persist and sync across devices, allowing seamless workflow continuity. This transforms Claude from a developer tool into a general operator for business processes, targeting the broader market of knowledge workers.",
+      "contrarian_take": "Most enterprise AI coverage focuses on coding assistants, but usage data shows the real value lies in automating operational and informational tasks—the 'work around the work.' This reframing suggests that AI's immediate impact is not replacing core expertise, but freeing professionals from repetitive, connective tasks that drain productivity. The mobile/web launch is less about convenience and more about unlocking continuous, autonomous business operations.",
+      "risks_or_caveats": [
+        "Mobile and web versions may lack some desktop features, such as access to local files and browser integration.",
+        "Autonomous task execution depends on clear boundaries for human review; errors in judgment or incomplete context could impact output quality.",
+        "Adoption may be limited in environments with strict IT controls, though web access mitigates some barriers.",
+        "The focus on 'work around the work' may not address specialized or highly regulated tasks requiring domain expertise."
+      ],
+      "sources": [
+        "https://venturebeat.com/technology/anthropic-brings-claude-cowork-to-mobile-and-web-as-usage-data-shows-most-users-arent-coding"
+      ]
+    },
+    "rawBrief": "Claude Cowork unlocks autonomous, cross-device business process automation for knowledge workers, shifting AI from a coding assistant to a general business operator.",
+    "citations": [
+      "https://venturebeat.com/technology/anthropic-brings-claude-cowork-to-mobile-and-web-as-usage-data-shows-most-users-arent-coding"
+    ],
+    "model": "openai/gpt-4.1",
+    "usage": {
+      "completion_tokens": 690,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "latency_checkpoint": {
+        "engine_tbt_ms": 13,
+        "engine_ttft_ms": 56,
+        "engine_ttlt_ms": 8958,
+        "pre_inference_ms": 195,
+        "service_tbt_ms": 13,
+        "service_ttft_ms": 665,
+        "service_ttlt_ms": 9574,
+        "total_duration_ms": 9396,
+        "user_visible_ttft_ms": 471
+      },
+      "prompt_tokens": 1649,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0
+      },
+      "total_tokens": 2339
+    }
+  },
+  "image": "/blog/images/claude-cowork-turns-ai-into-a-cross-device-business-operator.png",
+  "audio": "/blog/audio/claude-cowork-turns-ai-into-a-cross-device-business-operator.mp3"
+}
