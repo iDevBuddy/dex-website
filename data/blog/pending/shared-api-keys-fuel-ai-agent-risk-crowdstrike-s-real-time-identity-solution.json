@@ -1,0 +1,108 @@
+{
+  "article": {
+    "title": "Shared API Keys Fuel AI‑Agent Risk – CrowdStrike’s Real‑Time Identity Solution",
+    "description": "69% of enterprises let AI agents share API keys, creating a hidden security debt. CrowdStrike’s Continuous Identity for AI Agents validates every call, tying it to a unique identity and device risk posture.",
+    "category": "AI Automation",
+    "tags": [
+      "API keys",
+      "AI agents",
+      "CrowdStrike",
+      "Security",
+      "Continuous Identity"
+    ],
+    "directAnswer": "Shared API keys expose 69% of enterprises to AI‑agent breaches. CrowdStrike’s Continuous Identity for AI Agents validates each request in real time, linking it to a scoped identity and the device’s risk posture, thereby closing the forensic gap.",
+    "keyTakeaways": [
+      "69% of surveyed enterprises report credential sharing among AI agents.",
+      "Only 32% assign a scoped, managed identity to each agent.",
+      "Continuous Identity validates every agent call in real time and attributes it to a specific identity and device posture.",
+      "54% of respondents have experienced an agent‑related security incident or near‑incident.",
+      "Native controls from model providers do not prevent credential sharing; purpose‑built solutions are needed."
+    ],
+    "body": "## What VentureBeat Found?\nVentureBeat’s June 2026 Pulse Research surveyed 107 enterprises. **69%** run AI agents with shared API keys, and **54%** have already faced a security incident or near‑incident. Only **32%** give each agent a scoped, managed identity.\n\n## Why Shared API Keys Are a Hidden Debt\nWhen multiple agents use the same credential, a breach in any one agent compromises the entire fleet. The result is a forensic blind spot: activity cannot be traced to a specific agent or device, inflating detection time and containment cost.\n\n## CrowdStrike’s Countermeasure: Continuous Identity for AI Agents\nCrowdStrike acquired SGNL for **$740 million** and, in less than a year, released **Continuous Identity for AI Agents** (June 15, 2026). The product:\n1. **Validates every agent action in real time** – checks the owning identity, the caller, and the device’s risk posture.\n2. **Attributes each call to a unique identity** – eliminates the shared‑key attribution gap.\n3. **Enforces policy at the request level** – blocks or flags calls that fail risk thresholds.\n\n### How It Works\n| Step | Action | Business Effect |\n|------|--------|-----------------|\n| 1 | Agent registers and receives a scoped identity (OAuth token or X.509 cert). | Credential sharing is removed at the source. |\n| 2 | Agent makes an API call, attaching its identity and device‑posture metadata. | Continuous Identity evaluates the request against policy. |\n| 3 | System permits, denies, or quarantines the call in real time. | Immediate containment; no post‑mortem needed to locate the source. |\n| 4 | Decision is logged with full attribution. | Simplifies audit and compliance reporting. |\n\n## Business Impact\n- **Visibility** – You see who performed which action from which device at the moment it occurs.\n- **Control** – Policies can restrict high‑risk agents (e.g., only devices with risk score < 30 may call finance‑model APIs).\n- **Compliance** – Granular logs meet audit requirements for regulations that demand per‑entity traceability.\n- **Potential Cost Reduction** – Real‑time denial can cut the effort spent on forensic investigation after an incident.\n\n## Contrarian View: Model‑Provider Controls Fall Short\nA separate VentureBeat poll shows **82%** of enterprises rely on bundled security from OpenAI, Google, Microsoft, or Anthropic. Those native controls manage usage limits but **do not stop credential sharing**. When a shared key is compromised, provider logs show only the key, not the internal agent responsible.\n\nThe market’s urgency gap is evident: only **30%** of firms sandbox their highest‑risk agents, and the largest enterprises—those with the biggest fleets—have the **least isolation**. Continuous Identity addresses this gap without requiring a separate sandbox.\n\n## Risks & Caveats\n- The VentureBeat sample skews mid‑market; results may differ for the largest enterprises.\n- Sandbox isolation, the most effective containment control, remains under‑funded at scale.\n- Full granular data will be released at VB Transform (July 14‑15); some specifics are pending.\n- The incident‑to‑containment gap for the biggest firms is based on a small subset (15 respondents).\n\n## Implementation Checklist\n1. **Inventory agents** – Document every AI agent and its current credential method.\n2. **Assign scoped identities** – Use CrowdStrike’s onboarding flow to replace shared keys.\n3. **Define risk‑posture thresholds** – Leverage existing endpoint data to set policy limits.\n4. **Deploy Continuous Identity** – Integrate with CI/CD pipelines for automated rollout.\n5. **Monitor audit logs** – Alert on denied calls or abnormal risk scores.\n\n## Bottom Line\nShared API keys represent a hidden security debt for 69% of enterprises. CrowdStrike’s Continuous Identity for AI Agents turns every agent request into an auditable, policy‑enforced event, giving businesses the visibility and control needed to contain breaches before they spread.\n\n---\n*All figures are from VentureBeat’s June 2026 Pulse Research (107 enterprises) and CrowdStrike’s product announcement on June 15, 2026.*",
+    "faqs": [
+      {
+        "question": "Do I need to replace all existing API keys?",
+        "answer": "Yes. Continuous Identity requires each agent to have a scoped, managed identity; shared keys must be retired."
+      },
+      {
+        "question": "Can the tool work with agents hosted on third‑party clouds?",
+        "answer": "It integrates via standard OAuth or certificate‑based authentication, so any cloud‑hosted agent can be enrolled."
+      },
+      {
+        "question": "What’s the cost model?",
+        "answer": "CrowdStrike has not disclosed pricing publicly; enterprise quotes are based on fleet size and volume of risk‑posture analytics."
+      }
+    ],
+    "businessProblem": "Shared API keys create untraceable security gaps across AI‑agent fleets, inflating detection time and containment cost.",
+    "directBusinessUse": "Assign a unique, scoped identity to each AI agent and enforce real‑time policy checks on every API call."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "Shared API keys expose AI agents at 69% of enterprises, new VentureBeat research finds",
+      "url": "https://venturebeat.com/security/shared-api-keys-expose-ai-agent-fleets-venturebeat-research",
+      "stream": "ai-tools",
+      "source": "VentureBeat",
+      "angle": "The Hidden Security Debt: Why Shared API Keys are an Enterprise Time Bomb",
+      "why": "Directly addresses a critical security vulnerability that business owners often overlook when scaling AI agents."
+    },
+    "brief": {
+      "verified": true,
+      "headline_finding": "CrowdStrike's 'Continuous Identity for AI Agents' is a new tool that validates every agent action in real time, addressing the enterprise security debt caused by shared API keys.",
+      "key_facts": [
+        "69% of enterprises run AI agents with credential sharing somewhere in their deployments, according to VentureBeat’s June 2026 Pulse Research wave of 107 enterprises.",
+        "CrowdStrike acquired runtime authorization platform SGNL for $740 million and, by June 15, shipped its first product from the deal: Continuous Identity for AI Agents.",
+        "Continuous Identity for AI Agents validates every agent action in real time based on who owns it, who is calling it, and the device's risk posture.",
+        "Only 32% of enterprises give every AI agent its own scoped, managed identity; 69% flagged credential sharing in at least one answer.",
+        "More than half of respondents (54%) have already had an agent security incident or near-incident.",
+        "CrowdStrike integrated SGNL in less than a year, delivering a product that directly targets the credential-sharing problem.",
+        "The tool is aimed at enterprises, especially larger ones, where incident rates are highest and containment is thinnest.",
+        "The workflow improved: real-time validation and attribution of agent actions, closing the forensic gap caused by shared API keys."
+      ],
+      "business_angle": "CrowdStrike's Continuous Identity for AI Agents provides enterprises with granular, real-time control and visibility over AI agent actions, reducing the risk of credential-sharing breaches and improving attribution. This tool is especially relevant for organizations running fleets of AI agents across multiple workflows, where shared API keys create a hidden security debt and a potential time bomb. By validating every action and tying it to a specific identity and device risk posture, the tool strengthens security and compliance in business operations.",
+      "contrarian_take": "Most enterprises rely on bundled controls from model providers (OpenAI, Google, Microsoft, Anthropic), with 82% naming them as their primary agent security layer. However, these native controls leave a forensic gap when agents share credentials, making purpose-built solutions like CrowdStrike's Continuous Identity for AI Agents essential for true containment and attribution. The market is missing the urgency of containment: only 30% sandbox their highest-risk agents, and the largest enterprises have the least isolation around their agent fleets.",
+      "risks_or_caveats": [
+        "The survey sample skews mid-market; numbers may not fully represent the largest enterprises.",
+        "Sandbox isolation, the most effective containment control, is underfunded, especially at larger enterprises.",
+        "The full report with granular details will only be released at VB Transform (July 14-15), so some specifics are pending.",
+        "The largest incident-to-containment gap is directional, based on a small sample (15 respondents) in the top size band."
+      ],
+      "sources": [
+        "https://venturebeat.com/security/shared-api-keys-expose-ai-agent-fleets-venturebeat-research"
+      ]
+    },
+    "rawBrief": "CrowdStrike's 'Continuous Identity for AI Agents' is a new tool that validates every agent action in real time, addressing the enterprise security debt caused by shared API keys.",
+    "citations": [
+      "https://venturebeat.com/security/shared-api-keys-expose-ai-agent-fleets-venturebeat-research"
+    ],
+    "model": "openai/gpt-4.1",
+    "usage": {
+      "completion_tokens": 633,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "latency_checkpoint": {
+        "engine_tbt_ms": 11,
+        "engine_ttft_ms": 190,
+        "engine_ttlt_ms": 7055,
+        "pre_inference_ms": 125,
+        "service_tbt_ms": 11,
+        "service_ttft_ms": 1269,
+        "service_ttlt_ms": 8159,
+        "total_duration_ms": 8041,
+        "user_visible_ttft_ms": 1144
+      },
+      "prompt_tokens": 1697,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0
+      },
+      "total_tokens": 2330
+    }
+  },
+  "image": "/blog/images/shared-api-keys-fuel-ai-agent-risk-crowdstrike-s-real-time-identity-solution.png",
+  "audio": "/blog/audio/shared-api-keys-fuel-ai-agent-risk-crowdstrike-s-real-time-identity-solution.mp3"
+}
