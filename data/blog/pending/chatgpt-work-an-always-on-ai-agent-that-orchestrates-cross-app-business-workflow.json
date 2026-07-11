@@ -1,0 +1,113 @@
+{
+  "article": {
+    "title": "ChatGPT Work: An Always‑On AI Agent That Orchestrates Cross‑App Business Workflows",
+    "description": "OpenAI’s cloud‑based AI agent, powered by GPT‑5.6, automates multi‑step tasks across email, calendars, Slack and GitHub, turning minutes‑long coordination into seconds.",
+    "category": "AI Automation",
+    "tags": [
+      "ChatGPT Work",
+      "cross‑app automation",
+      "GPT‑5.6",
+      "productivity AI",
+      "MCP plugins"
+    ],
+    "directAnswer": "ChatGPT Work is OpenAI’s persistent cloud‑VM AI agent (GPT‑5.6) that pulls data from Gmail, Google Calendar, Slack and GitHub via MCP plugins, then executes end‑to‑end workflows—scheduling meetings, generating reports, building websites—without manual clicks.",
+    "keyTakeaways": [
+      "Operates as a 24/7 cloud VM, so it’s reachable from any device.",
+      "MCP plugins connect Gmail, Calendar, Slack, GitHub and future services.",
+      "Turns a 30‑minute coordination task into seconds; reduces weeks‑long analytics to days.",
+      "Available to all paid tiers; Pro, Enterprise and Edu get early access, Plus follows within days.",
+      "Risks: pricing, security and data‑privacy terms are not disclosed; multi‑account Gmail support is pending; plugin compatibility depends on third‑party APIs; always‑on VM raises data‑residency questions."
+    ],
+    "body": "## What is ChatGPT Work?\nOpenAI launched ChatGPT Work on July 10, 2026. Built on the GPT‑5.6 model, it runs as a persistent cloud virtual machine that stays online 24/7. Linked apps supply context, allowing the agent to complete end‑to‑end business tasks without user intervention.\n\n## How is it different from a standard chatbot?\nA standard chatbot answers a single prompt and stops. ChatGPT Work continuously monitors connected services via Model Context Protocol (MCP) plugins, reads threads, drafts documents, updates calendars, pushes code, and publishes sites—all in one autonomous flow.\n\n## Quick setup guide\n1. **Select a tier** – Plus, Pro, Enterprise, Edu or Business. Early rollout to Pro/Enterprise/Edu; Plus follows within days.  \n2. **Connect services** – Add Gmail, Google Calendar, Slack and GitHub from the MCP marketplace.  \n3. **Onboard** – Role‑specific suggestions appear (e.g., product managers see “evaluate AI systems” or “coordinate bug‑bash meetings”).  \n4. **Customize** – Set writing style, project folders, and output formats.\n\n## Concrete workflow: scheduling a multi‑person bug bash\n| Step | Manual effort | ChatGPT Work effort |\n|------|----------------|----------------------|\n| Identify participants (Slack channel, GitHub owners) | 10 min | 5 sec |\n| Propose times, check calendars | 8 min | 4 sec |\n| Send invites, create agenda doc | 12 min | 6 sec |\n| **Total** | **≈30 min** | **< 15 sec** |\n\nThe agent reads the Slack channel, extracts GitHub owners, checks Google Calendar, proposes slots, and sends invites automatically.\n\n## Analytic heavy‑lifting\nFeed churn data into the agent; it runs correlation analysis, identifies root causes, and drafts a product‑roadmap deck. Where a data analyst might spend weeks cleaning data and building slides, the agent can deliver a polished presentation in days, freeing senior staff for strategy.\n\n## Mobile‑first workflow\nBecause the agent lives in the cloud, you can start a website draft on a phone, share the link in Slack, and hand it off to a designer later—no local VM required.\n\n## Business impact\n- **Speed** – Routine coordination drops from minutes to seconds; complex analysis shrinks from weeks to days.\n- **Scalability** – One agent can manage multiple projects, each organized in shareable folders.\n- **Accessibility** – Plus‑tier subscribers receive full orchestrator capabilities, not just Pro or Enterprise users.\n- **Strategic edge** – The always‑on cloud VM and mobile‑first design give OpenAI a head‑start over competitors that rely on locally‑hosted agents.\n\n## Risks and caveats\n- Pricing, security and data‑privacy terms are still undisclosed; enterprises should obtain a detailed contract.\n- Multi‑account Gmail integration is on the roadmap but not yet available.\n- MCP plugin functionality depends on third‑party API stability.\n- Persistent cloud VMs may conflict with data‑residency regulations in certain industries.\n\n## Getting started in practice\n1. **Identify a bottleneck** – e.g., weekly status meetings that require calendar coordination and Slack updates.\n2. **Map the steps** – list participants, required docs, and final deliverable.\n3. **Create a project** – name it “Weekly Sync”.\n4. **Add MCP plugins** – Gmail, Calendar, Slack.\n5. **Command the agent** – “Schedule a 30‑minute sync with the product team every Tuesday, attach the latest sprint report, and post the agenda in #product‑updates.”\n6. **Review** – The agent sends invites, generates the agenda, and posts the link. Adjust style or timing as needed.\n\n## Bottom line\nChatGPT Work shifts AI from a conversational assistant to an autonomous workflow orchestrator. For business owners, the immediate upside is eliminating manual coordination and accelerating data‑driven decisions. The persistent, cloud‑native agent—and its availability to Plus users—creates a competitive advantage that many competitors are likely to underestimate.",
+    "faqs": [
+      {
+        "question": "Is ChatGPT Work available to all OpenAI paid tiers?",
+        "answer": "Yes. It rolls out first to Pro, Enterprise and Edu users, then to Plus and Business tiers within days."
+      },
+      {
+        "question": "Which apps can I connect today?",
+        "answer": "Gmail, Google Calendar, Slack and GitHub via MCP plugins. Additional integrations are planned."
+      },
+      {
+        "question": "Do I need a local machine running the AI?",
+        "answer": "No. ChatGPT Work runs as a persistent cloud VM, accessible from any device."
+      }
+    ],
+    "businessProblem": "Manual coordination across email, calendars, messaging and code repositories consumes time, introduces errors, and slows decision‑making.",
+    "directBusinessUse": "Deploy ChatGPT Work to auto‑schedule cross‑team meetings, generate status reports, and publish project websites without human intervention."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "OpenAI introduces ChatGPT Work, a cloud-based AI agent that manages tasks across email, Slack and calendars",
+      "url": "https://venturebeat.com/technology/openai-introduces-chatgpt-work-a-cloud-based-ai-agent-that-manages-tasks-across-email-slack-and-calendars",
+      "stream": "ai-tools",
+      "source": "VentureBeat",
+      "angle": "Moving from Chatbots to Orchestrators: Implementing ChatGPT Work for Cross-App Automation",
+      "why": "Directly addresses the pain point of app-switching by automating the glue between email, Slack, and calendars."
+    },
+    "brief": {
+      "verified": true,
+      "headline_finding": "OpenAI launches ChatGPT Work: A cloud-based AI agent that orchestrates cross-app business workflows, moving beyond chatbots to autonomous productivity.",
+      "key_facts": [
+        "ChatGPT Work is developed by OpenAI and launched on July 10, 2026.",
+        "It is powered by OpenAI's latest flagship model, GPT-5.6.",
+        "ChatGPT Work transforms ChatGPT from a Q&A chatbot into an autonomous work platform capable of executing complex, multi-step tasks across email, calendars, code repositories, and messaging apps.",
+        "The agent gathers context from connected apps, files, and workflows to produce finished documents, spreadsheets, presentations, reports, and websites.",
+        "ChatGPT Work operates as a persistent cloud-based virtual machine, always available regardless of device, unlike competitors that require a local machine to be powered on.",
+        "The product is accessible across all paid tiers, including Plus, Pro, Enterprise, Edu, and Business users.",
+        "Rollout begins with Pro, Enterprise, and Edu users, expanding to Plus and Business users within days.",
+        "Integration with external services (Gmail, Google Calendar, Slack, GitHub) is enabled via MCP-based plugins (Model Context Protocol).",
+        "Personalized onboarding surfaces suggested use cases based on user role (e.g., product manager sees tasks like evaluating AI systems, managing calendar).",
+        "Users can customize the agent’s writing style, organize outputs into projects, and build/share interactive websites directly from ChatGPT Work.",
+        "Concrete workflow improvement: ChatGPT Work can autonomously schedule multi-person meetings (e.g., bug bashes), coordinate across Slack, GitHub, Docs, and calendar, reducing a 30-minute task to seconds.",
+        "It handles analytically complex tasks, such as identifying causes of user churn and generating product solutions, reducing months of work to weeks.",
+        "Mobile-first capabilities allow users to create and share websites from their phone, even in casual settings (e.g., at the beach)."
+      ],
+      "business_angle": "ChatGPT Work enables business owners and teams to automate cross-app workflows (email, calendar, messaging, code repositories) with an always-on, cloud-based AI agent. It reduces manual coordination, speeds up complex analytics, and allows for dynamic project management and content creation, accessible even to Plus-tier subscribers. This shifts AI utility from conversational assistants to orchestrators of real business operations.",
+      "contrarian_take": "While most focus on ChatGPT Work's automation of routine tasks, its true value lies in orchestrating analytically complex workflows and collaborative content creation—tasks that previously required weeks or months of manual effort. The persistent cloud VM and mobile-first approach differentiate it from competitors, but the democratization of advanced agentic AI for Plus users is a strategic move others may underestimate.",
+      "risks_or_caveats": [
+        "Full details on pricing, security, and data privacy are not provided in the source.",
+        "Integration with multiple Gmail accounts is not yet available but is on the roadmap.",
+        "Reliance on MCP plugin architecture means external service compatibility may vary.",
+        "The persistent cloud VM model may raise concerns about data residency and always-on access."
+      ],
+      "sources": [
+        "https://venturebeat.com/technology/openai-introduces-chatgpt-work-a-cloud-based-ai-agent-that-manages-tasks-across-email-slack-and-calendars"
+      ]
+    },
+    "rawBrief": "OpenAI launches ChatGPT Work: A cloud-based AI agent that orchestrates cross-app business workflows, moving beyond chatbots to autonomous productivity.",
+    "citations": [
+      "https://venturebeat.com/technology/openai-introduces-chatgpt-work-a-cloud-based-ai-agent-that-manages-tasks-across-email-slack-and-calendars"
+    ],
+    "model": "openai/gpt-4.1",
+    "usage": {
+      "completion_tokens": 714,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "latency_checkpoint": {
+        "engine_tbt_ms": 9,
+        "engine_ttft_ms": 55,
+        "engine_ttlt_ms": 6769,
+        "pre_inference_ms": 110,
+        "service_tbt_ms": 9,
+        "service_ttft_ms": 569,
+        "service_ttlt_ms": 7281,
+        "total_duration_ms": 7178,
+        "user_visible_ttft_ms": 459
+      },
+      "prompt_tokens": 1683,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0
+      },
+      "total_tokens": 2397
+    }
+  },
+  "image": "/blog/images/chatgpt-work-an-always-on-ai-agent-that-orchestrates-cross-app-business-workflow.png",
+  "audio": "/blog/audio/chatgpt-work-an-always-on-ai-agent-that-orchestrates-cross-app-business-workflow.mp3"
+}
