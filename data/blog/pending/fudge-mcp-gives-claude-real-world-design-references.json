@@ -1,0 +1,106 @@
+{
+  "article": {
+    "title": "Fudge MCP Gives Claude Real‑World Design References",
+    "description": "Connect Claude to Fudge MCP to pull fonts, colors, components, and layouts from ~10K live sites, eliminating vague prompts and speeding UI prototyping.",
+    "category": "AI Automation",
+    "tags": [
+      "Claude",
+      "Fudge MCP",
+      "design reference engine",
+      "UI automation",
+      "design tokens"
+    ],
+    "directAnswer": "Fudge MCP, launched in 2026, indexes roughly 10,000 live websites and lets Claude search by font, color, component, layout, page type, or visual similarity. The engine returns screenshots and exact design tokens, which Claude can embed directly into UI code, producing interfaces grounded in proven design patterns.",
+    "keyTakeaways": [
+      "Fudge MCP provides Claude with searchable visual references from ~10,000 live sites.",
+      "The engine runs locally via an MCP server; saved references are stored through a Chrome extension.",
+      "Real design tokens replace vague prompts like “modern, premium” and cut off‑brand output.",
+      "Businesses can automate UI prototyping: Claude queries MCP, receives tokens, generates code, and reuses saved references.",
+      "Current limits: no industry‑level filtering, no launch demo video, and a local server must be provisioned."
+    ],
+    "body": "## How Fudge MCP changes Claude’s UI workflow\n\nFudge MCP indexes nearly 10,000 live websites and exposes a search API for fonts, colors, components, layouts, page types, and visual similarity. When Claude receives a concrete request—e.g., “show SaaS dashboards with teal accents and rounded buttons”—the MCP server returns:\n\n1. Screenshots of matching pages.\n2. Extracted design tokens (hex codes, font families, spacing values).\n\nClaude can then embed those tokens directly into HTML/CSS or component libraries, producing code that mirrors an existing, proven design.\n\n## Integration steps for enterprises\n\n| Step | Action | Result |\n|------|--------|--------|\n| 1 | Deploy the MCP server on an internal machine. | Secure, offline index of 10K sites. |\n| 2 | Install the Fudge MCP Chrome extension on designers’ browsers. | One‑click saving of screenshots and tokens. |\n| 3 | Connect Claude (API/SDK) to the local MCP endpoint. | Claude can issue search commands programmatically. |\n| 4 | Issue a concrete design query (font, color, layout, etc.). | MCP returns real‑world references. |\n| 5 | Claude generates UI code using the returned tokens. | Faster, on‑brand prototypes. |\n| 6 | Save the reference via the Chrome extension for reuse. | Iterations reuse the same evidence without re‑searching. |\n\nAll data stays on‑premise, satisfying strict security policies.\n\n## Business impact\n\n- **Eliminates guesswork** – Claude no longer invents hex codes; it copies proven tokens.\n- **Speeds prototyping** – A reference and code are produced in minutes versus days of manual mood‑board creation.\n- **Ensures brand consistency** – Saved references lock in exact colors, fonts, and spacing across revisions.\n- **Reduces iteration cost** – Reusing cached references cuts repetitive research effort.\n\n## Risks and caveats\n\n- **Industry filtering is not yet available**; searches cannot be limited to specific sectors such as fintech.\n- **No demo video at launch**; early adopters must validate the workflow themselves.\n- **Local server requirement** – IT must provision compatible hardware, maintain the MCP service, and handle updates.\n\n## Contrarian take\n\nMost AI design assistants rely on abstract prompts and generate invented style tokens, which often require manual cleanup. Fudge MCP forces Claude to reference actual design tokens from live sites, turning the AI from a “vibe‑based” generator into a research‑backed designer. The trade‑off is the need for on‑premise infrastructure and the current lack of industry‑level filters, but the payoff is verifiable, on‑brand output.\n\n---\n\n**Source:** Product Hunt listing for Fudge MCP (https://www.producthunt.com/products/fudge-mcp)",
+    "faqs": [
+      {
+        "question": "Can Fudge MCP filter results by industry?",
+        "answer": "Filtering by industry is a requested feature but is not confirmed as available at launch."
+      },
+      {
+        "question": "Does the MCP server need an internet connection?",
+        "answer": "The MCP server runs locally; after the initial index download it does not require external internet access."
+      },
+      {
+        "question": "Is there a free tier?",
+        "answer": "Pricing is not disclosed in the brief; consult the product page for licensing details."
+      }
+    ],
+    "businessProblem": "Design teams spend hours hunting for real‑world UI references and often produce off‑brand mockups when AI tools invent style tokens.",
+    "directBusinessUse": "Connect Claude to Fudge MCP, query for concrete design tokens from live sites, and auto‑generate on‑brand UI code, cutting research time and ensuring consistency."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "Fudge MCP",
+      "url": "https://www.producthunt.com/products/fudge-mcp",
+      "stream": "claude-mcp",
+      "source": "ProductHunt AI",
+      "angle": "Connecting Claude to your business data via Fudge MCP",
+      "why": "Concrete implementation of the Model Context Protocol (MCP) to move from generic chat to a tool that actually interacts with proprietary business data."
+    },
+    "brief": {
+      "verified": true,
+      "headline_finding": "Fudge MCP unlocks visual design reference search for Claude, enabling AI agents to generate interfaces based on real-world design evidence rather than invented styles.",
+      "key_facts": [
+        "Fudge MCP is a design reference engine for AI agents, launched in 2026.",
+        "It allows AI agents (such as Claude) to search nearly 10,000 real websites by fonts, colors, components, layouts, page types, and visual similarity.",
+        "Fudge MCP runs locally through an MCP server and remembers references saved via its Chrome extension.",
+        "Instead of relying on vague prompts like 'modern, premium', Claude can reference actual design tokens from real websites, avoiding invented hex codes.",
+        "A user review notes that visual similarity search via Claude is 'genuinely useful', saving significant time compared to manual hunting on platforms like Dribbble.",
+        "The Chrome extension enables saving references locally for later use.",
+        "Saul Fleischman notes: 'An MCP server that makes an agent reference real design tokens instead of inventing hex codes is sharp — \"actual design, not a hunch\" pretty much sums up why it matters.'"
+      ],
+      "business_angle": "Businesses can connect Claude to Fudge MCP to automate interface design tasks with real-world references. Step-by-step: 1) Claude queries Fudge MCP for design inspiration matching specific criteria (fonts, colors, layouts, etc.), 2) Fudge MCP returns screenshots and design tokens from actual websites, 3) Claude uses these references to generate or update UI code, ensuring the output is grounded in proven design patterns, 4) Saved references via Chrome extension streamline iterative design and feedback cycles. This reduces guesswork, speeds up prototyping, and ensures design quality aligns with industry standards.",
+      "contrarian_take": "Most AI design tools rely on vague prompts or invented styles; Fudge MCP’s approach—grounding Claude’s output in real, measured design evidence—addresses the common pitfall of 'vibe-based' AI design. What others miss: By referencing actual design tokens, businesses avoid the risk of inconsistent or off-brand interfaces and can target specific industries or site categories for more relevant results (though filtering by industry is a requested feature, not confirmed as available).",
+      "risks_or_caveats": [
+        "Industry/category filtering is a requested feature, not confirmed as available.",
+        "No demo video at launch; practical integration details may require further exploration.",
+        "Runs locally—businesses need to ensure compatibility and setup for MCP server and Chrome extension."
+      ],
+      "sources": [
+        "https://www.producthunt.com/products/fudge-mcp"
+      ]
+    },
+    "rawBrief": "Fudge MCP unlocks visual design reference search for Claude, enabling AI agents to generate interfaces based on real-world design evidence rather than invented styles.",
+    "citations": [
+      "https://www.producthunt.com/products/fudge-mcp"
+    ],
+    "model": "openai/gpt-4.1",
+    "usage": {
+      "completion_tokens": 559,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "latency_checkpoint": {
+        "engine_tbt_ms": 11,
+        "engine_ttft_ms": 48,
+        "engine_ttlt_ms": 6141,
+        "pre_inference_ms": 109,
+        "service_tbt_ms": 11,
+        "service_ttft_ms": 1125,
+        "service_ttlt_ms": 7236,
+        "total_duration_ms": 7146,
+        "user_visible_ttft_ms": 1015
+      },
+      "prompt_tokens": 1256,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0
+      },
+      "total_tokens": 1815
+    }
+  },
+  "image": "/blog/images/fudge-mcp-gives-claude-real-world-design-references.png",
+  "audio": "/blog/audio/fudge-mcp-gives-claude-real-world-design-references.mp3"
+}
