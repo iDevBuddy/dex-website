@@ -1,0 +1,111 @@
+{
+  "article": {
+    "title": "Aye Browser: A Teach‑Your‑Own AI Intern for Repetitive Web Tasks",
+    "description": "A free Chromium‑based AI browser for macOS and Windows that lets professionals teach, review, and reuse web‑automation skills.",
+    "category": "AI Automation",
+    "tags": [
+      "browser automation",
+      "AI intern",
+      "workflow automation",
+      "macOS",
+      "Windows"
+    ],
+    "directAnswer": "Aye is a free Chromium‑based AI browser that lets you teach it to click, type, scroll, and summarize web pages, then reuse those steps as “skills.” Every action is displayed for review, and sensitive steps require manual approval.",
+    "keyTakeaways": [
+      "Teachable skills automate clicks, typing, scrolling, tab switching, and content extraction.",
+      "Skills are reusable but must be rebuilt for each profile; no cross‑profile import/export.",
+      "Sensitive actions (logins, payments) pause for user approval, preserving control.",
+      "Free at launch; future pricing and long‑term reliability are not disclosed.",
+      "Designed for business owners and professionals who perform repetitive browser‑based work."
+    ],
+    "body": "## What is Aye?\nAye is a Chromium‑based AI browser launched in 2026 by developer Zhonglin Liu. It runs on macOS and Windows and markets itself as a *teachable AI intern* that automates everyday web workflows.\n\n## How does the teachable workflow differ from traditional macro tools?\n| Feature | Traditional macro tools | Aye’s teachable approach |\n|---|---|---|\n| Recording | Captures raw clicks and keystrokes | Guides you through each step, asking for intent |\n| Replay | Exact replay; breaks on DOM changes | Shows each action before execution; you can adjust selectors |\n| Skill sharing | Export/import files (often limited) | No cross‑profile sharing yet |\n| Sensitive actions | May run unattended | Require explicit user approval |\n\n## Core capabilities\n- **Browser actions**: click, type, scroll, switch tabs, read results.\n- **Content services**: summarize pages, translate text, draft short replies.\n- **Cross‑tab research**: open multiple sources, extract key points, compile a brief.\n- **Reusable skills**: once taught, a skill can be invoked on any site that matches the defined pattern.\n- **Profiles**: separate work and personal accounts; each profile holds its own skill set.\n- **User‑approved steps**: any action flagged as sensitive (e.g., login, payment) pauses for manual confirmation.\n\n## Business impact\n### Time savings\nTeams that repeatedly pull data, draft emails, or perform market research can teach a skill once and replay it with a single command, reducing the manual steps involved.\n\n### Risk mitigation\nBecause every step is displayed before execution, users can verify selectors and approve sensitive actions, limiting the chance of unintended clicks in regulated environments.\n\n### Context separation\nProfiles let you keep corporate credentials separate from personal ones, preventing accidental cross‑contamination.\n\n## Limitations\n- **No skill portability**: the same skill must be recreated in each profile, adding overhead for multi‑profile teams.\n- **Edge‑case handling unclear**: the launch material does not explain how Aye recovers from partial failures such as CAPTCHAs or major DOM rewrites.\n- **Pricing unknown beyond free launch**: future costs could affect ROI calculations.\n\n## Contrarian take\nMost browser‑automation tools replay recorded actions verbatim, which breaks when page layouts or authentication steps change. Aye’s teachable model lets users correct selectors on the fly, but without a documented fallback for *partial failures* (e.g., missing buttons) the automation can still stall. The lack of skill sharing across profiles also hampers scaling in teams that need a common library of automations.\n\n## Bottom line for business owners\nAye provides a free, visual, and controllable way to automate repetitive web tasks. It works best for stable, well‑defined workflows where human oversight on sensitive steps is required. Pilot the product on low‑risk tasks, monitor how it handles layout changes, and weigh the extra effort of rebuilding skills across profiles before committing to broader rollout.\n\n---\n**Source:** Product Hunt – Aye Browser",
+    "faqs": [
+      {
+        "question": "Is Aye free to use?",
+        "answer": "Yes. Aye launches as a free product; future pricing has not been announced."
+      },
+      {
+        "question": "Can I share a skill I built with a teammate?",
+        "answer": "No. Skills are confined to the profile in which they are created; there is currently no import/export feature."
+      },
+      {
+        "question": "What happens if a page layout changes?",
+        "answer": "Aye displays each step before execution, allowing you to adjust selectors manually. The brief does not describe any automatic recovery mechanism."
+      }
+    ],
+    "businessProblem": "Repetitive, manual browser tasks waste time and introduce errors for business owners and professionals.",
+    "directBusinessUse": "Teach Aye to log into a market‑data portal, extract the latest figures, and paste them into a spreadsheet, approving the login step each run."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "Aye",
+      "url": "https://www.producthunt.com/products/aye-browser",
+      "stream": "ai-tools",
+      "source": "ProductHunt AI",
+      "angle": "",
+      "why": "heuristic"
+    },
+    "brief": {
+      "verified": true,
+      "headline_finding": "Aye is a Chromium-based AI browser for macOS and Windows that acts as a teachable AI intern, automating everyday browser workflows through visible, reviewable actions.",
+      "key_facts": [
+        "Aye is built by Zhonglin Liu and launched in 2026.",
+        "It is available for macOS and Windows.",
+        "Aye automates browser actions such as clicking, typing, scrolling, switching tabs, and checking results.",
+        "It can summarize and translate pages, research across tabs, draft replies, and automate repeatable workflows.",
+        "Recurring tasks can be turned into reusable skills.",
+        "Profiles feature allows separation of accounts.",
+        "Sensitive steps require user approval, ensuring control and trust.",
+        "Aye is free at launch (no pricing mentioned).",
+        "Users can teach Aye new workflows, which are then reusable.",
+        "No current skill import/export between profiles; users must rebuild workflows for each profile.",
+        "Aye's approach focuses on teachability and reviewable progress, not just replaying recorded flows."
+      ],
+      "business_angle": "Aye targets business owners and professionals who spend significant time on repetitive browser tasks—such as research, content drafting, and workflow automation. By turning recurring tasks into teachable, reusable skills and maintaining user oversight for sensitive actions, Aye streamlines browser-based workflows, potentially reducing manual effort and errors. The profiles feature is useful for separating work and personal accounts, but the lack of skill portability between profiles may limit cross-account efficiency.",
+      "contrarian_take": "Most browser automation tools simply replay recorded actions, often failing when page layouts or authentication steps change. Aye's teachable approach allows users to correct and generalize workflows, but the lack of skill sharing between profiles is a missed opportunity for broader adoption. Additionally, the real test is how Aye handles partial failures or DOM shifts—areas where browser agents historically struggle, and which are not fully addressed in the launch material.",
+      "risks_or_caveats": [
+        "No information on pricing beyond launch being free.",
+        "Skill portability between profiles is not supported, requiring manual rebuilding.",
+        "Handling of edge cases (layout changes, authentication steps) and recovery from partial failures remains unclear.",
+        "Long-term reliability of automation is unproven, as browser agents often degrade after many runs."
+      ],
+      "sources": [
+        "https://www.producthunt.com/products/aye-browser"
+      ]
+    },
+    "rawBrief": "Aye is a Chromium-based AI browser for macOS and Windows that acts as a teachable AI intern, automating everyday browser workflows through visible, reviewable actions.",
+    "citations": [
+      "https://www.producthunt.com/products/aye-browser"
+    ],
+    "model": "openai/gpt-4.1",
+    "usage": {
+      "completion_tokens": 516,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "latency_checkpoint": {
+        "engine_tbt_ms": 14,
+        "engine_ttft_ms": 62,
+        "engine_ttlt_ms": 7301,
+        "pre_inference_ms": 134,
+        "service_tbt_ms": 14,
+        "service_ttft_ms": 614,
+        "service_ttlt_ms": 7844,
+        "total_duration_ms": 7718,
+        "user_visible_ttft_ms": 480
+      },
+      "prompt_tokens": 1506,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0
+      },
+      "total_tokens": 2022
+    }
+  },
+  "image": "/blog/images/aye-browser-a-teach-your-own-ai-intern-for-repetitive-web-tasks.png",
+  "audio": "/blog/audio/aye-browser-a-teach-your-own-ai-intern-for-repetitive-web-tasks.mp3"
+}
