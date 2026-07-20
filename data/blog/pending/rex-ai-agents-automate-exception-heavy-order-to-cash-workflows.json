@@ -1,0 +1,109 @@
+{
+  "article": {
+    "title": "Rex AI Agents Automate Exception‑Heavy Order‑to‑Cash Workflows",
+    "description": "Rex’s AI agents handle collections, portal uploads, and AR inbox triage for global finance teams, cutting manual effort and catching invoice errors before they hit cash flow.",
+    "category": "AI Automation",
+    "tags": [
+      "order-to-cash",
+      "accounts receivable",
+      "AI agents",
+      "finance automation",
+      "enterprise software"
+    ],
+    "directAnswer": "Rex deploys AI‑driven agents that automate collections outreach, portal‑based invoice uploads, and AR inbox triage, while routing low‑confidence or exception cases to human analysts. The result is fewer manual steps, faster cash collection, and an audit‑ready trail for large enterprises.",
+    "keyTakeaways": [
+      "AI agents automate high‑volume, exception‑heavy AR tasks that rule‑based RPA cannot handle.",
+      "Every action is logged inside the ERP/CRM or via a proxy layer, satisfying audit requirements.",
+      "In testing, Rex flagged foreign‑exchange mismatches on invoices before they caused cash‑flow delays.",
+      "Effectiveness hinges on the agents’ ability to recognize low‑confidence decisions and hand them off to humans.",
+      "Pricing is undisclosed; Rex targets global enterprises and is backed by Y Combinator."
+    ],
+    "body": "## What Is Rex?\nRex is an AI‑agent platform built by **rex.inc**, co‑founded by Merlin Kafka and Lewis—both former members of Sequence’s AR team. Launched in 2026 with Y Combinator backing, Rex focuses on the order‑to‑cash (O2C) cycle for global enterprises, specifically the exception‑heavy steps that have resisted traditional automation.\n\n## How the Agents Work\nRex agents sit on top of a company’s existing finance stack (ERP, CRM, customer portals) and perform three core functions:\n1. **Collections outreach** – send reminders, log responses, and flag high‑risk accounts.\n2. **Portal uploads** – log into customer portals, download invoices, and push data into systems such as NetSuite.\n3. **AR inbox triage** – classify incoming emails, surface ambiguous issues, and route them to a designated human queue.\nEach interaction is recorded in a granular audit trail, either directly in the ERP/CRM or via a proxy logging layer, providing end‑to‑end visibility for auditors.\n\n## Why Traditional Automation Falls Short\nRule‑based RPA works only when processes are static. Enterprise AR is plagued by:\n- Currency and FX mismatches that appear only on cross‑border invoices.\n- Frequently changing portal layouts.\n- Judgment calls on credit holds, disputes, and payment exceptions.\nWhen a rule‑based bot encounters any of these, it breaks and requires costly re‑engineering. Rex agents embed a lightweight confidence model: actions below a confidence threshold are automatically handed off to a human, preserving continuity without manual re‑work.\n\n## Real‑World Validation: Synthesia\nSynthesia, a video‑creation platform, runs its AR operations on Rex. During a test run, Rex identified FX mismatches on several invoices before they could delay cash receipt, demonstrating proactive error detection.\n\n## Business Impact\n- **Accelerated cash flow** – Automated collections and portal uploads shrink the lag between invoicing and payment.\n- **Reduced manual effort** – Finance staff no longer copy data from portals into ERP systems daily.\n- **Audit‑ready records** – Every step, from hold approval to invoice upload, is traceable inside the finance system.\n- **Scalable exception handling** – Low‑confidence cases are routed to humans, keeping the bulk of work automated while safeguarding accuracy.\n\n## Risks & Caveats\n- **Pricing opacity** – No public rates; budgeting requires a direct quote.\n- **Decision reliability** – The platform’s value depends on how accurately agents flag low‑confidence actions; mis‑routing could affect revenue recognition.\n- **Portal brittleness** – Agents rely on UI selectors; major portal redesigns may need re‑configuration.\n- **Customer‑facing errors** – If confidence thresholds are set too low, agents could send inaccurate communications.\n\n## Bottom Line\nRex tackles the portion of order‑to‑cash that has historically defied automation: exception‑heavy, judgment‑driven tasks. By combining AI agents with human routing and built‑in audit trails, it promises faster cash, fewer manual errors, and compliance‑ready logs. The upside is clear, but success hinges on the agents’ decision‑making reliability and the stability of the portals they automate. Enterprises willing to pilot the solution and accept an undisclosed subscription model can assess whether Rex delivers on its real‑world finance‑automation promise.",
+    "faqs": [
+      {
+        "question": "Does Rex replace my existing ERP?",
+        "answer": "No. Rex integrates with your current ERP/CRM and acts as an automation layer that feeds data into the system."
+      },
+      {
+        "question": "What happens if an agent makes a mistake?",
+        "answer": "Agents operate with confidence thresholds; any low‑confidence action is automatically routed to a human for review before it is posted."
+      },
+      {
+        "question": "Is there a free trial or disclosed pricing?",
+        "answer": "The brief does not mention a free trial or specific pricing; interested firms must contact Rex for a quote."
+      }
+    ],
+    "businessProblem": "Finance teams spend countless hours manually copying data and handling exception‑heavy AR tasks, slowing cash flow and introducing errors.",
+    "directBusinessUse": "Deploy Rex agents to auto‑upload portal invoices into NetSuite (or other ERP) and to triage disputed AR cases to senior analysts, reducing manual effort and accelerating collections."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "Rex",
+      "url": "https://www.producthunt.com/products/rex-7",
+      "stream": "ai-tools",
+      "source": "ProductHunt AI",
+      "angle": "",
+      "why": "heuristic"
+    },
+    "brief": {
+      "verified": true,
+      "headline_finding": "Rex launches AI agents to automate and improve order-to-cash workflows for global enterprises, tackling exception-heavy finance tasks where traditional automation fails.",
+      "key_facts": [
+        "Rex is developed by rex.inc, co-founded by Merlin Kafka and Lewis, who previously built AR software at Sequence.",
+        "Rex provides AI agents that automate order-to-cash operations, including collections, portal uploads, and AR inbox management, integrating with existing enterprise finance stacks.",
+        "The agents are designed to handle exception-heavy workflows and judgment calls, routing sensitive or uncertain cases to human teams.",
+        "Synthesia, a known company, currently runs its AR (accounts receivable) operations on Rex.",
+        "Rex flagged FX mismatches in test invoices, demonstrating its ability to catch cross-border invoicing issues before cash bottlenecks occur.",
+        "Agents maintain a step-by-step audit trail, either inside the ERP/CRM or via a proxy logging layer, for finance auditors.",
+        "Payment is required for Rex; specific pricing details are not provided in the source.",
+        "Rex is targeted at global enterprises, especially finance teams dealing with high-volume, exception-heavy order-to-cash processes.",
+        "Rex launched in 2026 and is associated with Y Combinator."
+      ],
+      "business_angle": "Rex addresses the persistent inefficiency in enterprise finance teams where manual data copying and exception handling in AR processes (e.g., 'copy from portal → NetSuite every single day') have resisted traditional automation. By automating end-to-end workflows and routing edge cases to humans, Rex reduces manual workload, speeds up cash flow, and minimizes errors in critical financial operations.",
+      "contrarian_take": "Most automation tools fail in order-to-cash because of frequent exceptions and judgment calls. Rex's focus on exception resolution and audit trails suggests it is built for real-world complexity, not just routine automation. However, its effectiveness depends on how reliably agents handle judgment calls and route sensitive actions—areas where automation historically breaks down.",
+      "risks_or_caveats": [
+        "No specific pricing or availability details are disclosed.",
+        "The reliability of agent decision-making and routing to humans is critical, especially since errors in AR can impact revenue recognition and month-end close.",
+        "Agent performance on browser automation (portal uploads) may be brittle if customer portals change frequently.",
+        "There is potential for incorrect customer-facing actions if agent confidence thresholds or hold steps are not robust."
+      ],
+      "sources": [
+        "https://www.producthunt.com/products/rex-7"
+      ]
+    },
+    "rawBrief": "Rex launches AI agents to automate and improve order-to-cash workflows for global enterprises, tackling exception-heavy finance tasks where traditional automation fails.",
+    "citations": [
+      "https://www.producthunt.com/products/rex-7"
+    ],
+    "model": "openai/gpt-4.1",
+    "usage": {
+      "completion_tokens": 541,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "latency_checkpoint": {
+        "engine_tbt_ms": 10,
+        "engine_ttft_ms": 67,
+        "engine_ttlt_ms": 5730,
+        "pre_inference_ms": 252,
+        "service_tbt_ms": 10,
+        "service_ttft_ms": 789,
+        "service_ttlt_ms": 6401,
+        "total_duration_ms": 6158,
+        "user_visible_ttft_ms": 537
+      },
+      "prompt_tokens": 1494,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0
+      },
+      "total_tokens": 2035
+    }
+  },
+  "image": "/blog/images/rex-ai-agents-automate-exception-heavy-order-to-cash-workflows.png",
+  "audio": "/blog/audio/rex-ai-agents-automate-exception-heavy-order-to-cash-workflows.mp3"
+}
