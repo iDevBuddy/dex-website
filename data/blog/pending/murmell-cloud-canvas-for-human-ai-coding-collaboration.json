@@ -1,0 +1,89 @@
+{
+  "article": {
+    "title": "Murmell: Cloud Canvas for Human‑AI Coding Collaboration",
+    "description": "Murmell lets dev teams and AI agents code together in a shared cloud canvas, avoiding merge conflicts and keeping work alive when laptops close.",
+    "category": "AI Automation",
+    "tags": [
+      "AI coding agents",
+      "collaborative development",
+      "cloud IDE",
+      "merge conflict avoidance",
+      "software teams"
+    ],
+    "directAnswer": "Murmell is a browser‑based cloud canvas where developers and AI coding agents edit the same Git repo together. Files are claimed before writing, preventing overwrites, and the workspace runs continuously on a cloud VM even when a laptop lid is closed.",
+    "keyTakeaways": [
+      "Human and AI agents edit the same repo in real time without merge conflicts.",
+      "Work persists on a cloud VM, so closing a laptop does not stop progress.",
+      "Free for 2 weeks plus $60 of Claude Code credits – a low‑cost way to test the platform.",
+      "Supported agents: Claude Code, Codex, Kimi, OpenCode; OpenClaw and Hermes are announced but not yet live.",
+      "Enterprise adoption is limited by cloud‑only deployment and undisclosed security details."
+    ],
+    "body": "## How does Murmell enable human‑AI co‑editing?\nMurmell presents a browser‑based canvas that mirrors a Git repository. When a developer or an AI agent opens a file, the platform **claims** it for that actor. While claimed, no other participant can write to the same file, eliminating merge‑conflict headaches.\n\n## What does “cloud‑only” mean for daily workflow?\nAll edits run on a persistent cloud VM. You can close your laptop, lock the screen, or switch devices and the canvas stays alive. Changes appear instantly, are previewed in‑canvas, and are automatically committed back to the repo—no local git pulls or pushes required.\n\n## Which AI agents are available today?\n- **Claude Code** – bundled with $60 launch credits.\n- **Codex** – OpenAI’s code‑focused model.\n- **Kimi** – a concise‑code generator.\n- **OpenCode** – an open‑source alternative.\nFuture agents (OpenClaw, Hermes) are announced but not yet accessible.\n\n## Pricing and launch incentives\nThe service is free for the first 14 days and includes $60 of Claude Code credits. Pricing after the trial has not been announced.\n\n## Who should adopt Murmell?\n- **Software engineering teams** that need a single source of truth for human‑bot collaboration.\n- **Client‑facing groups** that want to share a live coding environment with external stakeholders.\n- **Start‑ups** looking for a low‑cost experiment with AI‑augmented development.\n\n## Business impact\nMurmell removes two costly friction points:\n1. **Merge conflicts** – the claim system guarantees only one actor writes to a file at a time.\n2. **Local‑machine downtime** – the cloud workspace runs continuously, so laptops can be closed without halting the build pipeline.\nThe result is faster iteration cycles and higher utilization of AI agents for boilerplate or refactoring tasks.\n\n## Risks and caveats\n| Risk | Impact | Mitigation |\n|------|--------|------------|\n| Limited agent roster | Teams needing unsupported models (e.g., Gemini) must fall back to other tools. | Use Murmell for prototyping; keep a local IDE for specialized work. |\n| Cloud‑only deployment | Sensitive code may conflict with compliance policies. | Conduct a security review; restrict access via VPN until an on‑prem roadmap appears. |\n| Undisclosed security details | Enterprises may hesitate to store proprietary code. | Request a security whitepaper before scaling. |\n| Mobile‑simulator preview not released | Mobile developers cannot preview builds inside Murmell today. | Continue using existing simulators; monitor product updates. |\n\n## Quick deployment checklist\n1. Sign up via the Product Hunt launch page and claim the 2‑week free trial.\n2. Connect your Git repo (GitHub, GitLab, or Bitbucket).\n3. Invite team members.\n4. Open a file – the first actor automatically claims it; others see a lock icon.\n5. Edit in real time; changes are previewed instantly.\n6. The canvas auto‑commits on save; you can create PRs manually if desired.\n7. (Future) Use built‑in mobile simulators once released.\n\n## Contrarian take: Conflict avoidance > speed\nMost AI‑coding tools market themselves as “speed boosters.” Murmell’s real edge is collaborative conflict avoidance. Teams waste hours untangling merge wars after multiple contributors (human or bot) edit the same file. By serializing writes at the file level, Murmell eliminates that hidden cost, delivering measurable productivity gains that competitors overlook.\n\n## Bottom line for business owners\nIf your workflow suffers from frequent merge conflicts or idle laptops, Murmell offers a concrete, low‑risk experiment: a free two‑week trial that shows whether continuous cloud‑based collaboration speeds delivery and reduces coordination overhead. The trade‑off is a cloud‑only environment with limited agent options and an undisclosed security posture—factors you must weigh against the potential gains.\n\n---\n*All facts sourced from the Product Hunt listing for Murmell (https://www.producthunt.com/products/murmell).*",
+    "faqs": [
+      {
+        "question": "Can I use Murmell with my own AI model?",
+        "answer": "Currently only Claude Code, Codex, Kimi, and OpenCode are supported. Custom model integration has not been announced."
+      },
+      {
+        "question": "Is there an on‑premise version?",
+        "answer": "No. Murmell is cloud‑only at launch, which may limit compliance for regulated industries."
+      },
+      {
+        "question": "What happens to work when the laptop lid is closed?",
+        "answer": "The cloud VM continues running; all edits stay live in the canvas and are auto‑committed."
+      }
+    ],
+    "businessProblem": "Distributed dev teams waste time resolving merge conflicts and lose productivity when local machines are offline.",
+    "directBusinessUse": "Run a shared cloud workspace where developers and AI agents edit code simultaneously without merge conflicts, keeping projects moving 24/7."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "Murmell",
+      "url": "https://www.producthunt.com/products/murmell",
+      "stream": "ai-tools",
+      "source": "ProductHunt AI",
+      "angle": "",
+      "why": "heuristic"
+    },
+    "brief": {
+      "verified": true,
+      "headline_finding": "Murmell lets dev teams and AI coding agents collaborate in a shared cloud canvas that keeps work running when laptops are closed.",
+      "key_facts": [
+        "Creator: Moss'Ab Mirande‑Ney (the maker of Murmell).",
+        "Launch: 2026 (listed on Product Hunt as \"Launching today\" with a 2026 launch date).",
+        "Core product: a browser‑based cloud canvas where a human team and AI agents edit the same Git repo together.",
+        "Agents currently supported: Claude Code, Codex, Kimi, and OpenCode; future agents announced include OpenClaw and Hermes.",
+        "Technical feature: agents “claim” files before writing, preventing overwrite conflicts while humans and bots work in parallel.",
+        "Workflow: work continues on the cloud machine even after the laptop lid is closed; changes are previewed in‑canvas and automatically committed back to Git.",
+        "Pricing/offer: free for the first 2 weeks plus $60 of Claude Code credits (launch offer).",
+        "Target users: software engineering teams, developer groups, and potentially client collaborators who need a shared coding environment.",
+        "Planned extensions: iOS and Android simulators inside the canvas for mobile‑build previews."
+      ],
+      "business_angle": "Murmell solves the coordination bottleneck in AI‑augmented development by giving teams a single, cloud‑hosted workspace where human developers and multiple coding agents can work simultaneously without merge conflicts, enabling faster iteration and reducing downtime caused by local machine constraints.",
+      "contrarian_take": "While most AI‑coding tools market themselves as “speed boosters,” Murmell’s real differentiator—and the point many overlook—is its focus on collaborative conflict‑avoidance. The real value isn’t just faster code generation; it’s keeping a distributed team (human + bot) in sync without the usual merge‑mess, which is a pain point that most competitors ignore.",
+      "risks_or_caveats": [
+        "Only a limited set of agents are supported today; promised agents (OpenClaw, Hermes) are not yet available.",
+        "The platform is cloud‑only; on‑prem or client‑controlled environments are not currently supported, which may raise security or compliance concerns.",
+        "Security and data‑privacy details are not disclosed, a potential barrier for enterprises handling sensitive codebases.",
+        "Future mobile‑simulator features are announced but not yet released, so current mobile‑dev workflows remain unsupported."
+      ],
+      "sources": [
+        "https://www.producthunt.com/products/murmell"
+      ]
+    },
+    "rawBrief": "Murmell lets dev teams and AI coding agents collaborate in a shared cloud canvas that keeps work running when laptops are closed.",
+    "citations": [
+      "https://www.producthunt.com/products/murmell"
+    ],
+    "model": "openai/gpt-oss-120b",
+    "usage": {
+      "prompt_tokens": 1890,
+      "total_tokens": 2722,
+      "completion_tokens": 832,
+      "prompt_tokens_details": null
+    }
+  },
+  "image": "/blog/images/murmell-cloud-canvas-for-human-ai-coding-collaboration.png",
+  "audio": "/blog/audio/murmell-cloud-canvas-for-human-ai-coding-collaboration.mp3"
+}
