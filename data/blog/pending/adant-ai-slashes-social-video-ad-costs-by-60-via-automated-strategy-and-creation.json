@@ -1,0 +1,85 @@
+{
+  "article": {
+    "title": "AdAnt AI Slashes Social Video Ad Costs by 60% via Automated Strategy & Creation",
+    "description": "AdAnt AI automates research, strategy, and video production for TikTok, Instagram and YouTube ads, delivering a repeatable workflow that the founders say cut paid acquisition costs by ~60% on their own products.",
+    "category": "AI Agents",
+    "tags": [
+      "Social Advertising",
+      "Video Automation",
+      "Cost Reduction",
+      "Creative AI"
+    ],
+    "directAnswer": "AdAnt AI is a web‑based platform that converts platform‑wide viral‑content research into a data‑driven ad playbook, then lets marketers generate and export TikTok, Instagram or YouTube video ads without manual trend scouting, promising roughly a 60% reduction in CPA based on the founders’ internal tests.",
+    "keyTakeaways": [
+      "Built on a system that generated 50 M+ organic views and a 60 % CPA drop for the founders’ own products.",
+      "One‑month free trial; post‑trial pricing is not disclosed.",
+      "Automates trend research, strategy brief creation, and asset generation, but still requires brand‑guideline input and human sign‑off.",
+      "Codex and Claude plugins are announced but not yet released.",
+      "Risks: manual performance feedback loop, possible brand‑consistency drift, and unknown enterprise pricing."
+    ],
+    "body": "## What is AdAnt AI?\nAdAnt AI launched in 2026 (adant.ai) as a “team of Creative Agents” that handles **Social Ad Strategy, Creation, and Iteration** for TikTok, Instagram and YouTube. The platform claims a repeatable system that turned 50 M+ organic views into a 60 % CPA reduction for the founders’ own products.\n\n## How does it work?\n1. **Trend research** – The engine scrapes the three platforms, extracts hook length, pacing and visual motifs, and outputs a concise strategy brief.\n2. **Strategy brief** – Users receive a playbook with recommended concepts, copy angles and visual cues.\n3. **Creative generation** – Within the same UI, marketers drag‑and‑drop AI‑suggested assets, edit scenes, and export MP4 files.\n4. **Iteration** – All variants are saved in an asset library for rapid A/B testing; the system does not automatically ingest performance data.\n\n## What impact can it have on your business?\n| Business need | AdAnt AI benefit |\n|---|---|\n| Lower CPA | Founders report a ~60 % drop on their own campaigns. |\n| Faster creative cycles | Eliminates manual trend scouting and storyboard drafting, delivering a ready‑to‑use brief in minutes. |\n| More ad variants | The asset library lets teams spin up multiple videos from a single brief, increasing the chance of finding a high‑performing hook. |\n| Reduced talent spend | Provides research and first‑draft assets, decreasing reliance on a full‑time in‑house video team. |\n\n## What are the limitations?\n- **Human oversight required** – Brand guidelines must be uploaded and every AI‑generated concept needs a human review to avoid tone drift.\n- **Manual feedback loop** – Post‑click metrics are not automatically fed back; users must record CPA themselves and re‑import the data.\n- **Pricing opacity** – Only a 1‑month free trial is disclosed; enterprise budgeting is uncertain.\n- **Plugin availability** – Codex and Claude integrations are announced as “coming soon,” so current use is limited to the web app.\n\n## How to get started?\n1. Sign up for the 1‑month free trial at **adant.ai**.\n2. Upload brand assets (logo, color palette, tone guide).\n3. Choose the target platform(s).\n4. Review the AI‑generated strategy brief.\n5. Create and export videos via the infinite canvas.\n6. Launch, track CPA in your ad manager, and manually feed results back into the next brief.\n\n---\n*Source: Product Hunt listing for AdAnt AI (2026)*",
+    "faqs": [
+      {
+        "question": "Is there a long‑term contract required?",
+        "answer": "The brief only mentions a 1‑month free trial; no contract terms or pricing details are provided."
+      },
+      {
+        "question": "Can AdAnt AI replace an in‑house creative team?",
+        "answer": "It can automate research and first‑draft asset creation, but brand oversight and final creative decisions still need human input."
+      }
+    ],
+    "businessProblem": "Marketers spend excessive time and budget on manual trend research, storyboard development, and iterative video testing for TikTok, Instagram and YouTube ads.",
+    "directBusinessUse": "Generate data‑driven ad concepts, produce multiple video variants quickly, and test them to lower CPA without expanding the creative staff."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "AdAnt AI",
+      "url": "https://www.producthunt.com/products/adant-ai",
+      "stream": "ai-tools",
+      "source": "ProductHunt AI",
+      "angle": "",
+      "why": "heuristic"
+    },
+    "brief": {
+      "verified": true,
+      "headline_finding": "AdAnt AI offers AI‑driven social ad strategy, creation and iteration to cut paid acquisition costs by ~60% and generate scroll‑stopping videos for TikTok, Instagram and YouTube.",
+      "key_facts": [
+        "Founded by a team of “nerds and developers” led by Iris Tu (listed as the Maker on Product Hunt).",
+        "Launched in 2026 (adant.ai) and announced on Product Hunt on the day of launch.",
+        "Positions itself as a “team of Creative Agents” that handles Social Ad Strategy, Creation, and Iteration for TikTok, Instagram and YouTube.",
+        "Claims to be built on a repeatable system that generated 50 M+ organic views and reduced paid acquisition costs by 60 % on average for the founders’ own products.",
+        "Researches viral content across the three platforms, extracts repeatable patterns, and turns them into content strategies and high‑converting video ads.",
+        "Offers a free‑trial period of 1 month; full pricing details are not disclosed in the source material.",
+        "Plans to release free plugins for Codex and Claude that embed research and strategy capabilities directly inside those tools.",
+        "Early‑access to the plugins can be requested by replying “SOCIAL” in the Product Hunt discussion.",
+        "Target users include brands and subscription‑based apps that need acquisition, education, social‑proof or retention video ads.",
+        "Workflow improvements include eliminating manual trend research, creative brainstorming, and iterative video testing by automating strategy generation and providing an “infinite canvas” and asset library for creation."
+      ],
+      "business_angle": "AdAnt AI promises to shrink the time and cost of producing high‑performing social video ads by automating the research‑to‑creation pipeline, allowing marketers to launch more variants faster, lower CPA, and scale organic reach without hiring a full in‑house creative team.",
+      "contrarian_take": "While the hype centers on “viral, scroll‑stopping ads,” the platform still relies on users to provide brand guidelines and to manually approve or refine AI‑generated concepts; the promised closed‑loop performance feedback is not yet demonstrated, so the true ROI may depend heavily on human oversight.",
+      "risks_or_caveats": [
+        "Performance feedback loop after publishing ads is not described; users may need to manually feed results back into the system.",
+        "Brand consistency could be a challenge if AI suggestions drift from established visual or tone guidelines.",
+        "Pricing beyond the 1‑month free trial is undisclosed, making budgeting uncertain for enterprises.",
+        "The plugins for Codex and Claude are announced as “coming soon,” so current functionality may be limited to the web app."
+      ],
+      "sources": [
+        "https://www.producthunt.com/products/adant-ai"
+      ]
+    },
+    "rawBrief": "AdAnt AI offers AI‑driven social ad strategy, creation and iteration to cut paid acquisition costs by ~60% and generate scroll‑stopping videos for TikTok, Instagram and YouTube.",
+    "citations": [
+      "https://www.producthunt.com/products/adant-ai"
+    ],
+    "model": "openai/gpt-oss-120b",
+    "usage": {
+      "prompt_tokens": 1872,
+      "total_tokens": 2971,
+      "completion_tokens": 1099,
+      "prompt_tokens_details": null
+    }
+  },
+  "image": "/blog/images/adant-ai-slashes-social-video-ad-costs-by-60-via-automated-strategy-and-creation.png",
+  "audio": "/blog/audio/adant-ai-slashes-social-video-ad-costs-by-60-via-automated-strategy-and-creation.mp3"
+}
