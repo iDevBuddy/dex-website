@@ -1,0 +1,89 @@
+{
+  "article": {
+    "title": "Claude Team‑Boot: Enforce Brand‑Aligned Coding Rules with a 100‑Token Index",
+    "description": "Inject a lightweight rule index at session start, fetch full directives on demand, and keep LLM performance high while automating code‑standard compliance.",
+    "category": "AI Automation",
+    "tags": [
+      "Claude",
+      "Agent Skills",
+      "Coding Standards",
+      "DevOps",
+      "Security"
+    ],
+    "directAnswer": "Claude’s team‑boot skill loads a ~100‑token index of your team’s coding rules when a session starts; when code matches a rule, the full text is retrieved on demand, preserving model speed while automatically enforcing brand and code standards.",
+    "keyTakeaways": [
+      "An .events.json hook injects a ~100‑token rule index at session start.",
+      "Full rule text is pulled only when a match occurs, avoiding the 13.9%‑85% performance hit of long contexts (arXiv:2510.05381).",
+      "Rules live in a version‑controlled git repo (team‑ai‑directives) and are updated via PRs.",
+      "One‑line CLI install works with any Agent‑Skills‑compatible coder (Claude Code, Codex, OpenCode, Cursor, Copilot, etc.).",
+      "Post‑session `levelup‑specify` extracts Context Directive Records (CDR) and commits them back to the repo.",
+      "Security hygiene – branch protection, token rotation, and disabling auto‑run files – is mandatory."
+    ],
+    "body": "## How team‑boot works\nWhen a coding session begins, the **team‑boot** skill reads an `.events.json` hook and injects a **~100‑token index** that references the team’s coding standards, personas, and decision logs stored in a separate git repository (`team‑ai‑directives`). The index is tiny enough to keep the model’s context clean.\n\nIf the agent detects that the current task touches a regulated area (e.g., a SQL query), it **retrieves the full rule text on demand** and presents it to the developer. This selective retrieval sidesteps the **13.9%–85% degradation** observed when LLMs process large contexts (arXiv:2510.05381).\n\n---\n## Installation (single command)\nbash\n# For OpenCode agents\nnpx adlc-skills-cli add tikalk/adlc-team-skills -a opencode\n# For Claude agents\nnpx skills add tikalk/adlc-team-skills -a claude -g\n\nThe command clones the skill package, registers the `.events.json` hook, and prompts you to link your own `team‑ai‑directives` repository. The repo must be version‑controlled, reviewed via PR, and protected by branch rules.\n\n---\n## Agent compatibility\nTeam‑boot follows the **Agent Skills** standard, so it works with any compliant coder, including:\n- Claude Code\n- Codex\n- OpenCode\n- Cursor\n- Copilot\n- Nine additional agents (see the skill’s README).\nBecause only an index is injected, overhead is negligible regardless of the underlying model.\n\n---\n## Turning fixes into future intelligence\nAfter a session, run:\nbash\nlevelup-specify\n\nThe tool extracts **Context Directive Records (CDR)**—the concrete fixes you made—and commits them back to `team‑ai‑directives`. Over time the repository becomes richer, automatically surfacing the most relevant standards for new tasks.\n\n---\n## Security incident & mitigations\nOn **2026‑07‑27** a malicious payload was injected into `.claude/` and `.vscode/` directories. Remediation steps:\n1. Rewrite repository history to purge the payload.\n2. Rotate all access tokens.\n3. Harden branch protection (require PR reviews, block force‑pushes).\n\n**Best practice:** treat `.claude/` and `.vscode/` as executable files, disable any auto‑run extensions in IDEs, and audit the repo regularly.\n\n---\n## Keeping the rule set current\nStale directives cause false positives. Use the `team-repair --build-to-delete` workflow to prune unused rules and schedule a quarterly review of `team‑ai‑directives`.\n\n---\n## Business impact\n| Benefit | Why it matters |\n|---|---|\n| **Reduced manual review** | Agents surface the exact rule before a PR is opened, cutting review effort. |\n| **Brand‑consistent code** | Every developer sees the same standards from day one, eliminating drift between personal `.claude.md` files. |\n| **Accelerated onboarding** | New hires receive the rule index automatically; no hunting for style guides. |\n| **Lower defect rate** | Early enforcement catches violations before they become bugs. |\n| **Supply‑chain safety** | Version‑controlled repo with PR review and branch protection mitigates malicious rule injection. |\n\n---\n## Quick implementation checklist\n1. **Clone** your `team‑ai‑directives` repo and ensure it contains the latest standards.  \n2. **Run** the CLI install command for your chosen agent.  \n3. **Confirm** the `.events.json` hook fires (the index will appear in the session log).  \n4. **After each session**, run `levelup-specify` to capture CDRs.  \n5. **Lock down** the repo: enable branch protection, rotate tokens, and disable auto‑run files in VS Code.\n\n---\n## Contrarian take\nMost vendors claim that feeding more context improves model output. The team‑boot data shows the opposite: bulk context can degrade Claude’s performance by **up to 85%**. A lightweight index with on‑demand retrieval delivers higher compliance fidelity without sacrificing speed.\n\n---\n## Risks & mitigations at a glance\n- **Executable files** in `.claude/`/`.vscode/`: disable auto‑run tasks, audit regularly.\n- **Stale rules**: run `team-repair --build-to-delete` quarterly.\n- **Misconfiguration**: verify the repo link; a missing index disables enforcement.\n- **Supply‑chain attacks**: enforce strict branch protection and rotate tokens after any breach.\n\n---\n## Bottom line\nEmbedding brand‑aligned coding standards directly into Claude via the team‑boot skill turns a static style guide into an active guardrail. The result: faster onboarding, fewer manual reviews, and measurable quality gains—provided the rule repository remains secure and up‑to‑date.",
+    "faqs": [
+      {
+        "question": "Do I need to rewrite existing code to use team‑boot?",
+        "answer": "No. The skill only adds an index at session start; existing code runs unchanged. Enforcement occurs only when a rule match is detected."
+      },
+      {
+        "question": "Can I use team‑boot with non‑Claude agents?",
+        "answer": "Yes. Any agent that implements the Agent Skills standard (e.g., Codex, Cursor, Copilot) can load the same index and enforce the same rules."
+      },
+      {
+        "question": "What happens if the rule repository is unavailable?",
+        "answer": "The agent falls back to a no‑rule mode and continues coding without automatic enforcement until the repository is re‑linked."
+      }
+    ],
+    "businessProblem": "Inconsistent coding standards create manual review overload, brand drift, and higher defect rates.",
+    "directBusinessUse": "Install team‑boot, link a version‑controlled `team‑ai‑directives` repo, and let Claude automatically surface the correct rule whenever a developer writes code, reducing review effort and ensuring brand‑aligned compliance from day one."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "Agent skills that bring team coding standards to Claude Code and Codex",
+      "url": "https://github.com/tikalk/adlc-team-skills",
+      "stream": "claude-mcp",
+      "source": "Hacker News",
+      "angle": "Enforcing Brand and Code Standards via Claude MCP Skills",
+      "why": "Solves the 'hallucination/style' pain point by using MCP to force AI agents to adhere to specific company coding and documentation standards."
+    },
+    "brief": {
+      "verified": true,
+      "headline_finding": "Claude’s new “team‑boot” skill injects a lightweight index of a team’s coding standards at session start, letting agents enforce brand and code rules on demand.",
+      "key_facts": [
+        "team‑boot runs automatically at session start via an .events.json hook and injects an index of team rules, personas, and decisions – about a hundred tokens long (\"roughly a hundred tokens\").",
+        "When a task matches a rule (e.g., touching SQL), the agent pulls the full rule text on demand, avoiding full‑context overload.",
+        "The index lives in a version‑controlled git repo (team‑ai‑directives) reviewed by PR, shared across the whole team.",
+        "Installation uses the skills CLI: `npx adlc-skills-cli add tikalk/adlc-team-skills -a opencode` (or `npx skills add tikalk/adlc-team-skills -a claude -g`).",
+        "Works with any agent supporting the Agent Skills standard – Claude Code, Codex, OpenCode, Cursor, Copilot, and nine other coding agents.",
+        "Long contexts degrade LLM performance by 13.9%–85% (arXiv:2510.05381). The index‑first design mitigates this.",
+        "After a session, `levelup-specify` extracts hard‑won fixes as Context Directive Records (CDR) and commits them back to the repo, making future sessions smarter.",
+        "Security incident on 2026‑07‑27 injected a malicious payload into .claude/ and .vscode/ directories; remediation included history rewrite, token rotation, and branch‑protection updates."
+      ],
+      "business_angle": "A company can embed its brand‑aligned coding standards directly into Claude’s workflow: install the skill, link the team‑ai‑directives repo, and let the agent automatically surface the correct rule whenever a developer writes code. This reduces manual code‑review overhead, eliminates drift between personal .claude.md files, and ensures every PR complies with documented conventions from day one, accelerating onboarding and cutting defect rates.",
+      "contrarian_take": "While many vendors push “more context” as a performance booster, the team‑boot approach proves the opposite—over‑loading the model harms output (13.9%–85% degradation). The smart‑index‑on‑demand model shows that selective retrieval, not bulk context, yields higher fidelity to team standards.",
+      "risks_or_caveats": [
+        "The repo’s .claude/ and .vscode/ files can execute code when opened in VS Code or a Claude Code session; teams must treat them as executable and disable auto‑run tasks.",
+        "Rules can become stale; the `team-repair --build-to-delete` workflow is required to prune unused directives.",
+        "Initial setup requires cloning and linking the team‑ai‑directives repo; misconfiguration can leave the agent without any standards.",
+        "Supply‑chain security must be monitored—past worm injection demonstrates the need for strict branch protection and token hygiene."
+      ],
+      "sources": [
+        "https://github.com/tikalk/adlc-team-skills"
+      ]
+    },
+    "rawBrief": "Claude’s new “team‑boot” skill injects a lightweight index of a team’s coding standards at session start, letting agents enforce brand and code rules on demand.",
+    "citations": [
+      "https://github.com/tikalk/adlc-team-skills"
+    ],
+    "model": "openai/gpt-oss-120b",
+    "usage": {
+      "prompt_tokens": 1934,
+      "total_tokens": 3095,
+      "completion_tokens": 1161,
+      "prompt_tokens_details": null
+    }
+  },
+  "image": "/blog/images/claude-team-boot-enforce-brand-aligned-coding-rules-with-a-100-token-index.png",
+  "audio": "/blog/audio/claude-team-boot-enforce-brand-aligned-coding-rules-with-a-100-token-index.mp3"
+}
