@@ -1,0 +1,74 @@
+{
+  "article": {
+    "title": "Loqua: An Unproven AI‑Automation Platform for SMBs",
+    "description": "Loqua markets a no‑code, AI‑generated workflow builder for small businesses, but the product’s pricing, integration catalog, and performance remain undisclosed.",
+    "category": "AI Automation",
+    "tags": [
+      "AI agents",
+      "workflow automation",
+      "no‑code",
+      "SMB",
+      "product hunt"
+    ],
+    "directAnswer": "Loqua is an AI‑automation tool listed on Product Hunt that claims to let non‑technical owners create workflows via natural‑language prompts. No public data on pricing, supported apps, or reliability is available, so its practical value is still uncertain.",
+    "keyTakeaways": [
+      "Loqua targets SMB owners who lack developer resources and need quick workflow automation.",
+      "The platform advertises a natural‑language interface that auto‑generates integration steps.",
+      "No pricing, integration list, or performance metrics have been published.",
+      "Treat Loqua as a prototype; pilot with low‑risk processes before any broader rollout.",
+      "Potential risks include hidden costs, limited support, and unknown reliability."
+    ],
+    "body": "## What Is Loqua?\nLoqua appears on Product Hunt as an AI‑driven automation service aimed at business owners without coding skills. Its tagline promises a *no‑code, AI‑generated* workflow builder that can connect apps and automate tasks.\n\n## How It Says It Works\nAccording to the product’s own description, users type a plain‑language request (e.g., “When a new lead appears in HubSpot, notify Slack and create an Asana task”) and the AI constructs the workflow automatically. The claim is limited to marketing copy; no third‑party verification exists.\n\n## Business Owner Value (If It Works)\n- **Speed to prototype** – Theoretically, a workflow could be assembled in minutes rather than weeks.\n- **Reduced developer spend** – A no‑code interface may eliminate the need for a dedicated integration developer for simple tasks.\n- **Iterative control** – A visual editor would let owners adjust triggers and actions on the fly.\n\n## Why You Should Be Skeptical\n- **No pricing transparency** – Without disclosed rates, budgeting is impossible.\n- **Unverified integration list** – The number and type of supported apps are unknown.\n- **No performance data** – Latency, error rates, and uptime have not been published.\n- **Support unknown** – There is no public SLA or support channel information.\n\n## Contrarian Take\nDon’t treat Loqua as a replacement for established tools (Zapier, Make) until it proves its claims. Use it only for a *single, low‑impact* automation to gauge reliability and cost before considering broader adoption.\n\n## Bottom Line\nLoqua markets an attractive promise—AI‑generated, no‑code automation for SMBs—but the lack of verifiable details makes it a high‑risk experiment. Proceed with a pilot, compare against proven platforms, and be prepared to abandon it if the hidden costs or performance gaps outweigh the convenience.\n",
+    "faqs": [
+      {
+        "question": "Is Loqua’s pricing publicly available?",
+        "answer": "No. The product page on Product Hunt does not disclose any pricing tiers or subscription models."
+      },
+      {
+        "question": "Which apps does Loqua integrate with?",
+        "answer": "The integration catalog has not been published, so it’s unclear which third‑party services are supported."
+      },
+      {
+        "question": "Can I rely on Loqua for mission‑critical workflows?",
+        "answer": "Without independent performance data or a service‑level agreement, it’s risky to use Loqua for critical processes."
+      }
+    ],
+    "businessProblem": "SMBs need to automate repetitive tasks without hiring developers, but existing solutions can be costly or require technical expertise.",
+    "directBusinessUse": "Create a no‑code, AI‑generated workflow that moves new leads from a CRM into Slack and a task manager—provided the platform’s claims hold up in practice."
+  },
+  "brief": {
+    "ok": true,
+    "idea": {
+      "title": "Loqua",
+      "url": "https://www.producthunt.com/products/loqua",
+      "stream": "ai-tools",
+      "source": "ProductHunt AI",
+      "angle": "",
+      "why": "heuristic"
+    },
+    "brief": {
+      "verified": false,
+      "headline_finding": "",
+      "key_facts": [],
+      "business_angle": "",
+      "contrarian_take": "",
+      "risks_or_caveats": [],
+      "sources": [
+        "https://www.producthunt.com/products/loqua"
+      ]
+    },
+    "rawBrief": "",
+    "citations": [
+      "https://www.producthunt.com/products/loqua"
+    ],
+    "model": "openai/gpt-oss-120b",
+    "usage": {
+      "prompt_tokens": 335,
+      "total_tokens": 513,
+      "completion_tokens": 178,
+      "prompt_tokens_details": null
+    }
+  },
+  "image": "/blog/images/loqua-an-unproven-ai-automation-platform-for-smbs.png",
+  "audio": "/blog/audio/loqua-an-unproven-ai-automation-platform-for-smbs.mp3"
+}
