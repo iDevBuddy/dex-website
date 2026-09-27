@@ -12,19 +12,19 @@ No framework migration or additional rendering dependency. The production build 
 
 The cloud runner uses the account-tested NVIDIA DeepSeek endpoint instead of the unavailable 120b endpoint or the older 20b writer. Provider availability and free quotas are externally controlled; there is no unlimited-service guarantee and no newly enabled paid provider.
 
-Primary-source practical briefs replace news-feed rewrites for scheduled drafts. The initial queue has eight briefs, each with official documentation. The analyst must retrieve at least two sources and match evidence excerpts literally. Missing evidence holds generation rather than writing from model memory. Article prompts distinguish proposed designs from first-hand tests, demand prerequisites, examples, numbered steps, failure handling, and verification. Internal links come from the actual repository catalogue. A separate editorial pass and a source-based fact check inspect the entire article including its FAQ and summary.
+Primary-source practical briefs replace news-feed rewrites for scheduled drafts. The initial queue has eight briefs, each with official documentation. After those, a planner may propose distinct use cases using only the same approved source catalogue. Duplicate titles/IDs and invented URLs are rejected; unavailable or insufficient evidence still holds the draft. Editors should expand the catalogue as coverage grows. The analyst must retrieve at least two sources and match evidence excerpts literally. Missing evidence holds generation rather than writing from model memory. Article prompts distinguish proposed designs from first-hand tests, demand prerequisites, examples, numbered steps, failure handling, and verification. Internal links come from the actual repository catalogue. A separate editorial pass and a source-based fact check inspect the entire article including its FAQ and summary.
 
 Mechanical checks cannot guarantee factual correctness or good writing. Failed/inconclusive checks create a held draft PR, which the ClickUp worker cannot publish. Human review remains necessary. The exact article revision must be approved.
 
 ## Cover decision and dependency
 
-Use the existing NVIDIA FLUX access with an article-specific visual concept. `sharp` is added to decode/validate the real image format, reject bad or undersized payloads, crop to 1280 by 720 and encode genuine PNG. The previous provider returned JPEG data despite the `.png` filename. The undocumented keyless Pollinations fallback is removed. Cover failures hold the draft for review.
+Use the existing NVIDIA FLUX access with an article-specific visual concept. `sharp` is added to decode/validate the real image format, reject bad or undersized payloads, crop to 1280 by 720 and encode genuine PNG. The previous provider returned JPEG data despite the `.png` filename. A vision review rejects lettering/gibberish, watermarks and unsuitable compositions, then permits one corrected retry within the run deadline. Its description supplies the actual image alt text. Inconclusive reviews fail closed; human review is still required. The undocumented keyless Pollinations fallback is removed. Cover failures hold the draft for review.
 
 Bing Image Creator is a free browser tool, not a verified free API for this cloud job. No browser-cookie automation or paid Microsoft Foundry service is configured. A reviewer may supply a separately licensed cover manually.
 
 ## Platform and approval consistency
 
-Netlify remains primary on Mon/Wed/Fri. GitHub Content Publisher becomes a later backup using the same atomic draft slot. The legacy breaking-news and direct-publish approval schedules are retired. No scheduled job writes an article directly to main. ClickUp approval polling remains on Netlify every 30 minutes. GitHub's account billing lock is outside this code change; backup execution remains unverified until unlocked. GitHub also must permit Actions to create PRs.
+Netlify remains primary on Mon/Wed/Fri. GitHub workflow migration is deferred at the owner's request. Its legacy workflow files are unchanged and its billing lock remains unresolved; they are not a verified backup to this Netlify flow. A shared-slot CLI entry point is prepared for a later migration. Netlify writes review branches, not articles directly to main. ClickUp approval polling remains on Netlify every 30 minutes. GitHub's account billing lock is outside this code change; backup execution remains unverified until unlocked. GitHub also must permit Actions to create PRs.
 
 ## Historical content
 

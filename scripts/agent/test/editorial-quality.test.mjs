@@ -2,11 +2,11 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import sharp from 'sharp'
 import { validateEvidence } from '../analyst.mjs'
-import { qualityIssues, TOPICS, selectTopic } from '../lib/editorial.mjs'
+import { qualityIssues, TOPICS, selectTopic, formatSourceLinks, validPlannedTopic } from '../lib/editorial.mjs'
 import { postMetadata } from '../lib/registry.mjs'
 import { buildMarkdown } from '../lib/article.mjs'
-import { normalizeCover, coverPrompt } from '../artdirector.mjs'
-import { chat } from '../lib/ai.mjs'
+import { normalizeCover, coverPrompt, usableCover } from '../artdirector.mjs'
+import { chat, safeJson } from '../lib/ai.mjs'
 import { documentHtml } from '../../blog/prerender.mjs'
 import { parseFrontmatter } from '../../blog/lib/content.mjs'
 
@@ -25,6 +25,24 @@ test('research requires literal evidence from two retrieved sources', () => {
 test('thin or generic output is held, even with headings', () => {
     const issues = qualityIssues({ body: '## Benefits\nAutomation saves time.', description: 'short', faqs: [] }, { brief: { sources: [] } })
     assert.ok(issues.length >= 7)
+})
+test('JSON parsing preserves fenced code inside the article body', () => {
+    const article = { body: '## Example\n```json\n{"status":"pending"}\n```' }
+    assert.deepEqual(safeJson(JSON.stringify(article)), article)
+    assert.deepEqual(safeJson('```json\n' + JSON.stringify(article) + '\n```'), article)
+})
+test('source citation formatting preserves code and does not invent sources', () => {
+    const text = 'Claim (https://docs.example/a). Unknown (https://fake.example).\n```text\n (https://docs.example/a)\n```'
+    const result = formatSourceLinks(text, [{ url: 'https://docs.example/a', text: '# Webhook' }])
+    assert.match(result, /\[Webhook documentation\]\(https:\/\/docs.example\/a\)/)
+    assert.ok(result.includes('Unknown (https://fake.example)'))
+    assert.ok(result.includes('```text\n (https://docs.example/a)\n```'))
+})
+test('evidence comparison ignores formatting but still rejects changed facts', () => {
+    const formatted = [{ ...material[0], text: 'The **production webhook** is registered when you publish the workflow.' }, material[1]]
+    assert.equal(validateEvidence(brief(), formatted), true)
+    const changed = brief(); changed.evidence[0].quote = 'production webhook is registered when you unpublish'
+    assert.equal(validateEvidence(changed, formatted), false)
 })
 test('quality gate accepts complete structure and rejects invented link destinations', () => {
     const article = { body: '## Setup\n1. Check the input.\n## Illustrative example\n## Failure tests\n## Acceptance checklist\n' + 'implementation '.repeat(710) + '\n[guide](/blog/guide) and [services](/capabilities). [source](https://docs.example/a)', description: 'A practical workflow with clear inputs, expected outputs, verification and human review before processing requests.', faqs: [{ question: 'a', answer: 'b' }, { question: 'c', answer: 'd' }], coverConcept: 'A review desk', imageAlt: 'Cards beside a review desk' }
@@ -47,6 +65,18 @@ test('cover prompt uses article-specific objects', () => {
     const prompt = coverPrompt({ coverConcept: 'A restaurant receipt beside a kitchen order rail' })
     assert.match(prompt, /restaurant receipt/)
     assert.match(prompt, /No text/)
+})
+test('visual review rejects gibberish text and missing or inconclusive checks', () => {
+    assert.equal(usableCover({ textFree: true, hasWatermark: false, usableComposition: true }), true)
+    assert.equal(usableCover({ textFree: false, hasWatermark: false, usableComposition: true }), false)
+    assert.equal(usableCover({ textFree: true, usableComposition: true }), false)
+    assert.equal(usableCover(null), false)
+})
+test('replenished briefs cannot introduce arbitrary sources or duplicate topics', () => {
+    const topic = { title: 'A distinctive enquiry workflow for field service teams', angle: 'Design a concrete intake example with required fields, honest acknowledgements and a failure checklist.', sources: TOPICS[0].sources }
+    assert.equal(validPlannedTopic(topic, []), true)
+    assert.equal(validPlannedTopic({ ...topic, sources: ['https://invented.example', TOPICS[0].sources[0]] }, []), false)
+    assert.equal(validPlannedTopic(topic, [{ title: topic.title }]), false)
 })
 test('cover decoder rejects HTML and undersized raster images', async () => {
     await assert.rejects(normalizeCover(Buffer.from('<html>'.repeat(2000))))

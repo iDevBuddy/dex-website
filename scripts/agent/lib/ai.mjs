@@ -54,7 +54,9 @@ async function fetchResilient(url, options = {}, { retries = 3, timeoutMs = 6000
 /** Pull JSON out of an LLM reply even if it is fenced or wrapped in prose. */
 export function safeJson(text) {
     if (!text || typeof text !== 'string') return null
-    const cleaned = text.replace(/```json|```/gi, '').trim()
+    // Strip only a surrounding JSON fence. Fences inside an article's JSON string
+    // are content (code examples) and must survive parsing.
+    const cleaned = text.trim().replace(/^```(?:json)?\s*\n?([\s\S]*?)\n?```$/i, '$1').trim()
     const tryParse = (s) => { try { return JSON.parse(s) } catch { return undefined } }
     let v = tryParse(cleaned)
     if (v !== undefined) return v

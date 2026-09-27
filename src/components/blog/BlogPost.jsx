@@ -169,7 +169,7 @@ export default function BlogPost({ slug }) {
                 <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[240px_minmax(0,760px)] gap-12">
                     <ActiveTableOfContents headings={visibleHeadings} variant="desktop" />
 
-                    <div>
+                    <div className="min-w-0">
                         <ActiveTableOfContents headings={visibleHeadings} variant="mobile" />
 
                         <EditorialOpener post={post} />

@@ -1,4 +1,8 @@
-// Primary-source briefs for practical guides. Exhaustion is a visible editorial hold.
+import { chat, NVIDIA_BIG } from './ai.mjs'
+import { isDuplicate } from './registry.mjs'
+import { slugify } from './article.mjs'
+
+// Primary-source briefs seed the schedule; subsequent ideas use only this source catalogue.
 const webhook = 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook.md'
 const respond = 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md'
 const errors = 'https://docs.n8n.io/build/flow-logic/handle-errors-gracefully.md'
@@ -17,6 +21,38 @@ export const TOPICS = [
 
 export function selectTopic(known) {
     return TOPICS.find(topic => !known.some(p => p.topicId === topic.id))
+}
+
+export function validPlannedTopic(topic, known) {
+    const allowed = new Set(TOPICS.flatMap(t => t.sources))
+    return typeof topic?.title === 'string' && topic.title.length >= 20 && topic.title.length <= 90
+        && typeof topic.angle === 'string' && topic.angle.length >= 60
+        && Array.isArray(topic.sources) && new Set(topic.sources).size >= 2 && topic.sources.length <= 3
+        && topic.sources.every(url => allowed.has(url)) && !isDuplicate(topic.title, known)
+        && !known.some(p => p.topicId === slugify(topic.title))
+}
+
+export async function nextTopic(known, model = NVIDIA_BIG) {
+    const seed = TOPICS.find(t => !known.some(p => p.topicId === t.id) && !isDuplicate(t.title, known))
+    if (seed) return seed
+    const result = await chat({ provider: 'nvidia', model, json: true, maxTokens: 3500, timeoutMs: 90000, retries: 0, temperature: 0.4,
+        system: 'You are a practical implementation editor. Return one genuinely different article brief as JSON, or null if nothing useful remains. No invented product announcements or case-study results.',
+        user: `Existing topics (do not rephrase or repeat): ${JSON.stringify(known.map(p => ({ title: p.title, topicId: p.topicId })))}\nAvailable primary documentation and earlier brief examples: ${JSON.stringify(TOPICS)}\nPropose a distinct service-business workflow, with its reader question, a concrete illustrative example and acceptance tests in the angle. Select exactly 2-3 URLs from this catalogue; never invent URLs. Return {"title":"...","angle":"...","sources":["..."]}. The source content will be fetched and validated separately; if it cannot support the idea, the draft will be held.` })
+    if (!result.ok || !validPlannedTopic(result.json, known)) throw new Error('No distinct primary-source brief available; editorial review required')
+    return { ...result.json, topicId: slugify(result.json.title), stream: 'practical-workflows', url: result.json.sources[0] }
+}
+
+export function formatSourceLinks(body, material = []) {
+    // Some models cite an exact retrieved URL in parentheses. Turn that into a
+    // clickable citation without changing facts, accepting invented URLs or touching code.
+    return String(body || '').split(/(```[\s\S]*?```)/g).map(part => {
+        if (part.startsWith('```')) return part
+        for (const source of material) {
+            const heading = source.text?.match(/^#\s+(.+)$/m)?.[1]?.replace(/[\[\]]/g, '') || new URL(source.url).hostname
+            part = part.replaceAll(` (${source.url})`, ` [${heading} documentation](${source.url})`)
+        }
+        return part
+    }).join('')
 }
 
 export function qualityIssues(article, research, known = []) {

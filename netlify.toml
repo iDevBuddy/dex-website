@@ -17,6 +17,7 @@
 
 [functions."blog-draft-background"]
   node_bundler = "esbuild"
+  external_node_modules = ["sharp"]
 
 [functions."blog-cloud-status"]
   node_bundler = "esbuild"
