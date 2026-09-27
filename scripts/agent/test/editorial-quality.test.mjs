@@ -5,7 +5,7 @@ import { validateEvidence } from '../analyst.mjs'
 import { qualityIssues, TOPICS, selectTopic, formatSourceLinks, validPlannedTopic } from '../lib/editorial.mjs'
 import { postMetadata } from '../lib/registry.mjs'
 import { buildMarkdown } from '../lib/article.mjs'
-import { normalizeCover, coverPrompt, usableCover } from '../artdirector.mjs'
+import { normalizeCover, coverPrompt, usableCover, planCoverScene } from '../artdirector.mjs'
 import { chat, safeJson } from '../lib/ai.mjs'
 import { documentHtml } from '../../blog/prerender.mjs'
 import { parseFrontmatter } from '../../blog/lib/content.mjs'
@@ -71,6 +71,14 @@ test('visual review rejects gibberish text and missing or inconclusive checks', 
     assert.equal(usableCover({ textFree: false, hasWatermark: false, usableComposition: true }), false)
     assert.equal(usableCover({ textFree: true, usableComposition: true }), false)
     assert.equal(usableCover(null), false)
+})
+
+test('cover scene planning holds malformed output instead of sending the original text-bearing brief', async () => {
+    const before = globalThis.fetch, key = process.env.NVIDIA_API_KEY
+    process.env.NVIDIA_API_KEY = 'test-only-key'
+    globalThis.fetch = async () => ({ ok: true, status: 200, json: async () => ({ choices: [{ finish_reason: 'stop', message: { content: '{"scene":null}' } }] }) })
+    try { await assert.rejects(planCoverScene({ title: 'Intake guide', coverConcept: 'A screen full of labels' }), /planning unavailable/) }
+    finally { globalThis.fetch = before; if (key === undefined) delete process.env.NVIDIA_API_KEY; else process.env.NVIDIA_API_KEY = key }
 })
 test('replenished briefs cannot introduce arbitrary sources or duplicate topics', () => {
     const topic = { title: 'A distinctive enquiry workflow for field service teams', angle: 'Design a concrete intake example with required fields, honest acknowledgements and a failure checklist.', sources: TOPICS[0].sources }

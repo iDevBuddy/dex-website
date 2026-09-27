@@ -18,6 +18,8 @@ Mechanical checks cannot guarantee factual correctness or good writing. Failed/i
 
 ## Cover decision and dependency
 
+A separate scene-planning pass translates the article concept into unmarked physical objects before image generation, avoiding the text-bearing interfaces that failed the first real visual test.
+
 Use the existing NVIDIA FLUX access with an article-specific visual concept. `sharp` is added to decode/validate the real image format, reject bad or undersized payloads, crop to 1280 by 720 and encode genuine PNG. The previous provider returned JPEG data despite the `.png` filename. A vision review rejects lettering/gibberish, watermarks and unsuitable compositions, then permits one corrected retry within the run deadline. Its description supplies the actual image alt text. Inconclusive reviews fail closed; human review is still required. The undocumented keyless Pollinations fallback is removed. Cover failures hold the draft for review.
 
 Bing Image Creator is a free browser tool, not a verified free API for this cloud job. No browser-cookie automation or paid Microsoft Foundry service is configured. A reviewer may supply a separately licensed cover manually.
