@@ -35,8 +35,10 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 async function fetchResilient(url, options = {}, { retries = 3, timeoutMs = 60000, label = 'request' } = {}) {
     let lastErr
     for (let attempt = 0; attempt <= retries; attempt++) {
+        const remaining = Number(process.env.BLOG_RUN_DEADLINE || Infinity) - Date.now()
+        if (remaining < 1000) throw new Error('Cloud draft time budget exhausted')
         try {
-            const res = await fetch(url, { ...options, signal: AbortSignal.timeout(timeoutMs) })
+            const res = await fetch(url, { ...options, signal: AbortSignal.timeout(Math.max(1, Math.min(timeoutMs, remaining))) })
             if (res.status === 429 || res.status >= 500) {
                 lastErr = new Error(`${label}: HTTP ${res.status}`)
             } else {
