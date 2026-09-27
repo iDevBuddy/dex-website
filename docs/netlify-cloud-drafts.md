@@ -21,6 +21,7 @@ GitHub Actions remains subject to the account billing lock. Its existing job tok
 - BLOG_CLOUD_ENABLED=true: activation switch. Set false and redeploy to stop.
 - CLICKUP_TOKEN: ClickUp personal API token, Functions scope; never expose or log it. The owner's existing lowercase `clickup` variable is also supported; `CLICKUP_TOKEN` takes precedence when both exist.
 - CLICKUP_LIST_ID: numeric ID of the owner's existing blog-approval list, Functions scope. Its open status starts reviews; its closed status (normally Complete) signifies approval. Other intermediate statuses never approve publication.
+- CLICKUP_REVIEW_VIEW_ID: optional alternative when the owner supplies a `/v/l/...` ClickUp view link. The API resolves its parent and verifies that it is a List; a folder/space view cannot silently select another list. A numeric CLICKUP_LIST_ID takes precedence.
 - Netlify's built-in URL supplies the scheduler's production destination.
 
 The linked repository integration continues deploying main. Replacing the application GITHUB_TOKEN does not relink it. Netlify API masks secrets: validate credentials inside the deployed function, never by testing the masked placeholder.

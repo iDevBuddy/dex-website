@@ -1,7 +1,7 @@
 export async function handler() {
     if (process.env.CONTEXT !== 'production') return { statusCode: 200 }
     if (process.env.BLOG_CLOUD_ENABLED !== 'true') return { statusCode: 200 }
-    if (!(process.env.CLICKUP_TOKEN || process.env.clickup) || !process.env.CLICKUP_LIST_ID) {
+    if (!(process.env.CLICKUP_TOKEN || process.env.clickup) || !(process.env.CLICKUP_LIST_ID || process.env.CLICKUP_REVIEW_VIEW_ID)) {
         console.log('ClickUp approval sync inactive: configuration missing')
         return { statusCode: 200 }
     }

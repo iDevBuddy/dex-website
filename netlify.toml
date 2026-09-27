@@ -24,6 +24,9 @@
 [functions."clickup-reviews-background"]
   node_bundler = "esbuild"
 
+[functions."clickup-review-status"]
+  node_bundler = "esbuild"
+
 [functions."clickup-reviews-schedule"]
   node_bundler = "esbuild"
   # Approval checks only: this does not generate extra articles.

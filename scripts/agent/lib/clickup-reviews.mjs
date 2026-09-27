@@ -5,6 +5,23 @@ const STATE_BRANCH = 'automation/clickup-reviews'
 const MARKER = 'DEX_CLICKUP_STATE='
 const id = value => encodeURIComponent(String(value))
 
+export async function clickupSettings(env, cu) {
+    let listId = String(env.CLICKUP_LIST_ID || '').trim()
+    if (!listId && env.CLICKUP_REVIEW_VIEW_ID) {
+        const viewId = String(env.CLICKUP_REVIEW_VIEW_ID).trim()
+        if (!/^[a-zA-Z0-9-]+$/.test(viewId)) throw new Error('Invalid ClickUp view ID')
+        const result = await cu(`/view/${id(viewId)}`)
+        listId = String(result.view?.parent?.id || '')
+    }
+    if (!/^\d+$/.test(listId)) throw new Error('ClickUp list ID unavailable')
+    // Confirm that the view belongs to a real List, not a Space/Folder/Everything view.
+    const [list, user] = await Promise.all([cu(`/list/${listId}`), cu('/user')])
+    const openStatus = list.statuses?.find(s => s.type === 'open')?.status
+    const completeStatuses = (list.statuses || []).filter(s => s.type === 'closed').map(s => s.status.toLowerCase())
+    if (!openStatus || !completeStatuses.length || !Number.isInteger(user.user?.id)) throw new Error('ClickUp user or list approval statuses unavailable')
+    return { listId, listName: list.name, userId: user.user.id, openStatus, completeStatuses }
+}
+
 export function clickupClient(token, fetcher = fetch) {
     if (!token) throw new Error('ClickUp credential missing')
     return async (path, method = 'GET', body) => {
@@ -159,14 +176,9 @@ export async function withReviewLease(api, work, now = () => Date.now()) {
 export async function syncClickupReviews({ api, env = process.env, cu, allowPublish = false }) {
     // Support the owner's existing Netlify variable spelling without copying or exposing its secret.
     const token = env.CLICKUP_TOKEN || env.clickup
-    if (!token || !env.CLICKUP_LIST_ID) return { status: 'clickup_not_configured' }
+    if (!token || !(env.CLICKUP_LIST_ID || env.CLICKUP_REVIEW_VIEW_ID)) return { status: 'clickup_not_configured' }
     cu ||= clickupClient(token)
-    const listId = String(env.CLICKUP_LIST_ID).trim()
-    if (!/^\d+$/.test(listId)) throw new Error('ClickUp list ID must be numeric')
-    const [list, user] = await Promise.all([cu(`/list/${listId}`), cu('/user')])
-    const openStatus = list.statuses?.find(s => s.type === 'open')?.status
-    const completeStatuses = (list.statuses || []).filter(s => s.type === 'closed').map(s => s.status.toLowerCase())
-    if (!openStatus || !completeStatuses.length || !Number.isInteger(user.user?.id)) throw new Error('ClickUp user or list approval statuses unavailable')
+    const settings = await clickupSettings(env, cu)
     return withReviewLease(api, async (records, save, deadline) => {
         const pulls = await api('pulls?state=open&base=main&per_page=100')
         if (pulls.length >= 100) throw new Error('Review queue requires pagination')
@@ -175,9 +187,9 @@ export async function syncClickupReviews({ api, env = process.env, cu, allowPubl
         const results = []
         for (const number of numbers.slice(0, 10)) {
             if (Date.now() > deadline - 45000) break
-            try { results.push(await syncReview({ api, cu, number, records, save, listId, userId: user.user.id, openStatus, completeStatuses, allowPublish })) }
+            try { results.push(await syncReview({ api, cu, number, records, save, ...settings, allowPublish })) }
             catch (e) { results.push({ number, status: 'needs_attention', error: safeFailure(e, env) }) }
         }
-        return { status: 'synced', results, completeStatuses }
+        return { status: 'synced', results, completeStatuses: settings.completeStatuses }
     })
 }

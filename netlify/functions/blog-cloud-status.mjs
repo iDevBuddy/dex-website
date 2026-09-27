@@ -15,7 +15,7 @@ export async function handler(event) {
         return { statusCode: 200, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' }, body: JSON.stringify({
             enabled: process.env.BLOG_CLOUD_ENABLED === 'true', githubAccess: true, canPush: repo.permissions?.push,
             nvidiaConfigured: Boolean(process.env.NVIDIA_API_KEY), slot, state, review: pulls[0]?.html_url || null,
-            clickupConfigured: Boolean((process.env.CLICKUP_TOKEN || process.env.clickup) && process.env.CLICKUP_LIST_ID),
+            clickupConfigured: Boolean((process.env.CLICKUP_TOKEN || process.env.clickup) && (process.env.CLICKUP_LIST_ID || process.env.CLICKUP_REVIEW_VIEW_ID)),
         }) }
     } catch (e) { return { statusCode: 502, body: JSON.stringify({ error: e.message }) } }
 }
