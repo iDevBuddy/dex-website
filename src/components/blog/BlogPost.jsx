@@ -1,8 +1,5 @@
-import { useEffect } from 'react'
 import { ArrowLeft, ArrowUpRight, CalendarDays, CheckCircle, Clock, Download, FileText, Presentation, RefreshCcw } from 'lucide-react'
-import { buildBlogPostingSchema, buildFaqSchema, formatDate, getPostBySlug, getRelatedPosts } from '../../lib/blog'
-import { setSeo } from '../../lib/seo'
-import { breadcrumbSchema } from '../../lib/siteSchema'
+import { formatDate, getPostBySlug, getRelatedPosts } from '../../lib/blog'
 import ArticleAudioPlayer from './ArticleAudioPlayer'
 import ActiveTableOfContents from './ActiveTableOfContents'
 import MarkdownRenderer from './MarkdownRenderer'
@@ -72,8 +69,8 @@ function EditorialOpener({ post }) {
             <section className="mb-10 grid md:grid-cols-3 gap-4">
                 {[
                     ['Problem', post.caseProblem || post.businessProblem || post.description],
-                    ['Result', post.caseResult || post.directAnswer || 'A cleaner workflow with clearer ownership and measurable operational improvement.'],
-                    ['Business Impact', post.businessImpact || post.practicalUseCase || 'Less manual follow-up, better visibility, and fewer missed handoffs.'],
+                    ['Result', post.caseResult || 'Measured results have not been supplied.'],
+                    ['Business Impact', post.businessImpact || 'Business impact has not been independently measured.'],
                 ].map(([label, value]) => (
                     <div key={label} className="rounded-2xl border border-border bg-dark-deeper p-5">
                         <p className="font-mono text-xs uppercase tracking-[0.18em] text-accent mb-3">{label}</p>
@@ -121,33 +118,6 @@ function skippedBodySections(post) {
 export default function BlogPost({ slug }) {
     const post = getPostBySlug(slug)
 
-    useEffect(() => {
-        if (!post) {
-            setSeo({
-                title: 'Article Not Found | DEX by Akif Saeed',
-                description: 'The requested article could not be found.',
-                path: window.location.pathname,
-            })
-            return
-        }
-
-        setSeo({
-            title: post.metaTitle || `${post.title} | DEX by Akif Saeed`,
-            description: post.metaDescription || post.description,
-            path: `/blog/${post.slug}`,
-            image: post.image,
-            type: 'article',
-            schema: [
-                buildBlogPostingSchema(post),
-                buildFaqSchema(post),
-                breadcrumbSchema([
-                    { name: 'Home', url: '/' },
-                    { name: 'Blog', url: '/blog' },
-                    { name: post.title, url: `/blog/${post.slug}` },
-                ]),
-            ],
-        })
-    }, [post])
 
     if (!post) {
         return (
@@ -199,7 +169,7 @@ export default function BlogPost({ slug }) {
                 <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[240px_minmax(0,760px)] gap-12">
                     <ActiveTableOfContents headings={visibleHeadings} variant="desktop" />
 
-                    <div>
+                    <div className="min-w-0">
                         <ActiveTableOfContents headings={visibleHeadings} variant="mobile" />
 
                         <EditorialOpener post={post} />
@@ -269,7 +239,7 @@ export default function BlogPost({ slug }) {
                             <div>
                                 <h2 className="font-display text-xl font-bold text-ghost mb-2">{post.author}</h2>
                                 <p className="text-ghost-dim leading-7">
-                                    AI automation engineer building practical agents, workflow systems, and business automation infrastructure for service companies. Editorial persona for this article: {post.contentPersona}; business function: {post.businessFunction}.
+                                    AI automation engineer building practical agents, workflow systems, and business automation infrastructure for service companies.
                                 </p>
                             </div>
                         </section>

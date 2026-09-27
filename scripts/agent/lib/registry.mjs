@@ -38,3 +38,13 @@ export function isDuplicate(title, posts) {
 export function recentStreams(n = 2) {
     return publishedPosts().sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, n).map((p) => p.stream)
 }
+
+export function postMetadata(raw, slug) {
+    const result = { slug, title: slug.replaceAll('-', ' ') }
+    const frontmatter = String(raw).match(/^---\r?\n([\s\S]*?)\r?\n---/)
+    for (const key of ['title', 'topicId', 'redirectTo', 'sources']) {
+        const value = frontmatter?.[1].match(new RegExp(`^${key}:\\s*(.+)$`, 'm'))?.[1]
+        if (value) { try { result[key] = JSON.parse(value) } catch { result[key] = value.replace(/^["']|["']$/g, '') } }
+    }
+    return result
+}

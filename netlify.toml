@@ -17,6 +17,7 @@
 
 [functions."blog-draft-background"]
   node_bundler = "esbuild"
+  external_node_modules = ["sharp"]
 
 [functions."blog-cloud-status"]
   node_bundler = "esbuild"
@@ -94,5 +95,5 @@
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
+  to = "/404.html"
+  status = 404

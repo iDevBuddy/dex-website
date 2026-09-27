@@ -72,10 +72,13 @@ if (typeof document !== 'undefined' && !reduceMotion) {
 
 window.addEventListener('load', () => ScrollTrigger.refresh())
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const application = (
     <React.StrictMode>
         <VoiceProvider>
             <App />
         </VoiceProvider>
-    </React.StrictMode>,
+    </React.StrictMode>
 )
+const root = document.getElementById('root')
+if (root.dataset.prerendered === 'true') ReactDOM.hydrateRoot(root, application)
+else ReactDOM.createRoot(root).render(application)

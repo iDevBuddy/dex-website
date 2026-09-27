@@ -8,9 +8,9 @@ function hostname(url) {
     try { return new URL(url).hostname.replace(/^www\./, '') } catch { return 'source' }
 }
 
-const esc = (s) => String(s || '').replace(/"/g, '\\"')
+const esc = s => JSON.stringify(String(s || '').replace(/[\r\n]+/g, ' ')).slice(1, -1)
 
-export function buildMarkdown(article, data, { image = '/blog/images/ai-authority-blog-engine.png', audio = '' } = {}) {
+export function buildMarkdown(article, data, { image = '/blog/images/ai-authority-blog-engine.png', audio = '', imageAlt = article.imageAlt || article.title } = {}) {
     const slug = slugify(article.title)
     const today = new Date().toISOString().slice(0, 10)
     const sources = (data?.brief?.sources || []).map((u) => ({ title: hostname(u), url: u }))
@@ -23,9 +23,10 @@ export function buildMarkdown(article, data, { image = '/blog/images/ai-authorit
         `publishedAt: "${today}"`,
         `category: "${esc(article.category || 'AI Automation')}"`,
         `stream: "${esc(data?.idea?.stream || '')}"`,
+        `topicId: "${esc(data?.idea?.topicId || '')}"`,
         `author: "Akif Saeed"`,
         `image: "${image}"`,
-        `imageAlt: "${esc(article.title)}"`,
+        `imageAlt: "${esc(imageAlt)}"`,
         audio ? `audio: "${audio}"` : '',
         `directAnswer: "${esc(article.directAnswer)}"`,
         `keyTakeaways: ${JSON.stringify(article.keyTakeaways || [])}`,

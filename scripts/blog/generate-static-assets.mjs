@@ -22,6 +22,7 @@ export async function generateStaticAssets() {
     const urls = [
         { loc: '/', priority: '1.0' },
         { loc: '/blog', priority: '0.9' },
+        { loc: '/capabilities', priority: '0.8' },
         { loc: '/about', priority: '0.5' },
         { loc: '/contact', priority: '0.5' },
         { loc: '/privacy', priority: '0.3' },

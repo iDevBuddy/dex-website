@@ -4,14 +4,14 @@ const postModules = import.meta.glob('../../content/blog/*.md', {
     eager: true,
 })
 
-const siteUrl = import.meta.env.VITE_SITE_URL || 'https://www.dexakif.com'
+import { SITE_URL as siteUrl } from '../../shared/site.mjs'
 const defaultAuthor = import.meta.env.VITE_AUTHOR_NAME || 'Akif Saeed'
 
 function parseValue(value) {
     const trimmed = value.trim()
     if (!trimmed) return ''
     if ((trimmed.startsWith('"') && trimmed.endsWith('"')) || (trimmed.startsWith("'") && trimmed.endsWith("'"))) {
-        return trimmed.slice(1, -1)
+            try { return JSON.parse(trimmed) } catch { return trimmed.slice(1, -1) }
     }
     if (trimmed === 'true') return true
     if (trimmed === 'false') return false
@@ -133,6 +133,7 @@ export const blogPosts = Object.entries(postModules)
             mainPainPoint: data.mainPainPoint || '',
         }
     })
+    .filter(post => !post.redirectTo)
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
 
 export function getPostBySlug(slug) {
@@ -157,7 +158,7 @@ export function getRelatedPosts(post, limit = 3) {
 
 export function formatDate(value) {
     if (!value) return ''
-    return new Intl.DateTimeFormat('en', { month: 'long', day: 'numeric', year: 'numeric' }).format(new Date(value))
+    return new Intl.DateTimeFormat('en', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(value))
 }
 
 export function buildBlogPostingSchema(post) {

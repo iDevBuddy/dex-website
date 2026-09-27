@@ -33,7 +33,7 @@ export function parseFrontmatter(raw) {
                 return
             }
         }
-        data[key] = value.replace(/^["']|["']$/g, '')
+        try { data[key] = JSON.parse(value) } catch { data[key] = value.replace(/^["']|["']$/g, '') }
     })
     return { data, body: match[2].trim() }
 }
@@ -66,7 +66,7 @@ export async function writeJson(file, data) {
     await fs.writeFile(file, `${JSON.stringify(data, null, 2)}\n`)
 }
 
-export async function readPosts() {
+export async function readPosts({ includeRedirects = false } = {}) {
     await ensureBlogDirs()
     const files = await fs.readdir(contentDir)
     const posts = []
@@ -80,5 +80,5 @@ export async function readPosts() {
             ...parsed,
         })
     }
-    return posts
+    return includeRedirects ? posts : posts.filter(post => !post.data.redirectTo)
 }

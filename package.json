@@ -9,7 +9,7 @@
     "scripts": {
         "dev": "vite",
         "prebuild": "node -e \"import('./scripts/blog/generate-static-assets.mjs').then(m=>m.generateStaticAssets())\"",
-        "build": "vite build",
+        "build": "node --test scripts/agent/test/*.test.mjs && vite build && node scripts/blog/prerender.mjs && node scripts/blog/verify-prerender.mjs",
         "preview": "vite preview",
         "notion:setup": "tsx scripts/notion/setup-notion-dashboard.ts",
         "blog:discover": "node -e \"import('./scripts/blog/discover-topics.mjs').then(m=>m.discoverTopics())\" --",
@@ -56,6 +56,7 @@
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "retell-client-js-sdk": "^2.0.3",
+        "sharp": "0.35.5",
         "simple-icons": "^16.23.0",
         "zod": "^4.3.6"
     },

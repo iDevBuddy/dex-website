@@ -16,10 +16,9 @@ const NVIDIA = 'https://integrate.api.nvidia.com/v1'
 const GITHUB = 'https://models.github.ai/inference'
 const env = (k, d = '') => (process.env[k] && String(process.env[k]).trim()) || d
 
-// Primary text models — OpenAI's open-weight reasoning models, hosted FREE on
-// NVIDIA NIM (OpenAI-compatible). These carry the writing; Gemma (OpenRouter
-// free) is the cross-provider fallback. No paid OpenAI dependency for text.
-export const NVIDIA_BIG = env('NVIDIA_BIG_MODEL', 'openai/gpt-oss-120b')   // writer, critic
+// Primary endpoint verified with this account; provider availability and quotas can change.
+// Do not silently downgrade article writing when this endpoint is unavailable.
+export const NVIDIA_BIG = env('NVIDIA_BIG_MODEL', 'deepseek-ai/deepseek-v4.1-flash')   // writer, critic
 export const NVIDIA_SMALL = env('NVIDIA_SMALL_MODEL', 'openai/gpt-oss-20b') // light judgers
 export const GEMMA = env('GEMMA_MODEL', 'google/gemma-4-31b-it:free')
 
@@ -55,7 +54,9 @@ async function fetchResilient(url, options = {}, { retries = 3, timeoutMs = 6000
 /** Pull JSON out of an LLM reply even if it is fenced or wrapped in prose. */
 export function safeJson(text) {
     if (!text || typeof text !== 'string') return null
-    const cleaned = text.replace(/```json|```/gi, '').trim()
+    // Strip only a surrounding JSON fence. Fences inside an article's JSON string
+    // are content (code examples) and must survive parsing.
+    const cleaned = text.trim().replace(/^```(?:json)?\s*\n?([\s\S]*?)\n?```$/i, '$1').trim()
     const tryParse = (s) => { try { return JSON.parse(s) } catch { return undefined } }
     let v = tryParse(cleaned)
     if (v !== undefined) return v
@@ -76,7 +77,7 @@ async function rawChat({ provider, model, system, user, temperature = 0.5, maxTo
     const key = isGH ? env('GH_MODELS_TOKEN') : isNV ? env('NVIDIA_API_KEY') : isOR ? env('OPENROUTER_API_KEY') : env('OPENAI_API_KEY')
     if (!key) throw new Error(`${provider}: API key not set`)
     const headers = { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` }
-    if (isOR) { headers['HTTP-Referer'] = 'https://www.dexakif.com'; headers['X-Title'] = 'DEX Content Agent' }
+    if (isOR) { headers['HTTP-Referer'] = 'https://dexakif.com'; headers['X-Title'] = 'DEX Content Agent' }
 
     const body = { model, messages: [] }
     // gpt-5.x and o-series reasoning models only accept the default temperature;
@@ -98,6 +99,7 @@ async function rawChat({ provider, model, system, user, temperature = 0.5, maxTo
 
     if (!res.ok) throw new Error(`${provider}:${model} HTTP ${res.status}`)
     const data = await res.json()
+    if (data.choices?.[0]?.finish_reason === 'length') throw new Error(`${provider}:${model} exceeded its output budget; draft held`)
     const text = data.choices?.[0]?.message?.content
     if (!text) throw new Error(`${provider}:${model} returned empty content`)
     return { text, usage: data.usage }

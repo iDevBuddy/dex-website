@@ -3,7 +3,7 @@
  * Every fetch is isolated: a dead or slow feed returns [] and is skipped,
  * never breaking the run.
  */
-const UA = 'Mozilla/5.0 (compatible; DEX-ContentAgent/1.0; +https://www.dexakif.com)'
+const UA = 'Mozilla/5.0 (compatible; DEX-ContentAgent/1.0; +https://dexakif.com)'
 
 async function getText(url, timeoutMs = 15000) {
     try {
@@ -36,6 +36,10 @@ const pickLink = (block) => {
  */
 export async function fetchPageText(url, { timeoutMs = 20000, max = 7000 } = {}) {
     if (!url || !/^https?:\/\//i.test(url)) return null
+    if (new URL(url).pathname.endsWith('.md')) {
+        const markdown = await getText(url, timeoutMs)
+        if (markdown && !/^\s*<!doctype|^\s*<html/i.test(markdown)) return markdown.slice(0, max)
+    }
     // 1) Jina Reader — free, keyless; returns clean readable text and handles
     //    JS-rendered pages far better than a regex strip. Fail-soft to (2).
     try {
