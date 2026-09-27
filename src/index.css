@@ -338,3 +338,13 @@ button[aria-label="Start voice consultation"],
 button[aria-label="End call"] {
     display: none !important;
 }
+
+/* Long technical examples stay readable on narrow screens. */
+.blog-prose ol { list-style: decimal; padding-left: 1.5rem; margin: 1.5rem 0; }
+.blog-prose ol > li { list-style-type: decimal; }
+.blog-prose pre { overflow-x: auto; padding: 1.25rem; background: #11151b; border: 1px solid #343a42; border-radius: 12px; margin: 1.5rem 0; }
+.blog-prose pre code { white-space: pre; background: transparent; padding: 0; }
+.blog-table-scroll { overflow-x: auto; margin: 1.5rem 0; }
+.blog-prose table { width: 100%; border-collapse: collapse; min-width: 32rem; }
+.blog-prose th, .blog-prose td { padding: .8rem; border: 1px solid #343a42; text-align: left; vertical-align: top; }
+.blog-prose th { font-weight: 700; }

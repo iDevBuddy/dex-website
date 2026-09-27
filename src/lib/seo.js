@@ -1,6 +1,4 @@
-const defaultTitle = 'AI Automation Services & AI Agent Development | DEX by Akif Saeed'
-const defaultDescription = 'DEX provides AI automation services and AI agent development: voice agents, chatbots, and workflow automation that run your business 24/7.'
-const siteUrl = import.meta.env.VITE_SITE_URL || 'https://www.dexakif.com'
+import { SITE_URL as siteUrl, SITE_TITLE as defaultTitle, SITE_DESCRIPTION as defaultDescription } from '../../shared/site.mjs'
 
 function upsertMeta(selector, createTag, attributes) {
     let tag = document.head.querySelector(selector)
@@ -18,13 +16,17 @@ export function setSeo({
     image = '/blog/images/ai-authority-blog-engine.png',
     type = 'website',
     schema = [],
+    robots = 'index,follow',
+    status,
 } = {}) {
     const canonical = `${siteUrl}${path}`
     const absoluteImage = image?.startsWith('http') ? image : `${siteUrl}${image}`
 
     document.title = title
     upsertMeta('meta[name="description"]', 'meta', { name: 'description', content: description })
-    upsertMeta('link[rel="canonical"]', 'link', { rel: 'canonical', href: canonical })
+    upsertMeta('meta[name="robots"]', 'meta', { name: 'robots', content: robots })
+    if (status === 404) document.head.querySelector('link[rel="canonical"]')?.remove()
+    else upsertMeta('link[rel="canonical"]', 'link', { rel: 'canonical', href: canonical })
     upsertMeta('meta[property="og:title"]', 'meta', { property: 'og:title', content: title })
     upsertMeta('meta[property="og:description"]', 'meta', { property: 'og:description', content: description })
     upsertMeta('meta[property="og:type"]', 'meta', { property: 'og:type', content: type })

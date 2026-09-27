@@ -4,7 +4,7 @@
  * ChatGPT, Perplexity, Claude). Injected once on every page; persists across
  * client-side route changes (marked data-site-schema so setSeo doesn't strip it).
  */
-const SITE = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_SITE_URL) || 'https://www.dexakif.com'
+import { SITE_URL as SITE } from '../../shared/site.mjs'
 
 const organization = {
     '@context': 'https://schema.org',
@@ -86,10 +86,11 @@ export function breadcrumbSchema(crumbs = []) {
 }
 
 /** Inject the persistent site entity schema into <head> exactly once. */
+export const siteSchemas = [organization, website, service]
 export function injectSiteSchema() {
     if (typeof document === 'undefined') return
     if (document.querySelector('script[data-site-schema="true"]')) return
-    for (const obj of [organization, website, service]) {
+    for (const obj of siteSchemas) {
         const s = document.createElement('script')
         s.type = 'application/ld+json'
         s.dataset.siteSchema = 'true'

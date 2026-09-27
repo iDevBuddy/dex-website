@@ -1,39 +1,11 @@
-import { useEffect } from 'react'
 import { ArrowUpRight, Clock } from 'lucide-react'
 import { blogPosts, formatDate } from '../../lib/blog'
-import { setSeo } from '../../lib/seo'
-import { breadcrumbSchema } from '../../lib/siteSchema'
 import ArticleCard from './ArticleCard'
 
 export default function BlogIndex() {
     const featured = blogPosts[0]
     const posts = blogPosts.slice(1)
 
-    useEffect(() => {
-        setSeo({
-            title: 'AI Automation Blog | DEX by Akif Saeed',
-            description: 'Practical guides on AI agents, business automation, Slack automation, workflow systems, and scaling service businesses with AI.',
-            path: '/blog',
-            type: 'blog',
-            schema: [
-                breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog' }]),
-                {
-                    '@context': 'https://schema.org',
-                    '@type': 'Blog',
-                    '@id': 'https://www.dexakif.com/blog#blog',
-                    name: 'DEX AI Automation Blog',
-                    description: 'Practical, source-grounded guides on AI agents, business automation, and using Claude/OpenAI for business.',
-                    publisher: { '@id': 'https://www.dexakif.com/#organization' },
-                    blogPost: blogPosts.slice(0, 10).map((p) => ({
-                        '@type': 'BlogPosting',
-                        headline: p.title,
-                        url: `https://www.dexakif.com/blog/${p.slug}`,
-                        datePublished: p.publishedAt,
-                    })),
-                },
-            ],
-        })
-    }, [])
 
     return (
         <main id="main-content" className="bg-dark pt-32 pb-24">

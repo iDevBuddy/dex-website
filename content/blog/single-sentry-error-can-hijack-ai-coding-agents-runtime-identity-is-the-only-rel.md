@@ -10,10 +10,10 @@ image: "/blog/images/single-sentry-error-can-hijack-ai-coding-agents-runtime-ide
 imageAlt: "Single Sentry Error Can Hijack AI Coding Agents—Runtime Identity Is the Only Reliable Defense"
 audio: "/blog/audio/single-sentry-error-can-hijack-ai-coding-agents-runtime-identity-is-the-only-rel.mp3"
 directAnswer: "A crafted Sentry error event—sent with a public DSN—can hijack AI coding agents (Claude Code, Cursor, Codex) and run attacker code with developer privileges, while evading EDR, WAF, IAM and firewall alerts. Runtime‑level authorization, such as CrowdStrike’s Continuous Identity for AI Agents, validates every agent action in real time and blocks the exploit."
-keyTakeaways: ["A single public Sentry DSN can be abused to execute malicious code on AI agents, exposing AWS keys and private repository URLs.","Datadog, PagerDuty and Jira share the same blind spot when their event payloads are fed to agents capable of shell execution.","Only 34 % of organizations apply human‑grade controls to AI agents; 88 % of agents have reported confirmed or suspected incidents.","CrowdStrike’s Continuous Identity (released 15 Jun 2026) delivers cryptographic identity and per‑action policy enforcement at runtime.","Mitigation must focus on restricting what agents can do with returned data, not on revoking DSNs, which are public by design."]
+keyTakeaways: ["A single public Sentry DSN can be abused to execute malicious code on AI agents, exposing AWS keys and private repository URLs.", "Datadog, PagerDuty and Jira share the same blind spot when their event payloads are fed to agents capable of shell execution.", "Only 34 % of organizations apply human‑grade controls to AI agents; 88 % of agents have reported confirmed or suspected incidents.", "CrowdStrike’s Continuous Identity (released 15 Jun 2026) delivers cryptographic identity and per‑action policy enforcement at runtime.", "Mitigation must focus on restricting what agents can do with returned data, not on revoking DSNs, which are public by design."]
 faqs: []
-sources: [{"title":"venturebeat.com","url":"https://venturebeat.com/security/the-attack-that-hijacked-claude-code-came-through-sentry-datadog-pagerduty-and-jira-have-the-same-exposure"}]
-tags: ["Sentry vulnerability","AI agent security","CrowdStrike Continuous Identity","runtime authorization","observability integrations"]
+sources: [{"title": "venturebeat.com", "url": "https://venturebeat.com/security/the-attack-that-hijacked-claude-code-came-through-sentry-datadog-pagerduty-and-jira-have-the-same-exposure"}]
+tags: ["Sentry vulnerability", "AI agent security", "CrowdStrike Continuous Identity", "runtime authorization", "observability integrations"]
 businessProblem: "AI coding agents can be hijacked via publicly exposed Sentry (and similar) error events, allowing attackers to execute code with developer privileges and steal privileged credentials."
 ---
 
@@ -72,3 +72,5 @@ The industry’s default response is to harden code and tighten permissions. The
 **What this means for your business**: If your development pipelines rely on AI coding assistants that ingest third‑party telemetry, treat those integrations as high‑risk entry points. Deploy runtime authorization (e.g., CrowdStrike Continuous Identity) to validate every agent action and prevent silent credential theft.
 ---
 **How you’d use it**: Enable Continuous Identity on Claude Code, block any shell command that originates from a Sentry error payload, and forward each decision to your SIEM for audit.
+
+Treat tool output as untrusted input when scoping an agent. The [DEX implementation overview](/capabilities) helps place tool access within the wider integration boundary; generated instructions should never determine their own permissions.

@@ -1,21 +1,30 @@
 /**
- * Art director — free media, no billing:
- *   cover  → Pollinations (Flux) editorial glass render, on-brand
+ * Art director — uses configured provider access; quotas are provider-controlled:
+ *   cover  → NVIDIA FLUX, topic-specific concept, validated PNG
  *   voice  → edge-tts (Microsoft neural voice) via `python -m edge_tts`
  * Both fail-soft: cover falls back to a default image, voice is skipped.
  */
 import { writeFileSync, mkdirSync, statSync } from 'fs'
 import { execFileSync } from 'child_process'
+import sharp from 'sharp'
 
 const FALLBACK_IMAGE = '/blog/images/ai-authority-blog-engine.png'
 const env = (k) => (process.env[k] && String(process.env[k]).trim()) || ''
 
-function coverPrompt(article) {
-    const subject = article?.title || 'AI automation for business'
-    return `Premium editorial 3D render for a technology blog cover. Abstract GEOMETRIC, technological metaphor for "${subject}": interlocking crystalline glass panels and brushed-aluminium architectural forms with flowing data lines and connected nodes, clean white studio cyclorama, soft cinematic lighting, gentle depth of field, one subtle candy-apple-red accent, octane render, ultra detailed, minimalist. Strictly geometric and technical — no hearts, no faces, no animals, no organic shapes, no text, no words, no letters, no logos.`
+export function coverPrompt(article) {
+    const concept = String(article?.coverConcept || article?.businessProblem || article?.title || 'A service enquiry moving into a review queue').slice(0, 900)
+    return `Editorial concept illustration for a practical business guide. Scene: ${concept}. Show concrete objects and a single clear focal point. Tactile cut-paper and fine architectural drawing style; warm off-white background, charcoal and navy details, one restrained red accent. Wide composition with important objects inside the central 16:9 crop, clean negative space, subtle texture. No generic floating glass cubes or glowing data networks. No text, letters, logos, watermark or fake software screenshots. This is an illustration, not evidence of a real implementation.`
 }
 
-// NVIDIA FLUX.1-dev — top-tier, clean renders (free developer tier).
+export async function normalizeCover(buffer) {
+    if (!Buffer.isBuffer(buffer) || buffer.length < 5000 || buffer.length > 20 * 1024 * 1024) throw new Error('Invalid cover size')
+    const input = sharp(buffer, { limitInputPixels: 16000000, failOn: 'error' })
+    const metadata = await input.metadata()
+    if (!['jpeg', 'png', 'webp'].includes(metadata.format) || metadata.width < 1000 || metadata.height < 650) throw new Error('Cover format or resolution unsuitable')
+    return input.rotate().resize(1280, 720, { fit: 'cover', position: 'centre' }).png({ compressionLevel: 9 }).toBuffer()
+}
+
+// NVIDIA FLUX.1-dev endpoint, verified during integration testing.
 async function nvidiaFlux(prompt, seed, timeoutMs) {
     const key = env('NVIDIA_API_KEY')
     if (!key) throw new Error('no NVIDIA_API_KEY')
@@ -31,29 +40,16 @@ async function nvidiaFlux(prompt, seed, timeoutMs) {
     return Buffer.from(b64, 'base64')
 }
 
-// Pollinations (free, no key) — fallback so a cover always renders.
-async function pollinations(prompt, seed, timeoutMs) {
-    const url = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=1536&height=1024&nologo=true&enhance=true&model=flux&seed=${seed % 1000000}`
-    const res = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) })
-    if (!res.ok) throw new Error(`pollinations HTTP ${res.status}`)
-    const buf = Buffer.from(await res.arrayBuffer())
-    if (buf.length < 5000) throw new Error('pollinations empty')
-    return buf
-}
-
 export async function generateCover(article, { slug, outDir = 'public/blog/images', timeoutMs = 90000 } = {}) {
     if (!slug) return { ok: false, image: FALLBACK_IMAGE, error: 'no slug', fallback: true }
     let seed = 7
     for (const ch of slug) seed = (seed * 31 + ch.charCodeAt(0)) >>> 0
     const prompt = coverPrompt(article)
-    const ladder = [
-        ['nvidia-flux.1-dev', () => nvidiaFlux(prompt, seed, timeoutMs)],
-        ['pollinations-flux', () => pollinations(prompt, seed, timeoutMs)],
-    ]
+    const ladder = [['nvidia-flux.1-dev', () => nvidiaFlux(prompt, seed, timeoutMs)]]
     let lastErr
     for (const [model, gen] of ladder) {
         try {
-            const buf = await gen()
+            const buf = await normalizeCover(await gen())
             mkdirSync(outDir, { recursive: true })
             writeFileSync(`${outDir}/${slug}.png`, buf)
             return { ok: true, image: `/blog/images/${slug}.png`, model, bytes: buf.length }

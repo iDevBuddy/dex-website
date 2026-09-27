@@ -14,8 +14,8 @@ imageAlt: "Dashboard-style AI authority blog engine workflow with topic research
 directAnswer: "An AI authority blog engine is a controlled publishing workflow that uses AI to discover topics, draft useful content, generate assets, run SEO and quality checks, request human approval, publish through GitHub, and monitor performance through analytics."
 tone: "Business owner practical guide"
 targetKeyword: "AI authority blog engine"
-faqs: [{"question":"Can AI-generated blog content rank in Google?","answer":"AI-assisted content can perform when it is original, useful, reviewed, and created for people instead of search manipulation. The system should reject thin, copied, or generic posts."},{"question":"Should blog publishing be fully automatic?","answer":"For an MVP, manual approval is safer. Automation should prepare drafts, assets, and checks, while a human approves posts before publishing."},{"question":"Why use GitHub as the publishing source?","answer":"GitHub gives version control, review history, rollback options, and a reliable path from approved content to the website build."}]
-sources: [{"title":"Google Search Essentials","url":"https://developers.google.com/search/docs/fundamentals/creating-helpful-content"},{"title":"Google Search Central: SEO Starter Guide","url":"https://developers.google.com/search/docs/fundamentals/seo-starter-guide"},{"title":"Schema.org BlogPosting","url":"https://schema.org/BlogPosting"}]
+faqs: [{"question": "Can AI-generated blog content rank in Google?", "answer": "AI-assisted content can perform when it is original, useful, reviewed, and created for people instead of search manipulation. The system should reject thin, copied, or generic posts."}, {"question": "Should blog publishing be fully automatic?", "answer": "For an MVP, manual approval is safer. Automation should prepare drafts, assets, and checks, while a human approves posts before publishing."}, {"question": "Why use GitHub as the publishing source?", "answer": "GitHub gives version control, review history, rollback options, and a reliable path from approved content to the website build."}]
+sources: [{"title": "Google Search Essentials", "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"}, {"title": "Google Search Central: SEO Starter Guide", "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"}, {"title": "Schema.org BlogPosting", "url": "https://schema.org/BlogPosting"}]
 related: []
 ---
 
@@ -68,3 +68,5 @@ Do not automate tactics that create risk instead of authority.
 The best MVP is a system that publishes fewer, stronger posts.
 
 For the first two days, focus on the working foundation: a clean blog, crawlable article pages, metadata, RSS, sitemap, a listen button, a draft generator, a quality checker, Slack notifications, Notion sync, and GitHub Actions. Advanced monitoring and refresh automation can come after the first useful publishing loop is stable.
+
+Before turning drafts into a recurring publishing workflow, map the approval and recovery steps using the [small-business automation guide](/blog/ai-automation-for-small-businesses). The [DEX capabilities overview](/capabilities) describes the integration work around that process.
