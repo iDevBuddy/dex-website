@@ -18,6 +18,8 @@ const log = (...a) => console.log(...a)
 const slugOf = (t) => t.slug || slugify(String(t.name).replace(/^[^:]*:\s*/, ''))
 
 async function main() {
+    // New drafts require a review PR merge. Keep old pending files intact.
+    if (process.env.ENABLE_LEGACY_CLICKUP_APPROVALS !== 'true') { log('Approval now uses blog-drafts pull requests; legacy ClickUp publishing is inactive.'); return }
     if (!clickupConfigured()) { log('clickup not configured — approvals skipped'); return }
     log(`\n=== DEX approvals · ${new Date().toISOString()} ===`)
 

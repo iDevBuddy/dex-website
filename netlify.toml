@@ -10,6 +10,17 @@
   node_bundler = "nft"
   included_files = ["agent knowladge.txt"]
 
+[functions."blog-draft-schedule"]
+  node_bundler = "esbuild"
+  # Mon/Wed/Fri, 14:30 PKT; retry once at 16:30 PKT. Same slot prevents duplicates.
+  schedule = "30 9,11 * * 1,3,5"
+
+[functions."blog-draft-background"]
+  node_bundler = "esbuild"
+
+[functions."blog-cloud-status"]
+  node_bundler = "esbuild"
+
 [[headers]]
   for = "/index.html"
   [headers.values]
