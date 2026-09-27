@@ -1,6 +1,6 @@
 # DEX — Master Project Reference & Playbook
 
-> September 2026 cloud migration: [Netlify cloud drafts](netlify-cloud-drafts.md) supersedes the automatic publishing, fail-soft exit, and ClickUp approval behavior described below. New drafts require a review PR merge. GitHub's account billing lock remains unresolved.
+> September 2026 cloud migration: [Netlify cloud drafts](netlify-cloud-drafts.md) supersedes the old automatic publishing, fail-soft exit, and GitHub-only ClickUp polling described below. Netlify delivers new review drafts to ClickUp; completing a review task authorizes a revision-checked PR merge. Unresolved draft PRs remain blocked. GitHub's account billing lock remains unresolved.
 
 > Single source of truth for the **DEX by Akif Saeed** website + autonomous content system.
 > Read this first in any new session before changing anything. It captures what exists, why,
