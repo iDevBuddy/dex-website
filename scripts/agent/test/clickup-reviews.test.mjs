@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { syncReview, clickupClient, withReviewLease, syncClickupReviews } from '../lib/clickup-reviews.mjs'
+import { syncReview, clickupClient, withReviewLease, syncClickupReviews, clickupSettings, ensureConnectionNotice } from '../lib/clickup-reviews.mjs'
 
 function fixture() {
     const records = {}, tasks = [], calls = []
@@ -155,4 +155,31 @@ test('expired work cannot save or perform later approval side effects', async ()
     const j = journal(); let time = 0
     await assert.rejects(withReviewLease(j.api, async (_records, save) => { time = 300000; await save() }, () => time), /time budget/)
     assert.equal(j.read().expiresAt, 600000)
+})
+
+test('user-provided view is resolved and validated against an actual list', async () => {
+    const cu = async path => {
+        if (path === '/view/example-1') return { view: { parent: { id: '99' } } }
+        if (path === '/list/99') return { name: 'Blog', statuses: [{ status: 'to do', type: 'open' }, { status: 'complete', type: 'closed' }, { status: 'reviewed', type: 'done' }] }
+        if (path === '/user') return { user: { id: 7 } }
+        throw Error('wrong endpoint')
+    }
+    assert.deepEqual(await clickupSettings({ CLICKUP_REVIEW_VIEW_ID: 'example-1' }, cu), { listId: '99', listName: 'Blog', userId: 7, openStatus: 'to do', completeStatuses: ['complete'] })
+    await assert.rejects(clickupSettings({ CLICKUP_REVIEW_VIEW_ID: 'bad/id' }, cu), /Invalid/)
+})
+test('connection notification is sent once and never authorizes an article', async () => {
+    const f = fixture()
+    await ensureConnectionNotice(f.options)
+    await ensureConnectionNotice(f.options)
+    assert.equal(f.tasks.length, 1)
+    assert.match(f.tasks[0].description, /not an article approval/)
+    assert.equal(f.calls.some(c => c.path.endsWith('/merge')), false)
+})
+test('lost connection-notice response is reconciled before any retry', async () => {
+    const f = fixture(), original = f.options.cu
+    f.options.cu = async (...args) => { const task = await original(...args); if (args[1] === 'POST') throw Error('lost response'); return task }
+    await assert.rejects(ensureConnectionNotice(f.options), /lost response/)
+    f.options.cu = original
+    await ensureConnectionNotice(f.options)
+    assert.equal(f.tasks.length, 1)
 })

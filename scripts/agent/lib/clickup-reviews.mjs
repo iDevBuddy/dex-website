@@ -46,6 +46,36 @@ async function findTask(cu, listId, marker) {
     throw new Error('ClickUp task search incomplete; refusing duplicate creation')
 }
 
+export async function ensureConnectionNotice({ cu, records, save, listId, userId, completeStatuses }) {
+    const marker = '[DEX_BLOG_CLICKUP_CONNECTION:v1]'
+    let record = records._connection
+    if (record && record.listId !== listId) throw new Error('ClickUp list changed; explicit review migration required')
+    if (record?.taskId) {
+        const task = await cu(`/task/${id(record.taskId)}`)
+        if (String(task.list?.id) !== listId) throw new Error('Connection notice moved outside configured list')
+        return { taskId: task.id, status: 'connected' }
+    }
+    let task = await findTask(cu, listId, marker)
+    if (!task) {
+        if (record?.creating) throw new Error('ClickUp connection notice uncertain; reconcile before retrying')
+        records._connection = record = { listId, creating: true }
+        await save()
+        try {
+            task = await cu(`/list/${id(listId)}/task`, 'POST', {
+                name: 'DEX blog approvals connected — setup check', status: completeStatuses[0], assignees: [userId], notify_all: true,
+                markdown_content: '# Netlify → ClickUp connection verified\n\nThis is a setup notification, not an article approval. No article is published by this task.\n\nNew drafts will arrive in this list, assigned to you, with their full article and review report. Read them and mark the review task Complete when you approve publication. Approvals are checked every 30 minutes. Drafts with unresolved checks remain on hold.\n\nDraft generation: Monday, Wednesday and Friday, 2:30 PM Pakistan time. Notification delivery to your phone/email follows your ClickUp preferences.\n\n' + marker,
+            })
+        } catch (e) {
+            if ([400, 401, 403, 404, 422, 429].includes(e.status)) { record.creating = false; await save() }
+            throw e
+        }
+        if (!task?.id) throw new Error('ClickUp connection notice uncertain: missing task ID')
+    }
+    records._connection = { listId, taskId: task.id, terminal: true }
+    await save()
+    return { taskId: task.id, status: 'connected' }
+}
+
 async function articleSnapshot(api, pr) {
     const files = await api(`pulls/${pr.number}/files?per_page=100`)
     if (!Array.isArray(files) || !files.length || files.length > 2 || files.some(f => f.status !== 'added'
@@ -180,9 +210,10 @@ export async function syncClickupReviews({ api, env = process.env, cu, allowPubl
     cu ||= clickupClient(token)
     const settings = await clickupSettings(env, cu)
     return withReviewLease(api, async (records, save, deadline) => {
+        const connection = await ensureConnectionNotice({ cu, records, save, ...settings })
         const pulls = await api('pulls?state=open&base=main&per_page=100')
         if (pulls.length >= 100) throw new Error('Review queue requires pagination')
-        const numbers = [...new Set([...Object.keys(records).filter(n => !records[n].terminal).map(Number),
+        const numbers = [...new Set([...Object.keys(records).filter(n => /^\d+$/.test(n) && !records[n].terminal).map(Number),
             ...pulls.filter(p => /^blog-drafts\/\d{4}-\d{2}-\d{2}$/.test(p.head?.ref)).map(p => p.number)])]
         const results = []
         for (const number of numbers.slice(0, 10)) {
@@ -190,6 +221,6 @@ export async function syncClickupReviews({ api, env = process.env, cu, allowPubl
             try { results.push(await syncReview({ api, cu, number, records, save, ...settings, allowPublish })) }
             catch (e) { results.push({ number, status: 'needs_attention', error: safeFailure(e, env) }) }
         }
-        return { status: 'synced', results, completeStatuses: settings.completeStatuses }
+        return { status: 'synced', connection, results, completeStatuses: settings.completeStatuses }
     })
 }
