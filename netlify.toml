@@ -21,6 +21,14 @@
 [functions."blog-cloud-status"]
   node_bundler = "esbuild"
 
+[functions."clickup-reviews-background"]
+  node_bundler = "esbuild"
+
+[functions."clickup-reviews-schedule"]
+  node_bundler = "esbuild"
+  # Approval checks only: this does not generate extra articles.
+  schedule = "7,37 * * * *"
+
 [[headers]]
   for = "/index.html"
   [headers.values]
