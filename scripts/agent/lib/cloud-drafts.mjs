@@ -11,6 +11,13 @@ export function currentSlot(now = new Date()) {
 export function readState(commit) {
     try { return JSON.parse(commit.message.split(MARKER)[1]) } catch { return null }
 }
+export function safeFailure(error, env = process.env) {
+    let text = String(error?.message || error)
+    for (const [key, value] of Object.entries(env)) {
+        if (/TOKEN|SECRET|API_KEY/.test(key) && value && value.length >= 8) text = text.replaceAll(value, '<redacted>')
+    }
+    return text.slice(0, 400)
+}
 export function githubClient(token, fetcher = fetch) {
     if (!token) throw new Error('GitHub credential missing')
     return async (path, method = 'GET', body) => {
@@ -110,7 +117,7 @@ export async function runDraft({ api, generate, now = new Date(), source = 'netl
     } catch (e) {
         // Never replace a newer worker's result or a saved article after uncertain API outcomes.
         if (!saved && await branchHead(api, claim.branch) === claim.sha) {
-            const failed = await writeState(api, claim.sha, claim.tree, { ...claim.state, status: 'failed', error: 'Generation or persistence failed; see runner logs' }, `chore: draft failed ${claim.state.slot}`)
+            const failed = await writeState(api, claim.sha, claim.tree, { ...claim.state, status: 'failed', error: safeFailure(e) }, `chore: draft failed ${claim.state.slot}`)
             await moveBranch(api, claim.branch, failed.sha)
         }
         throw e

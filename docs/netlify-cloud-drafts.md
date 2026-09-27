@@ -16,6 +16,7 @@ GitHub Actions remains subject to the account billing lock. Its existing job tok
 
 - GITHUB_TOKEN: fine-grained PAT, only iDevBuddy/dex-website, Contents read/write and Pull requests read/write. Required in production Functions. Renew before expiry.
 - NVIDIA_API_KEY: existing generation provider. GitHub Models/OpenRouter keys are optional fallbacks.
+- BLOG_DRAFT_MODEL: defaults to NVIDIA-hosted openai/gpt-oss-20b. The former 120b endpoint returned HTTP 410 during this migration. Research, writing and critique share the verified model; human review remains mandatory.
 - BLOG_CLOUD_SECRET: random bearer secret of at least 32 characters, Functions scope. Never expose to browser code or logs.
 - BLOG_CLOUD_ENABLED=true: activation switch. Set false and redeploy to stop.
 - Netlify's built-in URL supplies the scheduler's production destination.

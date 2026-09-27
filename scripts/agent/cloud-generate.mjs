@@ -9,20 +9,23 @@ import { factCheck } from './factcheck.mjs'
 import { generateCover } from './artdirector.mjs'
 import { buildMarkdown, slugify } from './lib/article.mjs'
 import { isDuplicate } from './lib/registry.mjs'
+import { NVIDIA_SMALL } from './lib/ai.mjs'
 
 export async function generateDraft(known) {
+    // The hosted 120b endpoint returned HTTP 410 during integration verification.
+    const model = process.env.BLOG_DRAFT_MODEL || NVIDIA_SMALL
     const candidates = await scout({ shortlist: 6 })
     if (!candidates.ok) throw new Error('No source candidates available')
     const pick = candidates.ideas.find(x => x.url && !isDuplicate(x.title, known))
     if (!pick) throw new Error('No new sourced topic available')
     console.log('draft stage: research')
-    const research = await analyze(pick)
+    const research = await analyze(pick, { reasoningEffort: 'low', fallbackModel: model })
     if (!research.ok) throw new Error(`Research failed: ${research.error}`)
     console.log('draft stage: writing')
-    const written = await writeArticle(research)
+    const written = await writeArticle(research, { model })
     if (!written.ok) throw new Error(`Writing failed: ${written.error}`)
     console.log('draft stage: editorial review')
-    const edited = await critique(written.article, research)
+    const edited = await critique(written.article, research, { model })
     const article = edited.article
     if (!article?.title || isDuplicate(article.title, known)) throw new Error('Draft title is missing or duplicate')
     if (String(article.body || '').split(/\s+/).length < 300 || !/^##\s/m.test(article.body)) throw new Error('Draft is too thin or lacks headings')

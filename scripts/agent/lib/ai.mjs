@@ -85,7 +85,7 @@ async function rawChat({ provider, model, system, user, temperature = 0.5, maxTo
     if (supportsTemp && temperature != null) body.temperature = temperature
     if (system) body.messages.push({ role: 'system', content: system })
     body.messages.push({ role: 'user', content: user })
-    if (maxTokens) body.max_completion_tokens = maxTokens
+    if (maxTokens) body[isNV ? 'max_tokens' : 'max_completion_tokens'] = maxTokens
     // reasoning_effort only for reasoning models (gpt-5.x, o-series, gpt-oss);
     // gpt-4.1/4o (GitHub) and Gemma reject it.
     const supportsReasoning = /gpt-5|^o\d|\/o\d|gpt-oss/.test(model)
@@ -96,7 +96,7 @@ async function rawChat({ provider, model, system, user, temperature = 0.5, maxTo
         method: 'POST', headers, body: JSON.stringify(body),
     }, { timeoutMs, retries, label: `${provider}:${model}` })
 
-    if (!res.ok) throw new Error(`${provider}:${model} HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`)
+    if (!res.ok) throw new Error(`${provider}:${model} HTTP ${res.status}`)
     const data = await res.json()
     const text = data.choices?.[0]?.message?.content
     if (!text) throw new Error(`${provider}:${model} returned empty content`)
@@ -110,21 +110,21 @@ async function rawChat({ provider, model, system, user, temperature = 0.5, maxTo
 export async function chat(opts) {
     const { json = false, fallback, ...rest } = opts
     const attempts = [rest, ...(fallback ? [{ ...rest, ...fallback }] : [])]
-    let error
+    const errors = []
     for (const a of attempts) {
         try {
             const { text, usage } = await rawChat(a)
             if (json) {
                 const parsed = safeJson(text)
-                if (parsed == null) { error = `${a.provider}:${a.model} did not return valid JSON`; continue }
+                if (parsed == null) { errors.push(`${a.provider}:${a.model} did not return valid JSON`); continue }
                 return { ok: true, json: parsed, text, usage, model: a.model }
             }
             return { ok: true, text, usage, model: a.model }
         } catch (e) {
-            error = e?.message || String(e)
+            errors.push(e?.message || String(e))
         }
     }
-    return { ok: false, error }
+    return { ok: false, error: errors.join(' | ') }
 }
 
 /** rough USD cost from token usage (estimates; refine once billing confirms). */
