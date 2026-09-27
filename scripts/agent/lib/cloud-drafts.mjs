@@ -14,7 +14,7 @@ export function readState(commit) {
 export function githubClient(token, fetcher = fetch) {
     if (!token) throw new Error('GitHub credential missing')
     return async (path, method = 'GET', body) => {
-        const res = await fetcher(`https://api.github.com/repos/${REPO}/${path}`, {
+        const res = await fetcher(`https://api.github.com/repos/${REPO}${path ? `/${path}` : ''}`, {
             method, headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json',
                 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28', 'User-Agent': 'DEX-Cloud-Drafts' },
             body: body === undefined ? undefined : JSON.stringify(body), signal: AbortSignal.timeout(20000),

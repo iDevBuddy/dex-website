@@ -121,3 +121,9 @@ test('API error messages do not expose provider response or credential', async (
     const api = githubClient('secret-credential', async () => ({ ok: false, status: 401 }))
     await assert.rejects(api('pulls'), e => e.status === 401 && !e.message.includes('secret'))
 })
+test('repository health uses the canonical API path without a trailing slash', async () => {
+    let url
+    const api = githubClient('test-token', async (target) => { url = target; return { ok: true, status: 200, json: async () => ({}) } })
+    await api('')
+    assert.equal(url, 'https://api.github.com/repos/iDevBuddy/dex-website')
+})
