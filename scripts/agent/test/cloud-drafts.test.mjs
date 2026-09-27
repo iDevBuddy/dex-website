@@ -1,6 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { currentSlot, claimSlot, runDraft, readState, githubClient } from '../lib/cloud-drafts.mjs'
+import { currentSlot, claimSlot, runDraft, readState, githubClient, safeFailure } from '../lib/cloud-drafts.mjs'
+import { chat } from '../lib/ai.mjs'
 import { authorized } from '../../../netlify/functions/_lib/cloud-auth.mjs'
 
 const now = new Date('2026-09-28T10:00:00Z')
@@ -126,4 +127,22 @@ test('repository health uses the canonical API path without a trailing slash', a
     const api = githubClient('test-token', async (target) => { url = target; return { ok: true, status: 200, json: async () => ({}) } })
     await api('')
     assert.equal(url, 'https://api.github.com/repos/iDevBuddy/dex-website')
+})
+test('NVIDIA uses documented max_tokens and preserves the primary provider failure', async () => {
+    const oldFetch = globalThis.fetch, oldKey = process.env.NVIDIA_API_KEY, oldOR = process.env.OPENROUTER_API_KEY
+    process.env.NVIDIA_API_KEY = 'fake-test-key'; delete process.env.OPENROUTER_API_KEY
+    let body
+    globalThis.fetch = async (url, options) => { body = JSON.parse(options.body); return { ok: false, status: 410 } }
+    try {
+        const result = await chat({ provider: 'nvidia', model: 'openai/gpt-oss-120b', maxTokens: 512, retries: 0, fallback: { provider: 'gemma', model: 'fallback' }, user: 'test' })
+        assert.equal(body.max_tokens, 512); assert.equal(body.max_completion_tokens, undefined)
+        assert.match(result.error, /HTTP 410/); assert.match(result.error, /API key not set/)
+    } finally {
+        globalThis.fetch = oldFetch
+        if (oldKey === undefined) delete process.env.NVIDIA_API_KEY; else process.env.NVIDIA_API_KEY = oldKey
+        if (oldOR === undefined) delete process.env.OPENROUTER_API_KEY; else process.env.OPENROUTER_API_KEY = oldOR
+    }
+})
+test('persisted failure details redact configured credentials', () => {
+    assert.equal(safeFailure(new Error('failure abcdefgh123'), { NVIDIA_API_KEY: 'abcdefgh123' }), 'failure <redacted>')
 })

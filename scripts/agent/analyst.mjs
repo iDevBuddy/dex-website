@@ -19,7 +19,7 @@ const STREAM_FOCUS = {
     'reddit-pain': 'A real business pain-point. Identify the underlying problem business owners face, then the concrete AI/automation solution: tools, workflow, and realistic outcome.',
 }
 
-export async function analyze(idea, { reasoningEffort = 'medium' } = {}) {
+export async function analyze(idea, { reasoningEffort = 'medium', fallbackModel = NVIDIA_BIG } = {}) {
     if (!idea || !idea.title) return { ok: false, error: 'no idea provided' }
     const focus = STREAM_FOCUS[idea.stream] || STREAM_FOCUS['ai-tools']
 
@@ -56,7 +56,7 @@ export async function analyze(idea, { reasoningEffort = 'medium' } = {}) {
     // the NVIDIA reasoning model if GitHub Models is rate-limited/down.
     const res = await chat({
         provider: 'github', model: VERIFY_MODEL,
-        fallback: { provider: 'nvidia', model: NVIDIA_BIG, reasoningEffort },
+        fallback: { provider: 'nvidia', model: fallbackModel, reasoningEffort },
         json: true, temperature: 0.3, maxTokens: 2800, timeoutMs: 120000, retries: 1,
         system, user,
     })
