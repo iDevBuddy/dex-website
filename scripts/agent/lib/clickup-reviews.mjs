@@ -51,9 +51,8 @@ export async function ensureConnectionNotice({ cu, records, save, listId, userId
     let record = records._connection
     if (record && record.listId !== listId) throw new Error('ClickUp list changed; explicit review migration required')
     if (record?.taskId) {
-        const task = await cu(`/task/${id(record.taskId)}`)
-        if (String(task.list?.id) !== listId) throw new Error('Connection notice moved outside configured list')
-        return { taskId: task.id, status: 'connected' }
+        // Deleting an informational setup notice must not disable actual article approvals.
+        return { taskId: record.taskId, status: 'connected' }
     }
     let task = await findTask(cu, listId, marker)
     if (!task) {

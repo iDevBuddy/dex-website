@@ -28,7 +28,7 @@ The linked repository integration continues deploying main. Replacing the applic
 
 ## Review and publish
 
-1. The new draft appears as an assigned ClickUp task in the configured list, with the full article, source-check report and GitHub reference. `notify_all=true` requests a ClickUp notification, including to the token owner. Actual mobile/email delivery depends on the user's ClickUp notification settings.
+1. The new draft appears as an assigned ClickUp task in the configured list, with the full article, source-check report and GitHub reference. `notify_all=true` requests a ClickUp notification, including to the token owner. Actual mobile/email delivery depends on the user's ClickUp notification settings. First connection also sends one clearly labeled setup-check task; it is not an article approval and cannot publish anything.
 2. Read the article and verify its claims. Change the task to **Complete** to approve. Leave it open to hold. Editing the ClickUp description does not edit the source article.
 3. Netlify checks approvals at minute 7 and 37 each hour. It merges only the exact revision shown in the review task, with article/media additions only. Changed content or a reopened PR resets the task for another review. Unresolved draft PRs remain blocked even if the task is completed; correct the article and mark the PR ready first.
 4. After a confirmed merge, the task says **Approved — deployment pending**. Netlify builds main. This is not proof that the article is live: check the deployment before claiming publication.
