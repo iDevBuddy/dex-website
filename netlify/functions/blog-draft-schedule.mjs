@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 export async function handler() {
     if (process.env.BLOG_CLOUD_ENABLED !== 'true') return { statusCode: 200 }
     const secret = process.env.BLOG_CLOUD_SECRET
@@ -9,3 +10,6 @@ export async function handler() {
     console.log('Draft invocation accepted; completion is recorded in GitHub review branches.')
     return { statusCode: 200 }
 }
+
+export default withLambda(handler)
+export const config = { schedule: '30 9,11 * * 1,3,5' }

@@ -46,6 +46,7 @@
     },
     "dependencies": {
         "@humeai/voice-react": "^0.2.14",
+        "@netlify/aws-lambda-compat": "1.0.2",
         "framer-motion": "^11.0.0",
         "gsap": "^3.15.0",
         "hume": "^0.15.15",

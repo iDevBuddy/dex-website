@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 import { authorized } from './_lib/cloud-auth.mjs'
 import { clickupClient, clickupSettings } from '../../scripts/agent/lib/clickup-reviews.mjs'
 import { safeFailure } from '../../scripts/agent/lib/cloud-drafts.mjs'
@@ -9,3 +10,5 @@ export async function handler(event) {
             body: JSON.stringify({ connected: true, listId: settings.listId, listName: settings.listName, completeStatuses: settings.completeStatuses }) }
     } catch (e) { return { statusCode: 502, body: JSON.stringify({ connected: false, error: safeFailure(e) }) } }
 }
+
+export default withLambda(handler)

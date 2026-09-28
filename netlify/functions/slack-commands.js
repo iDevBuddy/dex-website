@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 import { json, parseSlackBody, routeSlackCommand, verifySlackEvent } from './_lib/slack-blog.js'
 
 export async function handler(event) {
@@ -8,3 +9,5 @@ export async function handler(event) {
     const response = await routeSlackCommand(payload)
     return json(200, response)
 }
+
+export default withLambda(handler)
