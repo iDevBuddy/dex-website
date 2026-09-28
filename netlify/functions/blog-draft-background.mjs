@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 import { authorized } from './_lib/cloud-auth.mjs'
 import { githubClient, runDraft } from '../../scripts/agent/lib/cloud-drafts.mjs'
 import { generateDraft } from '../../scripts/agent/cloud-generate.mjs'
@@ -14,3 +15,6 @@ export async function handler(event) {
     await notifyReviews()
     return { statusCode: 200 }
 }
+
+export default withLambda(handler)
+export const config = { background: true }

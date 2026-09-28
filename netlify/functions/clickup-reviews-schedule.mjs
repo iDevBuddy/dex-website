@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 export async function handler() {
     if (process.env.CONTEXT !== 'production') return { statusCode: 200 }
     if (process.env.BLOG_CLOUD_ENABLED !== 'true') return { statusCode: 200 }
@@ -13,3 +14,6 @@ export async function handler() {
     if (response.status !== 202) throw new Error(`ClickUp invocation HTTP ${response.status}`)
     return { statusCode: 200 }
 }
+
+export default withLambda(handler)
+export const config = { schedule: '7,37 * * * *' }

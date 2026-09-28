@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 import { json } from './_lib/slack-blog.js'
 
 export async function handler(event) {
@@ -6,3 +7,5 @@ export async function handler(event) {
         message: 'Performance intelligence is not fully enabled yet. Phase 4 is pending.',
     })
 }
+
+export default withLambda(handler)

@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 import { authorized } from './_lib/cloud-auth.mjs'
 import { githubClient, safeFailure } from '../../scripts/agent/lib/cloud-drafts.mjs'
 import { syncClickupReviews } from '../../scripts/agent/lib/clickup-reviews.mjs'
@@ -15,3 +16,6 @@ export async function handler(event) {
         throw new Error('ClickUp review sync failed; inspect the redacted diagnostic above')
     }
 }
+
+export default withLambda(handler)
+export const config = { background: true }

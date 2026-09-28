@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 import OpenAI from 'openai'
 import { z } from 'zod'
 import { sendConsultationEmails } from './_lib/email.js'
@@ -244,3 +245,5 @@ export async function handler(event) {
         })
     }
 }
+
+export default withLambda(handler)

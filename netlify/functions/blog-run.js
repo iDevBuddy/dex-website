@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 import { json } from './_lib/slack-blog.js'
 import { dispatchBlogWorkflow } from './_lib/github-dispatch.js'
 
@@ -19,3 +20,5 @@ export async function handler(event) {
         dispatch,
     })
 }
+
+export default withLambda(handler)

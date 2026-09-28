@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 import { json } from './_lib/slack-blog.js'
 import { createRefreshTask } from './_lib/notion-dashboard.js'
 
@@ -17,3 +18,5 @@ export async function handler(event) {
         notion,
     })
 }
+
+export default withLambda(handler)

@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 import { z } from 'zod'
 import { buildSessionSettings, ensureHumeConfigId, fetchHumeAccessToken } from './_lib/hume.js'
 import { json, methodNotAllowed, parseJsonBody } from './_lib/http.js'
@@ -35,3 +36,5 @@ export async function handler(event) {
         })
     }
 }
+
+export default withLambda(handler)

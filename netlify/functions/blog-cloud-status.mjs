@@ -1,3 +1,4 @@
+import { withLambda } from '@netlify/aws-lambda-compat'
 import { authorized } from './_lib/cloud-auth.mjs'
 import { githubClient, currentSlot, readState } from '../../scripts/agent/lib/cloud-drafts.mjs'
 export async function handler(event) {
@@ -19,3 +20,5 @@ export async function handler(event) {
         }) }
     } catch (e) { return { statusCode: 502, body: JSON.stringify({ error: e.message }) } }
 }
+
+export default withLambda(handler)
